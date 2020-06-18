@@ -1,4 +1,5 @@
 using System;
+using Cosmos.Text;
 
 namespace Cosmos.I18N.Languages {
     internal static class LanguageTagCreator {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cosmos.I18N.Core;
 using Cosmos.I18N.Languages;
+using Cosmos.Text;
 
 namespace Cosmos.I18N.Translation {
     /// <summary>

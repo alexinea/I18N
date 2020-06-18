@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using Cosmos.Text;
 
 namespace Cosmos.I18N.Core.Extensions {
     internal static class StringExtensions {

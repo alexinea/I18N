@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using Cosmos.I18N.Core.Extensions;
+using Cosmos.Text;
 
 // Reference to:
 //  https://github.com/turquoiseowl/i18n/blob/master/src/i18n.Domain/Concrete/LanguageTag.cs

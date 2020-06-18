@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cosmos.Text;
 
 namespace Cosmos.I18N.Languages {
     /// <summary>

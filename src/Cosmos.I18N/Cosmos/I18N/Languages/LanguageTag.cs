@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using Cosmos.I18N.Core.Extensions;
+using Cosmos.Text;
 
 // ReSharper disable InconsistentNaming
 

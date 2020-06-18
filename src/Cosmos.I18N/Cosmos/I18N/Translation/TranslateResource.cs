@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Cosmos.I18N.Languages;
+using Cosmos.Text;
 
 namespace Cosmos.I18N.Translation {
     /// <summary>

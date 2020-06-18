@@ -1,5 +1,6 @@
 using System;
 using Cosmos.I18N.Templates;
+using Cosmos.Reflection;
 using Volo.Abp.Localization.Json;
 
 namespace Cosmos.Bridges.AbpBridge.I18N {

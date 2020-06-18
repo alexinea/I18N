@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cosmos.I18N.Core.Extensions;
+using Cosmos.Text;
 
 namespace Cosmos.I18N.Languages {
     /// <summary>
