@@ -5,7 +5,7 @@
     <Import Project="..\..\common-coreapp.props" />
 
     <ItemGroup>
-        <ProjectReference Include="..\Cosmos.I18N.Extensions.AspNetCore\Cosmos.I18N.Extensions.AspNetCore.csproj" />
+        <ProjectReference Include="..\Cosmos.I18N.Extensions.AspNetCore\Cosmos.I18N.Extensions.AspNetCore._build.csproj" />
     </ItemGroup>
 
 </Project>

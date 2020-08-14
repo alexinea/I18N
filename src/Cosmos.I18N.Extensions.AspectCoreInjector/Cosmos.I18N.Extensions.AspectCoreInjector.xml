@@ -61,7 +61,7 @@
         <member name="M:Cosmos.I18N.Extensions.AspectCoreInjector.AspectCoreI18NServiceCollection.AppendOptionsAction(System.Action{Cosmos.I18N.Configurations.I18NOptions})">
             <inheritdoc />
         </member>
-        <member name="M:Cosmos.I18N.Extensions.AspectCoreInjector.AspectCoreI18NServiceCollection.AddDependency(System.Action{Cosmos.Extensions.Dependency.Core.DependencyProxyRegister})">
+        <member name="M:Cosmos.I18N.Extensions.AspectCoreInjector.AspectCoreI18NServiceCollection.AddDependency(System.Action{Cosmos.Dependency.DependencyProxyRegister})">
             <inheritdoc />
         </member>
         <member name="M:Cosmos.I18N.Extensions.AspectCoreInjector.AspectCoreI18NServiceCollection.AddPostRegisterAction(System.String,System.Action{AspectCore.DependencyInjection.IServiceContext})">

@@ -1,21 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\..\build\common.props" />
+    <Import Project="Cosmos.I18N.Adapters.Yaml._shared.props" />
 
-    <PropertyGroup>
-        <TargetFrameworks>netcoreapp3.1;netstandard2.1;netstandard2.0;net461;net451</TargetFrameworks>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <AssemblyName>Cosmos.I18N.Adapters.Yaml</AssemblyName>
-        <PackageId>Cosmos.I18N.Adapters.Yaml</PackageId>
-        <Description>YAML Adapter (implement by YamlDotNet) for Cosmos I18N library.</Description>
-    </PropertyGroup>
-
+    <Import Project="..\..\common.props" />
+  
     <ItemGroup>
         <ProjectReference Include="..\Cosmos.I18N\Cosmos.I18N.csproj" />
     </ItemGroup>
+
     <ItemGroup>
-        <PackageReference Include="Cosmos.Serialization.YamlDotNet" Version="0.1.4" />
+        <PackageReference Include="Cosmos.Serialization.YamlDotNet" Version="$(TargetPkgVersion)" />
     </ItemGroup>
+
 </Project>

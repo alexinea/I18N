@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Cosmos.I18N.Renderers.Handlebars</name>
+        <name>Cosmos.I18N.Extensions.Handlebars</name>
     </assembly>
     <members>
         <member name="T:Cosmos.HandlebarsExtensions">

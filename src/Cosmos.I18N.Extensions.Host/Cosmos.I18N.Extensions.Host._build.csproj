@@ -5,7 +5,7 @@
     <Import Project="..\..\common-coreapp.props" />
 
     <ItemGroup>
-        <ProjectReference Include="..\Cosmos.I18N.Extensions.DependencyInjection\Cosmos.I18N.Extensions.DependencyInjection.csproj" />
+        <ProjectReference Include="..\Cosmos.I18N.Extensions.DependencyInjection\Cosmos.I18N.Extensions.DependencyInjection._build.csproj" />
     </ItemGroup>
 
 </Project>

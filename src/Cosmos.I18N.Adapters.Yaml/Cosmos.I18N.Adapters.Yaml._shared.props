@@ -1,0 +1,9 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.I18N.Adapters.Yaml</AssemblyName>
+        <PackageId>Cosmos.I18N.Adapters.Yaml</PackageId>
+        <Description>YAML Adapter (implement by YamlDotNet) for Cosmos I18N library.</Description>
+    </PropertyGroup>
+    
+</Project>

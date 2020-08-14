@@ -1,0 +1,13 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.I18N.Extensions.AspNetCore.TagHelpers</AssemblyName>
+        <PackageId>Cosmos.I18N.Extensions.AspNetCore.TagHelpers</PackageId>
+        <Description>AspNetCore TagHelpers extension for Cosmos i18n.</Description>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp2.2'">
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+    </ItemGroup>
+    
+</Project>

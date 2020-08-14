@@ -1,0 +1,22 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.I18N.Extensions.AspNetCore</AssemblyName>
+        <PackageId>Cosmos.I18N.Extensions.AspNetCore</PackageId>
+        <Description>Microsoft ASP.NET Core extension for Cosmos i18n.</Description>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.0'">
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp2.2'">
+        <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    </ItemGroup>
+    
+</Project>

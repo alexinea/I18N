@@ -1,0 +1,9 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <AssemblyName>Cosmos.I18N.Adapters.Xml</AssemblyName>
+    <PackageId>Cosmos.I18N.Adapters.Xml</PackageId>
+    <Description>XML Adapter for Cosmos I18N library.</Description>
+  </PropertyGroup>
+
+</Project>

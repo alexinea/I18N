@@ -1,0 +1,12 @@
+<Project>
+	<PropertyGroup Label="Package">
+		<Product>Cosmos.I18N</Product>
+		<Authors>AlexLEWIS;Cosmos</Authors>
+		<RepositoryUrl>https://github.com/cosmos-open/cosmos-i18n</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/cosmos-open/cosmos-i18n</PackageProjectUrl>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageTags>Cosmos;Cosmosloops;Framework;i18n;Internationalization</PackageTags>
+	</PropertyGroup>
+</Project>

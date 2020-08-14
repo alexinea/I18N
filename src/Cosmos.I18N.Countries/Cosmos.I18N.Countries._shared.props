@@ -1,0 +1,13 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.I18N.Countries</AssemblyName>
+        <PackageId>Cosmos.I18N.Countries</PackageId>
+        <Description>Country and region data for Cosmos I18N library</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Enums.NET" Version="3.0.3" />
+    </ItemGroup>
+
+</Project>

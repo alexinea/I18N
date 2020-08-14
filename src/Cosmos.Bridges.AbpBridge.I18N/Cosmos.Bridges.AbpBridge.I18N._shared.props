@@ -1,0 +1,13 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Bridges.AbpBridge.I18N</AssemblyName>
+        <PackageId>Cosmos.Bridges.AbpBridge.I18N</PackageId>
+        <Description>Bridge between Cosmos.I18N and AbpFramework.Localization.</Description>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Volo.Abp.Localization" Version="3.0.5" />
+    </ItemGroup>
+
+</Project>

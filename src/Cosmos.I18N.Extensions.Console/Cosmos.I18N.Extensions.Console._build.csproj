@@ -5,7 +5,7 @@
     <Import Project="..\..\common.props" />
   
     <ItemGroup>
-        <ProjectReference Include="..\Cosmos.I18N.Extensions.AspectCoreInjector\Cosmos.I18N.Extensions.AspectCoreInjector.csproj"/>
+        <ProjectReference Include="..\Cosmos.I18N.Extensions.AspectCoreInjector\Cosmos.I18N.Extensions.AspectCoreInjector._build.csproj"/>
     </ItemGroup>
 
 </Project>

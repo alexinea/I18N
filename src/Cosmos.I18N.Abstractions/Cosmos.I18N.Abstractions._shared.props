@@ -1,0 +1,9 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.I18N.Abstractions</AssemblyName>
+        <PackageId>Cosmos.I18N.Abstractions</PackageId>
+        <Description>Cosmos I18N abstractions library</Description>
+    </PropertyGroup>
+
+</Project>

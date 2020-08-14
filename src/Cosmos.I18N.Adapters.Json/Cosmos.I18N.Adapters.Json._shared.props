@@ -1,0 +1,9 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <AssemblyName>Cosmos.I18N.Adapters.Json</AssemblyName>
+    <PackageId>Cosmos.I18N.Adapters.Json</PackageId>
+    <Description>JSON Adapter (implement by Newtonsoft.JSON) for Cosmos I18N library.</Description>
+  </PropertyGroup>
+  
+</Project>

@@ -5,7 +5,7 @@
     <Import Project="..\..\common.props" />
 
     <ItemGroup>
-      <ProjectReference Include="..\Cosmos.I18N.Adapters.Json\Cosmos.I18N.Adapters.Json.csproj" />
+      <ProjectReference Include="..\Cosmos.I18N.Adapters.Json\Cosmos.I18N.Adapters.Json._build.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,35 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\build\common.props" />
+    <Import Project="Cosmos.I18N._shared.props" />
 
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;netstandard2.1;netstandard2.0;net461;net451</TargetFrameworks>
-  </PropertyGroup>
+    <Import Project="..\..\common.props" />
 
-  <PropertyGroup>
-    <AssemblyName>Cosmos.I18N</AssemblyName>
-    <PackageId>Cosmos.I18N</PackageId>
-    <Description>Cosmos I18N library</Description>
-  </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Cosmos.Extensions.Dependency" Version="$(TargetPkgVersion)" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Cosmos.Extensions.Dependency.Core" Version="0.1.4" />
-  </ItemGroup>
+    <!-- <ItemGroup Condition="'$(TargetFramework)'=='net451'">
+      <PackageReference Include="Cosmos.Extensions.Asyncs" Version="$(TargetPkgVersion)" />
+    </ItemGroup> -->
 
-  <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1' OR '$(TargetFramework)'=='netstandard2.1'">
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.4" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0' OR '$(TargetFramework)'=='net461'">
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)'=='net451'">
-    <PackageReference Include="Cosmos.Extensions.Asyncs" Version="0.1.4" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="1.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Cosmos.I18N.Countries\Cosmos.I18N.Countries.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Cosmos.I18N.Countries\Cosmos.I18N.Countries.csproj" />
+    </ItemGroup>
+    
 </Project>

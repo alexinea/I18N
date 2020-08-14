@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="Cosmos.I18N.Adapters.Yaml._shared.props" />
+
+    <Import Project="..\..\common.props" />
+  
+    <ItemGroup>
+        <ProjectReference Include="..\Cosmos.I18N\Cosmos.I18N._build.csproj" />
+        <ProjectReference Include="..\..\..\cosmos-serialization\src\Cosmos.Serialization.YamlDotNet\Cosmos.Serialization.YamlDotNet._build.csproj" />
+    </ItemGroup>
+
+</Project>
