@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Linq;
-using Cosmos.Extensions.Dependency;
+using Cosmos.Dependency;
 using Cosmos.I18N.Core;
 using Cosmos.I18N.Languages;
 using Cosmos.I18N.Translation;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Cosmos.I18N.Extensions.Console.Core {
     internal static class SoloDependencyContainer {
@@ -43,12 +41,12 @@ namespace Cosmos.I18N.Extensions.Console.Core {
             foreach (var package in services.ExposeOptions.TranslationPackages) {
                 var translationPackage = package.Value;
                 translationSetter.RegisterPackage(translationPackage);
-                services.AddDependency(s => s.AddSingleton(translationPackage));
+                services.AddDependency(s => s.AddSingletonService(translationPackage));
             }
 
             services.AddDependency(s => {
-                s.AddSingleton(translationManager);
-                s.AddSingleton<ITranslationManager>(translationManager);
+                s.AddSingletonService(translationManager);
+                s.AddSingletonService<ITranslationManager>(translationManager);
             });
         }
 
@@ -66,7 +64,7 @@ namespace Cosmos.I18N.Extensions.Console.Core {
         private static void RegisterTranslationAccessor(this II18NServiceCollection services) {
             var tagFactory = new DefaultLanguageTagFactory(LanguageTag.Current.ToString);
             services.AddDependency(s => {
-                s.AddSingleton<ICoreScopedLanguageTagFactory>(tagFactory);
+                s.AddSingletonService<ICoreScopedLanguageTagFactory>(tagFactory);
                 s.AddScoped<ITranslationAccessor, DefaultTranslationAccessor>();
             });
         }

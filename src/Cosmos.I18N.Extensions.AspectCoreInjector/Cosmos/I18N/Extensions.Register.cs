@@ -1,17 +1,19 @@
 using System;
 using AspectCore.DependencyInjection;
-using Cosmos.Extensions.Dependency;
+using Cosmos.Dependency;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Core;
 using Cosmos.I18N.Extensions.AspectCoreInjector;
 using Cosmos.I18N.Languages;
 using Cosmos.I18N.Translation;
 
-namespace Cosmos.I18N {
+namespace Cosmos.I18N
+{
     /// <summary>
     /// Extensions for AspectCore register
     /// </summary>
-    public static class AspectCoreRegisterExtensions {
+    public static class AspectCoreRegisterExtensions
+    {
         /// <summary>
         /// Register Cosmos.I18N for NCC AspectCore
         /// </summary>
@@ -19,7 +21,8 @@ namespace Cosmos.I18N {
         /// <param name="optionAct"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        public static II18NServiceCollection RegisterCosmosLocalization(this IServiceContext services, Action<I18NOptions> optionAct = null) {
+        public static II18NServiceCollection RegisterCosmosLocalization(this IServiceContext services, Action<I18NOptions> optionAct = null)
+        {
             if (services is null)
                 throw new ArgumentNullException(nameof(services));
 
@@ -32,17 +35,21 @@ namespace Cosmos.I18N {
         /// <param name="services"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        public static IServiceContext Done(this II18NServiceCollection services) {
+        public static IServiceContext Done(this II18NServiceCollection services)
+        {
             if (services is null)
                 throw new ArgumentNullException(nameof(services));
 
-            if (services is AspectCoreI18NServiceCollection serviceImpl) {
+            if (services is AspectCoreI18NServiceCollection serviceImpl)
+            {
 
                 var builder = serviceImpl.OriginalServices;
 
-                if (!StaticFlag.HasInit) {
+                if (!StaticFlag.HasInit)
+                {
 
-                    using (serviceImpl) {
+                    using (serviceImpl)
+                    {
 
                         var options = serviceImpl.ExposeOptions;
 
@@ -63,33 +70,38 @@ namespace Cosmos.I18N {
             throw new ArgumentException("Unknown type of II18NServiceCollection");
         }
 
-        private static void RegisterAllPackages(this II18NServiceCollection services, I18NOptions options) {
+        private static void RegisterAllPackages(this II18NServiceCollection services, I18NOptions options)
+        {
             var translationManager = new TranslationManager();
-            var translationSetter = (ITranslationManSetter) translationManager;
+            var translationSetter = (ITranslationManSetter)translationManager;
 
-            foreach (var package in options.TranslationPackages) {
+            foreach (var package in options.TranslationPackages)
+            {
                 var translationPackage = package.Value;
                 translationSetter.RegisterPackage(translationPackage);
-                services.AddDependency(register => register.AddSingleton(translationPackage));
+                services.AddDependency(register => register.AddSingletonService(translationPackage));
             }
 
 
-            services.AddDependency(register => register.AddSingleton(translationManager));
-            services.AddDependency(register => register.AddSingleton<ITranslationManager>(translationManager));
+            services.AddDependency(register => register.AddSingletonService(translationManager));
+            services.AddDependency(register => register.AddSingletonService<ITranslationManager>(translationManager));
         }
 
-        private static void RegisterTranslationProviders(this II18NServiceCollection services) {
+        private static void RegisterTranslationProviders(this II18NServiceCollection services)
+        {
             services.AddDependency(register => register.AddSingleton<ITextProvider, TextProvider>());
             services.AddDependency(register => register.AddSingleton<ILanguageServiceProvider, AspectCoreLanguageServiceProvider>());
         }
 
-        private static void RegisterTranslationAccessor(this II18NServiceCollection services) {
+        private static void RegisterTranslationAccessor(this II18NServiceCollection services)
+        {
             var tagFactory = new DefaultLanguageTagFactory(LanguageTag.Current.ToString);
-            services.AddDependency(register => register.AddSingleton<ICoreScopedLanguageTagFactory>(tagFactory));
+            services.AddDependency(register => register.AddSingletonService<ICoreScopedLanguageTagFactory>(tagFactory));
             services.AddDependency(register => register.AddScoped<ITranslationAccessor, DefaultTranslationAccessor>());
         }
 
-        private static void RegisterTranslationProcessor(this II18NServiceCollection services) {
+        private static void RegisterTranslationProcessor(this II18NServiceCollection services)
+        {
             services.AddDependency(s => s.AddSingleton<TranslationProcessor>());
         }
 

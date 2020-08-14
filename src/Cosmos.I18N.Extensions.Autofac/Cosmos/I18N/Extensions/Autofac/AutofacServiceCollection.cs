@@ -1,7 +1,6 @@
 using System;
 using Autofac;
-using Cosmos.Extensions.Dependency;
-using Cosmos.Extensions.Dependency.Core;
+using Cosmos.Dependency;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Core;
 using Cosmos.I18N.Translation;

@@ -1,5 +1,5 @@
 using System;
-using Cosmos.Extensions.Dependency;
+using Cosmos.Dependency;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;

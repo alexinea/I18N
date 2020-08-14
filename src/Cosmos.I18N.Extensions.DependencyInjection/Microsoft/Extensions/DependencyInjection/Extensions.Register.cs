@@ -1,5 +1,5 @@
 ﻿using System;
-using Cosmos.Extensions.Dependency;
+using Cosmos.Dependency;
 using Cosmos.I18N;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Core;
@@ -67,12 +67,12 @@ namespace Microsoft.Extensions.DependencyInjection {
             foreach (var package in services.ExposeOptions.TranslationPackages) {
                 var translationPackage = package.Value;
                 translationSetter.RegisterPackage(translationPackage);
-                services.AddDependency(s => s.AddSingleton(translationPackage));
+                services.AddDependency(s => s.AddSingletonService(translationPackage));
             }
 
             services.AddDependency(s => {
-                s.AddSingleton(translationManager);
-                s.AddSingleton<ITranslationManager>(translationManager);
+                s.AddSingletonService(translationManager);
+                s.AddSingletonService<ITranslationManager>(translationManager);
             });
         }
 
@@ -90,7 +90,7 @@ namespace Microsoft.Extensions.DependencyInjection {
         private static void RegisterTranslationAccessor(this II18NServiceCollection services) {
             var tagFactory = new DefaultLanguageTagFactory(LanguageTag.Current.ToString);
             services.AddDependency(s => {
-                s.AddSingleton<ICoreScopedLanguageTagFactory>(tagFactory);
+                s.AddSingletonService<ICoreScopedLanguageTagFactory>(tagFactory);
                 s.AddScoped<ITranslationAccessor, DefaultTranslationAccessor>();
             });
         }

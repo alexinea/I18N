@@ -1,6 +1,6 @@
 ﻿using System;
 using AspectCore.DependencyInjection;
-using Cosmos.Extensions.Dependency.Core;
+using Cosmos.Dependency;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Core;
 using Cosmos.I18N.Extensions.AspectCoreInjector;

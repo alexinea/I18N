@@ -1,6 +1,6 @@
 using System;
 using Autofac;
-using Cosmos.Extensions.Dependency;
+using Cosmos.Dependency;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Core;
 using Cosmos.I18N.Extensions.Autofac;
@@ -72,12 +72,12 @@ namespace Cosmos.I18N {
             foreach (var package in options.TranslationPackages) {
                 var translationPackage = package.Value;
                 translationSetter.RegisterPackage(translationPackage);
-                services.AddDependency(register => register.AddSingleton(translationPackage));
+                services.AddDependency(register => register.AddSingletonService(translationPackage));
             }
 
 
-            services.AddDependency(register => register.AddSingleton(translationManager));
-            services.AddDependency(register => register.AddSingleton<ITranslationManager>(translationManager));
+            services.AddDependency(register => register.AddSingletonService(translationManager));
+            services.AddDependency(register => register.AddSingletonService<ITranslationManager>(translationManager));
         }
 
         private static void RegisterTranslationProviders(this II18NServiceCollection services) {
@@ -87,7 +87,7 @@ namespace Cosmos.I18N {
 
         private static void RegisterTranslationAccessor(this II18NServiceCollection services) {
             var tagFactory = new DefaultLanguageTagFactory(LanguageTag.Current.ToString);
-            services.AddDependency(register => register.AddSingleton<ICoreScopedLanguageTagFactory>(tagFactory));
+            services.AddDependency(register => register.AddSingletonService<ICoreScopedLanguageTagFactory>(tagFactory));
             services.AddDependency(register => register.AddScoped<ITranslationAccessor, DefaultTranslationAccessor>());
         }
 
