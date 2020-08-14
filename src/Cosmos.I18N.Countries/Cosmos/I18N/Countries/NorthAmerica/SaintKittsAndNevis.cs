@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.SaintKittsAndNevis,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.SaintKittsAndNevis,
+                BelongsToCountry = Country.SaintKittsAndNevis,
                 UNCode = "659",
                 Alpha2Code = "KN",
                 Alpha3Code = "KNA",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Cambodia,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Cambodia,
+                BelongsToCountry = Country.Cambodia,
                 UNCode = "116",
                 Alpha2Code = "KH",
                 Alpha3Code = "KHM",

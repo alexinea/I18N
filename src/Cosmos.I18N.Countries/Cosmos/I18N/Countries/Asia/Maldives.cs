@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Maldives,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Maldives,
+                BelongsToCountry = Country.Maldives,
                 UNCode = "462",
                 Alpha2Code = "MV",
                 Alpha3Code = "MDV",

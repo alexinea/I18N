@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Polynesia,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.France,
+                BelongsToCountry = Country.France,
                 UNCode = "258",
                 Alpha2Code = "PF",
                 Alpha3Code = "PYF",

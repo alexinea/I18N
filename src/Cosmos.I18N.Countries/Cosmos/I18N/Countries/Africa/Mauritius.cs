@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Mauritius,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Mauritius,
+                BelongsToCountry = Country.Mauritius,
                 UNCode = "480",
                 Alpha2Code = "MU",
                 Alpha3Code = "MUS",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Burundi,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Burundi,
+                BelongsToCountry = Country.Burundi,
                 UNCode = "108",
                 Alpha2Code = "BI",
                 Alpha3Code = "BDI",

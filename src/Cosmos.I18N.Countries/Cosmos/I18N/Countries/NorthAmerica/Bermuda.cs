@@ -12,7 +12,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Bermuda,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.UnitedKingdom,
+                BelongsToCountry = Country.UnitedKingdom,
                 UNCode = "060",
                 Alpha2Code = "BM",
                 Alpha3Code = "BMU",

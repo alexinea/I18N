@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Vanuatu,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Vanuatu,
+                BelongsToCountry = Country.Vanuatu,
                 UNCode = "548",
                 Alpha2Code = "VU",
                 Alpha3Code = "VUT",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Afghanistan,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Afghanistan,
+                BelongsToCountry = Country.Afghanistan,
                 UNCode = "004",
                 Alpha2Code = "AF",
                 Alpha3Code = "AFG",

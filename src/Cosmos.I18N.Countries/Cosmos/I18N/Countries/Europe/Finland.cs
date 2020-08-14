@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.Finland,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Finland,
+                BelongsToCountry = Country.Finland,
                 UNCode = "246",
                 Alpha2Code = "FI",
                 Alpha3Code = "FIN",

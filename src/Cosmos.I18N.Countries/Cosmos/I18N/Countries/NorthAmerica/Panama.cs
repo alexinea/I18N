@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Panama,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Panama,
+                BelongsToCountry = Country.Panama,
                 UNCode = "591",
                 Alpha2Code = "PA",
                 Alpha3Code = "PAN",

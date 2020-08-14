@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Palau,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Palau,
+                BelongsToCountry = Country.Palau,
                 UNCode = "585",
                 Alpha2Code = "PW",
                 Alpha3Code = "PLW",

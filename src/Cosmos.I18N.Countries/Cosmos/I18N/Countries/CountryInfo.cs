@@ -1,8 +1,10 @@
-namespace Cosmos.I18N.Countries {
+namespace Cosmos.I18N.Countries
+{
     /// <summary>
     /// Country info
     /// </summary>
-    public class CountryInfo : ICountryInfo {
+    public class CountryInfo : ICountryInfo
+    {
         /// <summary>
         /// Country
         /// </summary>
@@ -17,7 +19,7 @@ namespace Cosmos.I18N.Countries {
         /// Belongs to country
         /// </summary>
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public Country BeongsToCountry { get; internal set; }
+        public Country BelongsToCountry { get; internal set; }
 
         /// <inheritdoc />
         // ReSharper disable once InconsistentNaming
@@ -72,8 +74,11 @@ namespace Cosmos.I18N.Countries {
 
         /// <inheritdoc />
         public bool HistoricalCountry { get; internal set; } = false;
-        
+
         // /// <inheritdoc />
         // public HistoricalMetadata HistoricalMetadata { get; internal set; }
+
+        /// <inheritdoc />
+        public RuntimeCountryInfo ToRuntimeModel() => RuntimeCountryInfo.Of(this);
     }
 }

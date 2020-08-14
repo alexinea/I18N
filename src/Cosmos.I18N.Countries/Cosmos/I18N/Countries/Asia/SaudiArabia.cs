@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.SaudiArabia,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.SaudiArabia,
+                BelongsToCountry = Country.SaudiArabia,
                 UNCode = "682",
                 Alpha2Code = "SA",
                 Alpha3Code = "SAU",

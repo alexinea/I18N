@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Kiribati,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Kiribati,
+                BelongsToCountry = Country.Kiribati,
                 UNCode = "296",
                 Alpha2Code = "KI",
                 Alpha3Code = "KIR",

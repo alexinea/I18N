@@ -12,7 +12,7 @@ namespace Cosmos.I18N.Countries.Antarctica {
             _country = new CountryInfo {
                 Country = Country.Zimbabwe,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Zimbabwe,
+                BelongsToCountry = Country.Zimbabwe,
                 UNCode = "010",
                 Alpha2Code = "AQ",
                 Alpha3Code = "ATA",

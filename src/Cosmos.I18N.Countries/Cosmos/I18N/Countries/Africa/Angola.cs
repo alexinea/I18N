@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Angola,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Angola,
+                BelongsToCountry = Country.Angola,
                 UNCode = "024",
                 Alpha2Code = "AO",
                 Alpha3Code = "AGO",

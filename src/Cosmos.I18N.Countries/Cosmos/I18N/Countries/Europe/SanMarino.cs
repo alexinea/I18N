@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.SanMarino,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.SanMarino,
+                BelongsToCountry = Country.SanMarino,
                 UNCode = "674",
                 Alpha2Code = "SM",
                 Alpha3Code = "SMR",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
             _country = new CountryInfo {
                 Country = Country.Chile,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Chile,
+                BelongsToCountry = Country.Chile,
                 UNCode = "152",
                 Alpha2Code = "CL",
                 Alpha3Code = "CHL",

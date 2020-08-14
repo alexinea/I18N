@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Uzbekistan,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Uzbekistan,
+                BelongsToCountry = Country.Uzbekistan,
                 UNCode = "860",
                 Alpha2Code = "UZ",
                 Alpha3Code = "UZB",

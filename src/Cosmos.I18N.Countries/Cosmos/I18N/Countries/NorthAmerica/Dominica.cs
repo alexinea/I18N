@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Dominica,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Dominica,
+                BelongsToCountry = Country.Dominica,
                 UNCode = "212",
                 Alpha2Code = "DM",
                 Alpha3Code = "DMA",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Zimbabwe,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Zimbabwe,
+                BelongsToCountry = Country.Zimbabwe,
                 UNCode = "716",
                 Alpha2Code = "ZW",
                 Alpha3Code = "ZWE",

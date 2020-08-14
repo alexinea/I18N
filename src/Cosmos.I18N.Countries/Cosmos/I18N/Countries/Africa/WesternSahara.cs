@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.WesternSahara,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.WesternSahara,
+                BelongsToCountry = Country.WesternSahara,
                 UNCode = "732",
                 Alpha2Code = "EH",
                 Alpha3Code = "ESH",

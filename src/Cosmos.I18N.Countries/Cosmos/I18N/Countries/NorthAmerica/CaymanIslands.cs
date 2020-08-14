@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.CaymanIslands,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.UnitedKingdom,
+                BelongsToCountry = Country.UnitedKingdom,
                 UNCode = "136",
                 Alpha2Code = "KY",
                 Alpha3Code = "CYM",

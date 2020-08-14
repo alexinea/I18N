@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Nauru,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Nauru,
+                BelongsToCountry = Country.Nauru,
                 UNCode = "520",
                 Alpha2Code = "NR",
                 Alpha3Code = "NRU",

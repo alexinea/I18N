@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Tokelau,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.NewZealand,
+                BelongsToCountry = Country.NewZealand,
                 UNCode = "772",
                 Alpha2Code = "TK",
                 Alpha3Code = "TKL",

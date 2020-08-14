@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Djibouti,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Djibouti,
+                BelongsToCountry = Country.Djibouti,
                 UNCode = "262",
                 Alpha2Code = "DJBI",
                 Alpha3Code = "DJI",

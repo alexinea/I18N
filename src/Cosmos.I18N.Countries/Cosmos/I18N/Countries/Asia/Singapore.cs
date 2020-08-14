@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Singapore,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Singapore,
+                BelongsToCountry = Country.Singapore,
                 UNCode = "702",
                 Alpha2Code = "SG",
                 Alpha3Code = "SGP",

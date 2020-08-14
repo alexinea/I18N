@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Belize,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Belize,
+                BelongsToCountry = Country.Belize,
                 UNCode = "084",
                 Alpha2Code = "BZ",
                 Alpha3Code = "BLZ",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.SaintHelena,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.UnitedKingdom,
+                BelongsToCountry = Country.UnitedKingdom,
                 UNCode = "654",
                 Alpha2Code = "SH",
                 Alpha3Code = "SHN",

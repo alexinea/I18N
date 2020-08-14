@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.EastTimor,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.EastTimor,
+                BelongsToCountry = Country.EastTimor,
                 UNCode = "626",
                 Alpha2Code = "TL",
                 Alpha3Code = "TLS",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Martinique,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.France,
+                BelongsToCountry = Country.France,
                 UNCode = "474",
                 Alpha2Code = "MQ",
                 Alpha3Code = "MTQ",

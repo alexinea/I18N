@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.SintMaartenDutchPart,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.Netherlands,
+                BelongsToCountry = Country.Netherlands,
                 UNCode = "534",
                 Alpha2Code = "SX",
                 Alpha3Code = "SXM",

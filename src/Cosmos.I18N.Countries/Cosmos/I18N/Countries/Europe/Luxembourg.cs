@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.Luxembourg,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Luxembourg,
+                BelongsToCountry = Country.Luxembourg,
                 UNCode = "442",
                 Alpha2Code = "LU",
                 Alpha3Code = "LUX",

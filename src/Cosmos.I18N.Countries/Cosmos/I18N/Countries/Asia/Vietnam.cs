@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Vietnam,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Vietnam,
+                BelongsToCountry = Country.Vietnam,
                 UNCode = "704",
                 Alpha2Code = "VN",
                 Alpha3Code = "VNM",

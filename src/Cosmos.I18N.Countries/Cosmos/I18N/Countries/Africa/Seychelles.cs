@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Seychelles,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Seychelles,
+                BelongsToCountry = Country.Seychelles,
                 UNCode = "690",
                 Alpha2Code = "SC",
                 Alpha3Code = "SYC",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Georgia,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Georgia,
+                BelongsToCountry = Country.Georgia,
                 UNCode = "268",
                 Alpha2Code = "GE",
                 Alpha3Code = "GEO",

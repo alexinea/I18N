@@ -13,7 +13,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Taiwan,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.China,
+                BelongsToCountry = Country.China,
                 UNCode = "158",
                 Alpha2Code = "TW",
                 Alpha3Code = "TWN",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Tajikistan,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Tajikistan,
+                BelongsToCountry = Country.Tajikistan,
                 UNCode = "762",
                 Alpha2Code = "TJ",
                 Alpha3Code = "TJK",

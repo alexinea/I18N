@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Curaçao,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.Netherlands,
+                BelongsToCountry = Country.Netherlands,
                 UNCode = "531",
                 Alpha2Code = "CW",
                 Alpha3Code = "CUW",

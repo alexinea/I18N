@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Barbados,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Barbados,
+                BelongsToCountry = Country.Barbados,
                 UNCode = "052",
                 Alpha2Code = "BB",
                 Alpha3Code = "BRB",

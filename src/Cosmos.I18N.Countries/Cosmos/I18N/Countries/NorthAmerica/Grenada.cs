@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Grenada,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Grenada,
+                BelongsToCountry = Country.Grenada,
                 UNCode = "308",
                 Alpha2Code = "GD",
                 Alpha3Code = "GRD",

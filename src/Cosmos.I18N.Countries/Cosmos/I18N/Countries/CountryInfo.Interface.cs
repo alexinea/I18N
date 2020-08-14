@@ -95,5 +95,11 @@ namespace Cosmos.I18N.Countries {
         // /// Historical metadata
         // /// </summary>
         // HistoricalMetadata HistoricalMetadata { get; }
+
+        /// <summary>
+        /// Convert to runtime country info.
+        /// </summary>
+        /// <returns></returns>
+        RuntimeCountryInfo ToRuntimeModel();
     }
 }

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Suriname,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Suriname,
+                BelongsToCountry = Country.Suriname,
                 UNCode = "740",
                 Alpha2Code = "SR",
                 Alpha3Code = "SUR",

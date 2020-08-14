@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.Estonia,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Estonia,
+                BelongsToCountry = Country.Estonia,
                 UNCode = "233",
                 Alpha2Code = "EE",
                 Alpha3Code = "EST",

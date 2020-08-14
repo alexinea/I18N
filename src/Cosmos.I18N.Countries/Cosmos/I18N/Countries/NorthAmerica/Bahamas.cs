@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Bahamas,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Bahamas,
+                BelongsToCountry = Country.Bahamas,
                 UNCode = "044",
                 Alpha2Code = "BS",
                 Alpha3Code = "BHS",

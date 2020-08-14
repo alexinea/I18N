@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.SouthKorea,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.SouthKorea,
+                BelongsToCountry = Country.SouthKorea,
                 UNCode = "410",
                 Alpha2Code = "KR",
                 Alpha3Code = "KOR",

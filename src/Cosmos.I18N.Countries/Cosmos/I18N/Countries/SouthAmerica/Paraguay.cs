@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
             _country = new CountryInfo {
                 Country = Country.Paraguay,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Paraguay,
+                BelongsToCountry = Country.Paraguay,
                 UNCode = "600",
                 Alpha2Code = "PY",
                 Alpha3Code = "PRY",

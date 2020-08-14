@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.Portugal,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Portugal,
+                BelongsToCountry = Country.Portugal,
                 UNCode = "620",
                 Alpha2Code = "PT",
                 Alpha3Code = "PRT",

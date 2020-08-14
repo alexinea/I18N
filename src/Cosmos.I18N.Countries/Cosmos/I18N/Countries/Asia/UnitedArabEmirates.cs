@@ -12,7 +12,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.UnitedArabEmirates,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.UnitedArabEmirates,
+                BelongsToCountry = Country.UnitedArabEmirates,
                 UNCode = "784",
                 Alpha2Code = "AE",
                 Alpha3Code = "ARE",

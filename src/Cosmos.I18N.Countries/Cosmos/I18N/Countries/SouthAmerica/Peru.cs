@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
             _country = new CountryInfo {
                 Country = Country.Peru,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Peru,
+                BelongsToCountry = Country.Peru,
                 UNCode = "604",
                 Alpha2Code = "PE",
                 Alpha3Code = "PER",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.MarshallIslands,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.MarshallIslands,
+                BelongsToCountry = Country.MarshallIslands,
                 UNCode = "584",
                 Alpha2Code = "MH",
                 Alpha3Code = "MHL",

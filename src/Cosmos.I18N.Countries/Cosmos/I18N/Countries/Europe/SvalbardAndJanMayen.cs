@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.SvalbardAndJanMayen,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.Norway,
+                BelongsToCountry = Country.Norway,
                 UNCode = "744",
                 Alpha2Code = "SJ",
                 Alpha3Code = "SJM",

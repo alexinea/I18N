@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Canada,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Canada,
+                BelongsToCountry = Country.Canada,
                 UNCode = "124",
                 Alpha2Code = "CA",
                 Alpha3Code = "CAN",

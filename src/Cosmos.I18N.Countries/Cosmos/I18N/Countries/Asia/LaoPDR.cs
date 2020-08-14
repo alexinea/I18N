@@ -12,7 +12,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.LaoPDR,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.LaoPDR,
+                BelongsToCountry = Country.LaoPDR,
                 UNCode = "418",
                 Alpha2Code = "LA",
                 Alpha3Code = "LAO",

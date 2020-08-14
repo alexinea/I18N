@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.TrinidadAndTobago,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.TrinidadAndTobago,
+                BelongsToCountry = Country.TrinidadAndTobago,
                 UNCode = "780",
                 Alpha2Code = "TT",
                 Alpha3Code = "TTO",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Qatar,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Qatar,
+                BelongsToCountry = Country.Qatar,
                 UNCode = "634",
                 Alpha2Code = "QA",
                 Alpha3Code = "QAT",

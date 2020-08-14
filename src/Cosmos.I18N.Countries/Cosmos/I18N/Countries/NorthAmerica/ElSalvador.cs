@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.ElSalvador,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.ElSalvador,
+                BelongsToCountry = Country.ElSalvador,
                 UNCode = "222",
                 Alpha2Code = "SV",
                 Alpha3Code = "SLV",

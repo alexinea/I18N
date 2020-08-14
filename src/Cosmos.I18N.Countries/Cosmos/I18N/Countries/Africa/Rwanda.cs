@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Rwanda,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Rwanda,
+                BelongsToCountry = Country.Rwanda,
                 UNCode = "646",
                 Alpha2Code = "RW",
                 Alpha3Code = "RWA",

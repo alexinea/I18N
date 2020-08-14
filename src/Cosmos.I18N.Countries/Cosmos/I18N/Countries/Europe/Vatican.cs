@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.Vatican,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Vatican,
+                BelongsToCountry = Country.Vatican,
                 UNCode = "336",
                 Alpha2Code = "VA",
                 Alpha3Code = "VAT",

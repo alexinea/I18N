@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.Greenland,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Greenland,
+                BelongsToCountry = Country.Greenland,
                 UNCode = "304",
                 Alpha2Code = "GL",
                 Alpha3Code = "GRL",

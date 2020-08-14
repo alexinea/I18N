@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
             _country = new CountryInfo {
                 Country = Country.Venezuela,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Venezuela,
+                BelongsToCountry = Country.Venezuela,
                 UNCode = "862",
                 Alpha2Code = "VE",
                 Alpha3Code = "VEN",

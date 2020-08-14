@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Jordan,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Jordan,
+                BelongsToCountry = Country.Jordan,
                 UNCode = "400",
                 Alpha2Code = "JO",
                 Alpha3Code = "JOR",

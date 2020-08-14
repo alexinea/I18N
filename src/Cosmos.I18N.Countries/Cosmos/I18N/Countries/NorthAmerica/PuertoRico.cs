@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.PuertoRico,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.UnitedStates,
+                BelongsToCountry = Country.UnitedStates,
                 UNCode = "630",
                 Alpha2Code = "PR",
                 Alpha3Code = "PRI",

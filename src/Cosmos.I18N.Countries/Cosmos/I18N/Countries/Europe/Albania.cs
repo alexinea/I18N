@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
             _country = new CountryInfo {
                 Country = Country.Albania,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Albania,
+                BelongsToCountry = Country.Albania,
                 UNCode = "008",
                 Alpha2Code = "AL",
                 Alpha3Code = "ALB",

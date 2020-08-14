@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.UnitedStatesMinorOutlyingIslands,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.UnitedStates,
+                BelongsToCountry = Country.UnitedStates,
                 UNCode = "581",
                 Alpha2Code = "UM",
                 Alpha3Code = "UMI",

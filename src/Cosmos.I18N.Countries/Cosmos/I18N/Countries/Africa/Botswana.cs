@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.Botswana,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Botswana,
+                BelongsToCountry = Country.Botswana,
                 UNCode = "072",
                 Alpha2Code = "BW",
                 Alpha3Code = "BWA",

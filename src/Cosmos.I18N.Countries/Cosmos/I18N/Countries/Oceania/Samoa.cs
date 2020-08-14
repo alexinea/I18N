@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Samoa,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Samoa,
+                BelongsToCountry = Country.Samoa,
                 UNCode = "882",
                 Alpha2Code = "WS",
                 Alpha3Code = "WSM",

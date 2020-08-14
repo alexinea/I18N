@@ -12,7 +12,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             _country = new CountryInfo {
                 Country = Country.VirginIslandsUS,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.UnitedStates,
+                BelongsToCountry = Country.UnitedStates,
                 UNCode = "850",
                 Alpha2Code = "VI",
                 Alpha3Code = "VIR",

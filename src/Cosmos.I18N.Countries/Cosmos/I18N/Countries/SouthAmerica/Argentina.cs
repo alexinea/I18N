@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
             _country = new CountryInfo {
                 Country = Country.Argentina,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Argentina,
+                BelongsToCountry = Country.Argentina,
                 UNCode = "032",
                 Alpha2Code = "AR",
                 Alpha3Code = "ARG",

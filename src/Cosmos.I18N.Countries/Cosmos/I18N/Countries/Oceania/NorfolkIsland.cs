@@ -10,7 +10,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.NorfolkIsland,
                 CountryType = CountryType.Region,
-                BeongsToCountry = Country.Australia,
+                BelongsToCountry = Country.Australia,
                 UNCode = "574",
                 Alpha2Code = "NF",
                 Alpha3Code = "NFK",

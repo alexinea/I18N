@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Palestine,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Palestine,
+                BelongsToCountry = Country.Palestine,
                 UNCode = "275",
                 Alpha2Code = "PS",
                 Alpha3Code = "PSE",

@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
             _country = new CountryInfo {
                 Country = Country.BurkinaFaso,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.BurkinaFaso,
+                BelongsToCountry = Country.BurkinaFaso,
                 UNCode = "854",
                 Alpha2Code = "BF",
                 Alpha3Code = "BFA",

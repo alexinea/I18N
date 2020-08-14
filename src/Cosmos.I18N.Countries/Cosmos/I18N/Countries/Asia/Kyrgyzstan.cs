@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
             _country = new CountryInfo {
                 Country = Country.Kyrgyzstan,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Kyrgyzstan,
+                BelongsToCountry = Country.Kyrgyzstan,
                 UNCode = "417",
                 Alpha2Code = "KG",
                 Alpha3Code = "KGZ",

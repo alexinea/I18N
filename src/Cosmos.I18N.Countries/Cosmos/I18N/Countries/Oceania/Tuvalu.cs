@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
             _country = new CountryInfo {
                 Country = Country.Tuvalu,
                 CountryType = CountryType.Country,
-                BeongsToCountry = Country.Tuvalu,
+                BelongsToCountry = Country.Tuvalu,
                 UNCode = "798",
                 Alpha2Code = "TV",
                 Alpha3Code = "TUV",
