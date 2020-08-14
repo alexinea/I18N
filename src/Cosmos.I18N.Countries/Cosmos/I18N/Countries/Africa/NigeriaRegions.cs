@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Nigeria Regions
     /// </summary>
-    public static class NigeriaRegions {
-
+    public static class NigeriaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -201,235 +202,197 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Nigeria regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Abia
             /// </summary>
-            [AliasInShort("AB")]
-            Abia,
+            [AliasInShort("AB")] Abia,
 
             /// <summary>
             /// Adamawa
             /// </summary>
-            [AliasInShort("AD")]
-            Adamawa,
+            [AliasInShort("AD")] Adamawa,
 
             /// <summary>
             /// Akwa Ibom
             /// </summary>
-            [AliasInShort("AK")]
-            AkwaIbom,
+            [AliasInShort("AK")] AkwaIbom,
 
             /// <summary>
             /// Anambra
             /// </summary>
-            [AliasInShort("AN")]
-            Anambra,
+            [AliasInShort("AN")] Anambra,
 
             /// <summary>
             /// Bauchi
             /// </summary>
-            [AliasInShort("BA")]
-            Bauchi,
+            [AliasInShort("BA")] Bauchi,
 
             /// <summary>
             /// Benue
             /// </summary>
-            [AliasInShort("BE")]
-            Benue,
+            [AliasInShort("BE")] Benue,
 
             /// <summary>
             /// Borno
             /// </summary>
-            [AliasInShort("BO")]
-            Borno,
+            [AliasInShort("BO")] Borno,
 
             /// <summary>
             /// Bayelsa
             /// </summary>
-            [AliasInShort("BY")]
-            Bayelsa,
+            [AliasInShort("BY")] Bayelsa,
 
             /// <summary>
             /// Cross River
             /// </summary>
-            [AliasInShort("CR")]
-            CrossRiver,
+            [AliasInShort("CR")] CrossRiver,
 
             /// <summary>
             /// Delta
             /// </summary>
-            [AliasInShort("DE")]
-            Delta,
+            [AliasInShort("DE")] Delta,
 
             /// <summary>
             /// Ebonyi
             /// </summary>
-            [AliasInShort("EB")]
-            Ebonyi,
+            [AliasInShort("EB")] Ebonyi,
 
             /// <summary>
             /// Edo
             /// </summary>
-            [AliasInShort("ED")]
-            Edo,
+            [AliasInShort("ED")] Edo,
 
             /// <summary>
             /// Ekiti
             /// </summary>
-            [AliasInShort("EK")]
-            Ekiti,
+            [AliasInShort("EK")] Ekiti,
 
             /// <summary>
             /// Enugu
             /// </summary>
-            [AliasInShort("EN")]
-            Enugu,
+            [AliasInShort("EN")] Enugu,
 
             /// <summary>
             /// Federal Capital Territory
             /// </summary>
-            [AliasInShort("FC")]
-            FederalCapitalTerritory,
+            [AliasInShort("FC")] FederalCapitalTerritory,
 
             /// <summary>
             /// Gombe
             /// </summary>
-            [AliasInShort("GO")]
-            Gombe,
+            [AliasInShort("GO")] Gombe,
 
             /// <summary>
             /// Imo
             /// </summary>
-            [AliasInShort("IM")]
-            Imo,
+            [AliasInShort("IM")] Imo,
 
             /// <summary>
             /// Jigawa
             /// </summary>
-            [AliasInShort("JI")]
-            Jigawa,
+            [AliasInShort("JI")] Jigawa,
 
             /// <summary>
             /// Kaduna
             /// </summary>
-            [AliasInShort("KD")]
-            Kaduna,
+            [AliasInShort("KD")] Kaduna,
 
             /// <summary>
             /// Kebbi
             /// </summary>
-            [AliasInShort("KE")]
-            Kebbi,
+            [AliasInShort("KE")] Kebbi,
 
             /// <summary>
             /// Kano
             /// </summary>
-            [AliasInShort("KN")]
-            Kano,
+            [AliasInShort("KN")] Kano,
 
             /// <summary>
             /// Kogi
             /// </summary>
-            [AliasInShort("KO")]
-            Kogi,
+            [AliasInShort("KO")] Kogi,
 
             /// <summary>
             /// Katsina
             /// </summary>
-            [AliasInShort("KT")]
-            Katsina,
+            [AliasInShort("KT")] Katsina,
 
             /// <summary>
             /// Kwara
             /// </summary>
-            [AliasInShort("KW")]
-            Kwara,
+            [AliasInShort("KW")] Kwara,
 
             /// <summary>
             /// Lagos
             /// </summary>
-            [AliasInShort("LA")]
-            Lagos,
+            [AliasInShort("LA")] Lagos,
 
             /// <summary>
             /// Nasarawa
             /// </summary>
-            [AliasInShort("NA")]
-            Nasarawa,
+            [AliasInShort("NA")] Nasarawa,
 
             /// <summary>
             /// Niger
             /// </summary>
-            [AliasInShort("NI")]
-            Niger,
+            [AliasInShort("NI")] Niger,
 
             /// <summary>
             /// Ogun
             /// </summary>
-            [AliasInShort("OG")]
-            Ogun,
+            [AliasInShort("OG")] Ogun,
 
             /// <summary>
             /// Ondo
             /// </summary>
-            [AliasInShort("ON")]
-            Ondo,
+            [AliasInShort("ON")] Ondo,
 
             /// <summary>
             /// Osun
             /// </summary>
-            [AliasInShort("OS")]
-            Osun,
+            [AliasInShort("OS")] Osun,
 
             /// <summary>
             /// Oyo
             /// </summary>
-            [AliasInShort("OY")]
-            Oyo,
+            [AliasInShort("OY")] Oyo,
 
             /// <summary>
             /// Plateau
             /// </summary>
-            [AliasInShort("PL")]
-            Plateau,
+            [AliasInShort("PL")] Plateau,
 
             /// <summary>
             /// Rivers
             /// </summary>
-            [AliasInShort("RI")]
-            Rivers,
+            [AliasInShort("RI")] Rivers,
 
             /// <summary>
             /// Sokoto
             /// </summary>
-            [AliasInShort("SO")]
-            Sokoto,
+            [AliasInShort("SO")] Sokoto,
 
             /// <summary>
             /// Taraba
             /// </summary>
-            [AliasInShort("TA")]
-            Taraba,
+            [AliasInShort("TA")] Taraba,
 
             /// <summary>
             /// Yobe
             /// </summary>
-            [AliasInShort("YO")]
-            Yobe,
+            [AliasInShort("YO")] Yobe,
 
             /// <summary>
             /// Zamfara
             /// </summary>
-            [AliasInShort("ZA")]
-            Zamfara,
+            [AliasInShort("ZA")] Zamfara,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -439,8 +402,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -448,7 +412,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"NG-{values.ToRegionCode()}";
         }
 
@@ -457,7 +422,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Nigeria;
         }
 
@@ -466,7 +432,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.NG;
         }
 
@@ -474,19 +441,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

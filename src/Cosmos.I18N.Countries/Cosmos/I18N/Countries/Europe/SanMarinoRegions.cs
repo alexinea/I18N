@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// SanMarino Regions
     /// </summary>
-    public static class SanMarinoRegions {
-
+    public static class SanMarinoRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -61,67 +62,57 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for SanMarino regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Acquaviva
             /// </summary>
-            [AliasInShort("01")]
-            Acquaviva,
+            [AliasInShort("01")] Acquaviva,
 
             /// <summary>
             /// Chiesanuova
             /// </summary>
-            [AliasInShort("02")]
-            Chiesanuova,
+            [AliasInShort("02")] Chiesanuova,
 
             /// <summary>
             /// Domagnano
             /// </summary>
-            [AliasInShort("03")]
-            Domagnano,
+            [AliasInShort("03")] Domagnano,
 
             /// <summary>
             /// Faetano
             /// </summary>
-            [AliasInShort("04")]
-            Faetano,
+            [AliasInShort("04")] Faetano,
 
             /// <summary>
             /// Fiorentino
             /// </summary>
-            [AliasInShort("05")]
-            Fiorentino,
+            [AliasInShort("05")] Fiorentino,
 
             /// <summary>
             /// Borgo Maggiore
             /// </summary>
-            [AliasInShort("06")]
-            BorgoMaggiore,
+            [AliasInShort("06")] BorgoMaggiore,
 
             /// <summary>
             /// San Marino
             /// </summary>
-            [AliasInShort("07")]
-            SanMarino,
+            [AliasInShort("07")] SanMarino,
 
             /// <summary>
             /// Montegiardino
             /// </summary>
-            [AliasInShort("08")]
-            Montegiardino,
+            [AliasInShort("08")] Montegiardino,
 
             /// <summary>
             /// Serravalle
             /// </summary>
-            [AliasInShort("09")]
-            Serravalle,
+            [AliasInShort("09")] Serravalle,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -131,8 +122,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -140,7 +132,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"SM-{values.ToRegionCode()}";
         }
 
@@ -149,7 +142,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.SanMarino;
         }
 
@@ -158,7 +152,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.SM;
         }
 
@@ -166,19 +161,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

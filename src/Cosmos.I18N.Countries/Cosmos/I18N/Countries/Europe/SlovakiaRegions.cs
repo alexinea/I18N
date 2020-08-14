@@ -4,12 +4,13 @@ using Cosmos.I18N.Core;
 using Cosmos.I18N.Countries.Oceania;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Slovakia Regions
     /// </summary>
-    public static class SlovakiaRegions {
-
+    public static class SlovakiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -62,61 +63,52 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Tonga regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Banská Bystrica
             /// </summary>
-            [AliasInShort("BC")]
-            BanskáBystrica,
+            [AliasInShort("BC")] BanskáBystrica,
 
             /// <summary>
             /// Bratislava
             /// </summary>
-            [AliasInShort("BL")]
-            Bratislava,
+            [AliasInShort("BL")] Bratislava,
 
             /// <summary>
             /// Košice
             /// </summary>
-            [AliasInShort("KI")]
-            Košice,
+            [AliasInShort("KI")] Košice,
 
             /// <summary>
             /// Nitra
             /// </summary>
-            [AliasInShort("NI")]
-            Nitra,
+            [AliasInShort("NI")] Nitra,
 
             /// <summary>
             /// Prešov
             /// </summary>
-            [AliasInShort("PV")]
-            Prešov,
+            [AliasInShort("PV")] Prešov,
 
             /// <summary>
             /// Trnava
             /// </summary>
-            [AliasInShort("TA")]
-            Trnava,
+            [AliasInShort("TA")] Trnava,
 
             /// <summary>
             /// Trenčín
             /// </summary>
-            [AliasInShort("TC")]
-            Trenčín,
+            [AliasInShort("TC")] Trenčín,
 
             /// <summary>
             /// Žilina
             /// </summary>
-            [AliasInShort("ZI")]
-            Žilina,
+            [AliasInShort("ZI")] Žilina,
 
             /// <summary>
             /// Unknown<br />未知
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown
+            [IgnoreRegion] [AliasInShort("??")] Unknown
         }
 
         #region Extension methods
@@ -126,8 +118,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -135,7 +128,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"SK-{values.ToRegionCode()}";
         }
 
@@ -144,7 +138,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Slovakia;
         }
 
@@ -153,7 +148,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.SK;
         }
 
@@ -161,19 +157,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Kyrgyzstan Regions
     /// </summary>
-    public static class KyrgyzstanRegions {
-
+    public static class KyrgyzstanRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -61,67 +62,57 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Kyrgyzstan regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Batken
             /// </summary>
-            [AliasInShort("B")]
-            Batken,
+            [AliasInShort("B")] Batken,
 
             /// <summary>
             /// Chuy
             /// </summary>
-            [AliasInShort("C")]
-            Chuy,
+            [AliasInShort("C")] Chuy,
 
             /// <summary>
             /// Bishkek
             /// </summary>
-            [AliasInShort("GB")]
-            Bishkek,
+            [AliasInShort("GB")] Bishkek,
 
             /// <summary>
             /// Osh
             /// </summary>
-            [AliasInShort("GO")]
-            Osh,
+            [AliasInShort("GO")] Osh,
 
             /// <summary>
             /// Jalal-Abad
             /// </summary>
-            [AliasInShort("J")]
-            JalalAbad,
+            [AliasInShort("J")] JalalAbad,
 
             /// <summary>
             /// Naryn
             /// </summary>
-            [AliasInShort("N")]
-            Naryn,
+            [AliasInShort("N")] Naryn,
 
             /// <summary>
             /// Osh Region
             /// </summary>
-            [AliasInShort("O")]
-            OshRegion,
+            [AliasInShort("O")] OshRegion,
 
             /// <summary>
             /// Talas
             /// </summary>
-            [AliasInShort("T")]
-            Talas,
+            [AliasInShort("T")] Talas,
 
             /// <summary>
             /// Issyk-Kul
             /// </summary>
-            [AliasInShort("Y")]
-            IssykKul,
+            [AliasInShort("Y")] IssykKul,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -131,8 +122,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -140,7 +132,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"KG-{values.ToRegionCode()}";
         }
 
@@ -149,7 +142,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Kyrgyzstan;
         }
 
@@ -158,7 +152,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.KG;
         }
 
@@ -166,19 +161,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

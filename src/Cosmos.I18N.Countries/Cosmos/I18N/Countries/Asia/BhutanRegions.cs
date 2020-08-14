@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Bhutan regions
     /// </summary>
-    public static class BhutanRegions {
-
+    public static class BhutanRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -116,133 +117,112 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Bhutan regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Paro
             /// </summary>
-            [AliasInShort("11")]
-            Paro,
+            [AliasInShort("11")] Paro,
 
             /// <summary>
             /// Chukha
             /// </summary>
-            [AliasInShort("12")]
-            Chukha,
+            [AliasInShort("12")] Chukha,
 
             /// <summary>
             /// Haa
             /// </summary>
-            [AliasInShort("13")]
-            Haa,
+            [AliasInShort("13")] Haa,
 
             /// <summary>
             /// Samtse
             /// </summary>
-            [AliasInShort("14")]
-            Samtse,
+            [AliasInShort("14")] Samtse,
 
             /// <summary>
             /// Thimphu
             /// </summary>
-            [AliasInShort("15")]
-            Thimphu,
+            [AliasInShort("15")] Thimphu,
 
             /// <summary>
             /// Tsirang
             /// </summary>
-            [AliasInShort("21")]
-            Tsirang,
+            [AliasInShort("21")] Tsirang,
 
             /// <summary>
             /// Dagana
             /// </summary>
-            [AliasInShort("22")]
-            Dagana,
+            [AliasInShort("22")] Dagana,
 
             /// <summary>
             /// Punakha
             /// </summary>
-            [AliasInShort("23")]
-            Punakha,
+            [AliasInShort("23")] Punakha,
 
             /// <summary>
             /// Wangdue Phodrang
             /// </summary>
-            [AliasInShort("24")]
-            WangduePhodrang,
+            [AliasInShort("24")] WangduePhodrang,
 
             /// <summary>
             /// Sarpang
             /// </summary>
-            [AliasInShort("31")]
-            Sarpang,
+            [AliasInShort("31")] Sarpang,
 
             /// <summary>
             /// Trongsa
             /// </summary>
-            [AliasInShort("32")]
-            Trongsa,
+            [AliasInShort("32")] Trongsa,
 
             /// <summary>
             /// Bumthang
             /// </summary>
-            [AliasInShort("33")]
-            Bumthang,
+            [AliasInShort("33")] Bumthang,
 
             /// <summary>
             /// Zhemgang
             /// </summary>
-            [AliasInShort("34")]
-            Zhemgang,
+            [AliasInShort("34")] Zhemgang,
 
             /// <summary>
             /// Trashigang
             /// </summary>
-            [AliasInShort("41")]
-            Trashigang,
+            [AliasInShort("41")] Trashigang,
 
             /// <summary>
             /// Mongar
             /// </summary>
-            [AliasInShort("42")]
-            Mongar,
+            [AliasInShort("42")] Mongar,
 
             /// <summary>
             /// Pemagatshel
             /// </summary>
-            [AliasInShort("43")]
-            Pemagatshel,
+            [AliasInShort("43")] Pemagatshel,
 
             /// <summary>
             /// Lhuntse
             /// </summary>
-            [AliasInShort("44")]
-            Lhuntse,
+            [AliasInShort("44")] Lhuntse,
 
             /// <summary>
             /// Samdrup Jongkhar
             /// </summary>
-            [AliasInShort("45")]
-            SamdrupJongkhar,
+            [AliasInShort("45")] SamdrupJongkhar,
 
             /// <summary>
             /// Gasa
             /// </summary>
-            [AliasInShort("GA")]
-            Gasa,
+            [AliasInShort("GA")] Gasa,
 
             /// <summary>
             /// Trashiyangtse
             /// </summary>
-            [AliasInShort("TY")]
-            Trashiyangtse,
+            [AliasInShort("TY")] Trashiyangtse,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -252,8 +232,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -261,7 +242,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"BT-{values.ToRegionCode()}";
         }
 
@@ -270,7 +252,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Bhutan;
         }
 
@@ -279,7 +262,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.BT;
         }
 
@@ -287,19 +271,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

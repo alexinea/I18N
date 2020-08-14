@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Mauritius Regions
     /// </summary>
-    public static class MauritiusRegions {
-
+    public static class MauritiusRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -106,121 +107,102 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Mauritius regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Agaléga
             /// </summary>
-            [AliasInShort("AG")]
-            Agaléga,
+            [AliasInShort("AG")] Agaléga,
 
             /// <summary>
             /// Rivière Noire
             /// </summary>
-            [AliasInShort("BL")]
-            RivièreNoire,
+            [AliasInShort("BL")] RivièreNoire,
 
             /// <summary>
             /// Beau-Bassin Rose-Hill
             /// </summary>
-            [AliasInShort("BR")]
-            BeauBassinRoseHill,
+            [AliasInShort("BR")] BeauBassinRoseHill,
 
             /// <summary>
             /// Cargados Carajos
             /// </summary>
-            [AliasInShort("CC")]
-            CargadosCarajos,
+            [AliasInShort("CC")] CargadosCarajos,
 
             /// <summary>
             /// Curepipe
             /// </summary>
-            [AliasInShort("CU")]
-            Curepipe,
+            [AliasInShort("CU")] Curepipe,
 
             /// <summary>
             /// Flacq
             /// </summary>
-            [AliasInShort("FL")]
-            Flacq,
+            [AliasInShort("FL")] Flacq,
 
             /// <summary>
             /// Grand Port
             /// </summary>
-            [AliasInShort("GP")]
-            GrandPort,
+            [AliasInShort("GP")] GrandPort,
 
             /// <summary>
             /// Moka
             /// </summary>
-            [AliasInShort("MO")]
-            Moka,
+            [AliasInShort("MO")] Moka,
 
             /// <summary>
             /// Pamplemousses
             /// </summary>
-            [AliasInShort("PA")]
-            Pamplemousses,
+            [AliasInShort("PA")] Pamplemousses,
 
             /// <summary>
             /// Port Louis District
             /// </summary>
-            [AliasInShort("PL")]
-            PortLouisDistrict,
+            [AliasInShort("PL")] PortLouisDistrict,
 
             /// <summary>
             /// Port Louis
             /// </summary>
-            [AliasInShort("PU")]
-            PortLouis,
+            [AliasInShort("PU")] PortLouis,
 
             /// <summary>
             /// Al Muthanna
             /// </summary>
-            [AliasInShort("MU")]
-            AlMuthanna,
+            [AliasInShort("MU")] AlMuthanna,
 
             /// <summary>
             /// Plaines Wilhems
             /// </summary>
-            [AliasInShort("PW")]
-            PlainesWilhems,
+            [AliasInShort("PW")] PlainesWilhems,
 
             /// <summary>
             /// Quatre Bornes
             /// </summary>
-            [AliasInShort("QB")]
-            QuatrBornes,
+            [AliasInShort("QB")] QuatrBornes,
 
             /// <summary>
             /// Rodrigues
             /// </summary>
-            [AliasInShort("RO")]
-            Rodrigues,
+            [AliasInShort("RO")] Rodrigues,
 
             /// <summary>
             /// Rivière du Rempart
             /// </summary>
-            [AliasInShort("RR")]
-            RivièreDuRempart,
+            [AliasInShort("RR")] RivièreDuRempart,
 
             /// <summary>
             /// Savanne
             /// </summary>
-            [AliasInShort("SA")]
-            Savanne,
+            [AliasInShort("SA")] Savanne,
 
             /// <summary>
             /// Vacoas-Phoenix
             /// </summary>
-            [AliasInShort("VP")]
-            VacoasPhoenix,
+            [AliasInShort("VP")] VacoasPhoenix,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -230,8 +212,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -239,7 +222,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"MU-{values.ToRegionCode()}";
         }
 
@@ -248,7 +232,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Mauritius;
         }
 
@@ -257,7 +242,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.MU;
         }
 
@@ -265,19 +251,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

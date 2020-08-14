@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Antarctica {
+namespace Cosmos.I18N.Countries.Antarctica
+{
     /// <summary>
     /// Antarctique regions
     /// </summary>
-    public static class AntarctiqueRegons {
-
+    public static class AntarctiqueRegons
+    {
         #region Gets regions
 
         /// <summary>
@@ -61,67 +62,57 @@ namespace Cosmos.I18N.Countries.Antarctica {
         /// <summary>
         /// Enum values for Antarctique regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Casey
             /// </summary>
-            [AliasInShort("CA")]
-            Casey,
+            [AliasInShort("CA")] Casey,
 
             /// <summary>
             /// Davis
             /// </summary>
-            [AliasInShort("DA")]
-            Davis,
+            [AliasInShort("DA")] Davis,
 
             /// <summary>
             /// DumontDUrville
             /// </summary>
-            [AliasInShort("DU")]
-            DumontDUrville,
+            [AliasInShort("DU")] DumontDUrville,
 
             /// <summary>
             /// Mawson
             /// </summary>
-            [AliasInShort("MA")]
-            Mawson,
+            [AliasInShort("MA")] Mawson,
 
             /// <summary>
             /// Palmer
             /// </summary>
-            [AliasInShort("PA")]
-            Palmer,
+            [AliasInShort("PA")] Palmer,
 
             /// <summary>
             /// Rothera
             /// </summary>
-            [AliasInShort("RO")]
-            Rothera,
+            [AliasInShort("RO")] Rothera,
 
             /// <summary>
             /// Syowa
             /// </summary>
-            [AliasInShort("SY")]
-            Syowa,
+            [AliasInShort("SY")] Syowa,
 
             /// <summary>
             /// Troll
             /// </summary>
-            [AliasInShort("TR")]
-            Troll,
+            [AliasInShort("TR")] Troll,
 
             /// <summary>
             /// Vostok
             /// </summary>
-            [AliasInShort("VO")]
-            Vostok,
+            [AliasInShort("VO")] Vostok,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -131,8 +122,9 @@ namespace Cosmos.I18N.Countries.Antarctica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -140,7 +132,8 @@ namespace Cosmos.I18N.Countries.Antarctica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AQ-{values.ToRegionCode()}";
         }
 
@@ -149,7 +142,8 @@ namespace Cosmos.I18N.Countries.Antarctica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Antarctique;
         }
 
@@ -158,7 +152,8 @@ namespace Cosmos.I18N.Countries.Antarctica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.AQ;
         }
 
@@ -166,19 +161,16 @@ namespace Cosmos.I18N.Countries.Antarctica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

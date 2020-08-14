@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Yemen regions
     /// </summary>
-    public static class YemenRegions {
-
+    public static class YemenRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -127,145 +128,122 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Yemen regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Abyan
             /// </summary>
-            [AliasInShort("AB")]
-            Abyan,
+            [AliasInShort("AB")] Abyan,
 
             /// <summary>
             /// 'Adan
             /// </summary>
-            [AliasInShort("AD")]
-            Adan,
+            [AliasInShort("AD")] Adan,
 
             /// <summary>
             /// Amran
             /// </summary>
-            [AliasInShort("AM")]
-            Amran,
+            [AliasInShort("AM")] Amran,
 
             /// <summary>
             /// Al Bayda
             /// </summary>
-            [AliasInShort("BA")]
-            AlBayda,
+            [AliasInShort("BA")] AlBayda,
 
             /// <summary>
             /// Dhale
             /// </summary>
-            [AliasInShort("DA")]
-            Dhale,
+            [AliasInShort("DA")] Dhale,
 
             /// <summary>
             /// Dhamar
             /// </summary>
-            [AliasInShort("DH")]
-            Dhamar,
+            [AliasInShort("DH")] Dhamar,
 
             /// <summary>
             /// Hadramaut
             /// </summary>
-            [AliasInShort("HD")]
-            Hadramaut,
+            [AliasInShort("HD")] Hadramaut,
 
             /// <summary>
             /// Hajjah
             /// </summary>
-            [AliasInShort("HJ")]
-            Hajjah,
+            [AliasInShort("HJ")] Hajjah,
 
             /// <summary>
             /// Al Hudaydah
             /// </summary>
-            [AliasInShort("HU")]
-            AlHudaydah,
+            [AliasInShort("HU")] AlHudaydah,
 
             /// <summary>
             /// Ibb
             /// </summary>
-            [AliasInShort("IB")]
-            Ibb,
+            [AliasInShort("IB")] Ibb,
 
             /// <summary>
             /// Al Jawf
             /// </summary>
-            [AliasInShort("JA")]
-            AlJawf,
+            [AliasInShort("JA")] AlJawf,
 
             /// <summary>
             /// Lahij
             /// </summary>
-            [AliasInShort("LA")]
-            Lahij,
+            [AliasInShort("LA")] Lahij,
 
             /// <summary>
             /// Ma'rib
             /// </summary>
-            [AliasInShort("MA")]
-            MaRib,
+            [AliasInShort("MA")] MaRib,
 
             /// <summary>
             /// Al Mahrah
             /// </summary>
-            [AliasInShort("MR")]
-            AlMahrah,
+            [AliasInShort("MR")] AlMahrah,
 
             /// <summary>
             /// Al Mahwit
             /// </summary>
-            [AliasInShort("MW")]
-            AlMahwit,
+            [AliasInShort("MW")] AlMahwit,
 
             /// <summary>
             /// Raymah
             /// </summary>
-            [AliasInShort("RA")]
-            Raymah,
+            [AliasInShort("RA")] Raymah,
 
             /// <summary>
             /// Amanat Al Asimah
             /// </summary>
-            [AliasInShort("SA")]
-            AmanatAlAsimah,
+            [AliasInShort("SA")] AmanatAlAsimah,
 
             /// <summary>
             /// Sa'dah
             /// </summary>
-            [AliasInShort("SD")]
-            SaDah,
+            [AliasInShort("SD")] SaDah,
 
             /// <summary>
             /// Shabwah
             /// </summary>
-            [AliasInShort("SH")]
-            Shabwah,
+            [AliasInShort("SH")] Shabwah,
 
             /// <summary>
             /// Sana'a
             /// </summary>
-            [AliasInShort("SN")]
-            SanaA,
+            [AliasInShort("SN")] SanaA,
 
             /// <summary>
             /// Arkhabil Suqutra
             /// </summary>
-            [AliasInShort("SU")]
-            ArkhabilSuqutra,
+            [AliasInShort("SU")] ArkhabilSuqutra,
 
             /// <summary>
             /// Taiz
             /// </summary>
-            [AliasInShort("TA")]
-            Taiz,
+            [AliasInShort("TA")] Taiz,
 
             /// <summary>
             /// Unknown<br />未知
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown
+            [IgnoreRegion] [AliasInShort("??")] Unknown
         }
 
         #region Extension methods
@@ -275,8 +253,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -284,7 +263,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"YE-{values.ToRegionCode()}";
         }
 
@@ -293,7 +273,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Yemen;
         }
 
@@ -302,7 +283,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.YE;
         }
 
@@ -310,19 +292,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

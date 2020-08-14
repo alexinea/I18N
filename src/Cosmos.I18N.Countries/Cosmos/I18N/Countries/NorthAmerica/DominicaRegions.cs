@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// Dominica regions
     /// </summary>
-    public static class DominicaRegions {
-
+    public static class DominicaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -66,73 +67,62 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for Dominica regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Saint Andrew
             /// </summary>
-            [AliasInShort("02")]
-            SaintAndrew,
+            [AliasInShort("02")] SaintAndrew,
 
             /// <summary>
             /// Saint David
             /// </summary>
-            [AliasInShort("03")]
-            SaintDavid,
+            [AliasInShort("03")] SaintDavid,
 
             /// <summary>
             /// Saint George
             /// </summary>
-            [AliasInShort("04")]
-            SaintGeorge,
+            [AliasInShort("04")] SaintGeorge,
 
             /// <summary>
             /// Saint John
             /// </summary>
-            [AliasInShort("05")]
-            SaintJohn,
+            [AliasInShort("05")] SaintJohn,
 
             /// <summary>
             /// Saint Joseph
             /// </summary>
-            [AliasInShort("06")]
-            SaintJoseph,
+            [AliasInShort("06")] SaintJoseph,
 
             /// <summary>
             /// Saint Luke
             /// </summary>
-            [AliasInShort("07")]
-            SaintLuke,
+            [AliasInShort("07")] SaintLuke,
 
             /// <summary>
             /// Saint Mark
             /// </summary>
-            [AliasInShort("08")]
-            SaintMark,
+            [AliasInShort("08")] SaintMark,
 
             /// <summary>
             /// Saint Patrick
             /// </summary>
-            [AliasInShort("09")]
-            SaintPatrick,
+            [AliasInShort("09")] SaintPatrick,
 
             /// <summary>
             /// Saint Paul
             /// </summary>
-            [AliasInShort("10")]
-            SaintPaul,
+            [AliasInShort("10")] SaintPaul,
 
             /// <summary>
             /// Saint Peter
             /// </summary>
-            [AliasInShort("11")]
-            SaintPeter,
+            [AliasInShort("11")] SaintPeter,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -142,8 +132,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -151,7 +142,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"DM-{values.ToRegionCode()}";
         }
 
@@ -160,7 +152,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Dominica;
         }
 
@@ -169,7 +162,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.DM;
         }
 
@@ -177,19 +171,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

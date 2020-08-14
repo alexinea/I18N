@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// India Regions
     /// </summary>
-    public static class IndiaRegions {
-
+    public static class IndiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -196,229 +197,192 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for India regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Andaman and Nicobar Islands
             /// </summary>
-            [AliasInShort("AN")]
-            AndamanAndNicobarIslands,
+            [AliasInShort("AN")] AndamanAndNicobarIslands,
 
             /// <summary>
             /// Andhra Pradesh
             /// </summary>
-            [AliasInShort("AP")]
-            AndhraPradesh,
+            [AliasInShort("AP")] AndhraPradesh,
 
             /// <summary>
             /// Arunachal Pradesh
             /// </summary>
-            [AliasInShort("AR")]
-            ArunachalPradesh,
+            [AliasInShort("AR")] ArunachalPradesh,
 
             /// <summary>
             /// Assam
             /// </summary>
-            [AliasInShort("AS")]
-            Assam,
+            [AliasInShort("AS")] Assam,
 
             /// <summary>
             /// Bihar
             /// </summary>
-            [AliasInShort("BR")]
-            Bihar,
+            [AliasInShort("BR")] Bihar,
 
             /// <summary>
             /// Chandigarh
             /// </summary>
-            [AliasInShort("CH")]
-            Chandigarh,
+            [AliasInShort("CH")] Chandigarh,
 
             /// <summary>
             /// Chhattisgarh
             /// </summary>
-            [AliasInShort("CT")]
-            Chhattisgarh,
+            [AliasInShort("CT")] Chhattisgarh,
 
             /// <summary>
             /// Daman and Diu
             /// </summary>
-            [AliasInShort("DD")]
-            DamanAndDiu,
+            [AliasInShort("DD")] DamanAndDiu,
 
             /// <summary>
             /// Delhi
             /// </summary>
-            [AliasInShort("DL")]
-            Delhi,
+            [AliasInShort("DL")] Delhi,
 
             /// <summary>
             /// Dadra and Nagar Haveli
             /// </summary>
-            [AliasInShort("DN")]
-            DadraAndNagarHaveli,
+            [AliasInShort("DN")] DadraAndNagarHaveli,
 
             /// <summary>
             /// Goa
             /// </summary>
-            [AliasInShort("GA")]
-            Goa,
+            [AliasInShort("GA")] Goa,
 
             /// <summary>
             /// Gujarat
             /// </summary>
-            [AliasInShort("GJ")]
-            Gujarat,
+            [AliasInShort("GJ")] Gujarat,
 
             /// <summary>
             /// Himachal Pradesh
             /// </summary>
-            [AliasInShort("HP")]
-            HimachalPradesh,
+            [AliasInShort("HP")] HimachalPradesh,
 
             /// <summary>
             /// Haryana
             /// </summary>
-            [AliasInShort("HR")]
-            Haryana,
+            [AliasInShort("HR")] Haryana,
 
             /// <summary>
             /// Jharkhand
             /// </summary>
-            [AliasInShort("JH")]
-            Jharkhand,
+            [AliasInShort("JH")] Jharkhand,
 
             /// <summary>
             /// Jammu and Kashmir
             /// </summary>
-            [AliasInShort("JK")]
-            JammuAndKashmir,
+            [AliasInShort("JK")] JammuAndKashmir,
 
             /// <summary>
             /// Karnataka
             /// </summary>
-            [AliasInShort("KA")]
-            Karnataka,
+            [AliasInShort("KA")] Karnataka,
 
             /// <summary>
             /// Kerala
             /// </summary>
-            [AliasInShort("KL")]
-            Kerala,
+            [AliasInShort("KL")] Kerala,
 
             /// <summary>
             /// Lakshadweep
             /// </summary>
-            [AliasInShort("LD")]
-            Lakshadweep,
+            [AliasInShort("LD")] Lakshadweep,
 
             /// <summary>
             /// Maharashtra
             /// </summary>
-            [AliasInShort("MH")]
-            Maharashtra,
+            [AliasInShort("MH")] Maharashtra,
 
             /// <summary>
             /// Meghalaya
             /// </summary>
-            [AliasInShort("ML")]
-            Meghalaya,
+            [AliasInShort("ML")] Meghalaya,
 
             /// <summary>
             /// Manipur
             /// </summary>
-            [AliasInShort("MN")]
-            Manipur,
+            [AliasInShort("MN")] Manipur,
 
             /// <summary>
             /// Madhya Pradesh
             /// </summary>
-            [AliasInShort("MP")]
-            MadhyaPradesh,
+            [AliasInShort("MP")] MadhyaPradesh,
 
             /// <summary>
             /// Mizoram
             /// </summary>
-            [AliasInShort("MZ")]
-            Mizoram,
+            [AliasInShort("MZ")] Mizoram,
 
             /// <summary>
             /// Nagaland
             /// </summary>
-            [AliasInShort("NL")]
-            Nagaland,
+            [AliasInShort("NL")] Nagaland,
 
             /// <summary>
             /// Odisha
             /// </summary>
-            [AliasInShort("OR")]
-            Odisha,
+            [AliasInShort("OR")] Odisha,
 
             /// <summary>
             /// Punjab
             /// </summary>
-            [AliasInShort("PB")]
-            Punjab,
+            [AliasInShort("PB")] Punjab,
 
             /// <summary>
             /// Puducherry
             /// </summary>
-            [AliasInShort("PY")]
-            Puducherry,
+            [AliasInShort("PY")] Puducherry,
 
             /// <summary>
             /// Rajasthan
             /// </summary>
-            [AliasInShort("RJ")]
-            Rajasthan,
+            [AliasInShort("RJ")] Rajasthan,
 
             /// <summary>
             /// Sikkim
             /// </summary>
-            [AliasInShort("SK")]
-            Sikkim,
+            [AliasInShort("SK")] Sikkim,
 
             /// <summary>
             /// Telangana
             /// </summary>
-            [AliasInShort("TG")]
-            Telangana,
+            [AliasInShort("TG")] Telangana,
 
             /// <summary>
             /// Tamil Nadu
             /// </summary>
-            [AliasInShort("TN")]
-            TamilNadu,
+            [AliasInShort("TN")] TamilNadu,
 
             /// <summary>
             /// Tripura
             /// </summary>
-            [AliasInShort("TR")]
-            Tripura,
+            [AliasInShort("TR")] Tripura,
 
             /// <summary>
             /// Uttar Pradesh
             /// </summary>
-            [AliasInShort("UP")]
-            UttarPradesh,
+            [AliasInShort("UP")] UttarPradesh,
 
             /// <summary>
             /// Uttarakhand
             /// </summary>
-            [AliasInShort("UT")]
-            Uttarakhand,
+            [AliasInShort("UT")] Uttarakhand,
 
             /// <summary>
             /// West Bengal
             /// </summary>
-            [AliasInShort("WB")]
-            WestBengal,
+            [AliasInShort("WB")] WestBengal,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -428,8 +392,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -437,7 +402,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"IN-{values.ToRegionCode()}";
         }
 
@@ -446,7 +412,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.India;
         }
 
@@ -455,7 +422,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.IN;
         }
 
@@ -463,19 +431,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

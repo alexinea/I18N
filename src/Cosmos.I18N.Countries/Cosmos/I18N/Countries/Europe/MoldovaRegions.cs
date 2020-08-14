@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Moldova Regions
     /// </summary>
-    public static class MoldovaRegions {
-
+    public static class MoldovaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -201,235 +202,197 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Moldova regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Anenii Noi
             /// </summary>
-            [AliasInShort("AN")]
-            AneniiNoi,
+            [AliasInShort("AN")] AneniiNoi,
 
             /// <summary>
             /// Bălţi
             /// </summary>
-            [AliasInShort("BA")]
-            Bălţi,
+            [AliasInShort("BA")] Bălţi,
 
             /// <summary>
             /// Bender
             /// </summary>
-            [AliasInShort("BD")]
-            Bender,
+            [AliasInShort("BD")] Bender,
 
             /// <summary>
             /// Briceni
             /// </summary>
-            [AliasInShort("BR")]
-            Briceni,
+            [AliasInShort("BR")] Briceni,
 
             /// <summary>
             /// Basarabeasca
             /// </summary>
-            [AliasInShort("BS")]
-            Basarabeasca,
+            [AliasInShort("BS")] Basarabeasca,
 
             /// <summary>
             /// Cahul
             /// </summary>
-            [AliasInShort("CA")]
-            Cahul,
+            [AliasInShort("CA")] Cahul,
 
             /// <summary>
             /// Călărași
             /// </summary>
-            [AliasInShort("CL")]
-            Călărași,
+            [AliasInShort("CL")] Călărași,
 
             /// <summary>
             /// Cimișlia
             /// </summary>
-            [AliasInShort("CM")]
-            Cimișlia,
+            [AliasInShort("CM")] Cimișlia,
 
             /// <summary>
             /// Criuleni
             /// </summary>
-            [AliasInShort("CR")]
-            Criuleni,
+            [AliasInShort("CR")] Criuleni,
 
             /// <summary>
             /// Căușeni
             /// </summary>
-            [AliasInShort("CS")]
-            Căușeni,
+            [AliasInShort("CS")] Căușeni,
 
             /// <summary>
             /// Cantemir
             /// </summary>
-            [AliasInShort("CT")]
-            Cantemir,
+            [AliasInShort("CT")] Cantemir,
 
             /// <summary>
             /// Chișinău
             /// </summary>
-            [AliasInShort("CU")]
-            Chișinău,
+            [AliasInShort("CU")] Chișinău,
 
             /// <summary>
             /// Dondușeni
             /// </summary>
-            [AliasInShort("DO")]
-            Dondușeni,
+            [AliasInShort("DO")] Dondușeni,
 
             /// <summary>
             /// Drochia
             /// </summary>
-            [AliasInShort("DR")]
-            Drochia,
+            [AliasInShort("DR")] Drochia,
 
             /// <summary>
             /// Dubăsari
             /// </summary>
-            [AliasInShort("DU")]
-            Dubăsari,
+            [AliasInShort("DU")] Dubăsari,
 
             /// <summary>
             /// Edineț
             /// </summary>
-            [AliasInShort("ED")]
-            Edineț,
+            [AliasInShort("ED")] Edineț,
 
             /// <summary>
             /// Fălești
             /// </summary>
-            [AliasInShort("FA")]
-            Fălești,
+            [AliasInShort("FA")] Fălești,
 
             /// <summary>
             /// Florești
             /// </summary>
-            [AliasInShort("FL")]
-            Florești,
+            [AliasInShort("FL")] Florești,
 
             /// <summary>
             /// Gagauzia
             /// </summary>
-            [AliasInShort("GA")]
-            Gagauzia,
+            [AliasInShort("GA")] Gagauzia,
 
             /// <summary>
             /// Glodeni
             /// </summary>
-            [AliasInShort("GL")]
-            Glodeni,
+            [AliasInShort("GL")] Glodeni,
 
             /// <summary>
             /// Hîncești
             /// </summary>
-            [AliasInShort("HI")]
-            Hîncești,
+            [AliasInShort("HI")] Hîncești,
 
             /// <summary>
             /// Ialoveni
             /// </summary>
-            [AliasInShort("IA")]
-            Ialoveni,
+            [AliasInShort("IA")] Ialoveni,
 
             /// <summary>
             /// Leova
             /// </summary>
-            [AliasInShort("LE")]
-            Leova,
+            [AliasInShort("LE")] Leova,
 
             /// <summary>
             /// Nisporeni
             /// </summary>
-            [AliasInShort("NI")]
-            Nisporeni,
+            [AliasInShort("NI")] Nisporeni,
 
             /// <summary>
             /// Ocniţa
             /// </summary>
-            [AliasInShort("OC")]
-            Ocniţa,
+            [AliasInShort("OC")] Ocniţa,
 
             /// <summary>
             /// Orhei
             /// </summary>
-            [AliasInShort("OR")]
-            Orhei,
+            [AliasInShort("OR")] Orhei,
 
             /// <summary>
             /// Rezina
             /// </summary>
-            [AliasInShort("RE")]
-            Rezina,
+            [AliasInShort("RE")] Rezina,
 
             /// <summary>
             /// Rîșcani
             /// </summary>
-            [AliasInShort("RI")]
-            Rîșcani,
+            [AliasInShort("RI")] Rîșcani,
 
             /// <summary>
             /// Șoldănești
             /// </summary>
-            [AliasInShort("SD")]
-            Șoldănești,
+            [AliasInShort("SD")] Șoldănești,
 
             /// <summary>
             /// Sîngerei
             /// </summary>
-            [AliasInShort("SI")]
-            Sîngerei,
+            [AliasInShort("SI")] Sîngerei,
 
             /// <summary>
             /// Transnistria
             /// </summary>
-            [AliasInShort("SM")]
-            Transnistria,
+            [AliasInShort("SM")] Transnistria,
 
             /// <summary>
             /// Soroca
             /// </summary>
-            [AliasInShort("SO")]
-            Soroca,
+            [AliasInShort("SO")] Soroca,
 
             /// <summary>
             /// Strășeni
             /// </summary>
-            [AliasInShort("ST")]
-            Strășeni,
+            [AliasInShort("ST")] Strășeni,
 
             /// <summary>
             /// Ştefan Vodă
             /// </summary>
-            [AliasInShort("SV")]
-            ŞtefanVodă,
+            [AliasInShort("SV")] ŞtefanVodă,
 
             /// <summary>
             /// Taraclia
             /// </summary>
-            [AliasInShort("TA")]
-            Taraclia,
+            [AliasInShort("TA")] Taraclia,
 
             /// <summary>
             /// Telenești
             /// </summary>
-            [AliasInShort("TE")]
-            Telenești,
+            [AliasInShort("TE")] Telenești,
 
             /// <summary>
             /// Ungheni
             /// </summary>
-            [AliasInShort("UN")]
-            Ungheni,
+            [AliasInShort("UN")] Ungheni,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -439,8 +402,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -448,7 +412,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"MD-{values.ToRegionCode()}";
         }
 
@@ -457,7 +422,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Moldova;
         }
 
@@ -466,7 +432,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.MD;
         }
 
@@ -474,19 +441,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

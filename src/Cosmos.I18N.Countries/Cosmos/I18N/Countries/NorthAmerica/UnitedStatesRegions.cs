@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// United States regions
     /// </summary>
-    public static class UnitedStatesRegions {
-
+    public static class UnitedStatesRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -298,7 +299,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Special regions
         /// </summary>
-        public static class Special {
+        public static class Special
+        {
             /// <summary>
             /// The United States Virgin Islands
             /// </summary>
@@ -369,404 +371,349 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for United States regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// 亚拉巴马州
             /// </summary>
-            [AliasInShort("AL")]
-            [RegionFlag("main")]
+            [AliasInShort("AL")] [RegionFlag("main")]
             Alabama,
 
             /// <summary>
             /// 阿拉斯加州
             /// </summary>
-            [AliasInShort("AK")]
-            [RegionFlag("main")]
+            [AliasInShort("AK")] [RegionFlag("main")]
             Alaska,
 
             /// <summary>
             /// 阿肯色州
             /// </summary>
-            [AliasInShort("AR")]
-            [RegionFlag("main")]
+            [AliasInShort("AR")] [RegionFlag("main")]
             Arkansas,
 
             /// <summary>
             /// 加利福尼亚州
             /// </summary>
-            [AliasInShort("CA")]
-            [RegionFlag("main")]
+            [AliasInShort("CA")] [RegionFlag("main")]
             California,
 
             /// <summary>
             /// 科罗拉多州
             /// </summary>
-            [AliasInShort("CO")]
-            [RegionFlag("main")]
+            [AliasInShort("CO")] [RegionFlag("main")]
             Colorado,
 
             /// <summary>
             /// 康涅狄格州
             /// </summary>
-            [AliasInShort("CT")]
-            [RegionFlag("main")]
+            [AliasInShort("CT")] [RegionFlag("main")]
             Connecticut,
 
             /// <summary>
             /// 特拉华州
             /// </summary>
-            [AliasInShort("DE")]
-            [RegionFlag("main")]
+            [AliasInShort("DE")] [RegionFlag("main")]
             Delaware,
 
             /// <summary>
             /// 佛罗里达州
             /// </summary>
-            [AliasInShort("FL")]
-            [RegionFlag("main")]
+            [AliasInShort("FL")] [RegionFlag("main")]
             Florida,
 
             /// <summary>
             /// 乔治亚州
             /// </summary>
-            [AliasInShort("GA")]
-            [RegionFlag("main")]
+            [AliasInShort("GA")] [RegionFlag("main")]
             Georgia,
 
             /// <summary>
             /// 夏威夷州
             /// </summary>
-            [AliasInShort("HI")]
-            [RegionFlag("main")]
+            [AliasInShort("HI")] [RegionFlag("main")]
             Hawaii,
 
             /// <summary>
             /// 爱德华州
             /// </summary>
-            [AliasInShort("ID")]
-            [RegionFlag("main")]
+            [AliasInShort("ID")] [RegionFlag("main")]
             Idaho,
 
             /// <summary>
             /// 伊利诺伊州
             /// </summary>
-            [AliasInShort("IL")]
-            [RegionFlag("main")]
+            [AliasInShort("IL")] [RegionFlag("main")]
             Illinois,
 
             /// <summary>
             /// 印第安纳州
             /// </summary>
-            [AliasInShort("IN")]
-            [RegionFlag("main")]
+            [AliasInShort("IN")] [RegionFlag("main")]
             Indiana,
 
             /// <summary>
             /// 衣阿华州
             /// </summary>
-            [AliasInShort("IA")]
-            [RegionFlag("main")]
+            [AliasInShort("IA")] [RegionFlag("main")]
             Iowa,
 
             /// <summary>
             /// 堪萨斯州
             /// </summary>
-            [AliasInShort("KS")]
-            [RegionFlag("main")]
+            [AliasInShort("KS")] [RegionFlag("main")]
             Kansas,
 
             /// <summary>
             /// 肯塔基州
             /// </summary>
-            [AliasInShort("KY")]
-            [RegionFlag("main")]
+            [AliasInShort("KY")] [RegionFlag("main")]
             Kentucky,
 
             /// <summary>
             /// 路易斯安那州
             /// </summary>
-            [AliasInShort("LA")]
-            [RegionFlag("main")]
+            [AliasInShort("LA")] [RegionFlag("main")]
             Louisiana,
 
             /// <summary>
             /// 缅因州
             /// </summary>
-            [AliasInShort("ME")]
-            [RegionFlag("main")]
+            [AliasInShort("ME")] [RegionFlag("main")]
             Maine,
 
             /// <summary>
             /// 马里兰州
             /// </summary>
-            [AliasInShort("MD")]
-            [RegionFlag("main")]
+            [AliasInShort("MD")] [RegionFlag("main")]
             Maryland,
 
             /// <summary>
             /// 马塞诸塞州
             /// </summary>
-            [AliasInShort("MA")]
-            [RegionFlag("main")]
+            [AliasInShort("MA")] [RegionFlag("main")]
             Massachusetts,
 
             /// <summary>
             /// 密歇根州
             /// </summary>
-            [AliasInShort("MI")]
-            [RegionFlag("main")]
+            [AliasInShort("MI")] [RegionFlag("main")]
             Michigan,
 
             /// <summary>
             /// 明尼苏达州
             /// </summary>
-            [AliasInShort("MN")]
-            [RegionFlag("main")]
+            [AliasInShort("MN")] [RegionFlag("main")]
             Minnesota,
 
             /// <summary>
             /// 密西西比州
             /// </summary>
-            [AliasInShort("MO")]
-            [RegionFlag("main")]
+            [AliasInShort("MO")] [RegionFlag("main")]
             Mississippi,
 
             /// <summary>
             /// 蒙大拿州
             /// </summary>
-            [AliasInShort("MT")]
-            [RegionFlag("main")]
+            [AliasInShort("MT")] [RegionFlag("main")]
             Montana,
 
             /// <summary>
             /// 内布拉斯加州
             /// </summary>
-            [AliasInShort("NE")]
-            [RegionFlag("main")]
+            [AliasInShort("NE")] [RegionFlag("main")]
             Nebraska,
 
             /// <summary>
             /// 内华达州
             /// </summary>
-            [AliasInShort("NV")]
-            [RegionFlag("main")]
+            [AliasInShort("NV")] [RegionFlag("main")]
             Nevada,
 
             /// <summary>
             /// 新罕布什尔州
             /// </summary>
-            [AliasInShort("NH")]
-            [RegionFlag("main")]
+            [AliasInShort("NH")] [RegionFlag("main")]
             NewHampshire,
 
             /// <summary>
             /// 新泽西州
             /// </summary>
-            [AliasInShort("NJ")]
-            [RegionFlag("main")]
+            [AliasInShort("NJ")] [RegionFlag("main")]
             NewJersey,
 
             /// <summary>
             /// 新墨西哥州
             /// </summary>
-            [AliasInShort("NM")]
-            [RegionFlag("main")]
+            [AliasInShort("NM")] [RegionFlag("main")]
             NewMexico,
 
             /// <summary>
             /// 纽约州
             /// </summary>
-            [AliasInShort("NY")]
-            [RegionFlag("main")]
+            [AliasInShort("NY")] [RegionFlag("main")]
             NewYork,
 
             /// <summary>
             /// 北卡罗来纳州
             /// </summary>
-            [AliasInShort("NC")]
-            [RegionFlag("main")]
+            [AliasInShort("NC")] [RegionFlag("main")]
             NorthCarolina,
 
             /// <summary>
             /// 北达科他州
             /// </summary>
-            [AliasInShort("ND")]
-            [RegionFlag("main")]
+            [AliasInShort("ND")] [RegionFlag("main")]
             NorthDakota,
 
             /// <summary>
             /// 俄亥俄州
             /// </summary>
-            [AliasInShort("OH")]
-            [RegionFlag("main")]
+            [AliasInShort("OH")] [RegionFlag("main")]
             Ohio,
 
             /// <summary>
             /// 俄克拉荷马州
             /// </summary>
-            [AliasInShort("OK")]
-            [RegionFlag("main")]
+            [AliasInShort("OK")] [RegionFlag("main")]
             Oklahoma,
 
             /// <summary>
             /// 俄勒冈州
             /// </summary>
-            [AliasInShort("OR")]
-            [RegionFlag("main")]
+            [AliasInShort("OR")] [RegionFlag("main")]
             Oregon,
 
             /// <summary>
             /// 宾夕法尼亚州
             /// </summary>
-            [AliasInShort("PA")]
-            [RegionFlag("main")]
+            [AliasInShort("PA")] [RegionFlag("main")]
             Pennsylvania,
 
             /// <summary>
             /// 罗德岛州
             /// </summary>
-            [AliasInShort("RI")]
-            [RegionFlag("main")]
+            [AliasInShort("RI")] [RegionFlag("main")]
             RhodeIsland,
 
             /// <summary>
             /// 南卡罗来纳州
             /// </summary>
-            [AliasInShort("SC")]
-            [RegionFlag("main")]
+            [AliasInShort("SC")] [RegionFlag("main")]
             SouthCarolina,
 
             /// <summary>
             /// 南达科他州
             /// </summary>
-            [AliasInShort("SD")]
-            [RegionFlag("main")]
+            [AliasInShort("SD")] [RegionFlag("main")]
             SouthDakota,
 
             /// <summary>
             /// 田纳西州
             /// </summary>
-            [AliasInShort("TN")]
-            [RegionFlag("main")]
+            [AliasInShort("TN")] [RegionFlag("main")]
             Tennessee,
 
             /// <summary>
             /// 得克萨斯州
             /// </summary>
-            [AliasInShort("TX")]
-            [RegionFlag("main")]
+            [AliasInShort("TX")] [RegionFlag("main")]
             Texas,
 
             /// <summary>
             /// 犹他州
             /// </summary>
-            [AliasInShort("UT")]
-            [RegionFlag("main")]
+            [AliasInShort("UT")] [RegionFlag("main")]
             Utah,
 
             /// <summary>
             /// 佛蒙特州
             /// </summary>
-            [AliasInShort("VT")]
-            [RegionFlag("main")]
+            [AliasInShort("VT")] [RegionFlag("main")]
             Vermont,
 
             /// <summary>
             /// 弗吉尼亚州
             /// </summary>
-            [AliasInShort("VA")]
-            [RegionFlag("main")]
+            [AliasInShort("VA")] [RegionFlag("main")]
             Virginia,
 
             /// <summary>
             /// 华盛顿州
             /// </summary>
-            [AliasInShort("WA")]
-            [RegionFlag("main")]
+            [AliasInShort("WA")] [RegionFlag("main")]
             Washington,
 
             /// <summary>
             /// 华盛顿哥伦比亚特区（首都）
             /// </summary>
-            [AliasInShort("WDC")]
-            [RegionFlag("main")]
+            [AliasInShort("WDC")] [RegionFlag("main")]
             // ReSharper disable once InconsistentNaming
             WashingtonDC,
 
             /// <summary>
             /// 西弗吉尼亚州
             /// </summary>
-            [AliasInShort("WV")]
-            [RegionFlag("main")]
+            [AliasInShort("WV")] [RegionFlag("main")]
             WestVirginia,
 
             /// <summary>
             /// 威斯康辛州
             /// </summary>
-            [AliasInShort("WI")]
-            [RegionFlag("main")]
+            [AliasInShort("WI")] [RegionFlag("main")]
             Wisconsin,
 
             /// <summary>
             /// 怀俄明州
             /// </summary>
-            [AliasInShort("WY")]
-            [RegionFlag("main")]
+            [AliasInShort("WY")] [RegionFlag("main")]
             Wyoming,
 
             /// <summary>
             /// The United States Virgin Islands<br />
             /// 美属维尔金群岛
             /// </summary>
-            [AliasInShort("VI")]
-            [RegionFlag("overseas")]
+            [AliasInShort("VI")] [RegionFlag("overseas")]
             VirginIslands,
 
             /// <summary>
             /// Commonwealth of the Northern Mariana Islands<br />
             /// 北马里亚纳群岛自由邦
             /// </summary>
-            [AliasInShort("MP")]
-            [RegionFlag("overseas")]
+            [AliasInShort("MP")] [RegionFlag("overseas")]
             NorthernMarianaIslands,
 
             /// <summary>
             /// The Commonwealth of Puerto Rico<br />
             /// 波多黎各自治邦
             /// </summary>
-            [AliasInShort("PR")]
-            [RegionFlag("overseas")]
+            [AliasInShort("PR")] [RegionFlag("overseas")]
             PuertoRico,
 
             /// <summary>
             /// The Territory of Guam<br />
             /// 关岛
             /// </summary>
-            [AliasInShort("GU")]
-            [RegionFlag("overseas")]
+            [AliasInShort("GU")] [RegionFlag("overseas")]
             Guam,
 
             /// <summary>
             /// American Samoa / Eastern Samoa<br />
             /// 美属萨摩亚群岛
             /// </summary>
-            [AliasInShort("AS")]
-            [RegionFlag("overseas")]
+            [AliasInShort("AS")] [RegionFlag("overseas")]
             EasternSamoa,
 
             /// <summary>
             /// United States Minor Outlying Islands<br />
             /// 美国本土外小岛屿
             /// </summary>
-            [AliasInShort("UM")]
-            [RegionFlag("overseas")]
+            [AliasInShort("UM")] [RegionFlag("overseas")]
             MinorOutlyingIslands,
 
             /// <summary>
             /// 未知
             /// </summary>
-            [IgnoreRegionAttribute]
-            [AliasInShort("??")]
+            [IgnoreRegionAttribute] [AliasInShort("??")]
             Unknown,
         }
 
@@ -777,8 +724,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -786,7 +734,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"US-{values.ToRegionCode()}";
         }
 
@@ -795,8 +744,10 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
-            switch (value) {
+        public static Country ToCountry(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.VirginIslands:
                     return Country.VirginIslandsUS;
                 case EnumValues.NorthernMarianaIslands:
@@ -819,8 +770,10 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
-            switch (value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.VirginIslands:
                     return CountryCode.VI;
                 case EnumValues.NorthernMarianaIslands:
@@ -847,8 +800,10 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="country"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(Country country) {
-            switch (country) {
+        public static EnumValues FromSpecialRegions(Country country)
+        {
+            switch (country)
+            {
                 case Country.VirginIslandsUS:
                     return EnumValues.VirginIslands;
                 case Country.NorthernMarianaIslands:
@@ -871,8 +826,10 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(CountryCode code) {
-            switch (code) {
+        public static EnumValues FromSpecialRegions(CountryCode code)
+        {
+            switch (code)
+            {
                 case CountryCode.VI:
                     return EnumValues.VirginIslands;
                 case CountryCode.MP:
@@ -894,8 +851,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         private static IEnumerable<EnumMember<EnumValues>> Filter(string flag) =>
             InternalEnumMembersCache.Where(x => x.Attributes.GetAll<RegionFlagAttribute>().Any(attr => attr.Flag == flag));
@@ -904,30 +861,23 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// Get overseas region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetOverseasRegionCodes() {
-            foreach (var member in Filter("overseas"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetOverseasRegionCodes()
+            => Filter("overseas").Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// Get main region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetMainRegionCodes() {
-            foreach (var member in Filter("main"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetMainRegionCodes()
+            => Filter("main").Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

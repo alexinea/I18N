@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Angola regions
     /// </summary>
-    public static class AngolaRegions {
-
+    public static class AngolaRegions
+    {
         #region Gets region
 
         /// <summary>
@@ -106,121 +107,102 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Angola regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Bengo
             /// </summary>
-            [AliasInShort("BGO")]
-            Bengo,
+            [AliasInShort("BGO")] Bengo,
 
             /// <summary>
             /// Benguela
             /// </summary>
-            [AliasInShort("BGU")]
-            Benguela,
+            [AliasInShort("BGU")] Benguela,
 
             /// <summary>
             /// Bié
             /// </summary>
-            [AliasInShort("BIE")]
-            Bié,
+            [AliasInShort("BIE")] Bié,
 
             /// <summary>
             /// Cabinda
             /// </summary>
-            [AliasInShort("CAB")]
-            Cabinda,
+            [AliasInShort("CAB")] Cabinda,
 
             /// <summary>
             /// Cuando Cubango
             /// </summary>
-            [AliasInShort("CCU")]
-            CuandoCubango,
+            [AliasInShort("CCU")] CuandoCubango,
 
             /// <summary>
             /// Cunene
             /// </summary>
-            [AliasInShort("CNN")]
-            Cunene,
+            [AliasInShort("CNN")] Cunene,
 
             /// <summary>
             /// Cuanza Norte
             /// </summary>
-            [AliasInShort("CNO")]
-            CuanzaNorte,
+            [AliasInShort("CNO")] CuanzaNorte,
 
             /// <summary>
             /// Cuanza Sul    
             /// </summary>
-            [AliasInShort("CUS")]
-            CuanzaSul,
+            [AliasInShort("CUS")] CuanzaSul,
 
             /// <summary>
             /// Huambo
             /// </summary>
-            [AliasInShort("HUA")]
-            Huambo,
+            [AliasInShort("HUA")] Huambo,
 
             /// <summary>
             /// Huíla
             /// </summary>
-            [AliasInShort("HUI")]
-            Huíla,
+            [AliasInShort("HUI")] Huíla,
 
             /// <summary>
             /// Lunda Norte
             /// </summary>
-            [AliasInShort("LNO")]
-            LundaNorte,
+            [AliasInShort("LNO")] LundaNorte,
 
             /// <summary>
             /// Lunda Sul
             /// </summary>
-            [AliasInShort("LSU")]
-            LundaSul,
+            [AliasInShort("LSU")] LundaSul,
 
             /// <summary>
             /// Luanda
             /// </summary>
-            [AliasInShort("LUA")]
-            Luanda,
+            [AliasInShort("LUA")] Luanda,
 
             /// <summary>
             /// Malanje
             /// </summary>
-            [AliasInShort("MAL")]
-            Malanje,
+            [AliasInShort("MAL")] Malanje,
 
             /// <summary>
             /// Moxico
             /// </summary>
-            [AliasInShort("MOX")]
-            Moxico,
+            [AliasInShort("MOX")] Moxico,
 
             /// <summary>
             /// Namibe
             /// </summary>
-            [AliasInShort("NAM")]
-            Namibe,
+            [AliasInShort("NAM")] Namibe,
 
             /// <summary>
             /// Uíge
             /// </summary>
-            [AliasInShort("UIG")]
-            Uíge,
+            [AliasInShort("UIG")] Uíge,
 
             /// <summary>
             /// Zaire
             /// </summary>
-            [AliasInShort("ZAI")]
-            Zaire,
+            [AliasInShort("ZAI")] Zaire,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -230,8 +212,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -239,7 +222,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AO-{values.ToRegionCode()}";
         }
 
@@ -248,7 +232,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Angola;
         }
 
@@ -257,7 +242,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.AO;
         }
 
@@ -265,19 +251,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>()).ToList();
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

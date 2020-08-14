@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// North Korea Regions
     /// </summary>
-    public static class NorthKoreaRegions {
-
+    public static class NorthKoreaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -71,79 +72,67 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for NorthKorea regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Ryanggang
             /// </summary>
-            [AliasInShort("10")]
-            Ryanggang,
+            [AliasInShort("10")] Ryanggang,
 
             /// <summary>
             /// Rason
             /// </summary>
-            [AliasInShort("13")]
-            Rason,
+            [AliasInShort("13")] Rason,
 
             /// <summary>
             /// Pyongyang
             /// </summary>
-            [AliasInShort("01")]
-            Pyongyang,
+            [AliasInShort("01")] Pyongyang,
 
             /// <summary>
             /// South Pyongan
             /// </summary>
-            [AliasInShort("02")]
-            SouthPyongan,
+            [AliasInShort("02")] SouthPyongan,
 
             /// <summary>
             /// North Pyongan
             /// </summary>
-            [AliasInShort("03")]
-            NorthPyongan,
+            [AliasInShort("03")] NorthPyongan,
 
             /// <summary>
             /// Chagang
             /// </summary>
-            [AliasInShort("04")]
-            Chagang,
+            [AliasInShort("04")] Chagang,
 
             /// <summary>
             /// South Hwanghae
             /// </summary>
-            [AliasInShort("05")]
-            SouthHwanghae,
+            [AliasInShort("05")] SouthHwanghae,
 
             /// <summary>
             /// North Hwanghae
             /// </summary>
-            [AliasInShort("06")]
-            NorthHwanghae,
+            [AliasInShort("06")] NorthHwanghae,
 
             /// <summary>
             /// Kangwon
             /// </summary>
-            [AliasInShort("07")]
-            Kangwon,
+            [AliasInShort("07")] Kangwon,
 
             /// <summary>
             /// South Hamgyong
             /// </summary>
-            [AliasInShort("08")]
-            SouthHamgyong,
+            [AliasInShort("08")] SouthHamgyong,
 
             /// <summary>
             /// North Hamgyong
             /// </summary>
-            [AliasInShort("09")]
-            NorthHamgyong,
+            [AliasInShort("09")] NorthHamgyong,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -153,8 +142,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -162,7 +152,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"KP-{values.ToRegionCode()}";
         }
 
@@ -171,7 +162,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.NorthKorea;
         }
 
@@ -180,7 +172,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.KP;
         }
 
@@ -188,19 +181,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

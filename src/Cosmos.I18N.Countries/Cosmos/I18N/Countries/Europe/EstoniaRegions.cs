@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Estonia Regions
     /// </summary>
-    public static class EstoniaRegions {
-
+    public static class EstoniaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -91,103 +92,87 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Estonia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Harju
             /// </summary>
-            [AliasInShort("37")]
-            Harju,
+            [AliasInShort("37")] Harju,
 
             /// <summary>
             /// Hiiu
             /// </summary>
-            [AliasInShort("39")]
-            Hiiu,
+            [AliasInShort("39")] Hiiu,
 
             /// <summary>
             /// Ida-Viru
             /// </summary>
-            [AliasInShort("44")]
-            IdaViru,
+            [AliasInShort("44")] IdaViru,
 
             /// <summary>
             /// Jõgeva
             /// </summary>
-            [AliasInShort("49")]
-            Jõgeva,
+            [AliasInShort("49")] Jõgeva,
 
             /// <summary>
             /// Järva
             /// </summary>
-            [AliasInShort("51")]
-            Järva,
+            [AliasInShort("51")] Järva,
 
             /// <summary>
             /// Lääne
             /// </summary>
-            [AliasInShort("57")]
-            Lääne,
+            [AliasInShort("57")] Lääne,
 
             /// <summary>
             /// Lääne-Viru
             /// </summary>
-            [AliasInShort("59")]
-            LääneViru,
+            [AliasInShort("59")] LääneViru,
 
             /// <summary>
             /// Põlva
             /// </summary>
-            [AliasInShort("65")]
-            Põlva,
+            [AliasInShort("65")] Põlva,
 
             /// <summary>
             /// Pärnu
             /// </summary>
-            [AliasInShort("67")]
-            Pärnu,
+            [AliasInShort("67")] Pärnu,
 
             /// <summary>
             /// Rapla
             /// </summary>
-            [AliasInShort("70")]
-            Rapla,
+            [AliasInShort("70")] Rapla,
 
             /// <summary>
             /// Saare
             /// </summary>
-            [AliasInShort("74")]
-            Saare,
+            [AliasInShort("74")] Saare,
 
             /// <summary>
             /// Tartu
             /// </summary>
-            [AliasInShort("78")]
-            Tartu,
+            [AliasInShort("78")] Tartu,
 
             /// <summary>
             /// Valga
             /// </summary>
-            [AliasInShort("82")]
-            Valga,
+            [AliasInShort("82")] Valga,
 
             /// <summary>
             /// Viljandi
             /// </summary>
-            [AliasInShort("84")]
-            Viljandi,
+            [AliasInShort("84")] Viljandi,
 
             /// <summary>
             /// Võru
             /// </summary>
-            [AliasInShort("86")]
-            Võru,
+            [AliasInShort("86")] Võru,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -197,8 +182,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -206,7 +192,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"EE-{values.ToRegionCode()}";
         }
 
@@ -215,7 +202,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Estonia;
         }
 
@@ -224,7 +212,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.EE;
         }
 
@@ -232,19 +221,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

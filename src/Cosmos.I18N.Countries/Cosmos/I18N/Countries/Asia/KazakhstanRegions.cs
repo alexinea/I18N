@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Kazakhstan Regions
     /// </summary>
-    public static class KazakhstanRegions {
-
+    public static class KazakhstanRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -96,109 +97,92 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Kazakhstan regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Akmola
             /// </summary>
-            [AliasInShort("AKM")]
-            Akmola,
+            [AliasInShort("AKM")] Akmola,
 
             /// <summary>
             /// Aktobe
             /// </summary>
-            [AliasInShort("AKT")]
-            Aktobe,
+            [AliasInShort("AKT")] Aktobe,
 
             /// <summary>
             /// Almaty
             /// </summary>
-            [AliasInShort("ALA")]
-            Almaty,
+            [AliasInShort("ALA")] Almaty,
 
             /// <summary>
             /// Almaty Region
             /// </summary>
-            [AliasInShort("ALM")]
-            AlmatyRegion,
+            [AliasInShort("ALM")] AlmatyRegion,
 
             /// <summary>
             /// Astana
             /// </summary>
-            [AliasInShort("AST")]
-            Astana,
+            [AliasInShort("AST")] Astana,
 
             /// <summary>
             /// Atyrau
             /// </summary>
-            [AliasInShort("ATY")]
-            Atyrau,
+            [AliasInShort("ATY")] Atyrau,
 
             /// <summary>
             /// Karagandy
             /// </summary>
-            [AliasInShort("KAR")]
-            Karagandy,
+            [AliasInShort("KAR")] Karagandy,
 
             /// <summary>
             /// Kostanay
             /// </summary>
-            [AliasInShort("KUS")]
-            Kostanay,
+            [AliasInShort("KUS")] Kostanay,
 
             /// <summary>
             /// Kyzylorda
             /// </summary>
-            [AliasInShort("KZY")]
-            Kyzylorda,
+            [AliasInShort("KZY")] Kyzylorda,
 
             /// <summary>
             /// Mangystau
             /// </summary>
-            [AliasInShort("MAN")]
-            Mangystau,
+            [AliasInShort("MAN")] Mangystau,
 
             /// <summary>
             /// Pavlodar
             /// </summary>
-            [AliasInShort("PAV")]
-            Pavlodar,
+            [AliasInShort("PAV")] Pavlodar,
 
             /// <summary>
             /// North Kazakhstan
             /// </summary>
-            [AliasInShort("SEV")]
-            NorthKazakhstan,
+            [AliasInShort("SEV")] NorthKazakhstan,
 
             /// <summary>
             /// East Kazakhstan
             /// </summary>
-            [AliasInShort("VOS")]
-            EastKazakhstan,
+            [AliasInShort("VOS")] EastKazakhstan,
 
             /// <summary>
             /// South Kazakhstan
             /// </summary>
-            [AliasInShort("YUS")]
-            SouthKazakhstan,
+            [AliasInShort("YUS")] SouthKazakhstan,
 
             /// <summary>
             /// West Kazakhstan
             /// </summary>
-            [AliasInShort("ZAP")]
-            WestKazakhstan,
+            [AliasInShort("ZAP")] WestKazakhstan,
 
             /// <summary>
             /// Jambyl
             /// </summary>
-            [AliasInShort("ZHA")]
-            Jambyl,
+            [AliasInShort("ZHA")] Jambyl,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -208,8 +192,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -217,7 +202,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"KZ-{values.ToRegionCode()}";
         }
 
@@ -226,7 +212,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Kazakhstan;
         }
 
@@ -235,7 +222,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.KZ;
         }
 
@@ -243,19 +231,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

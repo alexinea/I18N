@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Iran Regions
     /// </summary>
-    public static class IranRegions {
-
+    public static class IranRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -171,199 +172,167 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Iran regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Khuzestan
             /// </summary>
-            [AliasInShort("10")]
-            Khuzestan,
+            [AliasInShort("10")] Khuzestan,
 
             /// <summary>
             /// Zanjan
             /// </summary>
-            [AliasInShort("11")]
-            Zanjan,
+            [AliasInShort("11")] Zanjan,
 
             /// <summary>
             /// Semnan
             /// </summary>
-            [AliasInShort("12")]
-            Semnan,
+            [AliasInShort("12")] Semnan,
 
             /// <summary>
             /// Sistan and Baluchestan
             /// </summary>
-            [AliasInShort("13")]
-            SistanAndBaluchestan,
+            [AliasInShort("13")] SistanAndBaluchestan,
 
             /// <summary>
             /// Fars
             /// </summary>
-            [AliasInShort("14")]
-            Fars,
+            [AliasInShort("14")] Fars,
 
             /// <summary>
             /// Kerman
             /// </summary>
-            [AliasInShort("15")]
-            Kerman,
+            [AliasInShort("15")] Kerman,
 
             /// <summary>
             /// Kurdistan
             /// </summary>
-            [AliasInShort("16")]
-            Kurdistan,
+            [AliasInShort("16")] Kurdistan,
 
             /// <summary>
             /// Kermanshah
             /// </summary>
-            [AliasInShort("17")]
-            Kermanshah,
+            [AliasInShort("17")] Kermanshah,
 
             /// <summary>
             /// Kohgiluyeh and Boyer-Ahmad
             /// </summary>
-            [AliasInShort("18")]
-            KohgiluyehAndBoyerAhmad,
+            [AliasInShort("18")] KohgiluyehAndBoyerAhmad,
 
             /// <summary>
             /// Gilan
             /// </summary>
-            [AliasInShort("19")]
-            Gilan,
+            [AliasInShort("19")] Gilan,
 
             /// <summary>
             /// Lorestan
             /// </summary>
-            [AliasInShort("20")]
-            Lorestan,
+            [AliasInShort("20")] Lorestan,
 
             /// <summary>
             /// Mazandaran
             /// </summary>
-            [AliasInShort("21")]
-            Mazandaran,
+            [AliasInShort("21")] Mazandaran,
 
             /// <summary>
             /// Markazi
             /// </summary>
-            [AliasInShort("22")]
-            Markazi,
+            [AliasInShort("22")] Markazi,
 
             /// <summary>
             /// Hormozgan
             /// </summary>
-            [AliasInShort("23")]
-            Hormozgan,
+            [AliasInShort("23")] Hormozgan,
 
             /// <summary>
             /// Hamadan
             /// </summary>
-            [AliasInShort("24")]
-            Hamadan,
+            [AliasInShort("24")] Hamadan,
 
             /// <summary>
             /// Yazd
             /// </summary>
-            [AliasInShort("25")]
-            Yazd,
+            [AliasInShort("25")] Yazd,
 
             /// <summary>
             /// Qom
             /// </summary>
-            [AliasInShort("26")]
-            Qom,
+            [AliasInShort("26")] Qom,
 
             /// <summary>
             /// Golestan
             /// </summary>
-            [AliasInShort("27")]
-            Golestan,
+            [AliasInShort("27")] Golestan,
 
             /// <summary>
             /// Qazvin
             /// </summary>
-            [AliasInShort("28")]
-            Qazvin,
+            [AliasInShort("28")] Qazvin,
 
             /// <summary>
             /// South Khorasan
             /// </summary>
-            [AliasInShort("29")]
-            SouthKhorasan,
+            [AliasInShort("29")] SouthKhorasan,
 
             /// <summary>
             /// Razavi Khorasan
             /// </summary>
-            [AliasInShort("30")]
-            RazaviKhorasan,
+            [AliasInShort("30")] RazaviKhorasan,
 
             /// <summary>
             /// North Khorasan
             /// </summary>
-            [AliasInShort("31")]
-            NorthKhorasan,
+            [AliasInShort("31")] NorthKhorasan,
 
             /// <summary>
             /// Alborz
             /// </summary>
-            [AliasInShort("32")]
-            Alborz,
+            [AliasInShort("32")] Alborz,
 
             /// <summary>
             /// East Azerbaijan
             /// </summary>
-            [AliasInShort("01")]
-            EastAzerbaijan,
+            [AliasInShort("01")] EastAzerbaijan,
 
             /// <summary>
             /// West Azarbaijan
             /// </summary>
-            [AliasInShort("02")]
-            WestAzarbaijan,
+            [AliasInShort("02")] WestAzarbaijan,
 
             /// <summary>
             /// Ardabil
             /// </summary>
-            [AliasInShort("03")]
-            Ardabil,
+            [AliasInShort("03")] Ardabil,
 
             /// <summary>
             /// Isfahan
             /// </summary>
-            [AliasInShort("04")]
-            Isfahan,
+            [AliasInShort("04")] Isfahan,
 
             /// <summary>
             /// Ilam
             /// </summary>
-            [AliasInShort("05")]
-            Ilam,
+            [AliasInShort("05")] Ilam,
 
             /// <summary>
             /// Bushehr
             /// </summary>
-            [AliasInShort("06")]
-            Bushehr,
+            [AliasInShort("06")] Bushehr,
 
             /// <summary>
             /// Tehran
             /// </summary>
-            [AliasInShort("07")]
-            Tehran,
+            [AliasInShort("07")] Tehran,
 
             /// <summary>
             /// Chaharmahal and Bakhtiari
             /// </summary>
-            [AliasInShort("08")]
-            ChaharmahalAndBakhtiari,
+            [AliasInShort("08")] ChaharmahalAndBakhtiari,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -373,8 +342,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -382,7 +352,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"IR-{values.ToRegionCode()}";
         }
 
@@ -391,7 +362,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Iran;
         }
 
@@ -400,7 +372,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.IR;
         }
 
@@ -408,19 +381,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

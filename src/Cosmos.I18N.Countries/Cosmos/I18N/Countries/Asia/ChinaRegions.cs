@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// China regions
     /// </summary>
-    public static class ChinaRegions {
-
+    public static class ChinaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -202,7 +203,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Special regions
         /// </summary>
-        public static class Special {
+        public static class Special
+        {
             /// <summary>
             /// HongKong, a part of China.
             /// </summary>
@@ -240,286 +242,219 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for China regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// 北京
             /// </summary>
-            [AliasInShort("BJ")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("BJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Beijing = 1,
 
             /// <summary>
             /// 天津
             /// </summary>
-            [AliasInShort("TJ")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("TJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Tianjin = 2,
 
             /// <summary>
             /// 河北
             /// </summary>
-            [AliasInShort("HE")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("HE")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hebei = 3,
 
             /// <summary>
             /// 山西
             /// </summary>
-            [AliasInShort("SX")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("SX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shanxi = 4,
 
             /// <summary>
             /// 内蒙古自治区
             /// </summary>
-            [AliasInShort("NM")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("NM")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             InnerMongoria = 5,
 
             /// <summary>
             /// 辽宁
             /// </summary>
-            [AliasInShort("LN")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("LN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Liaoning = 6,
 
             /// <summary>
             /// 吉林
             /// </summary>
-            [AliasInShort("JL")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("JL")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Jilin = 7,
 
             /// <summary>
             /// 黑龙江
             /// </summary>
-            [AliasInShort("HL")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("HL")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Heilongjiang = 8,
 
             /// <summary>
             /// 上海
             /// </summary>
-            [AliasInShort("SH")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("SH")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shanghai = 9,
 
             /// <summary>
             /// 江苏
             /// </summary>
-            [AliasInShort("JS")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("JS")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Jiangsu = 10,
 
             /// <summary>
             /// 浙江
             /// </summary>
-            [AliasInShort("ZJ")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("ZJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Zhejiang = 11,
 
             /// <summary>
             /// 安徽
             /// </summary>
-            [AliasInShort("AH")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("AH")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Anhui = 12,
 
             /// <summary>
             /// 福建
             /// </summary>
-            [AliasInShort("FJ")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("FJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Fujian = 13,
 
             /// <summary>
             /// 江西
             /// </summary>
-            [AliasInShort("JX")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("JX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Jiangxi = 14,
 
             /// <summary>
             /// 河南
             /// </summary>
-            [AliasInShort("HA")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("HA")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Henan = 16,
 
             /// <summary>
             /// 山东
             /// </summary>
-            [AliasInShort("SD")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("SD")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shandong = 15,
 
             /// <summary>
             /// 湖北
             /// </summary>
-            [AliasInShort("HB")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("HB")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hubei = 17,
 
             /// <summary>
             /// 湖南
             /// </summary>
-            [AliasInShort("HN")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("HN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hunan = 18,
 
             /// <summary>
             /// 广东
             /// </summary>
-            [AliasInShort("GD")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("GD")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Guangdong = 19,
 
             /// <summary>
             /// 广西
             /// </summary>
-            [AliasInShort("GX")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("GX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Guangxi = 20,
 
             /// <summary>
             /// 海南
             /// </summary>
-            [AliasInShort("HI")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("HI")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hainan = 21,
 
             /// <summary>
             /// 重庆
             /// </summary>
-            [AliasInShort("CQ")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("CQ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Chongqing = 22,
 
             /// <summary>
             /// 四川
             /// </summary>
-            [AliasInShort("SC")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("SC")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Sichuan = 23,
 
             /// <summary>
             /// 贵州
             /// </summary>
-            [AliasInShort("GZ")]
-            [RegionFlag("mainland")]
+            [AliasInShort("GZ")] [RegionFlag("mainland")]
             Guizhou = 24,
 
             /// <summary>
             /// 云南
             /// </summary>
-            [AliasInShort("YN")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("YN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Yunnan = 25,
 
             /// <summary>
             /// 西藏
             /// </summary>
-            [AliasInShort("XZ")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("XZ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Tibet = 26,
 
             /// <summary>
             /// 陕西
             /// </summary>
-            [AliasInShort("SN")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("SN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shaanxi = 27,
 
 
             /// <summary>
             /// 甘肃
             /// </summary>
-            [AliasInShort("GS")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("GS")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Gansu = 28,
 
             /// <summary>
             /// 青海
             /// </summary>
-            [AliasInShort("QH")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("QH")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Qinghai = 29,
 
             /// <summary>
             /// 宁夏
             /// </summary>
-            [AliasInShort("NX")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("NX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Ningxia = 30,
 
             /// <summary>
             /// 新疆
             /// </summary>
-            [AliasInShort("XJ")]
-            [RegionFlag("mainland")]
-            [RegionFlag("endoland")]
+            [AliasInShort("XJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Xinjiang = 31,
 
             /// <summary>
             /// Taiwan, China<br />
             /// 中华人民共和国台湾省
             /// </summary>
-            [AliasInShort("TW")]
-            Taiwan = 32,
+            [AliasInShort("TW")] Taiwan = 32,
 
             /// <summary>
             /// HongKong, China<br />
             /// 中华人民共和国香港特别行政区
             /// </summary>
-            [AliasInShort("HK")]
-            [RegionFlag("mainland")]
-            [RegionFlag(" special_district")]
+            [AliasInShort("HK")] [RegionFlag("mainland")] [RegionFlag(" special_district")]
             HongKong = 33,
 
             /// <summary>
             /// Macao, China<br />
             /// 中华人民共和国澳门特别行政区
             /// </summary>
-            [AliasInShort("MO")]
-            [RegionFlag("mainland")]
-            [RegionFlag(" special_district")]
+            [AliasInShort("MO")] [RegionFlag("mainland")] [RegionFlag(" special_district")]
             Macao = 34,
 
             /// <summary>
             /// Unknown<br />未知
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown = 99,
+            [IgnoreRegion] [AliasInShort("??")] Unknown = 99,
         }
 
         #region Extension methods
@@ -529,8 +464,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -538,7 +474,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CN-{values.ToRegionCode()}";
         }
 
@@ -547,8 +484,10 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
-            switch (value) {
+        public static Country ToCountry(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.HongKong:
                     return Country.HongKong;
                 case EnumValues.Macao:
@@ -565,8 +504,10 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
-            switch (value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.HongKong:
                     return CountryCode.HK;
                 case EnumValues.Macao:
@@ -587,8 +528,10 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="country"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(Country country) {
-            switch (country) {
+        public static EnumValues FromSpecialRegions(Country country)
+        {
+            switch (country)
+            {
                 case Country.HongKong:
                     return EnumValues.HongKong;
                 case Country.Macao:
@@ -605,8 +548,10 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(CountryCode code) {
-            switch (code) {
+        public static EnumValues FromSpecialRegions(CountryCode code)
+        {
+            switch (code)
+            {
                 case CountryCode.HK:
                     return EnumValues.HongKong;
                 case CountryCode.MO:
@@ -622,49 +567,40 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
-
-        private static IEnumerable<EnumMember<EnumValues>> Filter(string flag) =>
-            InternalEnumMembersCache.Where(x => x.Attributes.GetAll<RegionFlagAttribute>().Any(attr => attr.Flag == flag));
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        private static IEnumerable<EnumMember<EnumValues>> Filter(string flag) =>
+            InternalEnumMembersCache.Where(x => x.Attributes.GetAll<RegionFlagAttribute>().Any(attr => attr.Flag == flag));
 
         /// <summary>
         /// 获得大陆地区的地区代号
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetMainlandRegionCodes() {
-            foreach (var member in Filter("mainland"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetMainlandRegionCodes()
+            => Filter("mainland").Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// 获得特别行政区地区代号
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetSpecialDistrictRegionCodes() {
-            foreach (var member in Filter("special_district"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetSpecialDistrictRegionCodes()
+            => Filter("special_district").Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// 获得内陆地区的地区代号
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetEndolandRegionCodes() {
-            foreach (var member in Filter("endoland"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetEndolandRegionCodes()
+            => Filter("endoland").Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

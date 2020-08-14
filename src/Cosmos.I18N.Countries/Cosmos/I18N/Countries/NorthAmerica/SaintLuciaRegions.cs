@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// SaintLucia Regions
     /// </summary>
-    public static class SaintLuciaRegions {
-
+    public static class SaintLuciaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -66,73 +67,62 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for SaintLucia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Soufrière
             /// </summary>
-            [AliasInShort("10")]
-            Soufrière,
+            [AliasInShort("10")] Soufrière,
 
             /// <summary>
             /// Vieux Fort
             /// </summary>
-            [AliasInShort("11")]
-            VieuxFort,
+            [AliasInShort("11")] VieuxFort,
 
             /// <summary>
             /// Canaries
             /// </summary>
-            [AliasInShort("12")]
-            Canaries,
+            [AliasInShort("12")] Canaries,
 
             /// <summary>
             /// Anse la Raye
             /// </summary>
-            [AliasInShort("01")]
-            AnseLaRaye,
+            [AliasInShort("01")] AnseLaRaye,
 
             /// <summary>
             /// Castries
             /// </summary>
-            [AliasInShort("02")]
-            Castries,
+            [AliasInShort("02")] Castries,
 
             /// <summary>
             /// Choiseul
             /// </summary>
-            [AliasInShort("03")]
-            Choiseul,
+            [AliasInShort("03")] Choiseul,
 
             /// <summary>
             /// Dennery
             /// </summary>
-            [AliasInShort("05")]
-            Dennery,
+            [AliasInShort("05")] Dennery,
 
             /// <summary>
             /// Gros Islet
             /// </summary>
-            [AliasInShort("06")]
-            GrosIslet,
+            [AliasInShort("06")] GrosIslet,
 
             /// <summary>
             /// Laborie
             /// </summary>
-            [AliasInShort("07")]
-            Laborie,
+            [AliasInShort("07")] Laborie,
 
             /// <summary>
             /// Micoud
             /// </summary>
-            [AliasInShort("08")]
-            Micoud,
+            [AliasInShort("08")] Micoud,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -142,8 +132,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -151,7 +142,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CL-{values.ToRegionCode()}";
         }
 
@@ -160,7 +152,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.SaintLucia;
         }
 
@@ -169,7 +162,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.LC;
         }
 
@@ -177,19 +171,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// Bonaire Regions
     /// </summary>
-    public static class BonaireRegions {
-
+    public static class BonaireRegions
+    {
         #region Gets region
 
         /// <summary>
@@ -31,31 +32,27 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for Bonaire regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Bonaire
             /// </summary>
-            [AliasInShort("BO")]
-            Bonaire,
+            [AliasInShort("BO")] Bonaire,
 
             /// <summary>
             /// Saba
             /// </summary>
-            [AliasInShort("SA")]
-            Saba,
+            [AliasInShort("SA")] Saba,
 
             /// <summary>
             /// Sint Eustatius
             /// </summary>
-            [AliasInShort("SE")]
-            SintEustatius,
+            [AliasInShort("SE")] SintEustatius,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -65,8 +62,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -74,7 +72,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"BQ-{values.ToRegionCode()}";
         }
 
@@ -83,7 +82,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Bonaire;
         }
 
@@ -92,7 +92,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.BQ;
         }
 
@@ -100,19 +101,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

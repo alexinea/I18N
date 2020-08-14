@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Albania regions
     /// </summary>
-    public static class AlbaniaRegions {
-
+    public static class AlbaniaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -76,85 +77,72 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Albania regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Berat 
             /// </summary>
-            [AliasInShort("1")]
-            Berat,
+            [AliasInShort("1")] Berat,
 
             /// <summary>
             /// Durrës 
             /// </summary>
-            [AliasInShort("2")]
-            Durrës,
+            [AliasInShort("2")] Durrës,
 
             /// <summary>
             /// Elbasan 
             /// </summary>
-            [AliasInShort("3")]
-            Elbasan,
+            [AliasInShort("3")] Elbasan,
 
             /// <summary>
             /// Fier 
             /// </summary>
-            [AliasInShort("4")]
-            Fier,
+            [AliasInShort("4")] Fier,
 
             /// <summary>
             /// Gjirokastër 
             /// </summary>
-            [AliasInShort("5")]
-            Gjirokastër,
+            [AliasInShort("5")] Gjirokastër,
 
             /// <summary>
             /// Korçë 
             /// </summary>
-            [AliasInShort("6")]
-            Korçë,
+            [AliasInShort("6")] Korçë,
 
             /// <summary>
             /// Kukës 
             /// </summary>
-            [AliasInShort("7")]
-            Kukës,
+            [AliasInShort("7")] Kukës,
 
             /// <summary>
             /// Lezhë 
             /// </summary>
-            [AliasInShort("8")]
-            Lezhë,
+            [AliasInShort("8")] Lezhë,
 
             /// <summary>
             /// Dibër 
             /// </summary>
-            [AliasInShort("9")]
-            Dibër,
+            [AliasInShort("9")] Dibër,
 
             /// <summary>
             /// Shkodër 
             /// </summary>
-            [AliasInShort("10")]
-            Shkodër,
+            [AliasInShort("10")] Shkodër,
 
             /// <summary>
             /// Tirana 
             /// </summary>
-            [AliasInShort("11")]
-            Tirana,
+            [AliasInShort("11")] Tirana,
 
             /// <summary>
             /// Vlorë 
             /// </summary>
-            [AliasInShort("12")]
-            Vlorë,
+            [AliasInShort("12")] Vlorë,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -164,8 +152,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -173,7 +162,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AL-{values.ToRegionCode()}";
         }
 
@@ -182,7 +172,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Albania;
         }
 
@@ -191,7 +182,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.AL;
         }
 
@@ -199,19 +191,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

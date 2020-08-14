@@ -3,14 +3,15 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Taiwan Regions <br />
     /// 台湾，中华人民共和国的一部分 <br />
     /// Taiwan, a part of China <br />
     /// </summary>
-    public static class TaiwanRegions {
-
+    public static class TaiwanRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -128,161 +129,138 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Iraq regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Changhua
             /// </summary>
-            [AliasInShort("CHA")]
-            Changhua,
+            [AliasInShort("CHA")] Changhua,
 
             /// <summary>
             /// Chiayi County
             /// </summary>
-            [AliasInShort("CYI")]
-            ChiayiCounty,
+            [AliasInShort("CYI")] ChiayiCounty,
 
             /// <summary>
             /// Chiayi
             /// </summary>
-            [AliasInShort("CYQ")]
-            Chiayi,
+            [AliasInShort("CYQ")] Chiayi,
 
             /// <summary>
             /// Hsinchu County
             /// </summary>
-            [AliasInShort("HSQ")]
-            HsinchuCounty,
+            [AliasInShort("HSQ")] HsinchuCounty,
 
             /// <summary>
             /// Hsinchu
             /// </summary>
-            [AliasInShort("HSZ")]
-            Hsinchu,
+            [AliasInShort("HSZ")] Hsinchu,
 
             /// <summary>
             /// Hualien
             /// </summary>
-            [AliasInShort("HUA")]
-            Hualien,
+            [AliasInShort("HUA")] Hualien,
 
             /// <summary>
             /// Yilan
             /// </summary>
-            [AliasInShort("ILA")]
-            Yilan,
+            [AliasInShort("ILA")] Yilan,
 
             /// <summary>
             /// Keelung
             /// </summary>
-            [AliasInShort("KEE")]
-            Keelung,
+            [AliasInShort("KEE")] Keelung,
 
             /// <summary>
             /// Kaohsiung
             /// <br />
             /// 高雄，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("KHH")]
-            Kaohsiung,
+            [AliasInShort("KHH")] Kaohsiung,
 
             /// <summary>
             /// Kinmen
             /// <br />
             /// 金门，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("KIN")]
-            Kinmen,
+            [AliasInShort("KIN")] Kinmen,
 
             /// <summary>
             /// Lienchiang
             /// </summary>
-            [AliasInShort("LTE")]
-            Lienchiang,
+            [AliasInShort("LTE")] Lienchiang,
 
             /// <summary>
             /// Miaoli
             /// </summary>
-            [AliasInShort("MIA")]
-            Miaoli,
+            [AliasInShort("MIA")] Miaoli,
 
             /// <summary>
             /// Nantou
             /// </summary>
-            [AliasInShort("NAN")]
-            Nantou,
+            [AliasInShort("NAN")] Nantou,
 
             /// <summary>
             /// New Taipei
             /// <br />
             /// 新北，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("NWT")]
-            NewTaipei,
+            [AliasInShort("NWT")] NewTaipei,
 
             /// <summary>
             /// Penghu
             /// <br />
             /// 澎湖，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("PEN")]
-            Penghu,
+            [AliasInShort("PEN")] Penghu,
 
             /// <summary>
             /// Pingtung
             /// </summary>
-            [AliasInShort("PIF")]
-            Pingtung,
+            [AliasInShort("PIF")] Pingtung,
 
             /// <summary>
             /// Taoyuan
             /// <br />
             /// 桃园，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("TAO")]
-            Taoyuan,
+            [AliasInShort("TAO")] Taoyuan,
 
             /// <summary>
             /// Tainan
             /// <br />
             /// 台南，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("TNN")]
-            Tainan,
+            [AliasInShort("TNN")] Tainan,
 
             /// <summary>
             /// Taipei
             /// <br />
             /// 台北，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("TPE")]
-            Taipei,
+            [AliasInShort("TPE")] Taipei,
 
             /// <summary>
             /// Taitung
             /// </summary>
-            [AliasInShort("TTT")]
-            Taitung,
+            [AliasInShort("TTT")] Taitung,
 
             /// <summary>
             /// Taichung
             /// </summary>
-            [AliasInShort("TXG")]
-            Taichung,
+            [AliasInShort("TXG")] Taichung,
 
             /// <summary>
             /// Yunlin
             /// <br />
             /// 榆林，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("YUN")]
-            Yunlin,
+            [AliasInShort("YUN")] Yunlin,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -292,8 +270,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -301,7 +280,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CN-TW-{values.ToRegionCode()}";
         }
 
@@ -310,7 +290,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.China;
         }
 
@@ -319,7 +300,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.CN;
         }
 
@@ -327,19 +309,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// CostaRica regions
     /// </summary>
-    public static class CostaRicaRegions {
-
+    public static class CostaRicaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -51,55 +52,47 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for CostaRica regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Alajuela
             /// </summary>
-            [AliasInShort("A")]
-            Alajuela,
+            [AliasInShort("A")] Alajuela,
 
             /// <summary>
             /// Cartago
             /// </summary>
-            [AliasInShort("C")]
-            Cartago,
+            [AliasInShort("C")] Cartago,
 
             /// <summary>
             /// Guanacaste
             /// </summary>
-            [AliasInShort("G")]
-            Guanacaste,
+            [AliasInShort("G")] Guanacaste,
 
             /// <summary>
             /// Heredia
             /// </summary>
-            [AliasInShort("H")]
-            Heredia,
+            [AliasInShort("H")] Heredia,
 
             /// <summary>
             /// Limón
             /// </summary>
-            [AliasInShort("L")]
-            Limón,
+            [AliasInShort("L")] Limón,
 
             /// <summary>
             /// Puntarenas
             /// </summary>
-            [AliasInShort("P")]
-            Puntarenas,
+            [AliasInShort("P")] Puntarenas,
 
             /// <summary>
             /// San José
             /// </summary>
-            [AliasInShort("SJ")]
-            SanJosé,
+            [AliasInShort("SJ")] SanJosé,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -109,8 +102,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -118,7 +112,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CR-{values.ToRegionCode()}";
         }
 
@@ -127,7 +122,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.CostaRica;
         }
 
@@ -136,7 +132,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.CR;
         }
 
@@ -144,19 +141,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

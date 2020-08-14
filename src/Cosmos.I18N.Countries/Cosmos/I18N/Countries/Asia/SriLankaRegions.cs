@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// SriLanka Regions
     /// </summary>
-    public static class SriLankaRegions {
-
+    public static class SriLankaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -61,67 +62,57 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for SriLanka regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("1")]
-            Western,
+            [AliasInShort("1")] Western,
 
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("2")]
-            Central,
+            [AliasInShort("2")] Central,
 
             /// <summary>
             /// Southern
             /// </summary>
-            [AliasInShort("3")]
-            Southern,
+            [AliasInShort("3")] Southern,
 
             /// <summary>
             /// Northern
             /// </summary>
-            [AliasInShort("4")]
-            Northern,
+            [AliasInShort("4")] Northern,
 
             /// <summary>
             /// Eastern
             /// </summary>
-            [AliasInShort("5")]
-            Eastern,
+            [AliasInShort("5")] Eastern,
 
             /// <summary>
             /// North Western
             /// </summary>
-            [AliasInShort("6")]
-            NorthWestern,
+            [AliasInShort("6")] NorthWestern,
 
             /// <summary>
             /// North Central
             /// </summary>
-            [AliasInShort("7")]
-            NorthCentral,
+            [AliasInShort("7")] NorthCentral,
 
             /// <summary>
             /// Uva
             /// </summary>
-            [AliasInShort("8")]
-            Uva,
+            [AliasInShort("8")] Uva,
 
             /// <summary>
             /// Sabaragamuwa
             /// </summary>
-            [AliasInShort("9")]
-            Sabaragamuwa,
+            [AliasInShort("9")] Sabaragamuwa,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -131,8 +122,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -140,7 +132,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"LK-{values.ToRegionCode()}";
         }
 
@@ -149,7 +142,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.SriLanka;
         }
 
@@ -158,7 +152,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.LK;
         }
 
@@ -166,19 +161,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

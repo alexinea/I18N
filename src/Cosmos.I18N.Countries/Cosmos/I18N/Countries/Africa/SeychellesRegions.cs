@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Seychelles Regions
     /// </summary>
-    public static class SeychellesRegions {
-
+    public static class SeychellesRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -141,163 +142,137 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Seychelles regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Bel Ombre
             /// </summary>
-            [AliasInShort("10")]
-            BelOmbre,
+            [AliasInShort("10")] BelOmbre,
 
             /// <summary>
             /// Cascade
             /// </summary>
-            [AliasInShort("11")]
-            Cascade,
+            [AliasInShort("11")] Cascade,
 
             /// <summary>
             /// Glacis
             /// </summary>
-            [AliasInShort("12")]
-            Glacis,
+            [AliasInShort("12")] Glacis,
 
             /// <summary>
             /// Grand’Anse Mahé
             /// </summary>
-            [AliasInShort("13")]
-            GrandAnseMahé,
+            [AliasInShort("13")] GrandAnseMahé,
 
             /// <summary>
             /// Grand’Anse Praslin
             /// </summary>
-            [AliasInShort("14")]
-            GrandAnsePraslin,
+            [AliasInShort("14")] GrandAnsePraslin,
 
             /// <summary>
             /// La Digue
             /// </summary>
-            [AliasInShort("15")]
-            LaDigue,
+            [AliasInShort("15")] LaDigue,
 
             /// <summary>
             /// La Rivière Anglaise
             /// </summary>
-            [AliasInShort("16")]
-            LaRivièreAnglaise,
+            [AliasInShort("16")] LaRivièreAnglaise,
 
             /// <summary>
             /// Mont Buxton
             /// </summary>
-            [AliasInShort("17")]
-            MontBuxton,
+            [AliasInShort("17")] MontBuxton,
 
             /// <summary>
             /// Mont Fleuri
             /// </summary>
-            [AliasInShort("18")]
-            MontFleuri,
+            [AliasInShort("18")] MontFleuri,
 
             /// <summary>
             /// Plaisance
             /// </summary>
-            [AliasInShort("19")]
-            Plaisance,
+            [AliasInShort("19")] Plaisance,
 
             /// <summary>
             /// Pointe La Rue
             /// </summary>
-            [AliasInShort("20")]
-            PointeLaRue,
+            [AliasInShort("20")] PointeLaRue,
 
             /// <summary>
             /// Port Glaud
             /// </summary>
-            [AliasInShort("21")]
-            PortGlaud,
+            [AliasInShort("21")] PortGlaud,
 
             /// <summary>
             /// Saint Louis
             /// </summary>
-            [AliasInShort("22")]
-            SaintLouis,
+            [AliasInShort("22")] SaintLouis,
 
             /// <summary>
             /// Takamaka
             /// </summary>
-            [AliasInShort("23")]
-            Takamaka,
+            [AliasInShort("23")] Takamaka,
 
             /// <summary>
             /// Les Mamelles
             /// </summary>
-            [AliasInShort("24")]
-            LesMamelles,
+            [AliasInShort("24")] LesMamelles,
 
             /// <summary>
             /// Roche Caiman
             /// </summary>
-            [AliasInShort("25")]
-            RocheCaiman,
+            [AliasInShort("25")] RocheCaiman,
 
             /// <summary>
             /// Anse aux Pins
             /// </summary>
-            [AliasInShort("01")]
-            AnseAuxPins,
+            [AliasInShort("01")] AnseAuxPins,
 
             /// <summary>
             /// Anse Boileau
             /// </summary>
-            [AliasInShort("02")]
-            AnseBoileau,
+            [AliasInShort("02")] AnseBoileau,
 
             /// <summary>
             /// Anse Etoile
             /// </summary>
-            [AliasInShort("03")]
-            AnseEtoile,
+            [AliasInShort("03")] AnseEtoile,
 
             /// <summary>
             /// Au Cap
             /// </summary>
-            [AliasInShort("04")]
-            AuCap,
+            [AliasInShort("04")] AuCap,
 
             /// <summary>
             /// Anse Royale
             /// </summary>
-            [AliasInShort("05")]
-            AnseRoyale,
+            [AliasInShort("05")] AnseRoyale,
 
             /// <summary>
             /// Baie Lazare
             /// </summary>
-            [AliasInShort("06")]
-            BaieLazare,
+            [AliasInShort("06")] BaieLazare,
 
             /// <summary>
             /// Baie Sainte Anne
             /// </summary>
-            [AliasInShort("07")]
-            BaieSainteAnne,
+            [AliasInShort("07")] BaieSainteAnne,
 
             /// <summary>
             /// Beau Vallon
             /// </summary>
-            [AliasInShort("08")]
-            BeauVallon,
+            [AliasInShort("08")] BeauVallon,
 
             /// <summary>
             /// Bel Air
             /// </summary>
-            [AliasInShort("09")]
-            BelAir,
+            [AliasInShort("09")] BelAir,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -307,8 +282,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -316,7 +292,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"SC-{values.ToRegionCode()}";
         }
 
@@ -325,7 +302,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Seychelles;
         }
 
@@ -334,7 +312,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.SC;
         }
 
@@ -342,19 +321,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Germany Regions
     /// </summary>
-    public static class GermanyRegions {
-
+    public static class GermanyRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -96,109 +97,92 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Germany regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Baden-Württemberg
             /// </summary>
-            [AliasInShort("BW")]
-            BadenWürttemberg,
+            [AliasInShort("BW")] BadenWürttemberg,
 
             /// <summary>
             /// Bayern, Bavaria
             /// </summary>
-            [AliasInShort("BY")]
-            Bayern,
+            [AliasInShort("BY")] Bayern,
 
             /// <summary>
             /// Berlin
             /// </summary>
-            [AliasInShort("BE")]
-            Berlin,
+            [AliasInShort("BE")] Berlin,
 
             /// <summary>
             /// Brandenburg
             /// </summary>
-            [AliasInShort("BB")]
-            Brandenburg,
+            [AliasInShort("BB")] Brandenburg,
 
             /// <summary>
             /// Bremen
             /// </summary>
-            [AliasInShort("HB")]
-            Bremen,
+            [AliasInShort("HB")] Bremen,
 
             /// <summary>
             /// Hamburg
             /// </summary>
-            [AliasInShort("HH")]
-            Hamburg,
+            [AliasInShort("HH")] Hamburg,
 
             /// <summary>
             /// Hessen, Hesse
             /// </summary>
-            [AliasInShort("HE")]
-            Hessen,
+            [AliasInShort("HE")] Hessen,
 
             /// <summary>
             /// Mecklenburg-Vorpommern
             /// </summary>
-            [AliasInShort("MV")]
-            MecklenburgVorpommern,
+            [AliasInShort("MV")] MecklenburgVorpommern,
 
             /// <summary>
             /// Niedersachsen, Lower Saxony
             /// </summary>
-            [AliasInShort("NI")]
-            Niedersachsen,
+            [AliasInShort("NI")] Niedersachsen,
 
             /// <summary>
             /// Nordrhein-Westfalen, North Rhine-Westphalia
             /// </summary>
-            [AliasInShort("NW")]
-            NordrheinWestfalen,
+            [AliasInShort("NW")] NordrheinWestfalen,
 
             /// <summary>
             /// Rheinland-Pfalz, Rhineland-Palatinate
             /// </summary>
-            [AliasInShort("RP")]
-            RheinlandPfalz,
+            [AliasInShort("RP")] RheinlandPfalz,
 
             /// <summary>
             /// Saarland
             /// </summary>
-            [AliasInShort("SL")]
-            Saarland,
+            [AliasInShort("SL")] Saarland,
 
             /// <summary>
             /// Sachsen, Saxony
             /// </summary>
-            [AliasInShort("SN")]
-            Sachsen,
+            [AliasInShort("SN")] Sachsen,
 
             /// <summary>
             /// Sachsen-Anhalt
             /// </summary>
-            [AliasInShort("ST")]
-            SachsenAnhalt,
+            [AliasInShort("ST")] SachsenAnhalt,
 
             /// <summary>
             /// Schleswig-Holstein
             /// </summary>
-            [AliasInShort("SH")]
-            SchleswigHolstein,
+            [AliasInShort("SH")] SchleswigHolstein,
 
             /// <summary>
             /// Thüringen
             /// </summary>
-            [AliasInShort("TH")]
-            Thüringen,
+            [AliasInShort("TH")] Thüringen,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -208,8 +192,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -217,7 +202,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"DE-{values.ToRegionCode()}";
         }
 
@@ -225,19 +211,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

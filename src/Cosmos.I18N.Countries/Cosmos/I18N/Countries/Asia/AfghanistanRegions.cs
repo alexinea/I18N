@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Afghanistan Regions
     /// </summary>
-    public static class AfghanistanRegions {
-
+    public static class AfghanistanRegions
+    {
         #region Gets region
 
         /// <summary>
@@ -186,217 +187,182 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Afghanistan regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Balkh
             /// </summary>
-            [AliasInShort("BAL")]
-            Balkh,
+            [AliasInShort("BAL")] Balkh,
 
             /// <summary>
             /// Bamyan
             /// </summary>
-            [AliasInShort("BAM")]
-            Bamyan,
+            [AliasInShort("BAM")] Bamyan,
 
             /// <summary>
             /// Badghis
             /// </summary>
-            [AliasInShort("BDG")]
-            Badghis,
+            [AliasInShort("BDG")] Badghis,
 
             /// <summary>
             /// Badakhshan
             /// </summary>
-            [AliasInShort("BDS")]
-            Badakhshan,
+            [AliasInShort("BDS")] Badakhshan,
 
             /// <summary>
             /// Baghlan
             /// </summary>
-            [AliasInShort("BGL")]
-            Baghlan,
+            [AliasInShort("BGL")] Baghlan,
 
             /// <summary>
             /// Daykundi
             /// </summary>
-            [AliasInShort("DAY")]
-            Daykundi,
+            [AliasInShort("DAY")] Daykundi,
 
             /// <summary>
             /// Farah
             /// </summary>
-            [AliasInShort("FRA")]
-            Farah,
+            [AliasInShort("FRA")] Farah,
 
             /// <summary>
             /// Faryab
             /// </summary>
-            [AliasInShort("FYB")]
-            Faryab,
+            [AliasInShort("FYB")] Faryab,
 
             /// <summary>
             /// Ghazni
             /// </summary>
-            [AliasInShort("GHA")]
-            Ghazni,
+            [AliasInShort("GHA")] Ghazni,
 
             /// <summary>
             /// Ghōr
             /// </summary>
-            [AliasInShort("GHO")]
-            Ghōr,
+            [AliasInShort("GHO")] Ghōr,
 
             /// <summary>
             /// Helmand
             /// </summary>
-            [AliasInShort("HEL")]
-            Helmand,
+            [AliasInShort("HEL")] Helmand,
 
             /// <summary>
             /// Herat
             /// </summary>
-            [AliasInShort("HER")]
-            Herat,
+            [AliasInShort("HER")] Herat,
 
             /// <summary>
             /// Jowzjan
             /// </summary>
-            [AliasInShort("JOW")]
-            Jowzjan,
+            [AliasInShort("JOW")] Jowzjan,
 
             /// <summary>
             /// Kabul
             /// </summary>
-            [AliasInShort("KAB")]
-            Kabul,
+            [AliasInShort("KAB")] Kabul,
 
             /// <summary>
             /// Kandahar
             /// </summary>
-            [AliasInShort("KAN")]
-            Kandahar,
+            [AliasInShort("KAN")] Kandahar,
 
             /// <summary>
             /// Kapisa
             /// </summary>
-            [AliasInShort("KAP")]
-            Kapisa,
+            [AliasInShort("KAP")] Kapisa,
 
             /// <summary>
             /// Kunduz
             /// </summary>
-            [AliasInShort("KDZ")]
-            Kunduz,
+            [AliasInShort("KDZ")] Kunduz,
 
             /// <summary>
             /// Khost
             /// </summary>
-            [AliasInShort("KHO")]
-            Khost,
+            [AliasInShort("KHO")] Khost,
 
             /// <summary>
             /// Kunar
             /// </summary>
-            [AliasInShort("KNR")]
-            Kunar,
+            [AliasInShort("KNR")] Kunar,
 
             /// <summary>
             /// Laghman
             /// </summary>
-            [AliasInShort("LAG")]
-            Laghman,
+            [AliasInShort("LAG")] Laghman,
 
             /// <summary>
             /// Logar
             /// </summary>
-            [AliasInShort("LOG")]
-            Logar,
+            [AliasInShort("LOG")] Logar,
 
             /// <summary>
             /// Nangarhar
             /// </summary>
-            [AliasInShort("NAN")]
-            Nangarhar,
+            [AliasInShort("NAN")] Nangarhar,
 
             /// <summary>
             /// Nimruz
             /// </summary>
-            [AliasInShort("NIM")]
-            Nimruz,
+            [AliasInShort("NIM")] Nimruz,
 
             /// <summary>
             /// Nuristan
             /// </summary>
-            [AliasInShort("NUR")]
-            Nuristan,
+            [AliasInShort("NUR")] Nuristan,
 
             /// <summary>
             /// Panjshir
             /// </summary>
-            [AliasInShort("PAN")]
-            Panjshir,
+            [AliasInShort("PAN")] Panjshir,
 
             /// <summary>
             /// Parwan
             /// </summary>
-            [AliasInShort("PAR")]
-            Parwan,
+            [AliasInShort("PAR")] Parwan,
 
             /// <summary>
             /// Paktia
             /// </summary>
-            [AliasInShort("PIA")]
-            Paktia,
+            [AliasInShort("PIA")] Paktia,
 
             /// <summary>
             /// Paktika
             /// </summary>
-            [AliasInShort("PKA")]
-            Paktika,
+            [AliasInShort("PKA")] Paktika,
 
             /// <summary>
             /// Samangan
             /// </summary>
-            [AliasInShort("SAM")]
-            Samangan,
+            [AliasInShort("SAM")] Samangan,
 
             /// <summary>
             /// Sar-e Pol
             /// </summary>
-            [AliasInShort("SAR")]
-            SarEPol,
+            [AliasInShort("SAR")] SarEPol,
 
             /// <summary>
             /// Takhar
             /// </summary>
-            [AliasInShort("TAK")]
-            Takhar,
+            [AliasInShort("TAK")] Takhar,
 
             /// <summary>
             /// Urozgan
             /// </summary>
-            [AliasInShort("URU")]
-            Urozgan,
+            [AliasInShort("URU")] Urozgan,
 
             /// <summary>
             /// Maidan Wardak
             /// </summary>
-            [AliasInShort("WAR")]
-            MaidanWardak,
+            [AliasInShort("WAR")] MaidanWardak,
 
             /// <summary>
             /// Zabul
             /// </summary>
-            [AliasInShort("ZAB")]
-            Zabul,
+            [AliasInShort("ZAB")] Zabul,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -406,8 +372,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -415,7 +382,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AF-{values.ToRegionCode()}";
         }
 
@@ -424,7 +392,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Afghanistan;
         }
 
@@ -433,7 +402,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.AF;
         }
 
@@ -441,19 +411,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

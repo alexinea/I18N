@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// Australia regions
     /// </summary>
-    public static class AustraliaRegions {
-
+    public static class AustraliaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -86,7 +87,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// <summary>
         /// Special regions
         /// </summary>
-        public static class Special {
+        public static class Special
+        {
             /// <summary>
             /// NorfolkIsland
             /// </summary>
@@ -121,111 +123,96 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// <summary>
         /// Enum values for Australia regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Australian Capital Territory
             /// </summary>
-            [AliasInShort("ACT")]
-            [RegionFlag("mainland")]
+            [AliasInShort("ACT")] [RegionFlag("mainland")]
             AustralianCapitalTerritory,
 
             /// <summary>
             /// New South Wales
             /// </summary>
-            [AliasInShort("NSW")]
-            [RegionFlag("mainland")]
+            [AliasInShort("NSW")] [RegionFlag("mainland")]
             NewSouthWales,
 
             /// <summary>
             /// Northern Territory
             /// </summary>
-            [AliasInShort("NT")]
-            [RegionFlag("mainland")]
+            [AliasInShort("NT")] [RegionFlag("mainland")]
             NorthernTerritory,
 
             /// <summary>
             /// Queensland
             /// </summary>
-            [AliasInShort("QLD")]
-            [RegionFlag("mainland")]
+            [AliasInShort("QLD")] [RegionFlag("mainland")]
             Queensland,
 
             /// <summary>
             /// South Australia
             /// </summary>
-            [AliasInShort("SA")]
-            [RegionFlag("mainland")]
+            [AliasInShort("SA")] [RegionFlag("mainland")]
             SouthAustralia,
 
             /// <summary>
             /// Tasmania
             /// </summary>
-            [AliasInShort("TAS")]
-            [RegionFlag("mainland")]
+            [AliasInShort("TAS")] [RegionFlag("mainland")]
             Tasmania,
 
             /// <summary>
             /// Victoria
             /// </summary>
-            [AliasInShort("VIC")]
-            [RegionFlag("mainland")]
+            [AliasInShort("VIC")] [RegionFlag("mainland")]
             Victoria,
 
             /// <summary>
             /// Western Australia
             /// </summary>
-            [AliasInShort("WA")]
-            [RegionFlag("mainland")]
+            [AliasInShort("WA")] [RegionFlag("mainland")]
             WesternAustralia,
 
             /// <summary>
             /// 删除海群岛
             /// </summary>
-            [AliasInShort("CSI")]
-            [RegionFlag("overseas")]
+            [AliasInShort("CSI")] [RegionFlag("overseas")]
             CoralSeaIslands,
 
             /// <summary>
             /// 阿什莫尔和卡捷岛
             /// </summary>
-            [AliasInShort("ACI")]
-            [RegionFlag("overseas")]
+            [AliasInShort("ACI")] [RegionFlag("overseas")]
             AshmoreAndCartierIslands,
 
             /// <summary>
             /// 科科斯群岛
             /// </summary>
-            [AliasInShort("CC")]
-            [RegionFlag("overseas")]
+            [AliasInShort("CC")] [RegionFlag("overseas")]
             CocosIslands,
 
             /// <summary>
             /// 赫德岛及麦唐纳群岛
             /// </summary>
-            [AliasInShort("HMD")]
-            [RegionFlag("overseas")]
+            [AliasInShort("HMD")] [RegionFlag("overseas")]
             HeardIslandAndMcDonaldIslands,
 
             /// <summary>
             /// Christmas Island
             /// </summary>
-            [AliasInShort("CX")]
-            [RegionFlag("overseas")]
+            [AliasInShort("CX")] [RegionFlag("overseas")]
             ChristmasIsland,
 
             /// <summary>
             /// Norfolk Island
             /// </summary>
-            [AliasInShort("NF")]
-            [RegionFlag("overseas")]
+            [AliasInShort("NF")] [RegionFlag("overseas")]
             NorfolkIsland,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -235,8 +222,9 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -244,7 +232,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AU-{values.ToRegionCode()}";
         }
 
@@ -253,8 +242,10 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
-            switch (value) {
+        public static Country ToCountry(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.ChristmasIsland:
                     return Country.ChristmasIsland;
                 case EnumValues.CocosIslands:
@@ -271,8 +262,10 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
-            switch (value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.CocosIslands:
                     return CountryCode.CC;
                 case EnumValues.ChristmasIsland:
@@ -293,8 +286,10 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="country"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(Country country) {
-            switch (country) {
+        public static EnumValues FromSpecialRegions(Country country)
+        {
+            switch (country)
+            {
                 case Country.CocosIslands:
                     return EnumValues.CocosIslands;
                 case Country.ChristmasIsland:
@@ -311,8 +306,10 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(CountryCode code) {
-            switch (code) {
+        public static EnumValues FromSpecialRegions(CountryCode code)
+        {
+            switch (code)
+            {
                 case CountryCode.CC:
                     return EnumValues.CocosIslands;
                 case CountryCode.CX:
@@ -328,8 +325,8 @@ namespace Cosmos.I18N.Countries.Oceania {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         private static IEnumerable<EnumMember<EnumValues>> Filter(string flag) =>
             InternalEnumMembersCache.Where(x => x.Attributes.GetAll<RegionFlagAttribute>().Any(attr => attr.Flag == flag));
@@ -338,30 +335,24 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
 
         /// <summary>
         /// 获得本土地区的地区代号
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetMainlandRegionCodes() {
-            foreach (var member in Filter("mainland"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetMainlandRegionCodes()
+            => Filter("mainland").Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// 获得海外属地地区代号
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetOverseasRegionCodes() {
-            foreach (var member in Filter("overseas"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetOverseasRegionCodes()
+            => Filter("overseas").Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

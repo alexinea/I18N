@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Czechia regions
     /// </summary>
-    public static class CzechiaRegions {
-
+    public static class CzechiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -86,97 +87,82 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Czechia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// South Bohemia
             /// </summary>
-            [AliasInShort("JC")]
-            SouthBohemia,
+            [AliasInShort("JC")] SouthBohemia,
 
             /// <summary>
             /// South Moravia
             /// </summary>
-            [AliasInShort("JM")]
-            SouthMoravia,
+            [AliasInShort("JM")] SouthMoravia,
 
             /// <summary>
             /// Karlovy Vary Region
             /// </summary>
-            [AliasInShort("KA")]
-            KarlovyVaryRegion,
+            [AliasInShort("KA")] KarlovyVaryRegion,
 
             /// <summary>
             /// Hradec Králové Region
             /// </summary>
-            [AliasInShort("KR")]
-            HradecKrálovéRegion,
+            [AliasInShort("KR")] HradecKrálovéRegion,
 
             /// <summary>
             /// Liberec Region
             /// </summary>
-            [AliasInShort("LI")]
-            LiberecRegion,
+            [AliasInShort("LI")] LiberecRegion,
 
             /// <summary>
             /// Moravian-Silesia
             /// </summary>
-            [AliasInShort("NO")]
-            MoravianSilesia,
+            [AliasInShort("NO")] MoravianSilesia,
 
             /// <summary>
             /// Olomouc Region
             /// </summary>
-            [AliasInShort("OL")]
-            OlomoucRegion,
+            [AliasInShort("OL")] OlomoucRegion,
 
             /// <summary>
             /// Pardubice Region
             /// </summary>
-            [AliasInShort("PA")]
-            PardubiceRegion,
+            [AliasInShort("PA")] PardubiceRegion,
 
             /// <summary>
             /// Plzeň Region
             /// </summary>
-            [AliasInShort("PL")]
-            PlzeňRegion,
+            [AliasInShort("PL")] PlzeňRegion,
 
             /// <summary>
             /// Prague
             /// </summary>
-            [AliasInShort("PR")]
-            Prague,
+            [AliasInShort("PR")] Prague,
 
             /// <summary>
             /// Central Bohemia
             /// </summary>
-            [AliasInShort("ST")]
-            CentralBohemia,
+            [AliasInShort("ST")] CentralBohemia,
 
             /// <summary>
             /// Ústí nad Labem Region
             /// </summary>
-            [AliasInShort("US")]
-            ÚstíNadLabemRegion,
+            [AliasInShort("US")] ÚstíNadLabemRegion,
 
             /// <summary>
             /// Vysočina
             /// </summary>
-            [AliasInShort("VY")]
-            Vysočina,
+            [AliasInShort("VY")] Vysočina,
 
             /// <summary>
             /// Zlín Region
             /// </summary>
-            [AliasInShort("ZL")]
-            ZlínRegion,
+            [AliasInShort("ZL")] ZlínRegion,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -186,8 +172,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -195,7 +182,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CZ-{values.ToRegionCode()}";
         }
 
@@ -204,7 +192,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Czechia;
         }
 
@@ -213,7 +202,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.CZ;
         }
 
@@ -221,19 +211,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

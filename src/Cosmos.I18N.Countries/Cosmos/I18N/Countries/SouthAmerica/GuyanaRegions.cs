@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// Guyana Regions
     /// </summary>
-    public static class GuyanaRegions {
-
+    public static class GuyanaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -66,73 +67,62 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// <summary>
         /// Enum values for Guyana regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Barima-Waini
             /// </summary>
-            [AliasInShort("BA")]
-            BarimaWaini,
+            [AliasInShort("BA")] BarimaWaini,
 
             /// <summary>
             /// Cuyuni-Mazaruni
             /// </summary>
-            [AliasInShort("CU")]
-            CuyuniMazaruni,
+            [AliasInShort("CU")] CuyuniMazaruni,
 
             /// <summary>
             /// Demerara-Mahaica
             /// </summary>
-            [AliasInShort("DE")]
-            DemeraraMahaica,
+            [AliasInShort("DE")] DemeraraMahaica,
 
             /// <summary>
             /// East Berbice-Corentyne
             /// </summary>
-            [AliasInShort("EB")]
-            EastBerbiceCorentyne,
+            [AliasInShort("EB")] EastBerbiceCorentyne,
 
             /// <summary>
             /// Essequibo Islands-West Demerara
             /// </summary>
-            [AliasInShort("ES")]
-            EssequiboIslandsWestDemerara,
+            [AliasInShort("ES")] EssequiboIslandsWestDemerara,
 
             /// <summary>
             /// Mahaica-Berbice
             /// </summary>
-            [AliasInShort("MA")]
-            MahaicaBerbice,
+            [AliasInShort("MA")] MahaicaBerbice,
 
             /// <summary>
             /// Pomeroon-Supenaam
             /// </summary>
-            [AliasInShort("PM")]
-            PomeroonSupenaam,
+            [AliasInShort("PM")] PomeroonSupenaam,
 
             /// <summary>
             /// Potaro-Siparuni
             /// </summary>
-            [AliasInShort("PT")]
-            PotaroSiparuni,
+            [AliasInShort("PT")] PotaroSiparuni,
 
             /// <summary>
             /// Upper Demerara-Berbice
             /// </summary>
-            [AliasInShort("UD")]
-            UpperDemeraraBerbice,
+            [AliasInShort("UD")] UpperDemeraraBerbice,
 
             /// <summary>
             /// Upper Takutu-Upper Essequibo
             /// </summary>
-            [AliasInShort("UT")]
-            UpperTakutuUpperEssequibo,
+            [AliasInShort("UT")] UpperTakutuUpperEssequibo,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -142,8 +132,9 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -151,7 +142,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"GY-{values.ToRegionCode()}";
         }
 
@@ -160,7 +152,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Guyana;
         }
 
@@ -169,7 +162,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.GY;
         }
 
@@ -177,19 +171,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

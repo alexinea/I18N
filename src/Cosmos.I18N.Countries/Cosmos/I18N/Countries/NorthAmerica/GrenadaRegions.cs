@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// Grenada Regions
     /// </summary>
-    public static class GrenadaRegions {
-
+    public static class GrenadaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -51,55 +52,47 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for Grenada regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Saint Andrew
             /// </summary>
-            [AliasInShort("01")]
-            SaintAndrew,
+            [AliasInShort("01")] SaintAndrew,
 
             /// <summary>
             /// Saint David
             /// </summary>
-            [AliasInShort("02")]
-            SaintDavid,
+            [AliasInShort("02")] SaintDavid,
 
             /// <summary>
             /// Saint George
             /// </summary>
-            [AliasInShort("03")]
-            SaintGeorge,
+            [AliasInShort("03")] SaintGeorge,
 
             /// <summary>
             /// Saint John
             /// </summary>
-            [AliasInShort("04")]
-            SaintJohn,
+            [AliasInShort("04")] SaintJohn,
 
             /// <summary>
             /// Saint Mark
             /// </summary>
-            [AliasInShort("05")]
-            SaintMark,
+            [AliasInShort("05")] SaintMark,
 
             /// <summary>
             /// Saint Patrick
             /// </summary>
-            [AliasInShort("06")]
-            SaintPatrick,
+            [AliasInShort("06")] SaintPatrick,
 
             /// <summary>
             /// Carriacou and Petite Martinique
             /// </summary>
-            [AliasInShort("10")]
-            CarriacouAndPetiteMartinique,
+            [AliasInShort("10")] CarriacouAndPetiteMartinique,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -109,8 +102,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -118,7 +112,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"GD-{values.ToRegionCode()}";
         }
 
@@ -127,7 +122,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Grenada;
         }
 
@@ -136,7 +132,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.GD;
         }
 
@@ -144,19 +141,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

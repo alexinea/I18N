@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Italy Regions
     /// </summary>
-    public static class ItalyRegions {
-
+    public static class ItalyRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -117,133 +118,112 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Italy regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Piedmont
             /// </summary>
-            [AliasInShort("21")]
-            Piedmont,
+            [AliasInShort("21")] Piedmont,
 
             /// <summary>
             /// Aosta Valley
             /// </summary>
-            [AliasInShort("23")]
-            AostaValley,
+            [AliasInShort("23")] AostaValley,
 
             /// <summary>
             /// Lombardy
             /// </summary>
-            [AliasInShort("25")]
-            Lombardy,
+            [AliasInShort("25")] Lombardy,
 
             /// <summary>
             /// Südtirol, Alto Adige
             /// </summary>
-            [AliasInShort("32")]
-            SüdtirolAltoAdige,
+            [AliasInShort("32")] SüdtirolAltoAdige,
 
             /// <summary>
             /// Veneto
             /// </summary>
-            [AliasInShort("34")]
-            Veneto,
+            [AliasInShort("34")] Veneto,
 
             /// <summary>
             /// Friuli–Venezia Giulia
             /// </summary>
-            [AliasInShort("36")]
-            FriuliVeneziaGiulia,
+            [AliasInShort("36")] FriuliVeneziaGiulia,
 
             /// <summary>
             /// Liguria
             /// </summary>
-            [AliasInShort("42")]
-            Liguria,
+            [AliasInShort("42")] Liguria,
 
             /// <summary>
             /// Emilia-Romagna
             /// </summary>
-            [AliasInShort("45")]
-            EmiliaRomagna,
+            [AliasInShort("45")] EmiliaRomagna,
 
             /// <summary>
             /// Tuscany
             /// </summary>
-            [AliasInShort("52")]
-            Tuscany,
+            [AliasInShort("52")] Tuscany,
 
             /// <summary>
             /// Umbria
             /// </summary>
-            [AliasInShort("55")]
-            Umbria,
+            [AliasInShort("55")] Umbria,
 
             /// <summary>
             /// Marche
             /// </summary>
-            [AliasInShort("57")]
-            Marche,
+            [AliasInShort("57")] Marche,
 
             /// <summary>
             /// Lazio
             /// </summary>
-            [AliasInShort("62")]
-            Lazio,
+            [AliasInShort("62")] Lazio,
 
             /// <summary>
             /// Abruzzo
             /// </summary>
-            [AliasInShort("65")]
-            Abruzzo,
+            [AliasInShort("65")] Abruzzo,
 
             /// <summary>
             /// Molise
             /// </summary>
-            [AliasInShort("67")]
-            Molise,
+            [AliasInShort("67")] Molise,
 
             /// <summary>
             /// Campania
             /// </summary>
-            [AliasInShort("72")]
-            Campania,
+            [AliasInShort("72")] Campania,
 
             /// <summary>
             /// Apulia
             /// </summary>
-            [AliasInShort("75")]
-            Apulia,
+            [AliasInShort("75")] Apulia,
 
             /// <summary>
             /// Basilicata
             /// </summary>
-            [AliasInShort("77")]
-            Basilicata,
+            [AliasInShort("77")] Basilicata,
 
             /// <summary>
             /// Calabria
             /// </summary>
-            [AliasInShort("78")]
-            Calabria,
+            [AliasInShort("78")] Calabria,
 
             /// <summary>
             /// Sicily
             /// </summary>
-            [AliasInShort("82")]
-            Sicily,
+            [AliasInShort("82")] Sicily,
 
             /// <summary>
             /// Sardinia
             /// </summary>
-            [AliasInShort("88")]
-            Sardinia,
+            [AliasInShort("88")] Sardinia,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -253,8 +233,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -262,7 +243,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"IT-{values.ToRegionCode()}";
         }
 
@@ -271,7 +253,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Italy;
         }
 
@@ -280,7 +263,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.IT;
         }
 
@@ -288,19 +272,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Ethiopia regions
     /// </summary>
-    public static class EthiopiaRegions {
-
+    public static class EthiopiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -71,79 +72,67 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Ethiopia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Addis Ababa
             /// </summary>
-            [AliasInShort("AA")]
-            AddisAbaba,
+            [AliasInShort("AA")] AddisAbaba,
 
             /// <summary>
             /// Afar
             /// </summary>
-            [AliasInShort("AF")]
-            Afar,
+            [AliasInShort("AF")] Afar,
 
             /// <summary>
             /// Amhara
             /// </summary>
-            [AliasInShort("AM")]
-            Amhara,
+            [AliasInShort("AM")] Amhara,
 
             /// <summary>
             /// Benishangul-Gumuz
             /// </summary>
-            [AliasInShort("BE")]
-            BenishangulGumuz,
+            [AliasInShort("BE")] BenishangulGumuz,
 
             /// <summary>
             /// Dire Dawa
             /// </summary>
-            [AliasInShort("DD")]
-            DireDawa,
+            [AliasInShort("DD")] DireDawa,
 
             /// <summary>
             /// Gambela
             /// </summary>
-            [AliasInShort("GA")]
-            Gambela,
+            [AliasInShort("GA")] Gambela,
 
             /// <summary>
             /// Harari
             /// </summary>
-            [AliasInShort("HA")]
-            Harari,
+            [AliasInShort("HA")] Harari,
 
             /// <summary>
             /// Oromia
             /// </summary>
-            [AliasInShort("OR")]
-            Oromia,
+            [AliasInShort("OR")] Oromia,
 
             /// <summary>
             /// Southern Nations, Nationalities, and Peoples
             /// </summary>
-            [AliasInShort("SN")]
-            SouthernNationsAndNationalitiesAndPeoples,
+            [AliasInShort("SN")] SouthernNationsAndNationalitiesAndPeoples,
 
             /// <summary>
             /// Somali
             /// </summary>
-            [AliasInShort("SO")]
-            Somali,
+            [AliasInShort("SO")] Somali,
 
             /// <summary>
             /// Tigray
             /// </summary>
-            [AliasInShort("TI")]
-            Tigray,
+            [AliasInShort("TI")] Tigray,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -153,8 +142,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -162,7 +152,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"ET-{values.ToRegionCode()}";
         }
 
@@ -171,7 +162,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Ethiopia;
         }
 
@@ -180,7 +172,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.ET;
         }
 
@@ -188,19 +181,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

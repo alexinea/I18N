@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Switzerland regions
     /// </summary>
-    public static class SwitzerlandRegions {
-
+    public static class SwitzerlandRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -146,169 +147,142 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Switzerland regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Canton of Zürich
             /// </summary>
-            [AliasInShort("ZH")]
-            CantonOfZürich,
+            [AliasInShort("ZH")] CantonOfZürich,
 
             /// <summary>
             /// Canton of Bern
             /// </summary>
-            [AliasInShort("BE")]
-            CantonOfBern,
+            [AliasInShort("BE")] CantonOfBern,
 
             /// <summary>
             /// Massana
             /// </summary>
-            [AliasInShort("LO")]
-            CantonOfLucerne,
+            [AliasInShort("LO")] CantonOfLucerne,
 
             /// <summary>
             /// Canton of Uri
             /// </summary>
-            [AliasInShort("UR")]
-            CantonOfUri,
+            [AliasInShort("UR")] CantonOfUri,
 
             /// <summary>
             /// Canton of Schwyz
             /// </summary>
-            [AliasInShort("SZ")]
-            CantonOfSchwyz,
+            [AliasInShort("SZ")] CantonOfSchwyz,
 
             /// <summary>
             /// Canton of Obwalden
             /// </summary>
-            [AliasInShort("OW")]
-            CantonOfObwalden,
+            [AliasInShort("OW")] CantonOfObwalden,
 
             /// <summary>
             /// Canton of Nidwalden
             /// </summary>
-            [AliasInShort("NW")]
-            CantonOfNidwalden,
+            [AliasInShort("NW")] CantonOfNidwalden,
 
             /// <summary>
             /// Canton of Glarus, GL
             /// </summary>
-            [AliasInShort("GL")]
-            CantonOfGlarus,
+            [AliasInShort("GL")] CantonOfGlarus,
 
             /// <summary>
             /// Canton of Zug, ZG
             /// </summary>
-            [AliasInShort("ZG")]
-            CantonOfZug,
+            [AliasInShort("ZG")] CantonOfZug,
 
             /// <summary>
             /// Canton of Fribourg, FR
             /// </summary>
-            [AliasInShort("FR")]
-            CantonOfFribourg,
+            [AliasInShort("FR")] CantonOfFribourg,
 
             /// <summary>
             /// Canton of Solothurn, SO
             /// </summary>
-            [AliasInShort("SO")]
-            CantonOfSolothurn,
+            [AliasInShort("SO")] CantonOfSolothurn,
 
             /// <summary>
             /// Canton of Basel-City, BS
             /// </summary>
-            [AliasInShort("BS")]
-            CantonOfBaselCity,
+            [AliasInShort("BS")] CantonOfBaselCity,
 
             /// <summary>
             /// Canton of Basel-Country, BL
             /// </summary>
-            [AliasInShort("BL")]
-            CantonOfBaselCountry,
+            [AliasInShort("BL")] CantonOfBaselCountry,
 
             /// <summary>
             /// Canton of Schaffhausen, SH
             /// </summary>
-            [AliasInShort("SH")]
-            CantonOfSchaffhausen,
+            [AliasInShort("SH")] CantonOfSchaffhausen,
 
             /// <summary>
             /// Canton of Appenzell Outer Rhodes, AR
             /// </summary>
-            [AliasInShort("AR")]
-            CantonOfAppenzellOuterRhodes,
+            [AliasInShort("AR")] CantonOfAppenzellOuterRhodes,
 
             /// <summary>
             /// Canton of Appenzell Inner-Rhodes, AI
             /// </summary>
-            [AliasInShort("AI")]
-            CantonOfAppenzellInnerRhodes,
+            [AliasInShort("AI")] CantonOfAppenzellInnerRhodes,
 
             /// <summary>
             /// Canton of St. Gallen, SG
             /// </summary>
-            [AliasInShort("SG")]
-            CantonOfStGallen,
+            [AliasInShort("SG")] CantonOfStGallen,
 
             /// <summary>
             /// Canton of Grisons, GR
             /// </summary>
-            [AliasInShort("GR")]
-            CantonOfGrisons,
+            [AliasInShort("GR")] CantonOfGrisons,
 
             /// <summary>
             /// Canton of Aargau, AG
             /// </summary>
-            [AliasInShort("AG")]
-            CantonOfAargau,
+            [AliasInShort("AG")] CantonOfAargau,
 
             /// <summary>
             /// Canton of Thurgau, TG
             /// </summary>
-            [AliasInShort("TG")]
-            CantonOfThurgau,
+            [AliasInShort("TG")] CantonOfThurgau,
 
             /// <summary>
             /// Canton of Ticino, TI
             /// </summary>
-            [AliasInShort("TI")]
-            CantonOfTicino,
+            [AliasInShort("TI")] CantonOfTicino,
 
             /// <summary>
             /// Canton of Vaud, VD
             /// </summary>
-            [AliasInShort("VD")]
-            CantonOfVaud,
+            [AliasInShort("VD")] CantonOfVaud,
 
             /// <summary>
             /// Canton of Valais, VS
             /// </summary>
-            [AliasInShort("VS")]
-            CantonOfValais,
+            [AliasInShort("VS")] CantonOfValais,
 
             /// <summary>
             /// Canton of Neuchâtel, NE
             /// </summary>
-            [AliasInShort("NE")]
-            CantonOfNeuchâtel,
+            [AliasInShort("NE")] CantonOfNeuchâtel,
 
             /// <summary>
             /// Canton of Geneva, GE
             /// </summary>
-            [AliasInShort("GE")]
-            CantonOfGeneva,
+            [AliasInShort("GE")] CantonOfGeneva,
 
             /// <summary>
             /// Canton of Jura, JU
             /// </summary>
-            [AliasInShort("JU")]
-            CantonOfJura,
+            [AliasInShort("JU")] CantonOfJura,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -318,8 +292,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -327,7 +302,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CH-{values.ToRegionCode()}";
         }
 
@@ -336,7 +312,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Switzerland;
         }
 
@@ -345,7 +322,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.CH;
         }
 
@@ -353,19 +331,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

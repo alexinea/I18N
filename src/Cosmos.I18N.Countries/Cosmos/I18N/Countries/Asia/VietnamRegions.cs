@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// VietNam Regions
     /// </summary>
-    public static class VietnamRegions {
-
+    public static class VietnamRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -332,391 +333,327 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for VietNam regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Lai Châu
             /// </summary>
-            [AliasInShort("01")]
-            LaiChâu,
+            [AliasInShort("01")] LaiChâu,
 
             /// <summary>
             /// Lào Cai
             /// </summary>
-            [AliasInShort("02")]
-            LàoCai,
+            [AliasInShort("02")] LàoCai,
 
             /// <summary>
             /// Hà Giang
             /// </summary>
-            [AliasInShort("03")]
-            HàGiang,
+            [AliasInShort("03")] HàGiang,
 
             /// <summary>
             /// Cao Bằng
             /// </summary>
-            [AliasInShort("04")]
-            CaoBằng,
+            [AliasInShort("04")] CaoBằng,
 
             /// <summary>
             /// Sơn La
             /// </summary>
-            [AliasInShort("05")]
-            SơnLa,
+            [AliasInShort("05")] SơnLa,
 
             /// <summary>
             /// Yên Bái
             /// </summary>
-            [AliasInShort("06")]
-            YênBái,
+            [AliasInShort("06")] YênBái,
 
             /// <summary>
             /// Tuyên Quang
             /// </summary>
-            [AliasInShort("07")]
-            TuyênQuang,
+            [AliasInShort("07")] TuyênQuang,
 
             /// <summary>
             /// Lạng Sơn
             /// </summary>
-            [AliasInShort("09")]
-            LạngSơn,
+            [AliasInShort("09")] LạngSơn,
 
             /// <summary>
             /// Quảng Ninh
             /// </summary>
-            [AliasInShort("13")]
-            QuảngNinh,
+            [AliasInShort("13")] QuảngNinh,
 
             /// <summary>
             /// Hòa Bình
             /// </summary>
-            [AliasInShort("14")]
-            HòaBình,
+            [AliasInShort("14")] HòaBình,
 
             /// <summary>
             /// Ninh Bình
             /// </summary>
-            [AliasInShort("18")]
-            NinhBình,
+            [AliasInShort("18")] NinhBình,
 
             /// <summary>
             /// Thái Bình
             /// </summary>
-            [AliasInShort("20")]
-            TháiBình,
+            [AliasInShort("20")] TháiBình,
 
             /// <summary>
             /// Thanh Hóa
             /// </summary>
-            [AliasInShort("21")]
-            ThanhHóa,
+            [AliasInShort("21")] ThanhHóa,
 
             /// <summary>
             /// Nghệ An
             /// </summary>
-            [AliasInShort("22")]
-            NghệAn,
+            [AliasInShort("22")] NghệAn,
 
             /// <summary>
             /// Hà Tĩnh
             /// </summary>
-            [AliasInShort("23")]
-            HàTĩnh,
+            [AliasInShort("23")] HàTĩnh,
 
             /// <summary>
             /// Quảng Bình
             /// </summary>
-            [AliasInShort("24")]
-            QuảngBình,
+            [AliasInShort("24")] QuảngBình,
 
             /// <summary>
             /// Quảng Trị
             /// </summary>
-            [AliasInShort("25")]
-            QuảngTrị,
+            [AliasInShort("25")] QuảngTrị,
 
             /// <summary>
             /// Thừa Thiên–Huế
             /// </summary>
-            [AliasInShort("26")]
-            ThừaThiênHuế,
+            [AliasInShort("26")] ThừaThiênHuế,
 
             /// <summary>
             /// Quảng Nam
             /// </summary>
-            [AliasInShort("27")]
-            QuảngNam,
+            [AliasInShort("27")] QuảngNam,
 
             /// <summary>
             /// Kon Tum
             /// </summary>
-            [AliasInShort("28")]
-            KonTum,
+            [AliasInShort("28")] KonTum,
 
             /// <summary>
             /// Quảng Ngãi
             /// </summary>
-            [AliasInShort("29")]
-            QuảngNgãi,
+            [AliasInShort("29")] QuảngNgãi,
 
             /// <summary>
             /// Gia Lai
             /// </summary>
-            [AliasInShort("30")]
-            GiaLai,
+            [AliasInShort("30")] GiaLai,
 
             /// <summary>
             /// Bình Định
             /// </summary>
-            [AliasInShort("31")]
-            BìnhĐịnh,
+            [AliasInShort("31")] BìnhĐịnh,
 
             /// <summary>
             /// Phú Yên
             /// </summary>
-            [AliasInShort("32")]
-            PhúYên,
+            [AliasInShort("32")] PhúYên,
 
             /// <summary>
             /// Đắk Lắk
             /// </summary>
-            [AliasInShort("33")]
-            ĐắkLắk,
+            [AliasInShort("33")] ĐắkLắk,
 
             /// <summary>
             /// Khánh Hòa
             /// </summary>
-            [AliasInShort("34")]
-            KhánhHòa,
+            [AliasInShort("34")] KhánhHòa,
 
             /// <summary>
             /// Lâm Đồng
             /// </summary>
-            [AliasInShort("35")]
-            LâmĐồng,
+            [AliasInShort("35")] LâmĐồng,
 
             /// <summary>
             /// Ninh Thuận
             /// </summary>
-            [AliasInShort("36")]
-            NinhThuận,
+            [AliasInShort("36")] NinhThuận,
 
             /// <summary>
             /// Tây Ninh
             /// </summary>
-            [AliasInShort("37")]
-            TâyNinh,
+            [AliasInShort("37")] TâyNinh,
 
             /// <summary>
             /// Đồng Nai
             /// </summary>
-            [AliasInShort("39")]
-            ĐồngNai,
+            [AliasInShort("39")] ĐồngNai,
 
             /// <summary>
             /// Bình Thuận
             /// </summary>
-            [AliasInShort("40")]
-            BìnhThuận,
+            [AliasInShort("40")] BìnhThuận,
 
             /// <summary>
             /// Long An
             /// </summary>
-            [AliasInShort("41")]
-            LongAn,
+            [AliasInShort("41")] LongAn,
 
             /// <summary>
             /// Bà Rịa–Vũng Tàu
             /// </summary>
-            [AliasInShort("43")]
-            BàRịaVũngTàu,
+            [AliasInShort("43")] BàRịaVũngTàu,
 
             /// <summary>
             /// An Giang
             /// </summary>
-            [AliasInShort("44")]
-            AnGiang,
+            [AliasInShort("44")] AnGiang,
 
             /// <summary>
             /// Đồng Tháp
             /// </summary>
-            [AliasInShort("45")]
-            ĐồngTháp,
+            [AliasInShort("45")] ĐồngTháp,
 
             /// <summary>
             /// Tiền Giang
             /// </summary>
-            [AliasInShort("46")]
-            TiềnGiang,
+            [AliasInShort("46")] TiềnGiang,
 
             /// <summary>
             /// Kiên Giang
             /// </summary>
-            [AliasInShort("47")]
-            KiênGiang,
+            [AliasInShort("47")] KiênGiang,
 
             /// <summary>
             /// Vĩnh Long
             /// </summary>
-            [AliasInShort("49")]
-            VĩnhLong,
+            [AliasInShort("49")] VĩnhLong,
 
             /// <summary>
             /// Bến Tre
             /// </summary>
-            [AliasInShort("50")]
-            BếnTre,
+            [AliasInShort("50")] BếnTre,
 
             /// <summary>
             /// Trà Vinh
             /// </summary>
-            [AliasInShort("51")]
-            TràVinh,
+            [AliasInShort("51")] TràVinh,
 
             /// <summary>
             /// Sóc Trăng
             /// </summary>
-            [AliasInShort("52")]
-            SócTrăng,
+            [AliasInShort("52")] SócTrăng,
 
             /// <summary>
             /// Bắc Kạn
             /// </summary>
-            [AliasInShort("53")]
-            BắcKạn,
+            [AliasInShort("53")] BắcKạn,
 
             /// <summary>
             /// Bắc Giang
             /// </summary>
-            [AliasInShort("54")]
-            BắcGiang,
+            [AliasInShort("54")] BắcGiang,
 
             /// <summary>
             /// Bạc Liêu
             /// </summary>
-            [AliasInShort("55")]
-            BạcLiêu,
+            [AliasInShort("55")] BạcLiêu,
 
             /// <summary>
             /// Bắc Ninh
             /// </summary>
-            [AliasInShort("56")]
-            BắcNinh,
+            [AliasInShort("56")] BắcNinh,
 
             /// <summary>
             /// Bình Dương
             /// </summary>
-            [AliasInShort("57")]
-            BìnhDương,
+            [AliasInShort("57")] BìnhDương,
 
             /// <summary>
             /// Bình Phước
             /// </summary>
-            [AliasInShort("58")]
-            BìnhPhước,
+            [AliasInShort("58")] BìnhPhước,
 
             /// <summary>
             /// Cà Mau
             /// </summary>
-            [AliasInShort("59")]
-            CàMau,
+            [AliasInShort("59")] CàMau,
 
             /// <summary>
             /// Hải Dương
             /// </summary>
-            [AliasInShort("61")]
-            HảiDương,
+            [AliasInShort("61")] HảiDương,
 
             /// <summary>
             /// Hà Nam
             /// </summary>
-            [AliasInShort("63")]
-            HàNam,
+            [AliasInShort("63")] HàNam,
 
             /// <summary>
             /// Hưng Yên
             /// </summary>
-            [AliasInShort("66")]
-            HưngYên,
+            [AliasInShort("66")] HưngYên,
 
             /// <summary>
             /// Nam Định
             /// </summary>
-            [AliasInShort("67")]
-            NamĐịnh,
+            [AliasInShort("67")] NamĐịnh,
 
             /// <summary>
             /// Phú Thọ
             /// </summary>
-            [AliasInShort("68")]
-            PhúThọ,
+            [AliasInShort("68")] PhúThọ,
 
             /// <summary>
             /// Thái Nguyên
             /// </summary>
-            [AliasInShort("69")]
-            TháiNguyên,
+            [AliasInShort("69")] TháiNguyên,
 
             /// <summary>
             /// Vĩnh Phúc
             /// </summary>
-            [AliasInShort("70")]
-            VĩnhPhúc,
+            [AliasInShort("70")] VĩnhPhúc,
 
             /// <summary>
             /// Điện Biên
             /// </summary>
-            [AliasInShort("71")]
-            ĐiệnBiên,
+            [AliasInShort("71")] ĐiệnBiên,
 
             /// <summary>
             /// Đắk Nông
             /// </summary>
-            [AliasInShort("72")]
-            ĐắkNông,
+            [AliasInShort("72")] ĐắkNông,
 
             /// <summary>
             /// Hậu Giang
             /// </summary>
-            [AliasInShort("73")]
-            HậuGiang,
+            [AliasInShort("73")] HậuGiang,
 
             /// <summary>
             /// Can Tho
             /// </summary>
-            [AliasInShort("CT")]
-            CanTho,
+            [AliasInShort("CT")] CanTho,
 
             /// <summary>
             /// Da Nang
             /// </summary>
-            [AliasInShort("DN")]
-            DaNang,
+            [AliasInShort("DN")] DaNang,
 
             /// <summary>
             /// Hanoi
             /// </summary>
-            [AliasInShort("HN")]
-            Hanoi,
+            [AliasInShort("HN")] Hanoi,
 
             /// <summary>
             /// Haiphong
             /// </summary>
-            [AliasInShort("HP")]
-            Haiphong,
+            [AliasInShort("HP")] Haiphong,
 
             /// <summary>
             /// Ho Chi Minh City
             /// </summary>
-            [AliasInShort("SG")]
-            HoChiMinhCity,
+            [AliasInShort("SG")] HoChiMinhCity,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -726,8 +663,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -735,7 +673,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"VN-{values.ToRegionCode()}";
         }
 
@@ -744,7 +683,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Vietnam;
         }
 
@@ -753,7 +693,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.VN;
         }
 
@@ -761,19 +702,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

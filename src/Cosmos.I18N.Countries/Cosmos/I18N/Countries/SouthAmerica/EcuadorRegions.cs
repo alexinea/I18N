@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// Ecuador Regions
     /// </summary>
-    public static class EcuadorRegions {
-
+    public static class EcuadorRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -136,157 +137,132 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// <summary>
         /// Enum values for Ecuador regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Azuay
             /// </summary>
-            [AliasInShort("A")]
-            Azuay,
+            [AliasInShort("A")] Azuay,
 
             /// <summary>
             /// Bolívar
             /// </summary>
-            [AliasInShort("B")]
-            Bolívar,
+            [AliasInShort("B")] Bolívar,
 
             /// <summary>
             /// Carchi
             /// </summary>
-            [AliasInShort("C")]
-            Carchi,
+            [AliasInShort("C")] Carchi,
 
             /// <summary>
             /// Orellana
             /// </summary>
-            [AliasInShort("D")]
-            Orellana,
+            [AliasInShort("D")] Orellana,
 
             /// <summary>
             /// Esmeraldas
             /// </summary>
-            [AliasInShort("E")]
-            Esmeraldas,
+            [AliasInShort("E")] Esmeraldas,
 
             /// <summary>
             /// Cañar
             /// </summary>
-            [AliasInShort("F")]
-            Cañar,
+            [AliasInShort("F")] Cañar,
 
             /// <summary>
             /// Guayas
             /// </summary>
-            [AliasInShort("G")]
-            Guayas,
+            [AliasInShort("G")] Guayas,
 
             /// <summary>
             /// Chimborazo
             /// </summary>
-            [AliasInShort("H")]
-            Chimborazo,
+            [AliasInShort("H")] Chimborazo,
 
             /// <summary>
             /// Imbabura
             /// </summary>
-            [AliasInShort("I")]
-            Imbabura,
+            [AliasInShort("I")] Imbabura,
 
             /// <summary>
             /// Loja
             /// </summary>
-            [AliasInShort("L")]
-            Loja,
+            [AliasInShort("L")] Loja,
 
             /// <summary>
             /// Manabí
             /// </summary>
-            [AliasInShort("M")]
-            Manabí,
+            [AliasInShort("M")] Manabí,
 
             /// <summary>
             /// Napo
             /// </summary>
-            [AliasInShort("N")]
-            Napo,
+            [AliasInShort("N")] Napo,
 
             /// <summary>
             /// El Oro
             /// </summary>
-            [AliasInShort("O")]
-            ElOro,
+            [AliasInShort("O")] ElOro,
 
             /// <summary>
             /// Pichincha
             /// </summary>
-            [AliasInShort("P")]
-            Pichincha,
+            [AliasInShort("P")] Pichincha,
 
             /// <summary>
             /// Los Ríos
             /// </summary>
-            [AliasInShort("R")]
-            LosRíos,
+            [AliasInShort("R")] LosRíos,
 
             /// <summary>
             /// Morona-Santiago
             /// </summary>
-            [AliasInShort("S")]
-            MoronaSantiago,
+            [AliasInShort("S")] MoronaSantiago,
 
             /// <summary>
             /// Santo Domingo de los Tsáchilas
             /// </summary>
-            [AliasInShort("SD")]
-            SantoDomingoDeLosTsáchilas,
+            [AliasInShort("SD")] SantoDomingoDeLosTsáchilas,
 
             /// <summary>
             /// Santa Elena
             /// </summary>
-            [AliasInShort("SE")]
-            SantaElena,
+            [AliasInShort("SE")] SantaElena,
 
             /// <summary>
             /// Tungurahua
             /// </summary>
-            [AliasInShort("T")]
-            Tungurahua,
+            [AliasInShort("T")] Tungurahua,
 
             /// <summary>
             /// Sucumbíos
             /// </summary>
-            [AliasInShort("U")]
-            Sucumbíos,
+            [AliasInShort("U")] Sucumbíos,
 
             /// <summary>
             /// Galápagos
             /// </summary>
-            [AliasInShort("W")]
-            Galápagos,
+            [AliasInShort("W")] Galápagos,
 
             /// <summary>
             /// Cotopaxi
             /// </summary>
-            [AliasInShort("X")]
-            Cotopaxi,
+            [AliasInShort("X")] Cotopaxi,
 
             /// <summary>
             /// Pastaza
             /// </summary>
-            [AliasInShort("Y")]
-            Pastaza,
+            [AliasInShort("Y")] Pastaza,
 
             /// <summary>
             /// Zamora-Chinchipe
             /// </summary>
-            [AliasInShort("Z")]
-            ZamoraChinchipe,
+            [AliasInShort("Z")] ZamoraChinchipe,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -296,8 +272,9 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -305,7 +282,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"EC-{values.ToRegionCode()}";
         }
 
@@ -314,7 +292,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Ecuador;
         }
 
@@ -323,7 +302,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.EC;
         }
 
@@ -331,19 +311,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

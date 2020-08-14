@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Slovenia Regions
     /// </summary>
-    public static class SloveniaRegions {
-
+    public static class SloveniaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -1071,7 +1072,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Special regions
         /// </summary>
-        public static class Special {
+        public static class Special
+        {
             /// <summary>
             /// Mayotte
             /// </summary>
@@ -1131,1279 +1133,1067 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Slovenia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Ajdovščina
             /// </summary>
-            [AliasInShort("YT")]
-            Ajdovščina,
+            [AliasInShort("YT")] Ajdovščina,
 
             /// <summary>
             /// Beltinci
             /// </summary>
-            [AliasInShort("002")]
-            Beltinci,
+            [AliasInShort("002")] Beltinci,
 
             /// <summary>
             /// Bled
             /// </summary>
-            [AliasInShort("003")]
-            Bled,
+            [AliasInShort("003")] Bled,
 
             /// <summary>
             /// Bohinj
             /// </summary>
-            [AliasInShort("004")]
-            Bohinj,
+            [AliasInShort("004")] Bohinj,
 
             /// <summary>
             /// Borovnica
             /// </summary>
-            [AliasInShort("005")]
-            Borovnica,
+            [AliasInShort("005")] Borovnica,
 
             /// <summary>
             /// Bovec
             /// </summary>
-            [AliasInShort("006")]
-            Bovec,
+            [AliasInShort("006")] Bovec,
 
             /// <summary>
             /// Brda
             /// </summary>
-            [AliasInShort("007")]
-            Brda,
+            [AliasInShort("007")] Brda,
 
             /// <summary>
             /// Brezovica
             /// </summary>
-            [AliasInShort("008")]
-            Brezovica,
+            [AliasInShort("008")] Brezovica,
 
             /// <summary>
             /// Brežice
             /// </summary>
-            [AliasInShort("009")]
-            Brežice,
+            [AliasInShort("009")] Brežice,
 
             /// <summary>
             /// Tišina
             /// </summary>
-            [AliasInShort("010")]
-            Tišina,
+            [AliasInShort("010")] Tišina,
 
             /// <summary>
             /// Celje
             /// </summary>
-            [AliasInShort("011")]
-            Celje,
+            [AliasInShort("011")] Celje,
 
             /// <summary>
             /// Cerklje na Gorenjskem
             /// </summary>
-            [AliasInShort("012")]
-            CerkljeNaGorenjskem,
+            [AliasInShort("012")] CerkljeNaGorenjskem,
 
             /// <summary>
             /// Cerknica
             /// </summary>
-            [AliasInShort("013")]
-            Cerknica,
+            [AliasInShort("013")] Cerknica,
 
             /// <summary>
             /// Cerkno
             /// </summary>
-            [AliasInShort("014")]
-            Cerkno,
+            [AliasInShort("014")] Cerkno,
 
             /// <summary>
             /// Črenšovci
             /// </summary>
-            [AliasInShort("015")]
-            Črenšovci,
+            [AliasInShort("015")] Črenšovci,
 
             /// <summary>
             /// Črna na Koroškem
             /// </summary>
-            [AliasInShort("016")]
-            ČrnaNaKoroškem,
+            [AliasInShort("016")] ČrnaNaKoroškem,
 
             /// <summary>
             /// Črnomelj
             /// </summary>
-            [AliasInShort("017")]
-            Črnomelj,
+            [AliasInShort("017")] Črnomelj,
 
             /// <summary>
             /// Destrnik
             /// </summary>
-            [AliasInShort("018")]
-            Destrnik,
+            [AliasInShort("018")] Destrnik,
 
             /// <summary>
             /// Divača
             /// </summary>
-            [AliasInShort("019")]
-            Divača,
+            [AliasInShort("019")] Divača,
 
             /// <summary>
             /// Dobrepolje
             /// </summary>
-            [AliasInShort("020")]
-            Dobrepolje,
+            [AliasInShort("020")] Dobrepolje,
 
             /// <summary>
             /// Dobrova–Polhov Gradec
             /// </summary>
-            [AliasInShort("021")]
-            DobrovaPolhovGradec,
+            [AliasInShort("021")] DobrovaPolhovGradec,
 
             /// <summary>
             /// Dol pri Ljubljani
             /// </summary>
-            [AliasInShort("022")]
-            DolPriLjubljani,
+            [AliasInShort("022")] DolPriLjubljani,
 
             /// <summary>
             /// Domžale
             /// </summary>
-            [AliasInShort("023")]
-            Domžale,
+            [AliasInShort("023")] Domžale,
 
             /// <summary>
             /// Dornava
             /// </summary>
-            [AliasInShort("024")]
-            Dornava,
+            [AliasInShort("024")] Dornava,
 
             /// <summary>
             /// Dravograd
             /// </summary>
-            [AliasInShort("025")]
-            Dravograd,
+            [AliasInShort("025")] Dravograd,
 
             /// <summary>
             /// Duplek
             /// </summary>
-            [AliasInShort("026")]
-            Duplek,
+            [AliasInShort("026")] Duplek,
 
             /// <summary>
             /// Gorenja Vas–Poljane
             /// </summary>
-            [AliasInShort("027")]
-            GorenjaVasPoljane,
+            [AliasInShort("027")] GorenjaVasPoljane,
 
             /// <summary>
             /// Gorišnica
             /// </summary>
-            [AliasInShort("028")]
-            Gorišnica,
+            [AliasInShort("028")] Gorišnica,
 
             /// <summary>
             /// Gornja Radgona
             /// </summary>
-            [AliasInShort("029")]
-            GornjaRadgona,
+            [AliasInShort("029")] GornjaRadgona,
 
             /// <summary>
             /// Gornji Grad
             /// </summary>
-            [AliasInShort("030")]
-            GornjiGrad,
+            [AliasInShort("030")] GornjiGrad,
 
             /// <summary>
             /// Gornji Petrovci
             /// </summary>
-            [AliasInShort("031")]
-            GornjiPetrovci,
+            [AliasInShort("031")] GornjiPetrovci,
 
             /// <summary>
             /// Grosuplje
             /// </summary>
-            [AliasInShort("032")]
-            Grosuplje,
+            [AliasInShort("032")] Grosuplje,
 
             /// <summary>
             /// Šalovci
             /// </summary>
-            [AliasInShort("033")]
-            Šalovci,
+            [AliasInShort("033")] Šalovci,
 
             /// <summary>
             /// Hrastnik
             /// </summary>
-            [AliasInShort("034")]
-            Hrastnik,
+            [AliasInShort("034")] Hrastnik,
 
             /// <summary>
             /// Hrpelje–Kozina
             /// </summary>
-            [AliasInShort("035")]
-            HrpeljeKozina,
+            [AliasInShort("035")] HrpeljeKozina,
 
             /// <summary>
             /// Idrija
             /// </summary>
-            [AliasInShort("036")]
-            Idrija,
+            [AliasInShort("036")] Idrija,
 
             /// <summary>
             /// Ig
             /// </summary>
-            [AliasInShort("037")]
-            Ig,
+            [AliasInShort("037")] Ig,
 
             /// <summary>
             /// Ilirska Bistrica
             /// </summary>
-            [AliasInShort("038")]
-            IlirskaBistrica,
+            [AliasInShort("038")] IlirskaBistrica,
 
             /// <summary>
             /// Ivančna Gorica
             /// </summary>
-            [AliasInShort("039")]
-            IvančnaGorica,
+            [AliasInShort("039")] IvančnaGorica,
 
             /// <summary>
             /// Izola
             /// </summary>
-            [AliasInShort("040")]
-            Izola,
+            [AliasInShort("040")] Izola,
 
             /// <summary>
             /// Jesenice
             /// </summary>
-            [AliasInShort("041")]
-            Jesenice,
+            [AliasInShort("041")] Jesenice,
 
             /// <summary>
             /// Juršinci
             /// </summary>
-            [AliasInShort("042")]
-            Juršinci,
+            [AliasInShort("042")] Juršinci,
 
             /// <summary>
             /// Kamnik
             /// </summary>
-            [AliasInShort("043")]
-            Kamnik,
+            [AliasInShort("043")] Kamnik,
 
             /// <summary>
             /// Kanal
             /// </summary>
-            [AliasInShort("044")]
-            Kanal,
+            [AliasInShort("044")] Kanal,
 
             /// <summary>
             /// Kidričevo
             /// </summary>
-            [AliasInShort("045")]
-            Kidričevo,
+            [AliasInShort("045")] Kidričevo,
 
             /// <summary>
             /// Kobarid
             /// </summary>
-            [AliasInShort("046")]
-            Kobarid,
+            [AliasInShort("046")] Kobarid,
 
             /// <summary>
             /// Kobilje
             /// </summary>
-            [AliasInShort("047")]
-            Kobilje,
+            [AliasInShort("047")] Kobilje,
 
             /// <summary>
             /// Kočevje
             /// </summary>
-            [AliasInShort("048")]
-            Kočevje,
+            [AliasInShort("048")] Kočevje,
 
             /// <summary>
             /// Komen
             /// </summary>
-            [AliasInShort("049")]
-            Komen,
+            [AliasInShort("049")] Komen,
 
             /// <summary>
             /// Koper
             /// </summary>
-            [AliasInShort("050")]
-            Koper,
+            [AliasInShort("050")] Koper,
 
             /// <summary>
             /// Kozje
             /// </summary>
-            [AliasInShort("051")]
-            Kozje,
+            [AliasInShort("051")] Kozje,
 
             /// <summary>
             /// Kranj
             /// </summary>
-            [AliasInShort("052")]
-            Kranj,
+            [AliasInShort("052")] Kranj,
 
             /// <summary>
             /// Kranjska Gora
             /// </summary>
-            [AliasInShort("053")]
-            KranjskaGora,
+            [AliasInShort("053")] KranjskaGora,
 
             /// <summary>
             /// Krško
             /// </summary>
-            [AliasInShort("054")]
-            Krško,
+            [AliasInShort("054")] Krško,
 
             /// <summary>
             /// Kungota
             /// </summary>
-            [AliasInShort("055")]
-            Kungota,
+            [AliasInShort("055")] Kungota,
 
             /// <summary>
             /// Kuzma
             /// </summary>
-            [AliasInShort("056")]
-            Kuzma,
+            [AliasInShort("056")] Kuzma,
 
             /// <summary>
             /// Laško
             /// </summary>
-            [AliasInShort("057")]
-            Laško,
+            [AliasInShort("057")] Laško,
 
             /// <summary>
             /// Lenart
             /// </summary>
-            [AliasInShort("058")]
-            Lenart,
+            [AliasInShort("058")] Lenart,
 
             /// <summary>
             /// Lendava
             /// </summary>
-            [AliasInShort("059")]
-            Lendava,
+            [AliasInShort("059")] Lendava,
 
             /// <summary>
             /// Litija
             /// </summary>
-            [AliasInShort("060")]
-            Litija,
+            [AliasInShort("060")] Litija,
 
             /// <summary>
             /// Ljubljana
             /// </summary>
-            [AliasInShort("061")]
-            Ljubljana,
+            [AliasInShort("061")] Ljubljana,
 
             /// <summary>
             /// Ljubno
             /// </summary>
-            [AliasInShort("062")]
-            Ljubno,
+            [AliasInShort("062")] Ljubno,
 
             /// <summary>
             /// Ljutomer
             /// </summary>
-            [AliasInShort("063")]
-            Ljutomer,
+            [AliasInShort("063")] Ljutomer,
 
             /// <summary>
             /// Logatec
             /// </summary>
-            [AliasInShort("064")]
-            Logatec,
+            [AliasInShort("064")] Logatec,
 
             /// <summary>
             /// Loška Dolina
             /// </summary>
-            [AliasInShort("065")]
-            LoškaDolina,
+            [AliasInShort("065")] LoškaDolina,
 
             /// <summary>
             /// Loški Potok
             /// </summary>
-            [AliasInShort("066")]
-            LoškiPotok,
+            [AliasInShort("066")] LoškiPotok,
 
             /// <summary>
             /// Luče
             /// </summary>
-            [AliasInShort("067")]
-            Luče,
+            [AliasInShort("067")] Luče,
 
             /// <summary>
             /// Lukovica
             /// </summary>
-            [AliasInShort("068")]
-            Lukovica,
+            [AliasInShort("068")] Lukovica,
 
             /// <summary>
             /// Majšperk
             /// </summary>
-            [AliasInShort("069")]
-            Majšperk,
+            [AliasInShort("069")] Majšperk,
 
             /// <summary>
             /// Maribor
             /// </summary>
-            [AliasInShort("070")]
-            Maribor,
+            [AliasInShort("070")] Maribor,
 
             /// <summary>
             /// Medvode
             /// </summary>
-            [AliasInShort("071")]
-            Medvode,
+            [AliasInShort("071")] Medvode,
 
             /// <summary>
             /// Mengeš
             /// </summary>
-            [AliasInShort("072")]
-            Mengeš,
+            [AliasInShort("072")] Mengeš,
 
             /// <summary>
             /// Metlika
             /// </summary>
-            [AliasInShort("073")]
-            Metlika,
+            [AliasInShort("073")] Metlika,
 
             /// <summary>
             /// Mežica
             /// </summary>
-            [AliasInShort("074")]
-            Mežica,
+            [AliasInShort("074")] Mežica,
 
             /// <summary>
             /// Miren–Kostanjevica
             /// </summary>
-            [AliasInShort("075")]
-            MirenKostanjevica,
+            [AliasInShort("075")] MirenKostanjevica,
 
             /// <summary>
             /// Mislinja
             /// </summary>
-            [AliasInShort("076")]
-            Mislinja,
+            [AliasInShort("076")] Mislinja,
 
             /// <summary>
             /// Moravče
             /// </summary>
-            [AliasInShort("077")]
-            Moravče,
+            [AliasInShort("077")] Moravče,
 
             /// <summary>
             /// Moravske Toplice
             /// </summary>
-            [AliasInShort("078")]
-            MoravskeToplice,
+            [AliasInShort("078")] MoravskeToplice,
 
             /// <summary>
             /// Mozirje
             /// </summary>
-            [AliasInShort("079")]
-            Mozirje,
+            [AliasInShort("079")] Mozirje,
 
             /// <summary>
             /// Murska Sobota
             /// </summary>
-            [AliasInShort("080")]
-            MurskaSobota,
+            [AliasInShort("080")] MurskaSobota,
 
             /// <summary>
             /// Muta
             /// </summary>
-            [AliasInShort("081")]
-            Muta,
+            [AliasInShort("081")] Muta,
 
             /// <summary>
             /// Naklo
             /// </summary>
-            [AliasInShort("082")]
-            Naklo,
+            [AliasInShort("082")] Naklo,
 
             /// <summary>
             /// Nazarje
             /// </summary>
-            [AliasInShort("083")]
-            Nazarje,
+            [AliasInShort("083")] Nazarje,
 
             /// <summary>
             /// Nova Gorica
             /// </summary>
-            [AliasInShort("084")]
-            NovaGorica,
+            [AliasInShort("084")] NovaGorica,
 
             /// <summary>
             /// Novo Mesto
             /// </summary>
-            [AliasInShort("085")]
-            NovoMesto,
+            [AliasInShort("085")] NovoMesto,
 
             /// <summary>
             /// Odranci
             /// </summary>
-            [AliasInShort("086")]
-            Odranci,
+            [AliasInShort("086")] Odranci,
 
             /// <summary>
             /// Ormož
             /// </summary>
-            [AliasInShort("087")]
-            Ormož,
+            [AliasInShort("087")] Ormož,
 
             /// <summary>
             /// Osilnica
             /// </summary>
-            [AliasInShort("088")]
-            Osilnica,
+            [AliasInShort("088")] Osilnica,
 
             /// <summary>
             /// Pesnica
             /// </summary>
-            [AliasInShort("089")]
-            Pesnica,
+            [AliasInShort("089")] Pesnica,
 
             /// <summary>
             /// Piran
             /// </summary>
-            [AliasInShort("090")]
-            Piran,
+            [AliasInShort("090")] Piran,
 
             /// <summary>
             /// Pivka
             /// </summary>
-            [AliasInShort("091")]
-            Pivka,
+            [AliasInShort("091")] Pivka,
 
             /// <summary>
             /// Podčetrtek
             /// </summary>
-            [AliasInShort("092")]
-            Podčetrtek,
+            [AliasInShort("092")] Podčetrtek,
 
             /// <summary>
             /// Podvelka
             /// </summary>
-            [AliasInShort("093")]
-            Podvelka,
+            [AliasInShort("093")] Podvelka,
 
             /// <summary>
             /// Postojna
             /// </summary>
-            [AliasInShort("094")]
-            Postojna,
+            [AliasInShort("094")] Postojna,
 
             /// <summary>
             /// Preddvor
             /// </summary>
-            [AliasInShort("095")]
-            Preddvor,
+            [AliasInShort("095")] Preddvor,
 
             /// <summary>
             /// Ptuj
             /// </summary>
-            [AliasInShort("096")]
-            Ptuj,
+            [AliasInShort("096")] Ptuj,
 
             /// <summary>
             /// Puconci
             /// </summary>
-            [AliasInShort("097")]
-            Puconci,
+            [AliasInShort("097")] Puconci,
 
             /// <summary>
             /// Rače–Fram
             /// </summary>
-            [AliasInShort("098")]
-            RačeFram,
+            [AliasInShort("098")] RačeFram,
 
             /// <summary>
             /// Radeče
             /// </summary>
-            [AliasInShort("099")]
-            Radeče,
+            [AliasInShort("099")] Radeče,
 
             /// <summary>
             /// Radenci
             /// </summary>
-            [AliasInShort("100")]
-            Radenci,
+            [AliasInShort("100")] Radenci,
 
             /// <summary>
             /// Radlje ob Dravi
             /// </summary>
-            [AliasInShort("101")]
-            RadljeObDravi,
+            [AliasInShort("101")] RadljeObDravi,
 
             /// <summary>
             /// Radovljica
             /// </summary>
-            [AliasInShort("102")]
-            Radovljica,
+            [AliasInShort("102")] Radovljica,
 
             /// <summary>
             /// Ravne na Koroškem
             /// </summary>
-            [AliasInShort("103")]
-            RavneNaKoroškem,
+            [AliasInShort("103")] RavneNaKoroškem,
 
             /// <summary>
             /// Ribnica
             /// </summary>
-            [AliasInShort("104")]
-            Ribnica,
+            [AliasInShort("104")] Ribnica,
 
             /// <summary>
             /// Rogašovci
             /// </summary>
-            [AliasInShort("105")]
-            Rogašovci,
+            [AliasInShort("105")] Rogašovci,
 
             /// <summary>
             /// Rogaška Slatina
             /// </summary>
-            [AliasInShort("106")]
-            RogaškaSlatina,
+            [AliasInShort("106")] RogaškaSlatina,
 
             /// <summary>
             /// Rogatec
             /// </summary>
-            [AliasInShort("107")]
-            Rogatec,
+            [AliasInShort("107")] Rogatec,
 
             /// <summary>
             /// Ruše
             /// </summary>
-            [AliasInShort("108")]
-            Ruše,
+            [AliasInShort("108")] Ruše,
 
             /// <summary>
             /// Semič
             /// </summary>
-            [AliasInShort("109")]
-            Semič,
+            [AliasInShort("109")] Semič,
 
             /// <summary>
             /// Sevnica
             /// </summary>
-            [AliasInShort("110")]
-            Sevnica,
+            [AliasInShort("110")] Sevnica,
 
             /// <summary>
             /// Sežana
             /// </summary>
-            [AliasInShort("111")]
-            Sežana,
+            [AliasInShort("111")] Sežana,
 
             /// <summary>
             /// Slovenj Gradec
             /// </summary>
-            [AliasInShort("112")]
-            SlovenjGradec,
+            [AliasInShort("112")] SlovenjGradec,
 
             /// <summary>
             /// Slovenska Bistrica
             /// </summary>
-            [AliasInShort("113")]
-            SlovenskaBistrica,
+            [AliasInShort("113")] SlovenskaBistrica,
 
             /// <summary>
             /// Slovenske Konjice
             /// </summary>
-            [AliasInShort("114")]
-            SlovenskeKonjice,
+            [AliasInShort("114")] SlovenskeKonjice,
 
             /// <summary>
             /// Starše
             /// </summary>
-            [AliasInShort("115")]
-            Starše,
+            [AliasInShort("115")] Starše,
 
             /// <summary>
             /// Sveti Jurij
             /// </summary>
-            [AliasInShort("116")]
-            SvetiJurij,
+            [AliasInShort("116")] SvetiJurij,
 
             /// <summary>
             /// Šenčur
             /// </summary>
-            [AliasInShort("117")]
-            Šenčur,
+            [AliasInShort("117")] Šenčur,
 
             /// <summary>
             /// Šentilj
             /// </summary>
-            [AliasInShort("118")]
-            Šentilj,
+            [AliasInShort("118")] Šentilj,
 
             /// <summary>
             /// Šentjernej
             /// </summary>
-            [AliasInShort("119")]
-            Šentjernej,
+            [AliasInShort("119")] Šentjernej,
 
             /// <summary>
             /// Šentjur
             /// </summary>
-            [AliasInShort("120")]
-            Šentjur,
+            [AliasInShort("120")] Šentjur,
 
             /// <summary>
             /// Škocjan
             /// </summary>
-            [AliasInShort("121")]
-            Škocjan,
+            [AliasInShort("121")] Škocjan,
 
             /// <summary>
             /// Škofja Loka
             /// </summary>
-            [AliasInShort("122")]
-            ŠkofjaLoka,
+            [AliasInShort("122")] ŠkofjaLoka,
 
             /// <summary>
             /// Škofljica
             /// </summary>
-            [AliasInShort("123")]
-            Škofljica,
+            [AliasInShort("123")] Škofljica,
 
             /// <summary>
             /// Šmarje pri Jelšah
             /// </summary>
-            [AliasInShort("124")]
-            ŠmarjePriJelšah,
+            [AliasInShort("124")] ŠmarjePriJelšah,
 
             /// <summary>
             /// Šmartno ob Paki
             /// </summary>
-            [AliasInShort("125")]
-            ŠmartnoObPaki,
+            [AliasInShort("125")] ŠmartnoObPaki,
 
             /// <summary>
             /// Šoštanj
             /// </summary>
-            [AliasInShort("126")]
-            Šoštanj,
+            [AliasInShort("126")] Šoštanj,
 
             /// <summary>
             /// Štore
             /// </summary>
-            [AliasInShort("127")]
-            Štore,
+            [AliasInShort("127")] Štore,
 
             /// <summary>
             /// Tolmin
             /// </summary>
-            [AliasInShort("128")]
-            Tolmin,
+            [AliasInShort("128")] Tolmin,
 
             /// <summary>
             /// Trbovlje
             /// </summary>
-            [AliasInShort("129")]
-            Trbovlje,
+            [AliasInShort("129")] Trbovlje,
 
             /// <summary>
             /// Trebnje
             /// </summary>
-            [AliasInShort("130")]
-            Trebnje,
+            [AliasInShort("130")] Trebnje,
 
             /// <summary>
             /// Tržič
             /// </summary>
-            [AliasInShort("131")]
-            Tržič,
+            [AliasInShort("131")] Tržič,
 
             /// <summary>
             /// Turnišče
             /// </summary>
-            [AliasInShort("132")]
-            Turnišče,
+            [AliasInShort("132")] Turnišče,
 
             /// <summary>
             /// Velenje
             /// </summary>
-            [AliasInShort("133")]
-            Velenje,
+            [AliasInShort("133")] Velenje,
 
             /// <summary>
             /// Velike Lašče
             /// </summary>
-            [AliasInShort("134")]
-            VelikeLašče,
+            [AliasInShort("134")] VelikeLašče,
 
             /// <summary>
             /// Videm
             /// </summary>
-            [AliasInShort("135")]
-            Videm,
+            [AliasInShort("135")] Videm,
 
             /// <summary>
             /// Vipava
             /// </summary>
-            [AliasInShort("136")]
-            Vipava,
+            [AliasInShort("136")] Vipava,
 
             /// <summary>
             /// Vitanje
             /// </summary>
-            [AliasInShort("137")]
-            Vitanje,
+            [AliasInShort("137")] Vitanje,
 
             /// <summary>
             /// Vodice
             /// </summary>
-            [AliasInShort("138")]
-            Vodice,
+            [AliasInShort("138")] Vodice,
 
             /// <summary>
             /// Vojnik
             /// </summary>
-            [AliasInShort("139")]
-            Vojnik,
+            [AliasInShort("139")] Vojnik,
 
             /// <summary>
             /// Vrhnika
             /// </summary>
-            [AliasInShort("140")]
-            Vrhnika,
+            [AliasInShort("140")] Vrhnika,
 
             /// <summary>
             /// Vuzenica
             /// </summary>
-            [AliasInShort("141")]
-            Vuzenica,
+            [AliasInShort("141")] Vuzenica,
 
             /// <summary>
             /// Zagorje ob Savi
             /// </summary>
-            [AliasInShort("142")]
-            ZagorjeObSavi,
+            [AliasInShort("142")] ZagorjeObSavi,
 
             /// <summary>
             /// Zavrč
             /// </summary>
-            [AliasInShort("143")]
-            Zavrč,
+            [AliasInShort("143")] Zavrč,
 
             /// <summary>
             /// Zreče
             /// </summary>
-            [AliasInShort("144")]
-            Zreče,
+            [AliasInShort("144")] Zreče,
 
             /// <summary>
             /// Železniki
             /// </summary>
-            [AliasInShort("146")]
-            Železniki,
+            [AliasInShort("146")] Železniki,
 
             /// <summary>
             /// Žiri
             /// </summary>
-            [AliasInShort("147")]
-            Žiri,
+            [AliasInShort("147")] Žiri,
 
             /// <summary>
             /// Benedikt
             /// </summary>
-            [AliasInShort("148")]
-            Benedikt,
+            [AliasInShort("148")] Benedikt,
 
             /// <summary>
             /// Bistrica ob Sotli
             /// </summary>
-            [AliasInShort("149")]
-            BistricaObSotli,
+            [AliasInShort("149")] BistricaObSotli,
 
             /// <summary>
             /// Bloke
             /// </summary>
-            [AliasInShort("150")]
-            Bloke,
+            [AliasInShort("150")] Bloke,
 
             /// <summary>
             /// Braslovče
             /// </summary>
-            [AliasInShort("151")]
-            Braslovče,
+            [AliasInShort("151")] Braslovče,
 
             /// <summary>
             /// Cankova
             /// </summary>
-            [AliasInShort("152")]
-            Cankova,
+            [AliasInShort("152")] Cankova,
 
             /// <summary>
             /// Cerkvenjak
             /// </summary>
-            [AliasInShort("153")]
-            Cerkvenjak,
+            [AliasInShort("153")] Cerkvenjak,
 
             /// <summary>
             /// Dobje
             /// </summary>
-            [AliasInShort("154")]
-            Dobje,
+            [AliasInShort("154")] Dobje,
 
             /// <summary>
             /// Dobrna
             /// </summary>
-            [AliasInShort("155")]
-            Dobrna,
+            [AliasInShort("155")] Dobrna,
 
             /// <summary>
             /// Dobrovnik
             /// </summary>
-            [AliasInShort("156")]
-            Dobrovnik,
+            [AliasInShort("156")] Dobrovnik,
 
             /// <summary>
             /// Dolenjske Toplice
             /// </summary>
-            [AliasInShort("157")]
-            DolenjskeToplice,
+            [AliasInShort("157")] DolenjskeToplice,
 
             /// <summary>
             /// Grad
             /// </summary>
-            [AliasInShort("158")]
-            Grad,
+            [AliasInShort("158")] Grad,
 
             /// <summary>
             /// Hajdina
             /// </summary>
-            [AliasInShort("159")]
-            Hajdina,
+            [AliasInShort("159")] Hajdina,
 
             /// <summary>
             /// Hoče–Slivnica
             /// </summary>
-            [AliasInShort("160")]
-            HočeSlivnica,
+            [AliasInShort("160")] HočeSlivnica,
 
             /// <summary>
             /// Hodoš
             /// </summary>
-            [AliasInShort("161")]
-            Hodoš,
+            [AliasInShort("161")] Hodoš,
 
             /// <summary>
             /// Horjul
             /// </summary>
-            [AliasInShort("162")]
-            Horjul,
+            [AliasInShort("162")] Horjul,
 
             /// <summary>
             /// Jezersko
             /// </summary>
-            [AliasInShort("163")]
-            Jezersko,
+            [AliasInShort("163")] Jezersko,
 
             /// <summary>
             /// Komenda
             /// </summary>
-            [AliasInShort("164")]
-            Komenda,
+            [AliasInShort("164")] Komenda,
 
             /// <summary>
             /// Kostel
             /// </summary>
-            [AliasInShort("165")]
-            Kostel,
+            [AliasInShort("165")] Kostel,
 
             /// <summary>
             /// Križevci
             /// </summary>
-            [AliasInShort("166")]
-            Križevci,
+            [AliasInShort("166")] Križevci,
 
             /// <summary>
             /// Lovrenc na Pohorju
             /// </summary>
-            [AliasInShort("167")]
-            LovrencNaPohorju,
+            [AliasInShort("167")] LovrencNaPohorju,
 
             /// <summary>
             /// Markovci
             /// </summary>
-            [AliasInShort("168")]
-            Markovci,
+            [AliasInShort("168")] Markovci,
 
             /// <summary>
             /// Miklavž na Dravskem Polju
             /// </summary>
-            [AliasInShort("169")]
-            MiklavžNaDravskemPolju,
+            [AliasInShort("169")] MiklavžNaDravskemPolju,
 
             /// <summary>
             /// Mirna Peč
             /// </summary>
-            [AliasInShort("170")]
-            MirnaPeč,
+            [AliasInShort("170")] MirnaPeč,
 
             /// <summary>
             /// Oplotnica
             /// </summary>
-            [AliasInShort("171")]
-            Oplotnica,
+            [AliasInShort("171")] Oplotnica,
 
             /// <summary>
             /// Podlehnik
             /// </summary>
-            [AliasInShort("172")]
-            Podlehnik,
+            [AliasInShort("172")] Podlehnik,
 
             /// <summary>
             /// Polzela
             /// </summary>
-            [AliasInShort("173")]
-            Polzela,
+            [AliasInShort("173")] Polzela,
 
             /// <summary>
             /// Prebold
             /// </summary>
-            [AliasInShort("174")]
-            Prebold,
+            [AliasInShort("174")] Prebold,
 
             /// <summary>
             /// Prevalje
             /// </summary>
-            [AliasInShort("175")]
-            Prevalje,
+            [AliasInShort("175")] Prevalje,
 
             /// <summary>
             /// Razkrižje
             /// </summary>
-            [AliasInShort("176")]
-            Razkrižje,
+            [AliasInShort("176")] Razkrižje,
 
             /// <summary>
             /// Ribnica na Pohorju
             /// </summary>
-            [AliasInShort("177")]
-            RibnicaNaPohorju,
+            [AliasInShort("177")] RibnicaNaPohorju,
 
             /// <summary>
             /// Selnica ob Dravi
             /// </summary>
-            [AliasInShort("178")]
-            SelnicaObDravi,
+            [AliasInShort("178")] SelnicaObDravi,
 
             /// <summary>
             /// Sodražica
             /// </summary>
-            [AliasInShort("179")]
-            Sodražica,
+            [AliasInShort("179")] Sodražica,
 
             /// <summary>
             /// Solčava
             /// </summary>
-            [AliasInShort("180")]
-            Solčava,
+            [AliasInShort("180")] Solčava,
 
             /// <summary>
             /// Sveta Ana
             /// </summary>
-            [AliasInShort("181")]
-            SvetaAna,
+            [AliasInShort("181")] SvetaAna,
 
             /// <summary>
             /// Sveti Andraž v Slovenskih Goricah
             /// </summary>
-            [AliasInShort("182")]
-            SvetiAndražVSlovenskihGoricah,
+            [AliasInShort("182")] SvetiAndražVSlovenskihGoricah,
 
             /// <summary>
             /// Šempeter–Vrtojba
             /// </summary>
-            [AliasInShort("183")]
-            ŠempeterVrtojba,
+            [AliasInShort("183")] ŠempeterVrtojba,
 
             /// <summary>
             /// Tabor
             /// </summary>
-            [AliasInShort("184")]
-            Tabor,
+            [AliasInShort("184")] Tabor,
 
             /// <summary>
             /// Trnovska Vas
             /// </summary>
-            [AliasInShort("185")]
-            TrnovskaVas,
+            [AliasInShort("185")] TrnovskaVas,
 
             /// <summary>
             /// Trzin
             /// </summary>
-            [AliasInShort("186")]
-            Trzin,
+            [AliasInShort("186")] Trzin,
 
             /// <summary>
             /// Velika Polana
             /// </summary>
-            [AliasInShort("187")]
-            VelikaPolana,
+            [AliasInShort("187")] VelikaPolana,
 
             /// <summary>
             /// Veržej
             /// </summary>
-            [AliasInShort("188")]
-            Veržej,
+            [AliasInShort("188")] Veržej,
 
             /// <summary>
             /// Vransko
             /// </summary>
-            [AliasInShort("189")]
-            Vransko,
+            [AliasInShort("189")] Vransko,
 
             /// <summary>
             /// Žalec
             /// </summary>
-            [AliasInShort("190")]
-            Žalec,
+            [AliasInShort("190")] Žalec,
 
             /// <summary>
             /// Žetale
             /// </summary>
-            [AliasInShort("191")]
-            Žetale,
+            [AliasInShort("191")] Žetale,
 
             /// <summary>
             /// Žirovnica
             /// </summary>
-            [AliasInShort("192")]
-            Žirovnica,
+            [AliasInShort("192")] Žirovnica,
 
             /// <summary>
             /// Žužemberk
             /// </summary>
-            [AliasInShort("193")]
-            Žužemberk,
+            [AliasInShort("193")] Žužemberk,
 
             /// <summary>
             /// Šmartno pri Litiji
             /// </summary>
-            [AliasInShort("194")]
-            ŠmartnoPriLitiji,
+            [AliasInShort("194")] ŠmartnoPriLitiji,
 
             /// <summary>
             /// Apače
             /// </summary>
-            [AliasInShort("195")]
-            Apače,
+            [AliasInShort("195")] Apače,
 
             /// <summary>
             /// Cirkulane
             /// </summary>
-            [AliasInShort("196")]
-            Cirkulane,
+            [AliasInShort("196")] Cirkulane,
 
             /// <summary>
             /// Kostanjevica na Krki
             /// </summary>
-            [AliasInShort("197")]
-            KostanjevicaNaKrki,
+            [AliasInShort("197")] KostanjevicaNaKrki,
 
             /// <summary>
             /// Makole
             /// </summary>
-            [AliasInShort("198")]
-            Makole,
+            [AliasInShort("198")] Makole,
 
             /// <summary>
             /// Mokronog–Trebelno
             /// </summary>
-            [AliasInShort("199")]
-            MokronogTrebelno,
+            [AliasInShort("199")] MokronogTrebelno,
 
             /// <summary>
             /// Poljčane
             /// </summary>
-            [AliasInShort("200")]
-            Poljčane,
+            [AliasInShort("200")] Poljčane,
 
             /// <summary>
             /// Renče–Vogrsko
             /// </summary>
-            [AliasInShort("201")]
-            RenčeVogrsko,
+            [AliasInShort("201")] RenčeVogrsko,
 
             /// <summary>
             /// Središče ob Dravi
             /// </summary>
-            [AliasInShort("202")]
-            SrediščeObDravi,
+            [AliasInShort("202")] SrediščeObDravi,
 
             /// <summary>
             /// Straža
             /// </summary>
-            [AliasInShort("203")]
-            Straža,
+            [AliasInShort("203")] Straža,
 
             /// <summary>
             /// Sveta Trojica v Slovenskih Goricah
             /// </summary>
-            [AliasInShort("204")]
-            SvetaTrojicaVSlovenskihGoricah,
+            [AliasInShort("204")] SvetaTrojicaVSlovenskihGoricah,
 
             /// <summary>
             /// Sveti Tomaž
             /// </summary>
-            [AliasInShort("205")]
-            SvetiTomaž,
+            [AliasInShort("205")] SvetiTomaž,
 
             /// <summary>
             /// Šmarješke Toplice
             /// </summary>
-            [AliasInShort("206")]
-            ŠmarješkeToplice,
+            [AliasInShort("206")] ŠmarješkeToplice,
 
             /// <summary>
             /// Gorje
             /// </summary>
-            [AliasInShort("207")]
-            Gorje,
+            [AliasInShort("207")] Gorje,
 
             /// <summary>
             /// Log–Dragomer
             /// </summary>
-            [AliasInShort("208")]
-            LogDragomer,
+            [AliasInShort("208")] LogDragomer,
 
             /// <summary>
             /// Rečica ob Savinji
             /// </summary>
-            [AliasInShort("209")]
-            RečicaObSavinji,
+            [AliasInShort("209")] RečicaObSavinji,
 
             /// <summary>
             /// Sveti Jurij v Slovenskih Goricah
             /// </summary>
-            [AliasInShort("210")]
-            SvetiJurijVSlovenskihGoricah,
+            [AliasInShort("210")] SvetiJurijVSlovenskihGoricah,
 
             /// <summary>
             /// Šentrupert
             /// </summary>
-            [AliasInShort("211")]
-            Šentrupert,
+            [AliasInShort("211")] Šentrupert,
 
             /// <summary>
             /// Mirna
             /// </summary>
-            [AliasInShort("212")]
-            Mirna,
+            [AliasInShort("212")] Mirna,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -2413,8 +2203,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -2422,7 +2213,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"SI-{values.ToRegionCode()}";
         }
 
@@ -2431,7 +2223,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Slovenia;
         }
 
@@ -2440,7 +2233,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.SI;
         }
 
@@ -2448,19 +2242,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

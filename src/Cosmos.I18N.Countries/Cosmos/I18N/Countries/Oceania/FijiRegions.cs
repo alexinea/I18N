@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// Fiji Regions
     /// </summary>
-    public static class FijiRegions {
-
+    public static class FijiRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -111,127 +112,107 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// <summary>
         /// Enum values for Fiji regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Namosi
             /// </summary>
-            [AliasInShort("10")]
-            Namosi,
+            [AliasInShort("10")] Namosi,
 
             /// <summary>
             /// Ra
             /// </summary>
-            [AliasInShort("11")]
-            Ra,
+            [AliasInShort("11")] Ra,
 
             /// <summary>
             /// Rewa
             /// </summary>
-            [AliasInShort("12")]
-            Rewa,
+            [AliasInShort("12")] Rewa,
 
             /// <summary>
             /// Serua
             /// </summary>
-            [AliasInShort("13")]
-            Serua,
+            [AliasInShort("13")] Serua,
 
             /// <summary>
             /// Tailevu
             /// </summary>
-            [AliasInShort("14")]
-            Tailevu,
+            [AliasInShort("14")] Tailevu,
 
             /// <summary>
             /// Ba
             /// </summary>
-            [AliasInShort("01")]
-            Ba,
+            [AliasInShort("01")] Ba,
 
             /// <summary>
             /// Bua
             /// </summary>
-            [AliasInShort("02")]
-            Bua,
+            [AliasInShort("02")] Bua,
 
             /// <summary>
             /// Cakaudrove
             /// </summary>
-            [AliasInShort("03")]
-            Cakaudrove,
+            [AliasInShort("03")] Cakaudrove,
 
             /// <summary>
             /// Kadavu
             /// </summary>
-            [AliasInShort("04")]
-            Kadavu,
+            [AliasInShort("04")] Kadavu,
 
             /// <summary>
             /// Lau
             /// </summary>
-            [AliasInShort("05")]
-            Lau,
+            [AliasInShort("05")] Lau,
 
             /// <summary>
             /// Lomaiviti
             /// </summary>
-            [AliasInShort("06")]
-            Lomaiviti,
+            [AliasInShort("06")] Lomaiviti,
 
             /// <summary>
             /// Macuata
             /// </summary>
-            [AliasInShort("07")]
-            Macuata,
+            [AliasInShort("07")] Macuata,
 
             /// <summary>
             /// Nadroga-Navosa
             /// </summary>
-            [AliasInShort("08")]
-            NadrogaNavosa,
+            [AliasInShort("08")] NadrogaNavosa,
 
             /// <summary>
             /// Naitasiri
             /// </summary>
-            [AliasInShort("09")]
-            Naitasiri,
+            [AliasInShort("09")] Naitasiri,
 
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("C")]
-            Central,
+            [AliasInShort("C")] Central,
 
             /// <summary>
             /// Eastern
             /// </summary>
-            [AliasInShort("E")]
-            Eastern,
+            [AliasInShort("E")] Eastern,
 
             /// <summary>
             /// Northern
             /// </summary>
-            [AliasInShort("N")]
-            Northern,
+            [AliasInShort("N")] Northern,
 
             /// <summary>
             /// Rotuma
             /// </summary>
-            [AliasInShort("R")]
-            Rotuma,
+            [AliasInShort("R")] Rotuma,
 
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("W")]
-            Western,
+            [AliasInShort("W")] Western,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -241,8 +222,9 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -250,7 +232,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"FJ-{values.ToRegionCode()}";
         }
 
@@ -259,7 +242,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Fiji;
         }
 
@@ -268,7 +252,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.FJ;
         }
 
@@ -276,19 +261,16 @@ namespace Cosmos.I18N.Countries.Oceania {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

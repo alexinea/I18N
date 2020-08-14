@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Philippines Regions
     /// </summary>
-    public static class PhilippinesRegions {
-
+    public static class PhilippinesRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -101,115 +102,97 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Philippines regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Northern Mindanao
             /// </summary>
-            [AliasInShort("10")]
-            NorthernMindanao,
+            [AliasInShort("10")] NorthernMindanao,
 
             /// <summary>
             /// Davao
             /// </summary>
-            [AliasInShort("11")]
-            Davao,
+            [AliasInShort("11")] Davao,
 
             /// <summary>
             /// Soccsksargen
             /// </summary>
-            [AliasInShort("12")]
-            Soccsksargen,
+            [AliasInShort("12")] Soccsksargen,
 
             /// <summary>
             /// Caraga
             /// </summary>
-            [AliasInShort("13")]
-            Caraga,
+            [AliasInShort("13")] Caraga,
 
             /// <summary>
             /// Muslim Mindanao
             /// </summary>
-            [AliasInShort("14")]
-            MuslimMindanao,
+            [AliasInShort("14")] MuslimMindanao,
 
             /// <summary>
             /// Cordillera Administrative
             /// </summary>
-            [AliasInShort("15")]
-            CordilleraAdministrative,
+            [AliasInShort("15")] CordilleraAdministrative,
 
             /// <summary>
             /// Calabarzon
             /// </summary>
-            [AliasInShort("40")]
-            Calabarzon,
+            [AliasInShort("40")] Calabarzon,
 
             /// <summary>
             /// Mimaropa
             /// </summary>
-            [AliasInShort("41")]
-            Mimaropa,
+            [AliasInShort("41")] Mimaropa,
 
             /// <summary>
             /// Metro Manila
             /// </summary>
-            [AliasInShort("00")]
-            MetroManila,
+            [AliasInShort("00")] MetroManila,
 
             /// <summary>
             /// Ilocos
             /// </summary>
-            [AliasInShort("01")]
-            Ilocos,
+            [AliasInShort("01")] Ilocos,
 
             /// <summary>
             /// Cagayan Valley
             /// </summary>
-            [AliasInShort("02")]
-            CagayanValley,
+            [AliasInShort("02")] CagayanValley,
 
             /// <summary>
             /// Central Luzon
             /// </summary>
-            [AliasInShort("03")]
-            CentralLuzon,
+            [AliasInShort("03")] CentralLuzon,
 
             /// <summary>
             /// Bicol
             /// </summary>
-            [AliasInShort("05")]
-            Bicol,
+            [AliasInShort("05")] Bicol,
 
             /// <summary>
             /// Western Visayas
             /// </summary>
-            [AliasInShort("06")]
-            WesternVisayas,
+            [AliasInShort("06")] WesternVisayas,
 
             /// <summary>
             /// Central Visayas
             /// </summary>
-            [AliasInShort("07")]
-            CentralVisayas,
+            [AliasInShort("07")] CentralVisayas,
 
             /// <summary>
             /// Eastern Visayas
             /// </summary>
-            [AliasInShort("08")]
-            EasternVisayas,
+            [AliasInShort("08")] EasternVisayas,
 
             /// <summary>
             /// Zamboanga Peninsula
             /// </summary>
-            [AliasInShort("09")]
-            ZamboangaPeninsula,
+            [AliasInShort("09")] ZamboangaPeninsula,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -219,8 +202,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -228,7 +212,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"PH-{values.ToRegionCode()}";
         }
 
@@ -237,7 +222,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Philippines;
         }
 
@@ -246,7 +232,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.PH;
         }
 
@@ -254,19 +241,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

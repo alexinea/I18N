@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Ukraine Regions
     /// </summary>
-    public static class UkraineRegions {
-
+    public static class UkraineRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -151,175 +152,147 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Ukraine regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Vinnychchyna
             /// </summary>
-            [AliasInShort("05")]
-            Vinnychchyna,
+            [AliasInShort("05")] Vinnychchyna,
 
             /// <summary>
             /// Volyn
             /// </summary>
-            [AliasInShort("07")]
-            Volyn,
+            [AliasInShort("07")] Volyn,
 
             /// <summary>
             /// Luhanshchyna
             /// </summary>
-            [AliasInShort("09")]
-            Luhanshchyna,
+            [AliasInShort("09")] Luhanshchyna,
 
             /// <summary>
             /// Dnipropetrovshchyna
             /// </summary>
-            [AliasInShort("12")]
-            Dnipropetrovshchyna,
+            [AliasInShort("12")] Dnipropetrovshchyna,
 
             /// <summary>
             /// Donechchyna
             /// </summary>
-            [AliasInShort("14")]
-            Donechchyna,
+            [AliasInShort("14")] Donechchyna,
 
             /// <summary>
             /// Zhytomyrshchyna
             /// </summary>
-            [AliasInShort("18")]
-            Zhytomyrshchyna,
+            [AliasInShort("18")] Zhytomyrshchyna,
 
             /// <summary>
             /// Zakarpattia
             /// </summary>
-            [AliasInShort("21")]
-            Zakarpattia,
+            [AliasInShort("21")] Zakarpattia,
 
             /// <summary>
             /// Zaporizhzhya
             /// </summary>
-            [AliasInShort("23")]
-            Zaporizhzhya,
+            [AliasInShort("23")] Zaporizhzhya,
 
             /// <summary>
             /// Prykarpattia
             /// </summary>
-            [AliasInShort("26")]
-            Prykarpattia,
+            [AliasInShort("26")] Prykarpattia,
 
             /// <summary>
             /// Kiev
             /// </summary>
-            [AliasInShort("30")]
-            Kiev,
+            [AliasInShort("30")] Kiev,
 
             /// <summary>
             /// Kyivshchyna
             /// </summary>
-            [AliasInShort("32")]
-            Kyivshchyna,
+            [AliasInShort("32")] Kyivshchyna,
 
             /// <summary>
             /// Kirovohradschyna
             /// </summary>
-            [AliasInShort("35")]
-            Kirovohradschyna,
+            [AliasInShort("35")] Kirovohradschyna,
 
             /// <summary>
             /// Sevastopol
             /// </summary>
-            [AliasInShort("40")]
-            Sevastopol,
+            [AliasInShort("40")] Sevastopol,
 
             /// <summary>
             /// Crimea
             /// </summary>
-            [AliasInShort("43")]
-            Crimea,
+            [AliasInShort("43")] Crimea,
 
             /// <summary>
             /// Lvivshchyna
             /// </summary>
-            [AliasInShort("46")]
-            Lvivshchyna,
+            [AliasInShort("46")] Lvivshchyna,
 
             /// <summary>
             /// Mykolayivschyna
             /// </summary>
-            [AliasInShort("48")]
-            Mykolayivschyna,
+            [AliasInShort("48")] Mykolayivschyna,
 
             /// <summary>
             /// Odeshchyna
             /// </summary>
-            [AliasInShort("51")]
-            Odeshchyna,
+            [AliasInShort("51")] Odeshchyna,
 
             /// <summary>
             /// Poltavshchyna
             /// </summary>
-            [AliasInShort("53")]
-            Poltavshchyna,
+            [AliasInShort("53")] Poltavshchyna,
 
             /// <summary>
             /// Rivnenshchyna
             /// </summary>
-            [AliasInShort("56")]
-            Rivnenshchyna,
+            [AliasInShort("56")] Rivnenshchyna,
 
             /// <summary>
             /// Sumshchyna
             /// </summary>
-            [AliasInShort("59")]
-            Sumshchyna,
+            [AliasInShort("59")] Sumshchyna,
 
             /// <summary>
             /// Ternopilshchyna
             /// </summary>
-            [AliasInShort("61")]
-            Ternopilshchyna,
+            [AliasInShort("61")] Ternopilshchyna,
 
             /// <summary>
             /// Kharkivshchyna
             /// </summary>
-            [AliasInShort("63")]
-            Kharkivshchyna,
+            [AliasInShort("63")] Kharkivshchyna,
 
             /// <summary>
             /// Khersonshchyna
             /// </summary>
-            [AliasInShort("65")]
-            Khersonshchyna,
+            [AliasInShort("65")] Khersonshchyna,
 
             /// <summary>
             /// Khmelnychchyna
             /// </summary>
-            [AliasInShort("68")]
-            Khmelnychchyna,
+            [AliasInShort("68")] Khmelnychchyna,
 
             /// <summary>
             /// Cherkashchyna
             /// </summary>
-            [AliasInShort("71")]
-            Cherkashchyna,
+            [AliasInShort("71")] Cherkashchyna,
 
             /// <summary>
             /// Chernihivshchyna
             /// </summary>
-            [AliasInShort("74")]
-            Chernihivshchyna,
+            [AliasInShort("74")] Chernihivshchyna,
 
             /// <summary>
             /// Chernivtsi Oblast
             /// </summary>
-            [AliasInShort("77")]
-            ChernivtsiOblast,
+            [AliasInShort("77")] ChernivtsiOblast,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -329,8 +302,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -338,7 +312,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"UA-{values.ToRegionCode()}";
         }
 
@@ -347,7 +322,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Ukraine;
         }
 
@@ -356,7 +332,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.UA;
         }
 
@@ -364,19 +341,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// Bahamas Regions
     /// </summary>
-    public static class BahamasRegions {
-
+    public static class BahamasRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -172,200 +173,168 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for Bahamas regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Acklins
             /// </summary>
-            [AliasInShort("AK")]
-            Acklins,
+            [AliasInShort("AK")] Acklins,
 
             /// <summary>
             /// Bimini
             /// </summary>
-            [AliasInShort("BI")]
-            Bimini,
+            [AliasInShort("BI")] Bimini,
 
             /// <summary>
             /// Black Point
             /// </summary>
-            [AliasInShort("BP")]
-            BlackPoint,
+            [AliasInShort("BP")] BlackPoint,
 
             /// <summary>
             /// Berry Islands
             /// </summary>
-            [AliasInShort("BY")]
-            BerryIslands,
+            [AliasInShort("BY")] BerryIslands,
 
             /// <summary>
             /// Central Eleuthera
             /// </summary>
-            [AliasInShort("CE")]
-            CentralEleuthera,
+            [AliasInShort("CE")] CentralEleuthera,
 
             /// <summary>
             /// Cat Island
             /// </summary>
-            [AliasInShort("CI")]
-            CatIsland,
+            [AliasInShort("CI")] CatIsland,
 
             /// <summary>
             /// Crooked Island
             /// </summary>
-            [AliasInShort("CK")]
-            CrookedIsland,
+            [AliasInShort("CK")] CrookedIsland,
 
             /// <summary>
             /// Central Abaco
             /// </summary>
-            [AliasInShort("CO")]
-            CentralAbaco,
+            [AliasInShort("CO")] CentralAbaco,
 
             /// <summary>
             /// Central Andros
             /// </summary>
-            [AliasInShort("CS")]
-            CentralAndros,
+            [AliasInShort("CS")] CentralAndros,
 
             /// <summary>
             /// East Grand Bahama
             /// </summary>
-            [AliasInShort("EG")]
-            EastGrandBahama,
+            [AliasInShort("EG")] EastGrandBahama,
 
             /// <summary>
             /// Exuma
             /// </summary>
-            [AliasInShort("EX")]
-            Exuma,
+            [AliasInShort("EX")] Exuma,
 
             /// <summary>
             /// Freeport
             /// </summary>
-            [AliasInShort("FP")]
-            Freeport,
+            [AliasInShort("FP")] Freeport,
 
             /// <summary>
             /// Grand Cay
             /// </summary>
-            [AliasInShort("GC")]
-            GrandCay,
+            [AliasInShort("GC")] GrandCay,
 
             /// <summary>
             /// Harbour Island
             /// </summary>
-            [AliasInShort("HI")]
-            HarbourIsland,
+            [AliasInShort("HI")] HarbourIsland,
 
             /// <summary>
             /// Hope Town
             /// </summary>
-            [AliasInShort("HT")]
-            HopeTown,
+            [AliasInShort("HT")] HopeTown,
 
             /// <summary>
             /// Inagua
             /// </summary>
-            [AliasInShort("IN")]
-            Inagua,
+            [AliasInShort("IN")] Inagua,
 
             /// <summary>
             /// Long Island
             /// </summary>
-            [AliasInShort("LI")]
-            LongIsland,
+            [AliasInShort("LI")] LongIsland,
 
             /// <summary>
             /// Mangrove Cay
             /// </summary>
-            [AliasInShort("MC")]
-            MangroveCay,
+            [AliasInShort("MC")] MangroveCay,
 
             /// <summary>
             /// Mayaguana
             /// </summary>
-            [AliasInShort("MG")]
-            Mayaguana,
+            [AliasInShort("MG")] Mayaguana,
 
             /// <summary>
             /// Moore’s Island
             /// </summary>
-            [AliasInShort("MI")]
-            MooresIsland,
+            [AliasInShort("MI")] MooresIsland,
 
             /// <summary>
             /// North Eleuthera
             /// </summary>
-            [AliasInShort("NE")]
-            NorthEleuthera,
+            [AliasInShort("NE")] NorthEleuthera,
 
             /// <summary>
             /// North Abaco
             /// </summary>
-            [AliasInShort("NO")]
-            NorthAbaco,
+            [AliasInShort("NO")] NorthAbaco,
 
             /// <summary>
             /// North Andros
             /// </summary>
-            [AliasInShort("NS")]
-            NorthAndros,
+            [AliasInShort("NS")] NorthAndros,
 
             /// <summary>
             /// Rum Cay
             /// </summary>
-            [AliasInShort("RC")]
-            RumCay,
+            [AliasInShort("RC")] RumCay,
 
             /// <summary>
             /// Ragged Island
             /// </summary>
-            [AliasInShort("RI")]
-            RaggedIsland,
+            [AliasInShort("RI")] RaggedIsland,
 
             /// <summary>
             /// South Andros
             /// </summary>
-            [AliasInShort("SA")]
-            SouthAndros,
+            [AliasInShort("SA")] SouthAndros,
 
             /// <summary>
             /// South Eleuthera
             /// </summary>
-            [AliasInShort("SE")]
-            SouthEleuthera,
+            [AliasInShort("SE")] SouthEleuthera,
 
             /// <summary>
             /// South Abaco
             /// </summary>
-            [AliasInShort("SO")]
-            SouthAbaco,
+            [AliasInShort("SO")] SouthAbaco,
 
 
             /// <summary>
             /// San Salvador
             /// </summary>
-            [AliasInShort("SS")]
-            SanSalvador,
+            [AliasInShort("SS")] SanSalvador,
 
             /// <summary>
             /// Spanish Wells
             /// </summary>
-            [AliasInShort("SW")]
-            SpanishWells,
+            [AliasInShort("SW")] SpanishWells,
 
             /// <summary>
             /// West Grand Bahama
             /// </summary>
-            [AliasInShort("WG")]
-            WestGrandBahama,
+            [AliasInShort("WG")] WestGrandBahama,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -375,8 +344,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -384,7 +354,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"BS-{values.ToRegionCode()}";
         }
 
@@ -393,7 +364,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Bahamas;
         }
 
@@ -402,7 +374,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.BS;
         }
 
@@ -410,19 +383,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

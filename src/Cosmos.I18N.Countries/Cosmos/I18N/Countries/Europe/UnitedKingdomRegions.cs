@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// United Kingdom Regions
     /// </summary>
-    public static class UnitedKingdomRegions {
-
+    public static class UnitedKingdomRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -140,7 +141,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Special regions
         /// </summary>
-        public static class Special {
+        public static class Special
+        {
             /// <summary>
             /// Bailiwick of Guernsey
             /// <br />
@@ -357,40 +359,36 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for United Kingdom regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// 英格兰
             /// </summary>
-            [AliasInShort("ENG")]
-            [RegionFlag("main")]
+            [AliasInShort("ENG")] [RegionFlag("main")]
             England,
 
             /// <summary>
             /// 北爱尔兰
             /// </summary>
-            [AliasInShort("NIR")]
-            [RegionFlag("main")]
+            [AliasInShort("NIR")] [RegionFlag("main")]
             NorthernIreland,
 
             /// <summary>
             /// 苏格兰
             /// </summary>
-            [AliasInShort("SCT")]
-            [RegionFlag("main")]
+            [AliasInShort("SCT")] [RegionFlag("main")]
             Scottland,
 
             /// <summary>
             /// 威尔士
             /// </summary>
-            [AliasInShort("WLS")]
-            [RegionFlag("main")]
+            [AliasInShort("WLS")] [RegionFlag("main")]
             Wales,
 
             /// <summary>
             /// 奥尔德尼岛
             /// </summary>
-            [AliasInShort("ALD")]
-            [RegionFlag("overseas")]
+            [AliasInShort("ALD")] [RegionFlag("overseas")]
             Alderney,
 
             /// <summary>
@@ -398,8 +396,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 根西岛
             /// </summary>
-            [AliasInShort("GG")]
-            [RegionFlag("overseas")]
+            [AliasInShort("GG")] [RegionFlag("overseas")]
             Guernsey,
 
             /// <summary>
@@ -407,8 +404,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 泽西
             /// </summary>
-            [AliasInShort("JE")]
-            [RegionFlag("overseas")]
+            [AliasInShort("JE")] [RegionFlag("overseas")]
             Jersey,
 
             /// <summary>
@@ -416,8 +412,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 英属马恩岛
             /// </summary>
-            [AliasInShort("IM")]
-            [RegionFlag("overseas")]
+            [AliasInShort("IM")] [RegionFlag("overseas")]
             Mann,
 
             /// <summary>
@@ -425,8 +420,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 直布罗陀
             /// </summary>
-            [AliasInShort("GI")]
-            [RegionFlag("overseas")]
+            [AliasInShort("GI")] [RegionFlag("overseas")]
             Gibraltar,
 
             /// <summary>
@@ -434,8 +428,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 百慕大群岛
             /// </summary>
-            [AliasInShort("BM")]
-            [RegionFlag("overseas")]
+            [AliasInShort("BM")] [RegionFlag("overseas")]
             Bermuda,
 
             /// <summary>
@@ -443,8 +436,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 开曼群岛
             /// </summary>
-            [AliasInShort("KY")]
-            [RegionFlag("overseas")]
+            [AliasInShort("KY")] [RegionFlag("overseas")]
             CaymanIslands,
 
             /// <summary>
@@ -452,8 +444,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 特克斯和凯科斯群岛
             /// </summary>
-            [AliasInShort("TC")]
-            [RegionFlag("overseas")]
+            [AliasInShort("TC")] [RegionFlag("overseas")]
             TurksAndCaicosIslands,
 
             /// <summary>
@@ -461,8 +452,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 英属维尔金群岛
             /// </summary>
-            [AliasInShort("VG")]
-            [RegionFlag("overseas")]
+            [AliasInShort("VG")] [RegionFlag("overseas")]
             BritishVirginIslands,
 
             /// <summary>
@@ -470,8 +460,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 安圭拉
             /// </summary>
-            [AliasInShort("AI")]
-            [RegionFlag("overseas")]
+            [AliasInShort("AI")] [RegionFlag("overseas")]
             Anguilla,
 
             /// <summary>
@@ -479,8 +468,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 蒙特塞拉特
             /// </summary>
-            [AliasInShort("MS")]
-            [RegionFlag("overseas")]
+            [AliasInShort("MS")] [RegionFlag("overseas")]
             Montserrat,
 
             /// <summary>
@@ -488,8 +476,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 圣赫勒拿、阿森松与特里斯坦达库尼亚
             /// </summary>
-            [AliasInShort("SH")]
-            [RegionFlag("overseas")]
+            [AliasInShort("SH")] [RegionFlag("overseas")]
             SaintHelena,
 
             /// <summary>
@@ -497,8 +484,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 南乔治亚岛和南桑威奇群岛
             /// </summary>
-            [AliasInShort("GS")]
-            [RegionFlag("overseas")]
+            [AliasInShort("GS")] [RegionFlag("overseas")]
             // ReSharper disable once InconsistentNaming
             SGSSI,
 
@@ -507,8 +493,7 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 英属印度洋领地
             /// </summary>
-            [AliasInShort("IO")]
-            [RegionFlag("overseas")]
+            [AliasInShort("IO")] [RegionFlag("overseas")]
             BritishIndianOceanTerritory,
 
             /// <summary>
@@ -516,15 +501,13 @@ namespace Cosmos.I18N.Countries.Europe {
             /// <br />
             /// 皮特凯恩群岛
             /// </summary>
-            [AliasInShort("PN")]
-            [RegionFlag("overseas")]
+            [AliasInShort("PN")] [RegionFlag("overseas")]
             Pitcairn,
 
             /// <summary>
             /// 未知
             /// </summary>
-            [IgnoreRegionAttribute]
-            [AliasInShort("??")]
+            [IgnoreRegionAttribute] [AliasInShort("??")]
             Unknown
         }
 
@@ -535,8 +518,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -544,7 +528,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"GB-{values.ToRegionCode()}";
         }
 
@@ -553,8 +538,10 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
-            switch (value) {
+        public static Country ToCountry(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.Guernsey:
                     return Country.Guernsey;
                 case EnumValues.Jersey:
@@ -593,8 +580,10 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
-            switch (value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            switch (value)
+            {
                 case EnumValues.Guernsey:
                     return CountryCode.GG;
                 case EnumValues.Jersey:
@@ -637,8 +626,10 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="country"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(Country country) {
-            switch (country) {
+        public static EnumValues FromSpecialRegions(Country country)
+        {
+            switch (country)
+            {
                 case Country.Guernsey:
                     return EnumValues.Guernsey;
                 case Country.Jersey:
@@ -677,8 +668,10 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(CountryCode code) {
-            switch (code) {
+        public static EnumValues FromSpecialRegions(CountryCode code)
+        {
+            switch (code)
+            {
                 case CountryCode.GG:
                     return EnumValues.Guernsey;
                 case CountryCode.JE:
@@ -716,8 +709,8 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         private static IEnumerable<EnumMember<EnumValues>> Filter(string flag) =>
             InternalEnumMembersCache.Where(x => x.Attributes.GetAll<RegionFlagAttribute>().Any(attr => attr.Flag == flag));
@@ -726,30 +719,23 @@ namespace Cosmos.I18N.Countries.Europe {
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// Get overseas region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetOverseasRegionCodes() {
-            foreach (var member in Filter("overseas"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetOverseasRegionCodes()
+            => Filter("overseas").Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// Get main region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetMainRegionCodes() {
-            foreach (var member in Filter("main"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetMainRegionCodes()
+            => Filter("main").Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

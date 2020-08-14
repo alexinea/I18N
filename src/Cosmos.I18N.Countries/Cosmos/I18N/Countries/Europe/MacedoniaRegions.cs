@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Macedonia Regons
     /// </summary>
-    public static class MacedoniaRegions {
-
+    public static class MacedoniaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -372,439 +373,367 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Macedonia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Aračinovo
             /// </summary>
-            [AliasInShort("02")]
-            Aračinovo,
+            [AliasInShort("02")] Aračinovo,
 
             /// <summary>
             /// Berovo
             /// </summary>
-            [AliasInShort("03")]
-            Berovo,
+            [AliasInShort("03")] Berovo,
 
             /// <summary>
             /// Bitola
             /// </summary>
-            [AliasInShort("04")]
-            Bitola,
+            [AliasInShort("04")] Bitola,
 
             /// <summary>
             /// Bogdanci
             /// </summary>
-            [AliasInShort("05")]
-            Bogdanci,
+            [AliasInShort("05")] Bogdanci,
 
             /// <summary>
             /// Bogovinje
             /// </summary>
-            [AliasInShort("06")]
-            Bogovinje,
+            [AliasInShort("06")] Bogovinje,
 
             /// <summary>
             /// Bosilovo
             /// </summary>
-            [AliasInShort("07")]
-            Bosilovo,
+            [AliasInShort("07")] Bosilovo,
 
             /// <summary>
             /// Brvenica
             /// </summary>
-            [AliasInShort("08")]
-            Brvenica,
+            [AliasInShort("08")] Brvenica,
 
             /// <summary>
             /// Valandovo
             /// </summary>
-            [AliasInShort("10")]
-            Valandovo,
+            [AliasInShort("10")] Valandovo,
 
             /// <summary>
             /// Vasilevo
             /// </summary>
-            [AliasInShort("11")]
-            Vasilevo,
+            [AliasInShort("11")] Vasilevo,
 
             /// <summary>
             /// Vevčani
             /// </summary>
-            [AliasInShort("12")]
-            Vevčani,
+            [AliasInShort("12")] Vevčani,
 
             /// <summary>
             /// Veles
             /// </summary>
-            [AliasInShort("13")]
-            Veles,
+            [AliasInShort("13")] Veles,
 
             /// <summary>
             /// Vinica
             /// </summary>
-            [AliasInShort("14")]
-            Vinica,
+            [AliasInShort("14")] Vinica,
 
             /// <summary>
             /// Vrapčište
             /// </summary>
-            [AliasInShort("16")]
-            Vrapčište,
+            [AliasInShort("16")] Vrapčište,
 
             /// <summary>
             /// Gevgelija
             /// </summary>
-            [AliasInShort("18")]
-            Gevgelija,
+            [AliasInShort("18")] Gevgelija,
 
             /// <summary>
             /// Gostivar
             /// </summary>
-            [AliasInShort("19")]
-            Gostivar,
+            [AliasInShort("19")] Gostivar,
 
             /// <summary>
             /// Gradsko
             /// </summary>
-            [AliasInShort("20")]
-            Gradsko,
+            [AliasInShort("20")] Gradsko,
 
             /// <summary>
             /// Debar
             /// </summary>
-            [AliasInShort("21")]
-            Debar,
+            [AliasInShort("21")] Debar,
 
             /// <summary>
             /// Debarca
             /// </summary>
-            [AliasInShort("22")]
-            Debarca,
+            [AliasInShort("22")] Debarca,
 
             /// <summary>
             /// Delčevo
             /// </summary>
-            [AliasInShort("23")]
-            Delčevo,
+            [AliasInShort("23")] Delčevo,
 
             /// <summary>
             /// Demir Kapija
             /// </summary>
-            [AliasInShort("24")]
-            DemirKapija,
+            [AliasInShort("24")] DemirKapija,
 
             /// <summary>
             /// Demir Hisar
             /// </summary>
-            [AliasInShort("25")]
-            DemirHisar,
+            [AliasInShort("25")] DemirHisar,
 
             /// <summary>
             /// Dojran
             /// </summary>
-            [AliasInShort("26")]
-            Dojran,
+            [AliasInShort("26")] Dojran,
 
             /// <summary>
             /// Dolneni
             /// </summary>
-            [AliasInShort("27")]
-            Dolneni,
+            [AliasInShort("27")] Dolneni,
 
             /// <summary>
             /// Želino
             /// </summary>
-            [AliasInShort("30")]
-            Želino,
+            [AliasInShort("30")] Želino,
 
             /// <summary>
             /// Zelenikovo
             /// </summary>
-            [AliasInShort("32")]
-            Zelenikovo,
+            [AliasInShort("32")] Zelenikovo,
 
             /// <summary>
             /// Zrnovci
             /// </summary>
-            [AliasInShort("33")]
-            Zrnovci,
+            [AliasInShort("33")] Zrnovci,
 
             /// <summary>
             /// Ilinden
             /// </summary>
-            [AliasInShort("34")]
-            Ilinden,
+            [AliasInShort("34")] Ilinden,
 
             /// <summary>
             /// Jegunovce
             /// </summary>
-            [AliasInShort("35")]
-            Jegunovce,
+            [AliasInShort("35")] Jegunovce,
 
             /// <summary>
             /// Kavadarci
             /// </summary>
-            [AliasInShort("36")]
-            Kavadarci,
+            [AliasInShort("36")] Kavadarci,
 
             /// <summary>
             /// Karbinci
             /// </summary>
-            [AliasInShort("37")]
-            Karbinci,
+            [AliasInShort("37")] Karbinci,
 
             /// <summary>
             /// Kičevo
             /// </summary>
-            [AliasInShort("40")]
-            Kičevo,
+            [AliasInShort("40")] Kičevo,
 
             /// <summary>
             /// Konče
             /// </summary>
-            [AliasInShort("41")]
-            Konče,
+            [AliasInShort("41")] Konče,
 
             /// <summary>
             /// Kočani
             /// </summary>
-            [AliasInShort("42")]
-            Kočani,
+            [AliasInShort("42")] Kočani,
 
             /// <summary>
             /// Kratovo
             /// </summary>
-            [AliasInShort("43")]
-            Kratovo,
+            [AliasInShort("43")] Kratovo,
 
             /// <summary>
             /// Kriva Palanka
             /// </summary>
-            [AliasInShort("44")]
-            KrivaPalanka,
+            [AliasInShort("44")] KrivaPalanka,
 
             /// <summary>
             /// Krivogaštani
             /// </summary>
-            [AliasInShort("45")]
-            Krivogaštani,
+            [AliasInShort("45")] Krivogaštani,
 
             /// <summary>
             /// Kruševo
             /// </summary>
-            [AliasInShort("46")]
-            Kruševo,
+            [AliasInShort("46")] Kruševo,
 
             /// <summary>
             /// Kumanovo
             /// </summary>
-            [AliasInShort("47")]
-            Kumanovo,
+            [AliasInShort("47")] Kumanovo,
 
             /// <summary>
             /// Lipkovo
             /// </summary>
-            [AliasInShort("48")]
-            Lipkovo,
+            [AliasInShort("48")] Lipkovo,
 
             /// <summary>
             /// Lozovo
             /// </summary>
-            [AliasInShort("49")]
-            Lozovo,
+            [AliasInShort("49")] Lozovo,
 
             /// <summary>
             /// Mavrovo and Rostuša
             /// </summary>
-            [AliasInShort("50")]
-            MavrovoAndRostuša,
+            [AliasInShort("50")] MavrovoAndRostuša,
 
             /// <summary>
             /// Makedonska Kamenica
             /// </summary>
-            [AliasInShort("51")]
-            MakedonskaKamenica,
+            [AliasInShort("51")] MakedonskaKamenica,
 
             /// <summary>
             /// Makedonski Brod
             /// </summary>
-            [AliasInShort("52")]
-            MakedonskiBrod,
+            [AliasInShort("52")] MakedonskiBrod,
 
             /// <summary>
             /// Mogila
             /// </summary>
-            [AliasInShort("53")]
-            Mogila,
+            [AliasInShort("53")] Mogila,
 
             /// <summary>
             /// Negotino
             /// </summary>
-            [AliasInShort("54")]
-            Negotino,
+            [AliasInShort("54")] Negotino,
 
             /// <summary>
             /// Novaci
             /// </summary>
-            [AliasInShort("55")]
-            Novaci,
+            [AliasInShort("55")] Novaci,
 
             /// <summary>
             /// Novo Selo
             /// </summary>
-            [AliasInShort("56")]
-            NovoSelo,
+            [AliasInShort("56")] NovoSelo,
 
             /// <summary>
             /// Ohrid
             /// </summary>
-            [AliasInShort("58")]
-            Ohrid,
+            [AliasInShort("58")] Ohrid,
 
             /// <summary>
             /// Petrovec
             /// </summary>
-            [AliasInShort("59")]
-            Petrovec,
+            [AliasInShort("59")] Petrovec,
 
             /// <summary>
             /// Pehčevo
             /// </summary>
-            [AliasInShort("60")]
-            Pehčevo,
+            [AliasInShort("60")] Pehčevo,
 
             /// <summary>
             /// Plasnica
             /// </summary>
-            [AliasInShort("61")]
-            Plasnica,
+            [AliasInShort("61")] Plasnica,
 
             /// <summary>
             /// Prilep
             /// </summary>
-            [AliasInShort("62")]
-            Prilep,
+            [AliasInShort("62")] Prilep,
 
             /// <summary>
             /// 
             /// </summary>
-            [AliasInShort("63")]
-            Probištip,
+            [AliasInShort("63")] Probištip,
 
             /// <summary>
             /// Radoviš
             /// </summary>
-            [AliasInShort("64")]
-            Radoviš,
+            [AliasInShort("64")] Radoviš,
 
             /// <summary>
             /// Rankovce
             /// </summary>
-            [AliasInShort("65")]
-            Rankovce,
+            [AliasInShort("65")] Rankovce,
 
             /// <summary>
             /// Resen
             /// </summary>
-            [AliasInShort("66")]
-            Resen,
+            [AliasInShort("66")] Resen,
 
             /// <summary>
             /// Rosoman
             /// </summary>
-            [AliasInShort("67")]
-            Rosoman,
+            [AliasInShort("67")] Rosoman,
 
             /// <summary>
             /// Sveti Nikole
             /// </summary>
-            [AliasInShort("69")]
-            SvetiNikole,
+            [AliasInShort("69")] SvetiNikole,
 
             /// <summary>
             /// Sopište
             /// </summary>
-            [AliasInShort("70")]
-            Sopište,
+            [AliasInShort("70")] Sopište,
 
             /// <summary>
             /// Staro Nagoričane
             /// </summary>
-            [AliasInShort("71")]
-            StaroNagoričane,
+            [AliasInShort("71")] StaroNagoričane,
 
             /// <summary>
             /// Struga
             /// </summary>
-            [AliasInShort("72")]
-            Struga,
+            [AliasInShort("72")] Struga,
 
             /// <summary>
             /// Strumica
             /// </summary>
-            [AliasInShort("73")]
-            Strumica,
+            [AliasInShort("73")] Strumica,
 
             /// <summary>
             /// Studeničani
             /// </summary>
-            [AliasInShort("74")]
-            Studeničani,
+            [AliasInShort("74")] Studeničani,
 
             /// <summary>
             /// Tearce
             /// </summary>
-            [AliasInShort("75")]
-            Tearce,
+            [AliasInShort("75")] Tearce,
 
             /// <summary>
             /// Tetovo
             /// </summary>
-            [AliasInShort("76")]
-            Tetovo,
+            [AliasInShort("76")] Tetovo,
 
             /// <summary>
             /// Centar Župa
             /// </summary>
-            [AliasInShort("78")]
-            CentarŽupa,
+            [AliasInShort("78")] CentarŽupa,
 
             /// <summary>
             /// Čaška
             /// </summary>
-            [AliasInShort("80")]
-            Čaška,
+            [AliasInShort("80")] Čaška,
 
             /// <summary>
             /// Češinovo-Obleševo
             /// </summary>
-            [AliasInShort("81")]
-            ČešinovoObleševo,
+            [AliasInShort("81")] ČešinovoObleševo,
 
             /// <summary>
             /// Čučer-Sandevo
             /// </summary>
-            [AliasInShort("82")]
-            ČučerSandevo,
+            [AliasInShort("82")] ČučerSandevo,
 
             /// <summary>
             /// Štip
             /// </summary>
-            [AliasInShort("83")]
-            Štip,
+            [AliasInShort("83")] Štip,
 
             /// <summary>
             /// Skopje
             /// </summary>
-            [AliasInShort("85")]
-            Skopje,
+            [AliasInShort("85")] Skopje,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -814,8 +743,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -823,7 +753,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"MK-{values.ToRegionCode()}";
         }
 
@@ -832,7 +763,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Macedonia;
         }
 
@@ -841,7 +773,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.MK;
         }
 
@@ -849,20 +782,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
-
 }

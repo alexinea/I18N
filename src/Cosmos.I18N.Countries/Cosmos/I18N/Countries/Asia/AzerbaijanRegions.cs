@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Azerbaijan regions
     /// </summary>
-    public static class AzerbaijanRegions {
-
+    public static class AzerbaijanRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -367,210 +368,177 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Azerbaijan regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Absheron
             /// </summary>
-            [AliasInShort("ABS")]
-            Absheron,
+            [AliasInShort("ABS")] Absheron,
 
             /// <summary>
             /// Agstafa
             /// </summary>
-            [AliasInShort("AGA")]
-            Agstafa,
+            [AliasInShort("AGA")] Agstafa,
 
             /// <summary>
             /// Aghjabadi
             /// </summary>
-            [AliasInShort("AGC")]
-            Aghjabadi,
+            [AliasInShort("AGC")] Aghjabadi,
 
             /// <summary>
             /// Agdam
             /// </summary>
-            [AliasInShort("AGM")]
-            Agdam,
+            [AliasInShort("AGM")] Agdam,
 
             /// <summary>
             /// Agdash
             /// </summary>
-            [AliasInShort("AGS")]
-            Agdash,
+            [AliasInShort("AGS")] Agdash,
 
             /// <summary>
             /// Agsu
             /// </summary>
-            [AliasInShort("AGU")]
-            Agsu,
+            [AliasInShort("AGU")] Agsu,
 
             /// <summary>
             /// Astara
             /// </summary>
-            [AliasInShort("AST")]
-            Astara,
+            [AliasInShort("AST")] Astara,
 
             /// <summary>
             /// Baku
             /// </summary>
-            [AliasInShort("BA")]
-            Baku,
+            [AliasInShort("BA")] Baku,
 
             /// <summary>
             /// Balakan
             /// </summary>
-            [AliasInShort("BAL")]
-            Balakan,
+            [AliasInShort("BAL")] Balakan,
 
             /// <summary>
             /// Barda
             /// </summary>
-            [AliasInShort("BAR")]
-            Barda,
+            [AliasInShort("BAR")] Barda,
 
             /// <summary>
             /// Beylagan
             /// </summary>
-            [AliasInShort("BEY")]
-            Beylagan,
+            [AliasInShort("BEY")] Beylagan,
 
             /// <summary>
             /// Bilasuvar
             /// </summary>
-            [AliasInShort("BIL")]
-            Bilasuvar,
+            [AliasInShort("BIL")] Bilasuvar,
 
             /// <summary>
             /// Jabrayil
             /// </summary>
-            [AliasInShort("CAB")]
-            Jabrayil,
+            [AliasInShort("CAB")] Jabrayil,
 
             /// <summary>
             /// Jalilabad
             /// </summary>
-            [AliasInShort("CAL")]
-            Jalilabad,
+            [AliasInShort("CAL")] Jalilabad,
 
             /// <summary>
             /// Dashkasan
             /// </summary>
-            [AliasInShort("DAS")]
-            Dashkasan,
+            [AliasInShort("DAS")] Dashkasan,
 
             /// <summary>
             /// Fizuli
             /// </summary>
-            [AliasInShort("FUZ")]
-            Fizuli,
+            [AliasInShort("FUZ")] Fizuli,
 
             /// <summary>
             /// Ganja
             /// </summary>
-            [AliasInShort("GA")]
-            Ganja,
+            [AliasInShort("GA")] Ganja,
 
             /// <summary>
             /// Gadabay
             /// </summary>
-            [AliasInShort("GAD")]
-            Gadabay,
+            [AliasInShort("GAD")] Gadabay,
 
             /// <summary>
             /// Goranboy
             /// </summary>
-            [AliasInShort("GOR")]
-            Goranboy,
+            [AliasInShort("GOR")] Goranboy,
 
             /// <summary>
             /// Goychay
             /// </summary>
-            [AliasInShort("GOY")]
-            Goychay,
+            [AliasInShort("GOY")] Goychay,
 
             /// <summary>
             /// Goygol
             /// </summary>
-            [AliasInShort("GYG")]
-            Goygol,
+            [AliasInShort("GYG")] Goygol,
 
             /// <summary>
             /// Hajigabul
             /// </summary>
-            [AliasInShort("HAC")]
-            Hajigabul,
+            [AliasInShort("HAC")] Hajigabul,
 
             /// <summary>
             /// Imishli
             /// </summary>
-            [AliasInShort("IMI")]
-            Imishli,
+            [AliasInShort("IMI")] Imishli,
 
             /// <summary>
             /// Ismailli
             /// </summary>
-            [AliasInShort("ISM")]
-            Ismailli,
+            [AliasInShort("ISM")] Ismailli,
 
             /// <summary>
             /// Kalbajar
             /// </summary>
-            [AliasInShort("KAL")]
-            Kalbajar,
+            [AliasInShort("KAL")] Kalbajar,
 
             /// <summary>
             /// Kurdamir
             /// </summary>
-            [AliasInShort("KUR")]
-            Kurdamir,
+            [AliasInShort("KUR")] Kurdamir,
 
             /// <summary>
             /// Lankaran
             /// </summary>
-            [AliasInShort("LA")]
-            Lankaran,
+            [AliasInShort("LA")] Lankaran,
 
             /// <summary>
             /// Lachin
             /// </summary>
-            [AliasInShort("LAC")]
-            Lachin,
+            [AliasInShort("LAC")] Lachin,
 
             /// <summary>
             /// Lankaran District
             /// </summary>
-            [AliasInShort("LAN")]
-            LankaranDistrict,
+            [AliasInShort("LAN")] LankaranDistrict,
 
             /// <summary>
             /// Lerik
             /// </summary>
-            [AliasInShort("LER")]
-            Lerik,
+            [AliasInShort("LER")] Lerik,
 
             /// <summary>
             /// Masally
             /// </summary>
-            [AliasInShort("MAS")]
-            Masally,
+            [AliasInShort("MAS")] Masally,
 
             /// <summary>
             /// Mingachevir
             /// </summary>
-            [AliasInShort("MI")]
-            Mingachevir,
+            [AliasInShort("MI")] Mingachevir,
 
             /// <summary>
             /// Naftalan
             /// </summary>
-            [AliasInShort("NA")]
-            Naftalan,
+            [AliasInShort("NA")] Naftalan,
 
             /// <summary>
             /// Neftchala
             /// </summary>
-            [AliasInShort("NEF")]
-            Neftchala,
+            [AliasInShort("NEF")] Neftchala,
 
             /// <summary>
             /// Nakhchivan AR
@@ -582,219 +550,182 @@ namespace Cosmos.I18N.Countries.Asia {
             /// <summary>
             /// Oghuz
             /// </summary>
-            [AliasInShort("OGU")]
-            Oghuz,
+            [AliasInShort("OGU")] Oghuz,
 
             /// <summary>
             /// Qabala
             /// </summary>
-            [AliasInShort("QAB")]
-            Qabala,
+            [AliasInShort("QAB")] Qabala,
 
             /// <summary>
             /// Qakh
             /// </summary>
-            [AliasInShort("QAX")]
-            Qakh,
+            [AliasInShort("QAX")] Qakh,
 
             /// <summary>
             /// Qazakh
             /// </summary>
-            [AliasInShort("QAZ")]
-            Qazakh,
+            [AliasInShort("QAZ")] Qazakh,
 
             /// <summary>
             /// Quba
             /// </summary>
-            [AliasInShort("QBA")]
-            Quba,
+            [AliasInShort("QBA")] Quba,
 
             /// <summary>
             /// Qubadli
             /// </summary>
-            [AliasInShort("QBI")]
-            Qubadli,
+            [AliasInShort("QBI")] Qubadli,
 
             /// <summary>
             /// Gobustan
             /// </summary>
-            [AliasInShort("QOB")]
-            Gobustan,
+            [AliasInShort("QOB")] Gobustan,
 
             /// <summary>
             /// Qusar
             /// </summary>
-            [AliasInShort("QUS")]
-            Qusar,
+            [AliasInShort("QUS")] Qusar,
 
             /// <summary>
             /// Shaki
             /// </summary>
-            [AliasInShort("SA")]
-            Shaki,
+            [AliasInShort("SA")] Shaki,
 
             /// <summary>
             /// Sabirabad
             /// </summary>
-            [AliasInShort("SAB")]
-            Sabirabad,
+            [AliasInShort("SAB")] Sabirabad,
 
             /// <summary>
             /// Shaki District
             /// </summary>
-            [AliasInShort("SAK")]
-            ShakiDistrict,
+            [AliasInShort("SAK")] ShakiDistrict,
 
             /// <summary>
             /// Salyan
             /// </summary>
-            [AliasInShort("SAL")]
-            Salyan,
+            [AliasInShort("SAL")] Salyan,
 
             /// <summary>
             /// Saatly
             /// </summary>
-            [AliasInShort("SAT")]
-            Saatly,
+            [AliasInShort("SAT")] Saatly,
 
             /// <summary>
             /// Shabran
             /// </summary>
-            [AliasInShort("SBN")]
-            Shabran,
+            [AliasInShort("SBN")] Shabran,
 
             /// <summary>
             /// Siazan
             /// </summary>
-            [AliasInShort("SIY")]
-            Siazan,
+            [AliasInShort("SIY")] Siazan,
 
             /// <summary>
             /// Shamkir
             /// </summary>
-            [AliasInShort("SKR")]
-            Shamkir,
+            [AliasInShort("SKR")] Shamkir,
 
             /// <summary>
             /// Sumqayit
             /// </summary>
-            [AliasInShort("SM")]
-            Sumqayit,
+            [AliasInShort("SM")] Sumqayit,
 
             /// <summary>
             /// Shamakhi
             /// </summary>
-            [AliasInShort("SMI")]
-            Shamakhi,
+            [AliasInShort("SMI")] Shamakhi,
 
             /// <summary>
             /// Samukh
             /// </summary>
-            [AliasInShort("SMX")]
-            Samukh,
+            [AliasInShort("SMX")] Samukh,
 
             /// <summary>
             /// Shirvan
             /// </summary>
-            [AliasInShort("SR")]
-            Shirvan,
+            [AliasInShort("SR")] Shirvan,
 
             /// <summary>
             /// Shusha
             /// </summary>
-            [AliasInShort("SUS")]
-            Shusha,
+            [AliasInShort("SUS")] Shusha,
 
             /// <summary>
             /// Tartar
             /// </summary>
-            [AliasInShort("TAR")]
-            Tartar,
+            [AliasInShort("TAR")] Tartar,
 
             /// <summary>
             /// Tovuz
             /// </summary>
-            [AliasInShort("TOV")]
-            Tovuz,
+            [AliasInShort("TOV")] Tovuz,
 
             /// <summary>
             /// Ujar
             /// </summary>
-            [AliasInShort("UCA")]
-            Ujar,
+            [AliasInShort("UCA")] Ujar,
 
             /// <summary>
             /// Stepanakert
             /// </summary>
-            [AliasInShort("XA")]
-            Stepanakert,
+            [AliasInShort("XA")] Stepanakert,
 
             /// <summary>
             /// Khachmaz
             /// </summary>
-            [AliasInShort("XAC")]
-            Khachmaz,
+            [AliasInShort("XAC")] Khachmaz,
 
             /// <summary>
             /// Khojali
             /// </summary>
-            [AliasInShort("XCI")]
-            Khojali,
+            [AliasInShort("XCI")] Khojali,
 
             /// <summary>
             /// Khizi
             /// </summary>
-            [AliasInShort("XIZ")]
-            Khizi,
+            [AliasInShort("XIZ")] Khizi,
 
             /// <summary>
             /// Khojavend
             /// </summary>
-            [AliasInShort("XVD")]
-            Khojavend,
+            [AliasInShort("XVD")] Khojavend,
 
             /// <summary>
             /// Yardymli
             /// </summary>
-            [AliasInShort("YAR")]
-            Yardymli,
+            [AliasInShort("YAR")] Yardymli,
 
             /// <summary>
             /// Yevlakh
             /// </summary>
-            [AliasInShort("YE")]
-            Yevlakh,
+            [AliasInShort("YE")] Yevlakh,
 
             /// <summary>
             ///  Yevlakh District
             /// </summary>
-            [AliasInShort("YEV")]
-            YevlakhDistrict,
+            [AliasInShort("YEV")] YevlakhDistrict,
 
             /// <summary>
             /// Zangilan
             /// </summary>
-            [AliasInShort("ZAN")]
-            Zangilan,
+            [AliasInShort("ZAN")] Zangilan,
 
             /// <summary>
             /// Zaqatala
             /// </summary>
-            [AliasInShort("ZAQ")]
-            Zaqatala,
+            [AliasInShort("ZAQ")] Zaqatala,
 
             /// <summary>
             /// Zardab
             /// </summary>
-            [AliasInShort("ZAR")]
-            Zardab,
+            [AliasInShort("ZAR")] Zardab,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -804,8 +735,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -813,7 +745,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AZ-{values.ToRegionCode()}";
         }
 
@@ -822,7 +755,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Azerbaijan;
         }
 
@@ -831,7 +765,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.AZ;
         }
 
@@ -839,19 +774,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

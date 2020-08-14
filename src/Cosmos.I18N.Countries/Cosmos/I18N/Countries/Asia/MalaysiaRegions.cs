@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Malaysia Regions
     /// </summary>
-    public static class MalaysiaRegions {
-
+    public static class MalaysiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -96,109 +97,92 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Malaysia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Selangor
             /// </summary>
-            [AliasInShort("10")]
-            Selangor,
+            [AliasInShort("10")] Selangor,
 
             /// <summary>
             /// Terengganu
             /// </summary>
-            [AliasInShort("11")]
-            Terengganu,
+            [AliasInShort("11")] Terengganu,
 
             /// <summary>
             /// Sabah
             /// </summary>
-            [AliasInShort("12")]
-            Sabah,
+            [AliasInShort("12")] Sabah,
 
             /// <summary>
             /// Sarawak
             /// </summary>
-            [AliasInShort("13")]
-            Sarawak,
+            [AliasInShort("13")] Sarawak,
 
             /// <summary>
             /// Kuala Lumpur
             /// </summary>
-            [AliasInShort("14")]
-            KualaLumpur,
+            [AliasInShort("14")] KualaLumpur,
 
             /// <summary>
             /// Labuan
             /// </summary>
-            [AliasInShort("15")]
-            Labuan,
+            [AliasInShort("15")] Labuan,
 
             /// <summary>
             /// Putrajaya
             /// </summary>
-            [AliasInShort("16")]
-            Putrajaya,
+            [AliasInShort("16")] Putrajaya,
 
             /// <summary>
             /// Johor
             /// </summary>
-            [AliasInShort("01")]
-            Johor,
+            [AliasInShort("01")] Johor,
 
             /// <summary>
             /// Kedah
             /// </summary>
-            [AliasInShort("02")]
-            Kedah,
+            [AliasInShort("02")] Kedah,
 
             /// <summary>
             /// Kelantan
             /// </summary>
-            [AliasInShort("03")]
-            Kelantan,
+            [AliasInShort("03")] Kelantan,
 
             /// <summary>
             /// Malacca
             /// </summary>
-            [AliasInShort("04")]
-            Malacca,
+            [AliasInShort("04")] Malacca,
 
             /// <summary>
             /// Negeri Sembilan
             /// </summary>
-            [AliasInShort("05")]
-            NegeriSembilan,
+            [AliasInShort("05")] NegeriSembilan,
 
             /// <summary>
             /// Pahang
             /// </summary>
-            [AliasInShort("06")]
-            Pahang,
+            [AliasInShort("06")] Pahang,
 
             /// <summary>
             /// Penang
             /// </summary>
-            [AliasInShort("07")]
-            Penang,
+            [AliasInShort("07")] Penang,
 
             /// <summary>
             /// Perak
             /// </summary>
-            [AliasInShort("08")]
-            Perak,
+            [AliasInShort("08")] Perak,
 
             /// <summary>
             /// Perlis
             /// </summary>
-            [AliasInShort("09")]
-            Perlis,
+            [AliasInShort("09")] Perlis,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -208,8 +192,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -217,7 +202,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"MY-{values.ToRegionCode()}";
         }
 
@@ -226,7 +212,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Malaysia;
         }
 
@@ -235,7 +222,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.MY;
         }
 
@@ -243,19 +231,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

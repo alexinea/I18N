@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Lesotho Regions
     /// </summary>
-    public static class LesothoRegions {
-
+    public static class LesothoRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -66,73 +67,62 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Lesotho regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Maseru
             /// </summary>
-            [AliasInShort("A")]
-            Maseru,
+            [AliasInShort("A")] Maseru,
 
             /// <summary>
             /// Butha-Buthe
             /// </summary>
-            [AliasInShort("B")]
-            ButhaButhe,
+            [AliasInShort("B")] ButhaButhe,
 
             /// <summary>
             /// Leribe
             /// </summary>
-            [AliasInShort("C")]
-            Leribe,
+            [AliasInShort("C")] Leribe,
 
             /// <summary>
             /// Berea
             /// </summary>
-            [AliasInShort("D")]
-            Berea,
+            [AliasInShort("D")] Berea,
 
             /// <summary>
             /// Mafeteng
             /// </summary>
-            [AliasInShort("E")]
-            Mafeteng,
+            [AliasInShort("E")] Mafeteng,
 
             /// <summary>
             /// Mohale’s Hoek
             /// </summary>
-            [AliasInShort("F")]
-            MohalesHoek,
+            [AliasInShort("F")] MohalesHoek,
 
             /// <summary>
             /// Quthing
             /// </summary>
-            [AliasInShort("G")]
-            Quthing,
+            [AliasInShort("G")] Quthing,
 
             /// <summary>
             /// Qacha’s Nek
             /// </summary>
-            [AliasInShort("H")]
-            QachasNek,
+            [AliasInShort("H")] QachasNek,
 
             /// <summary>
             /// Mokhotlong
             /// </summary>
-            [AliasInShort("J")]
-            Mokhotlong,
+            [AliasInShort("J")] Mokhotlong,
 
             /// <summary>
             /// Thaba-Tseka
             /// </summary>
-            [AliasInShort("K")]
-            ThabaTseka,
+            [AliasInShort("K")] ThabaTseka,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -142,8 +132,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -151,7 +142,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"LS-{values.ToRegionCode()}";
         }
 
@@ -160,7 +152,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Lesotho;
         }
 
@@ -169,7 +162,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.LS;
         }
 
@@ -177,19 +171,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

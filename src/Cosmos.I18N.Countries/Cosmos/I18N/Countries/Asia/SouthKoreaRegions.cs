@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// South Korea Regions
     /// </summary>
-    public static class SouthKoreaRegions {
-
+    public static class SouthKoreaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -101,115 +102,97 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for SouthKorea regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Seoul
             /// </summary>
-            [AliasInShort("11")]
-            Seoul,
+            [AliasInShort("11")] Seoul,
 
             /// <summary>
             /// Busan
             /// </summary>
-            [AliasInShort("26")]
-            Busan,
+            [AliasInShort("26")] Busan,
 
             /// <summary>
             /// Daegu
             /// </summary>
-            [AliasInShort("27")]
-            Daegu,
+            [AliasInShort("27")] Daegu,
 
             /// <summary>
             /// Incheon
             /// </summary>
-            [AliasInShort("28")]
-            Incheon,
+            [AliasInShort("28")] Incheon,
 
             /// <summary>
             /// Gwangju City
             /// </summary>
-            [AliasInShort("29")]
-            GwangjuCity,
+            [AliasInShort("29")] GwangjuCity,
 
             /// <summary>
             /// Daejeon
             /// </summary>
-            [AliasInShort("30")]
-            Daejeon,
+            [AliasInShort("30")] Daejeon,
 
             /// <summary>
             /// Ulsan
             /// </summary>
-            [AliasInShort("31")]
-            Ulsan,
+            [AliasInShort("31")] Ulsan,
 
             /// <summary>
             /// Gyeonggi
             /// </summary>
-            [AliasInShort("41")]
-            Gyeonggi,
+            [AliasInShort("41")] Gyeonggi,
 
             /// <summary>
             /// Gangwon
             /// </summary>
-            [AliasInShort("42")]
-            Gangwon,
+            [AliasInShort("42")] Gangwon,
 
             /// <summary>
             /// North Chungcheong
             /// </summary>
-            [AliasInShort("43")]
-            NorthChungcheong,
+            [AliasInShort("43")] NorthChungcheong,
 
             /// <summary>
             /// South Chungcheong
             /// </summary>
-            [AliasInShort("44")]
-            SouthChungcheong,
+            [AliasInShort("44")] SouthChungcheong,
 
             /// <summary>
             /// North Jeolla
             /// </summary>
-            [AliasInShort("45")]
-            NorthJeolla,
+            [AliasInShort("45")] NorthJeolla,
 
             /// <summary>
             /// South Jeolla
             /// </summary>
-            [AliasInShort("46")]
-            SouthJeolla,
+            [AliasInShort("46")] SouthJeolla,
 
             /// <summary>
             /// North Gyeongsang
             /// </summary>
-            [AliasInShort("47")]
-            NorthGyeongsang,
+            [AliasInShort("47")] NorthGyeongsang,
 
             /// <summary>
             /// South Gyeongsang
             /// </summary>
-            [AliasInShort("48")]
-            SouthGyeongsang,
+            [AliasInShort("48")] SouthGyeongsang,
 
             /// <summary>
             /// Jeju
             /// </summary>
-            [AliasInShort("49")]
-            Jeju,
+            [AliasInShort("49")] Jeju,
 
             /// <summary>
             /// Sejong
             /// </summary>
-            [AliasInShort("50")]
-            Sejong,
+            [AliasInShort("50")] Sejong,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -219,8 +202,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -228,7 +212,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"KR-{values.ToRegionCode()}";
         }
 
@@ -237,7 +222,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.SouthKorea;
         }
 
@@ -246,7 +232,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.KR;
         }
 
@@ -254,19 +241,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

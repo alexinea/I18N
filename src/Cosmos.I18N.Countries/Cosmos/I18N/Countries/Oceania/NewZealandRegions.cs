@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// NewZealand Regions
     /// </summary>
-    public static class NewZealandRegions {
-
+    public static class NewZealandRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -76,85 +77,72 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// <summary>
         /// Enum values for NewZealand regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Auckland Province
             /// </summary>
-            [AliasInShort("AUK")]
-            AucklandProvince,
+            [AliasInShort("AUK")] AucklandProvince,
 
             /// <summary>
             /// Canterbury
             /// </summary>
-            [AliasInShort("CAN")]
-            Canterbury,
+            [AliasInShort("CAN")] Canterbury,
 
             /// <summary>
             /// Chatham Islands
             /// </summary>
-            [AliasInShort("CIT")]
-            ChathamIslands,
+            [AliasInShort("CIT")] ChathamIslands,
 
             /// <summary>
             /// Hawke's Bay
             /// </summary>
-            [AliasInShort("HKB")]
-            HawkesBay,
+            [AliasInShort("HKB")] HawkesBay,
 
             /// <summary>
             /// Marlborough
             /// </summary>
-            [AliasInShort("MBH")]
-            Marlborough,
+            [AliasInShort("MBH")] Marlborough,
 
             /// <summary>
             /// Nelson
             /// </summary>
-            [AliasInShort("NSN")]
-            Nelson,
+            [AliasInShort("NSN")] Nelson,
 
             /// <summary>
             /// Northland
             /// </summary>
-            [AliasInShort("NTL")]
-            Northland,
+            [AliasInShort("NTL")] Northland,
 
             /// <summary>
             /// Otago Province
             /// </summary>
-            [AliasInShort("OTA")]
-            OtagoProvince,
+            [AliasInShort("OTA")] OtagoProvince,
 
             /// <summary>
             /// Southland
             /// </summary>
-            [AliasInShort("STL")]
-            Southland,
+            [AliasInShort("STL")] Southland,
 
             /// <summary>
             /// Taranaki
             /// </summary>
-            [AliasInShort("TKI")]
-            Taranaki,
+            [AliasInShort("TKI")] Taranaki,
 
             /// <summary>
             /// Wellington Province
             /// </summary>
-            [AliasInShort("WGN")]
-            WellingtonProvince,
+            [AliasInShort("WGN")] WellingtonProvince,
 
             /// <summary>
             /// Westland
             /// </summary>
-            [AliasInShort("WTC")]
-            Westland,
+            [AliasInShort("WTC")] Westland,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -164,8 +152,9 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -173,7 +162,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"NZ-{values.ToRegionCode()}";
         }
 
@@ -182,7 +172,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.NewZealand;
         }
 
@@ -191,7 +182,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.NZ;
         }
 
@@ -199,19 +191,16 @@ namespace Cosmos.I18N.Countries.Oceania {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

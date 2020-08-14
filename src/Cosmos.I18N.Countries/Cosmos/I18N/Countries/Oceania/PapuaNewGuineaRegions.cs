@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// PapuaNewGuinea Regions
     /// </summary>
-    public static class PapuaNewGuineaRegions {
-
+    public static class PapuaNewGuineaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -126,145 +127,122 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// <summary>
         /// Enum values for PapuaNewGuinea regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Chimbu
             /// </summary>
-            [AliasInShort("CPK")]
-            Chimbu,
+            [AliasInShort("CPK")] Chimbu,
 
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("CPM")]
-            Central,
+            [AliasInShort("CPM")] Central,
 
             /// <summary>
             /// East New Britain
             /// </summary>
-            [AliasInShort("EBK")]
-            EastNewBritain,
+            [AliasInShort("EBK")] EastNewBritain,
 
             /// <summary>
             /// Eastern Highlands
             /// </summary>
-            [AliasInShort("EHG")]
-            EasternHighlands,
+            [AliasInShort("EHG")] EasternHighlands,
 
             /// <summary>
             /// Enga
             /// </summary>
-            [AliasInShort("EPW")]
-            Enga,
+            [AliasInShort("EPW")] Enga,
 
             /// <summary>
             /// East Sepik
             /// </summary>
-            [AliasInShort("ESW")]
-            EastSepik,
+            [AliasInShort("ESW")] EastSepik,
 
             /// <summary>
             /// Gulf
             /// </summary>
-            [AliasInShort("GPK")]
-            Gulf,
+            [AliasInShort("GPK")] Gulf,
 
             /// <summary>
             /// Hela
             /// </summary>
-            [AliasInShort("HLA")]
-            Hela,
+            [AliasInShort("HLA")] Hela,
 
             /// <summary>
             /// Imbabura
             /// </summary>
-            [AliasInShort("JWK")]
-            Jiwaka,
+            [AliasInShort("JWK")] Jiwaka,
 
             /// <summary>
             /// Milne Bay
             /// </summary>
-            [AliasInShort("MBA")]
-            MilneBay,
+            [AliasInShort("MBA")] MilneBay,
 
             /// <summary>
             /// Morobe
             /// </summary>
-            [AliasInShort("MPL")]
-            Morobe,
+            [AliasInShort("MPL")] Morobe,
 
             /// <summary>
             /// Madang
             /// </summary>
-            [AliasInShort("MPM")]
-            Madang,
+            [AliasInShort("MPM")] Madang,
 
             /// <summary>
             /// Manus
             /// </summary>
-            [AliasInShort("MRL")]
-            Manus,
+            [AliasInShort("MRL")] Manus,
 
             /// <summary>
             /// Port Moresby
             /// </summary>
-            [AliasInShort("NCD")]
-            PortMoresby,
+            [AliasInShort("NCD")] PortMoresby,
 
             /// <summary>
             /// New Ireland
             /// </summary>
-            [AliasInShort("NIK")]
-            NewIreland,
+            [AliasInShort("NIK")] NewIreland,
 
             /// <summary>
             /// Oro
             /// </summary>
-            [AliasInShort("NPP")]
-            Oro,
+            [AliasInShort("NPP")] Oro,
 
             /// <summary>
             /// Bougainville
             /// </summary>
-            [AliasInShort("NSB")]
-            Bougainville,
+            [AliasInShort("NSB")] Bougainville,
 
             /// <summary>
             /// Sandaun
             /// </summary>
-            [AliasInShort("SAN")]
-            Sandaun,
+            [AliasInShort("SAN")] Sandaun,
 
             /// <summary>
             /// Southern Highlands
             /// </summary>
-            [AliasInShort("SHM")]
-            SouthernHighlands,
+            [AliasInShort("SHM")] SouthernHighlands,
 
             /// <summary>
             /// West New Britain
             /// </summary>
-            [AliasInShort("WBK")]
-            WestNewBritain,
+            [AliasInShort("WBK")] WestNewBritain,
 
             /// <summary>
             /// Western Highlands
             /// </summary>
-            [AliasInShort("WHM")]
-            WesternHighlands,
+            [AliasInShort("WHM")] WesternHighlands,
 
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("WPD")]
-            Western,
+            [AliasInShort("WPD")] Western,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -274,8 +252,9 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -283,7 +262,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"PG-{values.ToRegionCode()}";
         }
 
@@ -292,7 +272,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.PapuaNewGuinea;
         }
 
@@ -301,7 +282,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.PG;
         }
 
@@ -309,19 +291,16 @@ namespace Cosmos.I18N.Countries.Oceania {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

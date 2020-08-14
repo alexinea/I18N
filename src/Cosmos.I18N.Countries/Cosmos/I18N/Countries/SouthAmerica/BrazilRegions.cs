@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// Brazil Regions
     /// </summary>
-    public static class BrazilRegions {
-
+    public static class BrazilRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -151,175 +152,147 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// <summary>
         /// Enum values for Brazil regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Acre
             /// </summary>
-            [AliasInShort("AC")]
-            Acre,
+            [AliasInShort("AC")] Acre,
 
             /// <summary>
             /// Alagoas
             /// </summary>
-            [AliasInShort("AL")]
-            Alagoas,
+            [AliasInShort("AL")] Alagoas,
 
             /// <summary>
             /// Amazonas
             /// </summary>
-            [AliasInShort("AM")]
-            Amazonas,
+            [AliasInShort("AM")] Amazonas,
 
             /// <summary>
             /// Amapá
             /// </summary>
-            [AliasInShort("AP")]
-            Amapá,
+            [AliasInShort("AP")] Amapá,
 
             /// <summary>
             /// Bahia
             /// </summary>
-            [AliasInShort("BA")]
-            Bahia,
+            [AliasInShort("BA")] Bahia,
 
             /// <summary>
             /// Ceará
             /// </summary>
-            [AliasInShort("CE")]
-            Ceará,
+            [AliasInShort("CE")] Ceará,
 
             /// <summary>
             /// Distrito Federal
             /// </summary>
-            [AliasInShort("DF")]
-            DistritoFederal,
+            [AliasInShort("DF")] DistritoFederal,
 
             /// <summary>
             /// Espírito Santo
             /// </summary>
-            [AliasInShort("ES")]
-            EspíritoSanto,
+            [AliasInShort("ES")] EspíritoSanto,
 
             /// <summary>
             /// Goiás
             /// </summary>
-            [AliasInShort("GO")]
-            Goiás,
+            [AliasInShort("GO")] Goiás,
 
             /// <summary>
             /// Maranhão
             /// </summary>
-            [AliasInShort("MA")]
-            Maranhão,
+            [AliasInShort("MA")] Maranhão,
 
             /// <summary>
             /// Minas Gerais
             /// </summary>
-            [AliasInShort("MG")]
-            MinasGerais,
+            [AliasInShort("MG")] MinasGerais,
 
             /// <summary>
             /// Mato Grosso do Sul
             /// </summary>
-            [AliasInShort("MS")]
-            MatoGrossoDoSul,
+            [AliasInShort("MS")] MatoGrossoDoSul,
 
             /// <summary>
             /// Mato Grosso
             /// </summary>
-            [AliasInShort("MT")]
-            MatoGrosso,
+            [AliasInShort("MT")] MatoGrosso,
 
             /// <summary>
             /// Pará
             /// </summary>
-            [AliasInShort("PA")]
-            Pará,
+            [AliasInShort("PA")] Pará,
 
             /// <summary>
             /// Paraíba
             /// </summary>
-            [AliasInShort("PB")]
-            Paraíba,
+            [AliasInShort("PB")] Paraíba,
 
             /// <summary>
             /// Pernambuco
             /// </summary>
-            [AliasInShort("PE")]
-            Pernambuco,
+            [AliasInShort("PE")] Pernambuco,
 
             /// <summary>
             /// Piauí
             /// </summary>
-            [AliasInShort("PI")]
-            Piauí,
+            [AliasInShort("PI")] Piauí,
 
             /// <summary>
             /// Paraná
             /// </summary>
-            [AliasInShort("PR")]
-            Paraná,
+            [AliasInShort("PR")] Paraná,
 
             /// <summary>
             /// Rio de Janeiro
             /// </summary>
-            [AliasInShort("RJ")]
-            RioDeJaneiro,
+            [AliasInShort("RJ")] RioDeJaneiro,
 
             /// <summary>
             /// Rio Grande do Norte
             /// </summary>
-            [AliasInShort("RN")]
-            RioGrandeDoNorte,
+            [AliasInShort("RN")] RioGrandeDoNorte,
 
             /// <summary>
             /// Rondônia
             /// </summary>
-            [AliasInShort("RO")]
-            Rondônia,
+            [AliasInShort("RO")] Rondônia,
 
             /// <summary>
             /// Roraima
             /// </summary>
-            [AliasInShort("RR")]
-            Roraima,
+            [AliasInShort("RR")] Roraima,
 
             /// <summary>
             /// Rio Grande do Sul
             /// </summary>
-            [AliasInShort("RS")]
-            RioGrandeDoSul,
+            [AliasInShort("RS")] RioGrandeDoSul,
 
             /// <summary>
             /// Santa Catarina
             /// </summary>
-            [AliasInShort("SC")]
-            SantaCatarina,
+            [AliasInShort("SC")] SantaCatarina,
 
             /// <summary>
             /// Sergipe
             /// </summary>
-            [AliasInShort("SE")]
-            Sergipe,
+            [AliasInShort("SE")] Sergipe,
 
             /// <summary>
             /// São Paulo
             /// </summary>
-            [AliasInShort("SP")]
-            SãoPaulo,
+            [AliasInShort("SP")] SãoPaulo,
 
             /// <summary>
             /// Tocantins
             /// </summary>
-            [AliasInShort("TO")]
-            Tocantins,
+            [AliasInShort("TO")] Tocantins,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -329,8 +302,9 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -338,7 +312,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"BR-{values.ToRegionCode()}";
         }
 
@@ -346,19 +321,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

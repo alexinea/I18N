@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Serbia Regions
     /// </summary>
-    public static class SerbiaRegions {
-
+    public static class SerbiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -116,133 +117,112 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Serbia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Podunavlje
             /// </summary>
-            [AliasInShort("10")]
-            Podunavlje,
+            [AliasInShort("10")] Podunavlje,
 
             /// <summary>
             /// Braničevo
             /// </summary>
-            [AliasInShort("11")]
-            Braničevo,
+            [AliasInShort("11")] Braničevo,
 
             /// <summary>
             /// Šumadija
             /// </summary>
-            [AliasInShort("12")]
-            Šumadija,
+            [AliasInShort("12")] Šumadija,
 
             /// <summary>
             /// Pomoravlje
             /// </summary>
-            [AliasInShort("13")]
-            Pomoravlje,
+            [AliasInShort("13")] Pomoravlje,
 
             /// <summary>
             /// Bor
             /// </summary>
-            [AliasInShort("14")]
-            Bor,
+            [AliasInShort("14")] Bor,
 
             /// <summary>
             /// Zaječar
             /// </summary>
-            [AliasInShort("15")]
-            Zaječar,
+            [AliasInShort("15")] Zaječar,
 
             /// <summary>
             /// Zlatibor
             /// </summary>
-            [AliasInShort("16")]
-            Zlatibor,
+            [AliasInShort("16")] Zlatibor,
 
             /// <summary>
             /// Moravica
             /// </summary>
-            [AliasInShort("17")]
-            Moravica,
+            [AliasInShort("17")] Moravica,
 
             /// <summary>
             /// Raška
             /// </summary>
-            [AliasInShort("18")]
-            Raška,
+            [AliasInShort("18")] Raška,
 
             /// <summary>
             /// Rasina
             /// </summary>
-            [AliasInShort("19")]
-            Rasina,
+            [AliasInShort("19")] Rasina,
 
             /// <summary>
             /// Nišava
             /// </summary>
-            [AliasInShort("20")]
-            Nišava,
+            [AliasInShort("20")] Nišava,
 
             /// <summary>
             /// Toplica
             /// </summary>
-            [AliasInShort("21")]
-            Toplica,
+            [AliasInShort("21")] Toplica,
 
             /// <summary>
             /// Pirot
             /// </summary>
-            [AliasInShort("22")]
-            Pirot,
+            [AliasInShort("22")] Pirot,
 
             /// <summary>
             /// Jablanica
             /// </summary>
-            [AliasInShort("23")]
-            Jablanica,
+            [AliasInShort("23")] Jablanica,
 
             /// <summary>
             /// Pčinja
             /// </summary>
-            [AliasInShort("24")]
-            Pčinja,
+            [AliasInShort("24")] Pčinja,
 
             /// <summary>
             /// Beograd
             /// </summary>
-            [AliasInShort("00")]
-            Beograd,
+            [AliasInShort("00")] Beograd,
 
             /// <summary>
             /// Mačva
             /// </summary>
-            [AliasInShort("08")]
-            Mačva,
+            [AliasInShort("08")] Mačva,
 
             /// <summary>
             /// Kolubara
             /// </summary>
-            [AliasInShort("09")]
-            Wasit,
+            [AliasInShort("09")] Wasit,
 
             /// <summary>
             /// Kosovo-Metohija
             /// </summary>
-            [AliasInShort("KM")]
-            KosovoMetohija,
+            [AliasInShort("KM")] KosovoMetohija,
 
             /// <summary>
             /// Vojvodina
             /// </summary>
-            [AliasInShort("VO")]
-            Vojvodina,
+            [AliasInShort("VO")] Vojvodina,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -252,8 +232,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -261,7 +242,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"RS-{values.ToRegionCode()}";
         }
 
@@ -270,7 +252,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Serbia;
         }
 
@@ -279,7 +262,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.RS;
         }
 
@@ -287,19 +271,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

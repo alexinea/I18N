@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Mongolia Regions
     /// </summary>
-    public static class MongoliaRegions {
-
+    public static class MongoliaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -126,145 +127,122 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Mongolia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Ulaanbaatar
             /// </summary>
-            [AliasInShort("1")]
-            Ulaanbaatar,
+            [AliasInShort("1")] Ulaanbaatar,
 
             /// <summary>
             /// Orkhon
             /// </summary>
-            [AliasInShort("035")]
-            Orkhon,
+            [AliasInShort("035")] Orkhon,
 
             /// <summary>
             /// Darkhan-Uul
             /// </summary>
-            [AliasInShort("037")]
-            DarkhanUul,
+            [AliasInShort("037")] DarkhanUul,
 
             /// <summary>
             /// Khentii
             /// </summary>
-            [AliasInShort("039")]
-            Khentii,
+            [AliasInShort("039")] Khentii,
 
             /// <summary>
             /// Khövsgöl
             /// </summary>
-            [AliasInShort("041")]
-            Khövsgöl,
+            [AliasInShort("041")] Khövsgöl,
 
             /// <summary>
             /// Khovd
             /// </summary>
-            [AliasInShort("043")]
-            Khovd,
+            [AliasInShort("043")] Khovd,
 
             /// <summary>
             /// Uvs
             /// </summary>
-            [AliasInShort("046")]
-            Uvs,
+            [AliasInShort("046")] Uvs,
 
             /// <summary>
             /// Töv
             /// </summary>
-            [AliasInShort("047")]
-            Töv,
+            [AliasInShort("047")] Töv,
 
             /// <summary>
             /// Selenge
             /// </summary>
-            [AliasInShort("049")]
-            Selenge,
+            [AliasInShort("049")] Selenge,
 
             /// <summary>
             /// Sükhbaatar
             /// </summary>
-            [AliasInShort("051")]
-            Sükhbaatar,
+            [AliasInShort("051")] Sükhbaatar,
 
             /// <summary>
             /// Ömnögovi
             /// </summary>
-            [AliasInShort("053")]
-            Ömnögovi,
+            [AliasInShort("053")] Ömnögovi,
 
             /// <summary>
             /// Övörkhangai
             /// </summary>
-            [AliasInShort("055")]
-            Övörkhangai,
+            [AliasInShort("055")] Övörkhangai,
 
             /// <summary>
             /// Zavkhan
             /// </summary>
-            [AliasInShort("057")]
-            Zavkhan,
+            [AliasInShort("057")] Zavkhan,
 
             /// <summary>
             /// Dundgovi
             /// </summary>
-            [AliasInShort("059")]
-            Dundgovi,
+            [AliasInShort("059")] Dundgovi,
 
             /// <summary>
             /// Dornod
             /// </summary>
-            [AliasInShort("061")]
-            Dornod,
+            [AliasInShort("061")] Dornod,
 
             /// <summary>
             /// Dornogovi
             /// </summary>
-            [AliasInShort("063")]
-            Dornogovi,
+            [AliasInShort("063")] Dornogovi,
 
             /// <summary>
             /// Govisümber
             /// </summary>
-            [AliasInShort("064")]
-            Govisümber,
+            [AliasInShort("064")] Govisümber,
 
             /// <summary>
             /// Govi-Altai
             /// </summary>
-            [AliasInShort("065")]
-            GoviAltai,
+            [AliasInShort("065")] GoviAltai,
 
             /// <summary>
             /// Bulgan
             /// </summary>
-            [AliasInShort("067")]
-            Bulgan,
+            [AliasInShort("067")] Bulgan,
 
             /// <summary>
             /// Bayankhongor
             /// </summary>
-            [AliasInShort("069")]
-            Bayankhongor,
+            [AliasInShort("069")] Bayankhongor,
 
             /// <summary>
             /// Bayan-Ölgii
             /// </summary>
-            [AliasInShort("071")]
-            BayanÖlgii,
+            [AliasInShort("071")] BayanÖlgii,
 
             /// <summary>
             /// Arkhangai
             /// </summary>
-            [AliasInShort("073")]
-            Arkhangai,
+            [AliasInShort("073")] Arkhangai,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -274,8 +252,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -283,7 +262,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"MN-{values.ToRegionCode()}";
         }
 
@@ -292,7 +272,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Mongolia;
         }
 
@@ -301,7 +282,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.MN;
         }
 
@@ -309,19 +291,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

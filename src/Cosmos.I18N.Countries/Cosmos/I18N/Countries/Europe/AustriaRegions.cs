@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Austria regions
     /// </summary>
-    public static class AustriaRegions {
-
+    public static class AustriaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -61,67 +62,57 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Austria regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Burgenland
             /// </summary>
-            [AliasInShort("1")]
-            Burgenland,
+            [AliasInShort("1")] Burgenland,
 
             /// <summary>
             /// Carinthia
             /// </summary>
-            [AliasInShort("2")]
-            Kärnten,
+            [AliasInShort("2")] Kärnten,
 
             /// <summary>
             /// Lower Austria
             /// </summary>
-            [AliasInShort("3")]
-            Niederösterreich,
+            [AliasInShort("3")] Niederösterreich,
 
             /// <summary>
             /// Upper Austria
             /// </summary>
-            [AliasInShort("4")]
-            Oberösterreich,
+            [AliasInShort("4")] Oberösterreich,
 
             /// <summary>
             /// Salzburg
             /// </summary>
-            [AliasInShort("5")]
-            Salzburg,
+            [AliasInShort("5")] Salzburg,
 
             /// <summary>
             /// Styria
             /// </summary>
-            [AliasInShort("6")]
-            Steiermark,
+            [AliasInShort("6")] Steiermark,
 
             /// <summary>
             /// Tyrol
             /// </summary>
-            [AliasInShort("7")]
-            Tirol,
+            [AliasInShort("7")] Tirol,
 
             /// <summary>
             /// Vorarlberg
             /// </summary>
-            [AliasInShort("8")]
-            Vorarlberg,
+            [AliasInShort("8")] Vorarlberg,
 
             /// <summary>
             /// Vienna
             /// </summary>
-            [AliasInShort("9")]
-            Wien,
+            [AliasInShort("9")] Wien,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -131,8 +122,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -140,7 +132,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AT-{values.ToRegionCode()}";
         }
 
@@ -148,19 +141,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

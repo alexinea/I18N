@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// Palau Regions
     /// </summary>
-    public static class PalauRegions {
-
+    public static class PalauRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -96,109 +97,92 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// <summary>
         /// Enum values for Palau regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Kayangel
             /// </summary>
-            [AliasInShort("100")]
-            Kayangel,
+            [AliasInShort("100")] Kayangel,
 
             /// <summary>
             /// Koror
             /// </summary>
-            [AliasInShort("150")]
-            Koror,
+            [AliasInShort("150")] Koror,
 
             /// <summary>
             /// Melekeok
             /// </summary>
-            [AliasInShort("212")]
-            Melekeok,
+            [AliasInShort("212")] Melekeok,
 
             /// <summary>
             /// Ngaraard
             /// </summary>
-            [AliasInShort("214")]
-            Ngaraard,
+            [AliasInShort("214")] Ngaraard,
 
             /// <summary>
             /// Ngarchelong
             /// </summary>
-            [AliasInShort("218")]
-            Ngarchelong,
+            [AliasInShort("218")] Ngarchelong,
 
             /// <summary>
             /// Ngardmau
             /// </summary>
-            [AliasInShort("222")]
-            Ngardmau,
+            [AliasInShort("222")] Ngardmau,
 
             /// <summary>
             /// Ngatpang
             /// </summary>
-            [AliasInShort("224")]
-            Ngatpang,
+            [AliasInShort("224")] Ngatpang,
 
             /// <summary>
             /// Ngchesar
             /// </summary>
-            [AliasInShort("226")]
-            Ngchesar,
+            [AliasInShort("226")] Ngchesar,
 
             /// <summary>
             /// Ngeremlengui
             /// </summary>
-            [AliasInShort("227")]
-            Ngeremlengui,
+            [AliasInShort("227")] Ngeremlengui,
 
             /// <summary>
             /// Ngiwal
             /// </summary>
-            [AliasInShort("228")]
-            Ngiwal,
+            [AliasInShort("228")] Ngiwal,
 
             /// <summary>
             /// Peleliu
             /// </summary>
-            [AliasInShort("350")]
-            Peleliu,
+            [AliasInShort("350")] Peleliu,
 
             /// <summary>
             /// Sonsorol
             /// </summary>
-            [AliasInShort("370")]
-            Sonsorol,
+            [AliasInShort("370")] Sonsorol,
 
             /// <summary>
             /// Aimeliik
             /// </summary>
-            [AliasInShort("002")]
-            Aimeliik,
+            [AliasInShort("002")] Aimeliik,
 
             /// <summary>
             /// Airai
             /// </summary>
-            [AliasInShort("004")]
-            Airai,
+            [AliasInShort("004")] Airai,
 
             /// <summary>
             /// Angaur
             /// </summary>
-            [AliasInShort("010")]
-            Angaur,
+            [AliasInShort("010")] Angaur,
 
             /// <summary>
             /// Hatohobei
             /// </summary>
-            [AliasInShort("050")]
-            Hatohobei,
+            [AliasInShort("050")] Hatohobei,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -208,8 +192,9 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -217,7 +202,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"PW-{values.ToRegionCode()}";
         }
 
@@ -226,7 +212,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Palau;
         }
 
@@ -235,7 +222,8 @@ namespace Cosmos.I18N.Countries.Oceania {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.PW;
         }
 
@@ -243,19 +231,16 @@ namespace Cosmos.I18N.Countries.Oceania {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

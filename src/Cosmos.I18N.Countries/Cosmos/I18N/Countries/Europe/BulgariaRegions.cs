@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Bulgaria regions
     /// </summary>
-    public static class BulgariaRegions {
-
+    public static class BulgariaRegions
+    {
         #region Gets region
 
         /// <summary>
@@ -156,182 +157,153 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Bulgaria regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Blagoevgrad
             /// </summary>
-            [AliasInShort("01")]
-            Blagoevgrad,
+            [AliasInShort("01")] Blagoevgrad,
 
             /// <summary>
             /// Burgas
             /// </summary>
-            [AliasInShort("02")]
-            Burgas,
+            [AliasInShort("02")] Burgas,
 
             /// <summary>
             /// Varna
             /// </summary>
-            [AliasInShort("03")]
-            Varna,
+            [AliasInShort("03")] Varna,
 
             /// <summary>
             /// Veliko Tarnovo
             /// </summary>
-            [AliasInShort("04")]
-            VelikoTarnovo,
+            [AliasInShort("04")] VelikoTarnovo,
 
             /// <summary>
             /// Vidin
             /// </summary>
-            [AliasInShort("05")]
-            Vidin,
+            [AliasInShort("05")] Vidin,
 
             /// <summary>
             /// Vratsa
             /// </summary>
-            [AliasInShort("06")]
-            Vratsa,
+            [AliasInShort("06")] Vratsa,
 
             /// <summary>
             /// Gabrovo
             /// </summary>
-            [AliasInShort("07")]
-            Gabrovo,
+            [AliasInShort("07")] Gabrovo,
 
             /// <summary>
             /// Dobrich
             /// </summary>
-            [AliasInShort("08")]
-            Dobrich,
+            [AliasInShort("08")] Dobrich,
 
             /// <summary>
             /// Kardzhali
             /// </summary>
-            [AliasInShort("09")]
-            Kardzhali,
+            [AliasInShort("09")] Kardzhali,
 
             /// <summary>
             /// Kyustendil
             /// </summary>
-            [AliasInShort("10")]
-            Kyustendil,
+            [AliasInShort("10")] Kyustendil,
 
             /// <summary>
             /// Lovech
             /// </summary>
-            [AliasInShort("11")]
-            Lovech,
+            [AliasInShort("11")] Lovech,
 
             /// <summary>
             /// Montana
             /// </summary>
-            [AliasInShort("12")]
-            Montana,
+            [AliasInShort("12")] Montana,
 
             /// <summary>
             /// Pazardzhik
             /// </summary>
-            [AliasInShort("13")]
-            Pazardzhik,
+            [AliasInShort("13")] Pazardzhik,
 
             /// <summary>
             /// Pernik
             /// </summary>
-            [AliasInShort("14")]
-            Pernik,
+            [AliasInShort("14")] Pernik,
 
             /// <summary>
             /// Pleven
             /// </summary>
-            [AliasInShort("15")]
-            Pleven,
+            [AliasInShort("15")] Pleven,
 
             /// <summary>
             /// Plovdiv
             /// </summary>
-            [AliasInShort("16")]
-            Plovdiv,
+            [AliasInShort("16")] Plovdiv,
 
             /// <summary>
             /// Razgrad
             /// </summary>
-            [AliasInShort("17")]
-            Razgrad,
+            [AliasInShort("17")] Razgrad,
 
             /// <summary>
             /// Ruse
             /// </summary>
-            [AliasInShort("18")]
-            Ruse,
+            [AliasInShort("18")] Ruse,
 
             /// <summary>
             /// Silistra
             /// </summary>
-            [AliasInShort("19")]
-            Silistra,
+            [AliasInShort("19")] Silistra,
 
             /// <summary>
             /// Sliven
             /// </summary>
-            [AliasInShort("20")]
-            Sliven,
+            [AliasInShort("20")] Sliven,
 
             /// <summary>
             /// Smolyan
             /// </summary>
-            [AliasInShort("21")]
-            Smolyan,
+            [AliasInShort("21")] Smolyan,
 
             /// <summary>
             /// Sofia
             /// </summary>
-            [AliasInShort("22")]
-            Sofia,
+            [AliasInShort("22")] Sofia,
 
             /// <summary>
             /// Sofia District
             /// </summary>
-            [AliasInShort("23")]
-            SofiaDistrict,
+            [AliasInShort("23")] SofiaDistrict,
 
             /// <summary>
             /// Stara Zagora
             /// </summary>
-            [AliasInShort("24")]
-            StaraZagora,
+            [AliasInShort("24")] StaraZagora,
 
             /// <summary>
             /// Targovishte
             /// </summary>
-            [AliasInShort("25")]
-            Targovishte,
+            [AliasInShort("25")] Targovishte,
 
             /// <summary>
             /// Haskovo
             /// </summary>
-            [AliasInShort("26")]
-            Haskovo,
+            [AliasInShort("26")] Haskovo,
 
             /// <summary>
             /// Shumen
             /// </summary>
-            [AliasInShort("27")]
-            Shumen,
+            [AliasInShort("27")] Shumen,
 
             /// <summary>
             /// Yambol
             /// </summary>
-            [AliasInShort("28")]
-            Yambol,
+            [AliasInShort("28")] Yambol,
 
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -341,8 +313,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -350,7 +323,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"BG-{values.ToRegionCode()}";
         }
 
@@ -359,7 +333,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Bulgaria;
         }
 
@@ -368,7 +343,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.BG;
         }
 
@@ -376,19 +352,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

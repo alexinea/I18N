@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Thailand Regions
     /// </summary>
-    public static class ThailandRegions {
-
+    public static class ThailandRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -406,481 +407,402 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Thailand regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Bangkok
             /// </summary>
-            [AliasInShort("10")]
-            Bangkok,
+            [AliasInShort("10")] Bangkok,
 
             /// <summary>
             /// Samut Prakan
             /// </summary>
-            [AliasInShort("11")]
-            SamutPrakan,
+            [AliasInShort("11")] SamutPrakan,
 
             /// <summary>
             /// Nonthaburi
             /// </summary>
-            [AliasInShort("12")]
-            Nonthaburi,
+            [AliasInShort("12")] Nonthaburi,
 
             /// <summary>
             /// Pathum Thani
             /// </summary>
-            [AliasInShort("13")]
-            PathumThani,
+            [AliasInShort("13")] PathumThani,
 
             /// <summary>
             /// Phra Nakhon Si Ayutthaya
             /// </summary>
-            [AliasInShort("14")]
-            PhraNakhonSiAyutthaya,
+            [AliasInShort("14")] PhraNakhonSiAyutthaya,
 
             /// <summary>
             /// Ang Thong
             /// </summary>
-            [AliasInShort("15")]
-            AngThong,
+            [AliasInShort("15")] AngThong,
 
             /// <summary>
             /// Lopburi
             /// </summary>
-            [AliasInShort("16")]
-            Lopburi,
+            [AliasInShort("16")] Lopburi,
 
             /// <summary>
             /// Sing Buri
             /// </summary>
-            [AliasInShort("17")]
-            SingBuri,
+            [AliasInShort("17")] SingBuri,
 
             /// <summary>
             /// Chai Nat
             /// </summary>
-            [AliasInShort("18")]
-            ChaiNat,
+            [AliasInShort("18")] ChaiNat,
 
             /// <summary>
             /// Saraburi
             /// </summary>
-            [AliasInShort("19")]
-            Saraburi,
+            [AliasInShort("19")] Saraburi,
 
             /// <summary>
             /// Chon Buri
             /// </summary>
-            [AliasInShort("20")]
-            ChonBuri,
+            [AliasInShort("20")] ChonBuri,
 
             /// <summary>
             /// Rayong
             /// </summary>
-            [AliasInShort("21")]
-            Rayong,
+            [AliasInShort("21")] Rayong,
 
             /// <summary>
             /// Chanthaburi
             /// </summary>
-            [AliasInShort("22")]
-            Chanthaburi,
+            [AliasInShort("22")] Chanthaburi,
 
             /// <summary>
             /// Trat
             /// </summary>
-            [AliasInShort("23")]
-            Trat,
+            [AliasInShort("23")] Trat,
 
             /// <summary>
             /// Chachoengsao
             /// </summary>
-            [AliasInShort("24")]
-            Chachoengsao,
+            [AliasInShort("24")] Chachoengsao,
 
             /// <summary>
             /// Prachin Buri
             /// </summary>
-            [AliasInShort("25")]
-            PrachinBuri,
+            [AliasInShort("25")] PrachinBuri,
 
             /// <summary>
             /// Nakhon Nayok
             /// </summary>
-            [AliasInShort("26")]
-            NakhonNayok,
+            [AliasInShort("26")] NakhonNayok,
 
             /// <summary>
             /// Sa Kaeo
             /// </summary>
-            [AliasInShort("27")]
-            SaKaeo,
+            [AliasInShort("27")] SaKaeo,
 
             /// <summary>
             /// Nakhon Ratchasima
             /// </summary>
-            [AliasInShort("30")]
-            NakhonRatchasima,
+            [AliasInShort("30")] NakhonRatchasima,
 
             /// <summary>
             /// Buri Ram
             /// </summary>
-            [AliasInShort("31")]
-            BuriRam,
+            [AliasInShort("31")] BuriRam,
 
             /// <summary>
             /// Surin
             /// </summary>
-            [AliasInShort("32")]
-            Surin,
+            [AliasInShort("32")] Surin,
 
             /// <summary>
             /// Si Sa Ket
             /// </summary>
-            [AliasInShort("33")]
-            SiSaKet,
+            [AliasInShort("33")] SiSaKet,
 
             /// <summary>
             /// Ubon Ratchathani
             /// </summary>
-            [AliasInShort("34")]
-            UbonRatchathani,
+            [AliasInShort("34")] UbonRatchathani,
 
             /// <summary>
             /// Yasothon
             /// </summary>
-            [AliasInShort("35")]
-            Yasothon,
+            [AliasInShort("35")] Yasothon,
 
             /// <summary>
             /// Chaiyaphum
             /// </summary>
-            [AliasInShort("36")]
-            Chaiyaphum,
+            [AliasInShort("36")] Chaiyaphum,
 
             /// <summary>
             /// Amnat Charoen
             /// </summary>
-            [AliasInShort("37")]
-            AmnatCharoen,
+            [AliasInShort("37")] AmnatCharoen,
 
             /// <summary>
             /// Bueng Kan
             /// </summary>
-            [AliasInShort("38")]
-            BuengKan,
+            [AliasInShort("38")] BuengKan,
 
             /// <summary>
             /// Nong Bua Lam Phu
             /// </summary>
-            [AliasInShort("39")]
-            NongBuaLamPhu,
+            [AliasInShort("39")] NongBuaLamPhu,
 
             /// <summary>
             /// Khon Kaen
             /// </summary>
-            [AliasInShort("40")]
-            KhonKaen,
+            [AliasInShort("40")] KhonKaen,
 
             /// <summary>
             /// Udon Thani
             /// </summary>
-            [AliasInShort("41")]
-            UdonThani,
+            [AliasInShort("41")] UdonThani,
 
             /// <summary>
             /// Loei
             /// </summary>
-            [AliasInShort("42")]
-            Loei,
+            [AliasInShort("42")] Loei,
 
             /// <summary>
             /// Nong Khai
             /// </summary>
-            [AliasInShort("43")]
-            NongKhai,
+            [AliasInShort("43")] NongKhai,
 
             /// <summary>
             /// Maha Sarakham
             /// </summary>
-            [AliasInShort("44")]
-            MahaSarakham,
+            [AliasInShort("44")] MahaSarakham,
 
             /// <summary>
             /// Roi Et
             /// </summary>
-            [AliasInShort("45")]
-            RoiEt,
+            [AliasInShort("45")] RoiEt,
 
             /// <summary>
             /// Kalasin
             /// </summary>
-            [AliasInShort("46")]
-            Kalasin,
+            [AliasInShort("46")] Kalasin,
 
             /// <summary>
             /// Sakon Nakhon
             /// </summary>
-            [AliasInShort("47")]
-            SakonNakhon,
+            [AliasInShort("47")] SakonNakhon,
 
             /// <summary>
             /// Nakhon Phanom
             /// </summary>
-            [AliasInShort("48")]
-            NakhonPhanom,
+            [AliasInShort("48")] NakhonPhanom,
 
             /// <summary>
             /// Mukdahan
             /// </summary>
-            [AliasInShort("49")]
-            Mukdahan,
+            [AliasInShort("49")] Mukdahan,
 
             /// <summary>
             /// Chiang Mai
             /// </summary>
-            [AliasInShort("50")]
-            ChiangMai,
+            [AliasInShort("50")] ChiangMai,
 
             /// <summary>
             /// Lamphun
             /// </summary>
-            [AliasInShort("51")]
-            Lamphun,
+            [AliasInShort("51")] Lamphun,
 
             /// <summary>
             /// Lampang
             /// </summary>
-            [AliasInShort("52")]
-            Lampang,
+            [AliasInShort("52")] Lampang,
 
             /// <summary>
             /// Uttaradit
             /// </summary>
-            [AliasInShort("53")]
-            Uttaradit,
+            [AliasInShort("53")] Uttaradit,
 
             /// <summary>
             /// Phrae
             /// </summary>
-            [AliasInShort("54")]
-            Phrae,
+            [AliasInShort("54")] Phrae,
 
             /// <summary>
             /// Nan
             /// </summary>
-            [AliasInShort("55")]
-            Nan,
+            [AliasInShort("55")] Nan,
 
             /// <summary>
             /// Phayao
             /// </summary>
-            [AliasInShort("56")]
-            Phayao,
+            [AliasInShort("56")] Phayao,
 
             /// <summary>
             /// Chiang Rai
             /// </summary>
-            [AliasInShort("57")]
-            ChiangRai,
+            [AliasInShort("57")] ChiangRai,
 
             /// <summary>
             /// Mae Hong Son
             /// </summary>
-            [AliasInShort("58")]
-            MaeHongSon,
+            [AliasInShort("58")] MaeHongSon,
 
             /// <summary>
             /// Nakhon Sawan
             /// </summary>
-            [AliasInShort("60")]
-            NakhonSawan,
+            [AliasInShort("60")] NakhonSawan,
 
             /// <summary>
             /// Uthai Thani
             /// </summary>
-            [AliasInShort("61")]
-            UthaiThani,
+            [AliasInShort("61")] UthaiThani,
 
             /// <summary>
             /// Kamphaeng Phet
             /// </summary>
-            [AliasInShort("62")]
-            KamphaengPhet,
+            [AliasInShort("62")] KamphaengPhet,
 
             /// <summary>
             /// Tak
             /// </summary>
-            [AliasInShort("63")]
-            Tak,
+            [AliasInShort("63")] Tak,
 
             /// <summary>
             /// Sukhothai
             /// </summary>
-            [AliasInShort("64")]
-            Sukhothai,
+            [AliasInShort("64")] Sukhothai,
 
             /// <summary>
             /// Phitsanulok
             /// </summary>
-            [AliasInShort("65")]
-            Phitsanulok,
+            [AliasInShort("65")] Phitsanulok,
 
             /// <summary>
             /// Phichit
             /// </summary>
-            [AliasInShort("66")]
-            Phichit,
+            [AliasInShort("66")] Phichit,
 
             /// <summary>
             /// Phetchabun
             /// </summary>
-            [AliasInShort("67")]
-            Phetchabun,
+            [AliasInShort("67")] Phetchabun,
 
             /// <summary>
             /// Ratchaburi
             /// </summary>
-            [AliasInShort("70")]
-            Ratchaburi,
+            [AliasInShort("70")] Ratchaburi,
 
             /// <summary>
             /// Kanchanaburi
             /// </summary>
-            [AliasInShort("71")]
-            Kanchanaburi,
+            [AliasInShort("71")] Kanchanaburi,
 
             /// <summary>
             /// Suphanburi
             /// </summary>
-            [AliasInShort("72")]
-            Suphanburi,
+            [AliasInShort("72")] Suphanburi,
 
             /// <summary>
             /// Nakhon Pathom
             /// </summary>
-            [AliasInShort("73")]
-            NakhonPathom,
+            [AliasInShort("73")] NakhonPathom,
 
             /// <summary>
             /// Samut Sakhon
             /// </summary>
-            [AliasInShort("74")]
-            SamutSakhon,
+            [AliasInShort("74")] SamutSakhon,
 
             /// <summary>
             /// Samut Songkhram
             /// </summary>
-            [AliasInShort("75")]
-            SamutSongkhram,
+            [AliasInShort("75")] SamutSongkhram,
 
             /// <summary>
             /// Phetchaburi
             /// </summary>
-            [AliasInShort("76")]
-            Phetchaburi,
+            [AliasInShort("76")] Phetchaburi,
 
             /// <summary>
             /// Prachuap Khiri Khan
             /// </summary>
-            [AliasInShort("77")]
-            PrachuapKhiriKhan,
+            [AliasInShort("77")] PrachuapKhiriKhan,
 
             /// <summary>
             /// Nakhon Si Thammarat
             /// </summary>
-            [AliasInShort("80")]
-            NakhonSiThammarat,
+            [AliasInShort("80")] NakhonSiThammarat,
 
             /// <summary>
             /// Krabi
             /// </summary>
-            [AliasInShort("81")]
-            Krabi,
+            [AliasInShort("81")] Krabi,
 
             /// <summary>
             /// Phang Nga
             /// </summary>
-            [AliasInShort("82")]
-            PhangNga,
+            [AliasInShort("82")] PhangNga,
 
             /// <summary>
             /// Phuket
             /// </summary>
-            [AliasInShort("83")]
-            Phuket,
+            [AliasInShort("83")] Phuket,
 
             /// <summary>
             /// Surat Thani
             /// </summary>
-            [AliasInShort("84")]
-            SuratThani,
+            [AliasInShort("84")] SuratThani,
 
             /// <summary>
             /// Ranong
             /// </summary>
-            [AliasInShort("85")]
-            Ranong,
+            [AliasInShort("85")] Ranong,
 
             /// <summary>
             /// Chumphon
             /// </summary>
-            [AliasInShort("86")]
-            Chumphon,
+            [AliasInShort("86")] Chumphon,
 
             /// <summary>
             /// Songkhla
             /// </summary>
-            [AliasInShort("90")]
-            Songkhla,
+            [AliasInShort("90")] Songkhla,
 
             /// <summary>
             /// Satun
             /// </summary>
-            [AliasInShort("91")]
-            Satun,
+            [AliasInShort("91")] Satun,
 
             /// <summary>
             /// Trang
             /// </summary>
-            [AliasInShort("92")]
-            Trang,
+            [AliasInShort("92")] Trang,
 
             /// <summary>
             /// Phatthalung
             /// </summary>
-            [AliasInShort("93")]
-            Phatthalung,
+            [AliasInShort("93")] Phatthalung,
 
             /// <summary>
             /// Pattani
             /// </summary>
-            [AliasInShort("94")]
-            Pattani,
+            [AliasInShort("94")] Pattani,
 
             /// <summary>
             /// Yala
             /// </summary>
-            [AliasInShort("95")]
-            Yala,
+            [AliasInShort("95")] Yala,
 
             /// <summary>
             /// Narathiwat
             /// </summary>
-            [AliasInShort("96")]
-            Narathiwat,
+            [AliasInShort("96")] Narathiwat,
 
             /// <summary>
             /// Pattaya
             /// </summary>
-            [AliasInShort("S")]
-            Pattaya,
+            [AliasInShort("S")] Pattaya,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -890,8 +812,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -899,7 +822,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"TH-{values.ToRegionCode()}";
         }
 
@@ -908,7 +832,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Thailand;
         }
 
@@ -917,7 +842,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.TH;
         }
 
@@ -925,19 +851,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

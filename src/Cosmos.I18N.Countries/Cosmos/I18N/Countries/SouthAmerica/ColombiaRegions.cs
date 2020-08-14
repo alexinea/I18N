@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// Colombia regions
     /// </summary>
-    public static class ColombiaRegions {
-
+    public static class ColombiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -181,211 +182,177 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// <summary>
         /// Enum values for Colombia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Amazonas
             /// </summary>
-            [AliasInShort("AMA")]
-            Amazonas,
+            [AliasInShort("AMA")] Amazonas,
 
             /// <summary>
             /// Antioquia
             /// </summary>
-            [AliasInShort("ANT")]
-            Antioquia,
+            [AliasInShort("ANT")] Antioquia,
 
             /// <summary>
             /// Arauca
             /// </summary>
-            [AliasInShort("ARA")]
-            Arauca,
+            [AliasInShort("ARA")] Arauca,
 
             /// <summary>
             /// Atlántico
             /// </summary>
-            [AliasInShort("ATL")]
-            Atlántico,
+            [AliasInShort("ATL")] Atlántico,
 
             /// <summary>
             /// Bolívar
             /// </summary>
-            [AliasInShort("BOL")]
-            Bolívar,
+            [AliasInShort("BOL")] Bolívar,
 
             /// <summary>
             /// Boyacá
             /// </summary>
-            [AliasInShort("BOY")]
-            Boyacá,
+            [AliasInShort("BOY")] Boyacá,
 
             /// <summary>
             /// Caldas
             /// </summary>
-            [AliasInShort("CAL")]
-            Caldas,
+            [AliasInShort("CAL")] Caldas,
 
             /// <summary>
             /// Caquetá
             /// </summary>
-            [AliasInShort("CAQ")]
-            Caquetá,
+            [AliasInShort("CAQ")] Caquetá,
 
             /// <summary>
             /// Casanare
             /// </summary>
-            [AliasInShort("CAS")]
-            Casanare,
+            [AliasInShort("CAS")] Casanare,
 
             /// <summary>
             /// Cauca
             /// </summary>
-            [AliasInShort("CAU")]
-            Cauca,
+            [AliasInShort("CAU")] Cauca,
 
             /// <summary>
             /// Cesar
             /// </summary>
-            [AliasInShort("CES")]
-            Cesar,
+            [AliasInShort("CES")] Cesar,
 
             /// <summary>
             /// Chocó
             /// </summary>
-            [AliasInShort("CHO")]
-            Chocó,
+            [AliasInShort("CHO")] Chocó,
 
             /// <summary>
             /// Córdoba, COR
             /// </summary>
-            [AliasInShort("COR")]
-            Córdoba,
+            [AliasInShort("COR")] Córdoba,
 
             /// <summary>
             /// Cundinamarca, CUN
             /// </summary>
-            [AliasInShort("CUN")]
-            Cundinamarca,
+            [AliasInShort("CUN")] Cundinamarca,
 
             /// <summary>
             /// Capital District, DC
             /// </summary>
-            [AliasInShort("DC")]
-            CapitalDistrict,
+            [AliasInShort("DC")] CapitalDistrict,
 
             /// <summary>
             /// Guainía, GUA
             /// </summary>
-            [AliasInShort("GUA")]
-            Guainía,
+            [AliasInShort("GUA")] Guainía,
 
             /// <summary>
             /// Guaviare, GUV
             /// </summary>
-            [AliasInShort("GUV")]
-            Guaviare,
+            [AliasInShort("GUV")] Guaviare,
 
             /// <summary>
             /// Huila, HUI
             /// </summary>
-            [AliasInShort("HUI")]
-            Huila,
+            [AliasInShort("HUI")] Huila,
 
             /// <summary>
             /// La Guajira, LAG
             /// </summary>
-            [AliasInShort("LAG")]
-            LaGuajira,
+            [AliasInShort("LAG")] LaGuajira,
 
             /// <summary>
             /// Magdalena, MAG
             /// </summary>
-            [AliasInShort("MAG")]
-            Magdalena,
+            [AliasInShort("MAG")] Magdalena,
 
             /// <summary>
             /// Meta, MET
             /// </summary>
-            [AliasInShort("MET")]
-            Meta,
+            [AliasInShort("MET")] Meta,
 
             /// <summary>
             /// Nariño, NAR
             /// </summary>
-            [AliasInShort("NAR")]
-            Nariño,
+            [AliasInShort("NAR")] Nariño,
 
             /// <summary>
             /// Norte de Santander, NSA
             /// </summary>
-            [AliasInShort("NSA")]
-            NorteDeSantander,
+            [AliasInShort("NSA")] NorteDeSantander,
 
             /// <summary>
             /// Putumayo, PUT
             /// </summary>
-            [AliasInShort("PUT")]
-            Putumayo,
+            [AliasInShort("PUT")] Putumayo,
 
             /// <summary>
             /// Quindío, QUI
             /// </summary>
-            [AliasInShort("QUI")]
-            Quindío,
+            [AliasInShort("QUI")] Quindío,
 
             /// <summary>
             /// Risaralda, RIS
             /// </summary>
-            [AliasInShort("RIS")]
-            Risaralda,
+            [AliasInShort("RIS")] Risaralda,
 
             /// <summary>
             /// Santander, SAN
             /// </summary>
-            [AliasInShort("SAN")]
-            Santander,
+            [AliasInShort("SAN")] Santander,
 
             /// <summary>
             /// San Andrés and Providencia, SAP
             /// </summary>
-            [AliasInShort("SAP")]
-            SanAndrésAndProvidencia,
+            [AliasInShort("SAP")] SanAndrésAndProvidencia,
 
             /// <summary>
             /// Sucre, SUC
             /// </summary>
-            [AliasInShort("SUC")]
-            Sucre,
+            [AliasInShort("SUC")] Sucre,
 
             /// <summary>
             /// Tolima, TOL
             /// </summary>
-            [AliasInShort("TOL")]
-            Tolima,
+            [AliasInShort("TOL")] Tolima,
 
             /// <summary>
             /// Valle del Cauca, VAC
             /// </summary>
-            [AliasInShort("VAC")]
-            ValleDelCauca,
+            [AliasInShort("VAC")] ValleDelCauca,
 
             /// <summary>
             /// Vaupés, VAU
             /// </summary>
-            [AliasInShort("VAU")]
-            Vaupés,
+            [AliasInShort("VAU")] Vaupés,
 
             /// <summary>
             /// Vichada, VID
             /// </summary>
-            [AliasInShort("VID")]
-            Vichada,
+            [AliasInShort("VID")] Vichada,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -395,8 +362,9 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -404,7 +372,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CO-{values.ToRegionCode()}";
         }
 
@@ -413,7 +382,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Colombia;
         }
 
@@ -422,7 +392,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.CO;
         }
 
@@ -430,19 +401,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Morocco Regions
     /// </summary>
-    public static class MoroccoRegions {
-
+    public static class MoroccoRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -96,109 +97,92 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Morocco regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Doukkala-Abda
             /// </summary>
-            [AliasInShort("10")]
-            DoukkalaAbda,
+            [AliasInShort("10")] DoukkalaAbda,
 
             /// <summary>
             /// Marrakesh-Tensift-El Haouz
             /// </summary>
-            [AliasInShort("11")]
-            MarrakeshTensiftElHaouz,
+            [AliasInShort("11")] MarrakeshTensiftElHaouz,
 
             /// <summary>
             /// Tadla-Azilal
             /// </summary>
-            [AliasInShort("12")]
-            TadlaAzilal,
+            [AliasInShort("12")] TadlaAzilal,
 
             /// <summary>
             /// Souss-Massa-Drâa
             /// </summary>
-            [AliasInShort("13")]
-            SoussMassaDrâa,
+            [AliasInShort("13")] SoussMassaDrâa,
 
             /// <summary>
             /// Guelmim-Es Semara
             /// </summary>
-            [AliasInShort("14")]
-            GuelmimEsSemara,
+            [AliasInShort("14")] GuelmimEsSemara,
 
             /// <summary>
             /// Laâyoune-Boujdour-Sakia El Hamra
             /// </summary>
-            [AliasInShort("15")]
-            LaâyouneBoujdourSakiaElHamra,
+            [AliasInShort("15")] LaâyouneBoujdourSakiaElHamra,
 
             /// <summary>
             /// Oued Ed-Dahab-Lagouira
             /// </summary>
-            [AliasInShort("16")]
-            OuedEdDahabLagouira,
+            [AliasInShort("16")] OuedEdDahabLagouira,
 
             /// <summary>
             /// Tangier-Tétouan
             /// </summary>
-            [AliasInShort("01")]
-            TangierTétouan,
+            [AliasInShort("01")] TangierTétouan,
 
             /// <summary>
             /// Gharb-Chrarda-Béni Hssen
             /// </summary>
-            [AliasInShort("02")]
-            GharbChrardaBéniHssen,
+            [AliasInShort("02")] GharbChrardaBéniHssen,
 
             /// <summary>
             /// Taza-Al Hoceima-Taounate
             /// </summary>
-            [AliasInShort("03")]
-            TazaAlHoceimaTaounate,
+            [AliasInShort("03")] TazaAlHoceimaTaounate,
 
             /// <summary>
             /// Oriental
             /// </summary>
-            [AliasInShort("04")]
-            Oriental,
+            [AliasInShort("04")] Oriental,
 
             /// <summary>
             /// Fès-Boulemane
             /// </summary>
-            [AliasInShort("05")]
-            FèsBoulemane,
+            [AliasInShort("05")] FèsBoulemane,
 
             /// <summary>
             /// Meknès-Tafilalet
             /// </summary>
-            [AliasInShort("06")]
-            MeknèsTafilalet,
+            [AliasInShort("06")] MeknèsTafilalet,
 
             /// <summary>
             /// Rabat-Salé-Zemmour-Zaer
             /// </summary>
-            [AliasInShort("07")]
-            RabatSaléZemmourZaer,
+            [AliasInShort("07")] RabatSaléZemmourZaer,
 
             /// <summary>
             /// Grand Casablanca
             /// </summary>
-            [AliasInShort("08")]
-            GrandCasablanca,
+            [AliasInShort("08")] GrandCasablanca,
 
             /// <summary>
             /// Chaouia-Ouardigha
             /// </summary>
-            [AliasInShort("09")]
-            ChaouiaOuardigha,
+            [AliasInShort("09")] ChaouiaOuardigha,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -208,8 +192,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -217,7 +202,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"MA-{values.ToRegionCode()}";
         }
 
@@ -226,7 +212,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Morocco;
         }
 
@@ -235,7 +222,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.MA;
         }
 
@@ -243,19 +231,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

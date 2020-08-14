@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// Cuba regions
     /// </summary>
-    public static class CubaRegions {
-
+    public static class CubaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -96,109 +97,92 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for Cuba regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Pinar del Río
             /// </summary>
-            [AliasInShort("01")]
-            PinarDelRío,
+            [AliasInShort("01")] PinarDelRío,
 
             /// <summary>
             /// Havana
             /// </summary>
-            [AliasInShort("03")]
-            Havana,
+            [AliasInShort("03")] Havana,
 
             /// <summary>
             /// Matanzas
             /// </summary>
-            [AliasInShort("04")]
-            Matanzas,
+            [AliasInShort("04")] Matanzas,
 
             /// <summary>
             /// Villa Clara
             /// </summary>
-            [AliasInShort("05")]
-            VillaClara,
+            [AliasInShort("05")] VillaClara,
 
             /// <summary>
             /// Cienfuegos
             /// </summary>
-            [AliasInShort("06")]
-            Cienfuegos,
+            [AliasInShort("06")] Cienfuegos,
 
             /// <summary>
             /// Sancti Spíritus
             /// </summary>
-            [AliasInShort("07")]
-            SanctiSpíritus,
+            [AliasInShort("07")] SanctiSpíritus,
 
             /// <summary>
             /// Ciego de Ávila
             /// </summary>
-            [AliasInShort("08")]
-            CiegoDeÁvila,
+            [AliasInShort("08")] CiegoDeÁvila,
 
             /// <summary>
             /// Camagüey
             /// </summary>
-            [AliasInShort("09")]
-            Camagüey,
+            [AliasInShort("09")] Camagüey,
 
             /// <summary>
             /// Las Tunas
             /// </summary>
-            [AliasInShort("10")]
-            LasTunas,
+            [AliasInShort("10")] LasTunas,
 
             /// <summary>
             /// Holguín
             /// </summary>
-            [AliasInShort("11")]
-            Holguín,
+            [AliasInShort("11")] Holguín,
 
             /// <summary>
             /// Granma
             /// </summary>
-            [AliasInShort("12")]
-            Granma,
+            [AliasInShort("12")] Granma,
 
             /// <summary>
             /// Santiago de Cuba
             /// </summary>
-            [AliasInShort("13")]
-            SantiagoDeCuba,
+            [AliasInShort("13")] SantiagoDeCuba,
 
             /// <summary>
             /// Guantánamo
             /// </summary>
-            [AliasInShort("14")]
-            Guantánamo,
+            [AliasInShort("14")] Guantánamo,
 
             /// <summary>
             /// Artemisa
             /// </summary>
-            [AliasInShort("15")]
-            Artemisa,
+            [AliasInShort("15")] Artemisa,
 
             /// <summary>
             /// Mayabeque
             /// </summary>
-            [AliasInShort("16")]
-            Mayabeque,
+            [AliasInShort("16")] Mayabeque,
 
             /// <summary>
             /// Isla de la Juventud
             /// </summary>
-            [AliasInShort("99")]
-            IslaDeLaJuventud,
+            [AliasInShort("99")] IslaDeLaJuventud,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -208,8 +192,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -217,7 +202,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CU-{values.ToRegionCode()}";
         }
 
@@ -226,7 +212,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Cuba;
         }
 
@@ -235,7 +222,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.CU;
         }
 
@@ -243,19 +231,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

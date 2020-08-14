@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Iraq Regions
     /// </summary>
-    public static class IraqRegions {
-
+    public static class IraqRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -106,121 +107,102 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Iraq regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Al Anbar
             /// </summary>
-            [AliasInShort("AN")]
-            AlAnbar,
+            [AliasInShort("AN")] AlAnbar,
 
             /// <summary>
             /// Erbil
             /// </summary>
-            [AliasInShort("AR")]
-            Erbil,
+            [AliasInShort("AR")] Erbil,
 
             /// <summary>
             /// Basra
             /// </summary>
-            [AliasInShort("BA")]
-            Basra,
+            [AliasInShort("BA")] Basra,
 
             /// <summary>
             /// Babylon
             /// </summary>
-            [AliasInShort("BB")]
-            Babylon,
+            [AliasInShort("BB")] Babylon,
 
             /// <summary>
             /// Baghdad
             /// </summary>
-            [AliasInShort("BG")]
-            Baghdad,
+            [AliasInShort("BG")] Baghdad,
 
             /// <summary>
             /// Dohuk
             /// </summary>
-            [AliasInShort("DA")]
-            Dohuk,
+            [AliasInShort("DA")] Dohuk,
 
             /// <summary>
             /// Diyala
             /// </summary>
-            [AliasInShort("DI")]
-            Diyala,
+            [AliasInShort("DI")] Diyala,
 
             /// <summary>
             /// Dhi Qar
             /// </summary>
-            [AliasInShort("DQ")]
-            DhiQar,
+            [AliasInShort("DQ")] DhiQar,
 
             /// <summary>
             /// Karbala
             /// </summary>
-            [AliasInShort("KA")]
-            Karbala,
+            [AliasInShort("KA")] Karbala,
 
             /// <summary>
             /// Kirkuk
             /// </summary>
-            [AliasInShort("KI")]
-            Kirkuk,
+            [AliasInShort("KI")] Kirkuk,
 
             /// <summary>
             /// Maysan
             /// </summary>
-            [AliasInShort("MA")]
-            Maysan,
+            [AliasInShort("MA")] Maysan,
 
             /// <summary>
             /// Al Muthanna
             /// </summary>
-            [AliasInShort("MU")]
-            AlMuthanna,
+            [AliasInShort("MU")] AlMuthanna,
 
             /// <summary>
             /// Najaf
             /// </summary>
-            [AliasInShort("NA")]
-            Najaf,
+            [AliasInShort("NA")] Najaf,
 
             /// <summary>
             /// Nineveh
             /// </summary>
-            [AliasInShort("NI")]
-            Nineveh,
+            [AliasInShort("NI")] Nineveh,
 
             /// <summary>
             /// Al-Qādisiyyah
             /// </summary>
-            [AliasInShort("QA")]
-            AlQādisiyyah,
+            [AliasInShort("QA")] AlQādisiyyah,
 
             /// <summary>
             /// Saladin
             /// </summary>
-            [AliasInShort("SD")]
-            Saladin,
+            [AliasInShort("SD")] Saladin,
 
             /// <summary>
             /// Sulaymaniyah
             /// </summary>
-            [AliasInShort("SU")]
-            Sulaymaniyah,
+            [AliasInShort("SU")] Sulaymaniyah,
 
             /// <summary>
             /// Wasit
             /// </summary>
-            [AliasInShort("WA")]
-            Wasit,
+            [AliasInShort("WA")] Wasit,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -230,8 +212,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -239,7 +222,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"IQ-{values.ToRegionCode()}";
         }
 
@@ -248,7 +232,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Iraq;
         }
 
@@ -257,7 +242,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.IQ;
         }
 
@@ -265,19 +251,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

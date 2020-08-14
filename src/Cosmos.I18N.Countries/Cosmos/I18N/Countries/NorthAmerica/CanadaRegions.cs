@@ -3,14 +3,15 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// Canada Regions
     /// <br />
     /// Reference to: https://baike.baidu.com/item/%E5%8A%A0%E6%8B%BF%E5%A4%A7/145973
     /// </summary>
-    public static class CanadaRegions {
-
+    public static class CanadaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -83,14 +84,14 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for Canada regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Alberta
             /// <br />
             /// 阿尔伯塔省
             /// </summary>
-            [AliasInShort("AB")]
-            [RegionFlag("provinces")]
+            [AliasInShort("AB")] [RegionFlag("provinces")]
             Alberta,
 
             /// <summary>
@@ -98,8 +99,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 不列颠哥伦比亚省
             /// </summary>
-            [AliasInShort("BC")]
-            [RegionFlag("provinces")]
+            [AliasInShort("BC")] [RegionFlag("provinces")]
             BritishColumbia,
 
             /// <summary>
@@ -107,8 +107,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 曼尼托巴省
             /// </summary>
-            [AliasInShort("MB")]
-            [RegionFlag("provinces")]
+            [AliasInShort("MB")] [RegionFlag("provinces")]
             Manitoba,
 
             /// <summary>
@@ -116,8 +115,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 新不伦瑞克省
             /// </summary>
-            [AliasInShort("NB")]
-            [RegionFlag("provinces")]
+            [AliasInShort("NB")] [RegionFlag("provinces")]
             NewBrunswick,
 
             /// <summary>
@@ -125,8 +123,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 纽芬兰与拉布拉多省
             /// </summary>
-            [AliasInShort("NL")]
-            [RegionFlag("provinces")]
+            [AliasInShort("NL")] [RegionFlag("provinces")]
             NewfoundlandAndLabrador,
 
             /// <summary>
@@ -134,8 +131,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 新斯科舍省
             /// </summary>
-            [AliasInShort("NS")]
-            [RegionFlag("provinces")]
+            [AliasInShort("NS")] [RegionFlag("provinces")]
             NovaScotia,
 
             /// <summary>
@@ -143,8 +139,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 安大略省
             /// </summary>
-            [AliasInShort("ON")]
-            [RegionFlag("provinces")]
+            [AliasInShort("ON")] [RegionFlag("provinces")]
             Ontario,
 
             /// <summary>
@@ -152,8 +147,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 爱德华王子岛省
             /// </summary>
-            [AliasInShort("PE")]
-            [RegionFlag("provinces")]
+            [AliasInShort("PE")] [RegionFlag("provinces")]
             PrinceEdwardIsland,
 
             /// <summary>
@@ -161,8 +155,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 魁北克省
             /// </summary>
-            [AliasInShort("QC")]
-            [RegionFlag("provinces")]
+            [AliasInShort("QC")] [RegionFlag("provinces")]
             Québec,
 
             /// <summary>
@@ -170,8 +163,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 萨斯喀彻温省
             /// </summary>
-            [AliasInShort("SK")]
-            [RegionFlag("provinces")]
+            [AliasInShort("SK")] [RegionFlag("provinces")]
             Saskatchewan,
 
             /// <summary>
@@ -179,8 +171,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 西北地区
             /// </summary>
-            [AliasInShort("NT")]
-            [RegionFlag("territories")]
+            [AliasInShort("NT")] [RegionFlag("territories")]
             NorthwestTerritories,
 
             /// <summary>
@@ -188,8 +179,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 努纳武特地区
             /// </summary>
-            [AliasInShort("NU")]
-            [RegionFlag("territories")]
+            [AliasInShort("NU")] [RegionFlag("territories")]
             Nunavut,
 
             /// <summary>
@@ -197,16 +187,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
             /// <br />
             /// 育空地区
             /// </summary>
-            [AliasInShort("YT")]
-            [RegionFlag("territories")]
+            [AliasInShort("YT")] [RegionFlag("territories")]
             Yukon,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -216,8 +203,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -225,7 +213,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"CA-{values.ToRegionCode()}";
         }
 
@@ -233,8 +222,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         private static IEnumerable<EnumMember<EnumValues>> Filter(string flag) =>
             InternalEnumMembersCache.Where(x => x.Attributes.GetAll<RegionFlagAttribute>().Any(attr => attr.Flag == flag));
@@ -243,30 +232,23 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// 获得加拿大省代号
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetProvincesRegionCodes() {
-            foreach (var member in Filter("provinces"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetProvincesRegionCodes()
+            => Filter("provinces").Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// 获得加拿大地区号
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetTerritoriesRegionCodes() {
-            foreach (var member in Filter("territories"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetTerritoriesRegionCodes()
+            => Filter("territories").Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Algeria regions
     /// </summary>
-    public static class AlgeriaRegions {
-
+    public static class AlgeriaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -256,301 +257,252 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Algeria regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Bouira
             /// </summary>
-            [AliasInShort("10")]
-            Bouira,
+            [AliasInShort("10")] Bouira,
 
             /// <summary>
             /// Tamanghasset
             /// </summary>
-            [AliasInShort("11")]
-            Tamanghasset,
+            [AliasInShort("11")] Tamanghasset,
 
             /// <summary>
             /// Tébessa
             /// </summary>
-            [AliasInShort("12")]
-            Tébessa,
+            [AliasInShort("12")] Tébessa,
 
             /// <summary>
             /// Tlemcen
             /// </summary>
-            [AliasInShort("13")]
-            Tlemcen,
+            [AliasInShort("13")] Tlemcen,
 
             /// <summary>
             /// Tiaret
             /// </summary>
-            [AliasInShort("14")]
-            Tiaret,
+            [AliasInShort("14")] Tiaret,
 
             /// <summary>
             /// Tizi Ouzou
             /// </summary>
-            [AliasInShort("15")]
-            TiziOuzou,
+            [AliasInShort("15")] TiziOuzou,
 
             /// <summary>
             /// Algiers
             /// </summary>
-            [AliasInShort("16")]
-            Algiers,
+            [AliasInShort("16")] Algiers,
 
             /// <summary>
             /// Djelfa
             /// </summary>
-            [AliasInShort("17")]
-            Djelfa,
+            [AliasInShort("17")] Djelfa,
 
             /// <summary>
             /// Jijel
             /// </summary>
-            [AliasInShort("18")]
-            Jijel,
+            [AliasInShort("18")] Jijel,
 
             /// <summary>
             /// Sétif
             /// </summary>
-            [AliasInShort("19")]
-            Sétif,
+            [AliasInShort("19")] Sétif,
 
             /// <summary>
             /// Saïda
             /// </summary>
-            [AliasInShort("20")]
-            Saïda,
+            [AliasInShort("20")] Saïda,
 
             /// <summary>
             /// Skikda
             /// </summary>
-            [AliasInShort("21")]
-            Skikda,
+            [AliasInShort("21")] Skikda,
 
             /// <summary>
             /// Sidi Bel Abbès
             /// </summary>
-            [AliasInShort("22")]
-            SidiBelAbbès,
+            [AliasInShort("22")] SidiBelAbbès,
 
             /// <summary>
             /// Annaba
             /// </summary>
-            [AliasInShort("23")]
-            Annaba,
+            [AliasInShort("23")] Annaba,
 
             /// <summary>
             /// Guelma
             /// </summary>
-            [AliasInShort("24")]
-            Guelma,
+            [AliasInShort("24")] Guelma,
 
             /// <summary>
             /// Constantine
             /// </summary>
-            [AliasInShort("25")]
-            Constantine,
+            [AliasInShort("25")] Constantine,
 
             /// <summary>
             /// Médéa
             /// </summary>
-            [AliasInShort("26")]
-            Médéa,
+            [AliasInShort("26")] Médéa,
 
             /// <summary>
             /// Mostaganem
             /// </summary>
-            [AliasInShort("27")]
-            Mostaganem,
+            [AliasInShort("27")] Mostaganem,
 
             /// <summary>
             /// M’Sila
             /// </summary>
-            [AliasInShort("28")]
-            MSila,
+            [AliasInShort("28")] MSila,
 
             /// <summary>
             /// Mascara
             /// </summary>
-            [AliasInShort("29")]
-            Mascara,
+            [AliasInShort("29")] Mascara,
 
             /// <summary>
             /// Ouargla
             /// </summary>
-            [AliasInShort("30")]
-            Ouargla,
+            [AliasInShort("30")] Ouargla,
 
             /// <summary>
             /// Oran
             /// </summary>
-            [AliasInShort("31")]
-            Oran,
+            [AliasInShort("31")] Oran,
 
             /// <summary>
             /// El Bayadh
             /// </summary>
-            [AliasInShort("32")]
-            ElBayadh,
+            [AliasInShort("32")] ElBayadh,
 
             /// <summary>
             /// Illizi
             /// </summary>
-            [AliasInShort("33")]
-            Illizi,
+            [AliasInShort("33")] Illizi,
 
             /// <summary>
             /// Bordj Bou Arréridj
             /// </summary>
-            [AliasInShort("34")]
-            BordjBouArréridj,
+            [AliasInShort("34")] BordjBouArréridj,
 
             /// <summary>
             /// Boumerdès
             /// </summary>
-            [AliasInShort("35")]
-            Boumerdès,
+            [AliasInShort("35")] Boumerdès,
 
             /// <summary>
             /// El Tarf
             /// </summary>
-            [AliasInShort("36")]
-            ElTarf,
+            [AliasInShort("36")] ElTarf,
 
             /// <summary>
             /// Tindouf
             /// </summary>
-            [AliasInShort("37")]
-            Tindouf,
+            [AliasInShort("37")] Tindouf,
 
             /// <summary>
             /// Tissemsilt
             /// </summary>
-            [AliasInShort("38")]
-            Tissemsilt,
+            [AliasInShort("38")] Tissemsilt,
 
             /// <summary>
             /// El Oued
             /// </summary>
-            [AliasInShort("39")]
-            ElOued,
+            [AliasInShort("39")] ElOued,
 
             /// <summary>
             /// Khenchela
             /// </summary>
-            [AliasInShort("40")]
-            Khenchela,
+            [AliasInShort("40")] Khenchela,
 
             /// <summary>
             /// Souk Ahras
             /// </summary>
-            [AliasInShort("41")]
-            SoukAhras,
+            [AliasInShort("41")] SoukAhras,
 
             /// <summary>
             /// Tipasa
             /// </summary>
-            [AliasInShort("42")]
-            Tipasa,
+            [AliasInShort("42")] Tipasa,
 
             /// <summary>
             /// Mila
             /// </summary>
-            [AliasInShort("43")]
-            Mila,
+            [AliasInShort("43")] Mila,
 
             /// <summary>
             /// Aïn Defla
             /// </summary>
-            [AliasInShort("44")]
-            AïnDefla,
+            [AliasInShort("44")] AïnDefla,
 
             /// <summary>
             /// Naama
             /// </summary>
-            [AliasInShort("45")]
-            Naama,
+            [AliasInShort("45")] Naama,
 
             /// <summary>
             /// Aïn Témouchent
             /// </summary>
-            [AliasInShort("46")]
-            AïnTémouchent,
+            [AliasInShort("46")] AïnTémouchent,
 
             /// <summary>
             /// Ghardaïa
             /// </summary>
-            [AliasInShort("47")]
-            Ghardaïa,
+            [AliasInShort("47")] Ghardaïa,
 
             /// <summary>
             /// Relizane
             /// </summary>
-            [AliasInShort("48")]
-            Relizane,
+            [AliasInShort("48")] Relizane,
 
             /// <summary>
             /// Adrar
             /// </summary>
-            [AliasInShort("01")]
-            Adrar,
+            [AliasInShort("01")] Adrar,
 
             /// <summary>
             /// Chlef
             /// </summary>
-            [AliasInShort("02")]
-            Chlef,
+            [AliasInShort("02")] Chlef,
 
             /// <summary>
             /// Laghouat
             /// </summary>
-            [AliasInShort("03")]
-            Laghouat,
+            [AliasInShort("03")] Laghouat,
 
             /// <summary>
             /// Oum El Bouaghi
             /// </summary>
-            [AliasInShort("04")]
-            OumElBouaghi,
+            [AliasInShort("04")] OumElBouaghi,
 
             /// <summary>
             /// Batna
             /// </summary>
-            [AliasInShort("05")]
-            Batna,
+            [AliasInShort("05")] Batna,
 
             /// <summary>
             /// Béjaïa
             /// </summary>
-            [AliasInShort("06")]
-            Béjaïa,
+            [AliasInShort("06")] Béjaïa,
 
             /// <summary>
             /// Biskra
             /// </summary>
-            [AliasInShort("07")]
-            Biskra,
+            [AliasInShort("07")] Biskra,
 
             /// <summary>
             /// Béchar
             /// </summary>
-            [AliasInShort("08")]
-            Béchar,
+            [AliasInShort("08")] Béchar,
 
             /// <summary>
             /// Blida
             /// </summary>
-            [AliasInShort("09")]
-            Blida,
+            [AliasInShort("09")] Blida,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -560,8 +512,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -569,7 +522,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"DZ-{values.ToRegionCode()}";
         }
 
@@ -578,7 +532,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Algeria;
         }
 
@@ -587,7 +542,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.DZ;
         }
 
@@ -595,19 +551,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

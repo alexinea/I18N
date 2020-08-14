@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// Antigua And Barbuda regions
     /// </summary>
-    public static class AntiguaAndBarbudaRegions {
-
+    public static class AntiguaAndBarbudaRegions
+    {
         #region Gets region
 
         /// <summary>
@@ -56,61 +57,52 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// <summary>
         /// Enum values for Antigua And Barbuda regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Saint George
             /// </summary>
-            [AliasInShort("3")]
-            SaintGeorge,
+            [AliasInShort("3")] SaintGeorge,
 
             /// <summary>
             /// Saint John
             /// </summary>
-            [AliasInShort("4")]
-            SaintJohn,
+            [AliasInShort("4")] SaintJohn,
 
             /// <summary>
             /// Saint Mary
             /// </summary>
-            [AliasInShort("5")]
-            SaintMary,
+            [AliasInShort("5")] SaintMary,
 
             /// <summary>
             /// Saint Paul
             /// </summary>
-            [AliasInShort("6")]
-            SaintPaul,
+            [AliasInShort("6")] SaintPaul,
 
             /// <summary>
             /// Saint Peter
             /// </summary>
-            [AliasInShort("7")]
-            SaintPeter,
+            [AliasInShort("7")] SaintPeter,
 
             /// <summary>
             /// Saint Philip
             /// </summary>
-            [AliasInShort("8")]
-            SaintPhilip,
+            [AliasInShort("8")] SaintPhilip,
 
             /// <summary>
             /// Barbuda
             /// </summary>
-            [AliasInShort("10")]
-            Barbuda,
+            [AliasInShort("10")] Barbuda,
 
             /// <summary>
             /// Redonda
             /// </summary>
-            [AliasInShort("11")]
-            Redonda,
+            [AliasInShort("11")] Redonda,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -120,8 +112,9 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -129,7 +122,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"AG-{values.ToRegionCode()}";
         }
 
@@ -138,7 +132,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.AntiguaAndBarbuda;
         }
 
@@ -147,7 +142,8 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.AG;
         }
 
@@ -155,19 +151,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

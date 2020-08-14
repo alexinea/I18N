@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Netherlands Regions
     /// </summary>
-    public static class NetherlandsRegions {
-
+    public static class NetherlandsRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -21,7 +22,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Special regions
         /// </summary>
-        public static class Special {
+        public static class Special
+        {
             /// <summary>
             /// Sint Maarten Dutch Part
             /// </summary>
@@ -37,19 +39,18 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for United Kingdom regions
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Sint Maarten Dutch Part
             /// </summary>
-            [AliasInShort("SX")]
-            [RegionFlag("overseas")]
+            [AliasInShort("SX")] [RegionFlag("overseas")]
             SintMaarten,
 
             /// <summary>
             /// 未知
             /// </summary>
-            [IgnoreRegionAttribute]
-            [AliasInShort("??")]
+            [IgnoreRegionAttribute] [AliasInShort("??")]
             Unknown
         }
 
@@ -60,8 +61,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -69,7 +71,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"NL-{values.ToRegionCode()}";
         }
 
@@ -78,7 +81,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Netherlands;
         }
 
@@ -87,7 +91,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.NL;
         }
 
@@ -100,8 +105,10 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="country"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(Country country) {
-            switch (country) {
+        public static EnumValues FromSpecialRegions(Country country)
+        {
+            switch (country)
+            {
                 case Country.SintMaartenDutchPart:
                     return EnumValues.SintMaarten;
                 default:
@@ -114,8 +121,10 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        public static EnumValues FromSpecialRegions(CountryCode code) {
-            switch (code) {
+        public static EnumValues FromSpecialRegions(CountryCode code)
+        {
+            switch (code)
+            {
                 case CountryCode.SX:
                     return EnumValues.SintMaarten;
                 default:
@@ -127,8 +136,8 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         private static IEnumerable<EnumMember<EnumValues>> Filter(string flag) =>
             InternalEnumMembersCache.Where(x => x.Attributes.GetAll<RegionFlagAttribute>().Any(attr => attr.Flag == flag));
@@ -137,30 +146,23 @@ namespace Cosmos.I18N.Countries.Europe {
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         /// <summary>
         /// Get overseas region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetOverseasRegionCodes() {
-            foreach (var member in Filter("overseas"))
-                yield return member.Value.ToFullRegionCode();
-        }
-
+        public static IEnumerable<string> GetOverseasRegionCodes()
+            => Filter("overseas").Select(member => member.Value.ToFullRegionCode());
+        
         /// <summary>
         /// Get main region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetMainRegionCodes() {
-            foreach (var member in Filter("main"))
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetMainRegionCodes()
+            => Filter("main").Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

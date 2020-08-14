@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// Cambodia Regions
     /// </summary>
-    public static class CambodiaRegions {
-
+    public static class CambodiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -141,163 +142,137 @@ namespace Cosmos.I18N.Countries.Asia {
         /// <summary>
         /// Enum values for Cambodia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Banteay Meanchey
             /// </summary>
-            [AliasInShort("1")]
-            BanteayMeanchey,
+            [AliasInShort("1")] BanteayMeanchey,
 
             /// <summary>
             /// Battambang
             /// </summary>
-            [AliasInShort("2")]
-            Battambang,
+            [AliasInShort("2")] Battambang,
 
             /// <summary>
             /// Kampong Cham
             /// </summary>
-            [AliasInShort("3")]
-            KampongCham,
+            [AliasInShort("3")] KampongCham,
 
             /// <summary>
             /// Kampong Chhnang
             /// </summary>
-            [AliasInShort("4")]
-            KampongChhnang,
+            [AliasInShort("4")] KampongChhnang,
 
             /// <summary>
             /// Kampong Speu
             /// </summary>
-            [AliasInShort("5")]
-            KampongSpeu,
+            [AliasInShort("5")] KampongSpeu,
 
             /// <summary>
             /// Kampong Thom
             /// </summary>
-            [AliasInShort("6")]
-            KampongThom,
+            [AliasInShort("6")] KampongThom,
 
             /// <summary>
             /// Kampot
             /// </summary>
-            [AliasInShort("7")]
-            Kampot,
+            [AliasInShort("7")] Kampot,
 
             /// <summary>
             /// Kandal
             /// </summary>
-            [AliasInShort("8")]
-            Kandal,
+            [AliasInShort("8")] Kandal,
 
             /// <summary>
             /// Koh Kong
             /// </summary>
-            [AliasInShort("9")]
-            KohKong,
+            [AliasInShort("9")] KohKong,
 
             /// <summary>
             /// Kratié
             /// </summary>
-            [AliasInShort("10")]
-            Kratié,
+            [AliasInShort("10")] Kratié,
 
             /// <summary>
             /// Mondulkiri
             /// </summary>
-            [AliasInShort("11")]
-            Mondulkiri,
+            [AliasInShort("11")] Mondulkiri,
 
             /// <summary>
             /// Phnom Penh
             /// </summary>
-            [AliasInShort("12")]
-            PhnomPenh,
+            [AliasInShort("12")] PhnomPenh,
 
             /// <summary>
             /// Preah Vihear
             /// </summary>
-            [AliasInShort("13")]
-            PreahVihear,
+            [AliasInShort("13")] PreahVihear,
 
             /// <summary>
             /// Prey Veng
             /// </summary>
-            [AliasInShort("14")]
-            PreyVeng,
+            [AliasInShort("14")] PreyVeng,
 
             /// <summary>
             /// Pursat
             /// </summary>
-            [AliasInShort("15")]
-            Pursat,
+            [AliasInShort("15")] Pursat,
 
             /// <summary>
             /// Ratanakiri
             /// </summary>
-            [AliasInShort("16")]
-            Ratanakiri,
+            [AliasInShort("16")] Ratanakiri,
 
             /// <summary>
             /// Siem Reap
             /// </summary>
-            [AliasInShort("17")]
-            SiemReap,
+            [AliasInShort("17")] SiemReap,
 
             /// <summary>
             /// Sihanoukville
             /// </summary>
-            [AliasInShort("18")]
-            Sihanoukville,
+            [AliasInShort("18")] Sihanoukville,
 
             /// <summary>
             /// Stung Treng
             /// </summary>
-            [AliasInShort("19")]
-            StungTreng,
+            [AliasInShort("19")] StungTreng,
 
             /// <summary>
             /// Svay Rieng
             /// </summary>
-            [AliasInShort("20")]
-            SvayRieng,
+            [AliasInShort("20")] SvayRieng,
 
             /// <summary>
             /// Takéo
             /// </summary>
-            [AliasInShort("21")]
-            Takéo,
+            [AliasInShort("21")] Takéo,
 
             /// <summary>
             /// Oddar Meanchey
             /// </summary>
-            [AliasInShort("22")]
-            OddarMeanchey,
+            [AliasInShort("22")] OddarMeanchey,
 
             /// <summary>
             /// Kep
             /// </summary>
-            [AliasInShort("23")]
-            Kep,
+            [AliasInShort("23")] Kep,
 
             /// <summary>
             /// Pailin
             /// </summary>
-            [AliasInShort("24")]
-            Pailin,
+            [AliasInShort("24")] Pailin,
 
             /// <summary>
             /// Tbong Khmum
             /// </summary>
-            [AliasInShort("25")]
-            TbongKhmum,
+            [AliasInShort("25")] TbongKhmum,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -307,8 +282,9 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -316,7 +292,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"KH-{values.ToRegionCode()}";
         }
 
@@ -325,7 +302,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Cambodia;
         }
 
@@ -334,7 +312,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.KH;
         }
 
@@ -342,19 +321,16 @@ namespace Cosmos.I18N.Countries.Asia {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// Tunisia Regions
     /// </summary>
-    public static class TunisiaRegions {
-
+    public static class TunisiaRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -136,157 +137,132 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Enum values for Tunisia regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Tunis
             /// </summary>
-            [AliasInShort("11")]
-            Tunis,
+            [AliasInShort("11")] Tunis,
 
             /// <summary>
             /// Ariana
             /// </summary>
-            [AliasInShort("12")]
-            Ariana,
+            [AliasInShort("12")] Ariana,
 
             /// <summary>
             /// Ben Arous
             /// </summary>
-            [AliasInShort("13")]
-            BenArous,
+            [AliasInShort("13")] BenArous,
 
             /// <summary>
             /// Manouba
             /// </summary>
-            [AliasInShort("14")]
-            Manouba,
+            [AliasInShort("14")] Manouba,
 
             /// <summary>
             /// Nabeul
             /// </summary>
-            [AliasInShort("21")]
-            Nabeul,
+            [AliasInShort("21")] Nabeul,
 
             /// <summary>
             /// Zaghouan
             /// </summary>
-            [AliasInShort("22")]
-            Zaghouan,
+            [AliasInShort("22")] Zaghouan,
 
             /// <summary>
             /// Bizerte
             /// </summary>
-            [AliasInShort("23")]
-            Bizerte,
+            [AliasInShort("23")] Bizerte,
 
             /// <summary>
             /// Béja
             /// </summary>
-            [AliasInShort("31")]
-            Béja,
+            [AliasInShort("31")] Béja,
 
             /// <summary>
             /// Jendouba
             /// </summary>
-            [AliasInShort("32")]
-            Jendouba,
+            [AliasInShort("32")] Jendouba,
 
             /// <summary>
             /// Kef
             /// </summary>
-            [AliasInShort("33")]
-            Kef,
+            [AliasInShort("33")] Kef,
 
             /// <summary>
             /// Siliana
             /// </summary>
-            [AliasInShort("34")]
-            Siliana,
+            [AliasInShort("34")] Siliana,
 
             /// <summary>
             /// Kairouan
             /// </summary>
-            [AliasInShort("41")]
-            Kairouan,
+            [AliasInShort("41")] Kairouan,
 
             /// <summary>
             /// Kasserine
             /// </summary>
-            [AliasInShort("42")]
-            Kasserine,
+            [AliasInShort("42")] Kasserine,
 
             /// <summary>
             /// Sidi Bouzid
             /// </summary>
-            [AliasInShort("43")]
-            SidiBouzid,
+            [AliasInShort("43")] SidiBouzid,
 
             /// <summary>
             /// Sousse
             /// </summary>
-            [AliasInShort("51")]
-            Sousse,
+            [AliasInShort("51")] Sousse,
 
             /// <summary>
             /// Monastir
             /// </summary>
-            [AliasInShort("52")]
-            Monastir,
+            [AliasInShort("52")] Monastir,
 
             /// <summary>
             /// Mahdia
             /// </summary>
-            [AliasInShort("53")]
-            Mahdia,
+            [AliasInShort("53")] Mahdia,
 
             /// <summary>
             /// Sfax
             /// </summary>
-            [AliasInShort("61")]
-            Sfax,
+            [AliasInShort("61")] Sfax,
 
             /// <summary>
             /// Gafsa
             /// </summary>
-            [AliasInShort("71")]
-            Gafsa,
+            [AliasInShort("71")] Gafsa,
 
             /// <summary>
             /// Tozeur
             /// </summary>
-            [AliasInShort("72")]
-            Tozeur,
+            [AliasInShort("72")] Tozeur,
 
             /// <summary>
             /// Kebili
             /// </summary>
-            [AliasInShort("73")]
-            Kebili,
+            [AliasInShort("73")] Kebili,
 
             /// <summary>
             /// Gabès
             /// </summary>
-            [AliasInShort("81")]
-            Gabès,
+            [AliasInShort("81")] Gabès,
 
             /// <summary>
             /// Medenine
             /// </summary>
-            [AliasInShort("82")]
-            Medenine,
+            [AliasInShort("82")] Medenine,
 
             /// <summary>
             /// Tataouine
             /// </summary>
-            [AliasInShort("83")]
-            Tataouine,
+            [AliasInShort("83")] Tataouine,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -296,8 +272,9 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -305,7 +282,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"TN-{values.ToRegionCode()}";
         }
 
@@ -314,7 +292,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Tunisia;
         }
 
@@ -323,7 +302,8 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.TN;
         }
 
@@ -331,19 +311,16 @@ namespace Cosmos.I18N.Countries.Africa {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }

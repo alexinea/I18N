@@ -3,12 +3,13 @@ using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// Spain
     /// </summary>
-    public static class SpainRegions {
-
+    public static class SpainRegions
+    {
         #region Gets regions
 
         /// <summary>
@@ -111,127 +112,107 @@ namespace Cosmos.I18N.Countries.Europe {
         /// <summary>
         /// Enum values for Spain regions.
         /// </summary>
-        public enum EnumValues {
+        public enum EnumValues
+        {
             /// <summary>
             /// Comunidad de Madrid
             /// </summary>
-            [AliasInShort("MD")]
-            ComunidadDeMadrid,
+            [AliasInShort("MD")] ComunidadDeMadrid,
 
             /// <summary>
             /// Andalucía
             /// </summary>
-            [AliasInShort("AN")]
-            Andalucía,
+            [AliasInShort("AN")] Andalucía,
 
             /// <summary>
             /// Aragón
             /// </summary>
-            [AliasInShort("AR")]
-            Aragón,
+            [AliasInShort("AR")] Aragón,
 
             /// <summary>
             /// Asturias
             /// </summary>
-            [AliasInShort("AS")]
-            Asturias,
+            [AliasInShort("AS")] Asturias,
 
             /// <summary>
             /// Cantabria
             /// </summary>
-            [AliasInShort("CB")]
-            Cantabria,
+            [AliasInShort("CB")] Cantabria,
 
             /// <summary>
             /// Ceuta
             /// </summary>
-            [AliasInShort("CE")]
-            Ceuta,
+            [AliasInShort("CE")] Ceuta,
 
             /// <summary>
             /// Castile and León
             /// </summary>
-            [AliasInShort("CL")]
-            CastileAndLeón,
+            [AliasInShort("CL")] CastileAndLeón,
 
             /// <summary>
             /// Castile-La Mancha
             /// </summary>
-            [AliasInShort("CM")]
-            CastileLaMancha,
+            [AliasInShort("CM")] CastileLaMancha,
 
             /// <summary>
             /// Canary Islands
             /// </summary>
-            [AliasInShort("CN")]
-            CanaryIslands,
+            [AliasInShort("CN")] CanaryIslands,
 
             /// <summary>
             /// Catalonia
             /// </summary>
-            [AliasInShort("CT")]
-            Catalonia,
+            [AliasInShort("CT")] Catalonia,
 
             /// <summary>
             /// Extremadura
             /// </summary>
-            [AliasInShort("EX")]
-            Extremadura,
+            [AliasInShort("EX")] Extremadura,
 
             /// <summary>
             /// Galicia
             /// </summary>
-            [AliasInShort("GA")]
-            Galicia,
+            [AliasInShort("GA")] Galicia,
 
             /// <summary>
             /// Balearic Islands
             /// </summary>
-            [AliasInShort("IB")]
-            BalearicIslands,
+            [AliasInShort("IB")] BalearicIslands,
 
             /// <summary>
             /// Murcia Region
             /// </summary>
-            [AliasInShort("MC")]
-            MurciaRegion,
+            [AliasInShort("MC")] MurciaRegion,
 
             /// <summary>
             /// Melilla
             /// </summary>
-            [AliasInShort("ML")]
-            Melilla,
+            [AliasInShort("ML")] Melilla,
 
             /// <summary>
             /// Navarra Chartered Community
             /// </summary>
-            [AliasInShort("NC")]
-            NavarraCharteredCommunity,
+            [AliasInShort("NC")] NavarraCharteredCommunity,
 
             /// <summary>
             /// Basque Country
             /// </summary>
-            [AliasInShort("PV")]
-            BasqueCountry,
+            [AliasInShort("PV")] BasqueCountry,
 
             /// <summary>
             /// La Rioja
             /// </summary>
-            [AliasInShort("RI")]
-            LaRioja,
+            [AliasInShort("RI")] LaRioja,
 
             /// <summary>
             /// Valencian Community
             /// </summary>
-            [AliasInShort("VC")]
-            ValencianCommunity,
+            [AliasInShort("VC")] ValencianCommunity,
 
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion]
-            [AliasInShort("??")]
-            Unknown,
+            [IgnoreRegion] [AliasInShort("??")] Unknown,
         }
 
         #region Extension methods
@@ -241,8 +222,9 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToRegionCode(this EnumValues values) {
-            return values.GetAttributes().Get<AliasInShortAttribute>().Alias;
+        public static string ToRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
         }
 
         /// <summary>
@@ -250,7 +232,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        public static string ToFullRegionCode(this EnumValues values) {
+        public static string ToFullRegionCode(this EnumValues values)
+        {
             return $"ES-{values.ToRegionCode()}";
         }
 
@@ -259,7 +242,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Country ToCountry(this EnumValues value) {
+        public static Country ToCountry(this EnumValues value)
+        {
             return Country.Spain;
         }
 
@@ -268,7 +252,8 @@ namespace Cosmos.I18N.Countries.Europe {
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryCode ToCountryCode(this EnumValues value) {
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
             return CountryCode.ES;
         }
 
@@ -276,19 +261,16 @@ namespace Cosmos.I18N.Countries.Europe {
 
         #region Getters
 
-        private static List<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
-            = Enums.GetMembers<EnumValues>().Where(x => !x.Attributes.Has<IgnoreRegionAttribute>()).ToList();
+        private static IEnumerable<EnumMember<EnumValues>> InternalEnumMembersCache { get; }
+            = Enums.GetMembers<EnumValues>().Where(member => !member.HasAttr<EnumValues, IgnoreRegionAttribute>());
 
         /// <summary>
         /// Get all region code
         /// </summary>
         /// <returns></returns>
-        public static IEnumerable<string> GetAllRegonCodes() {
-            foreach (var member in InternalEnumMembersCache)
-                yield return member.Value.ToFullRegionCode();
-        }
+        public static IEnumerable<string> GetAllRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
         #endregion
-
     }
 }
