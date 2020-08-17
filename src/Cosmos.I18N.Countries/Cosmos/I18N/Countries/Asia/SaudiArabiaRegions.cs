@@ -87,67 +87,67 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Najran
             /// </summary>
-            [AliasInShort("10")] Najran,
+            [AliasInShort("10")][RegionCode(1_00_133_0010)] Najran,
 
             /// <summary>
             /// Al Bahah
             /// </summary>
-            [AliasInShort("11")] AlBahah,
+            [AliasInShort("11")][RegionCode(1_00_133_0011)] AlBahah,
 
             /// <summary>
             /// Al Jawf
             /// </summary>
-            [AliasInShort("12")] AlJawf,
+            [AliasInShort("12")][RegionCode(1_00_133_0012)] AlJawf,
 
             /// <summary>
             /// Asir
             /// </summary>
-            [AliasInShort("14")] Asir,
+            [AliasInShort("14")][RegionCode(1_00_133_0014)] Asir,
 
             /// <summary>
             /// Riyadh
             /// </summary>
-            [AliasInShort("1")] Riyadh,
+            [AliasInShort("1")][RegionCode(1_00_133_0001)] Riyadh,
 
             /// <summary>
             /// Makkah
             /// </summary>
-            [AliasInShort("2")] Makkah,
+            [AliasInShort("2")][RegionCode(1_00_133_0002)] Makkah,
 
             /// <summary>
             /// Al Madinah
             /// </summary>
-            [AliasInShort("3")] AlMadinah,
+            [AliasInShort("3")][RegionCode(1_00_133_0003)] AlMadinah,
 
             /// <summary>
             /// Eastern
             /// </summary>
-            [AliasInShort("4")] Eastern,
+            [AliasInShort("4")][RegionCode(1_00_133_0004)] Eastern,
 
             /// <summary>
             /// Al-Qassim
             /// </summary>
-            [AliasInShort("5")] AlQassim,
+            [AliasInShort("5")][RegionCode(1_00_133_0005)] AlQassim,
 
             /// <summary>
             /// Ha’il
             /// </summary>
-            [AliasInShort("6")] Hail,
+            [AliasInShort("6")][RegionCode(1_00_133_0006)] Hail,
 
             /// <summary>
             /// Tabuk
             /// </summary>
-            [AliasInShort("7")] Tabuk,
+            [AliasInShort("7")][RegionCode(1_00_133_0007)] Tabuk,
 
             /// <summary>
             /// Northern Borders
             /// </summary>
-            [AliasInShort("8")] NorthernBorders,
+            [AliasInShort("8")][RegionCode(1_00_133_0008)] NorthernBorders,
 
             /// <summary>
             /// Jizan
             /// </summary>
-            [AliasInShort("9")] Jizan,
+            [AliasInShort("9")][RegionCode(1_00_133_0009)] Jizan,
 
             /// <summary>
             /// Unknown
@@ -175,6 +175,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SA-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -210,6 +220,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

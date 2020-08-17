@@ -122,102 +122,122 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Paro
             /// </summary>
-            [AliasInShort("11")] Paro,
+            [AliasInShort("11")] [RegionCode(1_00_106_0011)]
+            Paro,
 
             /// <summary>
             /// Chukha
             /// </summary>
-            [AliasInShort("12")] Chukha,
+            [AliasInShort("12")] [RegionCode(1_00_106_0012)]
+            Chukha,
 
             /// <summary>
             /// Haa
             /// </summary>
-            [AliasInShort("13")] Haa,
+            [AliasInShort("13")] [RegionCode(1_00_106_0013)]
+            Haa,
 
             /// <summary>
             /// Samtse
             /// </summary>
-            [AliasInShort("14")] Samtse,
+            [AliasInShort("14")] [RegionCode(1_00_106_0014)]
+            Samtse,
 
             /// <summary>
             /// Thimphu
             /// </summary>
-            [AliasInShort("15")] Thimphu,
+            [AliasInShort("15")] [RegionCode(1_00_106_0015)]
+            Thimphu,
 
             /// <summary>
             /// Tsirang
             /// </summary>
-            [AliasInShort("21")] Tsirang,
+            [AliasInShort("21")] [RegionCode(1_00_106_0021)]
+            Tsirang,
 
             /// <summary>
             /// Dagana
             /// </summary>
-            [AliasInShort("22")] Dagana,
+            [AliasInShort("22")] [RegionCode(1_00_106_0022)]
+            Dagana,
 
             /// <summary>
             /// Punakha
             /// </summary>
-            [AliasInShort("23")] Punakha,
+            [AliasInShort("23")] [RegionCode(1_00_106_0023)]
+            Punakha,
 
             /// <summary>
             /// Wangdue Phodrang
             /// </summary>
-            [AliasInShort("24")] WangduePhodrang,
+            [AliasInShort("24")] [RegionCode(1_00_106_0024)]
+            WangduePhodrang,
 
             /// <summary>
             /// Sarpang
             /// </summary>
-            [AliasInShort("31")] Sarpang,
+            [AliasInShort("31")] [RegionCode(1_00_106_0031)]
+            Sarpang,
 
             /// <summary>
             /// Trongsa
             /// </summary>
-            [AliasInShort("32")] Trongsa,
+            [AliasInShort("32")] [RegionCode(1_00_106_0032)]
+            Trongsa,
 
             /// <summary>
             /// Bumthang
             /// </summary>
-            [AliasInShort("33")] Bumthang,
+            [AliasInShort("33")] [RegionCode(1_00_106_0033)]
+            Bumthang,
 
             /// <summary>
             /// Zhemgang
             /// </summary>
-            [AliasInShort("34")] Zhemgang,
+            [AliasInShort("34")] [RegionCode(1_00_106_0034)]
+            Zhemgang,
 
             /// <summary>
             /// Trashigang
             /// </summary>
-            [AliasInShort("41")] Trashigang,
+            [AliasInShort("41")] [RegionCode(1_00_106_0041)]
+            Trashigang,
 
             /// <summary>
             /// Mongar
             /// </summary>
-            [AliasInShort("42")] Mongar,
+            [AliasInShort("42")] [RegionCode(1_00_106_0042)]
+            Mongar,
 
             /// <summary>
             /// Pemagatshel
             /// </summary>
-            [AliasInShort("43")] Pemagatshel,
+            [AliasInShort("43")] [RegionCode(1_00_106_0043)]
+            Pemagatshel,
 
             /// <summary>
             /// Lhuntse
             /// </summary>
-            [AliasInShort("44")] Lhuntse,
+            [AliasInShort("44")] [RegionCode(1_00_106_0044)]
+            Lhuntse,
 
             /// <summary>
             /// Samdrup Jongkhar
             /// </summary>
-            [AliasInShort("45")] SamdrupJongkhar,
+            [AliasInShort("45")] [RegionCode(1_00_106_0045)]
+            SamdrupJongkhar,
 
             /// <summary>
             /// Gasa
             /// </summary>
-            [AliasInShort("GA")] Gasa,
+            [AliasInShort("GA")] [RegionCode(1_00_106_0101)]
+            Gasa,
 
             /// <summary>
             /// Trashiyangtse
             /// </summary>
-            [AliasInShort("TY")] Trashiyangtse,
+            [AliasInShort("TY")] [RegionCode(1_00_106_0102)]
+            Trashiyangtse,
 
             /// <summary>
             /// Unknown
@@ -245,6 +265,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BT-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -280,6 +310,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

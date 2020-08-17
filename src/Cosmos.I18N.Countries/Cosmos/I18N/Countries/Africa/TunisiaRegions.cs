@@ -142,122 +142,122 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Tunis
             /// </summary>
-            [AliasInShort("11")] Tunis,
+            [AliasInShort("11")][RegionCode(3_00_120_0011)] Tunis,
 
             /// <summary>
             /// Ariana
             /// </summary>
-            [AliasInShort("12")] Ariana,
+            [AliasInShort("12")][RegionCode(3_00_120_0012)] Ariana,
 
             /// <summary>
             /// Ben Arous
             /// </summary>
-            [AliasInShort("13")] BenArous,
+            [AliasInShort("13")][RegionCode(3_00_120_0013)] BenArous,
 
             /// <summary>
             /// Manouba
             /// </summary>
-            [AliasInShort("14")] Manouba,
+            [AliasInShort("14")][RegionCode(3_00_120_0014)] Manouba,
 
             /// <summary>
             /// Nabeul
             /// </summary>
-            [AliasInShort("21")] Nabeul,
+            [AliasInShort("21")][RegionCode(3_00_120_0021)] Nabeul,
 
             /// <summary>
             /// Zaghouan
             /// </summary>
-            [AliasInShort("22")] Zaghouan,
+            [AliasInShort("22")][RegionCode(3_00_120_0022)] Zaghouan,
 
             /// <summary>
             /// Bizerte
             /// </summary>
-            [AliasInShort("23")] Bizerte,
+            [AliasInShort("23")][RegionCode(3_00_120_0023)] Bizerte,
 
             /// <summary>
             /// Béja
             /// </summary>
-            [AliasInShort("31")] Béja,
+            [AliasInShort("31")][RegionCode(3_00_120_0031)] Béja,
 
             /// <summary>
             /// Jendouba
             /// </summary>
-            [AliasInShort("32")] Jendouba,
+            [AliasInShort("32")][RegionCode(3_00_120_0032)] Jendouba,
 
             /// <summary>
             /// Kef
             /// </summary>
-            [AliasInShort("33")] Kef,
+            [AliasInShort("33")][RegionCode(3_00_120_0033)] Kef,
 
             /// <summary>
             /// Siliana
             /// </summary>
-            [AliasInShort("34")] Siliana,
+            [AliasInShort("34")][RegionCode(3_00_120_0034)] Siliana,
 
             /// <summary>
             /// Kairouan
             /// </summary>
-            [AliasInShort("41")] Kairouan,
+            [AliasInShort("41")][RegionCode(3_00_120_0041)] Kairouan,
 
             /// <summary>
             /// Kasserine
             /// </summary>
-            [AliasInShort("42")] Kasserine,
+            [AliasInShort("42")][RegionCode(3_00_120_0042)] Kasserine,
 
             /// <summary>
             /// Sidi Bouzid
             /// </summary>
-            [AliasInShort("43")] SidiBouzid,
+            [AliasInShort("43")][RegionCode(3_00_120_0043)] SidiBouzid,
 
             /// <summary>
             /// Sousse
             /// </summary>
-            [AliasInShort("51")] Sousse,
+            [AliasInShort("51")][RegionCode(3_00_120_0051)] Sousse,
 
             /// <summary>
             /// Monastir
             /// </summary>
-            [AliasInShort("52")] Monastir,
+            [AliasInShort("52")][RegionCode(3_00_120_0052)] Monastir,
 
             /// <summary>
             /// Mahdia
             /// </summary>
-            [AliasInShort("53")] Mahdia,
+            [AliasInShort("53")][RegionCode(3_00_120_0053)] Mahdia,
 
             /// <summary>
             /// Sfax
             /// </summary>
-            [AliasInShort("61")] Sfax,
+            [AliasInShort("61")][RegionCode(3_00_120_0061)] Sfax,
 
             /// <summary>
             /// Gafsa
             /// </summary>
-            [AliasInShort("71")] Gafsa,
+            [AliasInShort("71")][RegionCode(3_00_120_0071)] Gafsa,
 
             /// <summary>
             /// Tozeur
             /// </summary>
-            [AliasInShort("72")] Tozeur,
+            [AliasInShort("72")][RegionCode(3_00_120_0072)] Tozeur,
 
             /// <summary>
             /// Kebili
             /// </summary>
-            [AliasInShort("73")] Kebili,
+            [AliasInShort("73")][RegionCode(3_00_120_0073)] Kebili,
 
             /// <summary>
             /// Gabès
             /// </summary>
-            [AliasInShort("81")] Gabès,
+            [AliasInShort("81")][RegionCode(3_00_120_0081)] Gabès,
 
             /// <summary>
             /// Medenine
             /// </summary>
-            [AliasInShort("82")] Medenine,
+            [AliasInShort("82")][RegionCode(3_00_120_0082)] Medenine,
 
             /// <summary>
             /// Tataouine
             /// </summary>
-            [AliasInShort("83")] Tataouine,
+            [AliasInShort("83")][RegionCode(3_00_120_0083)] Tataouine,
 
             /// <summary>
             /// Unknown
@@ -285,6 +285,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"TN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -320,6 +330,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -72,52 +72,52 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Maseru
             /// </summary>
-            [AliasInShort("A")] Maseru,
+            [AliasInShort("A")][RegionCode(3_00_131_0001)] Maseru,
 
             /// <summary>
             /// Butha-Buthe
             /// </summary>
-            [AliasInShort("B")] ButhaButhe,
+            [AliasInShort("B")][RegionCode(3_00_131_0002)] ButhaButhe,
 
             /// <summary>
             /// Leribe
             /// </summary>
-            [AliasInShort("C")] Leribe,
+            [AliasInShort("C")][RegionCode(3_00_131_0003)] Leribe,
 
             /// <summary>
             /// Berea
             /// </summary>
-            [AliasInShort("D")] Berea,
+            [AliasInShort("D")][RegionCode(3_00_131_0004)] Berea,
 
             /// <summary>
             /// Mafeteng
             /// </summary>
-            [AliasInShort("E")] Mafeteng,
+            [AliasInShort("E")][RegionCode(3_00_131_0005)] Mafeteng,
 
             /// <summary>
             /// Mohale’s Hoek
             /// </summary>
-            [AliasInShort("F")] MohalesHoek,
+            [AliasInShort("F")][RegionCode(3_00_131_0006)] MohalesHoek,
 
             /// <summary>
             /// Quthing
             /// </summary>
-            [AliasInShort("G")] Quthing,
+            [AliasInShort("G")][RegionCode(3_00_131_0007)] Quthing,
 
             /// <summary>
             /// Qacha’s Nek
             /// </summary>
-            [AliasInShort("H")] QachasNek,
+            [AliasInShort("H")][RegionCode(3_00_131_0008)] QachasNek,
 
             /// <summary>
             /// Mokhotlong
             /// </summary>
-            [AliasInShort("J")] Mokhotlong,
+            [AliasInShort("J")][RegionCode(3_00_131_0009)] Mokhotlong,
 
             /// <summary>
             /// Thaba-Tseka
             /// </summary>
-            [AliasInShort("K")] ThabaTseka,
+            [AliasInShort("K")][RegionCode(3_00_131_0010)] ThabaTseka,
 
             /// <summary>
             /// Unknown
@@ -145,6 +145,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"LS-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +190,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

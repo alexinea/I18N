@@ -72,52 +72,62 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Adamawa
             /// </summary>
-            [AliasInShort("AD")] Adamawa,
+            [AliasInShort("AD")] [RegionCode(3_00_108_0001)]
+            Adamawa,
 
             /// <summary>
             /// Centre
             /// </summary>
-            [AliasInShort("CE")] Centre,
+            [AliasInShort("CE")] [RegionCode(3_00_108_0002)]
+            Centre,
 
             /// <summary>
             /// Far North
             /// </summary>
-            [AliasInShort("EN")] FarNorth,
+            [AliasInShort("EN")] [RegionCode(3_00_108_0003)]
+            FarNorth,
 
             /// <summary>
             /// East
             /// </summary>
-            [AliasInShort("ES")] East,
+            [AliasInShort("ES")] [RegionCode(3_00_108_0004)]
+            East,
 
             /// <summary>
             /// Littoral
             /// </summary>
-            [AliasInShort("LT")] Littoral,
+            [AliasInShort("LT")] [RegionCode(3_00_108_0005)]
+            Littoral,
 
             /// <summary>
             /// North
             /// </summary>
-            [AliasInShort("NO")] North,
+            [AliasInShort("NO")] [RegionCode(3_00_108_0006)]
+            North,
 
             /// <summary>
             /// Northwest
             /// </summary>
-            [AliasInShort("NW")] Northwest,
+            [AliasInShort("NW")] [RegionCode(3_00_108_0007)]
+            Northwest,
 
             /// <summary>
             /// West
             /// </summary>
-            [AliasInShort("OU")] West,
+            [AliasInShort("OU")] [RegionCode(3_00_108_0008)]
+            West,
 
             /// <summary>
             /// South
             /// </summary>
-            [AliasInShort("SU")] South,
+            [AliasInShort("SU")] [RegionCode(3_00_108_0009)]
+            South,
 
             /// <summary>
             /// Southwest
             /// </summary>
-            [AliasInShort("SW")] Southwest,
+            [AliasInShort("SW")] [RegionCode(3_00_108_0010)]
+            Southwest,
 
             /// <summary>
             /// Unknown
@@ -145,6 +155,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +200,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

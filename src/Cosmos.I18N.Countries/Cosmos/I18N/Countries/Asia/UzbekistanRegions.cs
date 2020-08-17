@@ -87,67 +87,80 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Andijan
             /// </summary>
-            [AliasInShort("AN")] Andijan,
+            [AliasInShort("AN")] [RegionCode(1_00_141_0001)]
+            Andijan,
 
             /// <summary>
             /// Bukhara
             /// </summary>
-            [AliasInShort("BU")] Bukhara,
+            [AliasInShort("BU")] [RegionCode(1_00_141_0002)]
+            Bukhara,
 
             /// <summary>
             /// Fergana
             /// </summary>
-            [AliasInShort("FA")] Fergana,
+            [AliasInShort("FA")] [RegionCode(1_00_141_0003)]
+            Fergana,
 
             /// <summary>
             /// Jizzakh
             /// </summary>
-            [AliasInShort("JI")] Jizzakh,
+            [AliasInShort("JI")] [RegionCode(1_00_141_0004)]
+            Jizzakh,
 
             /// <summary>
             /// Namangan
             /// </summary>
-            [AliasInShort("NG")] Namangan,
+            [AliasInShort("NG")] [RegionCode(1_00_141_0005)]
+            Namangan,
 
             /// <summary>
             /// Navoiy
             /// </summary>
-            [AliasInShort("NW")] Navoiy,
+            [AliasInShort("NW")] [RegionCode(1_00_141_0006)]
+            Navoiy,
 
             /// <summary>
             /// Qashqadaryo
             /// </summary>
-            [AliasInShort("QA")] Qashqadaryo,
+            [AliasInShort("QA")] [RegionCode(1_00_141_0007)]
+            Qashqadaryo,
 
             /// <summary>
             /// Karakalpakstan
             /// </summary>
-            [AliasInShort("QR")] Karakalpakstan,
+            [AliasInShort("QR")] [RegionCode(1_00_141_0008)]
+            Karakalpakstan,
 
             /// <summary>
             /// Sirdaryo
             /// </summary>
-            [AliasInShort("SI")] Sirdaryo,
+            [AliasInShort("SI")] [RegionCode(1_00_141_0009)]
+            Sirdaryo,
 
             /// <summary>
             /// Surxondaryo
             /// </summary>
-            [AliasInShort("SU")] Surxondaryo,
+            [AliasInShort("SU")] [RegionCode(1_00_141_0010)]
+            Surxondaryo,
 
             /// <summary>
             /// Tashkent
             /// </summary>
-            [AliasInShort("TK")] Tashkent,
+            [AliasInShort("TK")] [RegionCode(1_00_141_0011)]
+            Tashkent,
 
             /// <summary>
             /// Tashkent Province
             /// </summary>
-            [AliasInShort("TO")] TashkentProvince,
+            [AliasInShort("TO")] [RegionCode(1_00_141_0012)]
+            TashkentProvince,
 
             /// <summary>
             /// Xorazm
             /// </summary>
-            [AliasInShort("XO")] Xorazm,
+            [AliasInShort("XO")] [RegionCode(1_00_141_0013)]
+            Xorazm,
 
             /// <summary>
             /// Unknown
@@ -175,6 +188,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"UZ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -210,6 +233,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

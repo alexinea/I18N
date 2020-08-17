@@ -107,87 +107,87 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Northern Mindanao
             /// </summary>
-            [AliasInShort("10")] NorthernMindanao,
+            [AliasInShort("10")][RegionCode(1_00_131_0010)] NorthernMindanao,
 
             /// <summary>
             /// Davao
             /// </summary>
-            [AliasInShort("11")] Davao,
+            [AliasInShort("11")][RegionCode(1_00_131_0011)] Davao,
 
             /// <summary>
             /// Soccsksargen
             /// </summary>
-            [AliasInShort("12")] Soccsksargen,
+            [AliasInShort("12")][RegionCode(1_00_131_0012)] Soccsksargen,
 
             /// <summary>
             /// Caraga
             /// </summary>
-            [AliasInShort("13")] Caraga,
+            [AliasInShort("13")][RegionCode(1_00_131_0013)] Caraga,
 
             /// <summary>
             /// Muslim Mindanao
             /// </summary>
-            [AliasInShort("14")] MuslimMindanao,
+            [AliasInShort("14")][RegionCode(1_00_131_0014)] MuslimMindanao,
 
             /// <summary>
             /// Cordillera Administrative
             /// </summary>
-            [AliasInShort("15")] CordilleraAdministrative,
+            [AliasInShort("15")][RegionCode(1_00_131_0015)] CordilleraAdministrative,
 
             /// <summary>
             /// Calabarzon
             /// </summary>
-            [AliasInShort("40")] Calabarzon,
+            [AliasInShort("40")][RegionCode(1_00_131_0040)] Calabarzon,
 
             /// <summary>
             /// Mimaropa
             /// </summary>
-            [AliasInShort("41")] Mimaropa,
+            [AliasInShort("41")][RegionCode(1_00_131_0041)] Mimaropa,
 
             /// <summary>
             /// Metro Manila
             /// </summary>
-            [AliasInShort("00")] MetroManila,
+            [AliasInShort("00")][RegionCode(1_00_131_0000)] MetroManila,
 
             /// <summary>
             /// Ilocos
             /// </summary>
-            [AliasInShort("01")] Ilocos,
+            [AliasInShort("01")][RegionCode(1_00_131_0001)] Ilocos,
 
             /// <summary>
             /// Cagayan Valley
             /// </summary>
-            [AliasInShort("02")] CagayanValley,
+            [AliasInShort("02")][RegionCode(1_00_131_0002)] CagayanValley,
 
             /// <summary>
             /// Central Luzon
             /// </summary>
-            [AliasInShort("03")] CentralLuzon,
+            [AliasInShort("03")][RegionCode(1_00_131_0003)] CentralLuzon,
 
             /// <summary>
             /// Bicol
             /// </summary>
-            [AliasInShort("05")] Bicol,
+            [AliasInShort("05")][RegionCode(1_00_131_0005)] Bicol,
 
             /// <summary>
             /// Western Visayas
             /// </summary>
-            [AliasInShort("06")] WesternVisayas,
+            [AliasInShort("06")][RegionCode(1_00_131_0006)] WesternVisayas,
 
             /// <summary>
             /// Central Visayas
             /// </summary>
-            [AliasInShort("07")] CentralVisayas,
+            [AliasInShort("07")][RegionCode(1_00_131_0007)] CentralVisayas,
 
             /// <summary>
             /// Eastern Visayas
             /// </summary>
-            [AliasInShort("08")] EasternVisayas,
+            [AliasInShort("08")][RegionCode(1_00_131_0008)] EasternVisayas,
 
             /// <summary>
             /// Zamboanga Peninsula
             /// </summary>
-            [AliasInShort("09")] ZamboangaPeninsula,
+            [AliasInShort("09")][RegionCode(1_00_131_0009)] ZamboangaPeninsula,
 
             /// <summary>
             /// Unknown
@@ -215,6 +215,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"PH-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -250,6 +260,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

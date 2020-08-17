@@ -4,14 +4,18 @@ using EnumsNET;
 
 namespace Cosmos.I18N.Countries
 {
+    /// <summary>
+    /// Runtime country info.
+    /// </summary>
     public class RuntimeCountryInfo
     {
         internal RuntimeCountryInfo()
         {
         }
 
+        #region Runtime fields
+
         // ReSharper disable once InconsistentNaming
-        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public string UNCode { get; internal set; }
 
         public string Alpha2Code { get; internal set; }
@@ -43,6 +47,12 @@ namespace Cosmos.I18N.Countries
         public string RuntimeBelongsToCountry { get; internal set; }
 
         public bool RuntimeHistoricalCountry { get; internal set; }
+        
+        public long RuntimeRegionCode { get; internal set; }
+        
+        #endregion
+
+        #region Of
 
         public static RuntimeCountryInfo Of(CountryInfo country)
         {
@@ -51,7 +61,7 @@ namespace Cosmos.I18N.Countries
 
             var ret = new RuntimeCountryInfo
             {
-                UNCode = country.UNCode,
+                UNCode = country.M49Code,
                 Alpha2Code = country.Alpha2Code,
                 Alpha3Code = country.Alpha3Code,
                 Name = country.Name,
@@ -67,11 +77,21 @@ namespace Cosmos.I18N.Countries
                 RuntimeCountryName = country.Country.GetName(),
                 RuntimeCountryType = country.CountryType,
                 RuntimeBelongsToCountry = country.BelongsToCountry.GetName(),
-                RuntimeHistoricalCountry = country.HistoricalCountry
+                RuntimeHistoricalCountry = country.HistoricalCountry,
+                RuntimeRegionCode = country.CRCode
             };
 
             return ret;
         }
+
+        public static RuntimeCountryInfo Of(CountryCode code)
+        {
+            return Of(CountryManager.GetCountryInfo(code));
+        }
+
+        #endregion
+
+        #region To country
 
         /// <summary>
         /// To country info
@@ -94,6 +114,10 @@ namespace Cosmos.I18N.Countries
             return null;
         }
 
+        #endregion
+
+        #region Get country by year, month and day
+
         public RuntimeCountryInfo GetCountryIn(int year)
         {
             return GetCountryOn(year, 1, 1);
@@ -106,7 +130,7 @@ namespace Cosmos.I18N.Countries
 
         public RuntimeCountryInfo GetCountryOn(int year, int month, int day)
         {
-            return HistoricalEngine.Get(this, year, month, day);
+            return HistoricalCountryManager.Get(this, year, month, day);
         }
 
         public RuntimeCountryInfo GetCountryOn(DateTime dt)
@@ -118,5 +142,7 @@ namespace Cosmos.I18N.Countries
         {
             return !RuntimeHistoricalCountry ? this : GetCountryOn(DateTime.Today);
         }
+
+        #endregion
     }
 }

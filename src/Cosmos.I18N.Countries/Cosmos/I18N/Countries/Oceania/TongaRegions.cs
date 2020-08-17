@@ -48,27 +48,32 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// ʻEua
             /// </summary>
-            [AliasInShort("01")] Eua,
+            [AliasInShort("01")] [RegionCode(6_00_121_0001)]
+            Eua,
 
             /// <summary>
             /// Haʻapai
             /// </summary>
-            [AliasInShort("02")] HaApai,
+            [AliasInShort("02")] [RegionCode(6_00_121_0002)]
+            HaApai,
 
             /// <summary>
             /// Niuas
             /// </summary>
-            [AliasInShort("03")] Niuas,
+            [AliasInShort("03")] [RegionCode(6_00_121_0003)]
+            Niuas,
 
             /// <summary>
             /// Tongatapu
             /// </summary>
-            [AliasInShort("04")] Tongatapu,
+            [AliasInShort("04")] [RegionCode(6_00_121_0004)]
+            Tongatapu,
 
             /// <summary>
             /// Vavaʻu
             /// </summary>
-            [AliasInShort("05")] VavaU,
+            [AliasInShort("05")] [RegionCode(6_00_121_0005)]
+            VavaU,
 
             /// <summary>
             /// Unknown<br />未知
@@ -96,6 +101,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"TO-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -131,6 +146,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

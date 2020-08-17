@@ -42,22 +42,22 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Hhohho
             /// </summary>
-            [AliasInShort("HH")] Hhohho,
+            [AliasInShort("HH")][RegionCode(3_00_155_0001)] Hhohho,
 
             /// <summary>
             /// Lubombo
             /// </summary>
-            [AliasInShort("LU")] Lubombo,
+            [AliasInShort("LU")][RegionCode(3_00_155_0002)] Lubombo,
 
             /// <summary>
             /// Manzini
             /// </summary>
-            [AliasInShort("MA")] Manzini,
+            [AliasInShort("MA")][RegionCode(3_00_155_0003)] Manzini,
 
             /// <summary>
             /// Shiselweni
             /// </summary>
-            [AliasInShort("SH")] Shiselweni,
+            [AliasInShort("SH")][RegionCode(3_00_155_0004)] Shiselweni,
 
             /// <summary>
             /// Unknown
@@ -85,6 +85,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SZ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -120,6 +130,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

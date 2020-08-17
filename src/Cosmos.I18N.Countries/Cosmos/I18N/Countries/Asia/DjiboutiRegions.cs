@@ -52,32 +52,38 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Arta
             /// </summary>
-            [AliasInShort("AR")] Arta,
+            [AliasInShort("AR")] [RegionCode(1_00_113_0001)]
+            Arta,
 
             /// <summary>
             /// Ali Sabieh
             /// </summary>
-            [AliasInShort("AS")] AliSabieh,
+            [AliasInShort("AS")] [RegionCode(1_00_113_0002)]
+            AliSabieh,
 
             /// <summary>
             /// Dikhil
             /// </summary>
-            [AliasInShort("DI")] Dikhil,
+            [AliasInShort("DI")] [RegionCode(1_00_113_0003)]
+            Dikhil,
 
             /// <summary>
             /// Djibouti
             /// </summary>
-            [AliasInShort("DJ")] Djibouti,
+            [AliasInShort("DJ")] [RegionCode(1_00_113_0004)]
+            Djibouti,
 
             /// <summary>
             /// Obock
             /// </summary>
-            [AliasInShort("OB")] Obock,
+            [AliasInShort("OB")] [RegionCode(1_00_113_0005)]
+            Obock,
 
             /// <summary>
             /// Tadjourah
             /// </summary>
-            [AliasInShort("TA")] Tadjourah,
+            [AliasInShort("TA")] [RegionCode(1_00_113_0006)]
+            Tadjourah,
 
             /// <summary>
             /// Unknown
@@ -105,6 +111,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"DJ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -140,6 +156,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

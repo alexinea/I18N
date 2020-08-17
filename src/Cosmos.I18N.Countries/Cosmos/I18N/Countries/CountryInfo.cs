@@ -24,7 +24,11 @@ namespace Cosmos.I18N.Countries
         /// <inheritdoc />
         // ReSharper disable once InconsistentNaming
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public string UNCode { get; internal set; }
+        public string M49Code { get; internal set; }
+        
+        /// <inheritdoc />
+        // ReSharper disable once InconsistentNaming
+        public long CRCode { get; internal set; }
 
         /// <inheritdoc />
         public string Alpha2Code { get; internal set; }

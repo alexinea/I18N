@@ -42,22 +42,26 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Kosrae
             /// </summary>
-            [AliasInShort("KSA")] Kosrae,
+            [AliasInShort("KSA")] [RegionCode(6_00_107_0001)]
+            Kosrae,
 
             /// <summary>
             /// Pohnpei
             /// </summary>
-            [AliasInShort("PNI")] Pohnpei,
+            [AliasInShort("PNI")] [RegionCode(6_00_107_0002)]
+            Pohnpei,
 
             /// <summary>
             /// Chuuk
             /// </summary>
-            [AliasInShort("TRK")] Chuuk,
+            [AliasInShort("TRK")] [RegionCode(6_00_107_0003)]
+            Chuuk,
 
             /// <summary>
             /// Yap
             /// </summary>
-            [AliasInShort("YAP")] Yap,
+            [AliasInShort("YAP")] [RegionCode(6_00_107_0004)]
+            Yap,
 
             /// <summary>
             /// Unknown
@@ -85,6 +89,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"FM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -120,6 +134,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

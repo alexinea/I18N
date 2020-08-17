@@ -364,31 +364,31 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// 英格兰
             /// </summary>
-            [AliasInShort("ENG")] [RegionFlag("main")]
+            [AliasInShort("ENG")] [RegionCode(2_00_005_0001)] [RegionFlag("main")]
             England,
 
             /// <summary>
             /// 北爱尔兰
             /// </summary>
-            [AliasInShort("NIR")] [RegionFlag("main")]
+            [AliasInShort("NIR")] [RegionCode(2_00_005_0002)] [RegionFlag("main")]
             NorthernIreland,
 
             /// <summary>
             /// 苏格兰
             /// </summary>
-            [AliasInShort("SCT")] [RegionFlag("main")]
+            [AliasInShort("SCT")] [RegionCode(2_00_005_0003)] [RegionFlag("main")]
             Scottland,
 
             /// <summary>
             /// 威尔士
             /// </summary>
-            [AliasInShort("WLS")] [RegionFlag("main")]
+            [AliasInShort("WLS")] [RegionCode(2_00_005_0004)] [RegionFlag("main")]
             Wales,
 
             /// <summary>
             /// 奥尔德尼岛
             /// </summary>
-            [AliasInShort("ALD")] [RegionFlag("overseas")]
+            [AliasInShort("ALD")] [RegionCode(2_00_005_0005)] [RegionFlag("overseas")]
             Alderney,
 
             /// <summary>
@@ -396,7 +396,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 根西岛
             /// </summary>
-            [AliasInShort("GG")] [RegionFlag("overseas")]
+            [AliasInShort("GG")] [RegionCode(2_00_116)] [RegionFlag("overseas")]
             Guernsey,
 
             /// <summary>
@@ -404,7 +404,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 泽西
             /// </summary>
-            [AliasInShort("JE")] [RegionFlag("overseas")]
+            [AliasInShort("JE")] [RegionCode(2_00_119)] [RegionFlag("overseas")]
             Jersey,
 
             /// <summary>
@@ -412,7 +412,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 英属马恩岛
             /// </summary>
-            [AliasInShort("IM")] [RegionFlag("overseas")]
+            [AliasInShort("IM")] [RegionCode(2_00_127)] [RegionFlag("overseas")]
             Mann,
 
             /// <summary>
@@ -420,7 +420,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 直布罗陀
             /// </summary>
-            [AliasInShort("GI")] [RegionFlag("overseas")]
+            [AliasInShort("GI")] [RegionCode(2_00_114)] [RegionFlag("overseas")]
             Gibraltar,
 
             /// <summary>
@@ -428,7 +428,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 百慕大群岛
             /// </summary>
-            [AliasInShort("BM")] [RegionFlag("overseas")]
+            [AliasInShort("BM")] [RegionCode(4_00_108)] [RegionFlag("overseas")]
             Bermuda,
 
             /// <summary>
@@ -436,7 +436,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 开曼群岛
             /// </summary>
-            [AliasInShort("KY")] [RegionFlag("overseas")]
+            [AliasInShort("KY")] [RegionCode(4_00_110)] [RegionFlag("overseas")]
             CaymanIslands,
 
             /// <summary>
@@ -444,7 +444,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 特克斯和凯科斯群岛
             /// </summary>
-            [AliasInShort("TC")] [RegionFlag("overseas")]
+            [AliasInShort("TC")] [RegionCode(4_00_135)] [RegionFlag("overseas")]
             TurksAndCaicosIslands,
 
             /// <summary>
@@ -452,7 +452,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 英属维尔金群岛
             /// </summary>
-            [AliasInShort("VG")] [RegionFlag("overseas")]
+            [AliasInShort("VG")] [RegionCode(4_00_137)] [RegionFlag("overseas")]
             BritishVirginIslands,
 
             /// <summary>
@@ -460,7 +460,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 安圭拉
             /// </summary>
-            [AliasInShort("AI")] [RegionFlag("overseas")]
+            [AliasInShort("AI")] [RegionCode(4_00_102)] [RegionFlag("overseas")]
             Anguilla,
 
             /// <summary>
@@ -468,7 +468,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 蒙特塞拉特
             /// </summary>
-            [AliasInShort("MS")] [RegionFlag("overseas")]
+            [AliasInShort("MS")] [RegionCode(4_00_124)] [RegionFlag("overseas")]
             Montserrat,
 
             /// <summary>
@@ -476,7 +476,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 圣赫勒拿、阿森松与特里斯坦达库尼亚
             /// </summary>
-            [AliasInShort("SH")] [RegionFlag("overseas")]
+            [AliasInShort("SH")] [RegionCode(3_00_121)] [RegionFlag("overseas")]
             SaintHelena,
 
             /// <summary>
@@ -484,7 +484,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 南乔治亚岛和南桑威奇群岛
             /// </summary>
-            [AliasInShort("GS")] [RegionFlag("overseas")]
+            [AliasInShort("GS")] [RegionCode(5_00_111)] [RegionFlag("overseas")]
             // ReSharper disable once InconsistentNaming
             SGSSI,
 
@@ -493,7 +493,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 英属印度洋领地
             /// </summary>
-            [AliasInShort("IO")] [RegionFlag("overseas")]
+            [AliasInShort("IO")] [RegionCode(1_00_107)] [RegionFlag("overseas")]
             BritishIndianOceanTerritory,
 
             /// <summary>
@@ -501,7 +501,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// 皮特凯恩群岛
             /// </summary>
-            [AliasInShort("PN")] [RegionFlag("overseas")]
+            [AliasInShort("PN")] [RegionCode(6_00_117)] [RegionFlag("overseas")]
             Pitcairn,
 
             /// <summary>
@@ -531,6 +531,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GB-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -735,6 +745,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetMainRegionCodes()
             => Filter("main").Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

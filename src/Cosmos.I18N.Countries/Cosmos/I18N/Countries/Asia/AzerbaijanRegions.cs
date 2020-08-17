@@ -373,354 +373,423 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Absheron
             /// </summary>
-            [AliasInShort("ABS")] Absheron,
+            [AliasInShort("ABS")] [RegionCode(1_00_103_0001)]
+            Absheron,
 
             /// <summary>
             /// Agstafa
             /// </summary>
-            [AliasInShort("AGA")] Agstafa,
+            [AliasInShort("AGA")] [RegionCode(1_00_103_0002)]
+            Agstafa,
 
             /// <summary>
             /// Aghjabadi
             /// </summary>
-            [AliasInShort("AGC")] Aghjabadi,
+            [AliasInShort("AGC")] [RegionCode(1_00_103_0003)]
+            Aghjabadi,
 
             /// <summary>
             /// Agdam
             /// </summary>
-            [AliasInShort("AGM")] Agdam,
+            [AliasInShort("AGM")] [RegionCode(1_00_103_0004)]
+            Agdam,
 
             /// <summary>
             /// Agdash
             /// </summary>
-            [AliasInShort("AGS")] Agdash,
+            [AliasInShort("AGS")] [RegionCode(1_00_103_0005)]
+            Agdash,
 
             /// <summary>
             /// Agsu
             /// </summary>
-            [AliasInShort("AGU")] Agsu,
+            [AliasInShort("AGU")] [RegionCode(1_00_103_0006)]
+            Agsu,
 
             /// <summary>
             /// Astara
             /// </summary>
-            [AliasInShort("AST")] Astara,
+            [AliasInShort("AST")] [RegionCode(1_00_103_0007)]
+            Astara,
 
             /// <summary>
             /// Baku
             /// </summary>
-            [AliasInShort("BA")] Baku,
+            [AliasInShort("BA")] [RegionCode(1_00_103_0008)]
+            Baku,
 
             /// <summary>
             /// Balakan
             /// </summary>
-            [AliasInShort("BAL")] Balakan,
+            [AliasInShort("BAL")] [RegionCode(1_00_103_0009)]
+            Balakan,
 
             /// <summary>
             /// Barda
             /// </summary>
-            [AliasInShort("BAR")] Barda,
+            [AliasInShort("BAR")] [RegionCode(1_00_103_0010)]
+            Barda,
 
             /// <summary>
             /// Beylagan
             /// </summary>
-            [AliasInShort("BEY")] Beylagan,
+            [AliasInShort("BEY")] [RegionCode(1_00_103_0011)]
+            Beylagan,
 
             /// <summary>
             /// Bilasuvar
             /// </summary>
-            [AliasInShort("BIL")] Bilasuvar,
+            [AliasInShort("BIL")] [RegionCode(1_00_103_0012)]
+            Bilasuvar,
 
             /// <summary>
             /// Jabrayil
             /// </summary>
-            [AliasInShort("CAB")] Jabrayil,
+            [AliasInShort("CAB")] [RegionCode(1_00_103_0013)]
+            Jabrayil,
 
             /// <summary>
             /// Jalilabad
             /// </summary>
-            [AliasInShort("CAL")] Jalilabad,
+            [AliasInShort("CAL")] [RegionCode(1_00_103_0014)]
+            Jalilabad,
 
             /// <summary>
             /// Dashkasan
             /// </summary>
-            [AliasInShort("DAS")] Dashkasan,
+            [AliasInShort("DAS")] [RegionCode(1_00_103_0015)]
+            Dashkasan,
 
             /// <summary>
             /// Fizuli
             /// </summary>
-            [AliasInShort("FUZ")] Fizuli,
+            [AliasInShort("FUZ")] [RegionCode(1_00_103_0016)]
+            Fizuli,
 
             /// <summary>
             /// Ganja
             /// </summary>
-            [AliasInShort("GA")] Ganja,
+            [AliasInShort("GA")] [RegionCode(1_00_103_0017)]
+            Ganja,
 
             /// <summary>
             /// Gadabay
             /// </summary>
-            [AliasInShort("GAD")] Gadabay,
+            [AliasInShort("GAD")] [RegionCode(1_00_103_0018)]
+            Gadabay,
 
             /// <summary>
             /// Goranboy
             /// </summary>
-            [AliasInShort("GOR")] Goranboy,
+            [AliasInShort("GOR")] [RegionCode(1_00_103_0019)]
+            Goranboy,
 
             /// <summary>
             /// Goychay
             /// </summary>
-            [AliasInShort("GOY")] Goychay,
+            [AliasInShort("GOY")] [RegionCode(1_00_103_0020)]
+            Goychay,
 
             /// <summary>
             /// Goygol
             /// </summary>
-            [AliasInShort("GYG")] Goygol,
+            [AliasInShort("GYG")] [RegionCode(1_00_103_0021)]
+            Goygol,
 
             /// <summary>
             /// Hajigabul
             /// </summary>
-            [AliasInShort("HAC")] Hajigabul,
+            [AliasInShort("HAC")] [RegionCode(1_00_103_0022)]
+            Hajigabul,
 
             /// <summary>
             /// Imishli
             /// </summary>
-            [AliasInShort("IMI")] Imishli,
+            [AliasInShort("IMI")] [RegionCode(1_00_103_0023)]
+            Imishli,
 
             /// <summary>
             /// Ismailli
             /// </summary>
-            [AliasInShort("ISM")] Ismailli,
+            [AliasInShort("ISM")] [RegionCode(1_00_103_0024)]
+            Ismailli,
 
             /// <summary>
             /// Kalbajar
             /// </summary>
-            [AliasInShort("KAL")] Kalbajar,
+            [AliasInShort("KAL")] [RegionCode(1_00_103_0025)]
+            Kalbajar,
 
             /// <summary>
             /// Kurdamir
             /// </summary>
-            [AliasInShort("KUR")] Kurdamir,
+            [AliasInShort("KUR")] [RegionCode(1_00_103_0026)]
+            Kurdamir,
 
             /// <summary>
             /// Lankaran
             /// </summary>
-            [AliasInShort("LA")] Lankaran,
+            [AliasInShort("LA")] [RegionCode(1_00_103_0027)]
+            Lankaran,
 
             /// <summary>
             /// Lachin
             /// </summary>
-            [AliasInShort("LAC")] Lachin,
+            [AliasInShort("LAC")] [RegionCode(1_00_103_0028)]
+            Lachin,
 
             /// <summary>
             /// Lankaran District
             /// </summary>
-            [AliasInShort("LAN")] LankaranDistrict,
+            [AliasInShort("LAN")] [RegionCode(1_00_103_0029)]
+            LankaranDistrict,
 
             /// <summary>
             /// Lerik
             /// </summary>
-            [AliasInShort("LER")] Lerik,
+            [AliasInShort("LER")] [RegionCode(1_00_103_0030)]
+            Lerik,
 
             /// <summary>
             /// Masally
             /// </summary>
-            [AliasInShort("MAS")] Masally,
+            [AliasInShort("MAS")] [RegionCode(1_00_103_0031)]
+            Masally,
 
             /// <summary>
             /// Mingachevir
             /// </summary>
-            [AliasInShort("MI")] Mingachevir,
+            [AliasInShort("MI")] [RegionCode(1_00_103_0032)]
+            Mingachevir,
 
             /// <summary>
             /// Naftalan
             /// </summary>
-            [AliasInShort("NA")] Naftalan,
+            [AliasInShort("NA")] [RegionCode(1_00_103_0033)]
+            Naftalan,
 
             /// <summary>
             /// Neftchala
             /// </summary>
-            [AliasInShort("NEF")] Neftchala,
+            [AliasInShort("NEF")] [RegionCode(1_00_103_0034)]
+            Neftchala,
 
             /// <summary>
             /// Nakhchivan AR
             /// </summary>
-            [AliasInShort("NX")]
+            [AliasInShort("NX")] [RegionCode(1_00_103_0035)]
             // ReSharper disable once InconsistentNaming
             NakhchivanAR,
 
             /// <summary>
             /// Oghuz
             /// </summary>
-            [AliasInShort("OGU")] Oghuz,
+            [AliasInShort("OGU")] [RegionCode(1_00_103_0036)]
+            Oghuz,
 
             /// <summary>
             /// Qabala
             /// </summary>
-            [AliasInShort("QAB")] Qabala,
+            [AliasInShort("QAB")] [RegionCode(1_00_103_0037)]
+            Qabala,
 
             /// <summary>
             /// Qakh
             /// </summary>
-            [AliasInShort("QAX")] Qakh,
+            [AliasInShort("QAX")] [RegionCode(1_00_103_0038)]
+            Qakh,
 
             /// <summary>
             /// Qazakh
             /// </summary>
-            [AliasInShort("QAZ")] Qazakh,
+            [AliasInShort("QAZ")] [RegionCode(1_00_103_039)]
+            Qazakh,
 
             /// <summary>
             /// Quba
             /// </summary>
-            [AliasInShort("QBA")] Quba,
+            [AliasInShort("QBA")] [RegionCode(1_00_103_0040)]
+            Quba,
 
             /// <summary>
             /// Qubadli
             /// </summary>
-            [AliasInShort("QBI")] Qubadli,
+            [AliasInShort("QBI")] [RegionCode(1_00_103_0041)]
+            Qubadli,
 
             /// <summary>
             /// Gobustan
             /// </summary>
-            [AliasInShort("QOB")] Gobustan,
+            [AliasInShort("QOB")] [RegionCode(1_00_103_0042)]
+            Gobustan,
 
             /// <summary>
             /// Qusar
             /// </summary>
-            [AliasInShort("QUS")] Qusar,
+            [AliasInShort("QUS")] [RegionCode(1_00_103_0043)]
+            Qusar,
 
             /// <summary>
             /// Shaki
             /// </summary>
-            [AliasInShort("SA")] Shaki,
+            [AliasInShort("SA")] [RegionCode(1_00_103_0044)]
+            Shaki,
 
             /// <summary>
             /// Sabirabad
             /// </summary>
-            [AliasInShort("SAB")] Sabirabad,
+            [AliasInShort("SAB")] [RegionCode(1_00_103_0045)]
+            Sabirabad,
 
             /// <summary>
             /// Shaki District
             /// </summary>
-            [AliasInShort("SAK")] ShakiDistrict,
+            [AliasInShort("SAK")] [RegionCode(1_00_103_0046)]
+            ShakiDistrict,
 
             /// <summary>
             /// Salyan
             /// </summary>
-            [AliasInShort("SAL")] Salyan,
+            [AliasInShort("SAL")] [RegionCode(1_00_103_0047)]
+            Salyan,
 
             /// <summary>
             /// Saatly
             /// </summary>
-            [AliasInShort("SAT")] Saatly,
+            [AliasInShort("SAT")] [RegionCode(1_00_103_0048)]
+            Saatly,
 
             /// <summary>
             /// Shabran
             /// </summary>
-            [AliasInShort("SBN")] Shabran,
+            [AliasInShort("SBN")] [RegionCode(1_00_103_0049)]
+            Shabran,
 
             /// <summary>
             /// Siazan
             /// </summary>
-            [AliasInShort("SIY")] Siazan,
+            [AliasInShort("SIY")] [RegionCode(1_00_103_0050)]
+            Siazan,
 
             /// <summary>
             /// Shamkir
             /// </summary>
-            [AliasInShort("SKR")] Shamkir,
+            [AliasInShort("SKR")] [RegionCode(1_00_103_0051)]
+            Shamkir,
 
             /// <summary>
             /// Sumqayit
             /// </summary>
-            [AliasInShort("SM")] Sumqayit,
+            [AliasInShort("SM")] [RegionCode(1_00_103_0052)]
+            Sumqayit,
 
             /// <summary>
             /// Shamakhi
             /// </summary>
-            [AliasInShort("SMI")] Shamakhi,
+            [AliasInShort("SMI")] [RegionCode(1_00_103_0053)]
+            Shamakhi,
 
             /// <summary>
             /// Samukh
             /// </summary>
-            [AliasInShort("SMX")] Samukh,
+            [AliasInShort("SMX")] [RegionCode(1_00_103_0054)]
+            Samukh,
 
             /// <summary>
             /// Shirvan
             /// </summary>
-            [AliasInShort("SR")] Shirvan,
+            [AliasInShort("SR")] [RegionCode(1_00_103_0055)]
+            Shirvan,
 
             /// <summary>
             /// Shusha
             /// </summary>
-            [AliasInShort("SUS")] Shusha,
+            [AliasInShort("SUS")] [RegionCode(1_00_103_0056)]
+            Shusha,
 
             /// <summary>
             /// Tartar
             /// </summary>
-            [AliasInShort("TAR")] Tartar,
+            [AliasInShort("TAR")] [RegionCode(1_00_103_0057)]
+            Tartar,
 
             /// <summary>
             /// Tovuz
             /// </summary>
-            [AliasInShort("TOV")] Tovuz,
+            [AliasInShort("TOV")] [RegionCode(1_00_103_0058)]
+            Tovuz,
 
             /// <summary>
             /// Ujar
             /// </summary>
-            [AliasInShort("UCA")] Ujar,
+            [AliasInShort("UCA")] [RegionCode(1_00_103_0059)]
+            Ujar,
 
             /// <summary>
             /// Stepanakert
             /// </summary>
-            [AliasInShort("XA")] Stepanakert,
+            [AliasInShort("XA")] [RegionCode(1_00_103_0060)]
+            Stepanakert,
 
             /// <summary>
             /// Khachmaz
             /// </summary>
-            [AliasInShort("XAC")] Khachmaz,
+            [AliasInShort("XAC")] [RegionCode(1_00_103_0061)]
+            Khachmaz,
 
             /// <summary>
             /// Khojali
             /// </summary>
-            [AliasInShort("XCI")] Khojali,
+            [AliasInShort("XCI")] [RegionCode(1_00_103_0062)]
+            Khojali,
 
             /// <summary>
             /// Khizi
             /// </summary>
-            [AliasInShort("XIZ")] Khizi,
+            [AliasInShort("XIZ")] [RegionCode(1_00_103_0063)]
+            Khizi,
 
             /// <summary>
             /// Khojavend
             /// </summary>
-            [AliasInShort("XVD")] Khojavend,
+            [AliasInShort("XVD")] [RegionCode(1_00_103_0064)]
+            Khojavend,
 
             /// <summary>
             /// Yardymli
             /// </summary>
-            [AliasInShort("YAR")] Yardymli,
+            [AliasInShort("YAR")] [RegionCode(1_00_103_0065)]
+            Yardymli,
 
             /// <summary>
             /// Yevlakh
             /// </summary>
-            [AliasInShort("YE")] Yevlakh,
+            [AliasInShort("YE")] [RegionCode(1_00_103_0066)]
+            Yevlakh,
 
             /// <summary>
             ///  Yevlakh District
             /// </summary>
-            [AliasInShort("YEV")] YevlakhDistrict,
+            [AliasInShort("YEV")] [RegionCode(1_00_103_0067)]
+            YevlakhDistrict,
 
             /// <summary>
             /// Zangilan
             /// </summary>
-            [AliasInShort("ZAN")] Zangilan,
+            [AliasInShort("ZAN")] [RegionCode(1_00_103_0068)]
+            Zangilan,
 
             /// <summary>
             /// Zaqatala
             /// </summary>
-            [AliasInShort("ZAQ")] Zaqatala,
+            [AliasInShort("ZAQ")] [RegionCode(1_00_103_0069)]
+            Zaqatala,
 
             /// <summary>
             /// Zardab
             /// </summary>
-            [AliasInShort("ZAR")] Zardab,
+            [AliasInShort("ZAR")] [RegionCode(1_00_103_0070)]
+            Zardab,
 
             /// <summary>
             /// Unknown
@@ -748,6 +817,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AZ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -783,6 +862,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -52,32 +52,38 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Banjul
             /// </summary>
-            [AliasInShort("B")] Banjul,
+            [AliasInShort("B")] [RegionCode(3_00_128_0001)]
+            Banjul,
 
             /// <summary>
             /// Lower River Division
             /// </summary>
-            [AliasInShort("L")] LowerRiverDivision,
+            [AliasInShort("L")] [RegionCode(3_00_128_0002)]
+            LowerRiverDivision,
 
             /// <summary>
             /// Central River Division
             /// </summary>
-            [AliasInShort("M")] CentralRiverDivision,
+            [AliasInShort("M")] [RegionCode(3_00_128_0003)]
+            CentralRiverDivision,
 
             /// <summary>
             /// North Bank Division
             /// </summary>
-            [AliasInShort("N")] NorthBankDivision,
+            [AliasInShort("N")] [RegionCode(3_00_128_0004)]
+            NorthBankDivision,
 
             /// <summary>
             /// Upper River Division
             /// </summary>
-            [AliasInShort("U")] UpperRiverDivision,
+            [AliasInShort("U")] [RegionCode(3_00_128_0005)]
+            UpperRiverDivision,
 
             /// <summary>
             /// West Coast Division
             /// </summary>
-            [AliasInShort("W")] WestCoastDivision,
+            [AliasInShort("W")] [RegionCode(3_00_128_0006)]
+            WestCoastDivision,
 
             /// <summary>
             /// Unknown
@@ -105,6 +111,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -140,6 +156,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

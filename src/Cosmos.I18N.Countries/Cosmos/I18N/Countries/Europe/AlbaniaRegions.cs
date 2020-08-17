@@ -20,7 +20,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Durrës 
         /// </summary>
-        public static EnumValues Durrës => EnumValues.Dibër;
+        public static EnumValues Durrës => EnumValues.Durrës;
 
         /// <summary>
         /// Elbasan 
@@ -82,62 +82,74 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Berat 
             /// </summary>
-            [AliasInShort("1")] Berat,
+            [AliasInShort("1")] [RegionCode(2_00_102_0001)]
+            Berat,
 
             /// <summary>
             /// Durrës 
             /// </summary>
-            [AliasInShort("2")] Durrës,
+            [AliasInShort("2")] [RegionCode(2_00_102_0002)]
+            Durrës,
 
             /// <summary>
             /// Elbasan 
             /// </summary>
-            [AliasInShort("3")] Elbasan,
+            [AliasInShort("3")] [RegionCode(2_00_102_0003)]
+            Elbasan,
 
             /// <summary>
             /// Fier 
             /// </summary>
-            [AliasInShort("4")] Fier,
+            [AliasInShort("4")] [RegionCode(2_00_102_0004)]
+            Fier,
 
             /// <summary>
             /// Gjirokastër 
             /// </summary>
-            [AliasInShort("5")] Gjirokastër,
+            [AliasInShort("5")] [RegionCode(2_00_102_0005)]
+            Gjirokastër,
 
             /// <summary>
             /// Korçë 
             /// </summary>
-            [AliasInShort("6")] Korçë,
+            [AliasInShort("6")] [RegionCode(2_00_102_0006)]
+            Korçë,
 
             /// <summary>
             /// Kukës 
             /// </summary>
-            [AliasInShort("7")] Kukës,
+            [AliasInShort("7")] [RegionCode(2_00_102_0007)]
+            Kukës,
 
             /// <summary>
             /// Lezhë 
             /// </summary>
-            [AliasInShort("8")] Lezhë,
+            [AliasInShort("8")] [RegionCode(2_00_102_0008)]
+            Lezhë,
 
             /// <summary>
             /// Dibër 
             /// </summary>
-            [AliasInShort("9")] Dibër,
+            [AliasInShort("9")] [RegionCode(2_00_102_0009)]
+            Dibër,
 
             /// <summary>
             /// Shkodër 
             /// </summary>
-            [AliasInShort("10")] Shkodër,
+            [AliasInShort("10")] [RegionCode(2_00_102_0010)]
+            Shkodër,
 
             /// <summary>
             /// Tirana 
             /// </summary>
-            [AliasInShort("11")] Tirana,
+            [AliasInShort("11")] [RegionCode(2_00_102_0011)]
+            Tirana,
 
             /// <summary>
             /// Vlorë 
             /// </summary>
-            [AliasInShort("12")] Vlorë,
+            [AliasInShort("12")] [RegionCode(2_00_102_0012)]
+            Vlorë,
 
             /// <summary>
             /// Unknown
@@ -165,6 +177,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AL-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -200,6 +222,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

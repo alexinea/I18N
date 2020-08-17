@@ -67,47 +67,56 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Burgenland
             /// </summary>
-            [AliasInShort("1")] Burgenland,
+            [AliasInShort("1")] [RegionCode(2_00_011_0001)]
+            Burgenland,
 
             /// <summary>
             /// Carinthia
             /// </summary>
-            [AliasInShort("2")] Kärnten,
+            [AliasInShort("2")] [RegionCode(2_00_011_0002)]
+            Kärnten,
 
             /// <summary>
             /// Lower Austria
             /// </summary>
-            [AliasInShort("3")] Niederösterreich,
+            [AliasInShort("3")] [RegionCode(2_00_011_0003)]
+            Niederösterreich,
 
             /// <summary>
             /// Upper Austria
             /// </summary>
-            [AliasInShort("4")] Oberösterreich,
+            [AliasInShort("4")] [RegionCode(2_00_011_0004)]
+            Oberösterreich,
 
             /// <summary>
             /// Salzburg
             /// </summary>
-            [AliasInShort("5")] Salzburg,
+            [AliasInShort("5")] [RegionCode(2_00_011_0005)]
+            Salzburg,
 
             /// <summary>
             /// Styria
             /// </summary>
-            [AliasInShort("6")] Steiermark,
+            [AliasInShort("6")] [RegionCode(2_00_011_0006)]
+            Steiermark,
 
             /// <summary>
             /// Tyrol
             /// </summary>
-            [AliasInShort("7")] Tirol,
+            [AliasInShort("7")] [RegionCode(2_00_011_0007)]
+            Tirol,
 
             /// <summary>
             /// Vorarlberg
             /// </summary>
-            [AliasInShort("8")] Vorarlberg,
+            [AliasInShort("8")] [RegionCode(2_00_011_0008)]
+            Vorarlberg,
 
             /// <summary>
             /// Vienna
             /// </summary>
-            [AliasInShort("9")] Wien,
+            [AliasInShort("9")] [RegionCode(2_00_011_0009)]
+            Wien,
 
             /// <summary>
             /// Unknown
@@ -137,6 +146,36 @@ namespace Cosmos.I18N.Countries.Europe
             return $"AT-{values.ToRegionCode()}";
         }
 
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="Country"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static Country ToCountry(this EnumValues value)
+        {
+            return Country.Austria;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="CountryCode"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            return CountryCode.AT;
+        }
+
         #endregion
 
         #region Getters
@@ -150,6 +189,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

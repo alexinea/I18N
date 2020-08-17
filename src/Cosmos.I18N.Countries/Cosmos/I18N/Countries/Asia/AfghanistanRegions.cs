@@ -192,172 +192,206 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Balkh
             /// </summary>
-            [AliasInShort("BAL")] Balkh,
+            [AliasInShort("BAL")] [RegionCode(1_00_101_0001)]
+            Balkh,
 
             /// <summary>
             /// Bamyan
             /// </summary>
-            [AliasInShort("BAM")] Bamyan,
+            [AliasInShort("BAM")] [RegionCode(1_00_101_0002)]
+            Bamyan,
 
             /// <summary>
             /// Badghis
             /// </summary>
-            [AliasInShort("BDG")] Badghis,
+            [AliasInShort("BDG")] [RegionCode(1_00_101_0003)]
+            Badghis,
 
             /// <summary>
             /// Badakhshan
             /// </summary>
-            [AliasInShort("BDS")] Badakhshan,
+            [AliasInShort("BDS")] [RegionCode(1_00_101_0004)]
+            Badakhshan,
 
             /// <summary>
             /// Baghlan
             /// </summary>
-            [AliasInShort("BGL")] Baghlan,
+            [AliasInShort("BGL")] [RegionCode(1_00_101_0005)]
+            Baghlan,
 
             /// <summary>
             /// Daykundi
             /// </summary>
-            [AliasInShort("DAY")] Daykundi,
+            [AliasInShort("DAY")] [RegionCode(1_00_101_0006)]
+            Daykundi,
 
             /// <summary>
             /// Farah
             /// </summary>
-            [AliasInShort("FRA")] Farah,
+            [AliasInShort("FRA")] [RegionCode(1_00_101_0007)]
+            Farah,
 
             /// <summary>
             /// Faryab
             /// </summary>
-            [AliasInShort("FYB")] Faryab,
+            [AliasInShort("FYB")] [RegionCode(1_00_101_0008)]
+            Faryab,
 
             /// <summary>
             /// Ghazni
             /// </summary>
-            [AliasInShort("GHA")] Ghazni,
+            [AliasInShort("GHA")] [RegionCode(1_00_101_0009)]
+            Ghazni,
 
             /// <summary>
             /// Ghōr
             /// </summary>
-            [AliasInShort("GHO")] Ghōr,
+            [AliasInShort("GHO")] [RegionCode(1_00_101_0010)]
+            Ghōr,
 
             /// <summary>
             /// Helmand
             /// </summary>
-            [AliasInShort("HEL")] Helmand,
+            [AliasInShort("HEL")] [RegionCode(1_00_101_0011)]
+            Helmand,
 
             /// <summary>
             /// Herat
             /// </summary>
-            [AliasInShort("HER")] Herat,
+            [AliasInShort("HER")] [RegionCode(1_00_101_0012)]
+            Herat,
 
             /// <summary>
             /// Jowzjan
             /// </summary>
-            [AliasInShort("JOW")] Jowzjan,
+            [AliasInShort("JOW")] [RegionCode(1_00_101_0013)]
+            Jowzjan,
 
             /// <summary>
             /// Kabul
             /// </summary>
-            [AliasInShort("KAB")] Kabul,
+            [AliasInShort("KAB")] [RegionCode(1_00_101_0014)]
+            Kabul,
 
             /// <summary>
             /// Kandahar
             /// </summary>
-            [AliasInShort("KAN")] Kandahar,
+            [AliasInShort("KAN")] [RegionCode(1_00_101_0015)]
+            Kandahar,
 
             /// <summary>
             /// Kapisa
             /// </summary>
-            [AliasInShort("KAP")] Kapisa,
+            [AliasInShort("KAP")] [RegionCode(1_00_101_0016)]
+            Kapisa,
 
             /// <summary>
             /// Kunduz
             /// </summary>
-            [AliasInShort("KDZ")] Kunduz,
+            [AliasInShort("KDZ")] [RegionCode(1_00_101_0017)]
+            Kunduz,
 
             /// <summary>
             /// Khost
             /// </summary>
-            [AliasInShort("KHO")] Khost,
+            [AliasInShort("KHO")] [RegionCode(1_00_101_0018)]
+            Khost,
 
             /// <summary>
             /// Kunar
             /// </summary>
-            [AliasInShort("KNR")] Kunar,
+            [AliasInShort("KNR")] [RegionCode(1_00_101_0019)]
+            Kunar,
 
             /// <summary>
             /// Laghman
             /// </summary>
-            [AliasInShort("LAG")] Laghman,
+            [AliasInShort("LAG")] [RegionCode(1_00_101_0020)]
+            Laghman,
 
             /// <summary>
             /// Logar
             /// </summary>
-            [AliasInShort("LOG")] Logar,
+            [AliasInShort("LOG")] [RegionCode(1_00_101_0021)]
+            Logar,
 
             /// <summary>
             /// Nangarhar
             /// </summary>
-            [AliasInShort("NAN")] Nangarhar,
+            [AliasInShort("NAN")] [RegionCode(1_00_101_0022)]
+            Nangarhar,
 
             /// <summary>
             /// Nimruz
             /// </summary>
-            [AliasInShort("NIM")] Nimruz,
+            [AliasInShort("NIM")] [RegionCode(1_00_101_0023)]
+            Nimruz,
 
             /// <summary>
             /// Nuristan
             /// </summary>
-            [AliasInShort("NUR")] Nuristan,
+            [AliasInShort("NUR")] [RegionCode(1_00_101_0024)]
+            Nuristan,
 
             /// <summary>
             /// Panjshir
             /// </summary>
-            [AliasInShort("PAN")] Panjshir,
+            [AliasInShort("PAN")] [RegionCode(1_00_101_0025)]
+            Panjshir,
 
             /// <summary>
             /// Parwan
             /// </summary>
-            [AliasInShort("PAR")] Parwan,
+            [AliasInShort("PAR")] [RegionCode(1_00_101_0026)]
+            Parwan,
 
             /// <summary>
             /// Paktia
             /// </summary>
-            [AliasInShort("PIA")] Paktia,
+            [AliasInShort("PIA")] [RegionCode(1_00_101_0027)]
+            Paktia,
 
             /// <summary>
             /// Paktika
             /// </summary>
-            [AliasInShort("PKA")] Paktika,
+            [AliasInShort("PKA")] [RegionCode(1_00_101_0027)]
+            Paktika,
 
             /// <summary>
             /// Samangan
             /// </summary>
-            [AliasInShort("SAM")] Samangan,
+            [AliasInShort("SAM")] [RegionCode(1_00_101_0028)]
+            Samangan,
 
             /// <summary>
             /// Sar-e Pol
             /// </summary>
-            [AliasInShort("SAR")] SarEPol,
+            [AliasInShort("SAR")] [RegionCode(1_00_101_0029)]
+            SarEPol,
 
             /// <summary>
             /// Takhar
             /// </summary>
-            [AliasInShort("TAK")] Takhar,
+            [AliasInShort("TAK")] [RegionCode(1_00_101_0030)]
+            Takhar,
 
             /// <summary>
             /// Urozgan
             /// </summary>
-            [AliasInShort("URU")] Urozgan,
+            [AliasInShort("URU")] [RegionCode(1_00_101_0031)]
+            Urozgan,
 
             /// <summary>
             /// Maidan Wardak
             /// </summary>
-            [AliasInShort("WAR")] MaidanWardak,
+            [AliasInShort("WAR")] [RegionCode(1_00_101_0032)]
+            MaidanWardak,
 
             /// <summary>
             /// Zabul
             /// </summary>
-            [AliasInShort("ZAB")] Zabul,
+            [AliasInShort("ZAB")] [RegionCode(1_00_101_0033)]
+            Zabul,
 
             /// <summary>
             /// Unknown
@@ -385,6 +419,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AF-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -420,6 +464,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

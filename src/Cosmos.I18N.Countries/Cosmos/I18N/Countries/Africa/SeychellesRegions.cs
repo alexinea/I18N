@@ -147,127 +147,127 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Bel Ombre
             /// </summary>
-            [AliasInShort("10")] BelOmbre,
+            [AliasInShort("10")][RegionCode(3_00_145_0010)] BelOmbre,
 
             /// <summary>
             /// Cascade
             /// </summary>
-            [AliasInShort("11")] Cascade,
+            [AliasInShort("11")][RegionCode(3_00_145_0011)] Cascade,
 
             /// <summary>
             /// Glacis
             /// </summary>
-            [AliasInShort("12")] Glacis,
+            [AliasInShort("12")][RegionCode(3_00_145_0012)] Glacis,
 
             /// <summary>
             /// Grand’Anse Mahé
             /// </summary>
-            [AliasInShort("13")] GrandAnseMahé,
+            [AliasInShort("13")][RegionCode(3_00_145_0013)] GrandAnseMahé,
 
             /// <summary>
             /// Grand’Anse Praslin
             /// </summary>
-            [AliasInShort("14")] GrandAnsePraslin,
+            [AliasInShort("14")][RegionCode(3_00_145_0014)] GrandAnsePraslin,
 
             /// <summary>
             /// La Digue
             /// </summary>
-            [AliasInShort("15")] LaDigue,
+            [AliasInShort("15")][RegionCode(3_00_145_0015)] LaDigue,
 
             /// <summary>
             /// La Rivière Anglaise
             /// </summary>
-            [AliasInShort("16")] LaRivièreAnglaise,
+            [AliasInShort("16")][RegionCode(3_00_145_0016)] LaRivièreAnglaise,
 
             /// <summary>
             /// Mont Buxton
             /// </summary>
-            [AliasInShort("17")] MontBuxton,
+            [AliasInShort("17")][RegionCode(3_00_145_0017)] MontBuxton,
 
             /// <summary>
             /// Mont Fleuri
             /// </summary>
-            [AliasInShort("18")] MontFleuri,
+            [AliasInShort("18")][RegionCode(3_00_145_0018)] MontFleuri,
 
             /// <summary>
             /// Plaisance
             /// </summary>
-            [AliasInShort("19")] Plaisance,
+            [AliasInShort("19")][RegionCode(3_00_145_0019)] Plaisance,
 
             /// <summary>
             /// Pointe La Rue
             /// </summary>
-            [AliasInShort("20")] PointeLaRue,
+            [AliasInShort("20")][RegionCode(3_00_145_0020)] PointeLaRue,
 
             /// <summary>
             /// Port Glaud
             /// </summary>
-            [AliasInShort("21")] PortGlaud,
+            [AliasInShort("21")][RegionCode(3_00_145_0021)] PortGlaud,
 
             /// <summary>
             /// Saint Louis
             /// </summary>
-            [AliasInShort("22")] SaintLouis,
+            [AliasInShort("22")][RegionCode(3_00_145_0022)] SaintLouis,
 
             /// <summary>
             /// Takamaka
             /// </summary>
-            [AliasInShort("23")] Takamaka,
+            [AliasInShort("23")][RegionCode(3_00_145_0023)] Takamaka,
 
             /// <summary>
             /// Les Mamelles
             /// </summary>
-            [AliasInShort("24")] LesMamelles,
+            [AliasInShort("24")][RegionCode(3_00_145_0024)] LesMamelles,
 
             /// <summary>
             /// Roche Caiman
             /// </summary>
-            [AliasInShort("25")] RocheCaiman,
+            [AliasInShort("25")][RegionCode(3_00_145_0025)] RocheCaiman,
 
             /// <summary>
             /// Anse aux Pins
             /// </summary>
-            [AliasInShort("01")] AnseAuxPins,
+            [AliasInShort("01")][RegionCode(3_00_145_0001)] AnseAuxPins,
 
             /// <summary>
             /// Anse Boileau
             /// </summary>
-            [AliasInShort("02")] AnseBoileau,
+            [AliasInShort("02")][RegionCode(3_00_145_0002)] AnseBoileau,
 
             /// <summary>
             /// Anse Etoile
             /// </summary>
-            [AliasInShort("03")] AnseEtoile,
+            [AliasInShort("03")][RegionCode(3_00_145_0003)] AnseEtoile,
 
             /// <summary>
             /// Au Cap
             /// </summary>
-            [AliasInShort("04")] AuCap,
+            [AliasInShort("04")][RegionCode(3_00_145_0004)] AuCap,
 
             /// <summary>
             /// Anse Royale
             /// </summary>
-            [AliasInShort("05")] AnseRoyale,
+            [AliasInShort("05")][RegionCode(3_00_145_0005)] AnseRoyale,
 
             /// <summary>
             /// Baie Lazare
             /// </summary>
-            [AliasInShort("06")] BaieLazare,
+            [AliasInShort("06")][RegionCode(3_00_145_0006)] BaieLazare,
 
             /// <summary>
             /// Baie Sainte Anne
             /// </summary>
-            [AliasInShort("07")] BaieSainteAnne,
+            [AliasInShort("07")][RegionCode(3_00_145_0007)] BaieSainteAnne,
 
             /// <summary>
             /// Beau Vallon
             /// </summary>
-            [AliasInShort("08")] BeauVallon,
+            [AliasInShort("08")][RegionCode(3_00_145_0008)] BeauVallon,
 
             /// <summary>
             /// Bel Air
             /// </summary>
-            [AliasInShort("09")] BelAir,
+            [AliasInShort("09")][RegionCode(3_00_145_0009)] BelAir,
 
             /// <summary>
             /// Unknown
@@ -295,6 +295,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SC-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -330,6 +340,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

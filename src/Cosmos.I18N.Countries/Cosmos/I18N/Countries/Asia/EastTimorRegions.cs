@@ -87,67 +87,80 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Aileu
             /// </summary>
-            [AliasInShort("AL")] Aileu,
+            [AliasInShort("AL")] [RegionCode(1_00_114_0001)]
+            Aileu,
 
             /// <summary>
             /// Ainaro
             /// </summary>
-            [AliasInShort("AN")] Ainaro,
+            [AliasInShort("AN")] [RegionCode(1_00_114_0002)]
+            Ainaro,
 
             /// <summary>
             /// Baucau
             /// </summary>
-            [AliasInShort("BA")] Baucau,
+            [AliasInShort("BA")] [RegionCode(1_00_114_0003)]
+            Baucau,
 
             /// <summary>
             /// Bobonaro
             /// </summary>
-            [AliasInShort("BO")] Bobonaro,
+            [AliasInShort("BO")] [RegionCode(1_00_114_0004)]
+            Bobonaro,
 
             /// <summary>
             /// Cova Lima
             /// </summary>
-            [AliasInShort("CO")] CovaLima,
+            [AliasInShort("CO")] [RegionCode(1_00_114_0005)]
+            CovaLima,
 
             /// <summary>
             /// Dili
             /// </summary>
-            [AliasInShort("DI")] Dili,
+            [AliasInShort("DI")] [RegionCode(1_00_114_0006)]
+            Dili,
 
             /// <summary>
             /// Ermera
             /// </summary>
-            [AliasInShort("ER")] Ermera,
+            [AliasInShort("ER")] [RegionCode(1_00_114_0007)]
+            Ermera,
 
             /// <summary>
             /// Lautém
             /// </summary>
-            [AliasInShort("LA")] Lautém,
+            [AliasInShort("LA")] [RegionCode(1_00_114_0008)]
+            Lautém,
 
             /// <summary>
             /// Liquiçá
             /// </summary>
-            [AliasInShort("LI")] Liquiçá,
+            [AliasInShort("LI")] [RegionCode(1_00_114_0009)]
+            Liquiçá,
 
             /// <summary>
             /// Manufahi
             /// </summary>
-            [AliasInShort("MF")] Manufahi,
+            [AliasInShort("MF")] [RegionCode(1_00_114_0010)]
+            Manufahi,
 
             /// <summary>
             /// Manatuto
             /// </summary>
-            [AliasInShort("MT")] Manatuto,
+            [AliasInShort("MT")] [RegionCode(1_00_114_0011)]
+            Manatuto,
 
             /// <summary>
             /// Oecusse
             /// </summary>
-            [AliasInShort("OE")] Oecusse,
+            [AliasInShort("OE")] [RegionCode(1_00_114_0012)]
+            Oecusse,
 
             /// <summary>
             /// Viqueque
             /// </summary>
-            [AliasInShort("VI")] Viqueque,
+            [AliasInShort("VI")] [RegionCode(1_00_114_0013)]
+            Viqueque,
 
             /// <summary>
             /// Unknown
@@ -175,6 +188,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"TL-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -210,6 +233,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

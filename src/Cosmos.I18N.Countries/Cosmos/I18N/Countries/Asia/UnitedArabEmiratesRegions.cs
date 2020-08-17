@@ -57,37 +57,44 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Ajman
             /// </summary>
-            [AliasInShort("AJ")] Ajman,
+            [AliasInShort("AJ")] [RegionCode(1_00_140_0001)]
+            Ajman,
 
             /// <summary>
             /// Abu Dhabi
             /// </summary>
-            [AliasInShort("AZ")] AbuDhabi,
+            [AliasInShort("AZ")] [RegionCode(1_00_140_0002)]
+            AbuDhabi,
 
             /// <summary>
             /// Dubai
             /// </summary>
-            [AliasInShort("DU")] Dubai,
+            [AliasInShort("DU")] [RegionCode(1_00_140_0003)]
+            Dubai,
 
             /// <summary>
             /// Fujairah
             /// </summary>
-            [AliasInShort("FU")] Fujairah,
+            [AliasInShort("FU")] [RegionCode(1_00_140_0004)]
+            Fujairah,
 
             /// <summary>
             /// Ras al-Khaimah
             /// </summary>
-            [AliasInShort("RK")] RasAlKhaimah,
+            [AliasInShort("RK")] [RegionCode(1_00_140_0005)]
+            RasAlKhaimah,
 
             /// <summary>
             /// Sharjah
             /// </summary>
-            [AliasInShort("SH")] Sharjah,
+            [AliasInShort("SH")] [RegionCode(1_00_140_0006)]
+            Sharjah,
 
             /// <summary>
             /// Umm al-Quwain
             /// </summary>
-            [AliasInShort("UQ")] UmmAlQuwain,
+            [AliasInShort("UQ")] [RegionCode(1_00_140_0007)]
+            UmmAlQuwain,
 
             /// <summary>
             /// Unknown
@@ -115,6 +122,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AE-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -150,6 +167,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

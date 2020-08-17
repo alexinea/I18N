@@ -72,52 +72,62 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Cibao Nordeste
             /// </summary>
-            [AliasInShort("33")] CibaoNordeste,
+            [AliasInShort("33")] [RegionCode(4_00_114_0033)]
+            CibaoNordeste,
 
             /// <summary>
             /// Cibao Noroeste
             /// </summary>
-            [AliasInShort("34")] CibaoNoroeste,
+            [AliasInShort("34")] [RegionCode(4_00_114_0034)]
+            CibaoNoroeste,
 
             /// <summary>
             /// Cibao Norte
             /// </summary>
-            [AliasInShort("35")] CibaoNorte,
+            [AliasInShort("35")] [RegionCode(4_00_114_0035)]
+            CibaoNorte,
 
             /// <summary>
             /// Cibao Sur
             /// </summary>
-            [AliasInShort("36")] CibaoSur,
+            [AliasInShort("36")] [RegionCode(4_00_114_0036)]
+            CibaoSur,
 
             /// <summary>
             /// El Valle
             /// </summary>
-            [AliasInShort("37")] ElValle,
+            [AliasInShort("37")] [RegionCode(4_00_114_0037)]
+            ElValle,
 
             /// <summary>
             /// Enriquillo
             /// </summary>
-            [AliasInShort("38")] Enriquillo,
+            [AliasInShort("38")] [RegionCode(4_00_114_0038)]
+            Enriquillo,
 
             /// <summary>
             /// Higüamo
             /// </summary>
-            [AliasInShort("39")] Higüamo,
+            [AliasInShort("39")] [RegionCode(4_00_114_0039)]
+            Higüamo,
 
             /// <summary>
             /// Ozama
             /// </summary>
-            [AliasInShort("40")] Ozama,
+            [AliasInShort("40")] [RegionCode(4_00_114_0040)]
+            Ozama,
 
             /// <summary>
             /// Valdesia
             /// </summary>
-            [AliasInShort("41")] Valdesia,
+            [AliasInShort("41")] [RegionCode(4_00_114_0041)]
+            Valdesia,
 
             /// <summary>
             /// Yuma
             /// </summary>
-            [AliasInShort("42")] Yuma,
+            [AliasInShort("42")] [RegionCode(4_00_114_0042)]
+            Yuma,
 
             /// <summary>
             /// Unknown
@@ -145,6 +155,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"DO-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +200,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

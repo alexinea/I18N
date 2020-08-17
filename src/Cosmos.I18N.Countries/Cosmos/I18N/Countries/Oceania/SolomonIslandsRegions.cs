@@ -72,52 +72,62 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("CE")] Central,
+            [AliasInShort("CE")] [RegionCode(6_00_115_0001)]
+            Central,
 
             /// <summary>
             /// Choiseul
             /// </summary>
-            [AliasInShort("CH")] Choiseul,
+            [AliasInShort("CH")] [RegionCode(6_00_115_0002)]
+            Choiseul,
 
             /// <summary>
             /// Honiara
             /// </summary>
-            [AliasInShort("CT")] Honiara,
+            [AliasInShort("CT")] [RegionCode(6_00_115_0003)]
+            Honiara,
 
             /// <summary>
             /// Guadalcanal
             /// </summary>
-            [AliasInShort("GU")] Guadalcanal,
+            [AliasInShort("GU")] [RegionCode(6_00_115_0004)]
+            Guadalcanal,
 
             /// <summary>
             /// Isabel
             /// </summary>
-            [AliasInShort("IS")] Isabel,
+            [AliasInShort("IS")] [RegionCode(6_00_115_0005)]
+            Isabel,
 
             /// <summary>
             /// Makira-Ulawa
             /// </summary>
-            [AliasInShort("MK")] MakiraUlawa,
+            [AliasInShort("MK")] [RegionCode(6_00_115_0006)]
+            MakiraUlawa,
 
             /// <summary>
             /// Malaita
             /// </summary>
-            [AliasInShort("ML")] Malaita,
+            [AliasInShort("ML")] [RegionCode(6_00_115_0007)]
+            Malaita,
 
             /// <summary>
             /// Rennell and Bellona
             /// </summary>
-            [AliasInShort("RB")] RennellAndBellona,
+            [AliasInShort("RB")] [RegionCode(6_00_115_0008)]
+            RennellAndBellona,
 
             /// <summary>
             /// Temotu
             /// </summary>
-            [AliasInShort("TE")] Temotu,
+            [AliasInShort("TE")] [RegionCode(6_00_115_0009)]
+            Temotu,
 
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("WE")] Western,
+            [AliasInShort("WE")] [RegionCode(6_00_115_0020)]
+            Western,
 
             /// <summary>
             /// Unknown
@@ -145,6 +155,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SB-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +200,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

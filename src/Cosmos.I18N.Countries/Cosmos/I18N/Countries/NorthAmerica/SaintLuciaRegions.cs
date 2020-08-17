@@ -72,52 +72,62 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Soufrière
             /// </summary>
-            [AliasInShort("10")] Soufrière,
+            [AliasInShort("10")] [RegionCode(4_00_129_0010)]
+            Soufrière,
 
             /// <summary>
             /// Vieux Fort
             /// </summary>
-            [AliasInShort("11")] VieuxFort,
+            [AliasInShort("11")] [RegionCode(4_00_129_0011)]
+            VieuxFort,
 
             /// <summary>
             /// Canaries
             /// </summary>
-            [AliasInShort("12")] Canaries,
+            [AliasInShort("12")] [RegionCode(4_00_129_0012)]
+            Canaries,
 
             /// <summary>
             /// Anse la Raye
             /// </summary>
-            [AliasInShort("01")] AnseLaRaye,
+            [AliasInShort("01")] [RegionCode(4_00_129_0001)]
+            AnseLaRaye,
 
             /// <summary>
             /// Castries
             /// </summary>
-            [AliasInShort("02")] Castries,
+            [AliasInShort("02")] [RegionCode(4_00_129_0002)]
+            Castries,
 
             /// <summary>
             /// Choiseul
             /// </summary>
-            [AliasInShort("03")] Choiseul,
+            [AliasInShort("03")] [RegionCode(4_00_129_0003)]
+            Choiseul,
 
             /// <summary>
             /// Dennery
             /// </summary>
-            [AliasInShort("05")] Dennery,
+            [AliasInShort("05")] [RegionCode(4_00_129_0005)]
+            Dennery,
 
             /// <summary>
             /// Gros Islet
             /// </summary>
-            [AliasInShort("06")] GrosIslet,
+            [AliasInShort("06")] [RegionCode(4_00_129_0006)]
+            GrosIslet,
 
             /// <summary>
             /// Laborie
             /// </summary>
-            [AliasInShort("07")] Laborie,
+            [AliasInShort("07")] [RegionCode(4_00_129_0007)]
+            Laborie,
 
             /// <summary>
             /// Micoud
             /// </summary>
-            [AliasInShort("08")] Micoud,
+            [AliasInShort("08")] [RegionCode(4_00_129_0008)]
+            Micoud,
 
             /// <summary>
             /// Unknown
@@ -145,6 +155,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CL-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +200,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

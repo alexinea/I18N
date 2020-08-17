@@ -102,77 +102,92 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Pinar del Río
             /// </summary>
-            [AliasInShort("01")] PinarDelRío,
+            [AliasInShort("01")] [RegionCode(4_00_101_0001)]
+            PinarDelRío,
 
             /// <summary>
             /// Havana
             /// </summary>
-            [AliasInShort("03")] Havana,
+            [AliasInShort("03")] [RegionCode(4_00_101_0003)]
+            Havana,
 
             /// <summary>
             /// Matanzas
             /// </summary>
-            [AliasInShort("04")] Matanzas,
+            [AliasInShort("04")] [RegionCode(4_00_101_0004)]
+            Matanzas,
 
             /// <summary>
             /// Villa Clara
             /// </summary>
-            [AliasInShort("05")] VillaClara,
+            [AliasInShort("05")] [RegionCode(4_00_101_0005)]
+            VillaClara,
 
             /// <summary>
             /// Cienfuegos
             /// </summary>
-            [AliasInShort("06")] Cienfuegos,
+            [AliasInShort("06")] [RegionCode(4_00_101_0006)]
+            Cienfuegos,
 
             /// <summary>
             /// Sancti Spíritus
             /// </summary>
-            [AliasInShort("07")] SanctiSpíritus,
+            [AliasInShort("07")] [RegionCode(4_00_101_0007)]
+            SanctiSpíritus,
 
             /// <summary>
             /// Ciego de Ávila
             /// </summary>
-            [AliasInShort("08")] CiegoDeÁvila,
+            [AliasInShort("08")] [RegionCode(4_00_101_0008)]
+            CiegoDeÁvila,
 
             /// <summary>
             /// Camagüey
             /// </summary>
-            [AliasInShort("09")] Camagüey,
+            [AliasInShort("09")] [RegionCode(4_00_101_0009)]
+            Camagüey,
 
             /// <summary>
             /// Las Tunas
             /// </summary>
-            [AliasInShort("10")] LasTunas,
+            [AliasInShort("10")] [RegionCode(4_00_101_0010)]
+            LasTunas,
 
             /// <summary>
             /// Holguín
             /// </summary>
-            [AliasInShort("11")] Holguín,
+            [AliasInShort("11")] [RegionCode(4_00_101_0011)]
+            Holguín,
 
             /// <summary>
             /// Granma
             /// </summary>
-            [AliasInShort("12")] Granma,
+            [AliasInShort("12")] [RegionCode(4_00_101_0012)]
+            Granma,
 
             /// <summary>
             /// Santiago de Cuba
             /// </summary>
-            [AliasInShort("13")] SantiagoDeCuba,
+            [AliasInShort("13")] [RegionCode(4_00_101_0013)]
+            SantiagoDeCuba,
 
             /// <summary>
             /// Guantánamo
             /// </summary>
-            [AliasInShort("14")] Guantánamo,
+            [AliasInShort("14")] [RegionCode(4_00_101_0014)]
+            Guantánamo,
 
             /// <summary>
             /// Artemisa
             /// </summary>
-            [AliasInShort("15")] Artemisa,
+            [AliasInShort("15")] [RegionCode(4_00_101_0015)]
+            Artemisa,
 
             /// <summary>
             /// Mayabeque
             /// </summary>
-            [AliasInShort("16")] Mayabeque,
+            [AliasInShort("16")] [RegionCode(4_00_101_0016)]
+            Mayabeque,
 
             /// <summary>
             /// Isla de la Juventud
@@ -208,6 +223,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         }
 
         /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
+        }
+
+        /// <summary>
         /// Convert to <see cref="Country"/>
         /// </summary>
         /// <param name="value"></param>
@@ -240,6 +265,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

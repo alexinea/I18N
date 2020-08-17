@@ -72,52 +72,52 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Greater Accra
             /// </summary>
-            [AliasInShort("AA")] GreaterAccra,
+            [AliasInShort("AA")][RegionCode(3_00_127_0001)] GreaterAccra,
 
             /// <summary>
             /// Ashanti
             /// </summary>
-            [AliasInShort("AH")] Ashanti,
+            [AliasInShort("AH")][RegionCode(3_00_127_0002)] Ashanti,
 
             /// <summary>
             /// Brong-Ahafo
             /// </summary>
-            [AliasInShort("BA")] BrongAhafo,
+            [AliasInShort("BA")][RegionCode(3_00_127_0003)] BrongAhafo,
 
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("CP")] Central,
+            [AliasInShort("CP")][RegionCode(3_00_127_0004)] Central,
 
             /// <summary>
             /// Eastern
             /// </summary>
-            [AliasInShort("EP")] Eastern,
+            [AliasInShort("EP")][RegionCode(3_00_127_0005)] Eastern,
 
             /// <summary>
             /// Northern
             /// </summary>
-            [AliasInShort("NP")] Northern,
+            [AliasInShort("NP")][RegionCode(3_00_127_0006)] Northern,
 
             /// <summary>
             /// Volta
             /// </summary>
-            [AliasInShort("TV")] Volta,
+            [AliasInShort("TV")][RegionCode(3_00_127_0007)] Volta,
 
             /// <summary>
             /// Upper East
             /// </summary>
-            [AliasInShort("UE")] UpperEast,
+            [AliasInShort("UE")][RegionCode(3_00_127_0008)] UpperEast,
 
             /// <summary>
             /// Upper West
             /// </summary>
-            [AliasInShort("UW")] UpperWest,
+            [AliasInShort("UW")][RegionCode(3_00_127_0009)] UpperWest,
 
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("WP")] Western,
+            [AliasInShort("WP")][RegionCode(3_00_127_0010)] Western,
 
             /// <summary>
             /// Unknown
@@ -145,6 +145,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GH-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +190,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

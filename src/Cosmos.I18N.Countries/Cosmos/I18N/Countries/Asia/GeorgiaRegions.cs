@@ -82,62 +82,62 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Abkhazia
             /// </summary>
-            [AliasInShort("AB")] Abkhazia,
+            [AliasInShort("AB")][RegionCode(1_00_115_0001)] Abkhazia,
 
             /// <summary>
             /// Adjara
             /// </summary>
-            [AliasInShort("AJ")] Adjara,
+            [AliasInShort("AJ")][RegionCode(1_00_115_0002)] Adjara,
 
             /// <summary>
             /// Guria
             /// </summary>
-            [AliasInShort("GU")] Guria,
+            [AliasInShort("GU")][RegionCode(1_00_115_0003)] Guria,
 
             /// <summary>
             /// Imereti
             /// </summary>
-            [AliasInShort("IM")] Imereti,
+            [AliasInShort("IM")][RegionCode(1_00_115_0004)] Imereti,
 
             /// <summary>
             /// Kakheti 
             /// </summary>
-            [AliasInShort("KA")] Kakheti,
+            [AliasInShort("KA")][RegionCode(1_00_115_0005)] Kakheti,
 
             /// <summary>
             /// Kvemo Kartli
             /// </summary>
-            [AliasInShort("KK")] KvemoKartli,
+            [AliasInShort("KK")][RegionCode(1_00_115_0006)] KvemoKartli,
 
             /// <summary>
             /// Mtskheta-Mtianeti
             /// </summary>
-            [AliasInShort("MM")] MtskhetaMtianeti,
+            [AliasInShort("MM")][RegionCode(1_00_115_0007)] MtskhetaMtianeti,
 
             /// <summary>
             /// Racha-Lechkhumi and Kvemo Svaneti
             /// </summary>
-            [AliasInShort("RL")] RachaLechkhumiAndKvemoSvaneti,
+            [AliasInShort("RL")][RegionCode(1_00_115_0008)] RachaLechkhumiAndKvemoSvaneti,
 
             /// <summary>
             /// Samtskhe-Javakheti
             /// </summary>
-            [AliasInShort("SJ")] SamtskheJavakheti,
+            [AliasInShort("SJ")][RegionCode(1_00_115_0009)] SamtskheJavakheti,
 
             /// <summary>
             /// Shida Kartli
             /// </summary>
-            [AliasInShort("SK")] ShidaKartli,
+            [AliasInShort("SK")][RegionCode(1_00_115_0010)] ShidaKartli,
 
             /// <summary>
             /// Samegrelo-Zemo Svaneti
             /// </summary>
-            [AliasInShort("SZ")] SamegreloZemoSvaneti,
+            [AliasInShort("SZ")][RegionCode(1_00_115_0011)] SamegreloZemoSvaneti,
 
             /// <summary>
             /// Tbilisi
             /// </summary>
-            [AliasInShort("TB")] Tbilisi,
+            [AliasInShort("TB")][RegionCode(1_00_115_0012)] Tbilisi,
 
             /// <summary>
             /// Unknown
@@ -165,6 +165,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GE-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -200,6 +210,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

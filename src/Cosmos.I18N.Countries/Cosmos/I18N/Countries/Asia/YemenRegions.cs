@@ -133,112 +133,134 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Abyan
             /// </summary>
-            [AliasInShort("AB")] Abyan,
+            [AliasInShort("AB")] [RegionCode(1_00_142_0001)]
+            Abyan,
 
             /// <summary>
             /// 'Adan
             /// </summary>
-            [AliasInShort("AD")] Adan,
+            [AliasInShort("AD")] [RegionCode(1_00_142_0002)]
+            Adan,
 
             /// <summary>
             /// Amran
             /// </summary>
-            [AliasInShort("AM")] Amran,
+            [AliasInShort("AM")] [RegionCode(1_00_142_0003)]
+            Amran,
 
             /// <summary>
             /// Al Bayda
             /// </summary>
-            [AliasInShort("BA")] AlBayda,
+            [AliasInShort("BA")] [RegionCode(1_00_142_0004)]
+            AlBayda,
 
             /// <summary>
             /// Dhale
             /// </summary>
-            [AliasInShort("DA")] Dhale,
+            [AliasInShort("DA")] [RegionCode(1_00_142_0005)]
+            Dhale,
 
             /// <summary>
             /// Dhamar
             /// </summary>
-            [AliasInShort("DH")] Dhamar,
+            [AliasInShort("DH")] [RegionCode(1_00_142_0006)]
+            Dhamar,
 
             /// <summary>
             /// Hadramaut
             /// </summary>
-            [AliasInShort("HD")] Hadramaut,
+            [AliasInShort("HD")] [RegionCode(1_00_142_0007)]
+            Hadramaut,
 
             /// <summary>
             /// Hajjah
             /// </summary>
-            [AliasInShort("HJ")] Hajjah,
+            [AliasInShort("HJ")] [RegionCode(1_00_142_0008)]
+            Hajjah,
 
             /// <summary>
             /// Al Hudaydah
             /// </summary>
-            [AliasInShort("HU")] AlHudaydah,
+            [AliasInShort("HU")] [RegionCode(1_00_142_0009)]
+            AlHudaydah,
 
             /// <summary>
             /// Ibb
             /// </summary>
-            [AliasInShort("IB")] Ibb,
+            [AliasInShort("IB")] [RegionCode(1_00_142_0010)]
+            Ibb,
 
             /// <summary>
             /// Al Jawf
             /// </summary>
-            [AliasInShort("JA")] AlJawf,
+            [AliasInShort("JA")] [RegionCode(1_00_142_0011)]
+            AlJawf,
 
             /// <summary>
             /// Lahij
             /// </summary>
-            [AliasInShort("LA")] Lahij,
+            [AliasInShort("LA")] [RegionCode(1_00_142_0012)]
+            Lahij,
 
             /// <summary>
             /// Ma'rib
             /// </summary>
-            [AliasInShort("MA")] MaRib,
+            [AliasInShort("MA")] [RegionCode(1_00_142_0013)]
+            MaRib,
 
             /// <summary>
             /// Al Mahrah
             /// </summary>
-            [AliasInShort("MR")] AlMahrah,
+            [AliasInShort("MR")] [RegionCode(1_00_142_0014)]
+            AlMahrah,
 
             /// <summary>
             /// Al Mahwit
             /// </summary>
-            [AliasInShort("MW")] AlMahwit,
+            [AliasInShort("MW")] [RegionCode(1_00_142_0015)]
+            AlMahwit,
 
             /// <summary>
             /// Raymah
             /// </summary>
-            [AliasInShort("RA")] Raymah,
+            [AliasInShort("RA")] [RegionCode(1_00_142_0016)]
+            Raymah,
 
             /// <summary>
             /// Amanat Al Asimah
             /// </summary>
-            [AliasInShort("SA")] AmanatAlAsimah,
+            [AliasInShort("SA")] [RegionCode(1_00_142_0017)]
+            AmanatAlAsimah,
 
             /// <summary>
             /// Sa'dah
             /// </summary>
-            [AliasInShort("SD")] SaDah,
+            [AliasInShort("SD")] [RegionCode(1_00_142_0018)]
+            SaDah,
 
             /// <summary>
             /// Shabwah
             /// </summary>
-            [AliasInShort("SH")] Shabwah,
+            [AliasInShort("SH")] [RegionCode(1_00_142_0019)]
+            Shabwah,
 
             /// <summary>
             /// Sana'a
             /// </summary>
-            [AliasInShort("SN")] SanaA,
+            [AliasInShort("SN")] [RegionCode(1_00_142_0020)]
+            SanaA,
 
             /// <summary>
             /// Arkhabil Suqutra
             /// </summary>
-            [AliasInShort("SU")] ArkhabilSuqutra,
+            [AliasInShort("SU")] [RegionCode(1_00_142_0021)]
+            ArkhabilSuqutra,
 
             /// <summary>
             /// Taiz
             /// </summary>
-            [AliasInShort("TA")] Taiz,
+            [AliasInShort("TA")] [RegionCode(1_00_142_0022)]
+            Taiz,
 
             /// <summary>
             /// Unknown<br />未知
@@ -266,6 +288,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"YE-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -301,6 +333,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

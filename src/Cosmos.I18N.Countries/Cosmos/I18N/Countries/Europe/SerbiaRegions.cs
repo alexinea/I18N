@@ -122,102 +122,122 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Podunavlje
             /// </summary>
-            [AliasInShort("10")] Podunavlje,
+            [AliasInShort("10")] [RegionCode(2_00_136_0010)]
+            Podunavlje,
 
             /// <summary>
             /// Braničevo
             /// </summary>
-            [AliasInShort("11")] Braničevo,
+            [AliasInShort("11")] [RegionCode(2_00_136_0011)]
+            Braničevo,
 
             /// <summary>
             /// Šumadija
             /// </summary>
-            [AliasInShort("12")] Šumadija,
+            [AliasInShort("12")] [RegionCode(2_00_136_0012)]
+            Šumadija,
 
             /// <summary>
             /// Pomoravlje
             /// </summary>
-            [AliasInShort("13")] Pomoravlje,
+            [AliasInShort("13")] [RegionCode(2_00_136_0013)]
+            Pomoravlje,
 
             /// <summary>
             /// Bor
             /// </summary>
-            [AliasInShort("14")] Bor,
+            [AliasInShort("14")] [RegionCode(2_00_136_0014)]
+            Bor,
 
             /// <summary>
             /// Zaječar
             /// </summary>
-            [AliasInShort("15")] Zaječar,
+            [AliasInShort("15")] [RegionCode(2_00_136_0015)]
+            Zaječar,
 
             /// <summary>
             /// Zlatibor
             /// </summary>
-            [AliasInShort("16")] Zlatibor,
+            [AliasInShort("16")] [RegionCode(2_00_136_0016)]
+            Zlatibor,
 
             /// <summary>
             /// Moravica
             /// </summary>
-            [AliasInShort("17")] Moravica,
+            [AliasInShort("17")] [RegionCode(2_00_136_0017)]
+            Moravica,
 
             /// <summary>
             /// Raška
             /// </summary>
-            [AliasInShort("18")] Raška,
+            [AliasInShort("18")] [RegionCode(2_00_136_0018)]
+            Raška,
 
             /// <summary>
             /// Rasina
             /// </summary>
-            [AliasInShort("19")] Rasina,
+            [AliasInShort("19")] [RegionCode(2_00_136_0019)]
+            Rasina,
 
             /// <summary>
             /// Nišava
             /// </summary>
-            [AliasInShort("20")] Nišava,
+            [AliasInShort("20")] [RegionCode(2_00_136_0020)]
+            Nišava,
 
             /// <summary>
             /// Toplica
             /// </summary>
-            [AliasInShort("21")] Toplica,
+            [AliasInShort("21")] [RegionCode(2_00_136_0021)]
+            Toplica,
 
             /// <summary>
             /// Pirot
             /// </summary>
-            [AliasInShort("22")] Pirot,
+            [AliasInShort("22")] [RegionCode(2_00_136_0022)]
+            Pirot,
 
             /// <summary>
             /// Jablanica
             /// </summary>
-            [AliasInShort("23")] Jablanica,
+            [AliasInShort("23")] [RegionCode(2_00_136_0023)]
+            Jablanica,
 
             /// <summary>
             /// Pčinja
             /// </summary>
-            [AliasInShort("24")] Pčinja,
+            [AliasInShort("24")] [RegionCode(2_00_136_0024)]
+            Pčinja,
 
             /// <summary>
             /// Beograd
             /// </summary>
-            [AliasInShort("00")] Beograd,
+            [AliasInShort("00")] [RegionCode(2_00_136_0000)]
+            Beograd,
 
             /// <summary>
             /// Mačva
             /// </summary>
-            [AliasInShort("08")] Mačva,
+            [AliasInShort("08")] [RegionCode(2_00_136_0008)]
+            Mačva,
 
             /// <summary>
             /// Kolubara
             /// </summary>
-            [AliasInShort("09")] Wasit,
+            [AliasInShort("09")] [RegionCode(2_00_136_0009)]
+            Wasit,
 
             /// <summary>
             /// Kosovo-Metohija
             /// </summary>
-            [AliasInShort("KM")] KosovoMetohija,
+            [AliasInShort("KM")] [RegionCode(2_00_136_1001)]
+            KosovoMetohija,
 
             /// <summary>
             /// Vojvodina
             /// </summary>
-            [AliasInShort("VO")] Vojvodina,
+            [AliasInShort("VO")] [RegionCode(2_00_136_1002)]
+            Vojvodina,
 
             /// <summary>
             /// Unknown
@@ -245,6 +265,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"RS-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -280,6 +310,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -1,7 +1,8 @@
 namespace Cosmos.I18N.Countries.Africa {
     /// <summary>
     /// 布隆迪（The Republic of Burundi，非洲，BI，BDI，108），布隆迪共和国 <br />
-    /// Cosmos i18n code: i18n_country_bulongdi
+    /// Cosmos i18n code: i18n_country_bulongdi <br />
+    /// Cosmos region code: 300107
     /// </summary>
     public static class Burundi {
         // ReSharper disable once InconsistentNaming
@@ -12,7 +13,8 @@ namespace Cosmos.I18N.Countries.Africa {
                 Country = Country.Burundi,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Burundi,
-                UNCode = "108",
+                M49Code = "108",
+                CRCode = 3_00_107,
                 Alpha2Code = "BI",
                 Alpha3Code = "BDI",
                 Name = "The Republic of Burundi",
@@ -26,7 +28,8 @@ namespace Cosmos.I18N.Countries.Africa {
 
         /// <summary>
         /// 布隆迪（The Republic of Burundi，非洲，BI，BDI，108），布隆迪共和国 <br />
-        /// Cosmos i18n code: i18n_country_bulongdi
+        /// Cosmos i18n code: i18n_country_bulongdi <br />
+        /// Cosmos region code: 300107
         /// </summary>
         // ReSharper disable once ConvertToAutoProperty
         public static CountryInfo Instance => _country;
@@ -36,5 +39,30 @@ namespace Cosmos.I18N.Countries.Africa {
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public const string I18N_IDENTITY_CODE = "i18n_country_bulongdi";
+
+        /// <summary>
+        /// Get Cosmos Region Code (CEP-1/CRCode)
+        /// </summary>
+        public static long CosmosRegionCode => _country.CRCode;
+
+        /// <summary>
+        /// Get Cosmos Region Identity Code (CEP-1/IICode)
+        /// </summary>
+        public static string CosmosIdentityCode => _country.I18NIdentityCode;
+
+        /// <summary>
+        /// Get M49 code / ISO 3166-1 numeric
+        /// </summary>
+        public static string M49Code => _country.M49Code;
+
+        /// <summary>
+        /// Get Alpha2 code / ISO 3166-1 alpha-2
+        /// </summary>
+        public static string Alpha2Code => _country.Alpha2Code;
+
+        /// <summary>
+        /// Get Alpha3 code / ISO 3166-1 alpha-3
+        /// </summary>
+        public static string Alpha3Code => _country.Alpha3Code;
     }
 }

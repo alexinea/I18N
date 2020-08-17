@@ -3,7 +3,8 @@ namespace Cosmos.I18N.Countries.Asia {
     /// 台湾（Taiwan, China，亚洲，TW，TWN，158），中华人民共和国台湾省 <br />
     /// 台湾，中华人民共和国的一部分 <br />
     /// Taiwan, a part of China <br />
-    /// Cosmos i18n code: i18n_country_cnhtaiwan
+    /// Cosmos i18n code: i18n_country_cnhtaiwan <br />
+    /// Cosmos region code: 10000100332
     /// </summary>
     public static class Taiwan {
         // ReSharper disable once InconsistentNaming
@@ -14,7 +15,8 @@ namespace Cosmos.I18N.Countries.Asia {
                 Country = Country.Taiwan,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.China,
-                UNCode = "158",
+                M49Code = "158",
+                CRCode = 1_00_001_0032,
                 Alpha2Code = "TW",
                 Alpha3Code = "TWN",
                 Name = "Taiwan, China",
@@ -30,7 +32,8 @@ namespace Cosmos.I18N.Countries.Asia {
         /// 台湾（Taiwan, China，亚洲，TW，TWN，158），中华人民共和国台湾省 <br />
         /// 台湾，中华人民共和国的一部分 <br />
         /// Taiwan, a part of China <br />
-        /// Cosmos i18n code: i18n_country_cnhtaiwan
+        /// Cosmos i18n code: i18n_country_cnhtaiwan <br />
+        /// Cosmos region code: 10000100332
         /// </summary>
         public static CountryInfo Instance => _country;
 
@@ -39,5 +42,30 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public const string I18N_IDENTITY_CODE = "i18n_country_cnhtaiwan";
+
+        /// <summary>
+        /// Get Cosmos Region Code (CEP-1/CRCode)
+        /// </summary>
+        public static long CosmosRegionCode => _country.CRCode;
+
+        /// <summary>
+        /// Get Cosmos Region Identity Code (CEP-1/IICode)
+        /// </summary>
+        public static string CosmosIdentityCode => _country.I18NIdentityCode;
+
+        /// <summary>
+        /// Get M49 code / ISO 3166-1 numeric
+        /// </summary>
+        public static string M49Code => _country.M49Code;
+
+        /// <summary>
+        /// Get Alpha2 code / ISO 3166-1 alpha-2
+        /// </summary>
+        public static string Alpha2Code => _country.Alpha2Code;
+
+        /// <summary>
+        /// Get Alpha3 code / ISO 3166-1 alpha-3
+        /// </summary>
+        public static string Alpha3Code => _country.Alpha3Code;
     }
 }

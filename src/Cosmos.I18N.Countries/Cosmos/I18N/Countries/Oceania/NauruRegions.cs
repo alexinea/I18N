@@ -92,72 +92,86 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Ijuw
             /// </summary>
-            [AliasInShort("10")] Ijuw,
+            [AliasInShort("10")] [RegionCode(6_00_108_0010)]
+            Ijuw,
 
             /// <summary>
             /// Meneng
             /// </summary>
-            [AliasInShort("11")] Meneng,
+            [AliasInShort("11")] [RegionCode(6_00_108_0011)]
+            Meneng,
 
             /// <summary>
             /// Nibok
             /// </summary>
-            [AliasInShort("12")] Nibok,
+            [AliasInShort("12")] [RegionCode(6_00_108_0012)]
+            Nibok,
 
             /// <summary>
             /// Uaboe
             /// </summary>
-            [AliasInShort("13")] Uaboe,
+            [AliasInShort("13")] [RegionCode(6_00_108_0013)]
+            Uaboe,
 
             /// <summary>
             /// Yaren
             /// </summary>
-            [AliasInShort("14")] Yaren,
+            [AliasInShort("14")] [RegionCode(6_00_108_0014)]
+            Yaren,
 
             /// <summary>
             /// Aiwo
             /// </summary>
-            [AliasInShort("01")] Aiwo,
+            [AliasInShort("01")] [RegionCode(6_00_108_0001)]
+            Aiwo,
 
             /// <summary>
             /// Anabar
             /// </summary>
-            [AliasInShort("02")] Anabar,
+            [AliasInShort("02")] [RegionCode(6_00_108_0002)]
+            Anabar,
 
             /// <summary>
             /// Anetan
             /// </summary>
-            [AliasInShort("03")] Anetan,
+            [AliasInShort("03")] [RegionCode(6_00_108_0003)]
+            Anetan,
 
             /// <summary>
             /// Anibare
             /// </summary>
-            [AliasInShort("04")] Anibare,
+            [AliasInShort("04")] [RegionCode(6_00_108_0004)]
+            Anibare,
 
             /// <summary>
             /// Baiti
             /// </summary>
-            [AliasInShort("05")] Baiti,
+            [AliasInShort("05")] [RegionCode(6_00_108_0005)]
+            Baiti,
 
             /// <summary>
             /// Boe
             /// </summary>
-            [AliasInShort("06")] Boe,
+            [AliasInShort("06")] [RegionCode(6_00_108_0006)]
+            Boe,
 
             /// <summary>
             /// Buada
             /// </summary>
-            [AliasInShort("07")] Buada,
+            [AliasInShort("07")] [RegionCode(6_00_108_0007)]
+            Buada,
 
             /// <summary>
             /// Denigomodu
             /// </summary>
-            [AliasInShort("08")] Denigomodu,
+            [AliasInShort("08")] [RegionCode(6_00_108_0008)]
+            Denigomodu,
 
             /// <summary>
             /// Ewa
             /// </summary>
-            [AliasInShort("09")] Ewa,
+            [AliasInShort("09")] [RegionCode(6_00_108_0009)]
+            Ewa,
 
             /// <summary>
             /// Unknown
@@ -185,6 +199,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"NR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -220,6 +244,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

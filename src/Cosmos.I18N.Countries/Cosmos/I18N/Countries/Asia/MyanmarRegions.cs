@@ -97,77 +97,77 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Kachin
             /// </summary>
-            [AliasInShort("11")] Kachin,
+            [AliasInShort("11")][RegionCode(1_00_127_0011)] Kachin,
 
             /// <summary>
             /// Kayah
             /// </summary>
-            [AliasInShort("12")] Kayah,
+            [AliasInShort("12")][RegionCode(1_00_127_0012)] Kayah,
 
             /// <summary>
             /// Kayin
             /// </summary>
-            [AliasInShort("13")] Kayin,
+            [AliasInShort("13")][RegionCode(1_00_127_0013)] Kayin,
 
             /// <summary>
             /// Chin
             /// </summary>
-            [AliasInShort("14")] Chin,
+            [AliasInShort("14")][RegionCode(1_00_127_0014)] Chin,
 
             /// <summary>
             /// Mon
             /// </summary>
-            [AliasInShort("15")] Mon,
+            [AliasInShort("15")][RegionCode(1_00_127_0015)] Mon,
 
             /// <summary>
             /// Rakhine
             /// </summary>
-            [AliasInShort("16")] Rakhine,
+            [AliasInShort("16")][RegionCode(1_00_127_0016)] Rakhine,
 
             /// <summary>
             /// Shan
             /// </summary>
-            [AliasInShort("17")] Shan,
+            [AliasInShort("17")][RegionCode(1_00_127_0017)] Shan,
 
             /// <summary>
             /// Naypyidaw
             /// </summary>
-            [AliasInShort("18")] Naypyidaw,
+            [AliasInShort("18")][RegionCode(1_00_127_0018)] Naypyidaw,
 
             /// <summary>
             /// Sagaing
             /// </summary>
-            [AliasInShort("01")] Sagaing,
+            [AliasInShort("01")][RegionCode(1_00_127_0001)] Sagaing,
 
             /// <summary>
             /// Bago
             /// </summary>
-            [AliasInShort("02")] Bago,
+            [AliasInShort("02")][RegionCode(1_00_127_0002)] Bago,
 
             /// <summary>
             /// Magway
             /// </summary>
-            [AliasInShort("03")] Magway,
+            [AliasInShort("03")][RegionCode(1_00_127_0003)] Magway,
 
             /// <summary>
             /// Mandalay
             /// </summary>
-            [AliasInShort("04")] Mandalay,
+            [AliasInShort("04")][RegionCode(1_00_127_0004)] Mandalay,
 
             /// <summary>
             /// Tanintharyi
             /// </summary>
-            [AliasInShort("05")] Tanintharyi,
+            [AliasInShort("05")][RegionCode(1_00_127_0005)] Tanintharyi,
 
             /// <summary>
             /// Yangon
             /// </summary>
-            [AliasInShort("06")] Yangon,
+            [AliasInShort("06")][RegionCode(1_00_127_0006)] Yangon,
 
             /// <summary>
             /// Ayeyarwady
             /// </summary>
-            [AliasInShort("07")] Ayeyarwady,
+            [AliasInShort("07")][RegionCode(1_00_127_0007)] Ayeyarwady,
 
             /// <summary>
             /// Unknown
@@ -195,6 +195,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -230,6 +240,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

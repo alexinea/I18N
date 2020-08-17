@@ -102,82 +102,98 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Kayangel
             /// </summary>
-            [AliasInShort("100")] Kayangel,
+            [AliasInShort("100")] [RegionCode(6_00_113_0100)]
+            Kayangel,
 
             /// <summary>
             /// Koror
             /// </summary>
-            [AliasInShort("150")] Koror,
+            [AliasInShort("150")] [RegionCode(6_00_113_0150)]
+            Koror,
 
             /// <summary>
             /// Melekeok
             /// </summary>
-            [AliasInShort("212")] Melekeok,
+            [AliasInShort("212")] [RegionCode(6_00_113_0212)]
+            Melekeok,
 
             /// <summary>
             /// Ngaraard
             /// </summary>
-            [AliasInShort("214")] Ngaraard,
+            [AliasInShort("214")] [RegionCode(6_00_113_0214)]
+            Ngaraard,
 
             /// <summary>
             /// Ngarchelong
             /// </summary>
-            [AliasInShort("218")] Ngarchelong,
+            [AliasInShort("218")] [RegionCode(6_00_113_0218)]
+            Ngarchelong,
 
             /// <summary>
             /// Ngardmau
             /// </summary>
-            [AliasInShort("222")] Ngardmau,
+            [AliasInShort("222")] [RegionCode(6_00_113_0222)]
+            Ngardmau,
 
             /// <summary>
             /// Ngatpang
             /// </summary>
-            [AliasInShort("224")] Ngatpang,
+            [AliasInShort("224")] [RegionCode(6_00_113_0224)]
+            Ngatpang,
 
             /// <summary>
             /// Ngchesar
             /// </summary>
-            [AliasInShort("226")] Ngchesar,
+            [AliasInShort("226")] [RegionCode(6_00_113_0226)]
+            Ngchesar,
 
             /// <summary>
             /// Ngeremlengui
             /// </summary>
-            [AliasInShort("227")] Ngeremlengui,
+            [AliasInShort("227")] [RegionCode(6_00_113_0227)]
+            Ngeremlengui,
 
             /// <summary>
             /// Ngiwal
             /// </summary>
-            [AliasInShort("228")] Ngiwal,
+            [AliasInShort("228")] [RegionCode(6_00_113_0228)]
+            Ngiwal,
 
             /// <summary>
             /// Peleliu
             /// </summary>
-            [AliasInShort("350")] Peleliu,
+            [AliasInShort("350")] [RegionCode(6_00_113_0350)]
+            Peleliu,
 
             /// <summary>
             /// Sonsorol
             /// </summary>
-            [AliasInShort("370")] Sonsorol,
+            [AliasInShort("370")] [RegionCode(6_00_113_0370)]
+            Sonsorol,
 
             /// <summary>
             /// Aimeliik
             /// </summary>
-            [AliasInShort("002")] Aimeliik,
+            [AliasInShort("002")] [RegionCode(6_00_113_0002)]
+            Aimeliik,
 
             /// <summary>
             /// Airai
             /// </summary>
-            [AliasInShort("004")] Airai,
+            [AliasInShort("004")] [RegionCode(6_00_113_0004)]
+            Airai,
 
             /// <summary>
             /// Angaur
             /// </summary>
-            [AliasInShort("010")] Angaur,
+            [AliasInShort("010")] [RegionCode(6_00_113_0010)]
+            Angaur,
 
             /// <summary>
             /// Hatohobei
             /// </summary>
-            [AliasInShort("050")] Hatohobei,
+            [AliasInShort("050")] [RegionCode(6_00_113_0050)]
+            Hatohobei,
 
             /// <summary>
             /// Unknown
@@ -205,6 +221,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"PW-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -240,6 +266,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

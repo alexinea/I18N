@@ -112,92 +112,92 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Agaléga
             /// </summary>
-            [AliasInShort("AG")] Agaléga,
+            [AliasInShort("AG")][RegionCode(3_00_136_0001)] Agaléga,
 
             /// <summary>
             /// Rivière Noire
             /// </summary>
-            [AliasInShort("BL")] RivièreNoire,
+            [AliasInShort("BL")][RegionCode(3_00_136_0002)] RivièreNoire,
 
             /// <summary>
             /// Beau-Bassin Rose-Hill
             /// </summary>
-            [AliasInShort("BR")] BeauBassinRoseHill,
+            [AliasInShort("BR")][RegionCode(3_00_136_0003)] BeauBassinRoseHill,
 
             /// <summary>
             /// Cargados Carajos
             /// </summary>
-            [AliasInShort("CC")] CargadosCarajos,
+            [AliasInShort("CC")][RegionCode(3_00_136_0004)] CargadosCarajos,
 
             /// <summary>
             /// Curepipe
             /// </summary>
-            [AliasInShort("CU")] Curepipe,
+            [AliasInShort("CU")][RegionCode(3_00_136_0005)] Curepipe,
 
             /// <summary>
             /// Flacq
             /// </summary>
-            [AliasInShort("FL")] Flacq,
+            [AliasInShort("FL")][RegionCode(3_00_136_0006)] Flacq,
 
             /// <summary>
             /// Grand Port
             /// </summary>
-            [AliasInShort("GP")] GrandPort,
+            [AliasInShort("GP")][RegionCode(3_00_136_0007)] GrandPort,
 
             /// <summary>
             /// Moka
             /// </summary>
-            [AliasInShort("MO")] Moka,
+            [AliasInShort("MO")][RegionCode(3_00_136_0008)] Moka,
 
             /// <summary>
             /// Pamplemousses
             /// </summary>
-            [AliasInShort("PA")] Pamplemousses,
+            [AliasInShort("PA")][RegionCode(3_00_136_0009)] Pamplemousses,
 
             /// <summary>
             /// Port Louis District
             /// </summary>
-            [AliasInShort("PL")] PortLouisDistrict,
+            [AliasInShort("PL")][RegionCode(3_00_136_0010)] PortLouisDistrict,
 
             /// <summary>
             /// Port Louis
             /// </summary>
-            [AliasInShort("PU")] PortLouis,
+            [AliasInShort("PU")][RegionCode(3_00_136_0011)] PortLouis,
 
             /// <summary>
             /// Al Muthanna
             /// </summary>
-            [AliasInShort("MU")] AlMuthanna,
+            [AliasInShort("MU")][RegionCode(3_00_136_0012)] AlMuthanna,
 
             /// <summary>
             /// Plaines Wilhems
             /// </summary>
-            [AliasInShort("PW")] PlainesWilhems,
+            [AliasInShort("PW")] [RegionCode(3_00_136_0013)]PlainesWilhems,
 
             /// <summary>
             /// Quatre Bornes
             /// </summary>
-            [AliasInShort("QB")] QuatrBornes,
+            [AliasInShort("QB")][RegionCode(3_00_136_0014)] QuatrBornes,
 
             /// <summary>
             /// Rodrigues
             /// </summary>
-            [AliasInShort("RO")] Rodrigues,
+            [AliasInShort("RO")][RegionCode(3_00_136_0015)] Rodrigues,
 
             /// <summary>
             /// Rivière du Rempart
             /// </summary>
-            [AliasInShort("RR")] RivièreDuRempart,
+            [AliasInShort("RR")][RegionCode(3_00_136_0016)] RivièreDuRempart,
 
             /// <summary>
             /// Savanne
             /// </summary>
-            [AliasInShort("SA")] Savanne,
+            [AliasInShort("SA")][RegionCode(3_00_136_0017)] Savanne,
 
             /// <summary>
             /// Vacoas-Phoenix
             /// </summary>
-            [AliasInShort("VP")] VacoasPhoenix,
+            [AliasInShort("VP")] [RegionCode(3_00_136_0018)]VacoasPhoenix,
 
             /// <summary>
             /// Unknown
@@ -225,6 +225,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MU-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -260,6 +270,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

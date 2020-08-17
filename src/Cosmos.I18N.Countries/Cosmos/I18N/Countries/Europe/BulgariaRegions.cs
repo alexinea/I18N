@@ -162,47 +162,56 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Blagoevgrad
             /// </summary>
-            [AliasInShort("01")] Blagoevgrad,
+            [AliasInShort("01")] [RegionCode(2_00_108_0001)]
+            Blagoevgrad,
 
             /// <summary>
             /// Burgas
             /// </summary>
-            [AliasInShort("02")] Burgas,
+            [AliasInShort("02")] [RegionCode(2_00_108_0002)]
+            Burgas,
 
             /// <summary>
             /// Varna
             /// </summary>
-            [AliasInShort("03")] Varna,
+            [AliasInShort("03")] [RegionCode(2_00_108_0003)]
+            Varna,
 
             /// <summary>
             /// Veliko Tarnovo
             /// </summary>
-            [AliasInShort("04")] VelikoTarnovo,
+            [AliasInShort("04")] [RegionCode(2_00_108_0004)]
+            VelikoTarnovo,
 
             /// <summary>
             /// Vidin
             /// </summary>
-            [AliasInShort("05")] Vidin,
+            [AliasInShort("05")] [RegionCode(2_00_108_0005)]
+            Vidin,
 
             /// <summary>
             /// Vratsa
             /// </summary>
-            [AliasInShort("06")] Vratsa,
+            [AliasInShort("06")] [RegionCode(2_00_108_0006)]
+            Vratsa,
 
             /// <summary>
             /// Gabrovo
             /// </summary>
-            [AliasInShort("07")] Gabrovo,
+            [AliasInShort("07")] [RegionCode(2_00_108_0007)]
+            Gabrovo,
 
             /// <summary>
             /// Dobrich
             /// </summary>
-            [AliasInShort("08")] Dobrich,
+            [AliasInShort("08")] [RegionCode(2_00_108_0008)]
+            Dobrich,
 
             /// <summary>
             /// Kardzhali
             /// </summary>
-            [AliasInShort("09")] Kardzhali,
+            [AliasInShort("09")] [RegionCode(2_00_108_0009)]
+            Kardzhali,
 
             /// <summary>
             /// Kyustendil
@@ -212,92 +221,110 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Lovech
             /// </summary>
-            [AliasInShort("11")] Lovech,
+            [AliasInShort("11")] [RegionCode(2_00_108_0011)]
+            Lovech,
 
             /// <summary>
             /// Montana
             /// </summary>
-            [AliasInShort("12")] Montana,
+            [AliasInShort("12")] [RegionCode(2_00_108_0012)]
+            Montana,
 
             /// <summary>
             /// Pazardzhik
             /// </summary>
-            [AliasInShort("13")] Pazardzhik,
+            [AliasInShort("13")] [RegionCode(2_00_108_0013)]
+            Pazardzhik,
 
             /// <summary>
             /// Pernik
             /// </summary>
-            [AliasInShort("14")] Pernik,
+            [AliasInShort("14")] [RegionCode(2_00_108_0014)]
+            Pernik,
 
             /// <summary>
             /// Pleven
             /// </summary>
-            [AliasInShort("15")] Pleven,
+            [AliasInShort("15")] [RegionCode(2_00_108_0015)]
+            Pleven,
 
             /// <summary>
             /// Plovdiv
             /// </summary>
-            [AliasInShort("16")] Plovdiv,
+            [AliasInShort("16")] [RegionCode(2_00_108_0016)]
+            Plovdiv,
 
             /// <summary>
             /// Razgrad
             /// </summary>
-            [AliasInShort("17")] Razgrad,
+            [AliasInShort("17")] [RegionCode(2_00_108_0017)]
+            Razgrad,
 
             /// <summary>
             /// Ruse
             /// </summary>
-            [AliasInShort("18")] Ruse,
+            [AliasInShort("18")] [RegionCode(2_00_108_0018)]
+            Ruse,
 
             /// <summary>
             /// Silistra
             /// </summary>
-            [AliasInShort("19")] Silistra,
+            [AliasInShort("19")] [RegionCode(2_00_108_0010)]
+            Silistra,
 
             /// <summary>
             /// Sliven
             /// </summary>
-            [AliasInShort("20")] Sliven,
+            [AliasInShort("20")] [RegionCode(2_00_108_0020)]
+            Sliven,
 
             /// <summary>
             /// Smolyan
             /// </summary>
-            [AliasInShort("21")] Smolyan,
+            [AliasInShort("21")] [RegionCode(2_00_108_0021)]
+            Smolyan,
 
             /// <summary>
             /// Sofia
             /// </summary>
-            [AliasInShort("22")] Sofia,
+            [AliasInShort("22")] [RegionCode(2_00_108_0022)]
+            Sofia,
 
             /// <summary>
             /// Sofia District
             /// </summary>
-            [AliasInShort("23")] SofiaDistrict,
+            [AliasInShort("23")] [RegionCode(2_00_108_0023)]
+            SofiaDistrict,
 
             /// <summary>
             /// Stara Zagora
             /// </summary>
-            [AliasInShort("24")] StaraZagora,
+            [AliasInShort("24")] [RegionCode(2_00_108_0024)]
+            StaraZagora,
 
             /// <summary>
             /// Targovishte
             /// </summary>
-            [AliasInShort("25")] Targovishte,
+            [AliasInShort("25")] [RegionCode(2_00_108_0025)]
+            Targovishte,
 
             /// <summary>
             /// Haskovo
             /// </summary>
-            [AliasInShort("26")] Haskovo,
+            [AliasInShort("26")] [RegionCode(2_00_108_0026)]
+            Haskovo,
 
             /// <summary>
             /// Shumen
             /// </summary>
-            [AliasInShort("27")] Shumen,
+            [AliasInShort("27")] [RegionCode(2_00_108_0027)]
+            Shumen,
 
             /// <summary>
             /// Yambol
             /// </summary>
-            [AliasInShort("28")] Yambol,
+            [AliasInShort("28")] [RegionCode(2_00_108_0028)]
+            Yambol,
 
 
             /// <summary>
@@ -326,6 +353,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BG-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -361,6 +398,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

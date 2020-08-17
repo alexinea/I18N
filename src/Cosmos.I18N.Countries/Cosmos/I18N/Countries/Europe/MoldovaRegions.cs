@@ -207,187 +207,224 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Anenii Noi
             /// </summary>
-            [AliasInShort("AN")] AneniiNoi,
+            [AliasInShort("AN")] [RegionCode(2_00_128_0001)]
+            AneniiNoi,
 
             /// <summary>
             /// Bălţi
             /// </summary>
-            [AliasInShort("BA")] Bălţi,
+            [AliasInShort("BA")] [RegionCode(2_00_128_0002)]
+            Bălţi,
 
             /// <summary>
             /// Bender
             /// </summary>
-            [AliasInShort("BD")] Bender,
+            [AliasInShort("BD")] [RegionCode(2_00_128_0003)]
+            Bender,
 
             /// <summary>
             /// Briceni
             /// </summary>
-            [AliasInShort("BR")] Briceni,
+            [AliasInShort("BR")] [RegionCode(2_00_128_0004)]
+            Briceni,
 
             /// <summary>
             /// Basarabeasca
             /// </summary>
-            [AliasInShort("BS")] Basarabeasca,
+            [AliasInShort("BS")] [RegionCode(2_00_128_0005)]
+            Basarabeasca,
 
             /// <summary>
             /// Cahul
             /// </summary>
-            [AliasInShort("CA")] Cahul,
+            [AliasInShort("CA")] [RegionCode(2_00_128_0006)]
+            Cahul,
 
             /// <summary>
             /// Călărași
             /// </summary>
-            [AliasInShort("CL")] Călărași,
+            [AliasInShort("CL")] [RegionCode(2_00_128_0007)]
+            Călărași,
 
             /// <summary>
             /// Cimișlia
             /// </summary>
-            [AliasInShort("CM")] Cimișlia,
+            [AliasInShort("CM")] [RegionCode(2_00_128_0008)]
+            Cimișlia,
 
             /// <summary>
             /// Criuleni
             /// </summary>
-            [AliasInShort("CR")] Criuleni,
+            [AliasInShort("CR")] [RegionCode(2_00_128_0009)]
+            Criuleni,
 
             /// <summary>
             /// Căușeni
             /// </summary>
-            [AliasInShort("CS")] Căușeni,
+            [AliasInShort("CS")] [RegionCode(2_00_128_0010)]
+            Căușeni,
 
             /// <summary>
             /// Cantemir
             /// </summary>
-            [AliasInShort("CT")] Cantemir,
+            [AliasInShort("CT")] [RegionCode(2_00_128_0011)]
+            Cantemir,
 
             /// <summary>
             /// Chișinău
             /// </summary>
-            [AliasInShort("CU")] Chișinău,
+            [AliasInShort("CU")] [RegionCode(2_00_128_0012)]
+            Chișinău,
 
             /// <summary>
             /// Dondușeni
             /// </summary>
-            [AliasInShort("DO")] Dondușeni,
+            [AliasInShort("DO")] [RegionCode(2_00_128_0013)]
+            Dondușeni,
 
             /// <summary>
             /// Drochia
             /// </summary>
-            [AliasInShort("DR")] Drochia,
+            [AliasInShort("DR")] [RegionCode(2_00_128_0014)]
+            Drochia,
 
             /// <summary>
             /// Dubăsari
             /// </summary>
-            [AliasInShort("DU")] Dubăsari,
+            [AliasInShort("DU")] [RegionCode(2_00_128_0015)]
+            Dubăsari,
 
             /// <summary>
             /// Edineț
             /// </summary>
-            [AliasInShort("ED")] Edineț,
+            [AliasInShort("ED")] [RegionCode(2_00_128_0016)]
+            Edineț,
 
             /// <summary>
             /// Fălești
             /// </summary>
-            [AliasInShort("FA")] Fălești,
+            [AliasInShort("FA")] [RegionCode(2_00_128_0017)]
+            Fălești,
 
             /// <summary>
             /// Florești
             /// </summary>
-            [AliasInShort("FL")] Florești,
+            [AliasInShort("FL")] [RegionCode(2_00_128_0018)]
+            Florești,
 
             /// <summary>
             /// Gagauzia
             /// </summary>
-            [AliasInShort("GA")] Gagauzia,
+            [AliasInShort("GA")] [RegionCode(2_00_128_0019)]
+            Gagauzia,
 
             /// <summary>
             /// Glodeni
             /// </summary>
-            [AliasInShort("GL")] Glodeni,
+            [AliasInShort("GL")] [RegionCode(2_00_128_0020)]
+            Glodeni,
 
             /// <summary>
             /// Hîncești
             /// </summary>
-            [AliasInShort("HI")] Hîncești,
+            [AliasInShort("HI")] [RegionCode(2_00_128_0021)]
+            Hîncești,
 
             /// <summary>
             /// Ialoveni
             /// </summary>
-            [AliasInShort("IA")] Ialoveni,
+            [AliasInShort("IA")] [RegionCode(2_00_128_0022)]
+            Ialoveni,
 
             /// <summary>
             /// Leova
             /// </summary>
-            [AliasInShort("LE")] Leova,
+            [AliasInShort("LE")] [RegionCode(2_00_128_0023)]
+            Leova,
 
             /// <summary>
             /// Nisporeni
             /// </summary>
-            [AliasInShort("NI")] Nisporeni,
+            [AliasInShort("NI")] [RegionCode(2_00_128_0024)]
+            Nisporeni,
 
             /// <summary>
             /// Ocniţa
             /// </summary>
-            [AliasInShort("OC")] Ocniţa,
+            [AliasInShort("OC")] [RegionCode(2_00_128_0025)]
+            Ocniţa,
 
             /// <summary>
             /// Orhei
             /// </summary>
-            [AliasInShort("OR")] Orhei,
+            [AliasInShort("OR")] [RegionCode(2_00_128_0026)]
+            Orhei,
 
             /// <summary>
             /// Rezina
             /// </summary>
-            [AliasInShort("RE")] Rezina,
+            [AliasInShort("RE")] [RegionCode(2_00_128_0027)]
+            Rezina,
 
             /// <summary>
             /// Rîșcani
             /// </summary>
-            [AliasInShort("RI")] Rîșcani,
+            [AliasInShort("RI")] [RegionCode(2_00_128_0028)]
+            Rîșcani,
 
             /// <summary>
             /// Șoldănești
             /// </summary>
-            [AliasInShort("SD")] Șoldănești,
+            [AliasInShort("SD")] [RegionCode(2_00_128_0029)]
+            Șoldănești,
 
             /// <summary>
             /// Sîngerei
             /// </summary>
-            [AliasInShort("SI")] Sîngerei,
+            [AliasInShort("SI")] [RegionCode(2_00_128_0030)]
+            Sîngerei,
 
             /// <summary>
             /// Transnistria
             /// </summary>
-            [AliasInShort("SM")] Transnistria,
+            [AliasInShort("SM")] [RegionCode(2_00_128_0031)]
+            Transnistria,
 
             /// <summary>
             /// Soroca
             /// </summary>
-            [AliasInShort("SO")] Soroca,
+            [AliasInShort("SO")] [RegionCode(2_00_128_0032)]
+            Soroca,
 
             /// <summary>
             /// Strășeni
             /// </summary>
-            [AliasInShort("ST")] Strășeni,
+            [AliasInShort("ST")] [RegionCode(2_00_128_0033)]
+            Strășeni,
 
             /// <summary>
             /// Ştefan Vodă
             /// </summary>
-            [AliasInShort("SV")] ŞtefanVodă,
+            [AliasInShort("SV")] [RegionCode(2_00_128_0034)]
+            ŞtefanVodă,
 
             /// <summary>
             /// Taraclia
             /// </summary>
-            [AliasInShort("TA")] Taraclia,
+            [AliasInShort("TA")] [RegionCode(2_00_128_0035)]
+            Taraclia,
 
             /// <summary>
             /// Telenești
             /// </summary>
-            [AliasInShort("TE")] Telenești,
+            [AliasInShort("TE")] [RegionCode(2_00_128_0036)]
+            Telenești,
 
             /// <summary>
             /// Ungheni
             /// </summary>
-            [AliasInShort("UN")] Ungheni,
+            [AliasInShort("UN")] [RegionCode(2_00_128_0037)]
+            Ungheni,
 
             /// <summary>
             /// Unknown
@@ -415,6 +452,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MD-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -450,6 +497,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

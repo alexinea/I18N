@@ -147,127 +147,152 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Banteay Meanchey
             /// </summary>
-            [AliasInShort("1")] BanteayMeanchey,
+            [AliasInShort("1")] [RegionCode(1_00_109_0001)]
+            BanteayMeanchey,
 
             /// <summary>
             /// Battambang
             /// </summary>
-            [AliasInShort("2")] Battambang,
+            [AliasInShort("2")] [RegionCode(1_00_109_0002)]
+            Battambang,
 
             /// <summary>
             /// Kampong Cham
             /// </summary>
-            [AliasInShort("3")] KampongCham,
+            [AliasInShort("3")] [RegionCode(1_00_109_0003)]
+            KampongCham,
 
             /// <summary>
             /// Kampong Chhnang
             /// </summary>
-            [AliasInShort("4")] KampongChhnang,
+            [AliasInShort("4")] [RegionCode(1_00_109_0004)]
+            KampongChhnang,
 
             /// <summary>
             /// Kampong Speu
             /// </summary>
-            [AliasInShort("5")] KampongSpeu,
+            [AliasInShort("5")] [RegionCode(1_00_109_0005)]
+            KampongSpeu,
 
             /// <summary>
             /// Kampong Thom
             /// </summary>
-            [AliasInShort("6")] KampongThom,
+            [AliasInShort("6")] [RegionCode(1_00_109_0006)]
+            KampongThom,
 
             /// <summary>
             /// Kampot
             /// </summary>
-            [AliasInShort("7")] Kampot,
+            [AliasInShort("7")] [RegionCode(1_00_109_0007)]
+            Kampot,
 
             /// <summary>
             /// Kandal
             /// </summary>
-            [AliasInShort("8")] Kandal,
+            [AliasInShort("8")] [RegionCode(1_00_109_0008)]
+            Kandal,
 
             /// <summary>
             /// Koh Kong
             /// </summary>
-            [AliasInShort("9")] KohKong,
+            [AliasInShort("9")] [RegionCode(1_00_109_0009)]
+            KohKong,
 
             /// <summary>
             /// Kratié
             /// </summary>
-            [AliasInShort("10")] Kratié,
+            [AliasInShort("10")] [RegionCode(1_00_109_0010)]
+            Kratié,
 
             /// <summary>
             /// Mondulkiri
             /// </summary>
-            [AliasInShort("11")] Mondulkiri,
+            [AliasInShort("11")] [RegionCode(1_00_109_0011)]
+            Mondulkiri,
 
             /// <summary>
             /// Phnom Penh
             /// </summary>
-            [AliasInShort("12")] PhnomPenh,
+            [AliasInShort("12")] [RegionCode(1_00_109_0012)]
+            PhnomPenh,
 
             /// <summary>
             /// Preah Vihear
             /// </summary>
-            [AliasInShort("13")] PreahVihear,
+            [AliasInShort("13")] [RegionCode(1_00_109_0013)]
+            PreahVihear,
 
             /// <summary>
             /// Prey Veng
             /// </summary>
-            [AliasInShort("14")] PreyVeng,
+            [AliasInShort("14")] [RegionCode(1_00_109_0014)]
+            PreyVeng,
 
             /// <summary>
             /// Pursat
             /// </summary>
-            [AliasInShort("15")] Pursat,
+            [AliasInShort("15")] [RegionCode(1_00_109_0015)]
+            Pursat,
 
             /// <summary>
             /// Ratanakiri
             /// </summary>
-            [AliasInShort("16")] Ratanakiri,
+            [AliasInShort("16")] [RegionCode(1_00_109_0016)]
+            Ratanakiri,
 
             /// <summary>
             /// Siem Reap
             /// </summary>
-            [AliasInShort("17")] SiemReap,
+            [AliasInShort("17")] [RegionCode(1_00_109_0017)]
+            SiemReap,
 
             /// <summary>
             /// Sihanoukville
             /// </summary>
-            [AliasInShort("18")] Sihanoukville,
+            [AliasInShort("18")] [RegionCode(1_00_109_0018)]
+            Sihanoukville,
 
             /// <summary>
             /// Stung Treng
             /// </summary>
-            [AliasInShort("19")] StungTreng,
+            [AliasInShort("19")] [RegionCode(1_00_109_0019)]
+            StungTreng,
 
             /// <summary>
             /// Svay Rieng
             /// </summary>
-            [AliasInShort("20")] SvayRieng,
+            [AliasInShort("20")] [RegionCode(1_00_109_0020)]
+            SvayRieng,
 
             /// <summary>
             /// Takéo
             /// </summary>
-            [AliasInShort("21")] Takéo,
+            [AliasInShort("21")] [RegionCode(1_00_109_0021)]
+            Takéo,
 
             /// <summary>
             /// Oddar Meanchey
             /// </summary>
-            [AliasInShort("22")] OddarMeanchey,
+            [AliasInShort("22")] [RegionCode(1_00_109_0022)]
+            OddarMeanchey,
 
             /// <summary>
             /// Kep
             /// </summary>
-            [AliasInShort("23")] Kep,
+            [AliasInShort("23")] [RegionCode(1_00_109_0023)]
+            Kep,
 
             /// <summary>
             /// Pailin
             /// </summary>
-            [AliasInShort("24")] Pailin,
+            [AliasInShort("24")] [RegionCode(1_00_109_0024)]
+            Pailin,
 
             /// <summary>
             /// Tbong Khmum
             /// </summary>
-            [AliasInShort("25")] TbongKhmum,
+            [AliasInShort("25")] [RegionCode(1_00_109_0025)]
+            TbongKhmum,
 
             /// <summary>
             /// Unknown
@@ -295,6 +320,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"KH-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -330,6 +365,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

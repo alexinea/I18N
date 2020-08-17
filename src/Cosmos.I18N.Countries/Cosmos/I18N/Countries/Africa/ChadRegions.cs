@@ -138,117 +138,117 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Batha
             /// </summary>
-            [AliasInShort("BA")] Batha,
+            [AliasInShort("BA")][RegionCode(3_00_110_0001)] Batha,
 
             /// <summary>
             /// Bahr el Gazel
             /// </summary>
-            [AliasInShort("BG")] BahrElGazel,
+            [AliasInShort("BG")][RegionCode(3_00_110_0002)] BahrElGazel,
 
             /// <summary>
             /// Borkou
             /// </summary>
-            [AliasInShort("BO")] Borkou,
+            [AliasInShort("BO")][RegionCode(3_00_110_0003)] Borkou,
 
             /// <summary>
             /// Chari-Baguirmi
             /// </summary>
-            [AliasInShort("CB")] ChariBaguirmi,
+            [AliasInShort("CB")][RegionCode(3_00_110_0004)] ChariBaguirmi,
 
             /// <summary>
             /// Ennedi-Est
             /// </summary>
-            [AliasInShort("EE")] EnnediEst,
+            [AliasInShort("EE")][RegionCode(3_00_110_0005)] EnnediEst,
 
             /// <summary>
             /// Ennedi-Ouest
             /// </summary>
-            [AliasInShort("EO")] EnnediOuest,
+            [AliasInShort("EO")][RegionCode(3_00_110_0006)] EnnediOuest,
 
             /// <summary>
             /// Guéra
             /// </summary>
-            [AliasInShort("GR")] Guéra,
+            [AliasInShort("GR")][RegionCode(3_00_110_0007)] Guéra,
 
             /// <summary>
             ///  Hadjer-Lamis
             /// </summary>
-            [AliasInShort("HL")] HadjerLamis,
+            [AliasInShort("HL")][RegionCode(3_00_110_0008)] HadjerLamis,
 
             /// <summary>
             /// Kanem
             /// </summary>
-            [AliasInShort("KA")] Kanem,
+            [AliasInShort("KA")][RegionCode(3_00_110_0009)] Kanem,
 
             /// <summary>
             /// Lac
             /// </summary>
-            [AliasInShort("LC")] Lac,
+            [AliasInShort("LC")][RegionCode(3_00_110_0010)] Lac,
 
             /// <summary>
             /// Logone Occidental
             /// </summary>
-            [AliasInShort("LO")] LogoneOccidental,
+            [AliasInShort("LO")][RegionCode(3_00_110_0011)] LogoneOccidental,
 
             /// <summary>
             /// Logone Oriental
             /// </summary>
-            [AliasInShort("LR")] LogoneOriental,
+            [AliasInShort("LR")][RegionCode(3_00_110_0012)] LogoneOriental,
 
             /// <summary>
             /// Mandoul
             /// </summary>
-            [AliasInShort("MA")] Mandoul,
+            [AliasInShort("MA")][RegionCode(3_00_110_0013)] Mandoul,
 
             /// <summary>
             /// Moyen-Chari
             /// </summary>
-            [AliasInShort("MC")] MoyenChari,
+            [AliasInShort("MC")][RegionCode(3_00_110_0014)] MoyenChari,
 
             /// <summary>
             /// Mayo-Kebbi Est
             /// </summary>
-            [AliasInShort("ME")] MayoKebbiEst,
+            [AliasInShort("ME")][RegionCode(3_00_110_0015)] MayoKebbiEst,
 
             /// <summary>
             /// Mayo-Kebbi Ouest
             /// </summary>
-            [AliasInShort("MO")] MayoKebbiOuest,
+            [AliasInShort("MO")][RegionCode(3_00_110_0016)] MayoKebbiOuest,
 
             /// <summary>
             /// N’Djamena
             /// </summary>
-            [AliasInShort("ND")] NDjamena,
+            [AliasInShort("ND")][RegionCode(3_00_110_0017)] NDjamena,
 
             /// <summary>
             /// Ouaddaï
             /// </summary>
-            [AliasInShort("OD")] Ouaddaï,
+            [AliasInShort("OD")][RegionCode(3_00_110_0018)] Ouaddaï,
 
             /// <summary>
             /// Salamat
             /// </summary>
-            [AliasInShort("SA")] Salamat,
+            [AliasInShort("SA")][RegionCode(3_00_110_0019)] Salamat,
 
             /// <summary>
             /// Sila
             /// </summary>
-            [AliasInShort("SI")] Sila,
+            [AliasInShort("SI")][RegionCode(3_00_110_0020)] Sila,
 
             /// <summary>
             /// Tandjilé
             /// </summary>
-            [AliasInShort("TA")] Tandjilé,
+            [AliasInShort("TA")][RegionCode(3_00_110_0021)] Tandjilé,
 
             /// <summary>
             /// Tibesti
             /// </summary>
-            [AliasInShort("TI")] Tibesti,
+            [AliasInShort("TI")][RegionCode(3_00_110_0022)] Tibesti,
 
             /// <summary>
             /// Wadi Fira
             /// </summary>
-            [AliasInShort("WF")] WadiFira,
+            [AliasInShort("WF")][RegionCode(3_00_110_0023)] WadiFira,
 
             /// <summary>
             /// Unknown
@@ -276,6 +276,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"TD-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -311,6 +321,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

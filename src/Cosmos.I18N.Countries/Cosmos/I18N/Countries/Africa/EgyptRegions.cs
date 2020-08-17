@@ -157,137 +157,137 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Alexandria
             /// </summary>
-            [AliasInShort("ALX")] Alexandria,
+            [AliasInShort("ALX")][RegionCode(3_00_011_0001)] Alexandria,
 
             /// <summary>
             /// Aswan
             /// </summary>
-            [AliasInShort("ASN")] Aswan,
+            [AliasInShort("ASN")][RegionCode(3_00_011_0002)] Aswan,
 
             /// <summary>
             /// Asyut
             /// </summary>
-            [AliasInShort("AST")] Asyut,
+            [AliasInShort("AST")][RegionCode(3_00_011_0003)] Asyut,
 
             /// <summary>
             /// Red Sea
             /// </summary>
-            [AliasInShort("BA")] RedSea,
+            [AliasInShort("BA")][RegionCode(3_00_011_0004)] RedSea,
 
             /// <summary>
             /// Beheira
             /// </summary>
-            [AliasInShort("BH")] Beheira,
+            [AliasInShort("BH")][RegionCode(3_00_011_0005)] Beheira,
 
             /// <summary>
             /// Beni Suef
             /// </summary>
-            [AliasInShort("BNS")] BeniSuef,
+            [AliasInShort("BNS")][RegionCode(3_00_011_0006)] BeniSuef,
 
             /// <summary>
             /// Cairo
             /// </summary>
-            [AliasInShort("C")] Cairo,
+            [AliasInShort("C")][RegionCode(3_00_011_0007)] Cairo,
 
             /// <summary>
             /// Dakahlia
             /// </summary>
-            [AliasInShort("DK")] Dakahlia,
+            [AliasInShort("DK")][RegionCode(3_00_011_0008)] Dakahlia,
 
             /// <summary>
             /// Damietta
             /// </summary>
-            [AliasInShort("DT")] Damietta,
+            [AliasInShort("DT")][RegionCode(3_00_011_0009)] Damietta,
 
             /// <summary>
             /// Faiyum
             /// </summary>
-            [AliasInShort("FYM")] Faiyum,
+            [AliasInShort("FYM")][RegionCode(3_00_011_0010)] Faiyum,
 
             /// <summary>
             /// Gharbia
             /// </summary>
-            [AliasInShort("GH")] Gharbia,
+            [AliasInShort("GH")] [RegionCode(3_00_011_0011)]Gharbia,
 
             /// <summary>
             /// Giza
             /// </summary>
-            [AliasInShort("GZ")] Giza,
+            [AliasInShort("GZ")][RegionCode(3_00_011_0012)] Giza,
 
             /// <summary>
             /// Ismailia
             /// </summary>
-            [AliasInShort("IS")] Ismailia,
+            [AliasInShort("IS")] [RegionCode(3_00_011_0013)]Ismailia,
 
             /// <summary>
             /// South Sinai
             /// </summary>
-            [AliasInShort("JS")] SouthSinai,
+            [AliasInShort("JS")] [RegionCode(3_00_011_0014)]SouthSinai,
 
             /// <summary>
             /// Qalyubia
             /// </summary>
-            [AliasInShort("KB")] Qalyubia,
+            [AliasInShort("KB")][RegionCode(3_00_011_0015)] Qalyubia,
 
             /// <summary>
             /// Kafr el-Sheikh
             /// </summary>
-            [AliasInShort("KFS")] KafrElSheikh,
+            [AliasInShort("KFS")][RegionCode(3_00_011_0016)] KafrElSheikh,
 
             /// <summary>
             /// Qena
             /// </summary>
-            [AliasInShort("KN")] Qena,
+            [AliasInShort("KN")][RegionCode(3_00_011_0017)] Qena,
 
             /// <summary>
             /// Luxor
             /// </summary>
-            [AliasInShort("LX")] Luxor,
+            [AliasInShort("LX")] [RegionCode(3_00_011_0018)]Luxor,
 
             /// <summary>
             /// Minya
             /// </summary>
-            [AliasInShort("MN")] Minya,
+            [AliasInShort("MN")][RegionCode(3_00_011_0019)] Minya,
 
             /// <summary>
             /// Monufia
             /// </summary>
-            [AliasInShort("MNF")] Monufia,
+            [AliasInShort("MNF")][RegionCode(3_00_011_0020)] Monufia,
 
             /// <summary>
             /// Matrouh
             /// </summary>
-            [AliasInShort("MT")] Matrouh,
+            [AliasInShort("MT")] [RegionCode(3_00_011_0021)]Matrouh,
 
             /// <summary>
             /// Port Said
             /// </summary>
-            [AliasInShort("PTS")] PortSaid,
+            [AliasInShort("PTS")][RegionCode(3_00_011_0022)] PortSaid,
 
             /// <summary>
             /// Sohag
             /// </summary>
-            [AliasInShort("SHG")] Sohag,
+            [AliasInShort("SHG")][RegionCode(3_00_011_0023)] Sohag,
 
             /// <summary>
             /// Al Sharqia
             /// </summary>
-            [AliasInShort("SHR")] AlSharqia,
+            [AliasInShort("SHR")] [RegionCode(3_00_011_0024)]AlSharqia,
 
             /// <summary>
             /// North Sinai
             /// </summary>
-            [AliasInShort("SIN")] NorthSinai,
+            [AliasInShort("SIN")][RegionCode(3_00_011_0025)] NorthSinai,
 
             /// <summary>
             /// Suez
             /// </summary>
-            [AliasInShort("SUZ")] Suez,
+            [AliasInShort("SUZ")][RegionCode(3_00_011_0026)] Suez,
 
             /// <summary>
             /// New Valley
             /// </summary>
-            [AliasInShort("WAD")] NewValley,
+            [AliasInShort("WAD")][RegionCode(3_00_011_0027)] NewValley,
 
             /// <summary>
             /// Unknown
@@ -315,6 +315,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"EG-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -350,6 +360,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -72,52 +72,62 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             /// <summary>
             /// Barima-Waini
             /// </summary>
-            [AliasInShort("BA")] BarimaWaini,
+            [AliasInShort("BA")] [RegionCode(5_00_106_0001)]
+            BarimaWaini,
 
             /// <summary>
             /// Cuyuni-Mazaruni
             /// </summary>
-            [AliasInShort("CU")] CuyuniMazaruni,
+            [AliasInShort("CU")] [RegionCode(5_00_106_0002)]
+            CuyuniMazaruni,
 
             /// <summary>
             /// Demerara-Mahaica
             /// </summary>
-            [AliasInShort("DE")] DemeraraMahaica,
+            [AliasInShort("DE")] [RegionCode(5_00_106_0003)]
+            DemeraraMahaica,
 
             /// <summary>
             /// East Berbice-Corentyne
             /// </summary>
-            [AliasInShort("EB")] EastBerbiceCorentyne,
+            [AliasInShort("EB")] [RegionCode(5_00_106_0004)]
+            EastBerbiceCorentyne,
 
             /// <summary>
             /// Essequibo Islands-West Demerara
             /// </summary>
-            [AliasInShort("ES")] EssequiboIslandsWestDemerara,
+            [AliasInShort("ES")] [RegionCode(5_00_106_0005)]
+            EssequiboIslandsWestDemerara,
 
             /// <summary>
             /// Mahaica-Berbice
             /// </summary>
-            [AliasInShort("MA")] MahaicaBerbice,
+            [AliasInShort("MA")] [RegionCode(5_00_106_0006)]
+            MahaicaBerbice,
 
             /// <summary>
             /// Pomeroon-Supenaam
             /// </summary>
-            [AliasInShort("PM")] PomeroonSupenaam,
+            [AliasInShort("PM")] [RegionCode(5_00_106_0007)]
+            PomeroonSupenaam,
 
             /// <summary>
             /// Potaro-Siparuni
             /// </summary>
-            [AliasInShort("PT")] PotaroSiparuni,
+            [AliasInShort("PT")] [RegionCode(5_00_106_0008)]
+            PotaroSiparuni,
 
             /// <summary>
             /// Upper Demerara-Berbice
             /// </summary>
-            [AliasInShort("UD")] UpperDemeraraBerbice,
+            [AliasInShort("UD")] [RegionCode(5_00_106_0009)]
+            UpperDemeraraBerbice,
 
             /// <summary>
             /// Upper Takutu-Upper Essequibo
             /// </summary>
-            [AliasInShort("UT")] UpperTakutuUpperEssequibo,
+            [AliasInShort("UT")] [RegionCode(5_00_106_0010)]
+            UpperTakutuUpperEssequibo,
 
             /// <summary>
             /// Unknown
@@ -145,6 +155,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GY-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +200,13 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -132,112 +132,112 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Benghazi
             /// </summary>
-            [AliasInShort("BA")] Benghazi,
+            [AliasInShort("BA")][RegionCode(3_00_133_0001)] Benghazi,
 
             /// <summary>
             /// Butnan
             /// </summary>
-            [AliasInShort("BU")] Butnan,
+            [AliasInShort("BU")][RegionCode(3_00_133_0002)] Butnan,
 
             /// <summary>
             /// Derna
             /// </summary>
-            [AliasInShort("DR")] Derna,
+            [AliasInShort("DR")][RegionCode(3_00_133_0003)] Derna,
 
             /// <summary>
             /// Ghat
             /// </summary>
-            [AliasInShort("GT")] Ghat,
+            [AliasInShort("GT")][RegionCode(3_00_133_0004)] Ghat,
 
             /// <summary>
             /// Jabal al Akhdar
             /// </summary>
-            [AliasInShort("JA")] JabalAlAkhdar,
+            [AliasInShort("JA")][RegionCode(3_00_133_0005)] JabalAlAkhdar,
 
             /// <summary>
             /// Jabal al Gharbi
             /// </summary>
-            [AliasInShort("JG")] JabalAlGharbi,
+            [AliasInShort("JG")][RegionCode(3_00_133_0006)] JabalAlGharbi,
 
             /// <summary>
             /// Jafara
             /// </summary>
-            [AliasInShort("JI")] Jafara,
+            [AliasInShort("JI")][RegionCode(3_00_133_0007)] Jafara,
 
             /// <summary>
             /// Jufra
             /// </summary>
-            [AliasInShort("JU")] Jufra,
+            [AliasInShort("JU")][RegionCode(3_00_133_0008)] Jufra,
 
             /// <summary>
             /// Kufra
             /// </summary>
-            [AliasInShort("KF")] Kufra,
+            [AliasInShort("KF")][RegionCode(3_00_133_0009)] Kufra,
 
             /// <summary>
             /// Murqub
             /// </summary>
-            [AliasInShort("MB")] Murqub,
+            [AliasInShort("MB")][RegionCode(3_00_133_0010)] Murqub,
 
             /// <summary>
             /// Misrata
             /// </summary>
-            [AliasInShort("MI")] Misrata,
+            [AliasInShort("MI")][RegionCode(3_00_133_0011)] Misrata,
 
             /// <summary>
             /// Marj
             /// </summary>
-            [AliasInShort("MJ")] Marj,
+            [AliasInShort("MJ")][RegionCode(3_00_133_0012)] Marj,
 
             /// <summary>
             /// Murzuq
             /// </summary>
-            [AliasInShort("MQ")] Murzuq,
+            [AliasInShort("MQ")][RegionCode(3_00_133_0013)] Murzuq,
 
             /// <summary>
             /// Nalut
             /// </summary>
-            [AliasInShort("NL")] Nalut,
+            [AliasInShort("NL")][RegionCode(3_00_133_0014)] Nalut,
 
             /// <summary>
             /// Nuqat al Khams
             /// </summary>
-            [AliasInShort("NQ")] NuqatAlKhams,
+            [AliasInShort("NQ")][RegionCode(3_00_133_0015)] NuqatAlKhams,
 
             /// <summary>
             /// Sabha
             /// </summary>
-            [AliasInShort("SB")] Sabha,
+            [AliasInShort("SB")][RegionCode(3_00_133_0016)] Sabha,
 
             /// <summary>
             /// Sirte
             /// </summary>
-            [AliasInShort("SR")] Sirte,
+            [AliasInShort("SR")][RegionCode(3_00_133_0017)] Sirte,
 
             /// <summary>
             /// Tripoli
             /// </summary>
-            [AliasInShort("TB")] Tripoli,
+            [AliasInShort("TB")][RegionCode(3_00_133_0018)] Tripoli,
 
             /// <summary>
             /// Al Wahat
             /// </summary>
-            [AliasInShort("WA")] AlWahat,
+            [AliasInShort("WA")][RegionCode(3_00_133_0019)] AlWahat,
 
             /// <summary>
             /// Wadi al Hayaa
             /// </summary>
-            [AliasInShort("WD")] WadiAlHayaa,
+            [AliasInShort("WD")][RegionCode(3_00_133_0020)] WadiAlHayaa,
 
             /// <summary>
             /// Wadi al Shatii
             /// </summary>
-            [AliasInShort("WS")] WadiAlShatii,
+            [AliasInShort("WS")][RegionCode(3_00_133_0021)] WadiAlShatii,
 
             /// <summary>
             /// Zawiya
             /// </summary>
-            [AliasInShort("ZA")] Zawiya,
+            [AliasInShort("ZA")][RegionCode(3_00_133_0022)] Zawiya,
 
             /// <summary>
             /// Unknown
@@ -265,6 +265,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"LY-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -300,6 +310,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

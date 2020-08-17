@@ -112,92 +112,92 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Bengo
             /// </summary>
-            [AliasInShort("BGO")] Bengo,
+            [AliasInShort("BGO")][RegionCode(3_00_102_0001)] Bengo,
 
             /// <summary>
             /// Benguela
             /// </summary>
-            [AliasInShort("BGU")] Benguela,
+            [AliasInShort("BGU")][RegionCode(3_00_102_0002)] Benguela,
 
             /// <summary>
             /// Bié
             /// </summary>
-            [AliasInShort("BIE")] Bié,
+            [AliasInShort("BIE")][RegionCode(3_00_102_0003)] Bié,
 
             /// <summary>
             /// Cabinda
             /// </summary>
-            [AliasInShort("CAB")] Cabinda,
+            [AliasInShort("CAB")][RegionCode(3_00_102_0004)] Cabinda,
 
             /// <summary>
             /// Cuando Cubango
             /// </summary>
-            [AliasInShort("CCU")] CuandoCubango,
+            [AliasInShort("CCU")][RegionCode(3_00_102_0005)] CuandoCubango,
 
             /// <summary>
             /// Cunene
             /// </summary>
-            [AliasInShort("CNN")] Cunene,
+            [AliasInShort("CNN")][RegionCode(3_00_102_0006)] Cunene,
 
             /// <summary>
             /// Cuanza Norte
             /// </summary>
-            [AliasInShort("CNO")] CuanzaNorte,
+            [AliasInShort("CNO")][RegionCode(3_00_102_0007)] CuanzaNorte,
 
             /// <summary>
             /// Cuanza Sul    
             /// </summary>
-            [AliasInShort("CUS")] CuanzaSul,
+            [AliasInShort("CUS")][RegionCode(3_00_102_0008)] CuanzaSul,
 
             /// <summary>
             /// Huambo
             /// </summary>
-            [AliasInShort("HUA")] Huambo,
+            [AliasInShort("HUA")][RegionCode(3_00_102_0009)] Huambo,
 
             /// <summary>
             /// Huíla
             /// </summary>
-            [AliasInShort("HUI")] Huíla,
+            [AliasInShort("HUI")][RegionCode(3_00_102_0010)] Huíla,
 
             /// <summary>
             /// Lunda Norte
             /// </summary>
-            [AliasInShort("LNO")] LundaNorte,
+            [AliasInShort("LNO")][RegionCode(3_00_102_0011)] LundaNorte,
 
             /// <summary>
             /// Lunda Sul
             /// </summary>
-            [AliasInShort("LSU")] LundaSul,
+            [AliasInShort("LSU")][RegionCode(3_00_102_0012)] LundaSul,
 
             /// <summary>
             /// Luanda
             /// </summary>
-            [AliasInShort("LUA")] Luanda,
+            [AliasInShort("LUA")][RegionCode(3_00_102_0013)] Luanda,
 
             /// <summary>
             /// Malanje
             /// </summary>
-            [AliasInShort("MAL")] Malanje,
+            [AliasInShort("MAL")][RegionCode(3_00_102_0014)] Malanje,
 
             /// <summary>
             /// Moxico
             /// </summary>
-            [AliasInShort("MOX")] Moxico,
+            [AliasInShort("MOX")][RegionCode(3_00_102_0015)] Moxico,
 
             /// <summary>
             /// Namibe
             /// </summary>
-            [AliasInShort("NAM")] Namibe,
+            [AliasInShort("NAM")][RegionCode(3_00_102_0016)] Namibe,
 
             /// <summary>
             /// Uíge
             /// </summary>
-            [AliasInShort("UIG")] Uíge,
+            [AliasInShort("UIG")][RegionCode(3_00_102_0017)] Uíge,
 
             /// <summary>
             /// Zaire
             /// </summary>
-            [AliasInShort("ZAI")] Zaire,
+            [AliasInShort("ZAI")][RegionCode(3_00_102_0018)] Zaire,
 
             /// <summary>
             /// Unknown
@@ -225,6 +225,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AO-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -260,6 +270,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

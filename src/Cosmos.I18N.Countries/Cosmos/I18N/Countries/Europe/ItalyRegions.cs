@@ -123,102 +123,122 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Piedmont
             /// </summary>
-            [AliasInShort("21")] Piedmont,
+            [AliasInShort("21")] [RegionCode(2_00_003_0021)]
+            Piedmont,
 
             /// <summary>
             /// Aosta Valley
             /// </summary>
-            [AliasInShort("23")] AostaValley,
+            [AliasInShort("23")] [RegionCode(2_00_003_0023)]
+            AostaValley,
 
             /// <summary>
             /// Lombardy
             /// </summary>
-            [AliasInShort("25")] Lombardy,
+            [AliasInShort("25")] [RegionCode(2_00_003_0025)]
+            Lombardy,
 
             /// <summary>
             /// Südtirol, Alto Adige
             /// </summary>
-            [AliasInShort("32")] SüdtirolAltoAdige,
+            [AliasInShort("32")] [RegionCode(2_00_003_0032)]
+            SüdtirolAltoAdige,
 
             /// <summary>
             /// Veneto
             /// </summary>
-            [AliasInShort("34")] Veneto,
+            [AliasInShort("34")] [RegionCode(2_00_003_0034)]
+            Veneto,
 
             /// <summary>
             /// Friuli–Venezia Giulia
             /// </summary>
-            [AliasInShort("36")] FriuliVeneziaGiulia,
+            [AliasInShort("36")] [RegionCode(2_00_003_0036)]
+            FriuliVeneziaGiulia,
 
             /// <summary>
             /// Liguria
             /// </summary>
-            [AliasInShort("42")] Liguria,
+            [AliasInShort("42")] [RegionCode(2_00_003_0042)]
+            Liguria,
 
             /// <summary>
             /// Emilia-Romagna
             /// </summary>
-            [AliasInShort("45")] EmiliaRomagna,
+            [AliasInShort("45")] [RegionCode(2_00_003_0045)]
+            EmiliaRomagna,
 
             /// <summary>
             /// Tuscany
             /// </summary>
-            [AliasInShort("52")] Tuscany,
+            [AliasInShort("52")] [RegionCode(2_00_003_0052)]
+            Tuscany,
 
             /// <summary>
             /// Umbria
             /// </summary>
-            [AliasInShort("55")] Umbria,
+            [AliasInShort("55")] [RegionCode(2_00_003_0055)]
+            Umbria,
 
             /// <summary>
             /// Marche
             /// </summary>
-            [AliasInShort("57")] Marche,
+            [AliasInShort("57")] [RegionCode(2_00_003_0057)]
+            Marche,
 
             /// <summary>
             /// Lazio
             /// </summary>
-            [AliasInShort("62")] Lazio,
+            [AliasInShort("62")] [RegionCode(2_00_003_0062)]
+            Lazio,
 
             /// <summary>
             /// Abruzzo
             /// </summary>
-            [AliasInShort("65")] Abruzzo,
+            [AliasInShort("65")] [RegionCode(2_00_003_0065)]
+            Abruzzo,
 
             /// <summary>
             /// Molise
             /// </summary>
-            [AliasInShort("67")] Molise,
+            [AliasInShort("67")] [RegionCode(2_00_003_0067)]
+            Molise,
 
             /// <summary>
             /// Campania
             /// </summary>
-            [AliasInShort("72")] Campania,
+            [AliasInShort("72")] [RegionCode(2_00_003_0072)]
+            Campania,
 
             /// <summary>
             /// Apulia
             /// </summary>
-            [AliasInShort("75")] Apulia,
+            [AliasInShort("75")] [RegionCode(2_00_003_0075)]
+            Apulia,
 
             /// <summary>
             /// Basilicata
             /// </summary>
-            [AliasInShort("77")] Basilicata,
+            [AliasInShort("77")] [RegionCode(2_00_003_0077)]
+            Basilicata,
 
             /// <summary>
             /// Calabria
             /// </summary>
-            [AliasInShort("78")] Calabria,
+            [AliasInShort("78")] [RegionCode(2_00_003_0067)]
+            Calabria,
 
             /// <summary>
             /// Sicily
             /// </summary>
-            [AliasInShort("82")] Sicily,
+            [AliasInShort("82")] [RegionCode(2_00_003_0082)]
+            Sicily,
 
             /// <summary>
             /// Sardinia
             /// </summary>
-            [AliasInShort("88")] Sardinia,
+            [AliasInShort("88")] [RegionCode(2_00_003_0088)]
+            Sardinia,
 
             /// <summary>
             /// Unknown
@@ -246,6 +266,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"IT-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -281,6 +311,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

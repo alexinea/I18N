@@ -338,317 +338,380 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Lai Châu
             /// </summary>
-            [AliasInShort("01")] LaiChâu,
+            [AliasInShort("01")] [RegionCode(1_00_018_0001)]
+            LaiChâu,
 
             /// <summary>
             /// Lào Cai
             /// </summary>
-            [AliasInShort("02")] LàoCai,
+            [AliasInShort("02")] [RegionCode(1_00_018_0002)]
+            LàoCai,
 
             /// <summary>
             /// Hà Giang
             /// </summary>
-            [AliasInShort("03")] HàGiang,
+            [AliasInShort("03")] [RegionCode(1_00_018_0003)]
+            HàGiang,
 
             /// <summary>
             /// Cao Bằng
             /// </summary>
-            [AliasInShort("04")] CaoBằng,
+            [AliasInShort("04")] [RegionCode(1_00_018_0004)]
+            CaoBằng,
 
             /// <summary>
             /// Sơn La
             /// </summary>
-            [AliasInShort("05")] SơnLa,
+            [AliasInShort("05")] [RegionCode(1_00_018_0005)]
+            SơnLa,
 
             /// <summary>
             /// Yên Bái
             /// </summary>
-            [AliasInShort("06")] YênBái,
+            [AliasInShort("06")] [RegionCode(1_00_018_0006)]
+            YênBái,
 
             /// <summary>
             /// Tuyên Quang
             /// </summary>
-            [AliasInShort("07")] TuyênQuang,
+            [AliasInShort("07")] [RegionCode(1_00_018_0007)]
+            TuyênQuang,
 
             /// <summary>
             /// Lạng Sơn
             /// </summary>
-            [AliasInShort("09")] LạngSơn,
+            [AliasInShort("09")] [RegionCode(1_00_018_0009)]
+            LạngSơn,
 
             /// <summary>
             /// Quảng Ninh
             /// </summary>
-            [AliasInShort("13")] QuảngNinh,
+            [AliasInShort("13")] [RegionCode(1_00_018_0013)]
+            QuảngNinh,
 
             /// <summary>
             /// Hòa Bình
             /// </summary>
-            [AliasInShort("14")] HòaBình,
+            [AliasInShort("14")] [RegionCode(1_00_018_0014)]
+            HòaBình,
 
             /// <summary>
             /// Ninh Bình
             /// </summary>
-            [AliasInShort("18")] NinhBình,
+            [AliasInShort("18")] [RegionCode(1_00_018_0018)]
+            NinhBình,
 
             /// <summary>
             /// Thái Bình
             /// </summary>
-            [AliasInShort("20")] TháiBình,
+            [AliasInShort("20")] [RegionCode(1_00_018_0020)]
+            TháiBình,
 
             /// <summary>
             /// Thanh Hóa
             /// </summary>
-            [AliasInShort("21")] ThanhHóa,
+            [AliasInShort("21")] [RegionCode(1_00_018_0021)]
+            ThanhHóa,
 
             /// <summary>
             /// Nghệ An
             /// </summary>
-            [AliasInShort("22")] NghệAn,
+            [AliasInShort("22")] [RegionCode(1_00_018_0022)]
+            NghệAn,
 
             /// <summary>
             /// Hà Tĩnh
             /// </summary>
-            [AliasInShort("23")] HàTĩnh,
+            [AliasInShort("23")] [RegionCode(1_00_018_0023)]
+            HàTĩnh,
 
             /// <summary>
             /// Quảng Bình
             /// </summary>
-            [AliasInShort("24")] QuảngBình,
+            [AliasInShort("24")] [RegionCode(1_00_018_0024)]
+            QuảngBình,
 
             /// <summary>
             /// Quảng Trị
             /// </summary>
-            [AliasInShort("25")] QuảngTrị,
+            [AliasInShort("25")] [RegionCode(1_00_018_0025)]
+            QuảngTrị,
 
             /// <summary>
             /// Thừa Thiên–Huế
             /// </summary>
-            [AliasInShort("26")] ThừaThiênHuế,
+            [AliasInShort("26")] [RegionCode(1_00_018_0026)]
+            ThừaThiênHuế,
 
             /// <summary>
             /// Quảng Nam
             /// </summary>
-            [AliasInShort("27")] QuảngNam,
+            [AliasInShort("27")] [RegionCode(1_00_018_0027)]
+            QuảngNam,
 
             /// <summary>
             /// Kon Tum
             /// </summary>
-            [AliasInShort("28")] KonTum,
+            [AliasInShort("28")] [RegionCode(1_00_018_0028)]
+            KonTum,
 
             /// <summary>
             /// Quảng Ngãi
             /// </summary>
-            [AliasInShort("29")] QuảngNgãi,
+            [AliasInShort("29")] [RegionCode(1_00_018_0029)]
+            QuảngNgãi,
 
             /// <summary>
             /// Gia Lai
             /// </summary>
-            [AliasInShort("30")] GiaLai,
+            [AliasInShort("30")] [RegionCode(1_00_018_0030)]
+            GiaLai,
 
             /// <summary>
             /// Bình Định
             /// </summary>
-            [AliasInShort("31")] BìnhĐịnh,
+            [AliasInShort("31")] [RegionCode(1_00_018_0031)]
+            BìnhĐịnh,
 
             /// <summary>
             /// Phú Yên
             /// </summary>
-            [AliasInShort("32")] PhúYên,
+            [AliasInShort("32")] [RegionCode(1_00_018_0032)]
+            PhúYên,
 
             /// <summary>
             /// Đắk Lắk
             /// </summary>
-            [AliasInShort("33")] ĐắkLắk,
+            [AliasInShort("33")] [RegionCode(1_00_018_0033)]
+            ĐắkLắk,
 
             /// <summary>
             /// Khánh Hòa
             /// </summary>
-            [AliasInShort("34")] KhánhHòa,
+            [AliasInShort("34")] [RegionCode(1_00_018_0034)]
+            KhánhHòa,
 
             /// <summary>
             /// Lâm Đồng
             /// </summary>
-            [AliasInShort("35")] LâmĐồng,
+            [AliasInShort("35")] [RegionCode(1_00_018_0035)]
+            LâmĐồng,
 
             /// <summary>
             /// Ninh Thuận
             /// </summary>
-            [AliasInShort("36")] NinhThuận,
+            [AliasInShort("36")] [RegionCode(1_00_018_0036)]
+            NinhThuận,
 
             /// <summary>
             /// Tây Ninh
             /// </summary>
-            [AliasInShort("37")] TâyNinh,
+            [AliasInShort("37")] [RegionCode(1_00_018_0037)]
+            TâyNinh,
 
             /// <summary>
             /// Đồng Nai
             /// </summary>
-            [AliasInShort("39")] ĐồngNai,
+            [AliasInShort("39")] [RegionCode(1_00_018_0039)]
+            ĐồngNai,
 
             /// <summary>
             /// Bình Thuận
             /// </summary>
-            [AliasInShort("40")] BìnhThuận,
+            [AliasInShort("40")] [RegionCode(1_00_018_0040)]
+            BìnhThuận,
 
             /// <summary>
             /// Long An
             /// </summary>
-            [AliasInShort("41")] LongAn,
+            [AliasInShort("41")] [RegionCode(1_00_018_0041)]
+            LongAn,
 
             /// <summary>
             /// Bà Rịa–Vũng Tàu
             /// </summary>
-            [AliasInShort("43")] BàRịaVũngTàu,
+            [AliasInShort("43")] [RegionCode(1_00_018_0043)]
+            BàRịaVũngTàu,
 
             /// <summary>
             /// An Giang
             /// </summary>
-            [AliasInShort("44")] AnGiang,
+            [AliasInShort("44")] [RegionCode(1_00_018_0044)]
+            AnGiang,
 
             /// <summary>
             /// Đồng Tháp
             /// </summary>
-            [AliasInShort("45")] ĐồngTháp,
+            [AliasInShort("45")] [RegionCode(1_00_018_0045)]
+            ĐồngTháp,
 
             /// <summary>
             /// Tiền Giang
             /// </summary>
-            [AliasInShort("46")] TiềnGiang,
+            [AliasInShort("46")] [RegionCode(1_00_018_0046)]
+            TiềnGiang,
 
             /// <summary>
             /// Kiên Giang
             /// </summary>
-            [AliasInShort("47")] KiênGiang,
+            [AliasInShort("47")] [RegionCode(1_00_018_0047)]
+            KiênGiang,
 
             /// <summary>
             /// Vĩnh Long
             /// </summary>
-            [AliasInShort("49")] VĩnhLong,
+            [AliasInShort("49")] [RegionCode(1_00_018_0049)]
+            VĩnhLong,
 
             /// <summary>
             /// Bến Tre
             /// </summary>
-            [AliasInShort("50")] BếnTre,
+            [AliasInShort("50")] [RegionCode(1_00_018_0050)]
+            BếnTre,
 
             /// <summary>
             /// Trà Vinh
             /// </summary>
-            [AliasInShort("51")] TràVinh,
+            [AliasInShort("51")] [RegionCode(1_00_018_0051)]
+            TràVinh,
 
             /// <summary>
             /// Sóc Trăng
             /// </summary>
-            [AliasInShort("52")] SócTrăng,
+            [AliasInShort("52")] [RegionCode(1_00_018_0052)]
+            SócTrăng,
 
             /// <summary>
             /// Bắc Kạn
             /// </summary>
-            [AliasInShort("53")] BắcKạn,
+            [AliasInShort("53")] [RegionCode(1_00_018_0053)]
+            BắcKạn,
 
             /// <summary>
             /// Bắc Giang
             /// </summary>
-            [AliasInShort("54")] BắcGiang,
+            [AliasInShort("54")] [RegionCode(1_00_018_0054)]
+            BắcGiang,
 
             /// <summary>
             /// Bạc Liêu
             /// </summary>
-            [AliasInShort("55")] BạcLiêu,
+            [AliasInShort("55")] [RegionCode(1_00_018_0055)]
+            BạcLiêu,
 
             /// <summary>
             /// Bắc Ninh
             /// </summary>
-            [AliasInShort("56")] BắcNinh,
+            [AliasInShort("56")] [RegionCode(1_00_018_0056)]
+            BắcNinh,
 
             /// <summary>
             /// Bình Dương
             /// </summary>
-            [AliasInShort("57")] BìnhDương,
+            [AliasInShort("57")] [RegionCode(1_00_018_0057)]
+            BìnhDương,
 
             /// <summary>
             /// Bình Phước
             /// </summary>
-            [AliasInShort("58")] BìnhPhước,
+            [AliasInShort("58")] [RegionCode(1_00_018_0058)]
+            BìnhPhước,
 
             /// <summary>
             /// Cà Mau
             /// </summary>
-            [AliasInShort("59")] CàMau,
+            [AliasInShort("59")] [RegionCode(1_00_018_0059)]
+            CàMau,
 
             /// <summary>
             /// Hải Dương
             /// </summary>
-            [AliasInShort("61")] HảiDương,
+            [AliasInShort("61")] [RegionCode(1_00_018_0061)]
+            HảiDương,
 
             /// <summary>
             /// Hà Nam
             /// </summary>
-            [AliasInShort("63")] HàNam,
+            [AliasInShort("63")] [RegionCode(1_00_018_0063)]
+            HàNam,
 
             /// <summary>
             /// Hưng Yên
             /// </summary>
-            [AliasInShort("66")] HưngYên,
+            [AliasInShort("66")] [RegionCode(1_00_018_0066)]
+            HưngYên,
 
             /// <summary>
             /// Nam Định
             /// </summary>
-            [AliasInShort("67")] NamĐịnh,
+            [AliasInShort("67")] [RegionCode(1_00_018_0067)]
+            NamĐịnh,
 
             /// <summary>
             /// Phú Thọ
             /// </summary>
-            [AliasInShort("68")] PhúThọ,
+            [AliasInShort("68")] [RegionCode(1_00_018_0068)]
+            PhúThọ,
 
             /// <summary>
             /// Thái Nguyên
             /// </summary>
-            [AliasInShort("69")] TháiNguyên,
+            [AliasInShort("69")] [RegionCode(1_00_018_0069)]
+            TháiNguyên,
 
             /// <summary>
             /// Vĩnh Phúc
             /// </summary>
-            [AliasInShort("70")] VĩnhPhúc,
+            [AliasInShort("70")] [RegionCode(1_00_018_0070)]
+            VĩnhPhúc,
 
             /// <summary>
             /// Điện Biên
             /// </summary>
-            [AliasInShort("71")] ĐiệnBiên,
+            [AliasInShort("71")] [RegionCode(1_00_018_0071)]
+            ĐiệnBiên,
 
             /// <summary>
             /// Đắk Nông
             /// </summary>
-            [AliasInShort("72")] ĐắkNông,
+            [AliasInShort("72")] [RegionCode(1_00_018_0072)]
+            ĐắkNông,
 
             /// <summary>
             /// Hậu Giang
             /// </summary>
-            [AliasInShort("73")] HậuGiang,
+            [AliasInShort("73")] [RegionCode(1_00_018_0073)]
+            HậuGiang,
 
             /// <summary>
             /// Can Tho
             /// </summary>
-            [AliasInShort("CT")] CanTho,
+            [AliasInShort("CT")] [RegionCode(1_00_018_1001)]
+            CanTho,
 
             /// <summary>
             /// Da Nang
             /// </summary>
-            [AliasInShort("DN")] DaNang,
+            [AliasInShort("DN")] [RegionCode(1_00_018_1002)]
+            DaNang,
 
             /// <summary>
             /// Hanoi
             /// </summary>
-            [AliasInShort("HN")] Hanoi,
+            [AliasInShort("HN")] [RegionCode(1_00_018_1003)]
+            Hanoi,
 
             /// <summary>
             /// Haiphong
             /// </summary>
-            [AliasInShort("HP")] Haiphong,
+            [AliasInShort("HP")] [RegionCode(1_00_018_1004)]
+            Haiphong,
 
             /// <summary>
             /// Ho Chi Minh City
             /// </summary>
-            [AliasInShort("SG")] HoChiMinhCity,
+            [AliasInShort("SG")] [RegionCode(1_00_018_1005)]
+            HoChiMinhCity,
 
             /// <summary>
             /// Unknown
@@ -676,6 +739,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"VN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -711,6 +784,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

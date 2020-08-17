@@ -67,47 +67,56 @@ namespace Cosmos.I18N.Countries.Antarctica
             /// <summary>
             /// Casey
             /// </summary>
-            [AliasInShort("CA")] Casey,
+            [AliasInShort("CA")] [RegionCode(7_00_010_0001)]
+            Casey,
 
             /// <summary>
             /// Davis
             /// </summary>
-            [AliasInShort("DA")] Davis,
+            [AliasInShort("DA")] [RegionCode(7_00_010_0002)]
+            Davis,
 
             /// <summary>
             /// DumontDUrville
             /// </summary>
-            [AliasInShort("DU")] DumontDUrville,
+            [AliasInShort("DU")] [RegionCode(7_00_010_0003)]
+            DumontDUrville,
 
             /// <summary>
             /// Mawson
             /// </summary>
-            [AliasInShort("MA")] Mawson,
+            [AliasInShort("MA")] [RegionCode(7_00_010_0004)]
+            Mawson,
 
             /// <summary>
             /// Palmer
             /// </summary>
-            [AliasInShort("PA")] Palmer,
+            [AliasInShort("PA")] [RegionCode(7_00_010_0005)]
+            Palmer,
 
             /// <summary>
             /// Rothera
             /// </summary>
-            [AliasInShort("RO")] Rothera,
+            [AliasInShort("RO")] [RegionCode(7_00_010_0006)]
+            Rothera,
 
             /// <summary>
             /// Syowa
             /// </summary>
-            [AliasInShort("SY")] Syowa,
+            [AliasInShort("SY")] [RegionCode(7_00_010_0007)]
+            Syowa,
 
             /// <summary>
             /// Troll
             /// </summary>
-            [AliasInShort("TR")] Troll,
+            [AliasInShort("TR")] [RegionCode(7_00_010_0008)]
+            Troll,
 
             /// <summary>
             /// Vostok
             /// </summary>
-            [AliasInShort("VO")] Vostok,
+            [AliasInShort("VO")] [RegionCode(7_00_010_0009)]
+            Vostok,
 
             /// <summary>
             /// Unknown
@@ -135,6 +144,16 @@ namespace Cosmos.I18N.Countries.Antarctica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AQ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -170,6 +189,13 @@ namespace Cosmos.I18N.Countries.Antarctica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

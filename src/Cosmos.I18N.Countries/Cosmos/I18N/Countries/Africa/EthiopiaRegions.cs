@@ -77,57 +77,57 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Addis Ababa
             /// </summary>
-            [AliasInShort("AA")] AddisAbaba,
+            [AliasInShort("AA")][RegionCode(3_00_123_0001)] AddisAbaba,
 
             /// <summary>
             /// Afar
             /// </summary>
-            [AliasInShort("AF")] Afar,
+            [AliasInShort("AF")][RegionCode(3_00_123_0002)] Afar,
 
             /// <summary>
             /// Amhara
             /// </summary>
-            [AliasInShort("AM")] Amhara,
+            [AliasInShort("AM")][RegionCode(3_00_123_0003)] Amhara,
 
             /// <summary>
             /// Benishangul-Gumuz
             /// </summary>
-            [AliasInShort("BE")] BenishangulGumuz,
+            [AliasInShort("BE")][RegionCode(3_00_123_0004)] BenishangulGumuz,
 
             /// <summary>
             /// Dire Dawa
             /// </summary>
-            [AliasInShort("DD")] DireDawa,
+            [AliasInShort("DD")][RegionCode(3_00_123_0005)] DireDawa,
 
             /// <summary>
             /// Gambela
             /// </summary>
-            [AliasInShort("GA")] Gambela,
+            [AliasInShort("GA")] [RegionCode(3_00_123_0006)]Gambela,
 
             /// <summary>
             /// Harari
             /// </summary>
-            [AliasInShort("HA")] Harari,
+            [AliasInShort("HA")][RegionCode(3_00_123_0007)] Harari,
 
             /// <summary>
             /// Oromia
             /// </summary>
-            [AliasInShort("OR")] Oromia,
+            [AliasInShort("OR")][RegionCode(3_00_123_0008)] Oromia,
 
             /// <summary>
             /// Southern Nations, Nationalities, and Peoples
             /// </summary>
-            [AliasInShort("SN")] SouthernNationsAndNationalitiesAndPeoples,
+            [AliasInShort("SN")][RegionCode(3_00_123_0009)] SouthernNationsAndNationalitiesAndPeoples,
 
             /// <summary>
             /// Somali
             /// </summary>
-            [AliasInShort("SO")] Somali,
+            [AliasInShort("SO")][RegionCode(3_00_123_0010)] Somali,
 
             /// <summary>
             /// Tigray
             /// </summary>
-            [AliasInShort("TI")] Tigray,
+            [AliasInShort("TI")][RegionCode(3_00_123_0011)] Tigray,
 
             /// <summary>
             /// Unknown
@@ -155,6 +155,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"ET-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -190,6 +200,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

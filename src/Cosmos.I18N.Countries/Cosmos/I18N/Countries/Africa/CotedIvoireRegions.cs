@@ -92,72 +92,72 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Abidjan
             /// </summary>
-            [AliasInShort("AB")] Abidjan,
+            [AliasInShort("AB")][RegionCode(3_00_114_0001)] Abidjan,
 
             /// <summary>
             /// Bas-Sassandra
             /// </summary>
-            [AliasInShort("BS")] BasSassandra,
+            [AliasInShort("BS")][RegionCode(3_00_114_0002)] BasSassandra,
 
             /// <summary>
             /// Comoé
             /// </summary>
-            [AliasInShort("CM")] Comoé,
+            [AliasInShort("CM")][RegionCode(3_00_114_0003)] Comoé,
 
             /// <summary>
             /// Denguélé
             /// </summary>
-            [AliasInShort("DN")] Denguélé,
+            [AliasInShort("DN")][RegionCode(3_00_114_0004)] Denguélé,
 
             /// <summary>
             /// Gôh-Djiboua
             /// </summary>
-            [AliasInShort("GD")] GôhDjiboua,
+            [AliasInShort("GD")][RegionCode(3_00_114_0005)] GôhDjiboua,
 
             /// <summary>
             /// Lacs
             /// </summary>
-            [AliasInShort("LC")] Lacs,
+            [AliasInShort("LC")][RegionCode(3_00_114_0006)] Lacs,
 
             /// <summary>
             /// Lagunes
             /// </summary>
-            [AliasInShort("LG")] Lagunes,
+            [AliasInShort("LG")][RegionCode(3_00_114_0007)] Lagunes,
 
             /// <summary>
             /// Montagnes
             /// </summary>
-            [AliasInShort("MG")] Montagnes,
+            [AliasInShort("MG")][RegionCode(3_00_114_0008)] Montagnes,
 
             /// <summary>
             /// Sassandra-Marahoué
             /// </summary>
-            [AliasInShort("SM")] SassandraMarahoué,
+            [AliasInShort("SM")][RegionCode(3_00_114_0009)] SassandraMarahoué,
 
             /// <summary>
             /// Savanes
             /// </summary>
-            [AliasInShort("SV")] Savanes,
+            [AliasInShort("SV")][RegionCode(3_00_114_0010)] Savanes,
 
             /// <summary>
             /// Vallée du Bandama
             /// </summary>
-            [AliasInShort("VB")] ValléeDuBandama,
+            [AliasInShort("VB")][RegionCode(3_00_114_0011)] ValléeDuBandama,
 
             /// <summary>
             /// Woroba
             /// </summary>
-            [AliasInShort("WR")] Woroba,
+            [AliasInShort("WR")][RegionCode(3_00_114_0012)] Woroba,
 
             /// <summary>
             /// Yamoussoukro
             /// </summary>
-            [AliasInShort("YM")] Yamoussoukro,
+            [AliasInShort("YM")][RegionCode(3_00_114_0013)] Yamoussoukro,
 
             /// <summary>
             /// Zanzan
             /// </summary>
-            [AliasInShort("ZZ")] Zanzan,
+            [AliasInShort("ZZ")][RegionCode(3_00_114_0014)] Zanzan,
 
             /// <summary>
             /// Unknown
@@ -185,6 +185,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CI-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -220,6 +230,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

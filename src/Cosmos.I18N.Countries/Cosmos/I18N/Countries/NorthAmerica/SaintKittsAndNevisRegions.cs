@@ -32,12 +32,14 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Saint Kitts
             /// </summary>
-            [AliasInShort("K")] SaintKitts,
+            [AliasInShort("K")] [RegionCode(4_00_128_0001)]
+            SaintKitts,
 
             /// <summary>
             /// Nevis
             /// </summary>
-            [AliasInShort("N")] Nevis,
+            [AliasInShort("N")] [RegionCode(4_00_128_0002)]
+            Nevis,
 
             /// <summary>
             /// Unknown
@@ -65,6 +67,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"KN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -100,6 +112,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

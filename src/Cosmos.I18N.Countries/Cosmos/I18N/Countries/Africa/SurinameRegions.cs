@@ -72,52 +72,52 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Brokopondo
             /// </summary>
-            [AliasInShort("BR")] Brokopondo,
+            [AliasInShort("BR")][RegionCode(3_00_150_0001)] Brokopondo,
 
             /// <summary>
             /// Commewijne
             /// </summary>
-            [AliasInShort("CM")] Commewijne,
+            [AliasInShort("CM")] [RegionCode(3_00_150_0002)]Commewijne,
 
             /// <summary>
             /// Coronie
             /// </summary>
-            [AliasInShort("CR")] Coronie,
+            [AliasInShort("CR")] [RegionCode(3_00_150_0003)]Coronie,
 
             /// <summary>
             /// Marowijne
             /// </summary>
-            [AliasInShort("MA")] Marowijne,
+            [AliasInShort("MA")] [RegionCode(3_00_150_0004)]Marowijne,
 
             /// <summary>
             /// Nickerie
             /// </summary>
-            [AliasInShort("NI")] Nickerie,
+            [AliasInShort("NI")][RegionCode(3_00_150_0005)] Nickerie,
 
             /// <summary>
             /// Paramaribo
             /// </summary>
-            [AliasInShort("PA")] Paramaribo,
+            [AliasInShort("PA")] [RegionCode(3_00_150_0006)]Paramaribo,
 
             /// <summary>
             /// Para
             /// </summary>
-            [AliasInShort("PR")] Para,
+            [AliasInShort("PR")][RegionCode(3_00_150_0007)] Para,
 
             /// <summary>
             /// Saramacca
             /// </summary>
-            [AliasInShort("SA")] Saramacca,
+            [AliasInShort("SA")] [RegionCode(3_00_150_0008)]Saramacca,
 
             /// <summary>
             /// Sipaliwini
             /// </summary>
-            [AliasInShort("SI")] Sipaliwini,
+            [AliasInShort("SI")][RegionCode(3_00_150_0009)] Sipaliwini,
 
             /// <summary>
             /// Wanica
             /// </summary>
-            [AliasInShort("WA")] Wanica,
+            [AliasInShort("WA")] [RegionCode(3_00_150_0010)]Wanica,
 
             /// <summary>
             /// Unknown
@@ -145,6 +145,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -180,6 +190,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

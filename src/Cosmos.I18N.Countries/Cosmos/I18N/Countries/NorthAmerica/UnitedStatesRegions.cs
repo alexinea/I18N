@@ -376,338 +376,338 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// 亚拉巴马州
             /// </summary>
-            [AliasInShort("AL")] [RegionFlag("main")]
+            [AliasInShort("AL")] [RegionCode(4_00_001_0001)] [RegionFlag("main")]
             Alabama,
 
             /// <summary>
             /// 阿拉斯加州
             /// </summary>
-            [AliasInShort("AK")] [RegionFlag("main")]
+            [AliasInShort("AK")] [RegionCode(4_00_001_0002)] [RegionFlag("main")]
             Alaska,
 
             /// <summary>
             /// 阿肯色州
             /// </summary>
-            [AliasInShort("AR")] [RegionFlag("main")]
+            [AliasInShort("AR")] [RegionCode(4_00_001_0003)] [RegionFlag("main")]
             Arkansas,
 
             /// <summary>
             /// 加利福尼亚州
             /// </summary>
-            [AliasInShort("CA")] [RegionFlag("main")]
+            [AliasInShort("CA")] [RegionCode(4_00_001_0004)] [RegionFlag("main")]
             California,
 
             /// <summary>
             /// 科罗拉多州
             /// </summary>
-            [AliasInShort("CO")] [RegionFlag("main")]
+            [AliasInShort("CO")] [RegionCode(4_00_001_0005)] [RegionFlag("main")]
             Colorado,
 
             /// <summary>
             /// 康涅狄格州
             /// </summary>
-            [AliasInShort("CT")] [RegionFlag("main")]
+            [AliasInShort("CT")] [RegionCode(4_00_001_0006)] [RegionFlag("main")]
             Connecticut,
 
             /// <summary>
             /// 特拉华州
             /// </summary>
-            [AliasInShort("DE")] [RegionFlag("main")]
+            [AliasInShort("DE")] [RegionCode(4_00_001_0007)] [RegionFlag("main")]
             Delaware,
 
             /// <summary>
             /// 佛罗里达州
             /// </summary>
-            [AliasInShort("FL")] [RegionFlag("main")]
+            [AliasInShort("FL")] [RegionCode(4_00_001_0008)] [RegionFlag("main")]
             Florida,
 
             /// <summary>
             /// 乔治亚州
             /// </summary>
-            [AliasInShort("GA")] [RegionFlag("main")]
+            [AliasInShort("GA")] [RegionCode(4_00_001_0009)] [RegionFlag("main")]
             Georgia,
 
             /// <summary>
             /// 夏威夷州
             /// </summary>
-            [AliasInShort("HI")] [RegionFlag("main")]
+            [AliasInShort("HI")] [RegionCode(4_00_001_0010)] [RegionFlag("main")]
             Hawaii,
 
             /// <summary>
             /// 爱德华州
             /// </summary>
-            [AliasInShort("ID")] [RegionFlag("main")]
+            [AliasInShort("ID")] [RegionCode(4_00_001_0011)] [RegionFlag("main")]
             Idaho,
 
             /// <summary>
             /// 伊利诺伊州
             /// </summary>
-            [AliasInShort("IL")] [RegionFlag("main")]
+            [AliasInShort("IL")] [RegionCode(4_00_001_0012)] [RegionFlag("main")]
             Illinois,
 
             /// <summary>
             /// 印第安纳州
             /// </summary>
-            [AliasInShort("IN")] [RegionFlag("main")]
+            [AliasInShort("IN")] [RegionCode(4_00_001_0013)] [RegionFlag("main")]
             Indiana,
 
             /// <summary>
             /// 衣阿华州
             /// </summary>
-            [AliasInShort("IA")] [RegionFlag("main")]
+            [AliasInShort("IA")] [RegionCode(4_00_001_0014)] [RegionFlag("main")]
             Iowa,
 
             /// <summary>
             /// 堪萨斯州
             /// </summary>
-            [AliasInShort("KS")] [RegionFlag("main")]
+            [AliasInShort("KS")] [RegionCode(4_00_001_0015)] [RegionFlag("main")]
             Kansas,
 
             /// <summary>
             /// 肯塔基州
             /// </summary>
-            [AliasInShort("KY")] [RegionFlag("main")]
+            [AliasInShort("KY")] [RegionCode(4_00_001_0016)] [RegionFlag("main")]
             Kentucky,
 
             /// <summary>
             /// 路易斯安那州
             /// </summary>
-            [AliasInShort("LA")] [RegionFlag("main")]
+            [AliasInShort("LA")] [RegionCode(4_00_001_0017)] [RegionFlag("main")]
             Louisiana,
 
             /// <summary>
             /// 缅因州
             /// </summary>
-            [AliasInShort("ME")] [RegionFlag("main")]
+            [AliasInShort("ME")] [RegionCode(4_00_001_0018)] [RegionFlag("main")]
             Maine,
 
             /// <summary>
             /// 马里兰州
             /// </summary>
-            [AliasInShort("MD")] [RegionFlag("main")]
+            [AliasInShort("MD")] [RegionCode(4_00_001_0019)] [RegionFlag("main")]
             Maryland,
 
             /// <summary>
             /// 马塞诸塞州
             /// </summary>
-            [AliasInShort("MA")] [RegionFlag("main")]
+            [AliasInShort("MA")] [RegionCode(4_00_001_0020)] [RegionFlag("main")]
             Massachusetts,
 
             /// <summary>
             /// 密歇根州
             /// </summary>
-            [AliasInShort("MI")] [RegionFlag("main")]
+            [AliasInShort("MI")] [RegionCode(4_00_001_0021)] [RegionFlag("main")]
             Michigan,
 
             /// <summary>
             /// 明尼苏达州
             /// </summary>
-            [AliasInShort("MN")] [RegionFlag("main")]
+            [AliasInShort("MN")] [RegionCode(4_00_001_0022)] [RegionFlag("main")]
             Minnesota,
 
             /// <summary>
             /// 密西西比州
             /// </summary>
-            [AliasInShort("MO")] [RegionFlag("main")]
+            [AliasInShort("MO")] [RegionCode(4_00_001_0023)] [RegionFlag("main")]
             Mississippi,
 
             /// <summary>
             /// 蒙大拿州
             /// </summary>
-            [AliasInShort("MT")] [RegionFlag("main")]
+            [AliasInShort("MT")] [RegionCode(4_00_001_0024)] [RegionFlag("main")]
             Montana,
 
             /// <summary>
             /// 内布拉斯加州
             /// </summary>
-            [AliasInShort("NE")] [RegionFlag("main")]
+            [AliasInShort("NE")] [RegionCode(4_00_001_0025)] [RegionFlag("main")]
             Nebraska,
 
             /// <summary>
             /// 内华达州
             /// </summary>
-            [AliasInShort("NV")] [RegionFlag("main")]
+            [AliasInShort("NV")] [RegionCode(4_00_001_0026)] [RegionFlag("main")]
             Nevada,
 
             /// <summary>
             /// 新罕布什尔州
             /// </summary>
-            [AliasInShort("NH")] [RegionFlag("main")]
+            [AliasInShort("NH")] [RegionCode(4_00_001_0027)] [RegionFlag("main")]
             NewHampshire,
 
             /// <summary>
             /// 新泽西州
             /// </summary>
-            [AliasInShort("NJ")] [RegionFlag("main")]
+            [AliasInShort("NJ")] [RegionCode(4_00_001_0028)] [RegionFlag("main")]
             NewJersey,
 
             /// <summary>
             /// 新墨西哥州
             /// </summary>
-            [AliasInShort("NM")] [RegionFlag("main")]
+            [AliasInShort("NM")] [RegionCode(4_00_001_0029)] [RegionFlag("main")]
             NewMexico,
 
             /// <summary>
             /// 纽约州
             /// </summary>
-            [AliasInShort("NY")] [RegionFlag("main")]
+            [AliasInShort("NY")] [RegionCode(4_00_001_0030)] [RegionFlag("main")]
             NewYork,
 
             /// <summary>
             /// 北卡罗来纳州
             /// </summary>
-            [AliasInShort("NC")] [RegionFlag("main")]
+            [AliasInShort("NC")] [RegionCode(4_00_001_0031)] [RegionFlag("main")]
             NorthCarolina,
 
             /// <summary>
             /// 北达科他州
             /// </summary>
-            [AliasInShort("ND")] [RegionFlag("main")]
+            [AliasInShort("ND")] [RegionCode(4_00_001_0032)] [RegionFlag("main")]
             NorthDakota,
 
             /// <summary>
             /// 俄亥俄州
             /// </summary>
-            [AliasInShort("OH")] [RegionFlag("main")]
+            [AliasInShort("OH")] [RegionCode(4_00_001_0033)] [RegionFlag("main")]
             Ohio,
 
             /// <summary>
             /// 俄克拉荷马州
             /// </summary>
-            [AliasInShort("OK")] [RegionFlag("main")]
+            [AliasInShort("OK")] [RegionCode(4_00_001_0034)] [RegionFlag("main")]
             Oklahoma,
 
             /// <summary>
             /// 俄勒冈州
             /// </summary>
-            [AliasInShort("OR")] [RegionFlag("main")]
+            [AliasInShort("OR")] [RegionCode(4_00_001_0035)] [RegionFlag("main")]
             Oregon,
 
             /// <summary>
             /// 宾夕法尼亚州
             /// </summary>
-            [AliasInShort("PA")] [RegionFlag("main")]
+            [AliasInShort("PA")] [RegionCode(4_00_001_0036)] [RegionFlag("main")]
             Pennsylvania,
 
             /// <summary>
             /// 罗德岛州
             /// </summary>
-            [AliasInShort("RI")] [RegionFlag("main")]
+            [AliasInShort("RI")] [RegionCode(4_00_001_0037)] [RegionFlag("main")]
             RhodeIsland,
 
             /// <summary>
             /// 南卡罗来纳州
             /// </summary>
-            [AliasInShort("SC")] [RegionFlag("main")]
+            [AliasInShort("SC")] [RegionCode(4_00_001_0038)] [RegionFlag("main")]
             SouthCarolina,
 
             /// <summary>
             /// 南达科他州
             /// </summary>
-            [AliasInShort("SD")] [RegionFlag("main")]
+            [AliasInShort("SD")] [RegionCode(4_00_001_0039)] [RegionFlag("main")]
             SouthDakota,
 
             /// <summary>
             /// 田纳西州
             /// </summary>
-            [AliasInShort("TN")] [RegionFlag("main")]
+            [AliasInShort("TN")] [RegionCode(4_00_001_0040)] [RegionFlag("main")]
             Tennessee,
 
             /// <summary>
             /// 得克萨斯州
             /// </summary>
-            [AliasInShort("TX")] [RegionFlag("main")]
+            [AliasInShort("TX")] [RegionCode(4_00_001_0041)] [RegionFlag("main")]
             Texas,
 
             /// <summary>
             /// 犹他州
             /// </summary>
-            [AliasInShort("UT")] [RegionFlag("main")]
+            [AliasInShort("UT")] [RegionCode(4_00_001_0042)] [RegionFlag("main")]
             Utah,
 
             /// <summary>
             /// 佛蒙特州
             /// </summary>
-            [AliasInShort("VT")] [RegionFlag("main")]
+            [AliasInShort("VT")] [RegionCode(4_00_001_0043)] [RegionFlag("main")]
             Vermont,
 
             /// <summary>
             /// 弗吉尼亚州
             /// </summary>
-            [AliasInShort("VA")] [RegionFlag("main")]
+            [AliasInShort("VA")] [RegionCode(4_00_001_0044)] [RegionFlag("main")]
             Virginia,
 
             /// <summary>
             /// 华盛顿州
             /// </summary>
-            [AliasInShort("WA")] [RegionFlag("main")]
+            [AliasInShort("WA")] [RegionCode(4_00_001_0045)] [RegionFlag("main")]
             Washington,
 
             /// <summary>
             /// 华盛顿哥伦比亚特区（首都）
             /// </summary>
-            [AliasInShort("WDC")] [RegionFlag("main")]
+            [AliasInShort("WDC")] [RegionCode(4_00_001_0046)] [RegionFlag("main")]
             // ReSharper disable once InconsistentNaming
             WashingtonDC,
 
             /// <summary>
             /// 西弗吉尼亚州
             /// </summary>
-            [AliasInShort("WV")] [RegionFlag("main")]
+            [AliasInShort("WV")] [RegionCode(4_00_001_0047)] [RegionFlag("main")]
             WestVirginia,
 
             /// <summary>
             /// 威斯康辛州
             /// </summary>
-            [AliasInShort("WI")] [RegionFlag("main")]
+            [AliasInShort("WI")] [RegionCode(4_00_001_0048)] [RegionFlag("main")]
             Wisconsin,
 
             /// <summary>
             /// 怀俄明州
             /// </summary>
-            [AliasInShort("WY")] [RegionFlag("main")]
+            [AliasInShort("WY")] [RegionCode(4_00_001_0049)] [RegionFlag("main")]
             Wyoming,
 
             /// <summary>
             /// The United States Virgin Islands<br />
             /// 美属维尔金群岛
             /// </summary>
-            [AliasInShort("VI")] [RegionFlag("overseas")]
+            [AliasInShort("VI")] [RegionCode(4_00_138)] [RegionFlag("overseas")]
             VirginIslands,
 
             /// <summary>
             /// Commonwealth of the Northern Mariana Islands<br />
             /// 北马里亚纳群岛自由邦
             /// </summary>
-            [AliasInShort("MP")] [RegionFlag("overseas")]
+            [AliasInShort("MP")] [RegionCode(6_00_112)] [RegionFlag("overseas")]
             NorthernMarianaIslands,
 
             /// <summary>
             /// The Commonwealth of Puerto Rico<br />
             /// 波多黎各自治邦
             /// </summary>
-            [AliasInShort("PR")] [RegionFlag("overseas")]
+            [AliasInShort("PR")] [RegionCode(4_00_126)] [RegionFlag("overseas")]
             PuertoRico,
 
             /// <summary>
             /// The Territory of Guam<br />
             /// 关岛
             /// </summary>
-            [AliasInShort("GU")] [RegionFlag("overseas")]
+            [AliasInShort("GU")] [RegionCode(6_00_104)] [RegionFlag("overseas")]
             Guam,
 
             /// <summary>
             /// American Samoa / Eastern Samoa<br />
             /// 美属萨摩亚群岛
             /// </summary>
-            [AliasInShort("AS")] [RegionFlag("overseas")]
+            [AliasInShort("AS")] [RegionCode(6_00_101)] [RegionFlag("overseas")]
             EasternSamoa,
 
             /// <summary>
             /// United States Minor Outlying Islands<br />
             /// 美国本土外小岛屿
             /// </summary>
-            [AliasInShort("UM")] [RegionFlag("overseas")]
+            [AliasInShort("UM")] [RegionCode(4_00_136)] [RegionFlag("overseas")]
             MinorOutlyingIslands,
 
             /// <summary>
@@ -737,6 +737,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"US-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -877,6 +887,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetMainRegionCodes()
             => Filter("main").Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

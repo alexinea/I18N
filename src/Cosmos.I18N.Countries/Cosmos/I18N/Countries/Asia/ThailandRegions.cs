@@ -412,392 +412,470 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Bangkok
             /// </summary>
-            [AliasInShort("10")] Bangkok,
+            [AliasInShort("10")] [RegionCode(1_00_138_0010)]
+            Bangkok,
 
             /// <summary>
             /// Samut Prakan
             /// </summary>
-            [AliasInShort("11")] SamutPrakan,
+            [AliasInShort("11")] [RegionCode(1_00_138_0011)]
+            SamutPrakan,
 
             /// <summary>
             /// Nonthaburi
             /// </summary>
-            [AliasInShort("12")] Nonthaburi,
+            [AliasInShort("12")] [RegionCode(1_00_138_0012)]
+            Nonthaburi,
 
             /// <summary>
             /// Pathum Thani
             /// </summary>
-            [AliasInShort("13")] PathumThani,
+            [AliasInShort("13")] [RegionCode(1_00_138_0013)]
+            PathumThani,
 
             /// <summary>
             /// Phra Nakhon Si Ayutthaya
             /// </summary>
-            [AliasInShort("14")] PhraNakhonSiAyutthaya,
+            [AliasInShort("14")] [RegionCode(1_00_138_0014)]
+            PhraNakhonSiAyutthaya,
 
             /// <summary>
             /// Ang Thong
             /// </summary>
-            [AliasInShort("15")] AngThong,
+            [AliasInShort("15")] [RegionCode(1_00_138_0015)]
+            AngThong,
 
             /// <summary>
             /// Lopburi
             /// </summary>
-            [AliasInShort("16")] Lopburi,
+            [AliasInShort("16")] [RegionCode(1_00_138_0016)]
+            Lopburi,
 
             /// <summary>
             /// Sing Buri
             /// </summary>
-            [AliasInShort("17")] SingBuri,
+            [AliasInShort("17")] [RegionCode(1_00_138_0017)]
+            SingBuri,
 
             /// <summary>
             /// Chai Nat
             /// </summary>
-            [AliasInShort("18")] ChaiNat,
+            [AliasInShort("18")] [RegionCode(1_00_138_0018)]
+            ChaiNat,
 
             /// <summary>
             /// Saraburi
             /// </summary>
-            [AliasInShort("19")] Saraburi,
+            [AliasInShort("19")] [RegionCode(1_00_138_0019)]
+            Saraburi,
 
             /// <summary>
             /// Chon Buri
             /// </summary>
-            [AliasInShort("20")] ChonBuri,
+            [AliasInShort("20")] [RegionCode(1_00_138_0020)]
+            ChonBuri,
 
             /// <summary>
             /// Rayong
             /// </summary>
-            [AliasInShort("21")] Rayong,
+            [AliasInShort("21")] [RegionCode(1_00_138_0021)]
+            Rayong,
 
             /// <summary>
             /// Chanthaburi
             /// </summary>
-            [AliasInShort("22")] Chanthaburi,
+            [AliasInShort("22")] [RegionCode(1_00_138_0022)]
+            Chanthaburi,
 
             /// <summary>
             /// Trat
             /// </summary>
-            [AliasInShort("23")] Trat,
+            [AliasInShort("23")] [RegionCode(1_00_138_0023)]
+            Trat,
 
             /// <summary>
             /// Chachoengsao
             /// </summary>
-            [AliasInShort("24")] Chachoengsao,
+            [AliasInShort("24")] [RegionCode(1_00_138_0024)]
+            Chachoengsao,
 
             /// <summary>
             /// Prachin Buri
             /// </summary>
-            [AliasInShort("25")] PrachinBuri,
+            [AliasInShort("25")] [RegionCode(1_00_138_0025)]
+            PrachinBuri,
 
             /// <summary>
             /// Nakhon Nayok
             /// </summary>
-            [AliasInShort("26")] NakhonNayok,
+            [AliasInShort("26")] [RegionCode(1_00_138_0026)]
+            NakhonNayok,
 
             /// <summary>
             /// Sa Kaeo
             /// </summary>
-            [AliasInShort("27")] SaKaeo,
+            [AliasInShort("27")] [RegionCode(1_00_138_0027)]
+            SaKaeo,
 
             /// <summary>
             /// Nakhon Ratchasima
             /// </summary>
-            [AliasInShort("30")] NakhonRatchasima,
+            [AliasInShort("30")] [RegionCode(1_00_138_0030)]
+            NakhonRatchasima,
 
             /// <summary>
             /// Buri Ram
             /// </summary>
-            [AliasInShort("31")] BuriRam,
+            [AliasInShort("31")] [RegionCode(1_00_138_0031)]
+            BuriRam,
 
             /// <summary>
             /// Surin
             /// </summary>
-            [AliasInShort("32")] Surin,
+            [AliasInShort("32")] [RegionCode(1_00_138_0032)]
+            Surin,
 
             /// <summary>
             /// Si Sa Ket
             /// </summary>
-            [AliasInShort("33")] SiSaKet,
+            [AliasInShort("33")] [RegionCode(1_00_138_0033)]
+            SiSaKet,
 
             /// <summary>
             /// Ubon Ratchathani
             /// </summary>
-            [AliasInShort("34")] UbonRatchathani,
+            [AliasInShort("34")] [RegionCode(1_00_138_0034)]
+            UbonRatchathani,
 
             /// <summary>
             /// Yasothon
             /// </summary>
-            [AliasInShort("35")] Yasothon,
+            [AliasInShort("35")] [RegionCode(1_00_138_0035)]
+            Yasothon,
 
             /// <summary>
             /// Chaiyaphum
             /// </summary>
-            [AliasInShort("36")] Chaiyaphum,
+            [AliasInShort("36")] [RegionCode(1_00_138_0036)]
+            Chaiyaphum,
 
             /// <summary>
             /// Amnat Charoen
             /// </summary>
-            [AliasInShort("37")] AmnatCharoen,
+            [AliasInShort("37")] [RegionCode(1_00_138_0037)]
+            AmnatCharoen,
 
             /// <summary>
             /// Bueng Kan
             /// </summary>
-            [AliasInShort("38")] BuengKan,
+            [AliasInShort("38")] [RegionCode(1_00_138_0038)]
+            BuengKan,
 
             /// <summary>
             /// Nong Bua Lam Phu
             /// </summary>
-            [AliasInShort("39")] NongBuaLamPhu,
+            [AliasInShort("39")] [RegionCode(1_00_138_0039)]
+            NongBuaLamPhu,
 
             /// <summary>
             /// Khon Kaen
             /// </summary>
-            [AliasInShort("40")] KhonKaen,
+            [AliasInShort("40")] [RegionCode(1_00_138_0040)]
+            KhonKaen,
 
             /// <summary>
             /// Udon Thani
             /// </summary>
-            [AliasInShort("41")] UdonThani,
+            [AliasInShort("41")] [RegionCode(1_00_138_0041)]
+            UdonThani,
 
             /// <summary>
             /// Loei
             /// </summary>
-            [AliasInShort("42")] Loei,
+            [AliasInShort("42")] [RegionCode(1_00_138_0042)]
+            Loei,
 
             /// <summary>
             /// Nong Khai
             /// </summary>
-            [AliasInShort("43")] NongKhai,
+            [AliasInShort("43")] [RegionCode(1_00_138_0043)]
+            NongKhai,
 
             /// <summary>
             /// Maha Sarakham
             /// </summary>
-            [AliasInShort("44")] MahaSarakham,
+            [AliasInShort("44")] [RegionCode(1_00_138_0044)]
+            MahaSarakham,
 
             /// <summary>
             /// Roi Et
             /// </summary>
-            [AliasInShort("45")] RoiEt,
+            [AliasInShort("45")] [RegionCode(1_00_138_0045)]
+            RoiEt,
 
             /// <summary>
             /// Kalasin
             /// </summary>
-            [AliasInShort("46")] Kalasin,
+            [AliasInShort("46")] [RegionCode(1_00_138_0046)]
+            Kalasin,
 
             /// <summary>
             /// Sakon Nakhon
             /// </summary>
-            [AliasInShort("47")] SakonNakhon,
+            [AliasInShort("47")] [RegionCode(1_00_138_0047)]
+            SakonNakhon,
 
             /// <summary>
             /// Nakhon Phanom
             /// </summary>
-            [AliasInShort("48")] NakhonPhanom,
+            [AliasInShort("48")] [RegionCode(1_00_138_0048)]
+            NakhonPhanom,
 
             /// <summary>
             /// Mukdahan
             /// </summary>
-            [AliasInShort("49")] Mukdahan,
+            [AliasInShort("49")] [RegionCode(1_00_138_0049)]
+            Mukdahan,
 
             /// <summary>
             /// Chiang Mai
             /// </summary>
-            [AliasInShort("50")] ChiangMai,
+            [AliasInShort("50")] [RegionCode(1_00_138_0050)]
+            ChiangMai,
 
             /// <summary>
             /// Lamphun
             /// </summary>
-            [AliasInShort("51")] Lamphun,
+            [AliasInShort("51")] [RegionCode(1_00_138_0051)]
+            Lamphun,
 
             /// <summary>
             /// Lampang
             /// </summary>
-            [AliasInShort("52")] Lampang,
+            [AliasInShort("52")] [RegionCode(1_00_138_0052)]
+            Lampang,
 
             /// <summary>
             /// Uttaradit
             /// </summary>
-            [AliasInShort("53")] Uttaradit,
+            [AliasInShort("53")] [RegionCode(1_00_138_0053)]
+            Uttaradit,
 
             /// <summary>
             /// Phrae
             /// </summary>
-            [AliasInShort("54")] Phrae,
+            [AliasInShort("54")] [RegionCode(1_00_138_0054)]
+            Phrae,
 
             /// <summary>
             /// Nan
             /// </summary>
-            [AliasInShort("55")] Nan,
+            [AliasInShort("55")] [RegionCode(1_00_138_0055)]
+            Nan,
 
             /// <summary>
             /// Phayao
             /// </summary>
-            [AliasInShort("56")] Phayao,
+            [AliasInShort("56")] [RegionCode(1_00_138_0056)]
+            Phayao,
 
             /// <summary>
             /// Chiang Rai
             /// </summary>
-            [AliasInShort("57")] ChiangRai,
+            [AliasInShort("57")] [RegionCode(1_00_138_0057)]
+            ChiangRai,
 
             /// <summary>
             /// Mae Hong Son
             /// </summary>
-            [AliasInShort("58")] MaeHongSon,
+            [AliasInShort("58")] [RegionCode(1_00_138_0058)]
+            MaeHongSon,
 
             /// <summary>
             /// Nakhon Sawan
             /// </summary>
-            [AliasInShort("60")] NakhonSawan,
+            [AliasInShort("60")] [RegionCode(1_00_138_0060)]
+            NakhonSawan,
 
             /// <summary>
             /// Uthai Thani
             /// </summary>
-            [AliasInShort("61")] UthaiThani,
+            [AliasInShort("61")] [RegionCode(1_00_138_0061)]
+            UthaiThani,
 
             /// <summary>
             /// Kamphaeng Phet
             /// </summary>
-            [AliasInShort("62")] KamphaengPhet,
+            [AliasInShort("62")] [RegionCode(1_00_138_0062)]
+            KamphaengPhet,
 
             /// <summary>
             /// Tak
             /// </summary>
-            [AliasInShort("63")] Tak,
+            [AliasInShort("63")] [RegionCode(1_00_138_0063)]
+            Tak,
 
             /// <summary>
             /// Sukhothai
             /// </summary>
-            [AliasInShort("64")] Sukhothai,
+            [AliasInShort("64")] [RegionCode(1_00_138_0064)]
+            Sukhothai,
 
             /// <summary>
             /// Phitsanulok
             /// </summary>
-            [AliasInShort("65")] Phitsanulok,
+            [AliasInShort("65")] [RegionCode(1_00_138_0065)]
+            Phitsanulok,
 
             /// <summary>
             /// Phichit
             /// </summary>
-            [AliasInShort("66")] Phichit,
+            [AliasInShort("66")] [RegionCode(1_00_138_0066)]
+            Phichit,
 
             /// <summary>
             /// Phetchabun
             /// </summary>
-            [AliasInShort("67")] Phetchabun,
+            [AliasInShort("67")] [RegionCode(1_00_138_0067)]
+            Phetchabun,
 
             /// <summary>
             /// Ratchaburi
             /// </summary>
-            [AliasInShort("70")] Ratchaburi,
+            [AliasInShort("70")] [RegionCode(1_00_138_0070)]
+            Ratchaburi,
 
             /// <summary>
             /// Kanchanaburi
             /// </summary>
-            [AliasInShort("71")] Kanchanaburi,
+            [AliasInShort("71")] [RegionCode(1_00_138_0071)]
+            Kanchanaburi,
 
             /// <summary>
             /// Suphanburi
             /// </summary>
-            [AliasInShort("72")] Suphanburi,
+            [AliasInShort("72")] [RegionCode(1_00_138_0072)]
+            Suphanburi,
 
             /// <summary>
             /// Nakhon Pathom
             /// </summary>
-            [AliasInShort("73")] NakhonPathom,
+            [AliasInShort("73")] [RegionCode(1_00_138_0073)]
+            NakhonPathom,
 
             /// <summary>
             /// Samut Sakhon
             /// </summary>
-            [AliasInShort("74")] SamutSakhon,
+            [AliasInShort("74")] [RegionCode(1_00_138_0074)]
+            SamutSakhon,
 
             /// <summary>
             /// Samut Songkhram
             /// </summary>
-            [AliasInShort("75")] SamutSongkhram,
+            [AliasInShort("75")] [RegionCode(1_00_138_0075)]
+            SamutSongkhram,
 
             /// <summary>
             /// Phetchaburi
             /// </summary>
-            [AliasInShort("76")] Phetchaburi,
+            [AliasInShort("76")] [RegionCode(1_00_138_0076)]
+            Phetchaburi,
 
             /// <summary>
             /// Prachuap Khiri Khan
             /// </summary>
-            [AliasInShort("77")] PrachuapKhiriKhan,
+            [AliasInShort("77")] [RegionCode(1_00_138_0077)]
+            PrachuapKhiriKhan,
 
             /// <summary>
             /// Nakhon Si Thammarat
             /// </summary>
-            [AliasInShort("80")] NakhonSiThammarat,
+            [AliasInShort("80")] [RegionCode(1_00_138_0080)]
+            NakhonSiThammarat,
 
             /// <summary>
             /// Krabi
             /// </summary>
-            [AliasInShort("81")] Krabi,
+            [AliasInShort("81")] [RegionCode(1_00_138_0081)]
+            Krabi,
 
             /// <summary>
             /// Phang Nga
             /// </summary>
-            [AliasInShort("82")] PhangNga,
+            [AliasInShort("82")] [RegionCode(1_00_138_0082)]
+            PhangNga,
 
             /// <summary>
             /// Phuket
             /// </summary>
-            [AliasInShort("83")] Phuket,
+            [AliasInShort("83")] [RegionCode(1_00_138_0083)]
+            Phuket,
 
             /// <summary>
             /// Surat Thani
             /// </summary>
-            [AliasInShort("84")] SuratThani,
+            [AliasInShort("84")] [RegionCode(1_00_138_0084)]
+            SuratThani,
 
             /// <summary>
             /// Ranong
             /// </summary>
-            [AliasInShort("85")] Ranong,
+            [AliasInShort("85")] [RegionCode(1_00_138_0085)]
+            Ranong,
 
             /// <summary>
             /// Chumphon
             /// </summary>
-            [AliasInShort("86")] Chumphon,
+            [AliasInShort("86")] [RegionCode(1_00_138_0086)]
+            Chumphon,
 
             /// <summary>
             /// Songkhla
             /// </summary>
-            [AliasInShort("90")] Songkhla,
+            [AliasInShort("90")] [RegionCode(1_00_138_0090)]
+            Songkhla,
 
             /// <summary>
             /// Satun
             /// </summary>
-            [AliasInShort("91")] Satun,
+            [AliasInShort("91")] [RegionCode(1_00_138_0091)]
+            Satun,
 
             /// <summary>
             /// Trang
             /// </summary>
-            [AliasInShort("92")] Trang,
+            [AliasInShort("92")] [RegionCode(1_00_138_0092)]
+            Trang,
 
             /// <summary>
             /// Phatthalung
             /// </summary>
-            [AliasInShort("93")] Phatthalung,
+            [AliasInShort("93")] [RegionCode(1_00_138_0093)]
+            Phatthalung,
 
             /// <summary>
             /// Pattani
             /// </summary>
-            [AliasInShort("94")] Pattani,
+            [AliasInShort("94")] [RegionCode(1_00_138_0094)]
+            Pattani,
 
             /// <summary>
             /// Yala
             /// </summary>
-            [AliasInShort("95")] Yala,
+            [AliasInShort("95")] [RegionCode(1_00_138_0095)]
+            Yala,
 
             /// <summary>
             /// Narathiwat
             /// </summary>
-            [AliasInShort("96")] Narathiwat,
+            [AliasInShort("96")] [RegionCode(1_00_138_0096)]
+            Narathiwat,
 
             /// <summary>
             /// Pattaya
             /// </summary>
-            [AliasInShort("S")] Pattaya,
+            [AliasInShort("S")] [RegionCode(1_00_138_0100)]
+            Pattaya,
 
             /// <summary>
             /// Unknown
@@ -825,6 +903,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"TH-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -860,6 +948,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

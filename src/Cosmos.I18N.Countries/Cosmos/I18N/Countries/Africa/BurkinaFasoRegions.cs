@@ -87,67 +87,67 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Nord
             /// </summary>
-            [AliasInShort("10")] Nord,
+            [AliasInShort("10")][RegionCode(3_00_105_0010)] Nord,
 
             /// <summary>
             /// Plateau-Central
             /// </summary>
-            [AliasInShort("11")] PlateauCentral,
+            [AliasInShort("11")][RegionCode(3_00_105_0011)] PlateauCentral,
 
             /// <summary>
             /// Sahel
             /// </summary>
-            [AliasInShort("12")] Sahel,
+            [AliasInShort("12")][RegionCode(3_00_105_0012)] Sahel,
 
             /// <summary>
             /// Sud-Ouest
             /// </summary>
-            [AliasInShort("13")] SudOuest,
+            [AliasInShort("13")][RegionCode(3_00_105_0013)] SudOuest,
 
             /// <summary>
             /// Boucle du Mouhoun
             /// </summary>
-            [AliasInShort("01")] BoucleDuMouhoun,
+            [AliasInShort("01")][RegionCode(3_00_105_0001)] BoucleDuMouhoun,
 
             /// <summary>
             /// Cascades
             /// </summary>
-            [AliasInShort("02")] Cascades,
+            [AliasInShort("02")][RegionCode(3_00_105_0002)] Cascades,
 
             /// <summary>
             /// Centre
             /// </summary>
-            [AliasInShort("03")] Centre,
+            [AliasInShort("03")][RegionCode(3_00_105_0003)] Centre,
 
             /// <summary>
             /// Centre-Est
             /// </summary>
-            [AliasInShort("04")] CentreEst,
+            [AliasInShort("04")][RegionCode(3_00_105_0004)] CentreEst,
 
             /// <summary>
             /// Centre-Nord
             /// </summary>
-            [AliasInShort("05")] CentreNord,
+            [AliasInShort("05")][RegionCode(3_00_105_0005)] CentreNord,
 
             /// <summary>
             /// Centre-Ouest
             /// </summary>
-            [AliasInShort("06")] CentreOuest,
+            [AliasInShort("06")][RegionCode(3_00_105_0006)] CentreOuest,
 
             /// <summary>
             /// Centre-Sud
             /// </summary>
-            [AliasInShort("07")] CentreSud,
+            [AliasInShort("07")][RegionCode(3_00_105_0007)] CentreSud,
 
             /// <summary>
             /// Est
             /// </summary>
-            [AliasInShort("08")] Est,
+            [AliasInShort("08")][RegionCode(3_00_105_0008)] Est,
 
             /// <summary>
             /// Hauts-Bassins
             /// </summary>
-            [AliasInShort("09")] HautsBassins,
+            [AliasInShort("09")][RegionCode(3_00_105_0009)] HautsBassins,
 
             /// <summary>
             /// Unknown
@@ -175,6 +175,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BF-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -210,6 +220,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

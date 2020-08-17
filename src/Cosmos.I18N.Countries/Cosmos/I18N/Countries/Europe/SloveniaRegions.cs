@@ -1138,1057 +1138,1268 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Ajdovščina
             /// </summary>
-            [AliasInShort("YT")] Ajdovščina,
+            [AliasInShort("YT")] [RegionCode(2_00_138_0001)]
+            Ajdovščina,
 
             /// <summary>
             /// Beltinci
             /// </summary>
-            [AliasInShort("002")] Beltinci,
+            [AliasInShort("002")] [RegionCode(2_00_138_0002)]
+            Beltinci,
 
             /// <summary>
             /// Bled
             /// </summary>
-            [AliasInShort("003")] Bled,
+            [AliasInShort("003")] [RegionCode(2_00_138_0003)]
+            Bled,
 
             /// <summary>
             /// Bohinj
             /// </summary>
-            [AliasInShort("004")] Bohinj,
+            [AliasInShort("004")] [RegionCode(2_00_138_0004)]
+            Bohinj,
 
             /// <summary>
             /// Borovnica
             /// </summary>
-            [AliasInShort("005")] Borovnica,
+            [AliasInShort("005")] [RegionCode(2_00_138_0005)]
+            Borovnica,
 
             /// <summary>
             /// Bovec
             /// </summary>
-            [AliasInShort("006")] Bovec,
+            [AliasInShort("006")] [RegionCode(2_00_138_0006)]
+            Bovec,
 
             /// <summary>
             /// Brda
             /// </summary>
-            [AliasInShort("007")] Brda,
+            [AliasInShort("007")] [RegionCode(2_00_138_0007)]
+            Brda,
 
             /// <summary>
             /// Brezovica
             /// </summary>
-            [AliasInShort("008")] Brezovica,
+            [AliasInShort("008")] [RegionCode(2_00_138_0008)]
+            Brezovica,
 
             /// <summary>
             /// Brežice
             /// </summary>
-            [AliasInShort("009")] Brežice,
+            [AliasInShort("009")] [RegionCode(2_00_138_0009)]
+            Brežice,
 
             /// <summary>
             /// Tišina
             /// </summary>
-            [AliasInShort("010")] Tišina,
+            [AliasInShort("010")] [RegionCode(2_00_138_0010)]
+            Tišina,
 
             /// <summary>
             /// Celje
             /// </summary>
-            [AliasInShort("011")] Celje,
+            [AliasInShort("011")] [RegionCode(2_00_138_0011)]
+            Celje,
 
             /// <summary>
             /// Cerklje na Gorenjskem
             /// </summary>
-            [AliasInShort("012")] CerkljeNaGorenjskem,
+            [AliasInShort("012")] [RegionCode(2_00_138_0012)]
+            CerkljeNaGorenjskem,
 
             /// <summary>
             /// Cerknica
             /// </summary>
-            [AliasInShort("013")] Cerknica,
+            [AliasInShort("013")] [RegionCode(2_00_138_0013)]
+            Cerknica,
 
             /// <summary>
             /// Cerkno
             /// </summary>
-            [AliasInShort("014")] Cerkno,
+            [AliasInShort("014")] [RegionCode(2_00_138_0014)]
+            Cerkno,
 
             /// <summary>
             /// Črenšovci
             /// </summary>
-            [AliasInShort("015")] Črenšovci,
+            [AliasInShort("015")] [RegionCode(2_00_138_0015)]
+            Črenšovci,
 
             /// <summary>
             /// Črna na Koroškem
             /// </summary>
-            [AliasInShort("016")] ČrnaNaKoroškem,
+            [AliasInShort("016")] [RegionCode(2_00_138_0016)]
+            ČrnaNaKoroškem,
 
             /// <summary>
             /// Črnomelj
             /// </summary>
-            [AliasInShort("017")] Črnomelj,
+            [AliasInShort("017")] [RegionCode(2_00_138_0017)]
+            Črnomelj,
 
             /// <summary>
             /// Destrnik
             /// </summary>
-            [AliasInShort("018")] Destrnik,
+            [AliasInShort("018")] [RegionCode(2_00_138_0018)]
+            Destrnik,
 
             /// <summary>
             /// Divača
             /// </summary>
-            [AliasInShort("019")] Divača,
+            [AliasInShort("019")] [RegionCode(2_00_138_0019)]
+            Divača,
 
             /// <summary>
             /// Dobrepolje
             /// </summary>
-            [AliasInShort("020")] Dobrepolje,
+            [AliasInShort("020")] [RegionCode(2_00_138_0020)]
+            Dobrepolje,
 
             /// <summary>
             /// Dobrova–Polhov Gradec
             /// </summary>
-            [AliasInShort("021")] DobrovaPolhovGradec,
+            [AliasInShort("021")] [RegionCode(2_00_138_0021)]
+            DobrovaPolhovGradec,
 
             /// <summary>
             /// Dol pri Ljubljani
             /// </summary>
-            [AliasInShort("022")] DolPriLjubljani,
+            [AliasInShort("022")] [RegionCode(2_00_138_0022)]
+            DolPriLjubljani,
 
             /// <summary>
             /// Domžale
             /// </summary>
-            [AliasInShort("023")] Domžale,
+            [AliasInShort("023")] [RegionCode(2_00_138_0023)]
+            Domžale,
 
             /// <summary>
             /// Dornava
             /// </summary>
-            [AliasInShort("024")] Dornava,
+            [AliasInShort("024")] [RegionCode(2_00_138_0024)]
+            Dornava,
 
             /// <summary>
             /// Dravograd
             /// </summary>
-            [AliasInShort("025")] Dravograd,
+            [AliasInShort("025")] [RegionCode(2_00_138_0025)]
+            Dravograd,
 
             /// <summary>
             /// Duplek
             /// </summary>
-            [AliasInShort("026")] Duplek,
+            [AliasInShort("026")] [RegionCode(2_00_138_0026)]
+            Duplek,
 
             /// <summary>
             /// Gorenja Vas–Poljane
             /// </summary>
-            [AliasInShort("027")] GorenjaVasPoljane,
+            [AliasInShort("027")] [RegionCode(2_00_138_0027)]
+            GorenjaVasPoljane,
 
             /// <summary>
             /// Gorišnica
             /// </summary>
-            [AliasInShort("028")] Gorišnica,
+            [AliasInShort("028")] [RegionCode(2_00_138_0028)]
+            Gorišnica,
 
             /// <summary>
             /// Gornja Radgona
             /// </summary>
-            [AliasInShort("029")] GornjaRadgona,
+            [AliasInShort("029")] [RegionCode(2_00_138_0029)]
+            GornjaRadgona,
 
             /// <summary>
             /// Gornji Grad
             /// </summary>
-            [AliasInShort("030")] GornjiGrad,
+            [AliasInShort("030")] [RegionCode(2_00_138_0030)]
+            GornjiGrad,
 
             /// <summary>
             /// Gornji Petrovci
             /// </summary>
-            [AliasInShort("031")] GornjiPetrovci,
+            [AliasInShort("031")] [RegionCode(2_00_138_0031)]
+            GornjiPetrovci,
 
             /// <summary>
             /// Grosuplje
             /// </summary>
-            [AliasInShort("032")] Grosuplje,
+            [AliasInShort("032")] [RegionCode(2_00_138_0032)]
+            Grosuplje,
 
             /// <summary>
             /// Šalovci
             /// </summary>
-            [AliasInShort("033")] Šalovci,
+            [AliasInShort("033")] [RegionCode(2_00_138_0033)]
+            Šalovci,
 
             /// <summary>
             /// Hrastnik
             /// </summary>
-            [AliasInShort("034")] Hrastnik,
+            [AliasInShort("034")] [RegionCode(2_00_138_0034)]
+            Hrastnik,
 
             /// <summary>
             /// Hrpelje–Kozina
             /// </summary>
-            [AliasInShort("035")] HrpeljeKozina,
+            [AliasInShort("035")] [RegionCode(2_00_138_0035)]
+            HrpeljeKozina,
 
             /// <summary>
             /// Idrija
             /// </summary>
-            [AliasInShort("036")] Idrija,
+            [AliasInShort("036")] [RegionCode(2_00_138_0036)]
+            Idrija,
 
             /// <summary>
             /// Ig
             /// </summary>
-            [AliasInShort("037")] Ig,
+            [AliasInShort("037")] [RegionCode(2_00_138_0037)]
+            Ig,
 
             /// <summary>
             /// Ilirska Bistrica
             /// </summary>
-            [AliasInShort("038")] IlirskaBistrica,
+            [AliasInShort("038")] [RegionCode(2_00_138_0038)]
+            IlirskaBistrica,
 
             /// <summary>
             /// Ivančna Gorica
             /// </summary>
-            [AliasInShort("039")] IvančnaGorica,
+            [AliasInShort("039")] [RegionCode(2_00_138_0039)]
+            IvančnaGorica,
 
             /// <summary>
             /// Izola
             /// </summary>
-            [AliasInShort("040")] Izola,
+            [AliasInShort("040")] [RegionCode(2_00_138_0040)]
+            Izola,
 
             /// <summary>
             /// Jesenice
             /// </summary>
-            [AliasInShort("041")] Jesenice,
+            [AliasInShort("041")] [RegionCode(2_00_138_0041)]
+            Jesenice,
 
             /// <summary>
             /// Juršinci
             /// </summary>
-            [AliasInShort("042")] Juršinci,
+            [AliasInShort("042")] [RegionCode(2_00_138_0042)]
+            Juršinci,
 
             /// <summary>
             /// Kamnik
             /// </summary>
-            [AliasInShort("043")] Kamnik,
+            [AliasInShort("043")] [RegionCode(2_00_138_0043)]
+            Kamnik,
 
             /// <summary>
             /// Kanal
             /// </summary>
-            [AliasInShort("044")] Kanal,
+            [AliasInShort("044")] [RegionCode(2_00_138_0044)]
+            Kanal,
 
             /// <summary>
             /// Kidričevo
             /// </summary>
-            [AliasInShort("045")] Kidričevo,
+            [AliasInShort("045")] [RegionCode(2_00_138_0045)]
+            Kidričevo,
 
             /// <summary>
             /// Kobarid
             /// </summary>
-            [AliasInShort("046")] Kobarid,
+            [AliasInShort("046")] [RegionCode(2_00_138_0046)]
+            Kobarid,
 
             /// <summary>
             /// Kobilje
             /// </summary>
-            [AliasInShort("047")] Kobilje,
+            [AliasInShort("047")] [RegionCode(2_00_138_0047)]
+            Kobilje,
 
             /// <summary>
             /// Kočevje
             /// </summary>
-            [AliasInShort("048")] Kočevje,
+            [AliasInShort("048")] [RegionCode(2_00_138_0048)]
+            Kočevje,
 
             /// <summary>
             /// Komen
             /// </summary>
-            [AliasInShort("049")] Komen,
+            [AliasInShort("049")] [RegionCode(2_00_138_0049)]
+            Komen,
 
             /// <summary>
             /// Koper
             /// </summary>
-            [AliasInShort("050")] Koper,
+            [AliasInShort("050")] [RegionCode(2_00_138_0050)]
+            Koper,
 
             /// <summary>
             /// Kozje
             /// </summary>
-            [AliasInShort("051")] Kozje,
+            [AliasInShort("051")] [RegionCode(2_00_138_0051)]
+            Kozje,
 
             /// <summary>
             /// Kranj
             /// </summary>
-            [AliasInShort("052")] Kranj,
+            [AliasInShort("052")] [RegionCode(2_00_138_0052)]
+            Kranj,
 
             /// <summary>
             /// Kranjska Gora
             /// </summary>
-            [AliasInShort("053")] KranjskaGora,
+            [AliasInShort("053")] [RegionCode(2_00_138_0053)]
+            KranjskaGora,
 
             /// <summary>
             /// Krško
             /// </summary>
-            [AliasInShort("054")] Krško,
+            [AliasInShort("054")] [RegionCode(2_00_138_0054)]
+            Krško,
 
             /// <summary>
             /// Kungota
             /// </summary>
-            [AliasInShort("055")] Kungota,
+            [AliasInShort("055")] [RegionCode(2_00_138_0055)]
+            Kungota,
 
             /// <summary>
             /// Kuzma
             /// </summary>
-            [AliasInShort("056")] Kuzma,
+            [AliasInShort("056")] [RegionCode(2_00_138_0056)]
+            Kuzma,
 
             /// <summary>
             /// Laško
             /// </summary>
-            [AliasInShort("057")] Laško,
+            [AliasInShort("057")] [RegionCode(2_00_138_0057)]
+            Laško,
 
             /// <summary>
             /// Lenart
             /// </summary>
-            [AliasInShort("058")] Lenart,
+            [AliasInShort("058")] [RegionCode(2_00_138_0058)]
+            Lenart,
 
             /// <summary>
             /// Lendava
             /// </summary>
-            [AliasInShort("059")] Lendava,
+            [AliasInShort("059")] [RegionCode(2_00_138_0059)]
+            Lendava,
 
             /// <summary>
             /// Litija
             /// </summary>
-            [AliasInShort("060")] Litija,
+            [AliasInShort("060")] [RegionCode(2_00_138_0060)]
+            Litija,
 
             /// <summary>
             /// Ljubljana
             /// </summary>
-            [AliasInShort("061")] Ljubljana,
+            [AliasInShort("061")] [RegionCode(2_00_138_0061)]
+            Ljubljana,
 
             /// <summary>
             /// Ljubno
             /// </summary>
-            [AliasInShort("062")] Ljubno,
+            [AliasInShort("062")] [RegionCode(2_00_138_0062)]
+            Ljubno,
 
             /// <summary>
             /// Ljutomer
             /// </summary>
-            [AliasInShort("063")] Ljutomer,
+            [AliasInShort("063")] [RegionCode(2_00_138_0063)]
+            Ljutomer,
 
             /// <summary>
             /// Logatec
             /// </summary>
-            [AliasInShort("064")] Logatec,
+            [AliasInShort("064")] [RegionCode(2_00_138_0064)]
+            Logatec,
 
             /// <summary>
             /// Loška Dolina
             /// </summary>
-            [AliasInShort("065")] LoškaDolina,
+            [AliasInShort("065")] [RegionCode(2_00_138_0065)]
+            LoškaDolina,
 
             /// <summary>
             /// Loški Potok
             /// </summary>
-            [AliasInShort("066")] LoškiPotok,
+            [AliasInShort("066")] [RegionCode(2_00_138_0066)]
+            LoškiPotok,
 
             /// <summary>
             /// Luče
             /// </summary>
-            [AliasInShort("067")] Luče,
+            [AliasInShort("067")] [RegionCode(2_00_138_0067)]
+            Luče,
 
             /// <summary>
             /// Lukovica
             /// </summary>
-            [AliasInShort("068")] Lukovica,
+            [AliasInShort("068")] [RegionCode(2_00_138_0068)]
+            Lukovica,
 
             /// <summary>
             /// Majšperk
             /// </summary>
-            [AliasInShort("069")] Majšperk,
+            [AliasInShort("069")] [RegionCode(2_00_138_0069)]
+            Majšperk,
 
             /// <summary>
             /// Maribor
             /// </summary>
-            [AliasInShort("070")] Maribor,
+            [AliasInShort("070")] [RegionCode(2_00_138_0070)]
+            Maribor,
 
             /// <summary>
             /// Medvode
             /// </summary>
-            [AliasInShort("071")] Medvode,
+            [AliasInShort("071")] [RegionCode(2_00_138_0071)]
+            Medvode,
 
             /// <summary>
             /// Mengeš
             /// </summary>
-            [AliasInShort("072")] Mengeš,
+            [AliasInShort("072")] [RegionCode(2_00_138_0072)]
+            Mengeš,
 
             /// <summary>
             /// Metlika
             /// </summary>
-            [AliasInShort("073")] Metlika,
+            [AliasInShort("073")] [RegionCode(2_00_138_0073)]
+            Metlika,
 
             /// <summary>
             /// Mežica
             /// </summary>
-            [AliasInShort("074")] Mežica,
+            [AliasInShort("074")] [RegionCode(2_00_138_0074)]
+            Mežica,
 
             /// <summary>
             /// Miren–Kostanjevica
             /// </summary>
-            [AliasInShort("075")] MirenKostanjevica,
+            [AliasInShort("075")] [RegionCode(2_00_138_0075)]
+            MirenKostanjevica,
 
             /// <summary>
             /// Mislinja
             /// </summary>
-            [AliasInShort("076")] Mislinja,
+            [AliasInShort("076")] [RegionCode(2_00_138_0076)]
+            Mislinja,
 
             /// <summary>
             /// Moravče
             /// </summary>
-            [AliasInShort("077")] Moravče,
+            [AliasInShort("077")] [RegionCode(2_00_138_0077)]
+            Moravče,
 
             /// <summary>
             /// Moravske Toplice
             /// </summary>
-            [AliasInShort("078")] MoravskeToplice,
+            [AliasInShort("078")] [RegionCode(2_00_138_0078)]
+            MoravskeToplice,
 
             /// <summary>
             /// Mozirje
             /// </summary>
-            [AliasInShort("079")] Mozirje,
+            [AliasInShort("079")] [RegionCode(2_00_138_0079)]
+            Mozirje,
 
             /// <summary>
             /// Murska Sobota
             /// </summary>
-            [AliasInShort("080")] MurskaSobota,
+            [AliasInShort("080")] [RegionCode(2_00_138_0080)]
+            MurskaSobota,
 
             /// <summary>
             /// Muta
             /// </summary>
-            [AliasInShort("081")] Muta,
+            [AliasInShort("081")] [RegionCode(2_00_138_0081)]
+            Muta,
 
             /// <summary>
             /// Naklo
             /// </summary>
-            [AliasInShort("082")] Naklo,
+            [AliasInShort("082")] [RegionCode(2_00_138_0082)]
+            Naklo,
 
             /// <summary>
             /// Nazarje
             /// </summary>
-            [AliasInShort("083")] Nazarje,
+            [AliasInShort("083")] [RegionCode(2_00_138_0083)]
+            Nazarje,
 
             /// <summary>
             /// Nova Gorica
             /// </summary>
-            [AliasInShort("084")] NovaGorica,
+            [AliasInShort("084")] [RegionCode(2_00_138_0084)]
+            NovaGorica,
 
             /// <summary>
             /// Novo Mesto
             /// </summary>
-            [AliasInShort("085")] NovoMesto,
+            [AliasInShort("085")] [RegionCode(2_00_138_0085)]
+            NovoMesto,
 
             /// <summary>
             /// Odranci
             /// </summary>
-            [AliasInShort("086")] Odranci,
+            [AliasInShort("086")] [RegionCode(2_00_138_0086)]
+            Odranci,
 
             /// <summary>
             /// Ormož
             /// </summary>
-            [AliasInShort("087")] Ormož,
+            [AliasInShort("087")] [RegionCode(2_00_138_0087)]
+            Ormož,
 
             /// <summary>
             /// Osilnica
             /// </summary>
-            [AliasInShort("088")] Osilnica,
+            [AliasInShort("088")] [RegionCode(2_00_138_0088)]
+            Osilnica,
 
             /// <summary>
             /// Pesnica
             /// </summary>
-            [AliasInShort("089")] Pesnica,
+            [AliasInShort("089")] [RegionCode(2_00_138_0089)]
+            Pesnica,
 
             /// <summary>
             /// Piran
             /// </summary>
-            [AliasInShort("090")] Piran,
+            [AliasInShort("090")] [RegionCode(2_00_138_0090)]
+            Piran,
 
             /// <summary>
             /// Pivka
             /// </summary>
-            [AliasInShort("091")] Pivka,
+            [AliasInShort("091")] [RegionCode(2_00_138_0091)]
+            Pivka,
 
             /// <summary>
             /// Podčetrtek
             /// </summary>
-            [AliasInShort("092")] Podčetrtek,
+            [AliasInShort("092")] [RegionCode(2_00_138_0092)]
+            Podčetrtek,
 
             /// <summary>
             /// Podvelka
             /// </summary>
-            [AliasInShort("093")] Podvelka,
+            [AliasInShort("093")] [RegionCode(2_00_138_0093)]
+            Podvelka,
 
             /// <summary>
             /// Postojna
             /// </summary>
-            [AliasInShort("094")] Postojna,
+            [AliasInShort("094")] [RegionCode(2_00_138_0094)]
+            Postojna,
 
             /// <summary>
             /// Preddvor
             /// </summary>
-            [AliasInShort("095")] Preddvor,
+            [AliasInShort("095")] [RegionCode(2_00_138_0095)]
+            Preddvor,
 
             /// <summary>
             /// Ptuj
             /// </summary>
-            [AliasInShort("096")] Ptuj,
+            [AliasInShort("096")] [RegionCode(2_00_138_0096)]
+            Ptuj,
 
             /// <summary>
             /// Puconci
             /// </summary>
-            [AliasInShort("097")] Puconci,
+            [AliasInShort("097")] [RegionCode(2_00_138_0097)]
+            Puconci,
 
             /// <summary>
             /// Rače–Fram
             /// </summary>
-            [AliasInShort("098")] RačeFram,
+            [AliasInShort("098")] [RegionCode(2_00_138_0098)]
+            RačeFram,
 
             /// <summary>
             /// Radeče
             /// </summary>
-            [AliasInShort("099")] Radeče,
+            [AliasInShort("099")] [RegionCode(2_00_138_0099)]
+            Radeče,
 
             /// <summary>
             /// Radenci
             /// </summary>
-            [AliasInShort("100")] Radenci,
+            [AliasInShort("100")] [RegionCode(2_00_138_0100)]
+            Radenci,
 
             /// <summary>
             /// Radlje ob Dravi
             /// </summary>
-            [AliasInShort("101")] RadljeObDravi,
+            [AliasInShort("101")] [RegionCode(2_00_138_0101)]
+            RadljeObDravi,
 
             /// <summary>
             /// Radovljica
             /// </summary>
-            [AliasInShort("102")] Radovljica,
+            [AliasInShort("102")] [RegionCode(2_00_138_0102)]
+            Radovljica,
 
             /// <summary>
             /// Ravne na Koroškem
             /// </summary>
-            [AliasInShort("103")] RavneNaKoroškem,
+            [AliasInShort("103")] [RegionCode(2_00_138_0103)]
+            RavneNaKoroškem,
 
             /// <summary>
             /// Ribnica
             /// </summary>
-            [AliasInShort("104")] Ribnica,
+            [AliasInShort("104")] [RegionCode(2_00_138_0104)]
+            Ribnica,
 
             /// <summary>
             /// Rogašovci
             /// </summary>
-            [AliasInShort("105")] Rogašovci,
+            [AliasInShort("105")] [RegionCode(2_00_138_0105)]
+            Rogašovci,
 
             /// <summary>
             /// Rogaška Slatina
             /// </summary>
-            [AliasInShort("106")] RogaškaSlatina,
+            [AliasInShort("106")] [RegionCode(2_00_138_0106)]
+            RogaškaSlatina,
 
             /// <summary>
             /// Rogatec
             /// </summary>
-            [AliasInShort("107")] Rogatec,
+            [AliasInShort("107")] [RegionCode(2_00_138_0107)]
+            Rogatec,
 
             /// <summary>
             /// Ruše
             /// </summary>
-            [AliasInShort("108")] Ruše,
+            [AliasInShort("108")] [RegionCode(2_00_138_0108)]
+            Ruše,
 
             /// <summary>
             /// Semič
             /// </summary>
-            [AliasInShort("109")] Semič,
+            [AliasInShort("109")] [RegionCode(2_00_138_0109)]
+            Semič,
 
             /// <summary>
             /// Sevnica
             /// </summary>
-            [AliasInShort("110")] Sevnica,
+            [AliasInShort("110")] [RegionCode(2_00_138_0110)]
+            Sevnica,
 
             /// <summary>
             /// Sežana
             /// </summary>
-            [AliasInShort("111")] Sežana,
+            [AliasInShort("111")] [RegionCode(2_00_138_0111)]
+            Sežana,
 
             /// <summary>
             /// Slovenj Gradec
             /// </summary>
-            [AliasInShort("112")] SlovenjGradec,
+            [AliasInShort("112")] [RegionCode(2_00_138_0112)]
+            SlovenjGradec,
 
             /// <summary>
             /// Slovenska Bistrica
             /// </summary>
-            [AliasInShort("113")] SlovenskaBistrica,
+            [AliasInShort("113")] [RegionCode(2_00_138_0113)]
+            SlovenskaBistrica,
 
             /// <summary>
             /// Slovenske Konjice
             /// </summary>
-            [AliasInShort("114")] SlovenskeKonjice,
+            [AliasInShort("114")] [RegionCode(2_00_138_0114)]
+            SlovenskeKonjice,
 
             /// <summary>
             /// Starše
             /// </summary>
-            [AliasInShort("115")] Starše,
+            [AliasInShort("115")] [RegionCode(2_00_138_0115)]
+            Starše,
 
             /// <summary>
             /// Sveti Jurij
             /// </summary>
-            [AliasInShort("116")] SvetiJurij,
+            [AliasInShort("116")] [RegionCode(2_00_138_0116)]
+            SvetiJurij,
 
             /// <summary>
             /// Šenčur
             /// </summary>
-            [AliasInShort("117")] Šenčur,
+            [AliasInShort("117")] [RegionCode(2_00_138_0117)]
+            Šenčur,
 
             /// <summary>
             /// Šentilj
             /// </summary>
-            [AliasInShort("118")] Šentilj,
+            [AliasInShort("118")] [RegionCode(2_00_138_0118)]
+            Šentilj,
 
             /// <summary>
             /// Šentjernej
             /// </summary>
-            [AliasInShort("119")] Šentjernej,
+            [AliasInShort("119")] [RegionCode(2_00_138_0119)]
+            Šentjernej,
 
             /// <summary>
             /// Šentjur
             /// </summary>
-            [AliasInShort("120")] Šentjur,
+            [AliasInShort("120")] [RegionCode(2_00_138_0120)]
+            Šentjur,
 
             /// <summary>
             /// Škocjan
             /// </summary>
-            [AliasInShort("121")] Škocjan,
+            [AliasInShort("121")] [RegionCode(2_00_138_0121)]
+            Škocjan,
 
             /// <summary>
             /// Škofja Loka
             /// </summary>
-            [AliasInShort("122")] ŠkofjaLoka,
+            [AliasInShort("122")] [RegionCode(2_00_138_0122)]
+            ŠkofjaLoka,
 
             /// <summary>
             /// Škofljica
             /// </summary>
-            [AliasInShort("123")] Škofljica,
+            [AliasInShort("123")] [RegionCode(2_00_138_0123)]
+            Škofljica,
 
             /// <summary>
             /// Šmarje pri Jelšah
             /// </summary>
-            [AliasInShort("124")] ŠmarjePriJelšah,
+            [AliasInShort("124")] [RegionCode(2_00_138_0124)]
+            ŠmarjePriJelšah,
 
             /// <summary>
             /// Šmartno ob Paki
             /// </summary>
-            [AliasInShort("125")] ŠmartnoObPaki,
+            [AliasInShort("125")] [RegionCode(2_00_138_0125)]
+            ŠmartnoObPaki,
 
             /// <summary>
             /// Šoštanj
             /// </summary>
-            [AliasInShort("126")] Šoštanj,
+            [AliasInShort("126")] [RegionCode(2_00_138_0126)]
+            Šoštanj,
 
             /// <summary>
             /// Štore
             /// </summary>
-            [AliasInShort("127")] Štore,
+            [AliasInShort("127")] [RegionCode(2_00_138_0127)]
+            Štore,
 
             /// <summary>
             /// Tolmin
             /// </summary>
-            [AliasInShort("128")] Tolmin,
+            [AliasInShort("128")] [RegionCode(2_00_138_0128)]
+            Tolmin,
 
             /// <summary>
             /// Trbovlje
             /// </summary>
-            [AliasInShort("129")] Trbovlje,
+            [AliasInShort("129")] [RegionCode(2_00_138_0129)]
+            Trbovlje,
 
             /// <summary>
             /// Trebnje
             /// </summary>
-            [AliasInShort("130")] Trebnje,
+            [AliasInShort("130")] [RegionCode(2_00_138_0130)]
+            Trebnje,
 
             /// <summary>
             /// Tržič
             /// </summary>
-            [AliasInShort("131")] Tržič,
+            [AliasInShort("131")] [RegionCode(2_00_138_0131)]
+            Tržič,
 
             /// <summary>
             /// Turnišče
             /// </summary>
-            [AliasInShort("132")] Turnišče,
+            [AliasInShort("132")] [RegionCode(2_00_138_0132)]
+            Turnišče,
 
             /// <summary>
             /// Velenje
             /// </summary>
-            [AliasInShort("133")] Velenje,
+            [AliasInShort("133")] [RegionCode(2_00_138_0133)]
+            Velenje,
 
             /// <summary>
             /// Velike Lašče
             /// </summary>
-            [AliasInShort("134")] VelikeLašče,
+            [AliasInShort("134")] [RegionCode(2_00_138_0134)]
+            VelikeLašče,
 
             /// <summary>
             /// Videm
             /// </summary>
-            [AliasInShort("135")] Videm,
+            [AliasInShort("135")] [RegionCode(2_00_138_0135)]
+            Videm,
 
             /// <summary>
             /// Vipava
             /// </summary>
-            [AliasInShort("136")] Vipava,
+            [AliasInShort("136")] [RegionCode(2_00_138_0136)]
+            Vipava,
 
             /// <summary>
             /// Vitanje
             /// </summary>
-            [AliasInShort("137")] Vitanje,
+            [AliasInShort("137")] [RegionCode(2_00_138_0137)]
+            Vitanje,
 
             /// <summary>
             /// Vodice
             /// </summary>
-            [AliasInShort("138")] Vodice,
+            [AliasInShort("138")] [RegionCode(2_00_138_0138)]
+            Vodice,
 
             /// <summary>
             /// Vojnik
             /// </summary>
-            [AliasInShort("139")] Vojnik,
+            [AliasInShort("139")] [RegionCode(2_00_138_0139)]
+            Vojnik,
 
             /// <summary>
             /// Vrhnika
             /// </summary>
-            [AliasInShort("140")] Vrhnika,
+            [AliasInShort("140")] [RegionCode(2_00_138_0140)]
+            Vrhnika,
 
             /// <summary>
             /// Vuzenica
             /// </summary>
-            [AliasInShort("141")] Vuzenica,
+            [AliasInShort("141")] [RegionCode(2_00_138_0141)]
+            Vuzenica,
 
             /// <summary>
             /// Zagorje ob Savi
             /// </summary>
-            [AliasInShort("142")] ZagorjeObSavi,
+            [AliasInShort("142")] [RegionCode(2_00_138_0143)]
+            ZagorjeObSavi,
 
             /// <summary>
             /// Zavrč
             /// </summary>
-            [AliasInShort("143")] Zavrč,
+            [AliasInShort("143")] [RegionCode(2_00_138_0144)]
+            Zavrč,
 
             /// <summary>
             /// Zreče
             /// </summary>
-            [AliasInShort("144")] Zreče,
+            [AliasInShort("144")] [RegionCode(2_00_138_0145)]
+            Zreče,
 
             /// <summary>
             /// Železniki
             /// </summary>
-            [AliasInShort("146")] Železniki,
+            [AliasInShort("146")] [RegionCode(2_00_138_0146)]
+            Železniki,
 
             /// <summary>
             /// Žiri
             /// </summary>
-            [AliasInShort("147")] Žiri,
+            [AliasInShort("147")] [RegionCode(2_00_138_0147)]
+            Žiri,
 
             /// <summary>
             /// Benedikt
             /// </summary>
-            [AliasInShort("148")] Benedikt,
+            [AliasInShort("148")] [RegionCode(2_00_138_0148)]
+            Benedikt,
 
             /// <summary>
             /// Bistrica ob Sotli
             /// </summary>
-            [AliasInShort("149")] BistricaObSotli,
+            [AliasInShort("149")] [RegionCode(2_00_138_0149)]
+            BistricaObSotli,
 
             /// <summary>
             /// Bloke
             /// </summary>
-            [AliasInShort("150")] Bloke,
+            [AliasInShort("150")] [RegionCode(2_00_138_0150)]
+            Bloke,
 
             /// <summary>
             /// Braslovče
             /// </summary>
-            [AliasInShort("151")] Braslovče,
+            [AliasInShort("151")] [RegionCode(2_00_138_0151)]
+            Braslovče,
 
             /// <summary>
             /// Cankova
             /// </summary>
-            [AliasInShort("152")] Cankova,
+            [AliasInShort("152")] [RegionCode(2_00_138_0152)]
+            Cankova,
 
             /// <summary>
             /// Cerkvenjak
             /// </summary>
-            [AliasInShort("153")] Cerkvenjak,
+            [AliasInShort("153")] [RegionCode(2_00_138_0153)]
+            Cerkvenjak,
 
             /// <summary>
             /// Dobje
             /// </summary>
-            [AliasInShort("154")] Dobje,
+            [AliasInShort("154")] [RegionCode(2_00_138_0154)]
+            Dobje,
 
             /// <summary>
             /// Dobrna
             /// </summary>
-            [AliasInShort("155")] Dobrna,
+            [AliasInShort("155")] [RegionCode(2_00_138_0155)]
+            Dobrna,
 
             /// <summary>
             /// Dobrovnik
             /// </summary>
-            [AliasInShort("156")] Dobrovnik,
+            [AliasInShort("156")] [RegionCode(2_00_138_0156)]
+            Dobrovnik,
 
             /// <summary>
             /// Dolenjske Toplice
             /// </summary>
-            [AliasInShort("157")] DolenjskeToplice,
+            [AliasInShort("157")] [RegionCode(2_00_138_0157)]
+            DolenjskeToplice,
 
             /// <summary>
             /// Grad
             /// </summary>
-            [AliasInShort("158")] Grad,
+            [AliasInShort("158")] [RegionCode(2_00_138_0158)]
+            Grad,
 
             /// <summary>
             /// Hajdina
             /// </summary>
-            [AliasInShort("159")] Hajdina,
+            [AliasInShort("159")] [RegionCode(2_00_138_0159)]
+            Hajdina,
 
             /// <summary>
             /// Hoče–Slivnica
             /// </summary>
-            [AliasInShort("160")] HočeSlivnica,
+            [AliasInShort("160")] [RegionCode(2_00_138_0160)]
+            HočeSlivnica,
 
             /// <summary>
             /// Hodoš
             /// </summary>
-            [AliasInShort("161")] Hodoš,
+            [AliasInShort("161")] [RegionCode(2_00_138_0161)]
+            Hodoš,
 
             /// <summary>
             /// Horjul
             /// </summary>
-            [AliasInShort("162")] Horjul,
+            [AliasInShort("162")] [RegionCode(2_00_138_0162)]
+            Horjul,
 
             /// <summary>
             /// Jezersko
             /// </summary>
-            [AliasInShort("163")] Jezersko,
+            [AliasInShort("163")] [RegionCode(2_00_138_0163)]
+            Jezersko,
 
             /// <summary>
             /// Komenda
             /// </summary>
-            [AliasInShort("164")] Komenda,
+            [AliasInShort("164")] [RegionCode(2_00_138_0164)]
+            Komenda,
 
             /// <summary>
             /// Kostel
             /// </summary>
-            [AliasInShort("165")] Kostel,
+            [AliasInShort("165")] [RegionCode(2_00_138_0165)]
+            Kostel,
 
             /// <summary>
             /// Križevci
             /// </summary>
-            [AliasInShort("166")] Križevci,
+            [AliasInShort("166")] [RegionCode(2_00_138_0166)]
+            Križevci,
 
             /// <summary>
             /// Lovrenc na Pohorju
             /// </summary>
-            [AliasInShort("167")] LovrencNaPohorju,
+            [AliasInShort("167")] [RegionCode(2_00_138_0167)]
+            LovrencNaPohorju,
 
             /// <summary>
             /// Markovci
             /// </summary>
-            [AliasInShort("168")] Markovci,
+            [AliasInShort("168")] [RegionCode(2_00_138_0168)]
+            Markovci,
 
             /// <summary>
             /// Miklavž na Dravskem Polju
             /// </summary>
-            [AliasInShort("169")] MiklavžNaDravskemPolju,
+            [AliasInShort("169")] [RegionCode(2_00_138_0169)]
+            MiklavžNaDravskemPolju,
 
             /// <summary>
             /// Mirna Peč
             /// </summary>
-            [AliasInShort("170")] MirnaPeč,
+            [AliasInShort("170")] [RegionCode(2_00_138_0170)]
+            MirnaPeč,
 
             /// <summary>
             /// Oplotnica
             /// </summary>
-            [AliasInShort("171")] Oplotnica,
+            [AliasInShort("171")] [RegionCode(2_00_138_0171)]
+            Oplotnica,
 
             /// <summary>
             /// Podlehnik
             /// </summary>
-            [AliasInShort("172")] Podlehnik,
+            [AliasInShort("172")] [RegionCode(2_00_138_0172)]
+            Podlehnik,
 
             /// <summary>
             /// Polzela
             /// </summary>
-            [AliasInShort("173")] Polzela,
+            [AliasInShort("173")] [RegionCode(2_00_138_0173)]
+            Polzela,
 
             /// <summary>
             /// Prebold
             /// </summary>
-            [AliasInShort("174")] Prebold,
+            [AliasInShort("174")] [RegionCode(2_00_138_0174)]
+            Prebold,
 
             /// <summary>
             /// Prevalje
             /// </summary>
-            [AliasInShort("175")] Prevalje,
+            [AliasInShort("175")] [RegionCode(2_00_138_0175)]
+            Prevalje,
 
             /// <summary>
             /// Razkrižje
             /// </summary>
-            [AliasInShort("176")] Razkrižje,
+            [AliasInShort("176")] [RegionCode(2_00_138_0176)]
+            Razkrižje,
 
             /// <summary>
             /// Ribnica na Pohorju
             /// </summary>
-            [AliasInShort("177")] RibnicaNaPohorju,
+            [AliasInShort("177")] [RegionCode(2_00_138_0177)]
+            RibnicaNaPohorju,
 
             /// <summary>
             /// Selnica ob Dravi
             /// </summary>
-            [AliasInShort("178")] SelnicaObDravi,
+            [AliasInShort("178")] [RegionCode(2_00_138_0178)]
+            SelnicaObDravi,
 
             /// <summary>
             /// Sodražica
             /// </summary>
-            [AliasInShort("179")] Sodražica,
+            [AliasInShort("179")] [RegionCode(2_00_138_0179)]
+            Sodražica,
 
             /// <summary>
             /// Solčava
             /// </summary>
-            [AliasInShort("180")] Solčava,
+            [AliasInShort("180")] [RegionCode(2_00_138_0180)]
+            Solčava,
 
             /// <summary>
             /// Sveta Ana
             /// </summary>
-            [AliasInShort("181")] SvetaAna,
+            [AliasInShort("181")] [RegionCode(2_00_138_0181)]
+            SvetaAna,
 
             /// <summary>
             /// Sveti Andraž v Slovenskih Goricah
             /// </summary>
-            [AliasInShort("182")] SvetiAndražVSlovenskihGoricah,
+            [AliasInShort("182")] [RegionCode(2_00_138_0182)]
+            SvetiAndražVSlovenskihGoricah,
 
             /// <summary>
             /// Šempeter–Vrtojba
             /// </summary>
-            [AliasInShort("183")] ŠempeterVrtojba,
+            [AliasInShort("183")] [RegionCode(2_00_138_0183)]
+            ŠempeterVrtojba,
 
             /// <summary>
             /// Tabor
             /// </summary>
-            [AliasInShort("184")] Tabor,
+            [AliasInShort("184")] [RegionCode(2_00_138_0184)]
+            Tabor,
 
             /// <summary>
             /// Trnovska Vas
             /// </summary>
-            [AliasInShort("185")] TrnovskaVas,
+            [AliasInShort("185")] [RegionCode(2_00_138_0185)]
+            TrnovskaVas,
 
             /// <summary>
             /// Trzin
             /// </summary>
-            [AliasInShort("186")] Trzin,
+            [AliasInShort("186")] [RegionCode(2_00_138_0186)]
+            Trzin,
 
             /// <summary>
             /// Velika Polana
             /// </summary>
-            [AliasInShort("187")] VelikaPolana,
+            [AliasInShort("187")] [RegionCode(2_00_138_0187)]
+            VelikaPolana,
 
             /// <summary>
             /// Veržej
             /// </summary>
-            [AliasInShort("188")] Veržej,
+            [AliasInShort("188")] [RegionCode(2_00_138_0188)]
+            Veržej,
 
             /// <summary>
             /// Vransko
             /// </summary>
-            [AliasInShort("189")] Vransko,
+            [AliasInShort("189")] [RegionCode(2_00_138_0189)]
+            Vransko,
 
             /// <summary>
             /// Žalec
             /// </summary>
-            [AliasInShort("190")] Žalec,
+            [AliasInShort("190")] [RegionCode(2_00_138_0190)]
+            Žalec,
 
             /// <summary>
             /// Žetale
             /// </summary>
-            [AliasInShort("191")] Žetale,
+            [AliasInShort("191")] [RegionCode(2_00_138_0191)]
+            Žetale,
 
             /// <summary>
             /// Žirovnica
             /// </summary>
-            [AliasInShort("192")] Žirovnica,
+            [AliasInShort("192")] [RegionCode(2_00_138_0192)]
+            Žirovnica,
 
             /// <summary>
             /// Žužemberk
             /// </summary>
-            [AliasInShort("193")] Žužemberk,
+            [AliasInShort("193")] [RegionCode(2_00_138_0193)]
+            Žužemberk,
 
             /// <summary>
             /// Šmartno pri Litiji
             /// </summary>
-            [AliasInShort("194")] ŠmartnoPriLitiji,
+            [AliasInShort("194")] [RegionCode(2_00_138_0194)]
+            ŠmartnoPriLitiji,
 
             /// <summary>
             /// Apače
             /// </summary>
-            [AliasInShort("195")] Apače,
+            [AliasInShort("195")] [RegionCode(2_00_138_0195)]
+            Apače,
 
             /// <summary>
             /// Cirkulane
             /// </summary>
-            [AliasInShort("196")] Cirkulane,
+            [AliasInShort("196")] [RegionCode(2_00_138_0196)]
+            Cirkulane,
 
             /// <summary>
             /// Kostanjevica na Krki
             /// </summary>
-            [AliasInShort("197")] KostanjevicaNaKrki,
+            [AliasInShort("197")] [RegionCode(2_00_138_0197)]
+            KostanjevicaNaKrki,
 
             /// <summary>
             /// Makole
             /// </summary>
-            [AliasInShort("198")] Makole,
+            [AliasInShort("198")] [RegionCode(2_00_138_0198)]
+            Makole,
 
             /// <summary>
             /// Mokronog–Trebelno
             /// </summary>
-            [AliasInShort("199")] MokronogTrebelno,
+            [AliasInShort("199")] [RegionCode(2_00_138_0199)]
+            MokronogTrebelno,
 
             /// <summary>
             /// Poljčane
             /// </summary>
-            [AliasInShort("200")] Poljčane,
+            [AliasInShort("200")] [RegionCode(2_00_138_0200)]
+            Poljčane,
 
             /// <summary>
             /// Renče–Vogrsko
             /// </summary>
-            [AliasInShort("201")] RenčeVogrsko,
+            [AliasInShort("201")] [RegionCode(2_00_138_0201)]
+            RenčeVogrsko,
 
             /// <summary>
             /// Središče ob Dravi
             /// </summary>
-            [AliasInShort("202")] SrediščeObDravi,
+            [AliasInShort("202")] [RegionCode(2_00_138_0202)]
+            SrediščeObDravi,
 
             /// <summary>
             /// Straža
             /// </summary>
-            [AliasInShort("203")] Straža,
+            [AliasInShort("203")] [RegionCode(2_00_138_0203)]
+            Straža,
 
             /// <summary>
             /// Sveta Trojica v Slovenskih Goricah
             /// </summary>
-            [AliasInShort("204")] SvetaTrojicaVSlovenskihGoricah,
+            [AliasInShort("204")] [RegionCode(2_00_138_0204)]
+            SvetaTrojicaVSlovenskihGoricah,
 
             /// <summary>
             /// Sveti Tomaž
             /// </summary>
-            [AliasInShort("205")] SvetiTomaž,
+            [AliasInShort("205")] [RegionCode(2_00_138_0205)]
+            SvetiTomaž,
 
             /// <summary>
             /// Šmarješke Toplice
             /// </summary>
-            [AliasInShort("206")] ŠmarješkeToplice,
+            [AliasInShort("206")] [RegionCode(2_00_138_0206)]
+            ŠmarješkeToplice,
 
             /// <summary>
             /// Gorje
             /// </summary>
-            [AliasInShort("207")] Gorje,
+            [AliasInShort("207")] [RegionCode(2_00_138_0270)]
+            Gorje,
 
             /// <summary>
             /// Log–Dragomer
             /// </summary>
-            [AliasInShort("208")] LogDragomer,
+            [AliasInShort("208")] [RegionCode(2_00_138_0208)]
+            LogDragomer,
 
             /// <summary>
             /// Rečica ob Savinji
             /// </summary>
-            [AliasInShort("209")] RečicaObSavinji,
+            [AliasInShort("209")] [RegionCode(2_00_138_0209)]
+            RečicaObSavinji,
 
             /// <summary>
             /// Sveti Jurij v Slovenskih Goricah
             /// </summary>
-            [AliasInShort("210")] SvetiJurijVSlovenskihGoricah,
+            [AliasInShort("210")] [RegionCode(2_00_138_0210)]
+            SvetiJurijVSlovenskihGoricah,
 
             /// <summary>
             /// Šentrupert
             /// </summary>
-            [AliasInShort("211")] Šentrupert,
+            [AliasInShort("211")] [RegionCode(2_00_138_0211)]
+            Šentrupert,
 
             /// <summary>
             /// Mirna
             /// </summary>
-            [AliasInShort("212")] Mirna,
+            [AliasInShort("212")] [RegionCode(2_00_138_0212)]
+            Mirna,
 
             /// <summary>
             /// Unknown
@@ -2216,6 +2427,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SI-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -2251,6 +2472,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

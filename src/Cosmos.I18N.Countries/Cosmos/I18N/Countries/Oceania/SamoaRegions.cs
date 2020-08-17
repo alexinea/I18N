@@ -79,61 +79,70 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// A’ana
             /// </summary>
-            [AliasInShort("AA")] Aana,
+            [AliasInShort("AA")] [RegionCode(6_00_118_0001)]
+            Aana,
 
             /// <summary>
             /// Aiga-i-le-Tai
             /// </summary>
-            [AliasInShort("AL")]
+            [AliasInShort("AL")] [RegionCode(6_00_118_0002)]
             // ReSharper disable once InconsistentNaming
             Aiga_i_le_Tai,
 
             /// <summary>
             /// Atua
             /// </summary>
-            [AliasInShort("AT")] Atua,
+            [AliasInShort("AT")] [RegionCode(6_00_118_0003)]
+            Atua,
 
             /// <summary>
             /// Fa’asaleleaga
             /// </summary>
-            [AliasInShort("FA")] FaAsaleleaga,
+            [AliasInShort("FA")] [RegionCode(6_00_118_0004)]
+            FaAsaleleaga,
 
             /// <summary>
             /// Gaga’emauga
             /// </summary>
-            [AliasInShort("GE")] GagaEmauga,
+            [AliasInShort("GE")] [RegionCode(6_00_118_0005)]
+            GagaEmauga,
 
             /// <summary>
             /// Gaga’ifomauga
             /// </summary>
-            [AliasInShort("GI")] GagaIfomauga,
+            [AliasInShort("GI")] [RegionCode(6_00_118_0006)]
+            GagaIfomauga,
 
             /// <summary>
             /// Palauli
             /// </summary>
-            [AliasInShort("PA")] Palauli,
+            [AliasInShort("PA")] [RegionCode(6_00_118_0007)]
+            Palauli,
 
             /// <summary>
             /// Satupa’itea
             /// </summary>
-            [AliasInShort("SA")] SatupaItea,
+            [AliasInShort("SA")] [RegionCode(6_00_118_0008)]
+            SatupaItea,
 
             /// <summary>
             /// Tuamasaga
             /// </summary>
-            [AliasInShort("TU")] Tuamasaga,
+            [AliasInShort("TU")] [RegionCode(6_00_118_0009)]
+            Tuamasaga,
 
             /// <summary>
             /// Va’a-o-Fonoti
             /// </summary>
-            [AliasInShort("VF")]
+            [AliasInShort("VF")] [RegionCode(6_00_118_0010)]
             // ReSharper disable once InconsistentNaming
             VaA_o_Fonoti,
 
             /// <summary>
             /// Vaisigano
             /// </summary>
-            [AliasInShort("VS")] Vaisigano,
+            [AliasInShort("VS")] [RegionCode(6_00_118_0011)]
+            Vaisigano,
 
             /// <summary>
             /// Unknown<br />未知
@@ -161,6 +170,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"WS-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -196,6 +215,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

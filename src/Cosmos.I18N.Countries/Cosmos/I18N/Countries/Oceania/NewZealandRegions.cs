@@ -82,62 +82,74 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Auckland Province
             /// </summary>
-            [AliasInShort("AUK")] AucklandProvince,
+            [AliasInShort("AUK")] [RegionCode(6_00_012_0001)]
+            AucklandProvince,
 
             /// <summary>
             /// Canterbury
             /// </summary>
-            [AliasInShort("CAN")] Canterbury,
+            [AliasInShort("CAN")] [RegionCode(6_00_012_0002)]
+            Canterbury,
 
             /// <summary>
             /// Chatham Islands
             /// </summary>
-            [AliasInShort("CIT")] ChathamIslands,
+            [AliasInShort("CIT")] [RegionCode(6_00_012_0003)]
+            ChathamIslands,
 
             /// <summary>
             /// Hawke's Bay
             /// </summary>
-            [AliasInShort("HKB")] HawkesBay,
+            [AliasInShort("HKB")] [RegionCode(6_00_012_0004)]
+            HawkesBay,
 
             /// <summary>
             /// Marlborough
             /// </summary>
-            [AliasInShort("MBH")] Marlborough,
+            [AliasInShort("MBH")] [RegionCode(6_00_012_0005)]
+            Marlborough,
 
             /// <summary>
             /// Nelson
             /// </summary>
-            [AliasInShort("NSN")] Nelson,
+            [AliasInShort("NSN")] [RegionCode(6_00_012_00026)]
+            Nelson,
 
             /// <summary>
             /// Northland
             /// </summary>
-            [AliasInShort("NTL")] Northland,
+            [AliasInShort("NTL")] [RegionCode(6_00_012_0007)]
+            Northland,
 
             /// <summary>
             /// Otago Province
             /// </summary>
-            [AliasInShort("OTA")] OtagoProvince,
+            [AliasInShort("OTA")] [RegionCode(6_00_012_0008)]
+            OtagoProvince,
 
             /// <summary>
             /// Southland
             /// </summary>
-            [AliasInShort("STL")] Southland,
+            [AliasInShort("STL")] [RegionCode(6_00_012_0009)]
+            Southland,
 
             /// <summary>
             /// Taranaki
             /// </summary>
-            [AliasInShort("TKI")] Taranaki,
+            [AliasInShort("TKI")] [RegionCode(6_00_012_0010)]
+            Taranaki,
 
             /// <summary>
             /// Wellington Province
             /// </summary>
-            [AliasInShort("WGN")] WellingtonProvince,
+            [AliasInShort("WGN")] [RegionCode(6_00_012_0011)]
+            WellingtonProvince,
 
             /// <summary>
             /// Westland
             /// </summary>
-            [AliasInShort("WTC")] Westland,
+            [AliasInShort("WTC")] [RegionCode(6_00_012_0012)]
+            Westland,
 
             /// <summary>
             /// Unknown
@@ -165,6 +177,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"NZ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -200,6 +222,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

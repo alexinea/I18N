@@ -32,12 +32,14 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Barlavento Islands
             /// </summary>
-            [AliasInShort("B")] BarlaventoIslands,
+            [AliasInShort("B")] [RegionCode(3_00_106_0001)]
+            BarlaventoIslands,
 
             /// <summary>
             /// Sotavento Islands
             /// </summary>
-            [AliasInShort("S")] SotaventoIslands,
+            [AliasInShort("S")] [RegionCode(3_00_106_0002)]
+            SotaventoIslands,
 
             /// <summary>
             /// Unknown
@@ -65,6 +67,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CV-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -100,6 +112,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

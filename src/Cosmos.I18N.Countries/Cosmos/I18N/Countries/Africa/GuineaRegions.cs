@@ -62,42 +62,42 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Boké Region
             /// </summary>
-            [AliasInShort("B")] BokéRegion,
+            [AliasInShort("B")][RegionCode(3_00_129_0001)] BokéRegion,
 
             /// <summary>
             /// Conakry
             /// </summary>
-            [AliasInShort("C")] Conakry,
+            [AliasInShort("C")][RegionCode(3_00_129_0002)] Conakry,
 
             /// <summary>
             /// Kindia Region
             /// </summary>
-            [AliasInShort("D")] KindiaRegion,
+            [AliasInShort("D")][RegionCode(3_00_129_0003)] KindiaRegion,
 
             /// <summary>
             /// Faranah Region
             /// </summary>
-            [AliasInShort("F")] FaranahRegion,
+            [AliasInShort("F")][RegionCode(3_00_129_0004)] FaranahRegion,
 
             /// <summary>
             /// Kankan Region
             /// </summary>
-            [AliasInShort("K")] KankanRegion,
+            [AliasInShort("K")][RegionCode(3_00_129_0005)] KankanRegion,
 
             /// <summary>
             /// Labé Region
             /// </summary>
-            [AliasInShort("L")] LabéRegion,
+            [AliasInShort("L")][RegionCode(3_00_129_0006)] LabéRegion,
 
             /// <summary>
             /// Mamou Region
             /// </summary>
-            [AliasInShort("M")] MamouRegion,
+            [AliasInShort("M")][RegionCode(3_00_129_0007)] MamouRegion,
 
             /// <summary>
             /// Nzérékoré Region
             /// </summary>
-            [AliasInShort("N")] NzérékoréRegion,
+            [AliasInShort("N")][RegionCode(3_00_129_0008)] NzérékoréRegion,
 
             /// <summary>
             /// Unknown
@@ -125,6 +125,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -160,6 +170,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -27,7 +27,8 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             /// <summary>
             /// Cuzco
             /// </summary>
-            [AliasInShort("CUS")] Cuzco,
+            [AliasInShort("CUS")] [RegionCode(5_00_110_0001)]
+            Cuzco,
 
             /// <summary>
             /// Unknown
@@ -55,6 +56,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"PE-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -90,6 +101,13 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

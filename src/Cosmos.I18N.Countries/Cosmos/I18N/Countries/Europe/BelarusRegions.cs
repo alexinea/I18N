@@ -57,37 +57,44 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Brest
             /// </summary>
-            [AliasInShort("BR")] Brest,
+            [AliasInShort("BR")] [RegionCode(2_00_104_0001)]
+            Brest,
 
             /// <summary>
             /// Minsk
             /// </summary>
-            [AliasInShort("HM")] Minsk,
+            [AliasInShort("HM")] [RegionCode(2_00_104_0002)]
+            Minsk,
 
             /// <summary>
             /// Homel
             /// </summary>
-            [AliasInShort("HO")] Homel,
+            [AliasInShort("HO")] [RegionCode(2_00_104_0003)]
+            Homel,
 
             /// <summary>
             /// Hrodna
             /// </summary>
-            [AliasInShort("HR")] Hrodna,
+            [AliasInShort("HR")] [RegionCode(2_00_104_0004)]
+            Hrodna,
 
             /// <summary>
             /// Magileu
             /// </summary>
-            [AliasInShort("MA")] Magileu,
+            [AliasInShort("MA")] [RegionCode(2_00_104_0005)]
+            Magileu,
 
             /// <summary>
             /// Minsk Region
             /// </summary>
-            [AliasInShort("MI")] MinskRegion,
+            [AliasInShort("MI")] [RegionCode(2_00_104_0006)]
+            MinskRegion,
 
             /// <summary>
             /// Vitebsk
             /// </summary>
-            [AliasInShort("VI")] Vitebsk,
+            [AliasInShort("VI")] [RegionCode(2_00_104_0007)]
+            Vitebsk,
 
             /// <summary>
             /// Unknown
@@ -115,6 +122,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BY-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -150,6 +167,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

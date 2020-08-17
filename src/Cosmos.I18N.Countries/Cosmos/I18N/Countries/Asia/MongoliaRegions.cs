@@ -132,112 +132,112 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Ulaanbaatar
             /// </summary>
-            [AliasInShort("1")] Ulaanbaatar,
+            [AliasInShort("1")][RegionCode(1_00_126_0001)] Ulaanbaatar,
 
             /// <summary>
             /// Orkhon
             /// </summary>
-            [AliasInShort("035")] Orkhon,
+            [AliasInShort("035")][RegionCode(1_00_126_0035)] Orkhon,
 
             /// <summary>
             /// Darkhan-Uul
             /// </summary>
-            [AliasInShort("037")] DarkhanUul,
+            [AliasInShort("037")][RegionCode(1_00_126_0037)] DarkhanUul,
 
             /// <summary>
             /// Khentii
             /// </summary>
-            [AliasInShort("039")] Khentii,
+            [AliasInShort("039")][RegionCode(1_00_126_0039)] Khentii,
 
             /// <summary>
             /// Khövsgöl
             /// </summary>
-            [AliasInShort("041")] Khövsgöl,
+            [AliasInShort("041")][RegionCode(1_00_126_0041)] Khövsgöl,
 
             /// <summary>
             /// Khovd
             /// </summary>
-            [AliasInShort("043")] Khovd,
+            [AliasInShort("043")][RegionCode(1_00_126_0043)] Khovd,
 
             /// <summary>
             /// Uvs
             /// </summary>
-            [AliasInShort("046")] Uvs,
+            [AliasInShort("046")][RegionCode(1_00_126_0046)] Uvs,
 
             /// <summary>
             /// Töv
             /// </summary>
-            [AliasInShort("047")] Töv,
+            [AliasInShort("047")][RegionCode(1_00_126_0047)] Töv,
 
             /// <summary>
             /// Selenge
             /// </summary>
-            [AliasInShort("049")] Selenge,
+            [AliasInShort("049")][RegionCode(1_00_126_0049)] Selenge,
 
             /// <summary>
             /// Sükhbaatar
             /// </summary>
-            [AliasInShort("051")] Sükhbaatar,
+            [AliasInShort("051")][RegionCode(1_00_126_0051)] Sükhbaatar,
 
             /// <summary>
             /// Ömnögovi
             /// </summary>
-            [AliasInShort("053")] Ömnögovi,
+            [AliasInShort("053")][RegionCode(1_00_126_0053)] Ömnögovi,
 
             /// <summary>
             /// Övörkhangai
             /// </summary>
-            [AliasInShort("055")] Övörkhangai,
+            [AliasInShort("055")][RegionCode(1_00_126_0055)] Övörkhangai,
 
             /// <summary>
             /// Zavkhan
             /// </summary>
-            [AliasInShort("057")] Zavkhan,
+            [AliasInShort("057")][RegionCode(1_00_126_0057)] Zavkhan,
 
             /// <summary>
             /// Dundgovi
             /// </summary>
-            [AliasInShort("059")] Dundgovi,
+            [AliasInShort("059")][RegionCode(1_00_126_0059)] Dundgovi,
 
             /// <summary>
             /// Dornod
             /// </summary>
-            [AliasInShort("061")] Dornod,
+            [AliasInShort("061")][RegionCode(1_00_126_0061)] Dornod,
 
             /// <summary>
             /// Dornogovi
             /// </summary>
-            [AliasInShort("063")] Dornogovi,
+            [AliasInShort("063")][RegionCode(1_00_126_0063)] Dornogovi,
 
             /// <summary>
             /// Govisümber
             /// </summary>
-            [AliasInShort("064")] Govisümber,
+            [AliasInShort("064")][RegionCode(1_00_126_0064)] Govisümber,
 
             /// <summary>
             /// Govi-Altai
             /// </summary>
-            [AliasInShort("065")] GoviAltai,
+            [AliasInShort("065")][RegionCode(1_00_126_0065)] GoviAltai,
 
             /// <summary>
             /// Bulgan
             /// </summary>
-            [AliasInShort("067")] Bulgan,
+            [AliasInShort("067")][RegionCode(1_00_126_0067)] Bulgan,
 
             /// <summary>
             /// Bayankhongor
             /// </summary>
-            [AliasInShort("069")] Bayankhongor,
+            [AliasInShort("069")][RegionCode(1_00_126_0069)] Bayankhongor,
 
             /// <summary>
             /// Bayan-Ölgii
             /// </summary>
-            [AliasInShort("071")] BayanÖlgii,
+            [AliasInShort("071")][RegionCode(1_00_126_0071)] BayanÖlgii,
 
             /// <summary>
             /// Arkhangai
             /// </summary>
-            [AliasInShort("073")] Arkhangai,
+            [AliasInShort("073")][RegionCode(1_00_126_0073)] Arkhangai,
 
             /// <summary>
             /// Unknown
@@ -265,6 +265,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -300,6 +310,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -102,82 +102,82 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Bethlehem
             /// </summary>
-            [AliasInShort("BTH")] Bethlehem,
+            [AliasInShort("BTH")][RegionCode(1_00_130_0001)] Bethlehem,
 
             /// <summary>
             /// Deir al-Balah
             /// </summary>
-            [AliasInShort("DEB")] DeirAlBalah,
+            [AliasInShort("DEB")][RegionCode(1_00_130_0002)] DeirAlBalah,
 
             /// <summary>
             /// Gaza
             /// </summary>
-            [AliasInShort("GZA")] Gaza,
+            [AliasInShort("GZA")][RegionCode(1_00_130_0003)] Gaza,
 
             /// <summary>
             /// Hebron
             /// </summary>
-            [AliasInShort("HBN")] Hebron,
+            [AliasInShort("HBN")][RegionCode(1_00_130_0004)] Hebron,
 
             /// <summary>
             /// Jerusalem
             /// </summary>
-            [AliasInShort("JEM")] Jerusalem,
+            [AliasInShort("JEM")][RegionCode(1_00_130_0005)] Jerusalem,
 
             /// <summary>
             /// Jenin
             /// </summary>
-            [AliasInShort("JEN")] Jenin,
+            [AliasInShort("JEN")][RegionCode(1_00_130_0006)] Jenin,
 
             /// <summary>
             /// Jericho
             /// </summary>
-            [AliasInShort("JRH")] Jericho,
+            [AliasInShort("JRH")][RegionCode(1_00_130_0007)] Jericho,
 
             /// <summary>
             /// Khan Yunis
             /// </summary>
-            [AliasInShort("KYS")] KhanYunis,
+            [AliasInShort("KYS")][RegionCode(1_00_130_0008)] KhanYunis,
 
             /// <summary>
             /// Nablus
             /// </summary>
-            [AliasInShort("NBS")] Nablus,
+            [AliasInShort("NBS")][RegionCode(1_00_130_0009)] Nablus,
 
             /// <summary>
             /// North Gaza
             /// </summary>
-            [AliasInShort("MGZ")] NorthGaza,
+            [AliasInShort("MGZ")][RegionCode(1_00_130_0010)] NorthGaza,
 
             /// <summary>
             /// Qalqilya
             /// </summary>
-            [AliasInShort("QQA")] Qalqilya,
+            [AliasInShort("QQA")][RegionCode(1_00_130_0011)] Qalqilya,
 
             /// <summary>
             /// Ramallah and al-Bireh
             /// </summary>
-            [AliasInShort("RBH")] RamallahAndAlBireh,
+            [AliasInShort("RBH")][RegionCode(1_00_130_0012)] RamallahAndAlBireh,
 
             /// <summary>
             /// Rafah
             /// </summary>
-            [AliasInShort("RFH")] Rafah,
+            [AliasInShort("RFH")][RegionCode(1_00_130_0013)] Rafah,
 
             /// <summary>
             /// Salfit
             /// </summary>
-            [AliasInShort("SLT")] Salfit,
+            [AliasInShort("SLT")][RegionCode(1_00_130_0014)] Salfit,
 
             /// <summary>
             /// Tubas
             /// </summary>
-            [AliasInShort("TBS")] Tubas,
+            [AliasInShort("TBS")][RegionCode(1_00_130_0015)] Tubas,
 
             /// <summary>
             /// Tulkarm
             /// </summary>
-            [AliasInShort("TKM")] Tulkarm,
+            [AliasInShort("TKM")][RegionCode(1_00_130_0016)] Tulkarm,
 
             /// <summary>
             /// Unknown
@@ -205,6 +205,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"PS-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -240,6 +250,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

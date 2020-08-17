@@ -207,187 +207,187 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Abia
             /// </summary>
-            [AliasInShort("AB")] Abia,
+            [AliasInShort("AB")][RegionCode(3_00_142_0001)] Abia,
 
             /// <summary>
             /// Adamawa
             /// </summary>
-            [AliasInShort("AD")] Adamawa,
+            [AliasInShort("AD")][RegionCode(3_00_142_0002)] Adamawa,
 
             /// <summary>
             /// Akwa Ibom
             /// </summary>
-            [AliasInShort("AK")] AkwaIbom,
+            [AliasInShort("AK")][RegionCode(3_00_142_0003)] AkwaIbom,
 
             /// <summary>
             /// Anambra
             /// </summary>
-            [AliasInShort("AN")] Anambra,
+            [AliasInShort("AN")][RegionCode(3_00_142_0004)] Anambra,
 
             /// <summary>
             /// Bauchi
             /// </summary>
-            [AliasInShort("BA")] Bauchi,
+            [AliasInShort("BA")][RegionCode(3_00_142_0005)] Bauchi,
 
             /// <summary>
             /// Benue
             /// </summary>
-            [AliasInShort("BE")] Benue,
+            [AliasInShort("BE")][RegionCode(3_00_142_0006)] Benue,
 
             /// <summary>
             /// Borno
             /// </summary>
-            [AliasInShort("BO")] Borno,
+            [AliasInShort("BO")][RegionCode(3_00_142_0007)] Borno,
 
             /// <summary>
             /// Bayelsa
             /// </summary>
-            [AliasInShort("BY")] Bayelsa,
+            [AliasInShort("BY")][RegionCode(3_00_142_0008)] Bayelsa,
 
             /// <summary>
             /// Cross River
             /// </summary>
-            [AliasInShort("CR")] CrossRiver,
+            [AliasInShort("CR")][RegionCode(3_00_142_0009)] CrossRiver,
 
             /// <summary>
             /// Delta
             /// </summary>
-            [AliasInShort("DE")] Delta,
+            [AliasInShort("DE")][RegionCode(3_00_142_0010)] Delta,
 
             /// <summary>
             /// Ebonyi
             /// </summary>
-            [AliasInShort("EB")] Ebonyi,
+            [AliasInShort("EB")][RegionCode(3_00_142_0011)] Ebonyi,
 
             /// <summary>
             /// Edo
             /// </summary>
-            [AliasInShort("ED")] Edo,
+            [AliasInShort("ED")][RegionCode(3_00_142_0012)] Edo,
 
             /// <summary>
             /// Ekiti
             /// </summary>
-            [AliasInShort("EK")] Ekiti,
+            [AliasInShort("EK")][RegionCode(3_00_142_0013)] Ekiti,
 
             /// <summary>
             /// Enugu
             /// </summary>
-            [AliasInShort("EN")] Enugu,
+            [AliasInShort("EN")][RegionCode(3_00_142_0014)] Enugu,
 
             /// <summary>
             /// Federal Capital Territory
             /// </summary>
-            [AliasInShort("FC")] FederalCapitalTerritory,
+            [AliasInShort("FC")][RegionCode(3_00_142_0015)] FederalCapitalTerritory,
 
             /// <summary>
             /// Gombe
             /// </summary>
-            [AliasInShort("GO")] Gombe,
+            [AliasInShort("GO")][RegionCode(3_00_142_0016)] Gombe,
 
             /// <summary>
             /// Imo
             /// </summary>
-            [AliasInShort("IM")] Imo,
+            [AliasInShort("IM")][RegionCode(3_00_142_0017)] Imo,
 
             /// <summary>
             /// Jigawa
             /// </summary>
-            [AliasInShort("JI")] Jigawa,
+            [AliasInShort("JI")][RegionCode(3_00_142_0018)] Jigawa,
 
             /// <summary>
             /// Kaduna
             /// </summary>
-            [AliasInShort("KD")] Kaduna,
+            [AliasInShort("KD")][RegionCode(3_00_142_0019)] Kaduna,
 
             /// <summary>
             /// Kebbi
             /// </summary>
-            [AliasInShort("KE")] Kebbi,
+            [AliasInShort("KE")][RegionCode(3_00_142_0020)] Kebbi,
 
             /// <summary>
             /// Kano
             /// </summary>
-            [AliasInShort("KN")] Kano,
+            [AliasInShort("KN")][RegionCode(3_00_142_0021)] Kano,
 
             /// <summary>
             /// Kogi
             /// </summary>
-            [AliasInShort("KO")] Kogi,
+            [AliasInShort("KO")][RegionCode(3_00_142_0022)] Kogi,
 
             /// <summary>
             /// Katsina
             /// </summary>
-            [AliasInShort("KT")] Katsina,
+            [AliasInShort("KT")][RegionCode(3_00_142_0023)] Katsina,
 
             /// <summary>
             /// Kwara
             /// </summary>
-            [AliasInShort("KW")] Kwara,
+            [AliasInShort("KW")][RegionCode(3_00_142_0024)] Kwara,
 
             /// <summary>
             /// Lagos
             /// </summary>
-            [AliasInShort("LA")] Lagos,
+            [AliasInShort("LA")] [RegionCode(3_00_142_0025)]Lagos,
 
             /// <summary>
             /// Nasarawa
             /// </summary>
-            [AliasInShort("NA")] Nasarawa,
+            [AliasInShort("NA")][RegionCode(3_00_142_0026)] Nasarawa,
 
             /// <summary>
             /// Niger
             /// </summary>
-            [AliasInShort("NI")] Niger,
+            [AliasInShort("NI")][RegionCode(3_00_142_0027)] Niger,
 
             /// <summary>
             /// Ogun
             /// </summary>
-            [AliasInShort("OG")] Ogun,
+            [AliasInShort("OG")][RegionCode(3_00_142_0028)] Ogun,
 
             /// <summary>
             /// Ondo
             /// </summary>
-            [AliasInShort("ON")] Ondo,
+            [AliasInShort("ON")][RegionCode(3_00_142_0029)] Ondo,
 
             /// <summary>
             /// Osun
             /// </summary>
-            [AliasInShort("OS")] Osun,
+            [AliasInShort("OS")][RegionCode(3_00_142_0030)] Osun,
 
             /// <summary>
             /// Oyo
             /// </summary>
-            [AliasInShort("OY")] Oyo,
+            [AliasInShort("OY")][RegionCode(3_00_142_0031)] Oyo,
 
             /// <summary>
             /// Plateau
             /// </summary>
-            [AliasInShort("PL")] Plateau,
+            [AliasInShort("PL")][RegionCode(3_00_142_0032)] Plateau,
 
             /// <summary>
             /// Rivers
             /// </summary>
-            [AliasInShort("RI")] Rivers,
+            [AliasInShort("RI")][RegionCode(3_00_142_0033)] Rivers,
 
             /// <summary>
             /// Sokoto
             /// </summary>
-            [AliasInShort("SO")] Sokoto,
+            [AliasInShort("SO")][RegionCode(3_00_142_0034)] Sokoto,
 
             /// <summary>
             /// Taraba
             /// </summary>
-            [AliasInShort("TA")] Taraba,
+            [AliasInShort("TA")][RegionCode(3_00_142_0035)] Taraba,
 
             /// <summary>
             /// Yobe
             /// </summary>
-            [AliasInShort("YO")] Yobe,
+            [AliasInShort("YO")][RegionCode(3_00_142_0036)] Yobe,
 
             /// <summary>
             /// Zamfara
             /// </summary>
-            [AliasInShort("ZA")] Zamfara,
+            [AliasInShort("ZA")][RegionCode(3_00_142_0037)] Zamfara,
 
             /// <summary>
             /// Unknown
@@ -415,6 +415,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"NG-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -450,6 +460,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

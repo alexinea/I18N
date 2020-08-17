@@ -102,82 +102,82 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Selangor
             /// </summary>
-            [AliasInShort("10")] Selangor,
+            [AliasInShort("10")][RegionCode(1_00_124_0010)] Selangor,
 
             /// <summary>
             /// Terengganu
             /// </summary>
-            [AliasInShort("11")] Terengganu,
+            [AliasInShort("11")][RegionCode(1_00_124_0011)] Terengganu,
 
             /// <summary>
             /// Sabah
             /// </summary>
-            [AliasInShort("12")] Sabah,
+            [AliasInShort("12")][RegionCode(1_00_124_0012)] Sabah,
 
             /// <summary>
             /// Sarawak
             /// </summary>
-            [AliasInShort("13")] Sarawak,
+            [AliasInShort("13")][RegionCode(1_00_124_0013)] Sarawak,
 
             /// <summary>
             /// Kuala Lumpur
             /// </summary>
-            [AliasInShort("14")] KualaLumpur,
+            [AliasInShort("14")][RegionCode(1_00_124_0014)] KualaLumpur,
 
             /// <summary>
             /// Labuan
             /// </summary>
-            [AliasInShort("15")] Labuan,
+            [AliasInShort("15")][RegionCode(1_00_124_0015)] Labuan,
 
             /// <summary>
             /// Putrajaya
             /// </summary>
-            [AliasInShort("16")] Putrajaya,
+            [AliasInShort("16")][RegionCode(1_00_124_0016)] Putrajaya,
 
             /// <summary>
             /// Johor
             /// </summary>
-            [AliasInShort("01")] Johor,
+            [AliasInShort("01")][RegionCode(1_00_124_0001)] Johor,
 
             /// <summary>
             /// Kedah
             /// </summary>
-            [AliasInShort("02")] Kedah,
+            [AliasInShort("02")][RegionCode(1_00_124_0002)] Kedah,
 
             /// <summary>
             /// Kelantan
             /// </summary>
-            [AliasInShort("03")] Kelantan,
+            [AliasInShort("03")][RegionCode(1_00_124_0003)] Kelantan,
 
             /// <summary>
             /// Malacca
             /// </summary>
-            [AliasInShort("04")] Malacca,
+            [AliasInShort("04")][RegionCode(1_00_124_0004)] Malacca,
 
             /// <summary>
             /// Negeri Sembilan
             /// </summary>
-            [AliasInShort("05")] NegeriSembilan,
+            [AliasInShort("05")][RegionCode(1_00_124_0005)] NegeriSembilan,
 
             /// <summary>
             /// Pahang
             /// </summary>
-            [AliasInShort("06")] Pahang,
+            [AliasInShort("06")][RegionCode(1_00_124_0006)] Pahang,
 
             /// <summary>
             /// Penang
             /// </summary>
-            [AliasInShort("07")] Penang,
+            [AliasInShort("07")][RegionCode(1_00_124_0007)] Penang,
 
             /// <summary>
             /// Perak
             /// </summary>
-            [AliasInShort("08")] Perak,
+            [AliasInShort("08")][RegionCode(1_00_124_0008)] Perak,
 
             /// <summary>
             /// Perlis
             /// </summary>
-            [AliasInShort("09")] Perlis,
+            [AliasInShort("09")][RegionCode(1_00_124_0009)] Perlis,
 
             /// <summary>
             /// Unknown
@@ -205,6 +205,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MY-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -240,6 +250,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

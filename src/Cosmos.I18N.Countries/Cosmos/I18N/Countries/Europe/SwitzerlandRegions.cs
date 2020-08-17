@@ -152,132 +152,158 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Canton of Zürich
             /// </summary>
-            [AliasInShort("ZH")] CantonOfZürich,
+            [AliasInShort("ZH")] [RegionCode(2_00_017_0001)]
+            CantonOfZürich,
 
             /// <summary>
             /// Canton of Bern
             /// </summary>
-            [AliasInShort("BE")] CantonOfBern,
+            [AliasInShort("BE")] [RegionCode(2_00_017_0002)]
+            CantonOfBern,
 
             /// <summary>
             /// Massana
             /// </summary>
-            [AliasInShort("LO")] CantonOfLucerne,
+            [AliasInShort("LO")] [RegionCode(2_00_017_0003)]
+            CantonOfLucerne,
 
             /// <summary>
             /// Canton of Uri
             /// </summary>
-            [AliasInShort("UR")] CantonOfUri,
+            [AliasInShort("UR")] [RegionCode(2_00_017_0004)]
+            CantonOfUri,
 
             /// <summary>
             /// Canton of Schwyz
             /// </summary>
-            [AliasInShort("SZ")] CantonOfSchwyz,
+            [AliasInShort("SZ")] [RegionCode(2_00_017_0005)]
+            CantonOfSchwyz,
 
             /// <summary>
             /// Canton of Obwalden
             /// </summary>
-            [AliasInShort("OW")] CantonOfObwalden,
+            [AliasInShort("OW")] [RegionCode(2_00_017_0006)]
+            CantonOfObwalden,
 
             /// <summary>
             /// Canton of Nidwalden
             /// </summary>
-            [AliasInShort("NW")] CantonOfNidwalden,
+            [AliasInShort("NW")] [RegionCode(2_00_017_0007)]
+            CantonOfNidwalden,
 
             /// <summary>
             /// Canton of Glarus, GL
             /// </summary>
-            [AliasInShort("GL")] CantonOfGlarus,
+            [AliasInShort("GL")] [RegionCode(2_00_017_0008)]
+            CantonOfGlarus,
 
             /// <summary>
             /// Canton of Zug, ZG
             /// </summary>
-            [AliasInShort("ZG")] CantonOfZug,
+            [AliasInShort("ZG")] [RegionCode(2_00_017_0009)]
+            CantonOfZug,
 
             /// <summary>
             /// Canton of Fribourg, FR
             /// </summary>
-            [AliasInShort("FR")] CantonOfFribourg,
+            [AliasInShort("FR")] [RegionCode(2_00_017_0010)]
+            CantonOfFribourg,
 
             /// <summary>
             /// Canton of Solothurn, SO
             /// </summary>
-            [AliasInShort("SO")] CantonOfSolothurn,
+            [AliasInShort("SO")] [RegionCode(2_00_017_0011)]
+            CantonOfSolothurn,
 
             /// <summary>
             /// Canton of Basel-City, BS
             /// </summary>
-            [AliasInShort("BS")] CantonOfBaselCity,
+            [AliasInShort("BS")] [RegionCode(2_00_017_0012)]
+            CantonOfBaselCity,
 
             /// <summary>
             /// Canton of Basel-Country, BL
             /// </summary>
-            [AliasInShort("BL")] CantonOfBaselCountry,
+            [AliasInShort("BL")] [RegionCode(2_00_017_0013)]
+            CantonOfBaselCountry,
 
             /// <summary>
             /// Canton of Schaffhausen, SH
             /// </summary>
-            [AliasInShort("SH")] CantonOfSchaffhausen,
+            [AliasInShort("SH")] [RegionCode(2_00_017_0014)]
+            CantonOfSchaffhausen,
 
             /// <summary>
             /// Canton of Appenzell Outer Rhodes, AR
             /// </summary>
-            [AliasInShort("AR")] CantonOfAppenzellOuterRhodes,
+            [AliasInShort("AR")] [RegionCode(2_00_017_0015)]
+            CantonOfAppenzellOuterRhodes,
 
             /// <summary>
             /// Canton of Appenzell Inner-Rhodes, AI
             /// </summary>
-            [AliasInShort("AI")] CantonOfAppenzellInnerRhodes,
+            [AliasInShort("AI")] [RegionCode(2_00_017_0016)]
+            CantonOfAppenzellInnerRhodes,
 
             /// <summary>
             /// Canton of St. Gallen, SG
             /// </summary>
-            [AliasInShort("SG")] CantonOfStGallen,
+            [AliasInShort("SG")] [RegionCode(2_00_017_0017)]
+            CantonOfStGallen,
 
             /// <summary>
             /// Canton of Grisons, GR
             /// </summary>
-            [AliasInShort("GR")] CantonOfGrisons,
+            [AliasInShort("GR")] [RegionCode(2_00_017_0018)]
+            CantonOfGrisons,
 
             /// <summary>
             /// Canton of Aargau, AG
             /// </summary>
-            [AliasInShort("AG")] CantonOfAargau,
+            [AliasInShort("AG")] [RegionCode(2_00_017_0019)]
+            CantonOfAargau,
 
             /// <summary>
             /// Canton of Thurgau, TG
             /// </summary>
-            [AliasInShort("TG")] CantonOfThurgau,
+            [AliasInShort("TG")] [RegionCode(2_00_017_0020)]
+            CantonOfThurgau,
 
             /// <summary>
             /// Canton of Ticino, TI
             /// </summary>
-            [AliasInShort("TI")] CantonOfTicino,
+            [AliasInShort("TI")] [RegionCode(2_00_017_0021)]
+            CantonOfTicino,
 
             /// <summary>
             /// Canton of Vaud, VD
             /// </summary>
-            [AliasInShort("VD")] CantonOfVaud,
+            [AliasInShort("VD")] [RegionCode(2_00_017_0022)]
+            CantonOfVaud,
 
             /// <summary>
             /// Canton of Valais, VS
             /// </summary>
-            [AliasInShort("VS")] CantonOfValais,
+            [AliasInShort("VS")] [RegionCode(2_00_017_0023)]
+            CantonOfValais,
 
             /// <summary>
             /// Canton of Neuchâtel, NE
             /// </summary>
-            [AliasInShort("NE")] CantonOfNeuchâtel,
+            [AliasInShort("NE")] [RegionCode(2_00_017_0024)]
+            CantonOfNeuchâtel,
 
             /// <summary>
             /// Canton of Geneva, GE
             /// </summary>
-            [AliasInShort("GE")] CantonOfGeneva,
+            [AliasInShort("GE")] [RegionCode(2_00_017_0025)]
+            CantonOfGeneva,
 
             /// <summary>
             /// Canton of Jura, JU
             /// </summary>
-            [AliasInShort("JU")] CantonOfJura,
+            [AliasInShort("JU")] [RegionCode(2_00_017_0026)]
+            CantonOfJura,
 
             /// <summary>
             /// Unknown
@@ -305,6 +331,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CH-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -340,6 +376,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

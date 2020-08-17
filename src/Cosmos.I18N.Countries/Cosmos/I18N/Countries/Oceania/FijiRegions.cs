@@ -117,97 +117,116 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Namosi
             /// </summary>
-            [AliasInShort("10")] Namosi,
+            [AliasInShort("10")] [RegionCode(6_00_103_0010)]
+            Namosi,
 
             /// <summary>
             /// Ra
             /// </summary>
-            [AliasInShort("11")] Ra,
+            [AliasInShort("11")] [RegionCode(6_00_103_0011)]
+            Ra,
 
             /// <summary>
             /// Rewa
             /// </summary>
-            [AliasInShort("12")] Rewa,
+            [AliasInShort("12")] [RegionCode(6_00_103_0012)]
+            Rewa,
 
             /// <summary>
             /// Serua
             /// </summary>
-            [AliasInShort("13")] Serua,
+            [AliasInShort("13")] [RegionCode(6_00_103_0013)]
+            Serua,
 
             /// <summary>
             /// Tailevu
             /// </summary>
-            [AliasInShort("14")] Tailevu,
+            [AliasInShort("14")] [RegionCode(6_00_103_0014)]
+            Tailevu,
 
             /// <summary>
             /// Ba
             /// </summary>
-            [AliasInShort("01")] Ba,
+            [AliasInShort("01")] [RegionCode(6_00_103_0001)]
+            Ba,
 
             /// <summary>
             /// Bua
             /// </summary>
-            [AliasInShort("02")] Bua,
+            [AliasInShort("02")] [RegionCode(6_00_103_0002)]
+            Bua,
 
             /// <summary>
             /// Cakaudrove
             /// </summary>
-            [AliasInShort("03")] Cakaudrove,
+            [AliasInShort("03")] [RegionCode(6_00_103_0003)]
+            Cakaudrove,
 
             /// <summary>
             /// Kadavu
             /// </summary>
-            [AliasInShort("04")] Kadavu,
+            [AliasInShort("04")] [RegionCode(6_00_103_0004)]
+            Kadavu,
 
             /// <summary>
             /// Lau
             /// </summary>
-            [AliasInShort("05")] Lau,
+            [AliasInShort("05")] [RegionCode(6_00_103_0005)]
+            Lau,
 
             /// <summary>
             /// Lomaiviti
             /// </summary>
-            [AliasInShort("06")] Lomaiviti,
+            [AliasInShort("06")] [RegionCode(6_00_103_0006)]
+            Lomaiviti,
 
             /// <summary>
             /// Macuata
             /// </summary>
-            [AliasInShort("07")] Macuata,
+            [AliasInShort("07")] [RegionCode(6_00_103_0007)]
+            Macuata,
 
             /// <summary>
             /// Nadroga-Navosa
             /// </summary>
-            [AliasInShort("08")] NadrogaNavosa,
+            [AliasInShort("08")] [RegionCode(6_00_103_0008)]
+            NadrogaNavosa,
 
             /// <summary>
             /// Naitasiri
             /// </summary>
-            [AliasInShort("09")] Naitasiri,
+            [AliasInShort("09")] [RegionCode(6_00_103_0009)]
+            Naitasiri,
 
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("C")] Central,
+            [AliasInShort("C")] [RegionCode(6_00_103_0020)]
+            Central,
 
             /// <summary>
             /// Eastern
             /// </summary>
-            [AliasInShort("E")] Eastern,
+            [AliasInShort("E")] [RegionCode(6_00_103_0021)]
+            Eastern,
 
             /// <summary>
             /// Northern
             /// </summary>
-            [AliasInShort("N")] Northern,
+            [AliasInShort("N")] [RegionCode(6_00_103_0022)]
+            Northern,
 
             /// <summary>
             /// Rotuma
             /// </summary>
-            [AliasInShort("R")] Rotuma,
+            [AliasInShort("R")] [RegionCode(6_00_103_0023)]
+            Rotuma,
 
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("W")] Western,
+            [AliasInShort("W")] [RegionCode(6_00_103_0024)]
+            Western,
 
             /// <summary>
             /// Unknown
@@ -235,6 +254,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"FJ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -270,6 +299,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

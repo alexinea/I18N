@@ -378,357 +378,428 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Aračinovo
             /// </summary>
-            [AliasInShort("02")] Aračinovo,
+            [AliasInShort("02")] [RegionCode(2_00_125_0002)]
+            Aračinovo,
 
             /// <summary>
             /// Berovo
             /// </summary>
-            [AliasInShort("03")] Berovo,
+            [AliasInShort("03")] [RegionCode(2_00_125_0003)]
+            Berovo,
 
             /// <summary>
             /// Bitola
             /// </summary>
-            [AliasInShort("04")] Bitola,
+            [AliasInShort("04")] [RegionCode(2_00_125_0004)]
+            Bitola,
 
             /// <summary>
             /// Bogdanci
             /// </summary>
-            [AliasInShort("05")] Bogdanci,
+            [AliasInShort("05")] [RegionCode(2_00_125_0005)]
+            Bogdanci,
 
             /// <summary>
             /// Bogovinje
             /// </summary>
-            [AliasInShort("06")] Bogovinje,
+            [AliasInShort("06")] [RegionCode(2_00_125_0006)]
+            Bogovinje,
 
             /// <summary>
             /// Bosilovo
             /// </summary>
-            [AliasInShort("07")] Bosilovo,
+            [AliasInShort("07")] [RegionCode(2_00_125_0007)]
+            Bosilovo,
 
             /// <summary>
             /// Brvenica
             /// </summary>
-            [AliasInShort("08")] Brvenica,
+            [AliasInShort("08")] [RegionCode(2_00_125_0008)]
+            Brvenica,
 
             /// <summary>
             /// Valandovo
             /// </summary>
-            [AliasInShort("10")] Valandovo,
+            [AliasInShort("10")] [RegionCode(2_00_125_0010)]
+            Valandovo,
 
             /// <summary>
             /// Vasilevo
             /// </summary>
-            [AliasInShort("11")] Vasilevo,
+            [AliasInShort("11")] [RegionCode(2_00_125_0011)]
+            Vasilevo,
 
             /// <summary>
             /// Vevčani
             /// </summary>
-            [AliasInShort("12")] Vevčani,
+            [AliasInShort("12")] [RegionCode(2_00_125_0012)]
+            Vevčani,
 
             /// <summary>
             /// Veles
             /// </summary>
-            [AliasInShort("13")] Veles,
+            [AliasInShort("13")] [RegionCode(2_00_125_0013)]
+            Veles,
 
             /// <summary>
             /// Vinica
             /// </summary>
-            [AliasInShort("14")] Vinica,
+            [AliasInShort("14")] [RegionCode(2_00_125_0014)]
+            Vinica,
 
             /// <summary>
             /// Vrapčište
             /// </summary>
-            [AliasInShort("16")] Vrapčište,
+            [AliasInShort("16")] [RegionCode(2_00_125_0016)]
+            Vrapčište,
 
             /// <summary>
             /// Gevgelija
             /// </summary>
-            [AliasInShort("18")] Gevgelija,
+            [AliasInShort("18")] [RegionCode(2_00_125_0018)]
+            Gevgelija,
 
             /// <summary>
             /// Gostivar
             /// </summary>
-            [AliasInShort("19")] Gostivar,
+            [AliasInShort("19")] [RegionCode(2_00_125_0019)]
+            Gostivar,
 
             /// <summary>
             /// Gradsko
             /// </summary>
-            [AliasInShort("20")] Gradsko,
+            [AliasInShort("20")] [RegionCode(2_00_125_0020)]
+            Gradsko,
 
             /// <summary>
             /// Debar
             /// </summary>
-            [AliasInShort("21")] Debar,
+            [AliasInShort("21")] [RegionCode(2_00_125_0021)]
+            Debar,
 
             /// <summary>
             /// Debarca
             /// </summary>
-            [AliasInShort("22")] Debarca,
+            [AliasInShort("22")] [RegionCode(2_00_125_0022)]
+            Debarca,
 
             /// <summary>
             /// Delčevo
             /// </summary>
-            [AliasInShort("23")] Delčevo,
+            [AliasInShort("23")] [RegionCode(2_00_125_0023)]
+            Delčevo,
 
             /// <summary>
             /// Demir Kapija
             /// </summary>
-            [AliasInShort("24")] DemirKapija,
+            [AliasInShort("24")] [RegionCode(2_00_125_0024)]
+            DemirKapija,
 
             /// <summary>
             /// Demir Hisar
             /// </summary>
-            [AliasInShort("25")] DemirHisar,
+            [AliasInShort("25")] [RegionCode(2_00_125_0025)]
+            DemirHisar,
 
             /// <summary>
             /// Dojran
             /// </summary>
-            [AliasInShort("26")] Dojran,
+            [AliasInShort("26")] [RegionCode(2_00_125_0026)]
+            Dojran,
 
             /// <summary>
             /// Dolneni
             /// </summary>
-            [AliasInShort("27")] Dolneni,
+            [AliasInShort("27")] [RegionCode(2_00_125_0027)]
+            Dolneni,
 
             /// <summary>
             /// Želino
             /// </summary>
-            [AliasInShort("30")] Želino,
+            [AliasInShort("30")] [RegionCode(2_00_125_0030)]
+            Želino,
 
             /// <summary>
             /// Zelenikovo
             /// </summary>
-            [AliasInShort("32")] Zelenikovo,
+            [AliasInShort("32")] [RegionCode(2_00_125_0032)]
+            Zelenikovo,
 
             /// <summary>
             /// Zrnovci
             /// </summary>
-            [AliasInShort("33")] Zrnovci,
+            [AliasInShort("33")] [RegionCode(2_00_125_0033)]
+            Zrnovci,
 
             /// <summary>
             /// Ilinden
             /// </summary>
-            [AliasInShort("34")] Ilinden,
+            [AliasInShort("34")] [RegionCode(2_00_125_0034)]
+            Ilinden,
 
             /// <summary>
             /// Jegunovce
             /// </summary>
-            [AliasInShort("35")] Jegunovce,
+            [AliasInShort("35")] [RegionCode(2_00_125_0035)]
+            Jegunovce,
 
             /// <summary>
             /// Kavadarci
             /// </summary>
-            [AliasInShort("36")] Kavadarci,
+            [AliasInShort("36")] [RegionCode(2_00_125_0036)]
+            Kavadarci,
 
             /// <summary>
             /// Karbinci
             /// </summary>
-            [AliasInShort("37")] Karbinci,
+            [AliasInShort("37")] [RegionCode(2_00_125_0037)]
+            Karbinci,
 
             /// <summary>
             /// Kičevo
             /// </summary>
-            [AliasInShort("40")] Kičevo,
+            [AliasInShort("40")] [RegionCode(2_00_125_0040)]
+            Kičevo,
 
             /// <summary>
             /// Konče
             /// </summary>
-            [AliasInShort("41")] Konče,
+            [AliasInShort("41")] [RegionCode(2_00_125_0041)]
+            Konče,
 
             /// <summary>
             /// Kočani
             /// </summary>
-            [AliasInShort("42")] Kočani,
+            [AliasInShort("42")] [RegionCode(2_00_125_0042)]
+            Kočani,
 
             /// <summary>
             /// Kratovo
             /// </summary>
-            [AliasInShort("43")] Kratovo,
+            [AliasInShort("43")] [RegionCode(2_00_125_0043)]
+            Kratovo,
 
             /// <summary>
             /// Kriva Palanka
             /// </summary>
-            [AliasInShort("44")] KrivaPalanka,
+            [AliasInShort("44")] [RegionCode(2_00_125_0044)]
+            KrivaPalanka,
 
             /// <summary>
             /// Krivogaštani
             /// </summary>
-            [AliasInShort("45")] Krivogaštani,
+            [AliasInShort("45")] [RegionCode(2_00_125_0045)]
+            Krivogaštani,
 
             /// <summary>
             /// Kruševo
             /// </summary>
-            [AliasInShort("46")] Kruševo,
+            [AliasInShort("46")] [RegionCode(2_00_125_0046)]
+            Kruševo,
 
             /// <summary>
             /// Kumanovo
             /// </summary>
-            [AliasInShort("47")] Kumanovo,
+            [AliasInShort("47")] [RegionCode(2_00_125_0047)]
+            Kumanovo,
 
             /// <summary>
             /// Lipkovo
             /// </summary>
-            [AliasInShort("48")] Lipkovo,
+            [AliasInShort("48")] [RegionCode(2_00_125_0048)]
+            Lipkovo,
 
             /// <summary>
             /// Lozovo
             /// </summary>
-            [AliasInShort("49")] Lozovo,
+            [AliasInShort("49")] [RegionCode(2_00_125_0049)]
+            Lozovo,
 
             /// <summary>
             /// Mavrovo and Rostuša
             /// </summary>
-            [AliasInShort("50")] MavrovoAndRostuša,
+            [AliasInShort("50")] [RegionCode(2_00_125_0050)]
+            MavrovoAndRostuša,
 
             /// <summary>
             /// Makedonska Kamenica
             /// </summary>
-            [AliasInShort("51")] MakedonskaKamenica,
+            [AliasInShort("51")] [RegionCode(2_00_125_0051)]
+            MakedonskaKamenica,
 
             /// <summary>
             /// Makedonski Brod
             /// </summary>
-            [AliasInShort("52")] MakedonskiBrod,
+            [AliasInShort("52")] [RegionCode(2_00_125_0052)]
+            MakedonskiBrod,
 
             /// <summary>
             /// Mogila
             /// </summary>
-            [AliasInShort("53")] Mogila,
+            [AliasInShort("53")] [RegionCode(2_00_125_0053)]
+            Mogila,
 
             /// <summary>
             /// Negotino
             /// </summary>
-            [AliasInShort("54")] Negotino,
+            [AliasInShort("54")] [RegionCode(2_00_125_0054)]
+            Negotino,
 
             /// <summary>
             /// Novaci
             /// </summary>
-            [AliasInShort("55")] Novaci,
+            [AliasInShort("55")] [RegionCode(2_00_125_0055)]
+            Novaci,
 
             /// <summary>
             /// Novo Selo
             /// </summary>
-            [AliasInShort("56")] NovoSelo,
+            [AliasInShort("56")] [RegionCode(2_00_125_0056)]
+            NovoSelo,
 
             /// <summary>
             /// Ohrid
             /// </summary>
-            [AliasInShort("58")] Ohrid,
+            [AliasInShort("58")] [RegionCode(2_00_125_0058)]
+            Ohrid,
 
             /// <summary>
             /// Petrovec
             /// </summary>
-            [AliasInShort("59")] Petrovec,
+            [AliasInShort("59")] [RegionCode(2_00_125_0059)]
+            Petrovec,
 
             /// <summary>
             /// Pehčevo
             /// </summary>
-            [AliasInShort("60")] Pehčevo,
+            [AliasInShort("60")] [RegionCode(2_00_125_0060)]
+            Pehčevo,
 
             /// <summary>
             /// Plasnica
             /// </summary>
-            [AliasInShort("61")] Plasnica,
+            [AliasInShort("61")] [RegionCode(2_00_125_0061)]
+            Plasnica,
 
             /// <summary>
             /// Prilep
             /// </summary>
-            [AliasInShort("62")] Prilep,
+            [AliasInShort("62")] [RegionCode(2_00_125_0062)]
+            Prilep,
 
             /// <summary>
             /// 
             /// </summary>
-            [AliasInShort("63")] Probištip,
+            [AliasInShort("63")] [RegionCode(2_00_125_0063)]
+            Probištip,
 
             /// <summary>
             /// Radoviš
             /// </summary>
-            [AliasInShort("64")] Radoviš,
+            [AliasInShort("64")] [RegionCode(2_00_125_0064)]
+            Radoviš,
 
             /// <summary>
             /// Rankovce
             /// </summary>
-            [AliasInShort("65")] Rankovce,
+            [AliasInShort("65")] [RegionCode(2_00_125_0065)]
+            Rankovce,
 
             /// <summary>
             /// Resen
             /// </summary>
-            [AliasInShort("66")] Resen,
+            [AliasInShort("66")] [RegionCode(2_00_125_0066)]
+            Resen,
 
             /// <summary>
             /// Rosoman
             /// </summary>
-            [AliasInShort("67")] Rosoman,
+            [AliasInShort("67")] [RegionCode(2_00_125_0067)]
+            Rosoman,
 
             /// <summary>
             /// Sveti Nikole
             /// </summary>
-            [AliasInShort("69")] SvetiNikole,
+            [AliasInShort("69")] [RegionCode(2_00_125_0069)]
+            SvetiNikole,
 
             /// <summary>
             /// Sopište
             /// </summary>
-            [AliasInShort("70")] Sopište,
+            [AliasInShort("70")] [RegionCode(2_00_125_0070)]
+            Sopište,
 
             /// <summary>
             /// Staro Nagoričane
             /// </summary>
-            [AliasInShort("71")] StaroNagoričane,
+            [AliasInShort("71")] [RegionCode(2_00_125_0071)]
+            StaroNagoričane,
 
             /// <summary>
             /// Struga
             /// </summary>
-            [AliasInShort("72")] Struga,
+            [AliasInShort("72")] [RegionCode(2_00_125_0072)]
+            Struga,
 
             /// <summary>
             /// Strumica
             /// </summary>
-            [AliasInShort("73")] Strumica,
+            [AliasInShort("73")] [RegionCode(2_00_125_0073)]
+            Strumica,
 
             /// <summary>
             /// Studeničani
             /// </summary>
-            [AliasInShort("74")] Studeničani,
+            [AliasInShort("74")] [RegionCode(2_00_125_0074)]
+            Studeničani,
 
             /// <summary>
             /// Tearce
             /// </summary>
-            [AliasInShort("75")] Tearce,
+            [AliasInShort("75")] [RegionCode(2_00_125_0075)]
+            Tearce,
 
             /// <summary>
             /// Tetovo
             /// </summary>
-            [AliasInShort("76")] Tetovo,
+            [AliasInShort("76")] [RegionCode(2_00_125_0076)]
+            Tetovo,
 
             /// <summary>
             /// Centar Župa
             /// </summary>
-            [AliasInShort("78")] CentarŽupa,
+            [AliasInShort("78")] [RegionCode(2_00_125_0078)]
+            CentarŽupa,
 
             /// <summary>
             /// Čaška
             /// </summary>
-            [AliasInShort("80")] Čaška,
+            [AliasInShort("80")] [RegionCode(2_00_125_0080)]
+            Čaška,
 
             /// <summary>
             /// Češinovo-Obleševo
             /// </summary>
-            [AliasInShort("81")] ČešinovoObleševo,
+            [AliasInShort("81")] [RegionCode(2_00_125_0081)]
+            ČešinovoObleševo,
 
             /// <summary>
             /// Čučer-Sandevo
             /// </summary>
-            [AliasInShort("82")] ČučerSandevo,
+            [AliasInShort("82")] [RegionCode(2_00_125_0082)]
+            ČučerSandevo,
 
             /// <summary>
             /// Štip
             /// </summary>
-            [AliasInShort("83")] Štip,
+            [AliasInShort("83")] [RegionCode(2_00_125_0083)]
+            Štip,
 
             /// <summary>
             /// Skopje
             /// </summary>
-            [AliasInShort("85")] Skopje,
+            [AliasInShort("85")] [RegionCode(2_00_125_0085)]
+            Skopje,
 
             /// <summary>
             /// Unknown
@@ -756,6 +827,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MK-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -791,6 +872,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

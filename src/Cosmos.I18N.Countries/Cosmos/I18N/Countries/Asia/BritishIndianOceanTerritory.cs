@@ -1,7 +1,8 @@
 namespace Cosmos.I18N.Countries.Asia {
     /// <summary>
     /// 英属印度洋领地（British Indian Ocean Territory，亚洲，IO，IOT，086） <br />
-    /// Cosmos i18n code: i18n_country_yingshuying
+    /// Cosmos i18n code: i18n_country_yingshuying <br />
+    /// Cosmos region code: 100107
     /// </summary>
     public static class BritishIndianOceanTerritory {
         // ReSharper disable once InconsistentNaming
@@ -12,7 +13,8 @@ namespace Cosmos.I18N.Countries.Asia {
                 Country = Country.BritishIndianOceanTerritory,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
-                UNCode = "086",
+                M49Code = "086",
+                CRCode = 1_00_107,
                 Alpha2Code = "IO",
                 Alpha3Code = "IOT",
                 Name = "British Indian Ocean Territory",
@@ -24,7 +26,8 @@ namespace Cosmos.I18N.Countries.Asia {
 
         /// <summary>
         /// 英属印度洋领地（British Indian Ocean Territory，亚洲，IO，IOT，086） <br />
-        /// Cosmos i18n code: i18n_country_yingshuying
+        /// Cosmos i18n code: i18n_country_yingshuying <br />
+        /// Cosmos region code: 100107
         /// </summary>
         // ReSharper disable once ConvertToAutoProperty
         public static CountryInfo Instance => _country;
@@ -34,5 +37,30 @@ namespace Cosmos.I18N.Countries.Asia {
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public const string I18N_IDENTITY_CODE = "i18n_country_yingshuying";
+
+        /// <summary>
+        /// Get Cosmos Region Code (CEP-1/CRCode)
+        /// </summary>
+        public static long CosmosRegionCode => _country.CRCode;
+
+        /// <summary>
+        /// Get Cosmos Region Identity Code (CEP-1/IICode)
+        /// </summary>
+        public static string CosmosIdentityCode => _country.I18NIdentityCode;
+
+        /// <summary>
+        /// Get M49 code / ISO 3166-1 numeric
+        /// </summary>
+        public static string M49Code => _country.M49Code;
+
+        /// <summary>
+        /// Get Alpha2 code / ISO 3166-1 alpha-2
+        /// </summary>
+        public static string Alpha2Code => _country.Alpha2Code;
+
+        /// <summary>
+        /// Get Alpha3 code / ISO 3166-1 alpha-3
+        /// </summary>
+        public static string Alpha3Code => _country.Alpha3Code;
     }
 }

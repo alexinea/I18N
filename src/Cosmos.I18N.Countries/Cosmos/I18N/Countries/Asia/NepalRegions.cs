@@ -47,27 +47,27 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("1")] Central,
+            [AliasInShort("1")][RegionCode(1_00_128_0001)] Central,
 
             /// <summary>
             /// Madhya Pashchimanchal
             /// </summary>
-            [AliasInShort("2")] MadhyaPashchimanchal,
+            [AliasInShort("2")][RegionCode(1_00_128_0002)] MadhyaPashchimanchal,
 
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("3")] Western,
+            [AliasInShort("3")][RegionCode(1_00_128_0003)] Western,
 
             /// <summary>
             /// Purwanchal
             /// </summary>
-            [AliasInShort("4")] Purwanchal,
+            [AliasInShort("4")][RegionCode(1_00_128_0004)] Purwanchal,
 
             /// <summary>
             /// Sudur Pashchimanchal
             /// </summary>
-            [AliasInShort("5")] SudurPashchimanchal,
+            [AliasInShort("5")][RegionCode(1_00_128_0005)] SudurPashchimanchal,
 
             /// <summary>
             /// Unknown
@@ -95,6 +95,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"NP-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -130,6 +140,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

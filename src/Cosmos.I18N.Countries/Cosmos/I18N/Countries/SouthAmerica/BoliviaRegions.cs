@@ -67,47 +67,56 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             /// <summary>
             /// Beni
             /// </summary>
-            [AliasInShort("B")] Beni,
+            [AliasInShort("B")] [RegionCode(5_00_101_0001)]
+            Beni,
 
             /// <summary>
             /// Cochabamba
             /// </summary>
-            [AliasInShort("C")] Cochabamba,
+            [AliasInShort("C")] [RegionCode(5_00_101_0002)]
+            Cochabamba,
 
             /// <summary>
             /// Chuquisaca
             /// </summary>
-            [AliasInShort("H")] Chuquisaca,
+            [AliasInShort("H")] [RegionCode(5_00_101_0003)]
+            Chuquisaca,
 
             /// <summary>
             /// La Paz
             /// </summary>
-            [AliasInShort("L")] LaPaz,
+            [AliasInShort("L")] [RegionCode(5_00_101_0004)]
+            LaPaz,
 
             /// <summary>
             /// Pando
             /// </summary>
-            [AliasInShort("N")] Pando,
+            [AliasInShort("N")] [RegionCode(5_00_101_0005)]
+            Pando,
 
             /// <summary>
             /// Oruro
             /// </summary>
-            [AliasInShort("O")] Oruro,
+            [AliasInShort("O")] [RegionCode(5_00_101_0006)]
+            Oruro,
 
             /// <summary>
             /// Potosí
             /// </summary>
-            [AliasInShort("P")] Potosí,
+            [AliasInShort("P")] [RegionCode(5_00_101_0007)]
+            Potosí,
 
             /// <summary>
             /// Santa Cruz
             /// </summary>
-            [AliasInShort("S")] SantaCruz,
+            [AliasInShort("S")] [RegionCode(5_00_101_0008)]
+            SantaCruz,
 
             /// <summary>
             /// Tarija
             /// </summary>
-            [AliasInShort("T")] Tarija,
+            [AliasInShort("T")] [RegionCode(5_00_101_0009)]
+            Tarija,
 
             /// <summary>
             /// Unknown
@@ -135,6 +144,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BO-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -170,6 +189,13 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

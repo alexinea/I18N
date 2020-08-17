@@ -77,57 +77,57 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Bas-Congo
             /// </summary>
-            [AliasInShort("BC")] BasCongo,
+            [AliasInShort("BC")][RegionCode(3_00_113_0001)] BasCongo,
 
             /// <summary>
             /// Bandundu
             /// </summary>
-            [AliasInShort("BN")] Bandundu,
+            [AliasInShort("BN")][RegionCode(3_00_113_0002)] Bandundu,
 
             /// <summary>
             /// Équateur
             /// </summary>
-            [AliasInShort("EQ")] Équateur,
+            [AliasInShort("EQ")][RegionCode(3_00_113_0003)] Équateur,
 
             /// <summary>
             /// Katanga
             /// </summary>
-            [AliasInShort("KA")] Katanga,
+            [AliasInShort("KA")][RegionCode(3_00_113_0004)] Katanga,
 
             /// <summary>
             /// Kasaï-Oriental
             /// </summary>
-            [AliasInShort("KE")] KasaïOriental,
+            [AliasInShort("KE")][RegionCode(3_00_113_0005)] KasaïOriental,
 
             /// <summary>
             /// Kinshasa
             /// </summary>
-            [AliasInShort("KN")] Kinshasa,
+            [AliasInShort("KN")][RegionCode(3_00_113_0006)] Kinshasa,
 
             /// <summary>
             /// Kasaï-Occidental
             /// </summary>
-            [AliasInShort("KW")] KasaïOccidental,
+            [AliasInShort("KW")][RegionCode(3_00_113_0007)] KasaïOccidental,
 
             /// <summary>
             /// Maniema
             /// </summary>
-            [AliasInShort("MA")] Maniema,
+            [AliasInShort("MA")][RegionCode(3_00_113_0008)] Maniema,
 
             /// <summary>
             /// North Kivu
             /// </summary>
-            [AliasInShort("NK")] NorthKivu,
+            [AliasInShort("NK")][RegionCode(3_00_113_0009)] NorthKivu,
 
             /// <summary>
             /// Orientale
             /// </summary>
-            [AliasInShort("OR")] Orientale,
+            [AliasInShort("OR")][RegionCode(3_00_113_0010)] Orientale,
 
             /// <summary>
             /// South Kivu
             /// </summary>
-            [AliasInShort("SK")] SouthKivu,
+            [AliasInShort("SK")][RegionCode(3_00_113_0011)] SouthKivu,
 
             /// <summary>
             /// Unknown
@@ -155,6 +155,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CD-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -190,6 +200,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

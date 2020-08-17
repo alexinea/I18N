@@ -102,82 +102,82 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Akmola
             /// </summary>
-            [AliasInShort("AKM")] Akmola,
+            [AliasInShort("AKM")][RegionCode(1_00_119_0001)] Akmola,
 
             /// <summary>
             /// Aktobe
             /// </summary>
-            [AliasInShort("AKT")] Aktobe,
+            [AliasInShort("AKT")][RegionCode(1_00_119_0002)] Aktobe,
 
             /// <summary>
             /// Almaty
             /// </summary>
-            [AliasInShort("ALA")] Almaty,
+            [AliasInShort("ALA")][RegionCode(1_00_119_0003)] Almaty,
 
             /// <summary>
             /// Almaty Region
             /// </summary>
-            [AliasInShort("ALM")] AlmatyRegion,
+            [AliasInShort("ALM")][RegionCode(1_00_119_0004)] AlmatyRegion,
 
             /// <summary>
             /// Astana
             /// </summary>
-            [AliasInShort("AST")] Astana,
+            [AliasInShort("AST")][RegionCode(1_00_119_0005)] Astana,
 
             /// <summary>
             /// Atyrau
             /// </summary>
-            [AliasInShort("ATY")] Atyrau,
+            [AliasInShort("ATY")][RegionCode(1_00_119_0006)] Atyrau,
 
             /// <summary>
             /// Karagandy
             /// </summary>
-            [AliasInShort("KAR")] Karagandy,
+            [AliasInShort("KAR")][RegionCode(1_00_119_0007)] Karagandy,
 
             /// <summary>
             /// Kostanay
             /// </summary>
-            [AliasInShort("KUS")] Kostanay,
+            [AliasInShort("KUS")][RegionCode(1_00_119_0008)] Kostanay,
 
             /// <summary>
             /// Kyzylorda
             /// </summary>
-            [AliasInShort("KZY")] Kyzylorda,
+            [AliasInShort("KZY")][RegionCode(1_00_119_0009)] Kyzylorda,
 
             /// <summary>
             /// Mangystau
             /// </summary>
-            [AliasInShort("MAN")] Mangystau,
+            [AliasInShort("MAN")][RegionCode(1_00_119_0010)] Mangystau,
 
             /// <summary>
             /// Pavlodar
             /// </summary>
-            [AliasInShort("PAV")] Pavlodar,
+            [AliasInShort("PAV")][RegionCode(1_00_119_0011)] Pavlodar,
 
             /// <summary>
             /// North Kazakhstan
             /// </summary>
-            [AliasInShort("SEV")] NorthKazakhstan,
+            [AliasInShort("SEV")][RegionCode(1_00_119_0012)] NorthKazakhstan,
 
             /// <summary>
             /// East Kazakhstan
             /// </summary>
-            [AliasInShort("VOS")] EastKazakhstan,
+            [AliasInShort("VOS")][RegionCode(1_00_119_0013)] EastKazakhstan,
 
             /// <summary>
             /// South Kazakhstan
             /// </summary>
-            [AliasInShort("YUS")] SouthKazakhstan,
+            [AliasInShort("YUS")][RegionCode(1_00_119_0014)] SouthKazakhstan,
 
             /// <summary>
             /// West Kazakhstan
             /// </summary>
-            [AliasInShort("ZAP")] WestKazakhstan,
+            [AliasInShort("ZAP")][RegionCode(1_00_119_0015)] WestKazakhstan,
 
             /// <summary>
             /// Jambyl
             /// </summary>
-            [AliasInShort("ZHA")] Jambyl,
+            [AliasInShort("ZHA")][RegionCode(1_00_119_0016)] Jambyl,
 
             /// <summary>
             /// Unknown
@@ -205,6 +205,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"KZ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -240,6 +250,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

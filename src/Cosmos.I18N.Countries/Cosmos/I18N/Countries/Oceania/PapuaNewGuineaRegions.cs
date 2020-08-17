@@ -132,112 +132,134 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Chimbu
             /// </summary>
-            [AliasInShort("CPK")] Chimbu,
+            [AliasInShort("CPK")] [RegionCode(6_00_114_0001)]
+            Chimbu,
 
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("CPM")] Central,
+            [AliasInShort("CPM")] [RegionCode(6_00_114_0002)]
+            Central,
 
             /// <summary>
             /// East New Britain
             /// </summary>
-            [AliasInShort("EBK")] EastNewBritain,
+            [AliasInShort("EBK")] [RegionCode(6_00_114_0003)]
+            EastNewBritain,
 
             /// <summary>
             /// Eastern Highlands
             /// </summary>
-            [AliasInShort("EHG")] EasternHighlands,
+            [AliasInShort("EHG")] [RegionCode(6_00_114_0004)]
+            EasternHighlands,
 
             /// <summary>
             /// Enga
             /// </summary>
-            [AliasInShort("EPW")] Enga,
+            [AliasInShort("EPW")] [RegionCode(6_00_114_0005)]
+            Enga,
 
             /// <summary>
             /// East Sepik
             /// </summary>
-            [AliasInShort("ESW")] EastSepik,
+            [AliasInShort("ESW")] [RegionCode(6_00_114_0006)]
+            EastSepik,
 
             /// <summary>
             /// Gulf
             /// </summary>
-            [AliasInShort("GPK")] Gulf,
+            [AliasInShort("GPK")] [RegionCode(6_00_114_0007)]
+            Gulf,
 
             /// <summary>
             /// Hela
             /// </summary>
-            [AliasInShort("HLA")] Hela,
+            [AliasInShort("HLA")] [RegionCode(6_00_114_0008)]
+            Hela,
 
             /// <summary>
             /// Imbabura
             /// </summary>
-            [AliasInShort("JWK")] Jiwaka,
+            [AliasInShort("JWK")] [RegionCode(6_00_114_0009)]
+            Jiwaka,
 
             /// <summary>
             /// Milne Bay
             /// </summary>
-            [AliasInShort("MBA")] MilneBay,
+            [AliasInShort("MBA")] [RegionCode(6_00_114_0010)]
+            MilneBay,
 
             /// <summary>
             /// Morobe
             /// </summary>
-            [AliasInShort("MPL")] Morobe,
+            [AliasInShort("MPL")] [RegionCode(6_00_114_0011)]
+            Morobe,
 
             /// <summary>
             /// Madang
             /// </summary>
-            [AliasInShort("MPM")] Madang,
+            [AliasInShort("MPM")] [RegionCode(6_00_114_0012)]
+            Madang,
 
             /// <summary>
             /// Manus
             /// </summary>
-            [AliasInShort("MRL")] Manus,
+            [AliasInShort("MRL")] [RegionCode(6_00_114_0013)]
+            Manus,
 
             /// <summary>
             /// Port Moresby
             /// </summary>
-            [AliasInShort("NCD")] PortMoresby,
+            [AliasInShort("NCD")] [RegionCode(6_00_114_0014)]
+            PortMoresby,
 
             /// <summary>
             /// New Ireland
             /// </summary>
-            [AliasInShort("NIK")] NewIreland,
+            [AliasInShort("NIK")] [RegionCode(6_00_114_0015)]
+            NewIreland,
 
             /// <summary>
             /// Oro
             /// </summary>
-            [AliasInShort("NPP")] Oro,
+            [AliasInShort("NPP")] [RegionCode(6_00_114_0016)]
+            Oro,
 
             /// <summary>
             /// Bougainville
             /// </summary>
-            [AliasInShort("NSB")] Bougainville,
+            [AliasInShort("NSB")] [RegionCode(6_00_114_0017)]
+            Bougainville,
 
             /// <summary>
             /// Sandaun
             /// </summary>
-            [AliasInShort("SAN")] Sandaun,
+            [AliasInShort("SAN")] [RegionCode(6_00_114_0018)]
+            Sandaun,
 
             /// <summary>
             /// Southern Highlands
             /// </summary>
-            [AliasInShort("SHM")] SouthernHighlands,
+            [AliasInShort("SHM")] [RegionCode(6_00_114_0019)]
+            SouthernHighlands,
 
             /// <summary>
             /// West New Britain
             /// </summary>
-            [AliasInShort("WBK")] WestNewBritain,
+            [AliasInShort("WBK")] [RegionCode(6_00_114_0020)]
+            WestNewBritain,
 
             /// <summary>
             /// Western Highlands
             /// </summary>
-            [AliasInShort("WHM")] WesternHighlands,
+            [AliasInShort("WHM")] [RegionCode(6_00_114_0021)]
+            WesternHighlands,
 
             /// <summary>
             /// Western
             /// </summary>
-            [AliasInShort("WPD")] Western,
+            [AliasInShort("WPD")] [RegionCode(6_00_114_0022)]
+            Western,
 
             /// <summary>
             /// Unknown
@@ -265,6 +287,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"PG-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -300,6 +332,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

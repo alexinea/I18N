@@ -97,77 +97,92 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Arima
             /// </summary>
-            [AliasInShort("ARI")] Arima,
+            [AliasInShort("ARI")] [RegionCode(4_00_134_0001)]
+            Arima,
 
             /// <summary>
             /// Chaguanas
             /// </summary>
-            [AliasInShort("CHA")] Chaguanas,
+            [AliasInShort("CHA")] [RegionCode(4_00_134_0002)]
+            Chaguanas,
 
             /// <summary>
             /// Couva-Tabaquite-Talparo
             /// </summary>
-            [AliasInShort("CTT")] CouvaTabaquiteTalparo,
+            [AliasInShort("CTT")] [RegionCode(4_00_134_0003)]
+            CouvaTabaquiteTalparo,
 
             /// <summary>
             /// Diego Martin
             /// </summary>
-            [AliasInShort("DMN")] DiegoMartin,
+            [AliasInShort("DMN")] [RegionCode(4_00_134_0004)]
+            DiegoMartin,
 
             /// <summary>
             /// Mayaro-Rio Claro
             /// </summary>
-            [AliasInShort("MRC")] MayaroRioClaro,
+            [AliasInShort("MRC")] [RegionCode(4_00_134_0005)]
+            MayaroRioClaro,
 
             /// <summary>
             /// Penal-Debe
             /// </summary>
-            [AliasInShort("PED")] PenalDebe,
+            [AliasInShort("PED")] [RegionCode(4_00_134_0006)]
+            PenalDebe,
 
             /// <summary>
             /// Port of Spain
             /// </summary>
-            [AliasInShort("POS")] PortOfSpain,
+            [AliasInShort("POS")] [RegionCode(4_00_134_0007)]
+            PortOfSpain,
 
             /// <summary>
             /// Princes Town
             /// </summary>
-            [AliasInShort("PRT")] PrincesTown,
+            [AliasInShort("PRT")] [RegionCode(4_00_134_0008)]
+            PrincesTown,
 
             /// <summary>
             /// Point Fortin
             /// </summary>
-            [AliasInShort("PTF")] PointFortin,
+            [AliasInShort("PTF")] [RegionCode(4_00_134_0009)]
+            PointFortin,
 
             /// <summary>
             /// San Fernando
             /// </summary>
-            [AliasInShort("SFO")] SanFernando,
+            [AliasInShort("SFO")] [RegionCode(4_00_134_0010)]
+            SanFernando,
 
             /// <summary>
             /// Sangre Grande
             /// </summary>
-            [AliasInShort("SGE")] SangreGrande,
+            [AliasInShort("SGE")] [RegionCode(4_00_134_0011)]
+            SangreGrande,
 
             /// <summary>
             /// Siparia
             /// </summary>
-            [AliasInShort("SIP")] Siparia,
+            [AliasInShort("SIP")] [RegionCode(4_00_134_0012)]
+            Siparia,
 
             /// <summary>
             /// San Juan-Laventille
             /// </summary>
-            [AliasInShort("SJL")] SanJuanLaventille,
+            [AliasInShort("SJL")] [RegionCode(4_00_134_0013)]
+            SanJuanLaventille,
 
             /// <summary>
             /// Tobago
             /// </summary>
-            [AliasInShort("TOB")] Tobago,
+            [AliasInShort("TOB")] [RegionCode(4_00_134_0014)]
+            Tobago,
 
             /// <summary>
             /// Tunapuna-Piarco
             /// </summary>
-            [AliasInShort("TUP")] TunapunaPiarco,
+            [AliasInShort("TUP")] [RegionCode(4_00_134_0015)]
+            TunapunaPiarco,
 
             /// <summary>
             /// Unknown
@@ -195,6 +210,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"TT-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -230,6 +255,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

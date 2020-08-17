@@ -32,12 +32,14 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Split-Dalmatia
             /// </summary>
-            [AliasInShort("17")] SplitDalmatia,
+            [AliasInShort("17")] [RegionCode(2_00_109_0017)]
+            SplitDalmatia,
 
             /// <summary>
             /// Dubrovnik-Neretva
             /// </summary>
-            [AliasInShort("19")] DubrovnikNeretva,
+            [AliasInShort("19")] [RegionCode(2_00_109_0019)]
+            DubrovnikNeretva,
 
             /// <summary>
             /// Unknown
@@ -65,6 +67,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"HR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -100,6 +112,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

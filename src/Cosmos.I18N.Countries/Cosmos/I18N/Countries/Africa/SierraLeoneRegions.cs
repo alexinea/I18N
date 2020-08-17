@@ -42,22 +42,22 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Eastern
             /// </summary>
-            [AliasInShort("E")] Eastern,
+            [AliasInShort("E")][RegionCode(3_00_153_0001)] Eastern,
 
             /// <summary>
             /// Northern
             /// </summary>
-            [AliasInShort("N")] Northern,
+            [AliasInShort("N")][RegionCode(3_00_153_0002)] Northern,
 
             /// <summary>
             /// Southern
             /// </summary>
-            [AliasInShort("S")] Southern,
+            [AliasInShort("S")][RegionCode(3_00_153_0003)] Southern,
 
             /// <summary>
             /// Western Area
             /// </summary>
-            [AliasInShort("W")] WesternArea,
+            [AliasInShort("W")][RegionCode(3_00_153_0004)] WesternArea,
 
             /// <summary>
             /// Unknown<br />未知
@@ -85,6 +85,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SL-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -120,6 +130,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

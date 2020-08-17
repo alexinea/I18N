@@ -42,22 +42,26 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Capital
             /// </summary>
-            [AliasInShort("13")] Capital,
+            [AliasInShort("13")] [RegionCode(1_00_104_0013)]
+            Capital,
 
             /// <summary>
             /// Southern
             /// </summary>
-            [AliasInShort("14")] Southern,
+            [AliasInShort("14")] [RegionCode(1_00_104_0014)]
+            Southern,
 
             /// <summary>
             /// Muharraq
             /// </summary>
-            [AliasInShort("15")] Muharraq,
+            [AliasInShort("15")] [RegionCode(1_00_104_0015)]
+            Muharraq,
 
             /// <summary>
             /// Northern
             /// </summary>
-            [AliasInShort("17")] Northern,
+            [AliasInShort("17")] [RegionCode(1_00_104_0016)]
+            Northern,
 
             /// <summary>
             /// Unknown
@@ -85,6 +89,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BH-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -120,6 +134,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

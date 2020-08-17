@@ -82,62 +82,62 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Atakora
             /// </summary>
-            [AliasInShort("AK")] Atakora,
+            [AliasInShort("AK")][RegionCode(3_00_103_0001)] Atakora,
 
             /// <summary>
             /// Alibori
             /// </summary>
-            [AliasInShort("AL")] Alibori,
+            [AliasInShort("AL")][RegionCode(3_00_103_0002)] Alibori,
 
             /// <summary>
             /// Atlantique
             /// </summary>
-            [AliasInShort("AQ")] Atlantique,
+            [AliasInShort("AQ")][RegionCode(3_00_103_0003)] Atlantique,
 
             /// <summary>
             /// Borgou
             /// </summary>
-            [AliasInShort("BO")] Borgou,
+            [AliasInShort("BO")][RegionCode(3_00_103_0004)] Borgou,
 
             /// <summary>
             /// Collines
             /// </summary>
-            [AliasInShort("CO")] Collines,
+            [AliasInShort("CO")][RegionCode(3_00_103_0005)] Collines,
 
             /// <summary>
             /// Donga
             /// </summary>
-            [AliasInShort("DO")] Donga,
+            [AliasInShort("DO")][RegionCode(3_00_103_0006)] Donga,
 
             /// <summary>
             /// Kouffo
             /// </summary>
-            [AliasInShort("KO")] Kouffo,
+            [AliasInShort("KO")][RegionCode(3_00_103_0007)] Kouffo,
 
             /// <summary>
             /// Littoral
             /// </summary>
-            [AliasInShort("LI")] Littoral,
+            [AliasInShort("LI")][RegionCode(3_00_103_0008)] Littoral,
 
             /// <summary>
             /// Mono
             /// </summary>
-            [AliasInShort("MO")] Mono,
+            [AliasInShort("MO")][RegionCode(3_00_103_0009)] Mono,
 
             /// <summary>
             /// Ouémé
             /// </summary>
-            [AliasInShort("OU")] Ouémé,
+            [AliasInShort("OU")][RegionCode(3_00_103_0010)] Ouémé,
 
             /// <summary>
             /// Plateau
             /// </summary>
-            [AliasInShort("PL")] Plateau,
+            [AliasInShort("PL")][RegionCode(3_00_103_0011)] Plateau,
 
             /// <summary>
             /// Zou
             /// </summary>
-            [AliasInShort("ZO")] Zou,
+            [AliasInShort("ZO")][RegionCode(3_00_103_0012)] Zou,
 
             /// <summary>
             /// Unknown
@@ -165,6 +165,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BJ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -200,6 +210,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

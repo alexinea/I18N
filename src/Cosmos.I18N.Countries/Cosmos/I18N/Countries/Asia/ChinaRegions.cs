@@ -247,208 +247,209 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// 北京
             /// </summary>
-            [AliasInShort("BJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("BJ")] [RegionCode(1_00_001_0001)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Beijing = 1,
 
             /// <summary>
             /// 天津
             /// </summary>
-            [AliasInShort("TJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("TJ")] [RegionCode(1_00_001_0002)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Tianjin = 2,
 
             /// <summary>
             /// 河北
             /// </summary>
-            [AliasInShort("HE")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("HE")] [RegionCode(1_00_001_0003)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hebei = 3,
 
             /// <summary>
             /// 山西
             /// </summary>
-            [AliasInShort("SX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("SX")] [RegionCode(1_00_001_0004)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shanxi = 4,
 
             /// <summary>
             /// 内蒙古自治区
             /// </summary>
-            [AliasInShort("NM")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("NM")] [RegionCode(1_00_001_0005)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             InnerMongoria = 5,
 
             /// <summary>
             /// 辽宁
             /// </summary>
-            [AliasInShort("LN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("LN")] [RegionCode(1_00_001_0006)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Liaoning = 6,
 
             /// <summary>
             /// 吉林
             /// </summary>
-            [AliasInShort("JL")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("JL")] [RegionCode(1_00_001_0007)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Jilin = 7,
 
             /// <summary>
             /// 黑龙江
             /// </summary>
-            [AliasInShort("HL")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("HL")] [RegionCode(1_00_001_0008)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Heilongjiang = 8,
 
             /// <summary>
             /// 上海
             /// </summary>
-            [AliasInShort("SH")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("SH")] [RegionCode(1_00_001_0009)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shanghai = 9,
 
             /// <summary>
             /// 江苏
             /// </summary>
-            [AliasInShort("JS")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("JS")] [RegionCode(1_00_001_0010)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Jiangsu = 10,
 
             /// <summary>
             /// 浙江
             /// </summary>
-            [AliasInShort("ZJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("ZJ")] [RegionCode(1_00_001_0011)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Zhejiang = 11,
 
             /// <summary>
             /// 安徽
             /// </summary>
-            [AliasInShort("AH")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("AH")] [RegionCode(1_00_001_0012)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Anhui = 12,
 
             /// <summary>
             /// 福建
             /// </summary>
-            [AliasInShort("FJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("FJ")] [RegionCode(1_00_001_0013)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Fujian = 13,
 
             /// <summary>
             /// 江西
             /// </summary>
-            [AliasInShort("JX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("JX")] [RegionCode(1_00_001_0014)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Jiangxi = 14,
 
             /// <summary>
             /// 河南
             /// </summary>
-            [AliasInShort("HA")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("HA")] [RegionCode(1_00_001_0016)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Henan = 16,
 
             /// <summary>
             /// 山东
             /// </summary>
-            [AliasInShort("SD")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("SD")] [RegionCode(1_00_001_0015)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shandong = 15,
 
             /// <summary>
             /// 湖北
             /// </summary>
-            [AliasInShort("HB")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("HB")] [RegionCode(1_00_001_0017)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hubei = 17,
 
             /// <summary>
             /// 湖南
             /// </summary>
-            [AliasInShort("HN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("HN")] [RegionCode(1_00_001_0018)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hunan = 18,
 
             /// <summary>
             /// 广东
             /// </summary>
-            [AliasInShort("GD")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("GD")] [RegionCode(1_00_001_0019)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Guangdong = 19,
 
             /// <summary>
             /// 广西
             /// </summary>
-            [AliasInShort("GX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("GX")] [RegionCode(1_00_001_0020)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Guangxi = 20,
 
             /// <summary>
             /// 海南
             /// </summary>
-            [AliasInShort("HI")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("HI")] [RegionCode(1_00_001_0021)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Hainan = 21,
 
             /// <summary>
             /// 重庆
             /// </summary>
-            [AliasInShort("CQ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("CQ")] [RegionCode(1_00_001_0022)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Chongqing = 22,
 
             /// <summary>
             /// 四川
             /// </summary>
-            [AliasInShort("SC")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("SC")] [RegionCode(1_00_001_0023)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Sichuan = 23,
 
             /// <summary>
             /// 贵州
             /// </summary>
-            [AliasInShort("GZ")] [RegionFlag("mainland")]
+            [AliasInShort("GZ")] [RegionCode(1_00_001_0024)] [RegionFlag("mainland")]
             Guizhou = 24,
 
             /// <summary>
             /// 云南
             /// </summary>
-            [AliasInShort("YN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("YN")] [RegionCode(1_00_001_0025)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Yunnan = 25,
 
             /// <summary>
             /// 西藏
             /// </summary>
-            [AliasInShort("XZ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("XZ")] [RegionCode(1_00_001_0026)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Tibet = 26,
 
             /// <summary>
             /// 陕西
             /// </summary>
-            [AliasInShort("SN")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("SN")] [RegionCode(1_00_001_0027)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Shaanxi = 27,
 
 
             /// <summary>
             /// 甘肃
             /// </summary>
-            [AliasInShort("GS")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("GS")] [RegionCode(1_00_001_0028)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Gansu = 28,
 
             /// <summary>
             /// 青海
             /// </summary>
-            [AliasInShort("QH")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("QH")] [RegionCode(1_00_001_0029)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Qinghai = 29,
 
             /// <summary>
             /// 宁夏
             /// </summary>
-            [AliasInShort("NX")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("NX")] [RegionCode(1_00_001_0030)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Ningxia = 30,
 
             /// <summary>
             /// 新疆
             /// </summary>
-            [AliasInShort("XJ")] [RegionFlag("mainland")] [RegionFlag("endoland")]
+            [AliasInShort("XJ")] [RegionCode(1_00_001_0031)] [RegionFlag("mainland")] [RegionFlag("endoland")]
             Xinjiang = 31,
 
             /// <summary>
             /// Taiwan, China<br />
             /// 中华人民共和国台湾省
             /// </summary>
-            [AliasInShort("TW")] Taiwan = 32,
+            [AliasInShort("TW")] [RegionCode(1_00_001_0032)]
+            Taiwan = 32,
 
             /// <summary>
             /// HongKong, China<br />
             /// 中华人民共和国香港特别行政区
             /// </summary>
-            [AliasInShort("HK")] [RegionFlag("mainland")] [RegionFlag(" special_district")]
+            [AliasInShort("HK")] [RegionCode(1_00_001_0033)] [RegionFlag("mainland")] [RegionFlag(" special_district")]
             HongKong = 33,
 
             /// <summary>
             /// Macao, China<br />
             /// 中华人民共和国澳门特别行政区
             /// </summary>
-            [AliasInShort("MO")] [RegionFlag("mainland")] [RegionFlag(" special_district")]
+            [AliasInShort("MO")] [RegionCode(1_00_001_0034)] [RegionFlag("mainland")] [RegionFlag(" special_district")]
             Macao = 34,
 
             /// <summary>
@@ -477,6 +478,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -600,6 +611,34 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetEndolandRegionCodes()
             => Filter("endoland").Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
+
+        /// <summary>
+        /// 获得大陆地区的地区 CEP-1 代号
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetNumericMainlandRegionCodes()
+            => Filter("mainland").Select(member => member.Value.ToNumericRegionCode());
+
+        /// <summary>
+        /// 获得特别行政区地区 CEP-1 代号
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetNumericSpecialDistrictRegionCodes()
+            => Filter("special_district").Select(member => member.Value.ToNumericRegionCode());
+
+        /// <summary>
+        /// 获得内陆地区的地区 CEP-1 代号
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetNumericEndolandRegionCodes()
+            => Filter("endoland").Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

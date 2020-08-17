@@ -82,62 +82,74 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             /// <summary>
             /// Aysén
             /// </summary>
-            [AliasInShort("AI")] Aysén,
+            [AliasInShort("AI")] [RegionCode(5_00_012_0001)]
+            Aysén,
 
             /// <summary>
             /// Antofagasta
             /// </summary>
-            [AliasInShort("AN")] Antofagasta,
+            [AliasInShort("AN")] [RegionCode(5_00_012_0002)]
+            Antofagasta,
 
             /// <summary>
             /// Araucanía
             /// </summary>
-            [AliasInShort("AR")] Araucanía,
+            [AliasInShort("AR")] [RegionCode(5_00_012_0003)]
+            Araucanía,
 
             /// <summary>
             /// Atacama
             /// </summary>
-            [AliasInShort("AT")] Atacama,
+            [AliasInShort("AT")] [RegionCode(5_00_012_0004)]
+            Atacama,
 
             /// <summary>
             /// Coquimbo
             /// </summary>
-            [AliasInShort("CO")] Coquimbo,
+            [AliasInShort("CO")] [RegionCode(5_00_012_0005)]
+            Coquimbo,
 
             /// <summary>
             /// Libertador General Bernardo O’Higgins
             /// </summary>
-            [AliasInShort("LI")] LibertadorGeneralBernardoOHiggins,
+            [AliasInShort("LI")] [RegionCode(5_00_012_0006)]
+            LibertadorGeneralBernardoOHiggins,
 
             /// <summary>
             /// Los Lagos
             /// </summary>
-            [AliasInShort("LL")] LosLagos,
+            [AliasInShort("LL")] [RegionCode(5_00_012_0007)]
+            LosLagos,
 
             /// <summary>
             /// Los Ríos
             /// </summary>
-            [AliasInShort("LR")] LosRíos,
+            [AliasInShort("LR")] [RegionCode(5_00_012_0008)]
+            LosRíos,
 
             /// <summary>
             /// Magallanes Region
             /// </summary>
-            [AliasInShort("MA")] MagallanesRegion,
+            [AliasInShort("MA")] [RegionCode(5_00_012_0009)]
+            MagallanesRegion,
 
             /// <summary>
             /// Maule
             /// </summary>
-            [AliasInShort("ML")] Maule,
+            [AliasInShort("ML")] [RegionCode(5_00_012_0010)]
+            Maule,
 
             /// <summary>
             /// Santiago Metropolitan
             /// </summary>
-            [AliasInShort("RM")] SantiagoMetropolitan,
+            [AliasInShort("RM")] [RegionCode(5_00_012_0011)]
+            SantiagoMetropolitan,
 
             /// <summary>
             /// Valparaíso
             /// </summary>
-            [AliasInShort("VS")] Valparaíso,
+            [AliasInShort("VS")] [RegionCode(5_00_012_0012)]
+            Valparaíso,
 
             /// <summary>
             /// Unknown
@@ -165,6 +177,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CL-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -200,6 +222,13 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

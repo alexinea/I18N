@@ -102,82 +102,82 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Doukkala-Abda
             /// </summary>
-            [AliasInShort("10")] DoukkalaAbda,
+            [AliasInShort("10")][RegionCode(3_00_139_0010)] DoukkalaAbda,
 
             /// <summary>
             /// Marrakesh-Tensift-El Haouz
             /// </summary>
-            [AliasInShort("11")] MarrakeshTensiftElHaouz,
+            [AliasInShort("11")][RegionCode(3_00_139_0011)] MarrakeshTensiftElHaouz,
 
             /// <summary>
             /// Tadla-Azilal
             /// </summary>
-            [AliasInShort("12")] TadlaAzilal,
+            [AliasInShort("12")][RegionCode(3_00_139_0012)] TadlaAzilal,
 
             /// <summary>
             /// Souss-Massa-Drâa
             /// </summary>
-            [AliasInShort("13")] SoussMassaDrâa,
+            [AliasInShort("13")][RegionCode(3_00_139_0013)] SoussMassaDrâa,
 
             /// <summary>
             /// Guelmim-Es Semara
             /// </summary>
-            [AliasInShort("14")] GuelmimEsSemara,
+            [AliasInShort("14")][RegionCode(3_00_139_0014)] GuelmimEsSemara,
 
             /// <summary>
             /// Laâyoune-Boujdour-Sakia El Hamra
             /// </summary>
-            [AliasInShort("15")] LaâyouneBoujdourSakiaElHamra,
+            [AliasInShort("15")][RegionCode(3_00_139_0015)] LaâyouneBoujdourSakiaElHamra,
 
             /// <summary>
             /// Oued Ed-Dahab-Lagouira
             /// </summary>
-            [AliasInShort("16")] OuedEdDahabLagouira,
+            [AliasInShort("16")][RegionCode(3_00_139_0016)] OuedEdDahabLagouira,
 
             /// <summary>
             /// Tangier-Tétouan
             /// </summary>
-            [AliasInShort("01")] TangierTétouan,
+            [AliasInShort("01")][RegionCode(3_00_139_0001)] TangierTétouan,
 
             /// <summary>
             /// Gharb-Chrarda-Béni Hssen
             /// </summary>
-            [AliasInShort("02")] GharbChrardaBéniHssen,
+            [AliasInShort("02")][RegionCode(3_00_139_0002)] GharbChrardaBéniHssen,
 
             /// <summary>
             /// Taza-Al Hoceima-Taounate
             /// </summary>
-            [AliasInShort("03")] TazaAlHoceimaTaounate,
+            [AliasInShort("03")][RegionCode(3_00_139_0003)] TazaAlHoceimaTaounate,
 
             /// <summary>
             /// Oriental
             /// </summary>
-            [AliasInShort("04")] Oriental,
+            [AliasInShort("04")][RegionCode(3_00_139_0004)] Oriental,
 
             /// <summary>
             /// Fès-Boulemane
             /// </summary>
-            [AliasInShort("05")] FèsBoulemane,
+            [AliasInShort("05")][RegionCode(3_00_139_0005)] FèsBoulemane,
 
             /// <summary>
             /// Meknès-Tafilalet
             /// </summary>
-            [AliasInShort("06")] MeknèsTafilalet,
+            [AliasInShort("06")][RegionCode(3_00_139_0006)] MeknèsTafilalet,
 
             /// <summary>
             /// Rabat-Salé-Zemmour-Zaer
             /// </summary>
-            [AliasInShort("07")] RabatSaléZemmourZaer,
+            [AliasInShort("07")][RegionCode(3_00_139_0007)] RabatSaléZemmourZaer,
 
             /// <summary>
             /// Grand Casablanca
             /// </summary>
-            [AliasInShort("08")] GrandCasablanca,
+            [AliasInShort("08")][RegionCode(3_00_139_0008)] GrandCasablanca,
 
             /// <summary>
             /// Chaouia-Ouardigha
             /// </summary>
-            [AliasInShort("09")] ChaouiaOuardigha,
+            [AliasInShort("09")][RegionCode(3_00_139_0009)] ChaouiaOuardigha,
 
             /// <summary>
             /// Unknown
@@ -205,6 +205,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MA-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -240,6 +250,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

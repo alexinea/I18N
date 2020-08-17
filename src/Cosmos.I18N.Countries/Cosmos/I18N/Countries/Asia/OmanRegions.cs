@@ -77,57 +77,57 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Janub al Batinah
             /// </summary>
-            [AliasInShort("BJ")] JanubAlBatinah,
+            [AliasInShort("BJ")][RegionCode(1_00_129_0001)] JanubAlBatinah,
 
             /// <summary>
             /// Shamal al Batinah
             /// </summary>
-            [AliasInShort("BS")] ShamalAlBatinah,
+            [AliasInShort("BS")][RegionCode(1_00_129_0002)] ShamalAlBatinah,
 
             /// <summary>
             /// Al Buraimi
             /// </summary>
-            [AliasInShort("BU")] AlBuraimi,
+            [AliasInShort("BU")][RegionCode(1_00_129_0003)] AlBuraimi,
 
             /// <summary>
             /// Ad Dakhiliyah
             /// </summary>
-            [AliasInShort("DA")] AdDakhiliyah,
+            [AliasInShort("DA")][RegionCode(1_00_129_0004)] AdDakhiliyah,
 
             /// <summary>
             /// Muscat
             /// </summary>
-            [AliasInShort("MA")] Muscat,
+            [AliasInShort("MA")][RegionCode(1_00_129_0005)] Muscat,
 
             /// <summary>
             /// Musandam
             /// </summary>
-            [AliasInShort("MU")] Musandam,
+            [AliasInShort("MU")][RegionCode(1_00_129_0006)] Musandam,
 
             /// <summary>
             /// Janub ash Sharqiyah
             /// </summary>
-            [AliasInShort("SJ")] JanubAshSharqiyah,
+            [AliasInShort("SJ")][RegionCode(1_00_129_0007)] JanubAshSharqiyah,
 
             /// <summary>
             /// Shamal ash Sharqiyah
             /// </summary>
-            [AliasInShort("SS")] ShamalAshSharqiyah,
+            [AliasInShort("SS")][RegionCode(1_00_129_0008)] ShamalAshSharqiyah,
 
             /// <summary>
             /// Al Wusta
             /// </summary>
-            [AliasInShort("WU")] AlWusta,
+            [AliasInShort("WU")][RegionCode(1_00_129_0009)] AlWusta,
 
             /// <summary>
             /// Ad Dhahirah
             /// </summary>
-            [AliasInShort("ZA")] AdDhahirah,
+            [AliasInShort("ZA")][RegionCode(1_00_129_0010)] AdDhahirah,
 
             /// <summary>
             /// Dhofar
             /// </summary>
-            [AliasInShort("ZU")] Dhofar,
+            [AliasInShort("ZU")][RegionCode(1_00_129_0011)] Dhofar,
 
             /// <summary>
             /// Unknown
@@ -155,6 +155,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"OM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -190,6 +200,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

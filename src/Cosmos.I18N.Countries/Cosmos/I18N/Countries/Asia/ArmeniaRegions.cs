@@ -77,57 +77,68 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Aragatsotn
             /// </summary>
-            [AliasInShort("AG")] Aragatsotn,
+            [AliasInShort("AG")] [RegionCode(1_00_102_0001)]
+            Aragatsotn,
 
             /// <summary>
             /// Ararat
             /// </summary>
-            [AliasInShort("AR")] Ararat,
+            [AliasInShort("AR")] [RegionCode(1_00_102_0002)]
+            Ararat,
 
             /// <summary>
             /// Armavir
             /// </summary>
-            [AliasInShort("AV")] Armavir,
+            [AliasInShort("AV")] [RegionCode(1_00_102_0003)]
+            Armavir,
 
             /// <summary>
             /// Yerevan
             /// </summary>
-            [AliasInShort("ER")] Yerevan,
+            [AliasInShort("ER")] [RegionCode(1_00_102_0004)]
+            Yerevan,
 
             /// <summary>
             /// Gegharkunik
             /// </summary>
-            [AliasInShort("GR")] Gegharkunik,
+            [AliasInShort("GR")] [RegionCode(1_00_102_0005)]
+            Gegharkunik,
 
             /// <summary>
             /// Kotayk
             /// </summary>
-            [AliasInShort("KT")] Kotayk,
+            [AliasInShort("KT")] [RegionCode(1_00_102_0006)]
+            Kotayk,
 
             /// <summary>
             /// Lori
             /// </summary>
-            [AliasInShort("LO")] Lori,
+            [AliasInShort("LO")] [RegionCode(1_00_102_0007)]
+            Lori,
 
             /// <summary>
             /// Shirak
             /// </summary>
-            [AliasInShort("SH")] Shirak,
+            [AliasInShort("SH")] [RegionCode(1_00_102_0008)]
+            Shirak,
 
             /// <summary>
             /// Syunik
             /// </summary>
-            [AliasInShort("SU")] Syunik,
+            [AliasInShort("SU")] [RegionCode(1_00_102_0009)]
+            Syunik,
 
             /// <summary>
             /// Tavush
             /// </summary>
-            [AliasInShort("TV")] Tavush,
+            [AliasInShort("TV")] [RegionCode(1_00_102_0010)]
+            Tavush,
 
             /// <summary>
             /// Vayots Dzor
             /// </summary>
-            [AliasInShort("VD")] VayotsDzor,
+            [AliasInShort("VD")] [RegionCode(1_00_102_0011)]
+            VayotsDzor,
 
             /// <summary>
             /// Unknown
@@ -155,6 +166,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -190,6 +211,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

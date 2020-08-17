@@ -37,17 +37,20 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Alo
             /// </summary>
-            [AliasInShort("AL")] Alo,
+            [AliasInShort("AL")] [RegionCode(6_00_116_0001)]
+            Alo,
 
             /// <summary>
             /// Sigave
             /// </summary>
-            [AliasInShort("SG")] Sigave,
+            [AliasInShort("SG")] [RegionCode(6_00_116_0002)]
+            Sigave,
 
             /// <summary>
             /// Uvea
             /// </summary>
-            [AliasInShort("UV")] Uvea,
+            [AliasInShort("UV")] [RegionCode(6_00_116_0003)]
+            Uvea,
 
             /// <summary>
             /// Unknown<br />未知
@@ -75,6 +78,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"WF-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -110,6 +123,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

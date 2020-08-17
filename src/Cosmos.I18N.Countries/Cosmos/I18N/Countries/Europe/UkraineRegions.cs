@@ -157,137 +157,164 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Vinnychchyna
             /// </summary>
-            [AliasInShort("05")] Vinnychchyna,
+            [AliasInShort("05")] [RegionCode(2_00_140_0005)]
+            Vinnychchyna,
 
             /// <summary>
             /// Volyn
             /// </summary>
-            [AliasInShort("07")] Volyn,
+            [AliasInShort("07")] [RegionCode(2_00_140_0007)]
+            Volyn,
 
             /// <summary>
             /// Luhanshchyna
             /// </summary>
-            [AliasInShort("09")] Luhanshchyna,
+            [AliasInShort("09")] [RegionCode(2_00_140_0009)]
+            Luhanshchyna,
 
             /// <summary>
             /// Dnipropetrovshchyna
             /// </summary>
-            [AliasInShort("12")] Dnipropetrovshchyna,
+            [AliasInShort("12")] [RegionCode(2_00_140_0012)]
+            Dnipropetrovshchyna,
 
             /// <summary>
             /// Donechchyna
             /// </summary>
-            [AliasInShort("14")] Donechchyna,
+            [AliasInShort("14")] [RegionCode(2_00_140_0014)]
+            Donechchyna,
 
             /// <summary>
             /// Zhytomyrshchyna
             /// </summary>
-            [AliasInShort("18")] Zhytomyrshchyna,
+            [AliasInShort("18")] [RegionCode(2_00_140_0018)]
+            Zhytomyrshchyna,
 
             /// <summary>
             /// Zakarpattia
             /// </summary>
-            [AliasInShort("21")] Zakarpattia,
+            [AliasInShort("21")] [RegionCode(2_00_140_0021)]
+            Zakarpattia,
 
             /// <summary>
             /// Zaporizhzhya
             /// </summary>
-            [AliasInShort("23")] Zaporizhzhya,
+            [AliasInShort("23")] [RegionCode(2_00_140_0023)]
+            Zaporizhzhya,
 
             /// <summary>
             /// Prykarpattia
             /// </summary>
-            [AliasInShort("26")] Prykarpattia,
+            [AliasInShort("26")] [RegionCode(2_00_140_0026)]
+            Prykarpattia,
 
             /// <summary>
             /// Kiev
             /// </summary>
-            [AliasInShort("30")] Kiev,
+            [AliasInShort("30")] [RegionCode(2_00_140_0030)]
+            Kiev,
 
             /// <summary>
             /// Kyivshchyna
             /// </summary>
-            [AliasInShort("32")] Kyivshchyna,
+            [AliasInShort("32")] [RegionCode(2_00_140_0032)]
+            Kyivshchyna,
 
             /// <summary>
             /// Kirovohradschyna
             /// </summary>
-            [AliasInShort("35")] Kirovohradschyna,
+            [AliasInShort("35")] [RegionCode(2_00_140_0035)]
+            Kirovohradschyna,
 
             /// <summary>
             /// Sevastopol
             /// </summary>
-            [AliasInShort("40")] Sevastopol,
+            [AliasInShort("40")] [RegionCode(2_00_140_0040)]
+            Sevastopol,
 
             /// <summary>
             /// Crimea
             /// </summary>
-            [AliasInShort("43")] Crimea,
+            [AliasInShort("43")] [RegionCode(2_00_140_0043)]
+            Crimea,
 
             /// <summary>
             /// Lvivshchyna
             /// </summary>
-            [AliasInShort("46")] Lvivshchyna,
+            [AliasInShort("46")] [RegionCode(2_00_140_0046)]
+            Lvivshchyna,
 
             /// <summary>
             /// Mykolayivschyna
             /// </summary>
-            [AliasInShort("48")] Mykolayivschyna,
+            [AliasInShort("48")] [RegionCode(2_00_140_0048)]
+            Mykolayivschyna,
 
             /// <summary>
             /// Odeshchyna
             /// </summary>
-            [AliasInShort("51")] Odeshchyna,
+            [AliasInShort("51")] [RegionCode(2_00_140_0051)]
+            Odeshchyna,
 
             /// <summary>
             /// Poltavshchyna
             /// </summary>
-            [AliasInShort("53")] Poltavshchyna,
+            [AliasInShort("53")] [RegionCode(2_00_140_0053)]
+            Poltavshchyna,
 
             /// <summary>
             /// Rivnenshchyna
             /// </summary>
-            [AliasInShort("56")] Rivnenshchyna,
+            [AliasInShort("56")] [RegionCode(2_00_140_0056)]
+            Rivnenshchyna,
 
             /// <summary>
             /// Sumshchyna
             /// </summary>
-            [AliasInShort("59")] Sumshchyna,
+            [AliasInShort("59")] [RegionCode(2_00_140_0059)]
+            Sumshchyna,
 
             /// <summary>
             /// Ternopilshchyna
             /// </summary>
-            [AliasInShort("61")] Ternopilshchyna,
+            [AliasInShort("61")] [RegionCode(2_00_140_0061)]
+            Ternopilshchyna,
 
             /// <summary>
             /// Kharkivshchyna
             /// </summary>
-            [AliasInShort("63")] Kharkivshchyna,
+            [AliasInShort("63")] [RegionCode(2_00_140_0062)]
+            Kharkivshchyna,
 
             /// <summary>
             /// Khersonshchyna
             /// </summary>
-            [AliasInShort("65")] Khersonshchyna,
+            [AliasInShort("65")] [RegionCode(2_00_140_0065)]
+            Khersonshchyna,
 
             /// <summary>
             /// Khmelnychchyna
             /// </summary>
-            [AliasInShort("68")] Khmelnychchyna,
+            [AliasInShort("68")] [RegionCode(2_00_140_0068)]
+            Khmelnychchyna,
 
             /// <summary>
             /// Cherkashchyna
             /// </summary>
-            [AliasInShort("71")] Cherkashchyna,
+            [AliasInShort("71")] [RegionCode(2_00_140_0071)]
+            Cherkashchyna,
 
             /// <summary>
             /// Chernihivshchyna
             /// </summary>
-            [AliasInShort("74")] Chernihivshchyna,
+            [AliasInShort("74")] [RegionCode(2_00_140_0074)]
+            Chernihivshchyna,
 
             /// <summary>
             /// Chernivtsi Oblast
             /// </summary>
-            [AliasInShort("77")] ChernivtsiOblast,
+            [AliasInShort("77")] [RegionCode(2_00_140_0077)]
+            ChernivtsiOblast,
 
             /// <summary>
             /// Unknown
@@ -315,6 +342,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"UA-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -350,6 +387,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

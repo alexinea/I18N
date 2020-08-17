@@ -113,92 +113,92 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Attapeu
             /// </summary>
-            [AliasInShort("AT")] Attapeu,
+            [AliasInShort("AT")][RegionCode(1_00_122_0001)] Attapeu,
 
             /// <summary>
             /// Bokeo
             /// </summary>
-            [AliasInShort("BK")] Bokeo,
+            [AliasInShort("BK")][RegionCode(1_00_122_0002)] Bokeo,
 
             /// <summary>
             /// Bolikhamsai
             /// </summary>
-            [AliasInShort("BL")] Bolikhamsai,
+            [AliasInShort("BL")][RegionCode(1_00_122_0003)] Bolikhamsai,
 
             /// <summary>
             /// Babylon
             /// </summary>
-            [AliasInShort("CH")] Champasak,
+            [AliasInShort("CH")][RegionCode(1_00_122_0004)] Champasak,
 
             /// <summary>
             /// Houaphanh
             /// </summary>
-            [AliasInShort("HO")] Houaphanh,
+            [AliasInShort("HO")][RegionCode(1_00_122_0005)] Houaphanh,
 
             /// <summary>
             /// Khammouane
             /// </summary>
-            [AliasInShort("KH")] Khammouane,
+            [AliasInShort("KH")][RegionCode(1_00_122_0006)] Khammouane,
 
             /// <summary>
             /// Luang Namtha
             /// </summary>
-            [AliasInShort("LM")] LuangNamtha,
+            [AliasInShort("LM")][RegionCode(1_00_122_0007)] LuangNamtha,
 
             /// <summary>
             /// Luang Prabang
             /// </summary>
-            [AliasInShort("LP")] LuangPrabang,
+            [AliasInShort("LP")][RegionCode(1_00_122_0008)] LuangPrabang,
 
             /// <summary>
             /// Oudomxay
             /// </summary>
-            [AliasInShort("OU")] Oudomxay,
+            [AliasInShort("OU")][RegionCode(1_00_122_0009)] Oudomxay,
 
             /// <summary>
             /// Phongsaly
             /// </summary>
-            [AliasInShort("PH")] Phongsaly,
+            [AliasInShort("PH")][RegionCode(1_00_122_0010)] Phongsaly,
 
             /// <summary>
             /// Salavan
             /// </summary>
-            [AliasInShort("SL")] Salavan,
+            [AliasInShort("SL")][RegionCode(1_00_122_0011)] Salavan,
 
             /// <summary>
             /// Savannakhet
             /// </summary>
-            [AliasInShort("SV")] Savannakhet,
+            [AliasInShort("SV")][RegionCode(1_00_122_0012)] Savannakhet,
 
             /// <summary>
             /// Vientiane Province
             /// </summary>
-            [AliasInShort("VI")] VientianeProvince,
+            [AliasInShort("VI")][RegionCode(1_00_122_0013)] VientianeProvince,
 
             /// <summary>
             /// Vientiane
             /// </summary>
-            [AliasInShort("VT")] Vientiane,
+            [AliasInShort("VT")][RegionCode(1_00_122_0014)] Vientiane,
 
             /// <summary>
             /// Sainyabuli
             /// </summary>
-            [AliasInShort("XA")] Sainyabuli,
+            [AliasInShort("XA")][RegionCode(1_00_122_0015)] Sainyabuli,
 
             /// <summary>
             /// Sekong
             /// </summary>
-            [AliasInShort("XE")] Sekong,
+            [AliasInShort("XE")][RegionCode(1_00_122_0016)] Sekong,
 
             /// <summary>
             /// Xiangkhouang
             /// </summary>
-            [AliasInShort("XI")] Xiangkhouang,
+            [AliasInShort("XI")][RegionCode(1_00_122_0017)] Xiangkhouang,
 
             /// <summary>
             /// Xaisomboun
             /// </summary>
-            [AliasInShort("XS")] Xaisomboun,
+            [AliasInShort("XS")][RegionCode(1_00_122_0018)] Xaisomboun,
 
             /// <summary>
             /// Unknown
@@ -226,6 +226,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"LA-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -261,6 +271,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

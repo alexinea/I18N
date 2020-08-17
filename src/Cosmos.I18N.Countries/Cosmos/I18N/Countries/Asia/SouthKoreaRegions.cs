@@ -107,87 +107,87 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Seoul
             /// </summary>
-            [AliasInShort("11")] Seoul,
+            [AliasInShort("11")][RegionCode(1_00_012_0011)] Seoul,
 
             /// <summary>
             /// Busan
             /// </summary>
-            [AliasInShort("26")] Busan,
+            [AliasInShort("26")][RegionCode(1_00_012_0026)] Busan,
 
             /// <summary>
             /// Daegu
             /// </summary>
-            [AliasInShort("27")] Daegu,
+            [AliasInShort("27")][RegionCode(1_00_012_0027)] Daegu,
 
             /// <summary>
             /// Incheon
             /// </summary>
-            [AliasInShort("28")] Incheon,
+            [AliasInShort("28")][RegionCode(1_00_012_0028)] Incheon,
 
             /// <summary>
             /// Gwangju City
             /// </summary>
-            [AliasInShort("29")] GwangjuCity,
+            [AliasInShort("29")][RegionCode(1_00_012_0029)] GwangjuCity,
 
             /// <summary>
             /// Daejeon
             /// </summary>
-            [AliasInShort("30")] Daejeon,
+            [AliasInShort("30")][RegionCode(1_00_012_0030)] Daejeon,
 
             /// <summary>
             /// Ulsan
             /// </summary>
-            [AliasInShort("31")] Ulsan,
+            [AliasInShort("31")][RegionCode(1_00_012_0031)] Ulsan,
 
             /// <summary>
             /// Gyeonggi
             /// </summary>
-            [AliasInShort("41")] Gyeonggi,
+            [AliasInShort("41")][RegionCode(1_00_012_0041)] Gyeonggi,
 
             /// <summary>
             /// Gangwon
             /// </summary>
-            [AliasInShort("42")] Gangwon,
+            [AliasInShort("42")][RegionCode(1_00_012_0042)] Gangwon,
 
             /// <summary>
             /// North Chungcheong
             /// </summary>
-            [AliasInShort("43")] NorthChungcheong,
+            [AliasInShort("43")][RegionCode(1_00_012_0043)] NorthChungcheong,
 
             /// <summary>
             /// South Chungcheong
             /// </summary>
-            [AliasInShort("44")] SouthChungcheong,
+            [AliasInShort("44")][RegionCode(1_00_012_0044)] SouthChungcheong,
 
             /// <summary>
             /// North Jeolla
             /// </summary>
-            [AliasInShort("45")] NorthJeolla,
+            [AliasInShort("45")][RegionCode(1_00_012_0045)] NorthJeolla,
 
             /// <summary>
             /// South Jeolla
             /// </summary>
-            [AliasInShort("46")] SouthJeolla,
+            [AliasInShort("46")][RegionCode(1_00_012_0046)] SouthJeolla,
 
             /// <summary>
             /// North Gyeongsang
             /// </summary>
-            [AliasInShort("47")] NorthGyeongsang,
+            [AliasInShort("47")][RegionCode(1_00_012_0047)] NorthGyeongsang,
 
             /// <summary>
             /// South Gyeongsang
             /// </summary>
-            [AliasInShort("48")] SouthGyeongsang,
+            [AliasInShort("48")][RegionCode(1_00_012_0048)] SouthGyeongsang,
 
             /// <summary>
             /// Jeju
             /// </summary>
-            [AliasInShort("49")] Jeju,
+            [AliasInShort("49")][RegionCode(1_00_012_0049)] Jeju,
 
             /// <summary>
             /// Sejong
             /// </summary>
-            [AliasInShort("50")] Sejong,
+            [AliasInShort("50")][RegionCode(1_00_012_0050)] Sejong,
 
             /// <summary>
             /// Unknown
@@ -215,6 +215,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"KR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -250,6 +260,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

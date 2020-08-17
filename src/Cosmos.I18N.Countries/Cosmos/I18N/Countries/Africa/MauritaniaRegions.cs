@@ -97,77 +97,92 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Guidimaka
             /// </summary>
-            [AliasInShort("10")] Guidimaka,
+            [AliasInShort("10")] [RegionCode(3_00_135_0010)]
+            Guidimaka,
 
             /// <summary>
             /// Tiris Zemmour
             /// </summary>
-            [AliasInShort("11")] TirisZemmour,
+            [AliasInShort("11")] [RegionCode(3_00_135_0011)]
+            TirisZemmour,
 
             /// <summary>
             /// Inchiri
             /// </summary>
-            [AliasInShort("12")] Inchiri,
+            [AliasInShort("12")] [RegionCode(3_00_135_0012)]
+            Inchiri,
 
             /// <summary>
             /// Nouakchott Ouest
             /// </summary>
-            [AliasInShort("13")] NouakchottOuest,
+            [AliasInShort("13")] [RegionCode(3_00_135_0013)]
+            NouakchottOuest,
 
             /// <summary>
             /// Nouakchott Nord
             /// </summary>
-            [AliasInShort("14")] NouakchottNord,
+            [AliasInShort("14")] [RegionCode(3_00_135_0014)]
+            NouakchottNord,
 
             /// <summary>
             /// Nouakchott Sud
             /// </summary>
-            [AliasInShort("15")] NouakchottSud,
+            [AliasInShort("15")] [RegionCode(3_00_135_0015)]
+            NouakchottSud,
 
             /// <summary>
             /// Hodh Ech Chargui
             /// </summary>
-            [AliasInShort("01")] HodhEchChargui,
+            [AliasInShort("01")] [RegionCode(3_00_135_0001)]
+            HodhEchChargui,
 
             /// <summary>
             /// Hodh El Gharbi
             /// </summary>
-            [AliasInShort("02")] HodhElGharbi,
+            [AliasInShort("02")] [RegionCode(3_00_135_0002)]
+            HodhElGharbi,
 
             /// <summary>
             /// Assaba
             /// </summary>
-            [AliasInShort("03")] Assaba,
+            [AliasInShort("03")] [RegionCode(3_00_135_0003)]
+            Assaba,
 
             /// <summary>
             /// Gorgol
             /// </summary>
-            [AliasInShort("04")] Gorgol,
+            [AliasInShort("04")] [RegionCode(3_00_135_0004)]
+            Gorgol,
 
             /// <summary>
             /// Brakna
             /// </summary>
-            [AliasInShort("05")] Brakna,
+            [AliasInShort("05")] [RegionCode(3_00_135_0005)]
+            Brakna,
 
             /// <summary>
             /// Trarza
             /// </summary>
-            [AliasInShort("06")] Trarza,
+            [AliasInShort("06")] [RegionCode(3_00_135_0006)]
+            Trarza,
 
             /// <summary>
             /// Adrar
             /// </summary>
-            [AliasInShort("07")] Adrar,
+            [AliasInShort("07")] [RegionCode(3_00_135_0007)]
+            Adrar,
 
             /// <summary>
             /// Dakhlet Nouadhibou
             /// </summary>
-            [AliasInShort("08")] DakhletNouadhibou,
+            [AliasInShort("08")] [RegionCode(3_00_135_0008)]
+            DakhletNouadhibou,
 
             /// <summary>
             /// Tagant
             /// </summary>
-            [AliasInShort("09")] Tagant,
+            [AliasInShort("09")] [RegionCode(3_00_135_0009)]
+            Tagant,
 
             /// <summary>
             /// Unknown
@@ -195,6 +210,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -230,6 +255,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

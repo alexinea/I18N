@@ -67,47 +67,47 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Batken
             /// </summary>
-            [AliasInShort("B")] Batken,
+            [AliasInShort("B")][RegionCode(1_00_121_0001)] Batken,
 
             /// <summary>
             /// Chuy
             /// </summary>
-            [AliasInShort("C")] Chuy,
+            [AliasInShort("C")][RegionCode(1_00_121_0002)] Chuy,
 
             /// <summary>
             /// Bishkek
             /// </summary>
-            [AliasInShort("GB")] Bishkek,
+            [AliasInShort("GB")][RegionCode(1_00_121_0003)] Bishkek,
 
             /// <summary>
             /// Osh
             /// </summary>
-            [AliasInShort("GO")] Osh,
+            [AliasInShort("GO")][RegionCode(1_00_121_0004)] Osh,
 
             /// <summary>
             /// Jalal-Abad
             /// </summary>
-            [AliasInShort("J")] JalalAbad,
+            [AliasInShort("J")][RegionCode(1_00_121_0005)] JalalAbad,
 
             /// <summary>
             /// Naryn
             /// </summary>
-            [AliasInShort("N")] Naryn,
+            [AliasInShort("N")][RegionCode(1_00_121_0006)] Naryn,
 
             /// <summary>
             /// Osh Region
             /// </summary>
-            [AliasInShort("O")] OshRegion,
+            [AliasInShort("O")][RegionCode(1_00_121_0007)] OshRegion,
 
             /// <summary>
             /// Talas
             /// </summary>
-            [AliasInShort("T")] Talas,
+            [AliasInShort("T")][RegionCode(1_00_121_0008)] Talas,
 
             /// <summary>
             /// Issyk-Kul
             /// </summary>
-            [AliasInShort("Y")] IssykKul,
+            [AliasInShort("Y")][RegionCode(1_00_121_0009)] IssykKul,
 
             /// <summary>
             /// Unknown
@@ -135,6 +135,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"KG-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -170,6 +180,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

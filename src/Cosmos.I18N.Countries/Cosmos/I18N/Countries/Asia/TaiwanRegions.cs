@@ -134,128 +134,150 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Changhua
             /// </summary>
-            [AliasInShort("CHA")] Changhua,
+            [AliasInShort("CHA")] [RegionCode(1_00_001_0032_1001)]
+            Changhua,
 
             /// <summary>
             /// Chiayi County
             /// </summary>
-            [AliasInShort("CYI")] ChiayiCounty,
+            [AliasInShort("CYI")] [RegionCode(1_00_001_0032_1002)]
+            ChiayiCounty,
 
             /// <summary>
             /// Chiayi
             /// </summary>
-            [AliasInShort("CYQ")] Chiayi,
+            [AliasInShort("CYQ")] [RegionCode(1_00_001_0032_1003)]
+            Chiayi,
 
             /// <summary>
             /// Hsinchu County
             /// </summary>
-            [AliasInShort("HSQ")] HsinchuCounty,
+            [AliasInShort("HSQ")] [RegionCode(1_00_001_0032_1004)]
+            HsinchuCounty,
 
             /// <summary>
             /// Hsinchu
             /// </summary>
-            [AliasInShort("HSZ")] Hsinchu,
+            [AliasInShort("HSZ")] [RegionCode(1_00_001_0032_1005)]
+            Hsinchu,
 
             /// <summary>
             /// Hualien
             /// </summary>
-            [AliasInShort("HUA")] Hualien,
+            [AliasInShort("HUA")] [RegionCode(1_00_001_0032_1006)]
+            Hualien,
 
             /// <summary>
             /// Yilan
             /// </summary>
-            [AliasInShort("ILA")] Yilan,
+            [AliasInShort("ILA")] [RegionCode(1_00_001_0032_1007)]
+            Yilan,
 
             /// <summary>
             /// Keelung
             /// </summary>
-            [AliasInShort("KEE")] Keelung,
+            [AliasInShort("KEE")] [RegionCode(1_00_001_0032_1008)]
+            Keelung,
 
             /// <summary>
             /// Kaohsiung
             /// <br />
             /// 高雄，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("KHH")] Kaohsiung,
+            [AliasInShort("KHH")] [RegionCode(1_00_001_0032_1009)]
+            Kaohsiung,
 
             /// <summary>
             /// Kinmen
             /// <br />
             /// 金门，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("KIN")] Kinmen,
+            [AliasInShort("KIN")] [RegionCode(1_00_001_0032_1010)]
+            Kinmen,
 
             /// <summary>
             /// Lienchiang
             /// </summary>
-            [AliasInShort("LTE")] Lienchiang,
+            [AliasInShort("LTE")] [RegionCode(1_00_001_0032_1011)]
+            Lienchiang,
 
             /// <summary>
             /// Miaoli
             /// </summary>
-            [AliasInShort("MIA")] Miaoli,
+            [AliasInShort("MIA")] [RegionCode(1_00_001_0032_1012)]
+            Miaoli,
 
             /// <summary>
             /// Nantou
             /// </summary>
-            [AliasInShort("NAN")] Nantou,
+            [AliasInShort("NAN")] [RegionCode(1_00_001_0032_1013)]
+            Nantou,
 
             /// <summary>
             /// New Taipei
             /// <br />
             /// 新北，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("NWT")] NewTaipei,
+            [AliasInShort("NWT")] [RegionCode(1_00_001_0032_1014)]
+            NewTaipei,
 
             /// <summary>
             /// Penghu
             /// <br />
             /// 澎湖，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("PEN")] Penghu,
+            [AliasInShort("PEN")] [RegionCode(1_00_001_0032_1015)]
+            Penghu,
 
             /// <summary>
             /// Pingtung
             /// </summary>
-            [AliasInShort("PIF")] Pingtung,
+            [AliasInShort("PIF")] [RegionCode(1_00_001_0032_1016)]
+            Pingtung,
 
             /// <summary>
             /// Taoyuan
             /// <br />
             /// 桃园，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("TAO")] Taoyuan,
+            [AliasInShort("TAO")] [RegionCode(1_00_001_0032_1017)]
+            Taoyuan,
 
             /// <summary>
             /// Tainan
             /// <br />
             /// 台南，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("TNN")] Tainan,
+            [AliasInShort("TNN")] [RegionCode(1_00_001_0032_1018)]
+            Tainan,
 
             /// <summary>
             /// Taipei
             /// <br />
             /// 台北，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("TPE")] Taipei,
+            [AliasInShort("TPE")] [RegionCode(1_00_001_0032_1019)]
+            Taipei,
 
             /// <summary>
             /// Taitung
             /// </summary>
-            [AliasInShort("TTT")] Taitung,
+            [AliasInShort("TTT")] [RegionCode(1_00_001_0032_1020)]
+            Taitung,
 
             /// <summary>
             /// Taichung
             /// </summary>
-            [AliasInShort("TXG")] Taichung,
+            [AliasInShort("TXG")] [RegionCode(1_00_001_0032_1021)]
+            Taichung,
 
             /// <summary>
             /// Yunlin
             /// <br />
             /// 榆林，中国台湾省的一部分
             /// </summary>
-            [AliasInShort("YUN")] Yunlin,
+            [AliasInShort("YUN")] [RegionCode(1_00_001_0032_1022)]
+            Yunlin,
 
             /// <summary>
             /// Unknown
@@ -283,6 +305,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CN-TW-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -318,6 +350,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

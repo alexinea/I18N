@@ -82,62 +82,74 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Lékoumou
             /// </summary>
-            [AliasInShort("2")] Lékoumou,
+            [AliasInShort("2")] [RegionCode(3_00_112_0002)]
+            Lékoumou,
 
             /// <summary>
             /// Kouilou
             /// </summary>
-            [AliasInShort("5")] Kouilou,
+            [AliasInShort("5")] [RegionCode(3_00_112_0005)]
+            Kouilou,
 
             /// <summary>
             /// Likouala
             /// </summary>
-            [AliasInShort("7")] Likouala,
+            [AliasInShort("7")] [RegionCode(3_00_112_0007)]
+            Likouala,
 
             /// <summary>
             /// Cuvette
             /// </summary>
-            [AliasInShort("8")] Cuvette,
+            [AliasInShort("8")] [RegionCode(3_00_112_0008)]
+            Cuvette,
 
             /// <summary>
             /// Niari
             /// </summary>
-            [AliasInShort("9")] Niari,
+            [AliasInShort("9")] [RegionCode(3_00_112_0009)]
+            Niari,
 
             /// <summary>
             /// Bouenza
             /// </summary>
-            [AliasInShort("11")] Bouenza,
+            [AliasInShort("11")] [RegionCode(3_00_112_0011)]
+            Bouenza,
 
             /// <summary>
             /// Pool
             /// </summary>
-            [AliasInShort("12")] Pool,
+            [AliasInShort("12")] [RegionCode(3_00_112_0012)]
+            Pool,
 
             /// <summary>
             /// Sangha
             /// </summary>
-            [AliasInShort("13")] Sangha,
+            [AliasInShort("13")] [RegionCode(3_00_112_0013)]
+            Sangha,
 
             /// <summary>
             /// Plateaux
             /// </summary>
-            [AliasInShort("14")] Plateaux,
+            [AliasInShort("14")] [RegionCode(3_00_112_0014)]
+            Plateaux,
 
             /// <summary>
             /// Cuvette-Ouest
             /// </summary>
-            [AliasInShort("15")] CuvetteOuest,
+            [AliasInShort("15")] [RegionCode(3_00_112_0015)]
+            CuvetteOuest,
 
             /// <summary>
             /// Pointe-Noire
             /// </summary>
-            [AliasInShort("16")] PointeNoire,
+            [AliasInShort("16")] [RegionCode(3_00_112_0016)]
+            PointeNoire,
 
             /// <summary>
             /// Brazzaville
             /// </summary>
-            [AliasInShort("BZV")] Brazzaville,
+            [AliasInShort("BZV")] [RegionCode(3_00_112_0001)]
+            Brazzaville,
 
             /// <summary>
             /// Unknown
@@ -155,6 +167,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToRegionCode(this EnumValues values)
         {
             return values.GetAttr<EnumValues, AliasInShortAttribute>().Alias;
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -200,6 +222,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

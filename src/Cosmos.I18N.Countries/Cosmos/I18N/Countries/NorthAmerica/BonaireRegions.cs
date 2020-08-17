@@ -37,17 +37,20 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Bonaire
             /// </summary>
-            [AliasInShort("BO")] Bonaire,
+            [AliasInShort("BO")] [RegionCode(4_00_109_0001)]
+            Bonaire,
 
             /// <summary>
             /// Saba
             /// </summary>
-            [AliasInShort("SA")] Saba,
+            [AliasInShort("SA")] [RegionCode(4_00_109_0002)]
+            Saba,
 
             /// <summary>
             /// Sint Eustatius
             /// </summary>
-            [AliasInShort("SE")] SintEustatius,
+            [AliasInShort("SE")] [RegionCode(4_00_109_0003)]
+            SintEustatius,
 
             /// <summary>
             /// Unknown
@@ -75,6 +78,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BQ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -110,6 +123,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -202,182 +202,218 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Andaman and Nicobar Islands
             /// </summary>
-            [AliasInShort("AN")] AndamanAndNicobarIslands,
+            [AliasInShort("AN")] [RegionCode(1_00_013_0001)]
+            AndamanAndNicobarIslands,
 
             /// <summary>
             /// Andhra Pradesh
             /// </summary>
-            [AliasInShort("AP")] AndhraPradesh,
+            [AliasInShort("AP")] [RegionCode(1_00_013_0002)]
+            AndhraPradesh,
 
             /// <summary>
             /// Arunachal Pradesh
             /// </summary>
-            [AliasInShort("AR")] ArunachalPradesh,
+            [AliasInShort("AR")] [RegionCode(1_00_013_0003)]
+            ArunachalPradesh,
 
             /// <summary>
             /// Assam
             /// </summary>
-            [AliasInShort("AS")] Assam,
+            [AliasInShort("AS")] [RegionCode(1_00_013_0004)]
+            Assam,
 
             /// <summary>
             /// Bihar
             /// </summary>
-            [AliasInShort("BR")] Bihar,
+            [AliasInShort("BR")] [RegionCode(1_00_013_0005)]
+            Bihar,
 
             /// <summary>
             /// Chandigarh
             /// </summary>
-            [AliasInShort("CH")] Chandigarh,
+            [AliasInShort("CH")] [RegionCode(1_00_013_0006)]
+            Chandigarh,
 
             /// <summary>
             /// Chhattisgarh
             /// </summary>
-            [AliasInShort("CT")] Chhattisgarh,
+            [AliasInShort("CT")] [RegionCode(1_00_013_0007)]
+            Chhattisgarh,
 
             /// <summary>
             /// Daman and Diu
             /// </summary>
-            [AliasInShort("DD")] DamanAndDiu,
+            [AliasInShort("DD")] [RegionCode(1_00_013_0008)]
+            DamanAndDiu,
 
             /// <summary>
             /// Delhi
             /// </summary>
-            [AliasInShort("DL")] Delhi,
+            [AliasInShort("DL")] [RegionCode(1_00_013_0009)]
+            Delhi,
 
             /// <summary>
             /// Dadra and Nagar Haveli
             /// </summary>
-            [AliasInShort("DN")] DadraAndNagarHaveli,
+            [AliasInShort("DN")] [RegionCode(1_00_013_0010)]
+            DadraAndNagarHaveli,
 
             /// <summary>
             /// Goa
             /// </summary>
-            [AliasInShort("GA")] Goa,
+            [AliasInShort("GA")] [RegionCode(1_00_013_0011)]
+            Goa,
 
             /// <summary>
             /// Gujarat
             /// </summary>
-            [AliasInShort("GJ")] Gujarat,
+            [AliasInShort("GJ")] [RegionCode(1_00_013_0012)]
+            Gujarat,
 
             /// <summary>
             /// Himachal Pradesh
             /// </summary>
-            [AliasInShort("HP")] HimachalPradesh,
+            [AliasInShort("HP")] [RegionCode(1_00_013_0013)]
+            HimachalPradesh,
 
             /// <summary>
             /// Haryana
             /// </summary>
-            [AliasInShort("HR")] Haryana,
+            [AliasInShort("HR")] [RegionCode(1_00_013_0014)]
+            Haryana,
 
             /// <summary>
             /// Jharkhand
             /// </summary>
-            [AliasInShort("JH")] Jharkhand,
+            [AliasInShort("JH")] [RegionCode(1_00_013_0015)]
+            Jharkhand,
 
             /// <summary>
             /// Jammu and Kashmir
             /// </summary>
-            [AliasInShort("JK")] JammuAndKashmir,
+            [AliasInShort("JK")] [RegionCode(1_00_013_0016)]
+            JammuAndKashmir,
 
             /// <summary>
             /// Karnataka
             /// </summary>
-            [AliasInShort("KA")] Karnataka,
+            [AliasInShort("KA")] [RegionCode(1_00_013_0017)]
+            Karnataka,
 
             /// <summary>
             /// Kerala
             /// </summary>
-            [AliasInShort("KL")] Kerala,
+            [AliasInShort("KL")] [RegionCode(1_00_013_0018)]
+            Kerala,
 
             /// <summary>
             /// Lakshadweep
             /// </summary>
-            [AliasInShort("LD")] Lakshadweep,
+            [AliasInShort("LD")] [RegionCode(1_00_013_0019)]
+            Lakshadweep,
 
             /// <summary>
             /// Maharashtra
             /// </summary>
-            [AliasInShort("MH")] Maharashtra,
+            [AliasInShort("MH")] [RegionCode(1_00_013_0020)]
+            Maharashtra,
 
             /// <summary>
             /// Meghalaya
             /// </summary>
-            [AliasInShort("ML")] Meghalaya,
+            [AliasInShort("ML")] [RegionCode(1_00_013_0021)]
+            Meghalaya,
 
             /// <summary>
             /// Manipur
             /// </summary>
-            [AliasInShort("MN")] Manipur,
+            [AliasInShort("MN")] [RegionCode(1_00_013_0022)]
+            Manipur,
 
             /// <summary>
             /// Madhya Pradesh
             /// </summary>
-            [AliasInShort("MP")] MadhyaPradesh,
+            [AliasInShort("MP")] [RegionCode(1_00_013_0023)]
+            MadhyaPradesh,
 
             /// <summary>
             /// Mizoram
             /// </summary>
-            [AliasInShort("MZ")] Mizoram,
+            [AliasInShort("MZ")] [RegionCode(1_00_013_0024)]
+            Mizoram,
 
             /// <summary>
             /// Nagaland
             /// </summary>
-            [AliasInShort("NL")] Nagaland,
+            [AliasInShort("NL")] [RegionCode(1_00_013_0025)]
+            Nagaland,
 
             /// <summary>
             /// Odisha
             /// </summary>
-            [AliasInShort("OR")] Odisha,
+            [AliasInShort("OR")] [RegionCode(1_00_013_0026)]
+            Odisha,
 
             /// <summary>
             /// Punjab
             /// </summary>
-            [AliasInShort("PB")] Punjab,
+            [AliasInShort("PB")] [RegionCode(1_00_013_0027)]
+            Punjab,
 
             /// <summary>
             /// Puducherry
             /// </summary>
-            [AliasInShort("PY")] Puducherry,
+            [AliasInShort("PY")] [RegionCode(1_00_013_0028)]
+            Puducherry,
 
             /// <summary>
             /// Rajasthan
             /// </summary>
-            [AliasInShort("RJ")] Rajasthan,
+            [AliasInShort("RJ")] [RegionCode(1_00_013_0029)]
+            Rajasthan,
 
             /// <summary>
             /// Sikkim
             /// </summary>
-            [AliasInShort("SK")] Sikkim,
+            [AliasInShort("SK")] [RegionCode(1_00_013_0030)]
+            Sikkim,
 
             /// <summary>
             /// Telangana
             /// </summary>
-            [AliasInShort("TG")] Telangana,
+            [AliasInShort("TG")] [RegionCode(1_00_013_0031)]
+            Telangana,
 
             /// <summary>
             /// Tamil Nadu
             /// </summary>
-            [AliasInShort("TN")] TamilNadu,
+            [AliasInShort("TN")] [RegionCode(1_00_013_0032)]
+            TamilNadu,
 
             /// <summary>
             /// Tripura
             /// </summary>
-            [AliasInShort("TR")] Tripura,
+            [AliasInShort("TR")] [RegionCode(1_00_013_0033)]
+            Tripura,
 
             /// <summary>
             /// Uttar Pradesh
             /// </summary>
-            [AliasInShort("UP")] UttarPradesh,
+            [AliasInShort("UP")] [RegionCode(1_00_013_0034)]
+            UttarPradesh,
 
             /// <summary>
             /// Uttarakhand
             /// </summary>
-            [AliasInShort("UT")] Uttarakhand,
+            [AliasInShort("UT")] [RegionCode(1_00_013_0035)]
+            Uttarakhand,
 
             /// <summary>
             /// West Bengal
             /// </summary>
-            [AliasInShort("WB")] WestBengal,
+            [AliasInShort("WB")] [RegionCode(1_00_013_0036)]
+            WestBengal,
 
             /// <summary>
             /// Unknown
@@ -405,6 +441,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"IN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -440,6 +486,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

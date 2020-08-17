@@ -72,38 +72,38 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Northern Denmark
             /// </summary>
-            [AliasInShort("81")] [RegionFlag("main")]
+            [AliasInShort("81")] [RegionCode(2_00_110_0081)] [RegionFlag("main")]
             NorthernDenmark,
 
             /// <summary>
             /// Central Denmark
             /// </summary>
-            [AliasInShort("82")] [RegionFlag("main")]
+            [AliasInShort("82")] [RegionCode(2_00_110_0082)] [RegionFlag("main")]
             CentralDenmark,
 
             /// <summary>
             /// Southern Denmark
             /// </summary>
-            [AliasInShort("83")] [RegionFlag("main")]
+            [AliasInShort("83")] [RegionCode(2_00_110_0083)] [RegionFlag("main")]
             SouthernDenmark,
 
             /// <summary>
             /// Capital Region
             /// </summary>
-            [AliasInShort("84")] [RegionFlag("main")]
+            [AliasInShort("84")] [RegionCode(2_00_110_0084)] [RegionFlag("main")]
             CapitalRegion,
 
             /// <summary>
             /// Zealand
             /// </summary>
-            [AliasInShort("85")] [RegionFlag("main")]
+            [AliasInShort("85")] [RegionCode(2_00_110_0085)] [RegionFlag("main")]
             Zealand,
 
             /// <summary>
             /// 法罗群岛（Faroe Islands，欧洲，FO，FRO，234） <br />
             /// Cosmos i18n code: i18n_country_faluo
             /// </summary>
-            [AliasInShort("FO")] [RegionFlag("overseas")]
+            [AliasInShort("FO")] [RegionCode(2_00_112)] [RegionFlag("overseas")]
             Faroe,
 
             /// <summary>
@@ -132,6 +132,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"DK-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -215,6 +225,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

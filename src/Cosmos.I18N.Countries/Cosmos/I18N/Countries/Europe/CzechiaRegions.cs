@@ -92,72 +92,86 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// South Bohemia
             /// </summary>
-            [AliasInShort("JC")] SouthBohemia,
+            [AliasInShort("JC")] [RegionCode(2_00_012_0001)]
+            SouthBohemia,
 
             /// <summary>
             /// South Moravia
             /// </summary>
-            [AliasInShort("JM")] SouthMoravia,
+            [AliasInShort("JM")] [RegionCode(2_00_012_0002)]
+            SouthMoravia,
 
             /// <summary>
             /// Karlovy Vary Region
             /// </summary>
-            [AliasInShort("KA")] KarlovyVaryRegion,
+            [AliasInShort("KA")] [RegionCode(2_00_012_0003)]
+            KarlovyVaryRegion,
 
             /// <summary>
             /// Hradec Králové Region
             /// </summary>
-            [AliasInShort("KR")] HradecKrálovéRegion,
+            [AliasInShort("KR")] [RegionCode(2_00_012_0004)]
+            HradecKrálovéRegion,
 
             /// <summary>
             /// Liberec Region
             /// </summary>
-            [AliasInShort("LI")] LiberecRegion,
+            [AliasInShort("LI")] [RegionCode(2_00_012_0005)]
+            LiberecRegion,
 
             /// <summary>
             /// Moravian-Silesia
             /// </summary>
-            [AliasInShort("NO")] MoravianSilesia,
+            [AliasInShort("NO")] [RegionCode(2_00_012_0006)]
+            MoravianSilesia,
 
             /// <summary>
             /// Olomouc Region
             /// </summary>
-            [AliasInShort("OL")] OlomoucRegion,
+            [AliasInShort("OL")] [RegionCode(2_00_012_0007)]
+            OlomoucRegion,
 
             /// <summary>
             /// Pardubice Region
             /// </summary>
-            [AliasInShort("PA")] PardubiceRegion,
+            [AliasInShort("PA")] [RegionCode(2_00_012_0008)]
+            PardubiceRegion,
 
             /// <summary>
             /// Plzeň Region
             /// </summary>
-            [AliasInShort("PL")] PlzeňRegion,
+            [AliasInShort("PL")] [RegionCode(2_00_012_0009)]
+            PlzeňRegion,
 
             /// <summary>
             /// Prague
             /// </summary>
-            [AliasInShort("PR")] Prague,
+            [AliasInShort("PR")] [RegionCode(2_00_012_0010)]
+            Prague,
 
             /// <summary>
             /// Central Bohemia
             /// </summary>
-            [AliasInShort("ST")] CentralBohemia,
+            [AliasInShort("ST")] [RegionCode(2_00_012_0011)]
+            CentralBohemia,
 
             /// <summary>
             /// Ústí nad Labem Region
             /// </summary>
-            [AliasInShort("US")] ÚstíNadLabemRegion,
+            [AliasInShort("US")] [RegionCode(2_00_012_0012)]
+            ÚstíNadLabemRegion,
 
             /// <summary>
             /// Vysočina
             /// </summary>
-            [AliasInShort("VY")] Vysočina,
+            [AliasInShort("VY")] [RegionCode(2_00_012_0013)]
+            Vysočina,
 
             /// <summary>
             /// Zlín Region
             /// </summary>
-            [AliasInShort("ZL")] ZlínRegion,
+            [AliasInShort("ZL")] [RegionCode(2_00_012_0014)]
+            ZlínRegion,
 
             /// <summary>
             /// Unknown
@@ -185,6 +199,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CZ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -220,6 +244,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

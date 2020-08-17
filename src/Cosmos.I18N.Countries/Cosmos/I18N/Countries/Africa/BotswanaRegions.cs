@@ -104,84 +104,84 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Central
             /// </summary>
-            [AliasInShort("CE")] Central,
+            [AliasInShort("CE")][RegionCode(3_00_104_0001)] Central,
 
             /// <summary>
             /// Chobe
             /// </summary>
-            [AliasInShort("CH")] Chobe,
+            [AliasInShort("CH")][RegionCode(3_00_104_0002)] Chobe,
 
             /// <summary>
             /// Francistown
             /// </summary>
-            [AliasInShort("FR")] Francistown,
+            [AliasInShort("FR")][RegionCode(3_00_104_0003)] Francistown,
 
             /// <summary>
             /// Gaborone
             /// </summary>
-            [AliasInShort("GA")] Gaborone,
+            [AliasInShort("GA")][RegionCode(3_00_104_0004)] Gaborone,
 
             /// <summary>
             /// Ghanzi
             /// </summary>
-            [AliasInShort("GH")] Ghanzi,
+            [AliasInShort("GH")][RegionCode(3_00_104_0005)] Ghanzi,
 
             /// <summary>
             /// Jwaneng
             /// </summary>
-            [AliasInShort("JW")] Jwaneng,
+            [AliasInShort("JW")][RegionCode(3_00_104_0006)] Jwaneng,
 
             /// <summary>
             /// Kgalagadi
             /// </summary>
-            [AliasInShort("KG")] Kgalagadi,
+            [AliasInShort("KG")][RegionCode(3_00_104_0007)] Kgalagadi,
 
             /// <summary>
             /// Kgatleng
             /// </summary>
-            [AliasInShort("KL")] Kgatleng,
+            [AliasInShort("KL")][RegionCode(3_00_104_0008)] Kgatleng,
 
             /// <summary>
             /// Kweneng
             /// </summary>
-            [AliasInShort("KW")] Kweneng,
+            [AliasInShort("KW")][RegionCode(3_00_104_0009)] Kweneng,
 
             /// <summary>
             /// Lobatse
             /// </summary>
-            [AliasInShort("LO")] Lobatse,
+            [AliasInShort("LO")][RegionCode(3_00_104_0010)] Lobatse,
 
             /// <summary>
             ///  North East
             /// </summary>
-            [AliasInShort("NE")] NorthEast,
+            [AliasInShort("NE")][RegionCode(3_00_104_0011)] NorthEast,
 
             /// <summary>
             /// North West
             /// </summary>
-            [AliasInShort("NW")] NorthWest,
+            [AliasInShort("NW")][RegionCode(3_00_104_0012)] NorthWest,
 
             /// <summary>
             /// South East
             /// </summary>
-            [AliasInShort("SE")] SouthEast,
+            [AliasInShort("SE")][RegionCode(3_00_104_0013)] SouthEast,
 
             /// <summary>
             /// Southern
             /// </summary>
-            [AliasInShort("SO")] Southern,
+            [AliasInShort("SO")][RegionCode(3_00_104_0014)] Southern,
 
 
             /// <summary>
             /// Selibe Phikwe
             /// </summary>
-            [AliasInShort("SP")] SelibePhikwe,
+            [AliasInShort("SP")][RegionCode(3_00_104_000)] SelibePhikwe,
 
 
             /// <summary>
             ///  Sowa Town
             /// </summary>
-            [AliasInShort("ST")] SowaTown,
+            [AliasInShort("ST")][RegionCode(3_00_104_000)] SowaTown,
 
             /// <summary>
             /// Unknown
@@ -209,6 +209,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BW-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -244,6 +254,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

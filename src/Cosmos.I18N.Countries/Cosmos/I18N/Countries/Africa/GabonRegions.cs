@@ -67,47 +67,56 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Estuaire
             /// </summary>
-            [AliasInShort("1")] Estuaire,
+            [AliasInShort("1")] [RegionCode(3_00_126_0001)]
+            Estuaire,
 
             /// <summary>
             /// Haut-Ogooué
             /// </summary>
-            [AliasInShort("2")] HautOgooué,
+            [AliasInShort("2")] [RegionCode(3_00_126_0002)]
+            HautOgooué,
 
             /// <summary>
             /// Moyen-Ogooué
             /// </summary>
-            [AliasInShort("3")] MoyenOgooué,
+            [AliasInShort("3")] [RegionCode(3_00_126_0003)]
+            MoyenOgooué,
 
             /// <summary>
             /// Ngounié
             /// </summary>
-            [AliasInShort("4")] Ngounié,
+            [AliasInShort("4")] [RegionCode(3_00_126_0004)]
+            Ngounié,
 
             /// <summary>
             /// Nyanga
             /// </summary>
-            [AliasInShort("5")] Nyanga,
+            [AliasInShort("5")] [RegionCode(3_00_126_0005)]
+            Nyanga,
 
             /// <summary>
             /// Ogooué-Ivindo
             /// </summary>
-            [AliasInShort("6")] OgoouéIvindo,
+            [AliasInShort("6")] [RegionCode(3_00_126_0006)]
+            OgoouéIvindo,
 
             /// <summary>
             /// Ogooué-Lolo
             /// </summary>
-            [AliasInShort("7")] OgoouéLolo,
+            [AliasInShort("7")] [RegionCode(3_00_126_0007)]
+            OgoouéLolo,
 
             /// <summary>
             /// Ogooué-Maritime
             /// </summary>
-            [AliasInShort("8")] OgoouéMaritime,
+            [AliasInShort("8")] [RegionCode(3_00_126_0008)]
+            OgoouéMaritime,
 
             /// <summary>
             /// Woleu-Ntem
             /// </summary>
-            [AliasInShort("9")] WoleuNtem,
+            [AliasInShort("9")] [RegionCode(3_00_126_0009)]
+            WoleuNtem,
 
             /// <summary>
             /// Unknown
@@ -135,6 +144,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GA-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -170,6 +189,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

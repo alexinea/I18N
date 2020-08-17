@@ -77,57 +77,68 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Saint Philip
             /// </summary>
-            [AliasInShort("10")] SaintPhilip,
+            [AliasInShort("10")] [RegionCode(4_00_106_0010)]
+            SaintPhilip,
 
             /// <summary>
             /// Canillo
             /// </summary>
-            [AliasInShort("11")] SaintThomas,
+            [AliasInShort("11")] [RegionCode(4_00_106_0011)]
+            SaintThomas,
 
             /// <summary>
             /// Christ Church
             /// </summary>
-            [AliasInShort("01")] ChristChurch,
+            [AliasInShort("01")] [RegionCode(4_00_106_0001)]
+            ChristChurch,
 
             /// <summary>
             /// Saint Andrew
             /// </summary>
-            [AliasInShort("02")] SaintAndrew,
+            [AliasInShort("02")] [RegionCode(4_00_106_0002)]
+            SaintAndrew,
 
             /// <summary>
             /// Saint George
             /// </summary>
-            [AliasInShort("03")] SaintGeorge,
+            [AliasInShort("03")] [RegionCode(4_00_106_0003)]
+            SaintGeorge,
 
             /// <summary>
             /// Les Escaldes-Engordany
             /// </summary>
-            [AliasInShort("04")] SaintJames,
+            [AliasInShort("04")] [RegionCode(4_00_106_0004)]
+            SaintJames,
 
             /// <summary>
             /// Saint John
             /// </summary>
-            [AliasInShort("05")] SaintJohn,
+            [AliasInShort("05")] [RegionCode(4_00_106_0005)]
+            SaintJohn,
 
             /// <summary>
             /// Saint Joseph
             /// </summary>
-            [AliasInShort("06")] SaintJoseph,
+            [AliasInShort("06")] [RegionCode(4_00_106_0006)]
+            SaintJoseph,
 
             /// <summary>
             /// Saint Lucy
             /// </summary>
-            [AliasInShort("07")] SaintLucy,
+            [AliasInShort("07")] [RegionCode(4_00_106_0007)]
+            SaintLucy,
 
             /// <summary>
             /// Saint Michael
             /// </summary>
-            [AliasInShort("08")] SaintMichael,
+            [AliasInShort("08")] [RegionCode(4_00_106_0008)]
+            SaintMichael,
 
             /// <summary>
             /// Saint Peter
             /// </summary>
-            [AliasInShort("09")] SaintPeter,
+            [AliasInShort("09")] [RegionCode(4_00_106_0009)]
+            SaintPeter,
 
             /// <summary>
             /// Unknown
@@ -155,6 +166,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BB-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -190,6 +211,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

@@ -10,19 +10,25 @@ namespace Cosmos.I18N.Countries {
         CountryType CountryType { get; }
 
         /// <summary>
-        /// UnCode
+        /// M49 code / ISO 3166-1 numeric
         /// </summary>
         // ReSharper disable once InconsistentNaming
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        string UNCode { get; }
+        string M49Code { get; }
+        
+        /// <summary>
+        /// Cosmos Regions Code
+        /// </summary>
+        // ReSharper disable once InconsistentNaming
+        long CRCode { get; }
 
         /// <summary>
-        /// Alpha2 code
+        /// Alpha2 code / ISO 3166-1 alpha-2
         /// </summary>
         string Alpha2Code { get; }
 
         /// <summary>
-        /// Alpha3 code
+        /// Alpha3 code / ISO 3166-1 alpha-3
         /// </summary>
         string Alpha3Code { get; }
 

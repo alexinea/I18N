@@ -187,167 +187,200 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             /// <summary>
             /// Amazonas
             /// </summary>
-            [AliasInShort("AMA")] Amazonas,
+            [AliasInShort("AMA")] [RegionCode(5_00_102_0001)]
+            Amazonas,
 
             /// <summary>
             /// Antioquia
             /// </summary>
-            [AliasInShort("ANT")] Antioquia,
+            [AliasInShort("ANT")] [RegionCode(5_00_102_0002)]
+            Antioquia,
 
             /// <summary>
             /// Arauca
             /// </summary>
-            [AliasInShort("ARA")] Arauca,
+            [AliasInShort("ARA")] [RegionCode(5_00_102_0003)]
+            Arauca,
 
             /// <summary>
             /// Atlántico
             /// </summary>
-            [AliasInShort("ATL")] Atlántico,
+            [AliasInShort("ATL")] [RegionCode(5_00_102_0004)]
+            Atlántico,
 
             /// <summary>
             /// Bolívar
             /// </summary>
-            [AliasInShort("BOL")] Bolívar,
+            [AliasInShort("BOL")] [RegionCode(5_00_102_0005)]
+            Bolívar,
 
             /// <summary>
             /// Boyacá
             /// </summary>
-            [AliasInShort("BOY")] Boyacá,
+            [AliasInShort("BOY")] [RegionCode(5_00_102_0006)]
+            Boyacá,
 
             /// <summary>
             /// Caldas
             /// </summary>
-            [AliasInShort("CAL")] Caldas,
+            [AliasInShort("CAL")] [RegionCode(5_00_102_0007)]
+            Caldas,
 
             /// <summary>
             /// Caquetá
             /// </summary>
-            [AliasInShort("CAQ")] Caquetá,
+            [AliasInShort("CAQ")] [RegionCode(5_00_102_0008)]
+            Caquetá,
 
             /// <summary>
             /// Casanare
             /// </summary>
-            [AliasInShort("CAS")] Casanare,
+            [AliasInShort("CAS")] [RegionCode(5_00_102_0009)]
+            Casanare,
 
             /// <summary>
             /// Cauca
             /// </summary>
-            [AliasInShort("CAU")] Cauca,
+            [AliasInShort("CAU")] [RegionCode(5_00_102_0010)]
+            Cauca,
 
             /// <summary>
             /// Cesar
             /// </summary>
-            [AliasInShort("CES")] Cesar,
+            [AliasInShort("CES")] [RegionCode(5_00_102_0011)]
+            Cesar,
 
             /// <summary>
             /// Chocó
             /// </summary>
-            [AliasInShort("CHO")] Chocó,
+            [AliasInShort("CHO")] [RegionCode(5_00_102_0012)]
+            Chocó,
 
             /// <summary>
             /// Córdoba, COR
             /// </summary>
-            [AliasInShort("COR")] Córdoba,
+            [AliasInShort("COR")] [RegionCode(5_00_102_0013)]
+            Córdoba,
 
             /// <summary>
             /// Cundinamarca, CUN
             /// </summary>
-            [AliasInShort("CUN")] Cundinamarca,
+            [AliasInShort("CUN")] [RegionCode(5_00_102_0014)]
+            Cundinamarca,
 
             /// <summary>
             /// Capital District, DC
             /// </summary>
-            [AliasInShort("DC")] CapitalDistrict,
+            [AliasInShort("DC")] [RegionCode(5_00_102_0015)]
+            CapitalDistrict,
 
             /// <summary>
             /// Guainía, GUA
             /// </summary>
-            [AliasInShort("GUA")] Guainía,
+            [AliasInShort("GUA")] [RegionCode(5_00_102_0016)]
+            Guainía,
 
             /// <summary>
             /// Guaviare, GUV
             /// </summary>
-            [AliasInShort("GUV")] Guaviare,
+            [AliasInShort("GUV")] [RegionCode(5_00_102_0017)]
+            Guaviare,
 
             /// <summary>
             /// Huila, HUI
             /// </summary>
-            [AliasInShort("HUI")] Huila,
+            [AliasInShort("HUI")] [RegionCode(5_00_102_0018)]
+            Huila,
 
             /// <summary>
             /// La Guajira, LAG
             /// </summary>
-            [AliasInShort("LAG")] LaGuajira,
+            [AliasInShort("LAG")] [RegionCode(5_00_102_0019)]
+            LaGuajira,
 
             /// <summary>
             /// Magdalena, MAG
             /// </summary>
-            [AliasInShort("MAG")] Magdalena,
+            [AliasInShort("MAG")] [RegionCode(5_00_102_0020)]
+            Magdalena,
 
             /// <summary>
             /// Meta, MET
             /// </summary>
-            [AliasInShort("MET")] Meta,
+            [AliasInShort("MET")] [RegionCode(5_00_102_0021)]
+            Meta,
 
             /// <summary>
             /// Nariño, NAR
             /// </summary>
-            [AliasInShort("NAR")] Nariño,
+            [AliasInShort("NAR")] [RegionCode(5_00_102_0022)]
+            Nariño,
 
             /// <summary>
             /// Norte de Santander, NSA
             /// </summary>
-            [AliasInShort("NSA")] NorteDeSantander,
+            [AliasInShort("NSA")] [RegionCode(5_00_102_0023)]
+            NorteDeSantander,
 
             /// <summary>
             /// Putumayo, PUT
             /// </summary>
-            [AliasInShort("PUT")] Putumayo,
+            [AliasInShort("PUT")] [RegionCode(5_00_102_0024)]
+            Putumayo,
 
             /// <summary>
             /// Quindío, QUI
             /// </summary>
-            [AliasInShort("QUI")] Quindío,
+            [AliasInShort("QUI")] [RegionCode(5_00_102_0025)]
+            Quindío,
 
             /// <summary>
             /// Risaralda, RIS
             /// </summary>
-            [AliasInShort("RIS")] Risaralda,
+            [AliasInShort("RIS")] [RegionCode(5_00_102_0026)]
+            Risaralda,
 
             /// <summary>
             /// Santander, SAN
             /// </summary>
-            [AliasInShort("SAN")] Santander,
+            [AliasInShort("SAN")] [RegionCode(5_00_102_0027)]
+            Santander,
 
             /// <summary>
             /// San Andrés and Providencia, SAP
             /// </summary>
-            [AliasInShort("SAP")] SanAndrésAndProvidencia,
+            [AliasInShort("SAP")] [RegionCode(5_00_102_0028)]
+            SanAndrésAndProvidencia,
 
             /// <summary>
             /// Sucre, SUC
             /// </summary>
-            [AliasInShort("SUC")] Sucre,
+            [AliasInShort("SUC")] [RegionCode(5_00_102_0028)]
+            Sucre,
 
             /// <summary>
             /// Tolima, TOL
             /// </summary>
-            [AliasInShort("TOL")] Tolima,
+            [AliasInShort("TOL")] [RegionCode(5_00_102_0030)]
+            Tolima,
 
             /// <summary>
             /// Valle del Cauca, VAC
             /// </summary>
-            [AliasInShort("VAC")] ValleDelCauca,
+            [AliasInShort("VAC")] [RegionCode(5_00_102_0031)]
+            ValleDelCauca,
 
             /// <summary>
             /// Vaupés, VAU
             /// </summary>
-            [AliasInShort("VAU")] Vaupés,
+            [AliasInShort("VAU")] [RegionCode(5_00_102_0032)]
+            Vaupés,
 
             /// <summary>
             /// Vichada, VID
             /// </summary>
-            [AliasInShort("VID")] Vichada,
+            [AliasInShort("VID")] [RegionCode(5_00_102_0033)]
+            Vichada,
 
             /// <summary>
             /// Unknown
@@ -375,6 +408,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CO-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -410,6 +453,13 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

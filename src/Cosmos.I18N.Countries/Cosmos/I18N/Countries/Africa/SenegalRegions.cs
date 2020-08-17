@@ -92,72 +92,72 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Diourbel
             /// </summary>
-            [AliasInShort("DB")] Diourbel,
+            [AliasInShort("DB")][RegionCode(3_00_151_0001)] Diourbel,
 
             /// <summary>
             /// Dakar
             /// </summary>
-            [AliasInShort("DK")] Dakar,
+            [AliasInShort("DK")][RegionCode(3_00_151_0002)] Dakar,
 
             /// <summary>
             /// Fatick
             /// </summary>
-            [AliasInShort("FK")] Fatick,
+            [AliasInShort("FK")][RegionCode(3_00_151_0003)] Fatick,
 
             /// <summary>
             /// Kaffrine
             /// </summary>
-            [AliasInShort("KA")] Kaffrine,
+            [AliasInShort("KA")][RegionCode(3_00_151_0004)] Kaffrine,
 
             /// <summary>
             /// Kolda
             /// </summary>
-            [AliasInShort("KD")] Kolda,
+            [AliasInShort("KD")][RegionCode(3_00_151_0005)] Kolda,
 
             /// <summary>
             /// Kédougou
             /// </summary>
-            [AliasInShort("KE")] Kédougou,
+            [AliasInShort("KE")][RegionCode(3_00_151_0006)] Kédougou,
 
             /// <summary>
             /// Kaolack
             /// </summary>
-            [AliasInShort("KL")] Kaolack,
+            [AliasInShort("KL")][RegionCode(3_00_151_0007)] Kaolack,
 
             /// <summary>
             /// Louga
             /// </summary>
-            [AliasInShort("LG")] Louga,
+            [AliasInShort("LG")][RegionCode(3_00_151_0008)] Louga,
 
             /// <summary>
             /// Matam
             /// </summary>
-            [AliasInShort("ML")] Matam,
+            [AliasInShort("ML")][RegionCode(3_00_151_0009)] Matam,
 
             /// <summary>
             /// Sédhiou
             /// </summary>
-            [AliasInShort("SE")] Sédhiou,
+            [AliasInShort("SE")][RegionCode(3_00_151_0010)] Sédhiou,
 
             /// <summary>
             /// Saint-Louis
             /// </summary>
-            [AliasInShort("SL")] SaintLouis,
+            [AliasInShort("SL")][RegionCode(3_00_151_0011)] SaintLouis,
 
             /// <summary>
             /// Tambacounda
             /// </summary>
-            [AliasInShort("TC")] Tambacounda,
+            [AliasInShort("TC")][RegionCode(3_00_151_0012)] Tambacounda,
 
             /// <summary>
             /// Thiès
             /// </summary>
-            [AliasInShort("TH")] Thiès,
+            [AliasInShort("TH")][RegionCode(3_00_151_0013)] Thiès,
 
             /// <summary>
             /// Ziguinchor
             /// </summary>
-            [AliasInShort("ZG")] Ziguinchor,
+            [AliasInShort("ZG")][RegionCode(3_00_151_0014)] Ziguinchor,
 
             /// <summary>
             /// Unknown
@@ -185,6 +185,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SN-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -220,6 +230,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

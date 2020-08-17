@@ -117,97 +117,97 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Comunidad de Madrid
             /// </summary>
-            [AliasInShort("MD")] ComunidadDeMadrid,
+            [AliasInShort("MD")][RegionCode(2_00_015_0001)]  ComunidadDeMadrid,
 
             /// <summary>
             /// Andalucía
             /// </summary>
-            [AliasInShort("AN")] Andalucía,
+            [AliasInShort("AN")][RegionCode(2_00_015_0002)]  Andalucía,
 
             /// <summary>
             /// Aragón
             /// </summary>
-            [AliasInShort("AR")] Aragón,
+            [AliasInShort("AR")][RegionCode(2_00_015_0003)]  Aragón,
 
             /// <summary>
             /// Asturias
             /// </summary>
-            [AliasInShort("AS")] Asturias,
+            [AliasInShort("AS")][RegionCode(2_00_015_0004)]  Asturias,
 
             /// <summary>
             /// Cantabria
             /// </summary>
-            [AliasInShort("CB")] Cantabria,
+            [AliasInShort("CB")] [RegionCode(2_00_015_0005)] Cantabria,
 
             /// <summary>
             /// Ceuta
             /// </summary>
-            [AliasInShort("CE")] Ceuta,
+            [AliasInShort("CE")][RegionCode(2_00_015_0006)]  Ceuta,
 
             /// <summary>
             /// Castile and León
             /// </summary>
-            [AliasInShort("CL")] CastileAndLeón,
+            [AliasInShort("CL")][RegionCode(2_00_015_0007)]  CastileAndLeón,
 
             /// <summary>
             /// Castile-La Mancha
             /// </summary>
-            [AliasInShort("CM")] CastileLaMancha,
+            [AliasInShort("CM")][RegionCode(2_00_015_0008)]  CastileLaMancha,
 
             /// <summary>
             /// Canary Islands
             /// </summary>
-            [AliasInShort("CN")] CanaryIslands,
+            [AliasInShort("CN")] [RegionCode(2_00_015_0009)] CanaryIslands,
 
             /// <summary>
             /// Catalonia
             /// </summary>
-            [AliasInShort("CT")] Catalonia,
+            [AliasInShort("CT")][RegionCode(2_00_015_0010)]  Catalonia,
 
             /// <summary>
             /// Extremadura
             /// </summary>
-            [AliasInShort("EX")] Extremadura,
+            [AliasInShort("EX")][RegionCode(2_00_015_0011)]  Extremadura,
 
             /// <summary>
             /// Galicia
             /// </summary>
-            [AliasInShort("GA")] Galicia,
+            [AliasInShort("GA")][RegionCode(2_00_015_0012)]  Galicia,
 
             /// <summary>
             /// Balearic Islands
             /// </summary>
-            [AliasInShort("IB")] BalearicIslands,
+            [AliasInShort("IB")][RegionCode(2_00_015_0013)]  BalearicIslands,
 
             /// <summary>
             /// Murcia Region
             /// </summary>
-            [AliasInShort("MC")] MurciaRegion,
+            [AliasInShort("MC")] [RegionCode(2_00_015_0014)] MurciaRegion,
 
             /// <summary>
             /// Melilla
             /// </summary>
-            [AliasInShort("ML")] Melilla,
+            [AliasInShort("ML")] [RegionCode(2_00_015_0015)] Melilla,
 
             /// <summary>
             /// Navarra Chartered Community
             /// </summary>
-            [AliasInShort("NC")] NavarraCharteredCommunity,
+            [AliasInShort("NC")][RegionCode(2_00_015_0016)]  NavarraCharteredCommunity,
 
             /// <summary>
             /// Basque Country
             /// </summary>
-            [AliasInShort("PV")] BasqueCountry,
+            [AliasInShort("PV")][RegionCode(2_00_015_0017)]  BasqueCountry,
 
             /// <summary>
             /// La Rioja
             /// </summary>
-            [AliasInShort("RI")] LaRioja,
+            [AliasInShort("RI")][RegionCode(2_00_015_0018)]  LaRioja,
 
             /// <summary>
             /// Valencian Community
             /// </summary>
-            [AliasInShort("VC")] ValencianCommunity,
+            [AliasInShort("VC")] [RegionCode(2_00_015_0019)] ValencianCommunity,
 
             /// <summary>
             /// Unknown
@@ -235,6 +235,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"ES-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -270,6 +280,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

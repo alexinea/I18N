@@ -128,85 +128,85 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Australian Capital Territory
             /// </summary>
-            [AliasInShort("ACT")] [RegionFlag("mainland")]
+            [AliasInShort("ACT")] [RegionCode(6_00_011_0001)] [RegionFlag("mainland")]
             AustralianCapitalTerritory,
 
             /// <summary>
             /// New South Wales
             /// </summary>
-            [AliasInShort("NSW")] [RegionFlag("mainland")]
+            [AliasInShort("NSW")] [RegionCode(6_00_011_0002)] [RegionFlag("mainland")]
             NewSouthWales,
 
             /// <summary>
             /// Northern Territory
             /// </summary>
-            [AliasInShort("NT")] [RegionFlag("mainland")]
+            [AliasInShort("NT")] [RegionCode(6_00_011_0003)] [RegionFlag("mainland")]
             NorthernTerritory,
 
             /// <summary>
             /// Queensland
             /// </summary>
-            [AliasInShort("QLD")] [RegionFlag("mainland")]
+            [AliasInShort("QLD")] [RegionCode(6_00_011_0004)] [RegionFlag("mainland")]
             Queensland,
 
             /// <summary>
             /// South Australia
             /// </summary>
-            [AliasInShort("SA")] [RegionFlag("mainland")]
+            [AliasInShort("SA")] [RegionCode(6_00_011_0005)] [RegionFlag("mainland")]
             SouthAustralia,
 
             /// <summary>
             /// Tasmania
             /// </summary>
-            [AliasInShort("TAS")] [RegionFlag("mainland")]
+            [AliasInShort("TAS")] [RegionCode(6_00_011_0006)] [RegionFlag("mainland")]
             Tasmania,
 
             /// <summary>
             /// Victoria
             /// </summary>
-            [AliasInShort("VIC")] [RegionFlag("mainland")]
+            [AliasInShort("VIC")] [RegionCode(6_00_011_0007)] [RegionFlag("mainland")]
             Victoria,
 
             /// <summary>
             /// Western Australia
             /// </summary>
-            [AliasInShort("WA")] [RegionFlag("mainland")]
+            [AliasInShort("WA")] [RegionCode(6_00_011_0008)] [RegionFlag("mainland")]
             WesternAustralia,
 
             /// <summary>
             /// 删除海群岛
             /// </summary>
-            [AliasInShort("CSI")] [RegionFlag("overseas")]
+            [AliasInShort("CSI")] [RegionCode(6_00_011_0009)] [RegionFlag("overseas")]
             CoralSeaIslands,
 
             /// <summary>
             /// 阿什莫尔和卡捷岛
             /// </summary>
-            [AliasInShort("ACI")] [RegionFlag("overseas")]
+            [AliasInShort("ACI")] [RegionCode(6_00_011_0010)] [RegionFlag("overseas")]
             AshmoreAndCartierIslands,
 
             /// <summary>
             /// 科科斯群岛
             /// </summary>
-            [AliasInShort("CC")] [RegionFlag("overseas")]
+            [AliasInShort("CC")] [RegionCode(6_00_011_0011)] [RegionFlag("overseas")]
             CocosIslands,
 
             /// <summary>
             /// 赫德岛及麦唐纳群岛
             /// </summary>
-            [AliasInShort("HMD")] [RegionFlag("overseas")]
+            [AliasInShort("HMD")] [RegionCode(6_00_011_0012)] [RegionFlag("overseas")]
             HeardIslandAndMcDonaldIslands,
 
             /// <summary>
             /// Christmas Island
             /// </summary>
-            [AliasInShort("CX")] [RegionFlag("overseas")]
+            [AliasInShort("CX")] [RegionCode(6_00_011_0013)] [RegionFlag("overseas")]
             ChristmasIsland,
 
             /// <summary>
             /// Norfolk Island
             /// </summary>
-            [AliasInShort("NF")] [RegionFlag("overseas")]
+            [AliasInShort("NF")] [RegionCode(6_00_011_0014)] [RegionFlag("overseas")]
             NorfolkIsland,
 
             /// <summary>
@@ -235,6 +235,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"AU-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -338,7 +348,6 @@ namespace Cosmos.I18N.Countries.Oceania
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
 
-
         /// <summary>
         /// 获得本土地区的地区代号
         /// </summary>
@@ -352,6 +361,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetOverseasRegionCodes()
             => Filter("overseas").Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

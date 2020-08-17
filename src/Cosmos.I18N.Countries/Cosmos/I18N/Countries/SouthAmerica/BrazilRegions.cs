@@ -157,137 +157,164 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             /// <summary>
             /// Acre
             /// </summary>
-            [AliasInShort("AC")] Acre,
+            [AliasInShort("AC")] [RegionCode(5_00_001_0001)]
+            Acre,
 
             /// <summary>
             /// Alagoas
             /// </summary>
-            [AliasInShort("AL")] Alagoas,
+            [AliasInShort("AL")] [RegionCode(5_00_001_0002)]
+            Alagoas,
 
             /// <summary>
             /// Amazonas
             /// </summary>
-            [AliasInShort("AM")] Amazonas,
+            [AliasInShort("AM")] [RegionCode(5_00_001_0003)]
+            Amazonas,
 
             /// <summary>
             /// Amapá
             /// </summary>
-            [AliasInShort("AP")] Amapá,
+            [AliasInShort("AP")] [RegionCode(5_00_001_0004)]
+            Amapá,
 
             /// <summary>
             /// Bahia
             /// </summary>
-            [AliasInShort("BA")] Bahia,
+            [AliasInShort("BA")] [RegionCode(5_00_001_0005)]
+            Bahia,
 
             /// <summary>
             /// Ceará
             /// </summary>
-            [AliasInShort("CE")] Ceará,
+            [AliasInShort("CE")] [RegionCode(5_00_001_0006)]
+            Ceará,
 
             /// <summary>
             /// Distrito Federal
             /// </summary>
-            [AliasInShort("DF")] DistritoFederal,
+            [AliasInShort("DF")] [RegionCode(5_00_001_0007)]
+            DistritoFederal,
 
             /// <summary>
             /// Espírito Santo
             /// </summary>
-            [AliasInShort("ES")] EspíritoSanto,
+            [AliasInShort("ES")] [RegionCode(5_00_001_0008)]
+            EspíritoSanto,
 
             /// <summary>
             /// Goiás
             /// </summary>
-            [AliasInShort("GO")] Goiás,
+            [AliasInShort("GO")] [RegionCode(5_00_001_0009)]
+            Goiás,
 
             /// <summary>
             /// Maranhão
             /// </summary>
-            [AliasInShort("MA")] Maranhão,
+            [AliasInShort("MA")] [RegionCode(5_00_001_0010)]
+            Maranhão,
 
             /// <summary>
             /// Minas Gerais
             /// </summary>
-            [AliasInShort("MG")] MinasGerais,
+            [AliasInShort("MG")] [RegionCode(5_00_001_0011)]
+            MinasGerais,
 
             /// <summary>
             /// Mato Grosso do Sul
             /// </summary>
-            [AliasInShort("MS")] MatoGrossoDoSul,
+            [AliasInShort("MS")] [RegionCode(5_00_001_0012)]
+            MatoGrossoDoSul,
 
             /// <summary>
             /// Mato Grosso
             /// </summary>
-            [AliasInShort("MT")] MatoGrosso,
+            [AliasInShort("MT")] [RegionCode(5_00_001_0013)]
+            MatoGrosso,
 
             /// <summary>
             /// Pará
             /// </summary>
-            [AliasInShort("PA")] Pará,
+            [AliasInShort("PA")] [RegionCode(5_00_001_0014)]
+            Pará,
 
             /// <summary>
             /// Paraíba
             /// </summary>
-            [AliasInShort("PB")] Paraíba,
+            [AliasInShort("PB")] [RegionCode(5_00_001_0015)]
+            Paraíba,
 
             /// <summary>
             /// Pernambuco
             /// </summary>
-            [AliasInShort("PE")] Pernambuco,
+            [AliasInShort("PE")] [RegionCode(5_00_001_0016)]
+            Pernambuco,
 
             /// <summary>
             /// Piauí
             /// </summary>
-            [AliasInShort("PI")] Piauí,
+            [AliasInShort("PI")] [RegionCode(5_00_001_0017)]
+            Piauí,
 
             /// <summary>
             /// Paraná
             /// </summary>
-            [AliasInShort("PR")] Paraná,
+            [AliasInShort("PR")] [RegionCode(5_00_001_0018)]
+            Paraná,
 
             /// <summary>
             /// Rio de Janeiro
             /// </summary>
-            [AliasInShort("RJ")] RioDeJaneiro,
+            [AliasInShort("RJ")] [RegionCode(5_00_001_0019)]
+            RioDeJaneiro,
 
             /// <summary>
             /// Rio Grande do Norte
             /// </summary>
-            [AliasInShort("RN")] RioGrandeDoNorte,
+            [AliasInShort("RN")] [RegionCode(5_00_001_0020)]
+            RioGrandeDoNorte,
 
             /// <summary>
             /// Rondônia
             /// </summary>
-            [AliasInShort("RO")] Rondônia,
+            [AliasInShort("RO")] [RegionCode(5_00_001_0021)]
+            Rondônia,
 
             /// <summary>
             /// Roraima
             /// </summary>
-            [AliasInShort("RR")] Roraima,
+            [AliasInShort("RR")] [RegionCode(5_00_001_0022)]
+            Roraima,
 
             /// <summary>
             /// Rio Grande do Sul
             /// </summary>
-            [AliasInShort("RS")] RioGrandeDoSul,
+            [AliasInShort("RS")] [RegionCode(5_00_001_0023)]
+            RioGrandeDoSul,
 
             /// <summary>
             /// Santa Catarina
             /// </summary>
-            [AliasInShort("SC")] SantaCatarina,
+            [AliasInShort("SC")] [RegionCode(5_00_001_0024)]
+            SantaCatarina,
 
             /// <summary>
             /// Sergipe
             /// </summary>
-            [AliasInShort("SE")] Sergipe,
+            [AliasInShort("SE")] [RegionCode(5_00_001_0025)]
+            Sergipe,
 
             /// <summary>
             /// São Paulo
             /// </summary>
-            [AliasInShort("SP")] SãoPaulo,
+            [AliasInShort("SP")] [RegionCode(5_00_001_0026)]
+            SãoPaulo,
 
             /// <summary>
             /// Tocantins
             /// </summary>
-            [AliasInShort("TO")] Tocantins,
+            [AliasInShort("TO")] [RegionCode(5_00_001_0027)]
+            Tocantins,
 
             /// <summary>
             /// Unknown
@@ -317,6 +344,36 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             return $"BR-{values.ToRegionCode()}";
         }
 
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="Country"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static Country ToCountry(this EnumValues value)
+        {
+            return Country.Brazil;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="CountryCode"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            return CountryCode.BR;
+        }
+
         #endregion
 
         #region Getters
@@ -330,6 +387,13 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

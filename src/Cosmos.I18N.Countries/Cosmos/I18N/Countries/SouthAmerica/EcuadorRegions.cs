@@ -142,122 +142,146 @@ namespace Cosmos.I18N.Countries.SouthAmerica
             /// <summary>
             /// Azuay
             /// </summary>
-            [AliasInShort("A")] Azuay,
+            [AliasInShort("A")] [RegionCode(5_00_103_0001)]
+            Azuay,
 
             /// <summary>
             /// Bolívar
             /// </summary>
-            [AliasInShort("B")] Bolívar,
+            [AliasInShort("B")] [RegionCode(5_00_103_0002)]
+            Bolívar,
 
             /// <summary>
             /// Carchi
             /// </summary>
-            [AliasInShort("C")] Carchi,
+            [AliasInShort("C")] [RegionCode(5_00_103_0003)]
+            Carchi,
 
             /// <summary>
             /// Orellana
             /// </summary>
-            [AliasInShort("D")] Orellana,
+            [AliasInShort("D")] [RegionCode(5_00_103_0004)]
+            Orellana,
 
             /// <summary>
             /// Esmeraldas
             /// </summary>
-            [AliasInShort("E")] Esmeraldas,
+            [AliasInShort("E")] [RegionCode(5_00_103_0005)]
+            Esmeraldas,
 
             /// <summary>
             /// Cañar
             /// </summary>
-            [AliasInShort("F")] Cañar,
+            [AliasInShort("F")] [RegionCode(5_00_103_0006)]
+            Cañar,
 
             /// <summary>
             /// Guayas
             /// </summary>
-            [AliasInShort("G")] Guayas,
+            [AliasInShort("G")] [RegionCode(5_00_103_0007)]
+            Guayas,
 
             /// <summary>
             /// Chimborazo
             /// </summary>
-            [AliasInShort("H")] Chimborazo,
+            [AliasInShort("H")] [RegionCode(5_00_103_0008)]
+            Chimborazo,
 
             /// <summary>
             /// Imbabura
             /// </summary>
-            [AliasInShort("I")] Imbabura,
+            [AliasInShort("I")] [RegionCode(5_00_103_0009)]
+            Imbabura,
 
             /// <summary>
             /// Loja
             /// </summary>
-            [AliasInShort("L")] Loja,
+            [AliasInShort("L")] [RegionCode(5_00_103_0010)]
+            Loja,
 
             /// <summary>
             /// Manabí
             /// </summary>
-            [AliasInShort("M")] Manabí,
+            [AliasInShort("M")] [RegionCode(5_00_103_0011)]
+            Manabí,
 
             /// <summary>
             /// Napo
             /// </summary>
-            [AliasInShort("N")] Napo,
+            [AliasInShort("N")] [RegionCode(5_00_103_0012)]
+            Napo,
 
             /// <summary>
             /// El Oro
             /// </summary>
-            [AliasInShort("O")] ElOro,
+            [AliasInShort("O")] [RegionCode(5_00_103_0013)]
+            ElOro,
 
             /// <summary>
             /// Pichincha
             /// </summary>
-            [AliasInShort("P")] Pichincha,
+            [AliasInShort("P")] [RegionCode(5_00_103_0014)]
+            Pichincha,
 
             /// <summary>
             /// Los Ríos
             /// </summary>
-            [AliasInShort("R")] LosRíos,
+            [AliasInShort("R")] [RegionCode(5_00_103_0015)]
+            LosRíos,
 
             /// <summary>
             /// Morona-Santiago
             /// </summary>
-            [AliasInShort("S")] MoronaSantiago,
+            [AliasInShort("S")] [RegionCode(5_00_103_0016)]
+            MoronaSantiago,
 
             /// <summary>
             /// Santo Domingo de los Tsáchilas
             /// </summary>
-            [AliasInShort("SD")] SantoDomingoDeLosTsáchilas,
+            [AliasInShort("SD")] [RegionCode(5_00_103_0017)]
+            SantoDomingoDeLosTsáchilas,
 
             /// <summary>
             /// Santa Elena
             /// </summary>
-            [AliasInShort("SE")] SantaElena,
+            [AliasInShort("SE")] [RegionCode(5_00_103_0018)]
+            SantaElena,
 
             /// <summary>
             /// Tungurahua
             /// </summary>
-            [AliasInShort("T")] Tungurahua,
+            [AliasInShort("T")] [RegionCode(5_00_103_0019)]
+            Tungurahua,
 
             /// <summary>
             /// Sucumbíos
             /// </summary>
-            [AliasInShort("U")] Sucumbíos,
+            [AliasInShort("U")] [RegionCode(5_00_103_0020)]
+            Sucumbíos,
 
             /// <summary>
             /// Galápagos
             /// </summary>
-            [AliasInShort("W")] Galápagos,
+            [AliasInShort("W")] [RegionCode(5_00_103_0021)]
+            Galápagos,
 
             /// <summary>
             /// Cotopaxi
             /// </summary>
-            [AliasInShort("X")] Cotopaxi,
+            [AliasInShort("X")] [RegionCode(5_00_103_0022)]
+            Cotopaxi,
 
             /// <summary>
             /// Pastaza
             /// </summary>
-            [AliasInShort("Y")] Pastaza,
+            [AliasInShort("Y")] [RegionCode(5_00_103_0023)]
+            Pastaza,
 
             /// <summary>
             /// Zamora-Chinchipe
             /// </summary>
-            [AliasInShort("Z")] ZamoraChinchipe,
+            [AliasInShort("Z")] [RegionCode(5_00_103_0024)]
+            ZamoraChinchipe,
 
             /// <summary>
             /// Unknown
@@ -285,6 +309,16 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"EC-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -320,6 +354,13 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

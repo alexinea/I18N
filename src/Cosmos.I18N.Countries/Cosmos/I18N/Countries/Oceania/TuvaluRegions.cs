@@ -62,42 +62,50 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Funafuti
             /// </summary>
-            [AliasInShort("FUN")] Funafuti,
+            [AliasInShort("FUN")] [RegionCode(6_00_122_0001)]
+            Funafuti,
 
             /// <summary>
             /// Niutao
             /// </summary>
-            [AliasInShort("NIT")] Niutao,
+            [AliasInShort("NIT")] [RegionCode(6_00_122_0002)]
+            Niutao,
 
             /// <summary>
             /// Nukufetau
             /// </summary>
-            [AliasInShort("NKF")] Nukufetau,
+            [AliasInShort("NKF")] [RegionCode(6_00_122_0003)]
+            Nukufetau,
 
             /// <summary>
             /// Nukulaelae
             /// </summary>
-            [AliasInShort("NKL")] Nukulaelae,
+            [AliasInShort("NKL")] [RegionCode(6_00_122_0004)]
+            Nukulaelae,
 
             /// <summary>
             /// Nanumea
             /// </summary>
-            [AliasInShort("NMA")] Nanumea,
+            [AliasInShort("NMA")] [RegionCode(6_00_122_0005)]
+            Nanumea,
 
             /// <summary>
             /// Nanumanga
             /// </summary>
-            [AliasInShort("NMG")] Nanumanga,
+            [AliasInShort("NMG")] [RegionCode(6_00_122_0006)]
+            Nanumanga,
 
             /// <summary>
             /// Nui
             /// </summary>
-            [AliasInShort("NUI")] Nui,
+            [AliasInShort("NUI")] [RegionCode(6_00_122_0007)]
+            Nui,
 
             /// <summary>
             /// Vaitupu
             /// </summary>
-            [AliasInShort("VAI")] Vaitupu,
+            [AliasInShort("VAI")] [RegionCode(6_00_122_0008)]
+            Vaitupu,
 
             /// <summary>
             /// Unknown
@@ -125,6 +133,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"TV-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -160,6 +178,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

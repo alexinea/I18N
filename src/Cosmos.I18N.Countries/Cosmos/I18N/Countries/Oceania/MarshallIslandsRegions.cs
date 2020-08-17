@@ -32,12 +32,12 @@ namespace Cosmos.I18N.Countries.Oceania
             /// <summary>
             /// Ralik Chain
             /// </summary>
-            [AliasInShort("L")] RalikChain,
+            [AliasInShort("L")] [RegionCode(6_00_106_0001)] RalikChain,
 
             /// <summary>
             /// Ratak Chain
             /// </summary>
-            [AliasInShort("T")] RatakChain,
+            [AliasInShort("T")][RegionCode(6_00_106_0002)]  RatakChain,
 
             /// <summary>
             /// Unknown
@@ -65,6 +65,16 @@ namespace Cosmos.I18N.Countries.Oceania
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"MH-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -100,6 +110,13 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

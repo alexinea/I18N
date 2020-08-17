@@ -42,22 +42,26 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Kujalleq
             /// </summary>
-            [AliasInShort("KU")] Kujalleq,
+            [AliasInShort("KU")] [RegionCode(4_00_116_0001)]
+            Kujalleq,
 
             /// <summary>
             /// Qaasuitsup
             /// </summary>
-            [AliasInShort("QA")] Qaasuitsup,
+            [AliasInShort("QA")] [RegionCode(4_00_116_0002)]
+            Qaasuitsup,
 
             /// <summary>
             /// Qeqqata
             /// </summary>
-            [AliasInShort("QE")] Qeqqata,
+            [AliasInShort("QE")] [RegionCode(4_00_116_0003)]
+            Qeqqata,
 
             /// <summary>
             /// Sermersooq
             /// </summary>
-            [AliasInShort("SM")] Sermersooq,
+            [AliasInShort("SM")] [RegionCode(4_00_116_0004)]
+            Sermersooq,
 
             /// <summary>
             /// Unknown
@@ -85,6 +89,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"GL-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -120,6 +134,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

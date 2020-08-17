@@ -112,92 +112,92 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Bubanza
             /// </summary>
-            [AliasInShort("BB")] Bubanza,
+            [AliasInShort("BB")][RegionCode(3_00_107_0001)] Bubanza,
 
             /// <summary>
             /// Bujumbura Rural
             /// </summary>
-            [AliasInShort("BL")] BujumburaRural,
+            [AliasInShort("BL")][RegionCode(3_00_107_0002)] BujumburaRural,
 
             /// <summary>
             /// Bujumbura
             /// </summary>
-            [AliasInShort("BM")] Bujumbura,
+            [AliasInShort("BM")][RegionCode(3_00_107_0003)] Bujumbura,
 
             /// <summary>
             /// Bururi
             /// </summary>
-            [AliasInShort("BR")] Bururi,
+            [AliasInShort("BR")][RegionCode(3_00_107_0004)] Bururi,
 
             /// <summary>
             /// Cankuzo
             /// </summary>
-            [AliasInShort("CA")] Cankuzo,
+            [AliasInShort("CA")][RegionCode(3_00_107_0005)] Cankuzo,
 
             /// <summary>
             /// Cibitoke
             /// </summary>
-            [AliasInShort("CI")] Cibitoke,
+            [AliasInShort("CI")][RegionCode(3_00_107_0006)] Cibitoke,
 
             /// <summary>
             /// Gitega
             /// </summary>
-            [AliasInShort("GI")] Gitega,
+            [AliasInShort("GI")][RegionCode(3_00_107_0007)] Gitega,
 
             /// <summary>
             /// Kirundo
             /// </summary>
-            [AliasInShort("KI")] Kirundo,
+            [AliasInShort("KI")][RegionCode(3_00_107_0008)] Kirundo,
 
             /// <summary>
             /// Karuzi
             /// </summary>
-            [AliasInShort("KR")] Karuzi,
+            [AliasInShort("KR")][RegionCode(3_00_107_0009)] Karuzi,
 
             /// <summary>
             /// Kayanza
             /// </summary>
-            [AliasInShort("KY")] Kayanza,
+            [AliasInShort("KY")][RegionCode(3_00_107_0010)] Kayanza,
 
             /// <summary>
             /// Makamba
             /// </summary>
-            [AliasInShort("MA")] Makamba,
+            [AliasInShort("MA")][RegionCode(3_00_107_0011)] Makamba,
 
             /// <summary>
             /// Muramvya
             /// </summary>
-            [AliasInShort("MU")] Muramvya,
+            [AliasInShort("MU")][RegionCode(3_00_107_0012)] Muramvya,
 
             /// <summary>
             /// Mwaro
             /// </summary>
-            [AliasInShort("MW")] Mwaro,
+            [AliasInShort("MW")][RegionCode(3_00_107_0013)] Mwaro,
 
             /// <summary>
             /// Muyinga
             /// </summary>
-            [AliasInShort("MY")] Muyinga,
+            [AliasInShort("MY")][RegionCode(3_00_107_0014)] Muyinga,
 
             /// <summary>
             /// Ngozi
             /// </summary>
-            [AliasInShort("NG")] Ngozi,
+            [AliasInShort("NG")][RegionCode(3_00_107_0015)] Ngozi,
 
             /// <summary>
             /// Rumonge
             /// </summary>
-            [AliasInShort("RM")] Rumonge,
+            [AliasInShort("RM")][RegionCode(3_00_107_0016)] Rumonge,
 
             /// <summary>
             /// Rutana
             /// </summary>
-            [AliasInShort("RT")] Rutana,
+            [AliasInShort("RT")][RegionCode(3_00_107_0017)] Rutana,
 
             /// <summary>
             /// Ruyigi
             /// </summary>
-            [AliasInShort("RY")] Ruyigi,
+            [AliasInShort("RY")][RegionCode(3_00_107_0018)] Ruyigi,
 
             /// <summary>
             /// Unknown
@@ -225,6 +225,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BI-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -260,6 +270,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

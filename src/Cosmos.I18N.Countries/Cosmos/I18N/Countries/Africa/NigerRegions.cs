@@ -62,42 +62,42 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Agadez
             /// </summary>
-            [AliasInShort("1")] Agadez,
+            [AliasInShort("1")][RegionCode(3_00_143_0001)] Agadez,
 
             /// <summary>
             /// Diffa
             /// </summary>
-            [AliasInShort("2")] Diffa,
+            [AliasInShort("2")][RegionCode(3_00_143_0002)] Diffa,
 
             /// <summary>
             /// Dosso
             /// </summary>
-            [AliasInShort("3")] Dosso,
+            [AliasInShort("3")][RegionCode(3_00_143_0003)] Dosso,
 
             /// <summary>
             /// Maradi
             /// </summary>
-            [AliasInShort("4")] Maradi,
+            [AliasInShort("4")][RegionCode(3_00_143_0004)] Maradi,
 
             /// <summary>
             /// Tahoua
             /// </summary>
-            [AliasInShort("5")] Tahoua,
+            [AliasInShort("5")][RegionCode(3_00_143_0005)] Tahoua,
 
             /// <summary>
             /// Tillabéri
             /// </summary>
-            [AliasInShort("6")] Tillabéri,
+            [AliasInShort("6")][RegionCode(3_00_143_0006)] Tillabéri,
 
             /// <summary>
             /// Zinder
             /// </summary>
-            [AliasInShort("7")] Zinder,
+            [AliasInShort("7")][RegionCode(3_00_143_0007)] Zinder,
 
             /// <summary>
             /// Niamey
             /// </summary>
-            [AliasInShort("8")] Niamey,
+            [AliasInShort("8")][RegionCode(3_00_143_0008)] Niamey,
 
             /// <summary>
             /// Unknown
@@ -125,6 +125,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"NE-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -160,6 +170,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

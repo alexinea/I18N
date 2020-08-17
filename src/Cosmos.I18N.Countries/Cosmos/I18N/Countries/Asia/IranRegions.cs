@@ -177,157 +177,188 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Khuzestan
             /// </summary>
-            [AliasInShort("10")] Khuzestan,
+            [AliasInShort("10")] [RegionCode(1_00_014_0010)]
+            Khuzestan,
 
             /// <summary>
             /// Zanjan
             /// </summary>
-            [AliasInShort("11")] Zanjan,
+            [AliasInShort("11")] [RegionCode(1_00_014_0011)]
+            Zanjan,
 
             /// <summary>
             /// Semnan
             /// </summary>
-            [AliasInShort("12")] Semnan,
+            [AliasInShort("12")] [RegionCode(1_00_014_0012)]
+            Semnan,
 
             /// <summary>
             /// Sistan and Baluchestan
             /// </summary>
-            [AliasInShort("13")] SistanAndBaluchestan,
+            [AliasInShort("13")] [RegionCode(1_00_014_0013)]
+            SistanAndBaluchestan,
 
             /// <summary>
             /// Fars
             /// </summary>
-            [AliasInShort("14")] Fars,
+            [AliasInShort("14")] [RegionCode(1_00_014_0014)]
+            Fars,
 
             /// <summary>
             /// Kerman
             /// </summary>
-            [AliasInShort("15")] Kerman,
+            [AliasInShort("15")] [RegionCode(1_00_014_0015)]
+            Kerman,
 
             /// <summary>
             /// Kurdistan
             /// </summary>
-            [AliasInShort("16")] Kurdistan,
+            [AliasInShort("16")] [RegionCode(1_00_014_0016)]
+            Kurdistan,
 
             /// <summary>
             /// Kermanshah
             /// </summary>
-            [AliasInShort("17")] Kermanshah,
+            [AliasInShort("17")] [RegionCode(1_00_014_0017)]
+            Kermanshah,
 
             /// <summary>
             /// Kohgiluyeh and Boyer-Ahmad
             /// </summary>
-            [AliasInShort("18")] KohgiluyehAndBoyerAhmad,
+            [AliasInShort("18")] [RegionCode(1_00_014_0018)]
+            KohgiluyehAndBoyerAhmad,
 
             /// <summary>
             /// Gilan
             /// </summary>
-            [AliasInShort("19")] Gilan,
+            [AliasInShort("19")] [RegionCode(1_00_014_0019)]
+            Gilan,
 
             /// <summary>
             /// Lorestan
             /// </summary>
-            [AliasInShort("20")] Lorestan,
+            [AliasInShort("20")] [RegionCode(1_00_014_0020)]
+            Lorestan,
 
             /// <summary>
             /// Mazandaran
             /// </summary>
-            [AliasInShort("21")] Mazandaran,
+            [AliasInShort("21")] [RegionCode(1_00_014_0021)]
+            Mazandaran,
 
             /// <summary>
             /// Markazi
             /// </summary>
-            [AliasInShort("22")] Markazi,
+            [AliasInShort("22")] [RegionCode(1_00_014_0022)]
+            Markazi,
 
             /// <summary>
             /// Hormozgan
             /// </summary>
-            [AliasInShort("23")] Hormozgan,
+            [AliasInShort("23")] [RegionCode(1_00_014_0023)]
+            Hormozgan,
 
             /// <summary>
             /// Hamadan
             /// </summary>
-            [AliasInShort("24")] Hamadan,
+            [AliasInShort("24")] [RegionCode(1_00_014_0024)]
+            Hamadan,
 
             /// <summary>
             /// Yazd
             /// </summary>
-            [AliasInShort("25")] Yazd,
+            [AliasInShort("25")] [RegionCode(1_00_014_0025)]
+            Yazd,
 
             /// <summary>
             /// Qom
             /// </summary>
-            [AliasInShort("26")] Qom,
+            [AliasInShort("26")] [RegionCode(1_00_014_0026)]
+            Qom,
 
             /// <summary>
             /// Golestan
             /// </summary>
-            [AliasInShort("27")] Golestan,
+            [AliasInShort("27")] [RegionCode(1_00_014_0027)]
+            Golestan,
 
             /// <summary>
             /// Qazvin
             /// </summary>
-            [AliasInShort("28")] Qazvin,
+            [AliasInShort("28")] [RegionCode(1_00_014_0028)]
+            Qazvin,
 
             /// <summary>
             /// South Khorasan
             /// </summary>
-            [AliasInShort("29")] SouthKhorasan,
+            [AliasInShort("29")] [RegionCode(1_00_014_0029)]
+            SouthKhorasan,
 
             /// <summary>
             /// Razavi Khorasan
             /// </summary>
-            [AliasInShort("30")] RazaviKhorasan,
+            [AliasInShort("30")] [RegionCode(1_00_014_0030)]
+            RazaviKhorasan,
 
             /// <summary>
             /// North Khorasan
             /// </summary>
-            [AliasInShort("31")] NorthKhorasan,
+            [AliasInShort("31")] [RegionCode(1_00_014_0031)]
+            NorthKhorasan,
 
             /// <summary>
             /// Alborz
             /// </summary>
-            [AliasInShort("32")] Alborz,
+            [AliasInShort("32")] [RegionCode(1_00_014_0032)]
+            Alborz,
 
             /// <summary>
             /// East Azerbaijan
             /// </summary>
-            [AliasInShort("01")] EastAzerbaijan,
+            [AliasInShort("01")] [RegionCode(1_00_014_0001)]
+            EastAzerbaijan,
 
             /// <summary>
             /// West Azarbaijan
             /// </summary>
-            [AliasInShort("02")] WestAzarbaijan,
+            [AliasInShort("02")] [RegionCode(1_00_014_0002)]
+            WestAzarbaijan,
 
             /// <summary>
             /// Ardabil
             /// </summary>
-            [AliasInShort("03")] Ardabil,
+            [AliasInShort("03")] [RegionCode(1_00_014_0003)]
+            Ardabil,
 
             /// <summary>
             /// Isfahan
             /// </summary>
-            [AliasInShort("04")] Isfahan,
+            [AliasInShort("04")] [RegionCode(1_00_014_0004)]
+            Isfahan,
 
             /// <summary>
             /// Ilam
             /// </summary>
-            [AliasInShort("05")] Ilam,
+            [AliasInShort("05")] [RegionCode(1_00_014_0005)]
+            Ilam,
 
             /// <summary>
             /// Bushehr
             /// </summary>
-            [AliasInShort("06")] Bushehr,
+            [AliasInShort("06")] [RegionCode(1_00_014_0006)]
+            Bushehr,
 
             /// <summary>
             /// Tehran
             /// </summary>
-            [AliasInShort("07")] Tehran,
+            [AliasInShort("07")] [RegionCode(1_00_014_0007)]
+            Tehran,
 
             /// <summary>
             /// Chaharmahal and Bakhtiari
             /// </summary>
-            [AliasInShort("08")] ChaharmahalAndBakhtiari,
+            [AliasInShort("08")] [RegionCode(1_00_014_0008)]
+            ChaharmahalAndBakhtiari,
 
             /// <summary>
             /// Unknown
@@ -355,6 +386,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"IR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -390,6 +431,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

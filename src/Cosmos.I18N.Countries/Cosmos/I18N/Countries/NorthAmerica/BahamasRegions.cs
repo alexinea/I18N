@@ -178,158 +178,189 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Acklins
             /// </summary>
-            [AliasInShort("AK")] Acklins,
+            [AliasInShort("AK")] [RegionCode(4_00_105_0001)]
+            Acklins,
 
             /// <summary>
             /// Bimini
             /// </summary>
-            [AliasInShort("BI")] Bimini,
+            [AliasInShort("BI")] [RegionCode(4_00_105_0002)]
+            Bimini,
 
             /// <summary>
             /// Black Point
             /// </summary>
-            [AliasInShort("BP")] BlackPoint,
+            [AliasInShort("BP")] [RegionCode(4_00_105_0003)]
+            BlackPoint,
 
             /// <summary>
             /// Berry Islands
             /// </summary>
-            [AliasInShort("BY")] BerryIslands,
+            [AliasInShort("BY")] [RegionCode(4_00_105_0004)]
+            BerryIslands,
 
             /// <summary>
             /// Central Eleuthera
             /// </summary>
-            [AliasInShort("CE")] CentralEleuthera,
+            [AliasInShort("CE")] [RegionCode(4_00_105_0005)]
+            CentralEleuthera,
 
             /// <summary>
             /// Cat Island
             /// </summary>
-            [AliasInShort("CI")] CatIsland,
+            [AliasInShort("CI")] [RegionCode(4_00_105_0006)]
+            CatIsland,
 
             /// <summary>
             /// Crooked Island
             /// </summary>
-            [AliasInShort("CK")] CrookedIsland,
+            [AliasInShort("CK")] [RegionCode(4_00_105_0007)]
+            CrookedIsland,
 
             /// <summary>
             /// Central Abaco
             /// </summary>
-            [AliasInShort("CO")] CentralAbaco,
+            [AliasInShort("CO")] [RegionCode(4_00_105_0008)]
+            CentralAbaco,
 
             /// <summary>
             /// Central Andros
             /// </summary>
-            [AliasInShort("CS")] CentralAndros,
+            [AliasInShort("CS")] [RegionCode(4_00_105_0009)]
+            CentralAndros,
 
             /// <summary>
             /// East Grand Bahama
             /// </summary>
-            [AliasInShort("EG")] EastGrandBahama,
+            [AliasInShort("EG")] [RegionCode(4_00_105_0010)]
+            EastGrandBahama,
 
             /// <summary>
             /// Exuma
             /// </summary>
-            [AliasInShort("EX")] Exuma,
+            [AliasInShort("EX")] [RegionCode(4_00_105_0011)]
+            Exuma,
 
             /// <summary>
             /// Freeport
             /// </summary>
-            [AliasInShort("FP")] Freeport,
+            [AliasInShort("FP")] [RegionCode(4_00_105_0012)]
+            Freeport,
 
             /// <summary>
             /// Grand Cay
             /// </summary>
-            [AliasInShort("GC")] GrandCay,
+            [AliasInShort("GC")] [RegionCode(4_00_105_0013)]
+            GrandCay,
 
             /// <summary>
             /// Harbour Island
             /// </summary>
-            [AliasInShort("HI")] HarbourIsland,
+            [AliasInShort("HI")] [RegionCode(4_00_105_0014)]
+            HarbourIsland,
 
             /// <summary>
             /// Hope Town
             /// </summary>
-            [AliasInShort("HT")] HopeTown,
+            [AliasInShort("HT")] [RegionCode(4_00_105_0015)]
+            HopeTown,
 
             /// <summary>
             /// Inagua
             /// </summary>
-            [AliasInShort("IN")] Inagua,
+            [AliasInShort("IN")] [RegionCode(4_00_105_0016)]
+            Inagua,
 
             /// <summary>
             /// Long Island
             /// </summary>
-            [AliasInShort("LI")] LongIsland,
+            [AliasInShort("LI")] [RegionCode(4_00_105_0017)]
+            LongIsland,
 
             /// <summary>
             /// Mangrove Cay
             /// </summary>
-            [AliasInShort("MC")] MangroveCay,
+            [AliasInShort("MC")] [RegionCode(4_00_105_0018)]
+            MangroveCay,
 
             /// <summary>
             /// Mayaguana
             /// </summary>
-            [AliasInShort("MG")] Mayaguana,
+            [AliasInShort("MG")] [RegionCode(4_00_105_0019)]
+            Mayaguana,
 
             /// <summary>
             /// Moore’s Island
             /// </summary>
-            [AliasInShort("MI")] MooresIsland,
+            [AliasInShort("MI")] [RegionCode(4_00_105_0020)]
+            MooresIsland,
 
             /// <summary>
             /// North Eleuthera
             /// </summary>
-            [AliasInShort("NE")] NorthEleuthera,
+            [AliasInShort("NE")] [RegionCode(4_00_105_0021)]
+            NorthEleuthera,
 
             /// <summary>
             /// North Abaco
             /// </summary>
-            [AliasInShort("NO")] NorthAbaco,
+            [AliasInShort("NO")] [RegionCode(4_00_105_0022)]
+            NorthAbaco,
 
             /// <summary>
             /// North Andros
             /// </summary>
-            [AliasInShort("NS")] NorthAndros,
+            [AliasInShort("NS")] [RegionCode(4_00_105_0023)]
+            NorthAndros,
 
             /// <summary>
             /// Rum Cay
             /// </summary>
-            [AliasInShort("RC")] RumCay,
+            [AliasInShort("RC")] [RegionCode(4_00_105_0024)]
+            RumCay,
 
             /// <summary>
             /// Ragged Island
             /// </summary>
-            [AliasInShort("RI")] RaggedIsland,
+            [AliasInShort("RI")] [RegionCode(4_00_105_0025)]
+            RaggedIsland,
 
             /// <summary>
             /// South Andros
             /// </summary>
-            [AliasInShort("SA")] SouthAndros,
+            [AliasInShort("SA")] [RegionCode(4_00_105_0026)]
+            SouthAndros,
 
             /// <summary>
             /// South Eleuthera
             /// </summary>
-            [AliasInShort("SE")] SouthEleuthera,
+            [AliasInShort("SE")] [RegionCode(4_00_105_0027)]
+            SouthEleuthera,
 
             /// <summary>
             /// South Abaco
             /// </summary>
-            [AliasInShort("SO")] SouthAbaco,
+            [AliasInShort("SO")] [RegionCode(4_00_105_0028)]
+            SouthAbaco,
 
 
             /// <summary>
             /// San Salvador
             /// </summary>
-            [AliasInShort("SS")] SanSalvador,
+            [AliasInShort("SS")] [RegionCode(4_00_105_0029)]
+            SanSalvador,
 
             /// <summary>
             /// Spanish Wells
             /// </summary>
-            [AliasInShort("SW")] SpanishWells,
+            [AliasInShort("SW")] [RegionCode(4_00_105_0030)]
+            SpanishWells,
 
             /// <summary>
             /// West Grand Bahama
             /// </summary>
-            [AliasInShort("WG")] WestGrandBahama,
+            [AliasInShort("WG")] [RegionCode(4_00_105_0031)]
+            WestGrandBahama,
 
             /// <summary>
             /// Unknown
@@ -357,6 +388,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BS-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -392,6 +433,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

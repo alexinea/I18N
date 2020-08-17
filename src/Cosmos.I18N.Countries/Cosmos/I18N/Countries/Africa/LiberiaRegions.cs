@@ -97,77 +97,77 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Bong
             /// </summary>
-            [AliasInShort("BG")] Bong,
+            [AliasInShort("BG")][RegionCode(3_00_132_0001)] Bong,
 
             /// <summary>
             /// Bomi
             /// </summary>
-            [AliasInShort("BM")] Bomi,
+            [AliasInShort("BM")][RegionCode(3_00_132_0002)] Bomi,
 
             /// <summary>
             /// Grand Cape Mount
             /// </summary>
-            [AliasInShort("CM")] GrandCapeMount,
+            [AliasInShort("CM")][RegionCode(3_00_132_0003)] GrandCapeMount,
 
             /// <summary>
             /// Grand Bassa
             /// </summary>
-            [AliasInShort("GB")] GrandBassa,
+            [AliasInShort("GB")][RegionCode(3_00_132_0004)] GrandBassa,
 
             /// <summary>
             /// Grand Gedeh
             /// </summary>
-            [AliasInShort("GG")] GrandGedeh,
+            [AliasInShort("GG")][RegionCode(3_00_132_0005)] GrandGedeh,
 
             /// <summary>
             /// Grand Kru
             /// </summary>
-            [AliasInShort("GK")] GrandKru,
+            [AliasInShort("GK")][RegionCode(3_00_132_0006)] GrandKru,
 
             /// <summary>
             /// Gbarpolu
             /// </summary>
-            [AliasInShort("GP")] Gbarpolu,
+            [AliasInShort("GP")][RegionCode(3_00_132_0007)] Gbarpolu,
 
             /// <summary>
             /// Lofa
             /// </summary>
-            [AliasInShort("LO")] Lofa,
+            [AliasInShort("LO")][RegionCode(3_00_132_0008)] Lofa,
 
             /// <summary>
             /// Margibi
             /// </summary>
-            [AliasInShort("MG")] Margibi,
+            [AliasInShort("MG")][RegionCode(3_00_132_0009)] Margibi,
 
             /// <summary>
             /// Montserrado
             /// </summary>
-            [AliasInShort("MO")] Montserrado,
+            [AliasInShort("MO")][RegionCode(3_00_132_0010)] Montserrado,
 
             /// <summary>
             /// Maryland
             /// </summary>
-            [AliasInShort("MY")] Maryland,
+            [AliasInShort("MY")][RegionCode(3_00_132_0011)] Maryland,
 
             /// <summary>
             /// Nimba
             /// </summary>
-            [AliasInShort("NI")] Nimba,
+            [AliasInShort("NI")][RegionCode(3_00_132_0012)] Nimba,
 
             /// <summary>
             /// River Gee
             /// </summary>
-            [AliasInShort("RG")] RiverGee,
+            [AliasInShort("RG")][RegionCode(3_00_132_0013)] RiverGee,
 
             /// <summary>
             /// Rivercess
             /// </summary>
-            [AliasInShort("RI")] Rivercess,
+            [AliasInShort("RI")][RegionCode(3_00_132_0014)] Rivercess,
 
             /// <summary>
             /// Sinoe
             /// </summary>
-            [AliasInShort("SI")] Sinoe,
+            [AliasInShort("SI")][RegionCode(3_00_132_0015)] Sinoe,
 
             /// <summary>
             /// Unknown
@@ -195,6 +195,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"LR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -230,6 +240,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

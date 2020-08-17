@@ -97,77 +97,92 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Harju
             /// </summary>
-            [AliasInShort("37")] Harju,
+            [AliasInShort("37")] [RegionCode(2_00_111_0037)]
+            Harju,
 
             /// <summary>
             /// Hiiu
             /// </summary>
-            [AliasInShort("39")] Hiiu,
+            [AliasInShort("39")] [RegionCode(2_00_111_0039)]
+            Hiiu,
 
             /// <summary>
             /// Ida-Viru
             /// </summary>
-            [AliasInShort("44")] IdaViru,
+            [AliasInShort("44")] [RegionCode(2_00_111_0044)]
+            IdaViru,
 
             /// <summary>
             /// Jõgeva
             /// </summary>
-            [AliasInShort("49")] Jõgeva,
+            [AliasInShort("49")] [RegionCode(2_00_111_0049)]
+            Jõgeva,
 
             /// <summary>
             /// Järva
             /// </summary>
-            [AliasInShort("51")] Järva,
+            [AliasInShort("51")] [RegionCode(2_00_111_0051)]
+            Järva,
 
             /// <summary>
             /// Lääne
             /// </summary>
-            [AliasInShort("57")] Lääne,
+            [AliasInShort("57")] [RegionCode(2_00_111_0057)]
+            Lääne,
 
             /// <summary>
             /// Lääne-Viru
             /// </summary>
-            [AliasInShort("59")] LääneViru,
+            [AliasInShort("59")] [RegionCode(2_00_111_0059)]
+            LääneViru,
 
             /// <summary>
             /// Põlva
             /// </summary>
-            [AliasInShort("65")] Põlva,
+            [AliasInShort("65")] [RegionCode(2_00_111_0065)]
+            Põlva,
 
             /// <summary>
             /// Pärnu
             /// </summary>
-            [AliasInShort("67")] Pärnu,
+            [AliasInShort("67")] [RegionCode(2_00_111_0067)]
+            Pärnu,
 
             /// <summary>
             /// Rapla
             /// </summary>
-            [AliasInShort("70")] Rapla,
+            [AliasInShort("70")] [RegionCode(2_00_111_0070)]
+            Rapla,
 
             /// <summary>
             /// Saare
             /// </summary>
-            [AliasInShort("74")] Saare,
+            [AliasInShort("74")] [RegionCode(2_00_111_0074)]
+            Saare,
 
             /// <summary>
             /// Tartu
             /// </summary>
-            [AliasInShort("78")] Tartu,
+            [AliasInShort("78")] [RegionCode(2_00_111_0078)]
+            Tartu,
 
             /// <summary>
             /// Valga
             /// </summary>
-            [AliasInShort("82")] Valga,
+            [AliasInShort("82")] [RegionCode(2_00_111_0082)]
+            Valga,
 
             /// <summary>
             /// Viljandi
             /// </summary>
-            [AliasInShort("84")] Viljandi,
+            [AliasInShort("84")] [RegionCode(2_00_111_0084)]
+            Viljandi,
 
             /// <summary>
             /// Võru
             /// </summary>
-            [AliasInShort("86")] Võru,
+            [AliasInShort("86")] [RegionCode(2_00_111_0084)]
+            Võru,
 
             /// <summary>
             /// Unknown
@@ -195,6 +210,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"EE-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -230,6 +255,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

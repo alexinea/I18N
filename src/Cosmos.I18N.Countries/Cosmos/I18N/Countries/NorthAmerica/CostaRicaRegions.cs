@@ -57,37 +57,44 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Alajuela
             /// </summary>
-            [AliasInShort("A")] Alajuela,
+            [AliasInShort("A")] [RegionCode(4_00_111_0001)]
+            Alajuela,
 
             /// <summary>
             /// Cartago
             /// </summary>
-            [AliasInShort("C")] Cartago,
+            [AliasInShort("C")] [RegionCode(4_00_111_0002)]
+            Cartago,
 
             /// <summary>
             /// Guanacaste
             /// </summary>
-            [AliasInShort("G")] Guanacaste,
+            [AliasInShort("G")] [RegionCode(4_00_111_0003)]
+            Guanacaste,
 
             /// <summary>
             /// Heredia
             /// </summary>
-            [AliasInShort("H")] Heredia,
+            [AliasInShort("H")] [RegionCode(4_00_111_0004)]
+            Heredia,
 
             /// <summary>
             /// Limón
             /// </summary>
-            [AliasInShort("L")] Limón,
+            [AliasInShort("L")] [RegionCode(4_00_111_0005)]
+            Limón,
 
             /// <summary>
             /// Puntarenas
             /// </summary>
-            [AliasInShort("P")] Puntarenas,
+            [AliasInShort("P")] [RegionCode(4_00_111_0006)]
+            Puntarenas,
 
             /// <summary>
             /// San José
             /// </summary>
-            [AliasInShort("SJ")] SanJosé,
+            [AliasInShort("SJ")] [RegionCode(4_00_111_0007)]
+            SanJosé,
 
             /// <summary>
             /// Unknown
@@ -115,6 +122,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CR-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -150,6 +167,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

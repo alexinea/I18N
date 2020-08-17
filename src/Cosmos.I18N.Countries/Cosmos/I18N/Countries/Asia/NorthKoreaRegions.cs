@@ -77,57 +77,57 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Ryanggang
             /// </summary>
-            [AliasInShort("10")] Ryanggang,
+            [AliasInShort("10")][RegionCode(1_00_011_0010)] Ryanggang,
 
             /// <summary>
             /// Rason
             /// </summary>
-            [AliasInShort("13")] Rason,
+            [AliasInShort("13")][RegionCode(1_00_011_0013)] Rason,
 
             /// <summary>
             /// Pyongyang
             /// </summary>
-            [AliasInShort("01")] Pyongyang,
+            [AliasInShort("01")][RegionCode(1_00_011_0001)] Pyongyang,
 
             /// <summary>
             /// South Pyongan
             /// </summary>
-            [AliasInShort("02")] SouthPyongan,
+            [AliasInShort("02")][RegionCode(1_00_011_0002)] SouthPyongan,
 
             /// <summary>
             /// North Pyongan
             /// </summary>
-            [AliasInShort("03")] NorthPyongan,
+            [AliasInShort("03")][RegionCode(1_00_011_0003)] NorthPyongan,
 
             /// <summary>
             /// Chagang
             /// </summary>
-            [AliasInShort("04")] Chagang,
+            [AliasInShort("04")][RegionCode(1_00_011_0004)] Chagang,
 
             /// <summary>
             /// South Hwanghae
             /// </summary>
-            [AliasInShort("05")] SouthHwanghae,
+            [AliasInShort("05")][RegionCode(1_00_011_0005)] SouthHwanghae,
 
             /// <summary>
             /// North Hwanghae
             /// </summary>
-            [AliasInShort("06")] NorthHwanghae,
+            [AliasInShort("06")][RegionCode(1_00_011_0006)] NorthHwanghae,
 
             /// <summary>
             /// Kangwon
             /// </summary>
-            [AliasInShort("07")] Kangwon,
+            [AliasInShort("07")][RegionCode(1_00_011_0007)] Kangwon,
 
             /// <summary>
             /// South Hamgyong
             /// </summary>
-            [AliasInShort("08")] SouthHamgyong,
+            [AliasInShort("08")][RegionCode(1_00_011_0008)] SouthHamgyong,
 
             /// <summary>
             /// North Hamgyong
             /// </summary>
-            [AliasInShort("09")] NorthHamgyong,
+            [AliasInShort("09")][RegionCode(1_00_011_0009)] NorthHamgyong,
 
             /// <summary>
             /// Unknown
@@ -155,6 +155,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"KP-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -190,6 +200,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

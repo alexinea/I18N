@@ -52,32 +52,38 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Belize
             /// </summary>
-            [AliasInShort("BZ")] Belize,
+            [AliasInShort("BZ")] [RegionCode(4_00_107_0001)]
+            Belize,
 
             /// <summary>
             /// Cayo
             /// </summary>
-            [AliasInShort("CY")] Cayo,
+            [AliasInShort("CY")] [RegionCode(4_00_107_0002)]
+            Cayo,
 
             /// <summary>
             /// Corozal
             /// </summary>
-            [AliasInShort("CZL")] Corozal,
+            [AliasInShort("CZL")] [RegionCode(4_00_107_0003)]
+            Corozal,
 
             /// <summary>
             /// Orange Walk    
             /// </summary>
-            [AliasInShort("OW")] OrangeWalk,
+            [AliasInShort("OW")] [RegionCode(4_00_107_0004)]
+            OrangeWalk,
 
             /// <summary>
             /// Stann Creek
             /// </summary>
-            [AliasInShort("SC")] StannCreek,
+            [AliasInShort("SC")] [RegionCode(4_00_107_0005)]
+            StannCreek,
 
             /// <summary>
             /// Toledo
             /// </summary>
-            [AliasInShort("TOL")] Toledo,
+            [AliasInShort("TOL")] [RegionCode(4_00_107_0006)]
+            Toledo,
 
 
             /// <summary>
@@ -106,6 +112,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"BZ-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -141,6 +157,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

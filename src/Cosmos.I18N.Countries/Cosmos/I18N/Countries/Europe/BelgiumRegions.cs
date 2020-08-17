@@ -42,22 +42,26 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Bruxelles
             /// </summary>
-            [AliasInShort("BRU")] Bruxelles,
+            [AliasInShort("BRU")] [RegionCode(2_00_105_0001)]
+            Bruxelles,
 
             /// <summary>
             /// Deutschsprachige Gemeinschaft
             /// </summary>
-            [AliasInShort("DE")] DeutschsprachigeGemeinschaft,
+            [AliasInShort("DE")] [RegionCode(2_00_105_0002)]
+            DeutschsprachigeGemeinschaft,
 
             /// <summary>
             /// Vlaamse Gemeenschap
             /// </summary>
-            [AliasInShort("VLG")] VlaamseGemeenschap,
+            [AliasInShort("VLG")] [RegionCode(2_00_105_0003)]
+            VlaamseGemeenschap,
 
             /// <summary>
             /// Communauté Française
             /// </summary>
-            [AliasInShort("WAL")] CommunautéFrançaise,
+            [AliasInShort("WAL")] [RegionCode(2_00_105_0004)]
+            CommunautéFrançaise,
 
             /// <summary>
             /// Unknown
@@ -87,6 +91,36 @@ namespace Cosmos.I18N.Countries.Europe
             return $"BE-{values.ToRegionCode()}";
         }
 
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="Country"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static Country ToCountry(this EnumValues value)
+        {
+            return Country.Belgium;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="CountryCode"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            return CountryCode.BE;
+        }
+
         #endregion
 
         #region Getters
@@ -100,6 +134,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

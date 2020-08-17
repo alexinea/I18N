@@ -102,82 +102,98 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Baden-Württemberg
             /// </summary>
-            [AliasInShort("BW")] BadenWürttemberg,
+            [AliasInShort("BW")] [RegionCode(2_00_002_0001)]
+            BadenWürttemberg,
 
             /// <summary>
             /// Bayern, Bavaria
             /// </summary>
-            [AliasInShort("BY")] Bayern,
+            [AliasInShort("BY")] [RegionCode(2_00_002_0002)]
+            Bayern,
 
             /// <summary>
             /// Berlin
             /// </summary>
-            [AliasInShort("BE")] Berlin,
+            [AliasInShort("BE")] [RegionCode(2_00_002_0003)]
+            Berlin,
 
             /// <summary>
             /// Brandenburg
             /// </summary>
-            [AliasInShort("BB")] Brandenburg,
+            [AliasInShort("BB")] [RegionCode(2_00_002_0004)]
+            Brandenburg,
 
             /// <summary>
             /// Bremen
             /// </summary>
-            [AliasInShort("HB")] Bremen,
+            [AliasInShort("HB")] [RegionCode(2_00_002_0005)]
+            Bremen,
 
             /// <summary>
             /// Hamburg
             /// </summary>
-            [AliasInShort("HH")] Hamburg,
+            [AliasInShort("HH")] [RegionCode(2_00_002_0006)]
+            Hamburg,
 
             /// <summary>
             /// Hessen, Hesse
             /// </summary>
-            [AliasInShort("HE")] Hessen,
+            [AliasInShort("HE")] [RegionCode(2_00_002_0007)]
+            Hessen,
 
             /// <summary>
             /// Mecklenburg-Vorpommern
             /// </summary>
-            [AliasInShort("MV")] MecklenburgVorpommern,
+            [AliasInShort("MV")] [RegionCode(2_00_002_0008)]
+            MecklenburgVorpommern,
 
             /// <summary>
             /// Niedersachsen, Lower Saxony
             /// </summary>
-            [AliasInShort("NI")] Niedersachsen,
+            [AliasInShort("NI")] [RegionCode(2_00_002_0009)]
+            Niedersachsen,
 
             /// <summary>
             /// Nordrhein-Westfalen, North Rhine-Westphalia
             /// </summary>
-            [AliasInShort("NW")] NordrheinWestfalen,
+            [AliasInShort("NW")] [RegionCode(2_00_002_0010)]
+            NordrheinWestfalen,
 
             /// <summary>
             /// Rheinland-Pfalz, Rhineland-Palatinate
             /// </summary>
-            [AliasInShort("RP")] RheinlandPfalz,
+            [AliasInShort("RP")] [RegionCode(2_00_002_0011)]
+            RheinlandPfalz,
 
             /// <summary>
             /// Saarland
             /// </summary>
-            [AliasInShort("SL")] Saarland,
+            [AliasInShort("SL")] [RegionCode(2_00_002_0012)]
+            Saarland,
 
             /// <summary>
             /// Sachsen, Saxony
             /// </summary>
-            [AliasInShort("SN")] Sachsen,
+            [AliasInShort("SN")] [RegionCode(2_00_002_0013)]
+            Sachsen,
 
             /// <summary>
             /// Sachsen-Anhalt
             /// </summary>
-            [AliasInShort("ST")] SachsenAnhalt,
+            [AliasInShort("ST")] [RegionCode(2_00_002_0014)]
+            SachsenAnhalt,
 
             /// <summary>
             /// Schleswig-Holstein
             /// </summary>
-            [AliasInShort("SH")] SchleswigHolstein,
+            [AliasInShort("SH")] [RegionCode(2_00_002_0015)]
+            SchleswigHolstein,
 
             /// <summary>
             /// Thüringen
             /// </summary>
-            [AliasInShort("TH")] Thüringen,
+            [AliasInShort("TH")] [RegionCode(2_00_002_0016)]
+            Thüringen,
 
             /// <summary>
             /// Unknown
@@ -207,6 +223,36 @@ namespace Cosmos.I18N.Countries.Europe
             return $"DE-{values.ToRegionCode()}";
         }
 
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="Country"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static Country ToCountry(this EnumValues value)
+        {
+            return Country.Germany;
+        }
+
+        /// <summary>
+        /// Convert to <see cref="CountryCode"/>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static CountryCode ToCountryCode(this EnumValues value)
+        {
+            return CountryCode.DE;
+        }
+
         #endregion
 
         #region Getters
@@ -220,6 +266,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

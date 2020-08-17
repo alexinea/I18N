@@ -82,62 +82,62 @@ namespace Cosmos.I18N.Countries.Asia
             /// <summary>
             /// Ajloun
             /// </summary>
-            [AliasInShort("AJ")] Ajloun,
+            [AliasInShort("AJ")][RegionCode(1_00_118_0001)] Ajloun,
 
             /// <summary>
             /// Amman
             /// </summary>
-            [AliasInShort("AM")] Amman,
+            [AliasInShort("AM")][RegionCode(1_00_118_0002)] Amman,
 
             /// <summary>
             /// Aqaba
             /// </summary>
-            [AliasInShort("AQ")] Aqaba,
+            [AliasInShort("AQ")][RegionCode(1_00_118_0003)] Aqaba,
 
             /// <summary>
             /// Tafilah
             /// </summary>
-            [AliasInShort("AT")] Tafilah,
+            [AliasInShort("AT")][RegionCode(1_00_118_0004)] Tafilah,
 
             /// <summary>
             /// Zarqa
             /// </summary>
-            [AliasInShort("AZ")] Zarqa,
+            [AliasInShort("AZ")][RegionCode(1_00_118_0005)] Zarqa,
 
             /// <summary>
             /// Balqa
             /// </summary>
-            [AliasInShort("BA")] Balqa,
+            [AliasInShort("BA")][RegionCode(1_00_118_0006)] Balqa,
 
             /// <summary>
             /// Irbid
             /// </summary>
-            [AliasInShort("IR")] Irbid,
+            [AliasInShort("IR")][RegionCode(1_00_118_0007)] Irbid,
 
             /// <summary>
             /// Jerash
             /// </summary>
-            [AliasInShort("JA")] Jerash,
+            [AliasInShort("JA")][RegionCode(1_00_118_0008)] Jerash,
 
             /// <summary>
             /// Karak
             /// </summary>
-            [AliasInShort("KA")] Karak,
+            [AliasInShort("KA")][RegionCode(1_00_118_0009)] Karak,
 
             /// <summary>
             /// Mafraq
             /// </summary>
-            [AliasInShort("MA")] Mafraq,
+            [AliasInShort("MA")][RegionCode(1_00_118_0010)] Mafraq,
 
             /// <summary>
             /// Madaba
             /// </summary>
-            [AliasInShort("MD")] Madaba,
+            [AliasInShort("MD")][RegionCode(1_00_118_0011)] Madaba,
 
             /// <summary>
             /// Ma’an
             /// </summary>
-            [AliasInShort("MN")] Maan,
+            [AliasInShort("MN")][RegionCode(1_00_118_0012)] Maan,
 
             /// <summary>
             /// Unknown
@@ -165,6 +165,16 @@ namespace Cosmos.I18N.Countries.Asia
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"JO-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -200,6 +210,13 @@ namespace Cosmos.I18N.Countries.Asia
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

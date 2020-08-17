@@ -52,7 +52,6 @@ namespace Cosmos.I18N.Countries.Africa
         /// </summary>
         public static EnumValues NanaGrébizi => EnumValues.NanaGrébizi;
 
-
         /// <summary>
         /// Kémo
         /// </summary>
@@ -108,87 +107,87 @@ namespace Cosmos.I18N.Countries.Africa
             /// <summary>
             /// Ouham
             /// </summary>
-            [AliasInShort("AC")] Ouham,
+            [AliasInShort("AC")][RegionCode(3_00_109_0001)] Ouham,
 
             /// <summary>
             /// Bamingui-Bangoran
             /// </summary>
-            [AliasInShort("BB")] BaminguiBangoran,
+            [AliasInShort("BB")][RegionCode(3_00_109_0002)] BaminguiBangoran,
 
             /// <summary>
             /// Bangui
             /// </summary>
-            [AliasInShort("BGF")] Bangui,
+            [AliasInShort("BGF")][RegionCode(3_00_109_0003)] Bangui,
 
             /// <summary>
             /// Basse-Kotto
             /// </summary>
-            [AliasInShort("BK")] BasseKotto,
+            [AliasInShort("BK")][RegionCode(3_00_109_0004)] BasseKotto,
 
             /// <summary>
             /// Haute-Kotto
             /// </summary>
-            [AliasInShort("HK")] HauteKotto,
+            [AliasInShort("HK")][RegionCode(3_00_109_0005)] HauteKotto,
 
             /// <summary>
             /// Haut-Mbomou
             /// </summary>
-            [AliasInShort("HM")] HautMbomou,
+            [AliasInShort("HM")][RegionCode(3_00_109_0006)] HautMbomou,
 
             /// <summary>
             /// Mambéré-Kadéï
             /// </summary>
-            [AliasInShort("HS")] MambéréKadéï,
+            [AliasInShort("HS")] [RegionCode(3_00_109_0007)]MambéréKadéï,
 
             /// <summary>
             ///  Nana-Grébizi
             /// </summary>
-            [AliasInShort("KB")] NanaGrébizi,
+            [AliasInShort("KB")][RegionCode(3_00_109_0008)] NanaGrébizi,
 
             /// <summary>
             /// Kémo
             /// </summary>
-            [AliasInShort("KG")] Kémo,
+            [AliasInShort("KG")][RegionCode(3_00_109_0009)] Kémo,
 
             /// <summary>
             /// Lobaye
             /// </summary>
-            [AliasInShort("LB")] Lobaye,
+            [AliasInShort("LB")][RegionCode(3_00_109_0010)] Lobaye,
 
             /// <summary>
             /// Mbomou
             /// </summary>
-            [AliasInShort("MB")] Mbomou,
+            [AliasInShort("MB")][RegionCode(3_00_109_0011)] Mbomou,
 
             /// <summary>
             /// Ombella-M’Poko
             /// </summary>
-            [AliasInShort("MP")] OmbellaMPoko,
+            [AliasInShort("MP")][RegionCode(3_00_109_0012)] OmbellaMPoko,
 
             /// <summary>
             /// Nana-Mambéré
             /// </summary>
-            [AliasInShort("NM")] NanaMambéré,
+            [AliasInShort("NM")][RegionCode(3_00_109_0013)] NanaMambéré,
 
             /// <summary>
             /// Ouham-Pendé
             /// </summary>
-            [AliasInShort("OP")] OuhamPendé,
+            [AliasInShort("OP")] [RegionCode(3_00_109_0014)]OuhamPendé,
 
             /// <summary>
             /// Sangha-Mbaéré
             /// </summary>
-            [AliasInShort("SE")] SanghaMbaéré,
+            [AliasInShort("SE")][RegionCode(3_00_109_0015)] SanghaMbaéré,
 
             /// <summary>
             /// Ouaka
             /// </summary>
-            [AliasInShort("UK")] Ouaka,
+            [AliasInShort("UK")][RegionCode(3_00_109_0016)] Ouaka,
 
             /// <summary>
             /// Vakaga
             /// </summary>
-            [AliasInShort("VK")] Vakaga,
+            [AliasInShort("VK")][RegionCode(3_00_109_0017)] Vakaga,
 
             /// <summary>
             /// Unknown
@@ -216,6 +215,16 @@ namespace Cosmos.I18N.Countries.Africa
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"CF-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -251,6 +260,13 @@ namespace Cosmos.I18N.Countries.Africa
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

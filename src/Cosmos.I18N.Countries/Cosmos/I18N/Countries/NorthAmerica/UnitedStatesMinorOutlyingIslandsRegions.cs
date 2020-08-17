@@ -67,47 +67,56 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Johnston Atoll
             /// </summary>
-            [AliasInShort("67")] JohnstonAtoll,
+            [AliasInShort("67")] [RegionCode(4_00_136_0067)]
+            JohnstonAtoll,
 
             /// <summary>
             /// Midway Atoll
             /// </summary>
-            [AliasInShort("71")] MidwayAtoll,
+            [AliasInShort("71")] [RegionCode(4_00_136_0071)]
+            MidwayAtoll,
 
             /// <summary>
             /// Navassa Island
             /// </summary>
-            [AliasInShort("76")] NavassaIsland,
+            [AliasInShort("76")] [RegionCode(4_00_136_0076)]
+            NavassaIsland,
 
             /// <summary>
             /// Wake Island
             /// </summary>
-            [AliasInShort("79")] WakeIsland,
+            [AliasInShort("79")] [RegionCode(4_00_136_0079)]
+            WakeIsland,
 
             /// <summary>
             /// Baker Island
             /// </summary>
-            [AliasInShort("81")] BakerIsland,
+            [AliasInShort("81")] [RegionCode(4_00_136_0081)]
+            BakerIsland,
 
             /// <summary>
             /// Howland Island
             /// </summary>
-            [AliasInShort("84")] HowlandIsland,
+            [AliasInShort("84")] [RegionCode(4_00_136_0084)]
+            HowlandIsland,
 
             /// <summary>
             /// Jarvis Island
             /// </summary>
-            [AliasInShort("86")] JarvisIsland,
+            [AliasInShort("86")] [RegionCode(4_00_136_0086)]
+            JarvisIsland,
 
             /// <summary>
             /// Kingman Reef
             /// </summary>
-            [AliasInShort("89")] KingmanReef,
+            [AliasInShort("89")] [RegionCode(4_00_136_0089)]
+            KingmanReef,
 
             /// <summary>
             /// Palmyra Atoll
             /// </summary>
-            [AliasInShort("95")] PalmyraAtoll,
+            [AliasInShort("95")] [RegionCode(4_00_136_0095)]
+            PalmyraAtoll,
 
             /// <summary>
             /// Unknown
@@ -135,6 +144,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"US-UM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -170,6 +189,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

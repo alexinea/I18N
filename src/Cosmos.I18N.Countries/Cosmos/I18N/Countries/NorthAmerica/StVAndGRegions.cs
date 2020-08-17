@@ -52,32 +52,38 @@ namespace Cosmos.I18N.Countries.NorthAmerica
             /// <summary>
             /// Charlotte
             /// </summary>
-            [AliasInShort("01")] Charlotte,
+            [AliasInShort("01")] [RegionCode(4_00_133_0001)]
+            Charlotte,
 
             /// <summary>
             /// Saint Andrew
             /// </summary>
-            [AliasInShort("02")] SaintAndrew,
+            [AliasInShort("02")] [RegionCode(4_00_133_0002)]
+            SaintAndrew,
 
             /// <summary>
             /// Saint David
             /// </summary>
-            [AliasInShort("03")] SaintDavid,
+            [AliasInShort("03")] [RegionCode(4_00_133_0003)]
+            SaintDavid,
 
             /// <summary>
             /// Saint George
             /// </summary>
-            [AliasInShort("04")] SaintGeorge,
+            [AliasInShort("04")] [RegionCode(4_00_133_0004)]
+            SaintGeorge,
 
             /// <summary>
             /// Saint Patrick
             /// </summary>
-            [AliasInShort("05")] SaintPatrick,
+            [AliasInShort("05")] [RegionCode(4_00_133_0005)]
+            SaintPatrick,
 
             /// <summary>
             /// Grenadines
             /// </summary>
-            [AliasInShort("06")] Grenadines,
+            [AliasInShort("06")] [RegionCode(4_00_133_0006)]
+            Grenadines,
 
             /// <summary>
             /// Unknown
@@ -105,6 +111,16 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"VC-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -140,6 +156,13 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

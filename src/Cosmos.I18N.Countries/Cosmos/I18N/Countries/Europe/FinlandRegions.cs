@@ -133,109 +133,109 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// South Karelia
             /// </summary>
-            [AliasInShort("02")] [RegionFlag("main")]
+            [AliasInShort("02")] [RegionCode(2_00_113_0002)] [RegionFlag("main")]
             SouthKarelia,
 
             /// <summary>
             /// Southern Ostrobothnia
             /// </summary>
-            [AliasInShort("03")] [RegionFlag("main")]
+            [AliasInShort("03")] [RegionCode(2_00_113_0003)] [RegionFlag("main")]
             SouthernOstrobothnia,
 
             /// <summary>
             /// Southern Savonia
             /// </summary>
-            [AliasInShort("04")] [RegionFlag("main")]
+            [AliasInShort("04")] [RegionCode(2_00_113_0004)] [RegionFlag("main")]
             SouthernSavonia,
 
             /// <summary>
             /// Kainuu
             /// </summary>
-            [AliasInShort("05")] [RegionFlag("main")]
+            [AliasInShort("05")] [RegionCode(2_00_113_0005)] [RegionFlag("main")]
             Kainuu,
 
             /// <summary>
             /// Tavastia Proper
             /// </summary>
-            [AliasInShort("06")] [RegionFlag("main")]
+            [AliasInShort("06")] [RegionCode(2_00_113_0006)] [RegionFlag("main")]
             TavastiaProper,
 
             /// <summary>
             /// Central Ostrobothnia
             /// </summary>
-            [AliasInShort("07")] [RegionFlag("main")]
+            [AliasInShort("07")] [RegionCode(2_00_113_0007)] [RegionFlag("main")]
             CentralOstrobothnia,
 
             /// <summary>
             /// Central Finland
             /// </summary>
-            [AliasInShort("08")] [RegionFlag("main")]
+            [AliasInShort("08")] [RegionCode(2_00_113_0008)] [RegionFlag("main")]
             CentralFinland,
 
             /// <summary>
             /// Kymenlaakso
             /// </summary>
-            [AliasInShort("09")] [RegionFlag("main")]
+            [AliasInShort("09")] [RegionCode(2_00_113_0009)] [RegionFlag("main")]
             Kymenlaakso,
 
             /// <summary>
             /// Lapland
             /// </summary>
-            [AliasInShort("10")] [RegionFlag("main")]
+            [AliasInShort("10")] [RegionCode(2_00_113_0010)] [RegionFlag("main")]
             Lapland,
 
             /// <summary>
             /// Pirkanmaa
             /// </summary>
-            [AliasInShort("11")] [RegionFlag("main")]
+            [AliasInShort("11")] [RegionCode(2_00_113_0011)] [RegionFlag("main")]
             Pirkanmaa,
 
             /// <summary>
             /// Ostrobothnia
             /// </summary>
-            [AliasInShort("12")] [RegionFlag("main")]
+            [AliasInShort("12")] [RegionCode(2_00_113_0012)] [RegionFlag("main")]
             Ostrobothnia,
 
             /// <summary>
             /// North Karelia
             /// </summary>
-            [AliasInShort("13")] [RegionFlag("main")]
+            [AliasInShort("13")] [RegionCode(2_00_113_0013)] [RegionFlag("main")]
             NorthKarelia,
 
             /// <summary>
             /// Northern Ostrobothnia
             /// </summary>
-            [AliasInShort("14")] [RegionFlag("main")]
+            [AliasInShort("14")] [RegionCode(2_00_113_0014)] [RegionFlag("main")]
             NorthernOstrobothnia,
 
             /// <summary>
             /// Northern Savonia
             /// </summary>
-            [AliasInShort("15")] [RegionFlag("main")]
+            [AliasInShort("15")] [RegionCode(2_00_113_0015)] [RegionFlag("main")]
             NorthernSavonia,
 
             /// <summary>
             /// Päijänne Tavastia
             /// </summary>
-            [AliasInShort("16")] [RegionFlag("main")]
+            [AliasInShort("16")] [RegionCode(2_00_113_0016)] [RegionFlag("main")]
             PäijänneTavastia,
 
             /// <summary>
             /// Satakunta
             /// </summary>
-            [AliasInShort("17")] [RegionFlag("main")]
+            [AliasInShort("17")] [RegionCode(2_00_113_0017)] [RegionFlag("main")]
             Satakunta,
 
             /// <summary>
             /// Uusimaa
             /// </summary>
-            [AliasInShort("18")] [RegionFlag("main")]
+            [AliasInShort("18")] [RegionCode(2_00_113_0018)] [RegionFlag("main")]
             Uusimaa,
 
             /// <summary>
             /// Southwest Finland
             /// </summary>
-            [AliasInShort("19")] [RegionFlag("main")]
+            [AliasInShort("19")] [RegionCode(2_00_113_0019)] [RegionFlag("main")]
             SouthwestFinland,
 
             /// <summary>
@@ -243,7 +243,7 @@ namespace Cosmos.I18N.Countries.Europe
             /// <br />
             /// FI-AX, also, FI-01
             /// </summary>
-            [AliasInShort("AX")] [RegionFlag("overseas")]
+            [AliasInShort("AX")] [RegionCode(2_00_101)] [RegionFlag("overseas")]
             Aland,
 
             /// <summary>
@@ -272,6 +272,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"FI-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -372,6 +382,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetOverseasRegionCodes()
             => Filter("overseas").Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }

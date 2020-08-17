@@ -67,47 +67,56 @@ namespace Cosmos.I18N.Countries.Europe
             /// <summary>
             /// Acquaviva
             /// </summary>
-            [AliasInShort("01")] Acquaviva,
+            [AliasInShort("01")] [RegionCode(2_00_135_0001)]
+            Acquaviva,
 
             /// <summary>
             /// Chiesanuova
             /// </summary>
-            [AliasInShort("02")] Chiesanuova,
+            [AliasInShort("02")] [RegionCode(2_00_135_0002)]
+            Chiesanuova,
 
             /// <summary>
             /// Domagnano
             /// </summary>
-            [AliasInShort("03")] Domagnano,
+            [AliasInShort("03")] [RegionCode(2_00_135_0003)]
+            Domagnano,
 
             /// <summary>
             /// Faetano
             /// </summary>
-            [AliasInShort("04")] Faetano,
+            [AliasInShort("04")] [RegionCode(2_00_135_0004)]
+            Faetano,
 
             /// <summary>
             /// Fiorentino
             /// </summary>
-            [AliasInShort("05")] Fiorentino,
+            [AliasInShort("05")] [RegionCode(2_00_135_0005)]
+            Fiorentino,
 
             /// <summary>
             /// Borgo Maggiore
             /// </summary>
-            [AliasInShort("06")] BorgoMaggiore,
+            [AliasInShort("06")] [RegionCode(2_00_135_0006)]
+            BorgoMaggiore,
 
             /// <summary>
             /// San Marino
             /// </summary>
-            [AliasInShort("07")] SanMarino,
+            [AliasInShort("07")] [RegionCode(2_00_135_0007)]
+            SanMarino,
 
             /// <summary>
             /// Montegiardino
             /// </summary>
-            [AliasInShort("08")] Montegiardino,
+            [AliasInShort("08")] [RegionCode(2_00_135_0008)]
+            Montegiardino,
 
             /// <summary>
             /// Serravalle
             /// </summary>
-            [AliasInShort("09")] Serravalle,
+            [AliasInShort("09")] [RegionCode(2_00_135_0009)]
+            Serravalle,
 
             /// <summary>
             /// Unknown
@@ -135,6 +144,16 @@ namespace Cosmos.I18N.Countries.Europe
         public static string ToFullRegionCode(this EnumValues values)
         {
             return $"SM-{values.ToRegionCode()}";
+        }
+
+        /// <summary>
+        /// Get CEP-1 / Cosmos Region Code.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static long ToNumericRegionCode(this EnumValues values)
+        {
+            return values.GetAttr<EnumValues, RegionCodeAttribute>().CRCode;
         }
 
         /// <summary>
@@ -170,6 +189,13 @@ namespace Cosmos.I18N.Countries.Europe
         /// <returns></returns>
         public static IEnumerable<string> GetAllRegionCodes()
             => InternalEnumMembersCache.Select(member => member.Value.ToFullRegionCode());
+
+        /// <summary>
+        /// Get all numeric region code(CEP-1 / Cosmos Region Code).
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<long> GetAllNumericRegionCodes()
+            => InternalEnumMembersCache.Select(member => member.Value.ToNumericRegionCode());
 
         #endregion
     }
