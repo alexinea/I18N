@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Guatemala() {
             _country = new CountryInfo {
                 Country = Country.Guatemala,
+                CountryCode = CountryCode.GT,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Guatemala,
                 M49Code = "320",

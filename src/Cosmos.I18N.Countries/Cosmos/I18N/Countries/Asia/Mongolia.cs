@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static Mongolia() {
             _country = new CountryInfo {
                 Country = Country.Mongolia,
+                CountryCode = CountryCode.MN,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Mongolia,
                 M49Code = "496",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Zimbabwe() {
             _country = new CountryInfo {
                 Country = Country.Zimbabwe,
+                CountryCode = CountryCode.ZW,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Zimbabwe,
                 M49Code = "716",

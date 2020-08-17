@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static Niue() {
             _country = new CountryInfo {
                 Country = Country.Niue,
+                CountryCode = CountryCode.NU,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Niue,
                 M49Code = "570",

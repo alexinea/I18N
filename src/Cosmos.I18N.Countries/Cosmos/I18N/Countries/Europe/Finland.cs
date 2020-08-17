@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Finland() {
             _country = new CountryInfo {
                 Country = Country.Finland,
+                CountryCode = CountryCode.FI,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Finland,
                 M49Code = "246",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static SanMarino() {
             _country = new CountryInfo {
                 Country = Country.SanMarino,
+                CountryCode = CountryCode.SM,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SanMarino,
                 M49Code = "674",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Tunisia() {
             _country = new CountryInfo {
                 Country = Country.Tunisia,
+                CountryCode = CountryCode.TN,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Tunisia,
                 M49Code = "788",

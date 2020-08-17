@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static WallisAndFutuna() {
             _country = new CountryInfo {
                 Country = Country.WallisAndFutuna,
+                CountryCode = CountryCode.WF,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "876",

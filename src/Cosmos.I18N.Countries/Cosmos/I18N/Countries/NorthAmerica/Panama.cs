@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Panama() {
             _country = new CountryInfo {
                 Country = Country.Panama,
+                CountryCode = CountryCode.PA,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Panama,
                 M49Code = "591",

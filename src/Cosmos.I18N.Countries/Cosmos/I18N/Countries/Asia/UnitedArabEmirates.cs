@@ -12,6 +12,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static UnitedArabEmirates() {
             _country = new CountryInfo {
                 Country = Country.UnitedArabEmirates,
+                CountryCode = CountryCode.AE,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.UnitedArabEmirates,
                 M49Code = "784",

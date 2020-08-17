@@ -12,6 +12,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static SGSSI() {
             _country = new CountryInfo {
                 Country = Country.SGSSI,
+                CountryCode = CountryCode.GS,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "239",

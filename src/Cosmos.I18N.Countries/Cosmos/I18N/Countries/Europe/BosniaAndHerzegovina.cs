@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static BosniaAndHerzegovina() {
             _country = new CountryInfo {
                 Country = Country.BosniaAndHerzegovina,
+                CountryCode = CountryCode.BA,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.BosniaAndHerzegovina,
                 M49Code = "070",

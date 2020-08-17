@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static WesternSahara() {
             _country = new CountryInfo {
                 Country = Country.WesternSahara,
+                CountryCode = CountryCode.EH,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.WesternSahara,
                 M49Code = "732",

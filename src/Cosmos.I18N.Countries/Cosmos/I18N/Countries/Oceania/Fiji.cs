@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static Fiji() {
             _country = new CountryInfo {
                 Country = Country.Fiji,
+                CountryCode = CountryCode.FJ,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Fiji,
                 M49Code = "242",

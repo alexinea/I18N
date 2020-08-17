@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Brazil() {
             _country = new CountryInfo {
                 Country = Country.Brazil,
+                CountryCode = CountryCode.BR,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Brazil,
                 M49Code = "076",

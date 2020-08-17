@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static CocosIslands() {
             _country = new CountryInfo {
                 Country = Country.CocosIslands,
+                CountryCode = CountryCode.CC,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Australia,
                 M49Code = "166",

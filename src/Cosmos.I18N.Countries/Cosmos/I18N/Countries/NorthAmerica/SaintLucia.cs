@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static SaintLucia() {
             _country = new CountryInfo {
                 Country = Country.SaintLucia,
+                CountryCode = CountryCode.LC,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SaintLucia,
                 M49Code = "662",

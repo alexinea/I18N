@@ -12,6 +12,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static LaoPDR() {
             _country = new CountryInfo {
                 Country = Country.LaoPDR,
+                CountryCode = CountryCode.LA,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.LaoPDR,
                 M49Code = "418",

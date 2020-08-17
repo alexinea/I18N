@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static FrenchSouthernTerritories() {
             _country = new CountryInfo {
                 Country = Country.FrenchSouthernTerritories,
+                CountryCode = CountryCode.TF,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "260",

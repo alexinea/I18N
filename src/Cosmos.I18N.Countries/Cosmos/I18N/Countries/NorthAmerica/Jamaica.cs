@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Jamaica() {
             _country = new CountryInfo {
                 Country = Country.Jamaica,
+                CountryCode = CountryCode.JM,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Jamaica,
                 M49Code = "388",

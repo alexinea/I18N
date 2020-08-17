@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static NorthernMarianaIslands() {
             _country = new CountryInfo {
                 Country = Country.NorthernMarianaIslands,
+                CountryCode = CountryCode.MP,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedStates,
                 M49Code = "580",

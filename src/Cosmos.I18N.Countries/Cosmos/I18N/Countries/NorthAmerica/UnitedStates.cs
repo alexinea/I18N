@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static UnitedStates() {
             _country = new CountryInfo {
                 Country = Country.UnitedStates,
+                CountryCode = CountryCode.US,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.UnitedStates,
                 M49Code = "840",

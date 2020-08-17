@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Peru() {
             _country = new CountryInfo {
                 Country = Country.Peru,
+                CountryCode = CountryCode.PE,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Peru,
                 M49Code = "604",

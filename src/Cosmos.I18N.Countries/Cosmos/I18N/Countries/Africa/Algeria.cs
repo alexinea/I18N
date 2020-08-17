@@ -15,6 +15,7 @@ namespace Cosmos.I18N.Countries.Africa
             _country = new CountryInfo
             {
                 Country = Country.Algeria,
+                CountryCode = CountryCode.DZ,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Algeria,
                 M49Code = "012",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Montserrat() {
             _country = new CountryInfo {
                 Country = Country.Montserrat,
+                CountryCode = CountryCode.MS,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "500",

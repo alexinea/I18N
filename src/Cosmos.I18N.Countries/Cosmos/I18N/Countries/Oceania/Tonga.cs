@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static Tonga() {
             _country = new CountryInfo {
                 Country = Country.Tonga,
+                CountryCode = CountryCode.TO,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Tonga,
                 M49Code = "776",

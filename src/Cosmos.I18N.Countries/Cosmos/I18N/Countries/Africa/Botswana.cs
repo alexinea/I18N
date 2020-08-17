@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Botswana() {
             _country = new CountryInfo {
                 Country = Country.Botswana,
+                CountryCode = CountryCode.BW,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Botswana,
                 M49Code = "072",

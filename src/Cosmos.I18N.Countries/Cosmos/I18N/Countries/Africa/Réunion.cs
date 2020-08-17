@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Réunion() {
             _country = new CountryInfo {
                 Country = Country.Réunion,
+                CountryCode = CountryCode.RE,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "638",

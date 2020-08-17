@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Honduras() {
             _country = new CountryInfo {
                 Country = Country.Honduras,
+                CountryCode = CountryCode.HN,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Honduras,
                 M49Code = "340",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static EquatorialGuinea() {
             _country = new CountryInfo {
                 Country = Country.EquatorialGuinea,
+                CountryCode = CountryCode.GQ,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.EquatorialGuinea,
                 M49Code = "226",

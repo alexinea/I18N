@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static CapeVerde() {
             _country = new CountryInfo {
                 Country = Country.CapeVerde,
+                CountryCode = CountryCode.CV,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CapeVerde,
                 M49Code = "132",

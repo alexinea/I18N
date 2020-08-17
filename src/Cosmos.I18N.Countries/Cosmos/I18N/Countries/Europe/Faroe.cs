@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Faroe() {
             _country = new CountryInfo {
                 Country = Country.Faroe,
+                CountryCode = CountryCode.FO,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Denmark,
                 M49Code = "234",

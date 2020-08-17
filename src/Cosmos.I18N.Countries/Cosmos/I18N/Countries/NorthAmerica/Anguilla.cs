@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Anguilla() {
             _country = new CountryInfo {
                 Country = Country.Anguilla,
+                CountryCode = CountryCode.AI,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "660",

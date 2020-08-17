@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static SaintMartinFrenchPart() {
             _country = new CountryInfo {
                 Country = Country.SaintMartinFrenchPart,
+                CountryCode = CountryCode.MF,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "663",

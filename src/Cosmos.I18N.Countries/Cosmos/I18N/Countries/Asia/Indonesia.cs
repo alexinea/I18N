@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static Indonesia() {
             _country = new CountryInfo {
                 Country = Country.Indonesia,
+                CountryCode = CountryCode.ID,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Indonesia,
                 M49Code = "360",

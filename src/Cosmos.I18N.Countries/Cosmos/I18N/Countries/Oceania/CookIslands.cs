@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static CookIslands() {
             _country = new CountryInfo {
                 Country = Country.CookIslands,
+                CountryCode = CountryCode.CK,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CookIslands,
                 M49Code = "184",

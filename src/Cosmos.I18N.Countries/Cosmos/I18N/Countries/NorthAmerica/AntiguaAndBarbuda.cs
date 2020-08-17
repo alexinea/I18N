@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static AntiguaAndBarbuda() {
             _country = new CountryInfo {
                 Country = Country.AntiguaAndBarbuda,
+                CountryCode = CountryCode.AG,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.AntiguaAndBarbuda,
                 M49Code = "028",

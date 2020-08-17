@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Ecuador() {
             _country = new CountryInfo {
                 Country = Country.Ecuador,
+                CountryCode = CountryCode.EC,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Ecuador,
                 M49Code = "218",

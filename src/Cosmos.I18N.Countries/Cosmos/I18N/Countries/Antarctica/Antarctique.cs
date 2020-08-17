@@ -12,6 +12,7 @@ namespace Cosmos.I18N.Countries.Antarctica {
         static Antarctique() {
             _country = new CountryInfo {
                 Country = Country.Antarctica,
+                CountryCode = CountryCode.AQ,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Antarctica,
                 M49Code = "010",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static SierraLeone() {
             _country = new CountryInfo {
                 Country = Country.SierraLeone,
+                CountryCode = CountryCode.SL,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SierraLeone,
                 M49Code = "694",

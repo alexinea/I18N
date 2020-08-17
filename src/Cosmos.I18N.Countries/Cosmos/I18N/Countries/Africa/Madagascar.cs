@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Madagascar() {
             _country = new CountryInfo {
                 Country = Country.Madagascar,
+                CountryCode = CountryCode.MG,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Madagascar,
                 M49Code = "450",

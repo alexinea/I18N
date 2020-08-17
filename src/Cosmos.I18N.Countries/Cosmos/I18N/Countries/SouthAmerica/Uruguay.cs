@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Uruguay() {
             _country = new CountryInfo {
                 Country = Country.Uruguay,
+                CountryCode = CountryCode.UY,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Uruguay,
                 M49Code = "858",

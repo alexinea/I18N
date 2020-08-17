@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static SaintPierreAndMiquelon() {
             _country = new CountryInfo {
                 Country = Country.SaintPierreAndMiquelon,
+                CountryCode = CountryCode.PM,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "666",

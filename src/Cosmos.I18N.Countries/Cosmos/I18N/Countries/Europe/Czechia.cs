@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Czechia() {
             _country = new CountryInfo {
                 Country = Country.Czechia,
+                CountryCode = CountryCode.CZ,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Czechia,
                 M49Code = "203",

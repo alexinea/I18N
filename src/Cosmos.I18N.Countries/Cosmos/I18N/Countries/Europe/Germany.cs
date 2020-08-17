@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Germany() {
             _country = new CountryInfo {
                 Country = Country.Germany,
+                CountryCode = CountryCode.DE,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Germany,
                 M49Code = "276",

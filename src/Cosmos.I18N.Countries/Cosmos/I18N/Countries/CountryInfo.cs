@@ -11,6 +11,11 @@ namespace Cosmos.I18N.Countries
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public Country Country { get; internal set; }
 
+        /// <summary>
+        /// Country Code
+        /// </summary>
+        public CountryCode CountryCode { get; internal set; }
+
         /// <inheritdoc />
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public CountryType CountryType { get; internal set; }
@@ -25,7 +30,7 @@ namespace Cosmos.I18N.Countries
         // ReSharper disable once InconsistentNaming
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public string M49Code { get; internal set; }
-        
+
         /// <inheritdoc />
         // ReSharper disable once InconsistentNaming
         public long CRCode { get; internal set; }

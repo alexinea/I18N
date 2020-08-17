@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static BurkinaFaso() {
             _country = new CountryInfo {
                 Country = Country.BurkinaFaso,
+                CountryCode = CountryCode.BF,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.BurkinaFaso,
                 M49Code = "854",

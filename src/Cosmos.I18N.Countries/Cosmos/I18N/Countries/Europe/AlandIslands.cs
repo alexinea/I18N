@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static AlandIslands() {
             _country = new CountryInfo {
                 Country = Country.AlandIslands,
+                CountryCode = CountryCode.AX,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Finland,
                 M49Code = "248",

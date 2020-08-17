@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static BouvetIsland() {
             _country = new CountryInfo {
                 Country = Country.BouvetIsland,
+                CountryCode = CountryCode.BV,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Norway,
                 M49Code = "074",

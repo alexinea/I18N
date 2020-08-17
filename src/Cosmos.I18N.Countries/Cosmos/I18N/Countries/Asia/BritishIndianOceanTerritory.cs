@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static BritishIndianOceanTerritory() {
             _country = new CountryInfo {
                 Country = Country.BritishIndianOceanTerritory,
+                CountryCode = CountryCode.IO,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "086",

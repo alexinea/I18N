@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static Kuwait() {
             _country = new CountryInfo {
                 Country = Country.Kuwait,
+                CountryCode = CountryCode.KW,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Kuwait,
                 M49Code = "414",

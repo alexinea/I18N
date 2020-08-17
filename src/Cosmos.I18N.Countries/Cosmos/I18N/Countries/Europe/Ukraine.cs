@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Ukraine() {
             _country = new CountryInfo {
                 Country = Country.Ukraine,
+                CountryCode = CountryCode.UA,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Ukraine,
                 M49Code = "804",

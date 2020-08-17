@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Lesotho() {
             _country = new CountryInfo {
                 Country = Country.Lesotho,
+                CountryCode = CountryCode.LS,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Lesotho,
                 M49Code = "426",

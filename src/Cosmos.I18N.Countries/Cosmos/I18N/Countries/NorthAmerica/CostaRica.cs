@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static CostaRica() {
             _country = new CountryInfo {
                 Country = Country.CostaRica,
+                CountryCode = CountryCode.CR,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CostaRica,
                 M49Code = "188",

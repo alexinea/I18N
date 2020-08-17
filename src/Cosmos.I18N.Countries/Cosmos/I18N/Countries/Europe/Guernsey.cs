@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Guernsey() {
             _country = new CountryInfo {
                 Country = Country.Guernsey,
+                CountryCode = CountryCode.GG,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "831",

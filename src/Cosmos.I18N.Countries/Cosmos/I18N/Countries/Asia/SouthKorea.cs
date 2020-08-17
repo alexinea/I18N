@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static SouthKorea() {
             _country = new CountryInfo {
                 Country = Country.SouthKorea,
+                CountryCode = CountryCode.KR,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SouthKorea,
                 M49Code = "410",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static SriLanka() {
             _country = new CountryInfo {
                 Country = Country.SriLanka,
+                CountryCode = CountryCode.LK,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SriLanka,
                 M49Code = "144",

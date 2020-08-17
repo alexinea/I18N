@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static Pitcairn() {
             _country = new CountryInfo {
                 Country = Country.Pitcairn,
+                CountryCode = CountryCode.PN,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "612",

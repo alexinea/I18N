@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Aruba() {
             _country = new CountryInfo {
                 Country = Country.Aruba,
+                CountryCode = CountryCode.AW,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Netherlands,
                 M49Code = "533",

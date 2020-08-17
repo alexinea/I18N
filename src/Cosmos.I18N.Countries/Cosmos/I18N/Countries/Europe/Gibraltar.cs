@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Gibraltar() {
             _country = new CountryInfo {
                 Country = Country.Gibraltar,
+                CountryCode = CountryCode.GI,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "292",

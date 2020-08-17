@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Paraguay() {
             _country = new CountryInfo {
                 Country = Country.Paraguay,
+                CountryCode = CountryCode.PY,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Paraguay,
                 M49Code = "600",

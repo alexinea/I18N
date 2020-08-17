@@ -13,6 +13,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static Macao() {
             _country = new CountryInfo {
                 Country = Country.Macao,
+                CountryCode = CountryCode.MO,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.China,
                 M49Code = "446",

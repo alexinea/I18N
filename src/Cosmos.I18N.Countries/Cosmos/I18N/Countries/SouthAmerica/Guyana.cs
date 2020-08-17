@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Guyana() {
             _country = new CountryInfo {
                 Country = Country.Guyana,
+                CountryCode = CountryCode.GY,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Guyana,
                 M49Code = "328",

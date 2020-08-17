@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Swaziland() {
             _country = new CountryInfo {
                 Country = Country.Swaziland,
+                CountryCode = CountryCode.SZ,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Swaziland,
                 M49Code = "748",

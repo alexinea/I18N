@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static Micronesia() {
             _country = new CountryInfo {
                 Country = Country.Micronesia,
+                CountryCode = CountryCode.FM,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Micronesia,
                 M49Code = "583",

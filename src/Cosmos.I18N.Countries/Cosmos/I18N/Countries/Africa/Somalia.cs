@@ -10,6 +10,7 @@ namespace Cosmos.I18N.Countries.Africa {
 
         static Somalia() {
             _country = new CountryInfo {
+                CountryCode = CountryCode.SO,
                 Country = Country.Somalia,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Somalia,

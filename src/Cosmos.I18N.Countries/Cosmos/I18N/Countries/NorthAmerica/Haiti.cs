@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Haiti() {
             _country = new CountryInfo {
                 Country = Country.Haiti,
+                CountryCode = CountryCode.HT,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Haiti,
                 M49Code = "332",

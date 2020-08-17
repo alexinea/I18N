@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Jersey() {
             _country = new CountryInfo {
                 Country = Country.Jersey,
+                CountryCode = CountryCode.JE,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "832",

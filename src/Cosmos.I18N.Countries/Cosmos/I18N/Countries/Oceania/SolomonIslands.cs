@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static SolomonIslands() {
             _country = new CountryInfo {
                 Country = Country.SolomonIslands,
+                CountryCode = CountryCode.SB,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SolomonIslands,
                 M49Code = "090",

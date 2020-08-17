@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Mozambique() {
             _country = new CountryInfo {
                 Country = Country.Mozambique,
+                CountryCode = CountryCode.MZ,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Mozambique,
                 M49Code = "508",

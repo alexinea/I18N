@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static CongoKinshasa() {
             _country = new CountryInfo {
                 Country = Country.CongoKinshasa,
+                CountryCode = CountryCode.CD,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CongoKinshasa,
                 M49Code = "140",

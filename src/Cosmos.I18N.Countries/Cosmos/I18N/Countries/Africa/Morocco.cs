@@ -10,6 +10,7 @@ namespace Cosmos.I18N.Countries.Africa {
 
         static Morocco() {
             _country = new CountryInfo {
+                CountryCode = CountryCode.MA,
                 Country = Country.Morocco,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Morocco,

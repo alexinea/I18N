@@ -13,6 +13,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static HIMI() {
             _country = new CountryInfo {
                 Country = Country.HIMI,
+                CountryCode = CountryCode.HM,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Australia,
                 M49Code = "334",

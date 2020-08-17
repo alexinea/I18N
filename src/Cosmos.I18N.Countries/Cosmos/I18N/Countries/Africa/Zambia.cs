@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Zambia() {
             _country = new CountryInfo {
                 Country = Country.Zambia,
+                CountryCode = CountryCode.ZM,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Zambia,
                 M49Code = "894",

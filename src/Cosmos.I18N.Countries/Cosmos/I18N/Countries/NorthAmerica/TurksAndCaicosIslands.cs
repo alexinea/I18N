@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static TurksAndCaicosIslands() {
             _country = new CountryInfo {
                 Country = Country.TurksAndCaicosIslands,
+                CountryCode = CountryCode.TC,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.TurksAndCaicosIslands,
                 M49Code = "796",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static Guam() {
             _country = new CountryInfo {
                 Country = Country.Guam,
+                CountryCode = CountryCode.GU,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedStates,
                 M49Code = "316",

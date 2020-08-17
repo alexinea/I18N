@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static Nicaragua() {
             _country = new CountryInfo {
                 Country = Country.Nicaragua,
+                CountryCode = CountryCode.NI,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Nicaragua,
                 M49Code = "558",

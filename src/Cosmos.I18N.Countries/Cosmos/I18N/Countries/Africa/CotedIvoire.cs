@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static CotedIvoire() {
             _country = new CountryInfo {
                 Country = Country.CotedIvoire,
+                CountryCode = CountryCode.CI,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CotedIvoire,
                 M49Code = "384",

@@ -15,6 +15,7 @@ namespace Cosmos.I18N.Countries.Asia
             _country = new CountryInfo
             {
                 Country = Country.Bhutan,
+                CountryCode = CountryCode.BT,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Bhutan,
                 M49Code = "064",

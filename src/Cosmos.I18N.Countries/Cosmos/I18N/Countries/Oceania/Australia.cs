@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static Australia() {
             _country = new CountryInfo {
                 Country = Country.Australia,
+                CountryCode = CountryCode.AU,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Australia,
                 M49Code = "036",

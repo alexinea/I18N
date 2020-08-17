@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Dominican() {
             _country = new CountryInfo {
                 Country = Country.Dominican,
+                CountryCode = CountryCode.DO,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Dominican,
                 M49Code = "214",

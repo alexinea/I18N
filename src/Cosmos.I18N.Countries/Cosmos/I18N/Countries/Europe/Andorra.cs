@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Andorra() {
             _country = new CountryInfo {
                 Country = Country.Andorra,
+                CountryCode = CountryCode.AD,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Andorra,
                 M49Code = "020",

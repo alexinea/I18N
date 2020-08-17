@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static VirginIslandsBritish() {
             _country = new CountryInfo {
                 Country = Country.VirginIslandsBritish,
+                CountryCode = CountryCode.VG,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "092",

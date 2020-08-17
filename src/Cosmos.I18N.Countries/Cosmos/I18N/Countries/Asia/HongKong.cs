@@ -12,6 +12,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static HongKong() {
             _country = new CountryInfo {
                 Country = Country.HongKong,
+                CountryCode = CountryCode.HK,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.China,
                 M49Code = "344",

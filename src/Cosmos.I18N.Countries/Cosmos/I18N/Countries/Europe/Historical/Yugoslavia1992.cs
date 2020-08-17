@@ -13,6 +13,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Yugoslavia1992() {
             _country = new CountryInfo {
                 Country = Country.Yugoslavia1992,
+                CountryCode = CountryCode.YU,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Yugoslavia1992,
                 M49Code = "038",

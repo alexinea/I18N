@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Cuba() {
             _country = new CountryInfo {
                 Country = Country.Cuba,
+                CountryCode = CountryCode.CU,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Cuba,
                 M49Code = "192",

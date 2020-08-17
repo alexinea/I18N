@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Bonaire() {
             _country = new CountryInfo {
                 Country = Country.Bonaire,
+                CountryCode = CountryCode.BQ,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Netherlands,
                 M49Code = "535",

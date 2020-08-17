@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Hungary() {
             _country = new CountryInfo {
                 Country = Country.Hungary,
+                CountryCode = CountryCode.HU,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Hungary,
                 M49Code = "348",

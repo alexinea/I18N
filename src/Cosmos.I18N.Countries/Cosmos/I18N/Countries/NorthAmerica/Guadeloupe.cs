@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Guadeloupe() {
             _country = new CountryInfo {
                 Country = Country.Guadeloupe,
+                CountryCode = CountryCode.GP,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "312",

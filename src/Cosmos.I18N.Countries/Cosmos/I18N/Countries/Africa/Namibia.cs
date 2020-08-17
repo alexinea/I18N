@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static Namibia() {
             _country = new CountryInfo {
                 Country = Country.Namibia,
+                CountryCode = CountryCode.NA,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Namibia,
                 M49Code = "516",

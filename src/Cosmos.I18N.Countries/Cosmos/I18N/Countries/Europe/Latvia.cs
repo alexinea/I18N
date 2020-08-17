@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Latvia() {
             _country = new CountryInfo {
                 Country = Country.Latvia,
+                CountryCode = CountryCode.LV,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Latvia,
                 M49Code = "428",

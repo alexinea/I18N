@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Oceania {
         static PapuaNewGuinea() {
             _country = new CountryInfo {
                 Country = Country.PapuaNewGuinea,
+                CountryCode = CountryCode.PG,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.PapuaNewGuinea,
                 M49Code = "598",

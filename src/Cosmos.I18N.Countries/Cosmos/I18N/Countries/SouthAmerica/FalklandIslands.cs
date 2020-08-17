@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
         static FalklandIslands() {
             _country = new CountryInfo {
                 Country = Country.FalklandIslands,
+                CountryCode = CountryCode.FK,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.FalklandIslands,
                 M49Code = "238",

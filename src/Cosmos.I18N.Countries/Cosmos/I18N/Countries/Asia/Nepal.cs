@@ -11,12 +11,13 @@ namespace Cosmos.I18N.Countries.Asia {
         static Nepal() {
             _country = new CountryInfo {
                 Country = Country.Nepal,
+                CountryCode = CountryCode.NP,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Nepal,
                 M49Code = "524",
                 CRCode = 1_00_128,
                 Alpha2Code = "NP",
-                Alpha3Code = "NP:",
+                Alpha3Code = "NPL",
                 Name = "Federal Democratic Republic of Nepal",
                 ShorterForm = "Nepal",
                 ChineseName = "尼泊尔联邦民主共和国",

@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Europe {
         static Bulgaria() {
             _country = new CountryInfo {
                 Country = Country.Bulgaria,
+                CountryCode = CountryCode.BG,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Bulgaria,
                 M49Code = "096",

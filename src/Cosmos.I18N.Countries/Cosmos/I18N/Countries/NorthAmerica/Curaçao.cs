@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
         static Curaçao() {
             _country = new CountryInfo {
                 Country = Country.Curaçao,
+                CountryCode = CountryCode.CW,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Netherlands,
                 M49Code = "531",

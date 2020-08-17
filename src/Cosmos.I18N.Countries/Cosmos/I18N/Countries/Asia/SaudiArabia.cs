@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Asia {
         static SaudiArabia() {
             _country = new CountryInfo {
                 Country = Country.SaudiArabia,
+                CountryCode = CountryCode.SA,
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SaudiArabia,
                 M49Code = "682",

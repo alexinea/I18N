@@ -11,6 +11,7 @@ namespace Cosmos.I18N.Countries.Africa {
         static SaintHelena() {
             _country = new CountryInfo {
                 Country = Country.SaintHelena,
+                CountryCode = CountryCode.SH,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "654",
