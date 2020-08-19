@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 所罗门群岛（Solomon Islands，大洋洲，SB，SLB，090） <br />
     /// Cosmos i18n code: i18n_country_suoluomen <br />
     /// Cosmos region code: 600115
     /// </summary>
-    public static class SolomonIslands {
+    public static partial class SolomonIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SolomonIslands() {
-            _country = new CountryInfo {
+        static SolomonIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SolomonIslands,
                 CountryCode = CountryCode.SB,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseName = "所罗门群岛",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

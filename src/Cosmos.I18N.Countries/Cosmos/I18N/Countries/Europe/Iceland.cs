@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 冰岛（The Republic of Iceland，欧洲，IS，ISL，352），冰岛共和国 <br />
     /// Cosmos i18n code: i18n_country_bingdao <br />
     /// Cosmos region code: 200118
     /// </summary>
-    public static class Iceland {
+    public static class Iceland
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Iceland() {
-            _country = new CountryInfo {
+        static Iceland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Iceland,
                 CountryCode = CountryCode.IS,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "冰岛",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

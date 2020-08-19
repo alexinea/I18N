@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 北马里亚那群岛（Commonwealth of the Northern Mariana Islands，大洋洲，MP，MNP，580），北马里亚纳群岛自由邦 <br />
     /// Cosmos i18n code: i18n_country_beimaliyana <br />
     /// Cosmos region code: 600112
     /// </summary>
-    public static class NorthernMarianaIslands {
+    public static class NorthernMarianaIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static NorthernMarianaIslands() {
-            _country = new CountryInfo {
+        static NorthernMarianaIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.NorthernMarianaIslands,
                 CountryCode = CountryCode.MP,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "北马里亚那群岛",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 爱沙尼亚（Republic of Estonia，欧洲，EE，EST，233），爱沙尼亚共和国 <br />
     /// Cosmos i18n code: i18n_country_aishaniya <br />
     /// Cosmos region code: 200111
     /// </summary>
-    public static class Estonia {
+    public static partial class Estonia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Estonia() {
-            _country = new CountryInfo {
+        static Estonia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Estonia,
                 CountryCode = CountryCode.EE,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "爱沙尼亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 
@@ -64,6 +69,5 @@ namespace Cosmos.I18N.Countries.Europe {
         /// Get Alpha3 code / ISO 3166-1 alpha-3
         /// </summary>
         public static string Alpha3Code => _country.Alpha3Code;
-
     }
 }

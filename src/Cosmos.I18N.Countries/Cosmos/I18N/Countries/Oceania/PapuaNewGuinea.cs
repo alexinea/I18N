@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 巴布亚新几内亚（The Independent State of Papua New Guinea，大洋洲，PG，PNG，598），巴布亚新几内亚独立国 <br />
     /// Cosmos i18n code: i18n_country_baxin <br />
     /// Cosmos region code: 600114
     /// </summary>
-    public static class PapuaNewGuinea {
+    public static partial class PapuaNewGuinea
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static PapuaNewGuinea() {
-            _country = new CountryInfo {
+        static PapuaNewGuinea()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.PapuaNewGuinea,
                 CountryCode = CountryCode.PG,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseAlias = "巴新",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

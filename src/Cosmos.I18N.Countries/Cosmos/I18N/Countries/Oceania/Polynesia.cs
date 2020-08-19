@@ -1,20 +1,26 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 波利尼西亚（French Polynesia，大洋洲，PF，PYF，258），法属波利尼西亚 <br />
     /// Cosmos i18n code: i18n_country_bolinixiya <br />
     /// Cosmos region code: 600119
     /// </summary>
-    public static class Polynesia {
+    public static class Polynesia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Polynesia() {
-            _country = new CountryInfo {
+        static Polynesia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Polynesia,
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "258",
-                CRCode=6_00_119,
+                CRCode = 6_00_119,
                 Alpha2Code = "PF",
                 Alpha3Code = "PYF",
                 Name = "French Polynesia",
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseAlias = "塔希提",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

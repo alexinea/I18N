@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 哥斯达黎加（The Republic of Costa Rica，北美洲，CR，CRI，188），哥斯达黎加共和国 <br />
     /// Cosmos i18n code: i18n_country_gesidalijia <br />
     /// Cosmos region code: 400111
     /// </summary>
-    public static class CostaRica {
+    public static partial class CostaRica
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static CostaRica() {
-            _country = new CountryInfo {
+        static CostaRica()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.CostaRica,
                 CountryCode = CountryCode.CR,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "哥斯达黎加",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

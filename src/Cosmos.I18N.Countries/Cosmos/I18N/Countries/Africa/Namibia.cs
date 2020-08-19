@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 纳米比亚（The Republic of Namibia，非洲，NA，NAM，516），纳米比亚共和国 <br />
     /// Cosmos i18n code: i18n_country_manibiya <br />
     /// Cosmos region code: 300141
     /// </summary>
-    public static class Namibia {
+    public static class Namibia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Namibia() {
-            _country = new CountryInfo {
+        static Namibia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Namibia,
                 CountryCode = CountryCode.NA,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "纳米比亚",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

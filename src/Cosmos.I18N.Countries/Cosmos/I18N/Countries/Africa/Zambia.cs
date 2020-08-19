@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 赞比亚（The Republic of Zambia，非洲，ZM，ZMB，894），赞比亚共和国 <br />
     /// Cosmos i18n code: i18n_country_zanbiya <br />
     /// Cosmos region code: 300117
     /// </summary>
-    public static class Zambia {
+    public static class Zambia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Zambia() {
-            _country = new CountryInfo {
+        static Zambia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Zambia,
                 CountryCode = CountryCode.ZM,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "赞比亚",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

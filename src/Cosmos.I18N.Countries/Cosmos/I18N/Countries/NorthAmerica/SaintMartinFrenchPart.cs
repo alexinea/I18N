@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 法属圣马丁（Saint Martin (French part)，北美洲，MF，MAF，663），圣马丁行政区 <br />
     /// Cosmos i18n code: i18n_country_shengmading <br />
     /// Cosmos region code: 400130
     /// </summary>
-    public static class SaintMartinFrenchPart {
+    public static class SaintMartinFrenchPart
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SaintMartinFrenchPart() {
-            _country = new CountryInfo {
+        static SaintMartinFrenchPart()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SaintMartinFrenchPart,
                 CountryCode = CountryCode.MF,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "法属圣马丁",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

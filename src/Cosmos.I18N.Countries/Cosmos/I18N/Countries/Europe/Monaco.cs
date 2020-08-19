@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 摩纳哥（The Principality of Monaco，欧洲，MC，MCO，492），摩纳哥公国 <br />
     /// Cosmos i18n code: i18n_country_monage <br />
     /// Cosmos region code: 200129
     /// </summary>
-    public static class Monaco {
+    public static class Monaco
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Monaco() {
-            _country = new CountryInfo {
+        static Monaco()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Monaco,
                 CountryCode = CountryCode.MC,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "摩纳哥",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

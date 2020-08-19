@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 墨西哥（The United Mexican States，北美洲，MX，MEX，484），墨西哥合众国 <br />
     /// Cosmos i18n code: i18n_country_moxige <br />
     /// Cosmos region code: 400123
     /// </summary>
-    public static class Mexico {
+    public static class Mexico
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Mexico() {
-            _country = new CountryInfo {
+        static Mexico()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Mexico,
                 CountryCode = CountryCode.MX,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "墨西哥",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

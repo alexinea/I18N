@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 加拿大（Canada，北美洲，CA，CAN，124），英联邦成员国 <br />
     /// Cosmos i18n code: i18n_country_jianada <br />
     /// Cosmos region code: 400011
     /// </summary>
-    public static class Canada {
+    public static partial class Canada
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Canada() {
-            _country = new CountryInfo {
+        static Canada()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Canada,
                 CountryCode = CountryCode.CA,
                 CountryType = CountryType.Country,
@@ -23,6 +27,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 Continent = Continent.NorthAmerica,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

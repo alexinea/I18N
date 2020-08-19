@@ -1,17 +1,23 @@
 // ReSharper disable once CheckNamespace
 
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 南斯拉夫（Yugoslavia，欧洲，YU，YUG，38），南斯拉夫联盟共和国 <br />
     /// Cosmos i18n code: i18n_country_nlm_1992 <br />
     /// Cosmos region code: 220106
     /// </summary>
-    public static class Yugoslavia1992 {
+    public static class Yugoslavia1992
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Yugoslavia1992() {
-            _country = new CountryInfo {
+        static Yugoslavia1992()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Yugoslavia1992,
                 CountryCode = CountryCode.YU,
                 CountryType = CountryType.Country,
@@ -27,6 +33,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseAlias = "南联盟",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown,
                 HistoricalCountry = true,
             };
         }

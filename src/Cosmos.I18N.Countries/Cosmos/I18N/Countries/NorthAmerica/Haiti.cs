@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 海地（The Republic of Haiti，北美洲，HT，HTI，332），海地共和国 <br />
     /// Cosmos i18n code: i18n_country_haidi <br />
     /// Cosmos region code: 400120
     /// </summary>
-    public static class Haiti {
+    public static class Haiti
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Haiti() {
-            _country = new CountryInfo {
+        static Haiti()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Haiti,
                 CountryCode = CountryCode.HT,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "海地",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

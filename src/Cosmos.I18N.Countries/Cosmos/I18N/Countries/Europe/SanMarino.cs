@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 圣马力诺（The Republic of San Marino，欧洲，SM，SMR，674），圣马力诺共和国 <br />
     /// Cosmos i18n code: i18n_country_shengmalinuo <br />
     /// Cosmos region code: 200135
     /// </summary>
-    public static class SanMarino {
+    public static partial class SanMarino
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SanMarino() {
-            _country = new CountryInfo {
+        static SanMarino()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SanMarino,
                 CountryCode = CountryCode.SM,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "圣马力诺",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

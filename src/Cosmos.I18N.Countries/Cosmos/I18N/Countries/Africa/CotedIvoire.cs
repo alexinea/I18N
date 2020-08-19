@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 科特迪瓦 （The Republic of Côte d'Ivoire，非洲，CI，CIV，384），科特迪瓦共和国 <br />
     /// Cosmos i18n code: i18n_country_ketediwa <br />
     /// Cosmos region code: 300114
     /// </summary>
-    public static class CotedIvoire {
+    public static partial class CotedIvoire
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static CotedIvoire() {
-            _country = new CountryInfo {
+        static CotedIvoire()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.CotedIvoire,
                 CountryCode = CountryCode.CI,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "科特迪瓦",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

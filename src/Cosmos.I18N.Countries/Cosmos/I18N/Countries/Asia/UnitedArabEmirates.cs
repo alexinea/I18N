@@ -1,16 +1,20 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 阿联酋（United Arab Emirates，亚洲，AE，ARE，784），阿拉伯联合酋长国 <br />
     /// 又名 阿拉伯联合大公国 <br />
     /// Cosmos i18n code: i18n_country_alianqiu <br />
     /// Cosmos region code: 100140
     /// </summary>
-    public static class UnitedArabEmirates {
+    public static partial class UnitedArabEmirates
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static UnitedArabEmirates() {
-            _country = new CountryInfo {
+        static UnitedArabEmirates()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.UnitedArabEmirates,
                 CountryCode = CountryCode.AE,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseAlias = "阿拉伯联合大公国",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

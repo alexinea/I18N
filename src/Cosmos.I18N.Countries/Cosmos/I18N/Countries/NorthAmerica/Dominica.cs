@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 多米尼克（The Commonwealth of Dominica，北美洲，DM，DMA，212），多米尼克国 <br />
     /// Cosmos i18n code: i18n_country_duominike <br />
     /// Cosmos region code: 400113
     /// </summary>
-    public static class Dominica {
+    public static partial class Dominica
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Dominica() {
-            _country = new CountryInfo {
+        static Dominica()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Dominica,
                 CountryCode = CountryCode.DM,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 Continent = Continent.NorthAmerica,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 尼加拉瓜（The Republic of Nicaragua，南美洲，NI，NIC，558），尼加拉瓜共和国 <br />
     /// Cosmos i18n code: i18n_country_nijialagua <br />
     /// Cosmos region code: 500108
     /// </summary>
-    public static class Nicaragua {
+    public static class Nicaragua
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Nicaragua() {
-            _country = new CountryInfo {
+        static Nicaragua()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Nicaragua,
                 CountryCode = CountryCode.NI,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "尼加拉瓜",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

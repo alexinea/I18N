@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 安圭拉（Anguilla，北美洲，AI，AIA，660），英国海外领土 <br />
     /// Cosmos i18n code: i18n_country_anguila <br />
     /// Cosmos region code: 400102
     /// </summary>
-    public static class Anguilla {
+    public static class Anguilla
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Anguilla() {
-            _country = new CountryInfo {
+        static Anguilla()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Anguilla,
                 CountryCode = CountryCode.AI,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 Continent = Continent.NorthAmerica,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

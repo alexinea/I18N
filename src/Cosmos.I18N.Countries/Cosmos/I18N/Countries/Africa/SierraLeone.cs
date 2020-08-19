@@ -4,7 +4,7 @@ namespace Cosmos.I18N.Countries.Africa {
     /// Cosmos i18n code: i18n_country_sailaliang <br />
     /// Cosmos region code: 300153
     /// </summary>
-    public static class SierraLeone {
+    public static partial class SierraLeone {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
@@ -24,6 +24,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "塞拉利昂",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 南非（The Republic of South Africa，非洲，ZA，ZAF，710），南非共和国 <br />
     /// Cosmos i18n code: i18n_country_nanfei <br />
     /// Cosmos region code: 300013
     /// </summary>
-    public static class SouthAfrica {
+    public static class SouthAfrica
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SouthAfrica() {
-            _country = new CountryInfo {
+        static SouthAfrica()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SouthAfrica,
                 CountryCode = CountryCode.ZA,
                 CountryType = CountryType.Country,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "南非",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 泰国（The Kingdom of Thailand，亚洲，TH，THA，764），泰王国 <br />
     /// Cosmos i18n code: i18n_country_taiguo <br />
     /// Cosmos region code: 100138
     /// </summary>
-    public static class Thailand {
+    public static partial class Thailand
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Thailand() {
-            _country = new CountryInfo {
+        static Thailand()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Thailand,
                 CountryCode = CountryCode.TH,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "泰国",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 阿尔巴尼亚（Albania，欧洲，AL，ALB，008），阿尔巴尼亚共和国 <br />
     /// Cosmos i18n code: i18n_country_aerbaniya <br />
     /// Cosmos region code: 200102
     /// </summary>
-    public static class Albania {
+    public static partial class Albania
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Albania() {
-            _country = new CountryInfo {
+        static Albania()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Albania,
                 CountryCode = CountryCode.AL,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "阿尔巴尼亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

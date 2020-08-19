@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 图瓦卢（Tuvalu，大洋洲，TV，TUV，798） <br />
     /// Cosmos i18n code: i18n_country_tuwalu <br />
     /// Cosmos region code: 600122
     /// </summary>
-    public static class Tuvalu {
+    public static partial class Tuvalu
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Tuvalu() {
-            _country = new CountryInfo {
+        static Tuvalu()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Tuvalu,
                 CountryCode = CountryCode.TV,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseAlias2 = "潟湖群岛",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

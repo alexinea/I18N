@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 伊拉克（Republic Of Iraq，亚洲，IQ，IRQ，368），伊拉克共和国 <br />
     /// Cosmos i18n code: i18n_country_yilake <br />
     /// Cosmos region code: 100117
     /// </summary>
-    public static class Iraq {
+    public static partial class Iraq
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Iraq() {
-            _country = new CountryInfo {
+        static Iraq()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Iraq,
                 CountryCode = CountryCode.IQ,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "伊拉克",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

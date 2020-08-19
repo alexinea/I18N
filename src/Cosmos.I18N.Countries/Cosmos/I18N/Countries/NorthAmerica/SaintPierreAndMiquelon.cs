@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 圣皮埃尔和密克隆群岛（The Islands of Saint Pierre and Miquelon，北美洲，PM，SPM，666），法国海外领土 <br />
     /// Cosmos i18n code: i18n_country_shengyiaiermkl <br />
     /// Cosmos region code: 400132
     /// </summary>
-    public static class SaintPierreAndMiquelon {
+    public static class SaintPierreAndMiquelon
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SaintPierreAndMiquelon() {
-            _country = new CountryInfo {
+        static SaintPierreAndMiquelon()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SaintPierreAndMiquelon,
                 CountryCode = CountryCode.PM,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "圣皮埃尔和密克隆群岛",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

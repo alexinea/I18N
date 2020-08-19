@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 巴西（The Federative Republic of Brazil，南美洲，BR，BRA，076），巴西联邦共和国 <br />
     /// Cosmos i18n code: i18n_country_baxi <br />
     /// Cosmos region code: 500001
     /// </summary>
-    public static class Brazil {
+    public static partial class Brazil
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Brazil() {
-            _country = new CountryInfo {
+        static Brazil()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Brazil,
                 CountryCode = CountryCode.BR,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "巴西",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 蒙特塞拉特（Montserrat，北美洲，MS，MSR，500） <br />
     /// Cosmos i18n code: i18n_country_mengtesailate <br />
     /// Cosmos region code: 400124
     /// </summary>
-    public static class Montserrat {
+    public static class Montserrat
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Montserrat() {
-            _country = new CountryInfo {
+        static Montserrat()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Montserrat,
                 CountryCode = CountryCode.MS,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseAlias = "蒙瑟拉特岛",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

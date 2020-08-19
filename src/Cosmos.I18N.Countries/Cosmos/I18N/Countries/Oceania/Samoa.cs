@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 萨摩亚（The Independent State of Samoa，大洋洲，WS，WSM，882），萨摩亚独立国 <br />
     /// Cosmos i18n code: i18n_country_samoya <br />
     /// Cosmos region code: 600118
     /// </summary>
-    public static class Samoa {
+    public static partial class Samoa
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Samoa() {
-            _country = new CountryInfo {
+        static Samoa()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Samoa,
                 CountryCode = CountryCode.WS,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "萨摩亚",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

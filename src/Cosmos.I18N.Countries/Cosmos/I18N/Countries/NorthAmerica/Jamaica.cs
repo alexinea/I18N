@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 牙买加（Jamaica，北美洲，JM，JAM，388） <br />
     /// Cosmos i18n code: i18n_country_yamaijia <br />
     /// Cosmos region code: 400121
     /// </summary>
-    public static class Jamaica {
+    public static class Jamaica
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Jamaica() {
-            _country = new CountryInfo {
+        static Jamaica()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Jamaica,
                 CountryCode = CountryCode.JM,
                 CountryType = CountryType.Country,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "牙买加",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

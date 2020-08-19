@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 科索沃（Kosovo，欧洲，XK，XKX，838），科索沃自治省 <br />
     /// Cosmos i18n code: i18n_country_kesuowo <br />
     /// Cosmos region code: 200120
     /// </summary>
-    public static class Kosovo {
+    public static class Kosovo
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Kosovo() {
-            _country = new CountryInfo {
+        static Kosovo()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Kosovo,
                 CountryCode = CountryCode.XK,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "科索沃",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

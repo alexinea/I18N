@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 以色列（The State of Israel，亚洲，IL，ISR，376），以色列国 <br />
     /// Cosmos i18n code: i18n_country_yiselie <br />
     /// Cosmos region code: 100015
     /// </summary>
-    public static class Israel {
+    public static partial class Israel
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Israel() {
-            _country = new CountryInfo {
+        static Israel()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Israel,
                 CountryCode = CountryCode.IL,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "以色列",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 阿鲁巴（Aruba，北美洲，AW，ABW，533），荷兰海外属地 <br />
     /// Cosmos i18n code: i18n_country_aluba <br />
     /// Cosmos region code: 400104
     /// </summary>
-    public static class Aruba {
+    public static class Aruba
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Aruba() {
-            _country = new CountryInfo {
+        static Aruba()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Aruba,
                 CountryCode = CountryCode.AW,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "阿鲁巴 ",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 马提尼克岛（Martinique，北美洲，MQ，MTQ，474），法国的海外大区 <br />
     /// Cosmos i18n code: i18n_country_matinike <br />
     /// Cosmos region code: 400122
     /// </summary>
-    public static class Martinique {
+    public static class Martinique
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Martinique() {
-            _country = new CountryInfo {
+        static Martinique()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Martinique,
                 CountryCode = CountryCode.MQ,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "马提尼克岛",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

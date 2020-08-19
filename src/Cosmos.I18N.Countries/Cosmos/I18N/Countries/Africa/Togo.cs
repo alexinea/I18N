@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 多哥（French Southern Territories，非洲，TG，TGO，768），多哥共和国 <br />
     /// Cosmos i18n code: i18n_country_duoge <br />
     /// Cosmos region code: 300125
     /// </summary>
-    public static class Togo {
+    public static class Togo
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Togo() {
-            _country = new CountryInfo {
+        static Togo()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Togo,
                 CountryCode = CountryCode.TG,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "多哥",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,17 +1,23 @@
-namespace Cosmos.I18N.Countries.Asia {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 赫德岛和麦克唐纳群岛（Heard Island and McDonald Islands，亚洲，HM，HMD，334） <br />
     /// Cosmos i18n code: i18n_country_hedemaiketang <br />
     /// Cosmos region code: 100116
     /// </summary>
     // ReSharper disable once InconsistentNaming
-    public static class HIMI {
+    public static class HIMI
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
         // ReSharper disable once IdentifierTypo
-        static HIMI() {
-            _country = new CountryInfo {
+        static HIMI()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.HIMI,
                 CountryCode = CountryCode.HM,
                 CountryType = CountryType.Region,
@@ -25,6 +31,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseName = "赫德岛和麦克唐纳群岛",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

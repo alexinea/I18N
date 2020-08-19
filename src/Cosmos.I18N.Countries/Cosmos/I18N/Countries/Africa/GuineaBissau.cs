@@ -4,7 +4,7 @@ namespace Cosmos.I18N.Countries.Africa {
     /// Cosmos i18n code: i18n_country_jineiyabishao <br />
     /// Cosmos region code: 300130
     /// </summary>
-    public static class GuineaBissau {
+    public static partial  class GuineaBissau {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
@@ -24,6 +24,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "几内亚比绍",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

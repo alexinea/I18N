@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 乍得（Republic of Chad，非洲，TD，TCD，148），乍得共和国 <br />
     /// Cosmos i18n code: i18n_country_zhade <br />
     /// Cosmos region code: 300110
     /// </summary>
-    public static class Chad {
+    public static partial class Chad
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Chad() {
-            _country = new CountryInfo {
+        static Chad()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Chad,
                 CountryCode = CountryCode.TD,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "乍得",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

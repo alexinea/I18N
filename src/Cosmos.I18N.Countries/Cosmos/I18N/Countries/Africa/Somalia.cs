@@ -4,7 +4,7 @@ namespace Cosmos.I18N.Countries.Africa {
     /// Cosmos i18n code: i18n_country_suomali <br />
     /// Cosmos region code: 300152
     /// </summary>
-    public static class Somalia {
+    public static partial class Somalia {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
@@ -24,6 +24,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "索马里",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 黑山（Montenegro，欧洲，ME，MNE，499），黑山共和国 <br />
     /// Cosmos i18n code: i18n_country_heishan <br />
     /// Cosmos region code: 200130
     /// </summary>
-    public static class Montenegro {
+    public static class Montenegro
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Montenegro() {
-            _country = new CountryInfo {
+        static Montenegro()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Montenegro,
                 CountryCode = CountryCode.ME,
                 CountryType = CountryType.Country,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "黑山",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

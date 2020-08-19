@@ -1,16 +1,20 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 中国（People's Republic of China，亚洲，CN，CNH，156），中华人民共和国 <br />
     /// 一个伟大的文明古国，人类的未来 <br />
     /// Cosmos i18n code: i18n_country_china <br />
     /// Cosmos region code: 100001
     /// </summary>
-    public static class China {
+    public static partial class China
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static China() {
-            _country = new CountryInfo {
+        static China()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.China,
                 CountryCode = CountryCode.CN,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "中国",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

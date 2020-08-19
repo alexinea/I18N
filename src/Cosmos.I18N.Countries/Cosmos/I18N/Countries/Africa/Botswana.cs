@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 博茨瓦纳（The Republic of Botswana，非洲，BW，BWA，072），博茨瓦纳共和国 <br />
     /// Cosmos i18n code: i18n_country_boziwana <br />
     /// Cosmos region code: 300104
     /// </summary>
-    public static class Botswana {
+    public static partial class Botswana
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Botswana() {
-            _country = new CountryInfo {
+        static Botswana()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Botswana,
                 CountryCode = CountryCode.BW,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "博茨瓦纳",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

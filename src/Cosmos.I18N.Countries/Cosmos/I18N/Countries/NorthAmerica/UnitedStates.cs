@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 美国（United States of America，北美洲，US，USA，840），美利坚合众国 <br />
     /// Cosmos i18n code: i18n_country_meiguo <br />
     /// Cosmos region code: 400001
     /// </summary>
-    public static class UnitedStates {
+    public static partial class UnitedStates
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static UnitedStates() {
-            _country = new CountryInfo {
+        static UnitedStates()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.UnitedStates,
                 CountryCode = CountryCode.US,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "美国",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

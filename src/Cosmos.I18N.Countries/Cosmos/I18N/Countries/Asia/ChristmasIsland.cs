@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Asia {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 圣诞岛（Christmas Island，亚洲，CX，CXR，162） <br />
     /// Cosmos i18n code: i18n_country_shengdandao <br />
     /// Cosmos region code: 100110
     /// </summary>
-    public static class ChristmasIsland {
+    public static class ChristmasIsland
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static ChristmasIsland() {
-            _country = new CountryInfo {
+        static ChristmasIsland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.ChristmasIsland,
                 CountryCode = CountryCode.CX,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseName = "圣诞岛",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

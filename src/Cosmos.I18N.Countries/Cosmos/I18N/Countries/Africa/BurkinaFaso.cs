@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 布基纳法索（Burkina Faso，非洲，BF，BFA，854） <br />
     /// Cosmos i18n code: i18n_country_bujinafaso <br />
     /// Cosmos region code: 300105
     /// </summary>
-    public static class BurkinaFaso {
+    public static partial class BurkinaFaso
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static BurkinaFaso() {
-            _country = new CountryInfo {
+        static BurkinaFaso()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.BurkinaFaso,
                 CountryCode = CountryCode.BF,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseName = "布基纳法索",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

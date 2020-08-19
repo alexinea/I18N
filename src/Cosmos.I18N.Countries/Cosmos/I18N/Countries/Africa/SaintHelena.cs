@@ -4,7 +4,7 @@ namespace Cosmos.I18N.Countries.Africa {
     /// Cosmos i18n code: i18n_country_shenghelena <br />
     /// Cosmos region code: 300121
     /// </summary>
-    public static class SaintHelena {
+    public static  partial class SaintHelena {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
@@ -22,6 +22,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseName = "圣赫勒拿、阿森松与特里斯坦达库尼亚",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

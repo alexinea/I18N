@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 匈牙利（Hungary，欧洲，HU，HUN，348） <br />
     /// Cosmos i18n code: i18n_country_xiongyali <br />
     /// Cosmos region code: 200013
     /// </summary>
-    public static class Hungary {
+    public static class Hungary
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Hungary() {
-            _country = new CountryInfo {
+        static Hungary()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Hungary,
                 CountryCode = CountryCode.HU,
                 CountryType = CountryType.Country,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseName = "匈牙利",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

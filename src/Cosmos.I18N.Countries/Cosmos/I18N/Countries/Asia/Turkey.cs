@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Asia {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 土耳其（The Republic of Turkey，亚洲，TR，TUR，792），土耳其共和国 <br />
     /// Cosmos i18n code: i18n_country_tuerqi <br />
     /// Cosmos region code: 100017
     /// </summary>
-    public static class Turkey {
+    public static class Turkey
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Turkey() {
-            _country = new CountryInfo {
+        static Turkey()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Turkey,
                 CountryCode = CountryCode.TR,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "土耳其",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

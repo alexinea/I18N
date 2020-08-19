@@ -1,16 +1,20 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 老挝（Lao People's Democratic Republic，亚洲，LA，LAO，418），老挝人民民主共和国 <br />
     /// Cosmos i18n code: i18n_country_laowo <br />
     /// Cosmos region code: 100122
     /// </summary>
     // ReSharper disable once InconsistentNaming
-    public static class LaoPDR {
+    public static partial class LaoPDR
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static LaoPDR() {
-            _country = new CountryInfo {
+        static LaoPDR()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.LaoPDR,
                 CountryCode = CountryCode.LA,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "老挝",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

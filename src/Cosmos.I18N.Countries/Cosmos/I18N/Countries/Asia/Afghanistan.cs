@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 阿富汗（Afghanistan，亚洲，AF，AFG，004），阿富汗伊斯兰国 <br />
     /// Cosmos i18n code: i18n_country_afuhan <br />
     /// Cosmos region code: 100101
     /// </summary>
-    public static class Afghanistan {
+    public static partial class Afghanistan
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Afghanistan() {
-            _country = new CountryInfo {
+        static Afghanistan()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Afghanistan,
                 CountryCode = CountryCode.AF,
                 CountryType = CountryType.Country,
@@ -23,6 +27,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "阿富汗",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

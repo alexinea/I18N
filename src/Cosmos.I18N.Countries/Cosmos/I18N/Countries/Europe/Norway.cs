@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 挪威（The Kingdom of Norway，欧洲，NO，NOR，578），挪威王国 <br />
     /// Cosmos i18n code: i18n_country_nuowei<br />
     /// Cosmos region code: 200132
     /// </summary>
-    public static class Norway {
+    public static partial class Norway
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Norway() {
-            _country = new CountryInfo {
+        static Norway()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Norway,
                 CountryCode = CountryCode.NO,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "挪威",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

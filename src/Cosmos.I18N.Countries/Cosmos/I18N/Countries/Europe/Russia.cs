@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 俄罗斯（Russian Federation，欧洲，BI，BDI，108），俄罗斯联邦 <br />
     /// Cosmos i18n code: i18n_country_eluosi <br />
     /// Cosmos region code: 200004
     /// </summary>
-    public static class Russia {
+    public static class Russia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Russia() {
-            _country = new CountryInfo {
+        static Russia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Russia,
                 CountryCode = CountryCode.RU,
                 CountryType = CountryType.Country,
@@ -26,6 +32,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseAlias2 = "俄国",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 托克劳群岛（Tokelau，大洋洲，TK，TKL，772） <br />
     /// Cosmos i18n code: i18n_country_tuokelao <br />
     /// Cosmos region code: 600120
     /// </summary>
-    public static class Tokelau {
+    public static class Tokelau
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Tokelau() {
-            _country = new CountryInfo {
+        static Tokelau()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Tokelau,
                 CountryCode = CountryCode.TK,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "泰国",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

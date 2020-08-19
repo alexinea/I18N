@@ -1,16 +1,22 @@
-namespace Cosmos.I18N.Countries.Antarctica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Antarctica
+{
     /// <summary>
     /// 南极洲（Antarctica，南极洲，AQ，ATA，010）<br />
     /// 人类的净土 <br />
     /// Cosmos i18n code: i18n_country_nanji <br />
     /// Cosmos region code: 700010
     /// </summary>
-    public static class Antarctique {
+    public static partial class Antarctique
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Antarctique() {
-            _country = new CountryInfo {
+        static Antarctique()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Antarctica,
                 CountryCode = CountryCode.AQ,
                 CountryType = CountryType.Country,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.Antarctica {
                 ChineseName = "南极洲",
                 Continent = Continent.Antarctica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

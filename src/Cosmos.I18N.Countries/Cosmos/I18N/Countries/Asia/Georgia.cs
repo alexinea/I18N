@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 格鲁吉亚（Georgia，亚洲，GE，GEO，268） <br />
     /// Cosmos i18n code: i18n_country_gelujiya <br />
     /// Cosmos region code: 100115
     /// </summary>
-    public static class Georgia {
+    public static partial class Georgia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Georgia() {
-            _country = new CountryInfo {
+        static Georgia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Georgia,
                 CountryCode = CountryCode.GE,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseName = "格鲁吉亚",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 巴哈马（Commonwealth of the Bahamas，北美洲，BS，BHS，044），巴哈马国 <br />
     /// Cosmos i18n code: i18n_country_bahama <br />
     /// Cosmos region code: 400105
     /// </summary>
-    public static class Bahamas {
+    public static partial class Bahamas
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Bahamas() {
-            _country = new CountryInfo {
+        static Bahamas()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Bahamas,
                 CountryCode = CountryCode.BS,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 Continent = Continent.NorthAmerica,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

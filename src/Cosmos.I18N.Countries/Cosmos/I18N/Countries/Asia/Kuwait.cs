@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 科威特（The State of Kuwait，亚洲，KW，KWT，414），科威特国 <br />
     /// Cosmos i18n code: i18n_country_keweite <br />
     /// Cosmos region code: 100120
     /// </summary>
-    public static class Kuwait {
+    public static partial class Kuwait
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Kuwait() {
-            _country = new CountryInfo {
+        static Kuwait()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Kuwait,
                 CountryCode = CountryCode.KW,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "科威特",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

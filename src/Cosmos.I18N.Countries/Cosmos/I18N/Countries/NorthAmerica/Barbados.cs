@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 巴巴多斯（Barbados，北美洲，BB，BRB，052） <br />
     /// Cosmos i18n code: i18n_country_babaduosi <br />
     /// Cosmos region code: 400106
     /// </summary>
-    public static class Barbados {
+    public static partial class Barbados
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Barbados() {
-            _country = new CountryInfo {
+        static Barbados()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Barbados,
                 CountryCode = CountryCode.BB,
                 CountryType = CountryType.Country,
@@ -23,6 +27,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 Continent = Continent.NorthAmerica,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,14 +1,20 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 诺福克岛（Norfolk Island，大洋洲，NF，NFK，574） <br />
     /// Cosmos i18n code: i18n_country_nuofuke <br />
     /// Cosmos region code: 600111
     /// </summary>
-    public static class NorfolkIsland {
+    public static class NorfolkIsland
+    {
         private static readonly CountryInfo _country;
 
-        static NorfolkIsland() {
-            _country = new CountryInfo {
+        static NorfolkIsland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.NorfolkIsland,
                 CountryCode = CountryCode.NF,
                 CountryType = CountryType.Region,
@@ -21,6 +27,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseName = "诺福克岛",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

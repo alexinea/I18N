@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 文莱 （Negara Brunei Darussalam，亚洲，BN，BRN，096），文莱达鲁萨兰国 <br />
     /// Cosmos i18n code: i18n_country_wenlai <br />
     /// Cosmos region code: 100108
     /// </summary>
-    public static class Brunei {
+    public static partial class Brunei
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Brunei() {
-            _country = new CountryInfo {
+        static Brunei()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Brunei,
                 CountryCode = CountryCode.BN,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "文莱",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

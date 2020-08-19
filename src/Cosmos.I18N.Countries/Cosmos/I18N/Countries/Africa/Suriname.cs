@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 苏里南（The Republic of Suriname，非洲，SR，SUR，740），苏里南共和国 <br />
     /// Cosmos i18n code: i18n_country_sulinan <br />
     /// Cosmos region code: 300150
     /// </summary>
-    public static class Suriname {
+    public static partial class Suriname
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Suriname() {
-            _country = new CountryInfo {
+        static Suriname()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Suriname,
                 CountryCode = CountryCode.SR,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "苏里南",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

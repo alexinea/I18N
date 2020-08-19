@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Asia {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 日本（Japan，亚洲，JP，JPN，392），日本国 <br />
     /// Cosmos i18n code: i18n_country_riben <br />
     /// Cosmos region code: 100002
     /// </summary>
-    public static class Japan {
+    public static class Japan
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Japan() {
-            _country = new CountryInfo {
+        static Japan()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Japan,
                 CountryCode = CountryCode.JP,
                 CountryType = CountryType.Country,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "日本",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 喀麦隆（Republic of Cameroon，非洲，CM，CRM，120），喀麦隆共和国 <br />
     /// Cosmos i18n code: i18n_country_kamailong <br />
     /// Cosmos region code: 300108
     /// </summary>
-    public static class Cameroun {
+    public static partial class Cameroun
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Cameroun() {
-            _country = new CountryInfo {
+        static Cameroun()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Cameroun,
                 CountryCode = CountryCode.CM,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "喀麦隆",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

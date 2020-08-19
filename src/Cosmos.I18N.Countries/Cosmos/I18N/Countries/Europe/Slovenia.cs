@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 斯洛文尼亚（The Republic of Slovenia，欧洲，SI，SVN，705），斯洛文尼亚共和国 <br />
     /// Cosmos i18n code: i18n_country_sinuowenniya <br />
     /// Cosmos region code: 200138
     /// </summary>
-    public class Slovenia {
+    public static partial class Slovenia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Slovenia() {
-            _country = new CountryInfo {
+        static Slovenia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Slovenia,
                 CountryCode = CountryCode.SI,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "斯洛文尼亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

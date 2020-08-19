@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 大马（Malaysia，亚洲，MY，MYS，458），马来西亚 <br />
     /// Cosmos i18n code: i18n_country_malaixiya <br />
     /// Cosmos region code: 100124
     /// </summary>
-    public static class Malaysia {
+    public static partial class Malaysia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Malaysia() {
-            _country = new CountryInfo {
+        static Malaysia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Malaysia,
                 CountryCode = CountryCode.MY,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 Continent = Continent.Asia,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

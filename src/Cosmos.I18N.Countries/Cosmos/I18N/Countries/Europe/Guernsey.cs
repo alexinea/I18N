@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 根西岛（Bailiwick of Guernsey，欧洲，GG，GGY，831） <br />
     /// Cosmos i18n code: i18n_country_genxidao <br />
     /// Cosmos region code: 200116
     /// </summary>
-    public static class Guernsey {
+    public static class Guernsey
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Guernsey() {
-            _country = new CountryInfo {
+        static Guernsey()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Guernsey,
                 CountryCode = CountryCode.GG,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseAlias = "格恩西岛",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

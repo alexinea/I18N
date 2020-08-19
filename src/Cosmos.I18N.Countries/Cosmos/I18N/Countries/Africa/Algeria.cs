@@ -5,7 +5,7 @@ namespace Cosmos.I18N.Countries.Africa
     /// Cosmos i18n code: i18n_country_aerjiliya <br />
     /// Cosmos region code: 300101
     /// </summary>
-    public static class Algeria
+    public static partial class Algeria
     {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
@@ -28,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa
                 ChineseShorterForm = "阿尔及利亚",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

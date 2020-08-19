@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 贝宁（The Republic of Benin，非洲，BJ，BEN，204），贝宁共和国 <br />
     /// Cosmos i18n code: i18n_country_beining <br />
     /// Cosmos region code: 300103
     /// </summary>
-    public static class Benin {
+    public static partial class Benin
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Benin() {
-            _country = new CountryInfo {
+        static Benin()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Benin,
                 CountryCode = CountryCode.BJ,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "贝宁",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

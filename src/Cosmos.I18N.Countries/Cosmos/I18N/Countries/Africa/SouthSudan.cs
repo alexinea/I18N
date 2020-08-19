@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 南苏丹（The Republic of South Sudan，非洲，SS，SSD，728），南苏丹共和国 <br />
     /// Cosmos i18n code: i18n_country_nansudan <br />
     /// Cosmos region code: 300149
     /// </summary>
-    public static class SouthSudan {
+    public static class SouthSudan
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SouthSudan() {
-            _country = new CountryInfo {
+        static SouthSudan()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SouthSudan,
                 CountryCode = CountryCode.SS,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "南苏丹",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 丹麦（The Kingdom of Denmark，欧洲，DK，DNK，208），丹麦王国 <br />
     /// Cosmos i18n code: i18n_country_danmai <br />
     /// Cosmos region code: 200110
     /// </summary>
-    public static class Denmark {
+    public static partial class Denmark
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Denmark() {
-            _country = new CountryInfo {
+        static Denmark()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Denmark,
                 CountryCode = CountryCode.DK,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "丹麦",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

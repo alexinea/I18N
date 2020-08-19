@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 蒙古国（Outer Mongolia，亚洲，MN，MNG，496），外蒙古 <br />
     /// Cosmos i18n code: i18n_country_waimenggu <br />
     /// Cosmos region code: 100126
     /// </summary>
-    public static class Mongolia {
+    public static partial class Mongolia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Mongolia() {
-            _country = new CountryInfo {
+        static Mongolia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Mongolia,
                 CountryCode = CountryCode.MN,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "外蒙古",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 阿塞拜疆（The Republic of Azerbaijan，亚洲，AZ，AZE，031），阿塞拜疆共和国 <br />
     /// Cosmos i18n code: i18n_country_asaibaijiang <br />
     /// Cosmos region code: 100103
     /// </summary>
-    public static class Azerbaijan {
+    public static partial class Azerbaijan
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Azerbaijan() {
-            _country = new CountryInfo {
+        static Azerbaijan()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Azerbaijan,
                 CountryCode = CountryCode.AZ,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "阿塞拜疆",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

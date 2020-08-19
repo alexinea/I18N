@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 奥地利（The Republic of Austria，欧洲，AT，AUT，040），奥地利共和国 <br />
     /// Cosmos i18n code: i18n_country_aodili <br />
     /// Cosmos region code: 200011
     /// </summary>
-    public static class Austria {
+    public static partial class Austria
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Austria() {
-            _country = new CountryInfo {
+        static Austria()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Austria,
                 CountryCode = CountryCode.AT,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "奥地利",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

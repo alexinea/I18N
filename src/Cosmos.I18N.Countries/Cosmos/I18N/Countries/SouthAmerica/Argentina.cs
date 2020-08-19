@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 阿根廷（The Republic of Argentina，南美洲，AR，ARG，032），阿根廷共和国 <br />
     /// Cosmos i18n code: i18n_country_agenting <br />
     /// Cosmos region code: 500011
     /// </summary>
-    public static class Argentina {
+    public static class Argentina
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Argentina() {
-            _country = new CountryInfo {
+        static Argentina()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Argentina,
                 CountryCode = CountryCode.AR,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "阿根廷",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

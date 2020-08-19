@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 危地马拉（The Republic of Guatemala，北美洲，GT，GTM，320），危地马拉共和国 <br />
     /// Cosmos i18n code: i18n_country_weidimala <br />
     /// Cosmos region code: 400119
     /// </summary>
-    public static class Guatemala {
+    public static class Guatemala
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Guatemala() {
-            _country = new CountryInfo {
+        static Guatemala()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Guatemala,
                 CountryCode = CountryCode.GT,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "危地马拉",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

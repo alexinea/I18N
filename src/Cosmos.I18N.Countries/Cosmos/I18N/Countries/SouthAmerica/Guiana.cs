@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 法属圭亚那（Guyane Francaise，南美洲，GF，GUF，254） <br />
     /// Cosmos i18n code: i18n_country_guiyana <br />
     /// Cosmos region code: 500105
     /// </summary>
-    public static class Guiana {
+    public static class Guiana
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Guiana() {
-            _country = new CountryInfo {
+        static Guiana()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Guiana,
                 CountryCode = CountryCode.GF,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseAlias = "森林之国",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

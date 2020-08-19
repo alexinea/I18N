@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 奥兰群岛（Aland Island，欧洲，AX，ALA，248），奥兰自治省 <br />
     /// Cosmos i18n code: i18n_country_aolanqundao <br />
     /// Cosmos region code: 200101
     /// </summary>
-    public static class AlandIslands {
+    public static class AlandIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static AlandIslands() {
-            _country = new CountryInfo {
+        static AlandIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.AlandIslands,
                 CountryCode = CountryCode.AX,
                 CountryType = CountryType.Region,
@@ -25,6 +31,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseAlias2 = "阿赫韦南马群岛",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

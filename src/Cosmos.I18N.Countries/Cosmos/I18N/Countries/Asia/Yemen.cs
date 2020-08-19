@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 也门（The Republic Of Yemen，亚洲，YE，YEM，887），也门共和国 <br />
     /// Cosmos i18n code: i18n_country_yemen <br />
     /// Cosmos region code: 100142
     /// </summary>
-    public static class Yemen {
+    public static partial class Yemen
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Yemen() {
-            _country = new CountryInfo {
+        static Yemen()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Yemen,
                 CountryCode = CountryCode.YE,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "也门",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

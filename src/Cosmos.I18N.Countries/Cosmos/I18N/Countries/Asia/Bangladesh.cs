@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 孟加拉国（People's Republic Of Bangladesh，亚洲，BD，BGD，050），孟加拉人民共和国 <br />
     /// Cosmos i18n code: i18n_country_mengjiala <br />
     /// Cosmos region code: 100105
     /// </summary>
-    public static class Bangladesh {
+    public static partial class Bangladesh
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Bangladesh() {
-            _country = new CountryInfo {
+        static Bangladesh()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Bangladesh,
                 CountryCode = CountryCode.BD,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "孟加拉国",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

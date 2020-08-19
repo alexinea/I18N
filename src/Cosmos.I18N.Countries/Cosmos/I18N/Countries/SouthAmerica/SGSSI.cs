@@ -1,16 +1,22 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 南乔治亚岛和南桑威奇群岛（South Georgia and The South Sandwich Islands，南美洲，GS，SGS，239） <br />
     /// Cosmos i18n code: i18n_country_nanqiaozhiya <br />
     /// Cosmos region code: 500111
     /// </summary>
     // ReSharper disable once InconsistentNaming
-    public static class SGSSI {
+    public static class SGSSI
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SGSSI() {
-            _country = new CountryInfo {
+        static SGSSI()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SGSSI,
                 CountryCode = CountryCode.GS,
                 CountryType = CountryType.Region,
@@ -25,12 +31,14 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "厄瓜多尔",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 
         /// <summary>
         /// 南乔治亚岛和南桑威奇群岛（South Georgia and The South Sandwich Islands，南美洲，GS，SGS，239） <br />
-        /// Cosmos i18n code: i18n_country_nanqiaozhiya
+        /// Cosmos i18n code: i18n_country_nanqiaozhiya <br />
+        /// Cosmos region code: 500111
         /// </summary>
         // ReSharper disable once ConvertToAutoProperty
         public static CountryInfo Instance => _country;

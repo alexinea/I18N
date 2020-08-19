@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 科摩罗（Union of Comoros，非洲，KM，COM，174），科摩罗联盟 <br />
     /// Cosmos i18n code: i18n_country_kemoluo <br />
     /// Cosmos region code: 300111
     /// </summary>
-    public static class Comoros {
+    public static partial class Comoros
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Comoros() {
-            _country = new CountryInfo {
+        static Comoros()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Comoros,
                 CountryCode = CountryCode.KM,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "科摩罗",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 卢森堡（The Grand Duchy of Luxembourg，欧洲，LU，LUX，442），卢森堡大公国 <br />
     /// Cosmos i18n code: i18n_country_lusenbao <br />
     /// Cosmos region code: 200124
     /// </summary>
-    public static class Luxembourg {
+    public static class Luxembourg
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Luxembourg() {
-            _country = new CountryInfo {
+        static Luxembourg()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Luxembourg,
                 CountryCode = CountryCode.LU,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "卢森堡",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

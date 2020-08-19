@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 斯瓦尔巴群岛（The Svalbard archipelago，欧洲，SJ，SJM，744） <br />
     /// Cosmos i18n code: i18n_country_siwaerba <br />
     /// Cosmos region code: 200139
     /// </summary>
-    public static class SvalbardAndJanMayen {
+    public static class SvalbardAndJanMayen
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SvalbardAndJanMayen() {
-            _country = new CountryInfo {
+        static SvalbardAndJanMayen()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SvalbardAndJanMayen,
                 CountryCode = CountryCode.SJ,
                 CountryType = CountryType.Region,
@@ -25,6 +31,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseAlias2 = "斯匹次卑尔根",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

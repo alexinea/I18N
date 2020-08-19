@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 津巴布韦（Zimbabwe，非洲，ZW，ZWE，716），津巴布韦共和国 <br />
     /// Cosmos i18n code: i18n_country_jinbabuwei <br />
     /// Cosmos region code: 300119
     /// </summary>
-    public static class Zimbabwe {
+    public static class Zimbabwe
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Zimbabwe() {
-            _country = new CountryInfo {
+        static Zimbabwe()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Zimbabwe,
                 CountryCode = CountryCode.ZW,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "津巴布韦",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 格陵兰岛（Greenland，北美洲，GL，GRL，304） <br />
     /// Cosmos i18n code: i18n_country_gelinlan <br />
     /// Cosmos region code: 400116
     /// </summary>
-    public static class Greenland {
+    public static partial class Greenland
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Greenland() {
-            _country = new CountryInfo {
+        static Greenland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Greenland,
                 CountryCode = CountryCode.GL,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "格陵兰岛",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

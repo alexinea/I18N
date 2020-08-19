@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 法属南部领地（French Southern Territories，非洲，TF，ATF，260） <br />
     /// Cosmos i18n code: i18n_country_faguonanbulingdi <br />
     /// Cosmos region code: 300124
     /// </summary>
-    public static class FrenchSouthernTerritories {
+    public static class FrenchSouthernTerritories
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static FrenchSouthernTerritories() {
-            _country = new CountryInfo {
+        static FrenchSouthernTerritories()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.FrenchSouthernTerritories,
                 CountryCode = CountryCode.TF,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseName = "法属南部领地",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

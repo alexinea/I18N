@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 马耳他（Republic of Malta，欧洲，MT，MLT，470），马耳他共和国 <br />
     /// Cosmos i18n code: i18n_country_maerta <br />
     /// Cosmos region code: 200126
     /// </summary>
-    public static class Malta {
+    public static class Malta
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Malta() {
-            _country = new CountryInfo {
+        static Malta()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Malta,
                 CountryCode = CountryCode.MT,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "马耳他",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

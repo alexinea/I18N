@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 塞尔维亚（The Republic of Serbia，欧洲，RS，SRB，688），塞尔维亚共和国 <br />
     /// Cosmos i18n code: i18n_country_saierweiya <br />
     /// Cosmos region code: 200136
     /// </summary>
-    public static class Serbia {
+    public static partial class Serbia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Serbia() {
-            _country = new CountryInfo {
+        static Serbia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Serbia,
                 CountryCode = CountryCode.RS,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "塞尔维亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

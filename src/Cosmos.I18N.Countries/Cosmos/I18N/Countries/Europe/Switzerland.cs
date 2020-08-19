@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 瑞士（Swiss Confederation，欧洲，CH，CHE，756），瑞士联邦 <br />
     /// Cosmos i18n code: i18n_country_ruishi <br />
     /// Cosmos region code: 200017
     /// </summary>
-    public static class Switzerland {
+    public static partial class Switzerland
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Switzerland() {
-            _country = new CountryInfo {
+        static Switzerland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Switzerland,
                 CountryCode = CountryCode.CH,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "瑞士",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

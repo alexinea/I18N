@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 马达加斯加（The Republic of Madagascar，非洲，MG，MDG，450），马达加斯加共和国 <br />
     /// Cosmos i18n code: i18n_country_madajiasijia <br />
     /// Cosmos region code: 300134
     /// </summary>
-    public static class Madagascar {
+    public static class Madagascar
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Madagascar() {
-            _country = new CountryInfo {
+        static Madagascar()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Madagascar,
                 CountryCode = CountryCode.MG,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "马达加斯加",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

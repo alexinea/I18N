@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 越南（Socialist Republic of Vietnam，亚洲，VN，VNM，704），越南社会主义共和国 <br />
     /// Cosmos i18n code: i18n_country_yuenan <br />
     /// Cosmos region code: 100018
     /// </summary>
-    public static class Vietnam {
+    public static partial class Vietnam
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Vietnam() {
-            _country = new CountryInfo {
+        static Vietnam()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Vietnam,
                 CountryCode = CountryCode.VN,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "越南",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 多米尼加（The Dominican Republic，北美洲，DO，DOM，214），多米尼加共和国 <br />
     /// Cosmos i18n code: i18n_country_duominijia <br />
     /// Cosmos region code: 400114
     /// </summary>
-    public static class Dominican {
+    public static partial class Dominican
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Dominican() {
-            _country = new CountryInfo {
+        static Dominican()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Dominican,
                 CountryCode = CountryCode.DO,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "多米尼加",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

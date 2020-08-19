@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 新加坡（Republic of Singapore，亚洲，SG，SGP，702），新加坡共和国 <br />
     /// Cosmos i18n code: i18n_country_xinjiapo <br />
     /// Cosmos region code: 100134
     /// </summary>
-    public static class Singapore {
+    public static partial class Singapore
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Singapore() {
-            _country = new CountryInfo {
+        static Singapore()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Singapore,
                 CountryCode = CountryCode.SG,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "新加坡",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

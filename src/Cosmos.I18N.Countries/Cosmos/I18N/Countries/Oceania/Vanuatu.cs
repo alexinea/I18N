@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 瓦努阿图（The Republic of Vanuatu，大洋洲，VU，VUT，548），瓦努阿图共和国 <br />
     /// Cosmos i18n code: i18n_country_wanuatu <br />
     /// Cosmos region code: 600123
     /// </summary>
-    public static class Vanuatu {
+    public static partial class Vanuatu
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Vanuatu() {
-            _country = new CountryInfo {
+        static Vanuatu()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Vanuatu,
                 CountryCode = CountryCode.VU,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "瓦努阿图",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 伯利兹（Belize，北美洲，BZ，BLZ，084） <br />
     /// Cosmos i18n code: i18n_country_bolizi <br />
     /// Cosmos region code: 400107
     /// </summary>
-    public static class Belize {
+    public static partial class Belize
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Belize() {
-            _country = new CountryInfo {
+        static Belize()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Belize,
                 CountryCode = CountryCode.BZ,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "伯利兹",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

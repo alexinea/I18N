@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 安提瓜和巴布达（Antigua and Barbuda，北美洲，AG，ATG，028） <br />
     /// Cosmos i18n code: i18n_country_andaguababuda <br />
     /// Cosmos region code: 400103
     /// </summary>
-    public static class AntiguaAndBarbuda {
+    public static partial class AntiguaAndBarbuda
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static AntiguaAndBarbuda() {
-            _country = new CountryInfo {
+        static AntiguaAndBarbuda()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.AntiguaAndBarbuda,
                 CountryCode = CountryCode.AG,
                 CountryType = CountryType.Country,
@@ -23,6 +27,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 Continent = Continent.NorthAmerica,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

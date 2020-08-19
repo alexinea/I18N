@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 摩尔多瓦（Republic of Moldova，欧洲，MD，MDA，498），摩尔多瓦共和国 <br />
     /// Cosmos i18n code: i18n_country_moerduowa <br />
     /// Cosmos region code: 200128
     /// </summary>
-    public static class Moldova {
+    public static partial class Moldova
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Moldova() {
-            _country = new CountryInfo {
+        static Moldova()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Moldova,
                 CountryCode = CountryCode.MD,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "摩尔多瓦",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 佛得角（Republic of Cape Verde，非洲，CV，CPV，132），佛得角共和国 <br />
     /// Cosmos i18n code: i18n_country_fodejiao <br />
     /// Cosmos region code: 300106
     /// </summary>
-    public static class CapeVerde {
+    public static partial class CapeVerde
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static CapeVerde() {
-            _country = new CountryInfo {
+        static CapeVerde()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.CapeVerde,
                 CountryCode = CountryCode.CV,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "佛得角",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

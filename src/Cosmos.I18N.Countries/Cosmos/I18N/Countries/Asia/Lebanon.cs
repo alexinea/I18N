@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 黎巴嫩（The Republic of Lebanon，亚洲，LB，LBN，422），黎巴嫩共和国 <br />
     /// Cosmos i18n code: i18n_country_libanen <br />
     /// Cosmos region code: 100123
     /// </summary>
-    public static class Lebanon {
+    public static partial class Lebanon
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Lebanon() {
-            _country = new CountryInfo {
+        static Lebanon()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Lebanon,
                 CountryCode = CountryCode.LB,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "黎巴嫩",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

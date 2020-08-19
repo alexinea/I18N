@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 瓜德罗普（Guadeloupe，北美洲，GP，GLP，312） <br />
     /// Cosmos i18n code: i18n_country_guadeluopu <br />
     /// Cosmos region code: 400118
     /// </summary>
-    public static class Guadeloupe {
+    public static class Guadeloupe
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Guadeloupe() {
-            _country = new CountryInfo {
+        static Guadeloupe()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Guadeloupe,
                 CountryCode = CountryCode.GP,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "瓜德罗普",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

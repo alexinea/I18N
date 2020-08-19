@@ -1,10 +1,10 @@
 namespace Cosmos.I18N.Countries.Africa {
     /// <summary>
-    /// 尼日利亚（The Republic of Madagascar，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
+    /// 尼日利亚（Federal Republic of Nigeria，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
     /// Cosmos i18n code: i18n_country_niriliya <br />
     /// Cosmos region code: 300142
     /// </summary>
-    public static class Nigeria {
+    public static partial  class Nigeria {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
@@ -24,11 +24,12 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "尼日利亚",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 
         /// <summary>
-        /// 尼日利亚（The Republic of Madagascar，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
+        /// 尼日利亚（Federal Republic of Nigeria，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
         /// Cosmos i18n code: i18n_country_niriliya <br />
         /// Cosmos region code: 300142
         /// </summary>

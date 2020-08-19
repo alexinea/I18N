@@ -1,16 +1,22 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 美属萨摩亚群岛（American Samoa，大洋洲，AS，ASM，016），阿根廷共和国 <br />
     /// 美属萨摩亚领地<br />
     /// Cosmos i18n code: i18n_country_ussamoya <br />
     /// Cosmos region code: 600101
     /// </summary>
-    public static class AmericanSamoa {
+    public static class AmericanSamoa
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static AmericanSamoa() {
-            _country = new CountryInfo {
+        static AmericanSamoa()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.AmericanSamoa,
                 CountryCode = CountryCode.AS,
                 CountryType = CountryType.Region,
@@ -25,6 +31,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseAlias = "美属萨摩亚领地",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

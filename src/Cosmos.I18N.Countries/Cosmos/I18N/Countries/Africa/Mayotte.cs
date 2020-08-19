@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 马奥霍（Territorial Collectivity of Mayotte ，非洲，YT，MYT，004），马约特岛 <br />
     /// Cosmos i18n code: i18n_country_mayuete <br />
     /// Cosmos region code: 300138
     /// </summary>
-    public static class Mayotte {
+    public static class Mayotte
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Mayotte() {
-            _country = new CountryInfo {
+        static Mayotte()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Mayotte,
                 CountryCode = CountryCode.YT,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "马奥霍",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

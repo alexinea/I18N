@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 布隆迪（The Republic of Burundi，非洲，BI，BDI，108），布隆迪共和国 <br />
     /// Cosmos i18n code: i18n_country_bulongdi <br />
     /// Cosmos region code: 300107
     /// </summary>
-    public static class Burundi {
+    public static partial class Burundi
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Burundi() {
-            _country = new CountryInfo {
+        static Burundi()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Burundi,
                 CountryCode = CountryCode.BI,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "布隆迪",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

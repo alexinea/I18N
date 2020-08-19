@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 西班牙（The Kingdom of Spain，欧洲，ES，ESP，724），西班牙王国 <br />
     /// Cosmos i18n code: i18n_country_xibanya <br />
     /// Cosmos region code: 200015
     /// </summary>
-    public static class Spain {
+    public static partial class Spain
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Spain() {
-            _country = new CountryInfo {
+        static Spain()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Spain,
                 CountryCode = CountryCode.ES,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "西班牙",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

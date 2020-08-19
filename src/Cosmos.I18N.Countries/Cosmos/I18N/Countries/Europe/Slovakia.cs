@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 斯洛伐克（The Slovak Republic，欧洲，SK，SVK，703），斯洛伐克共和国 <br />
     /// Cosmos i18n code: i18n_country_siluofake <br />
     /// Cosmos region code: 200137
     /// </summary>
-    public static class Slovakia {
+    public static partial class Slovakia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Slovakia() {
-            _country = new CountryInfo {
+        static Slovakia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Slovakia,
                 CountryCode = CountryCode.SK,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "斯洛伐克",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 泽西（Bailiwick of Jersey，欧洲，JE，JEY，832），泽西岛 <br />
     /// Cosmos i18n code: i18n_country_zexi <br />
     /// Cosmos region code: 200119
     /// </summary>
-    public static class Jersey {
+    public static class Jersey
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Jersey() {
-            _country = new CountryInfo {
+        static Jersey()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Jersey,
                 CountryCode = CountryCode.JE,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "泽西",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

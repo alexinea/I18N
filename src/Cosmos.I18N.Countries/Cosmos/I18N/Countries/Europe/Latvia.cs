@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 拉脱维亚（The Republic of Latvia，欧洲，LV，LVA，428），拉脱维亚共和国 <br />
     /// Cosmos i18n code: i18n_country_latuoweiya <br />
     /// Cosmos region code: 200121
     /// </summary>
-    public static class Latvia {
+    public static class Latvia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Latvia() {
-            _country = new CountryInfo {
+        static Latvia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Latvia,
                 CountryCode = CountryCode.LV,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "拉脱维亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

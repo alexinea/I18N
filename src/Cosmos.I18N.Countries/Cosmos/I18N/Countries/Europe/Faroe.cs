@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 法罗群岛（Faroe Islands，欧洲，FO，FRO，234） <br />
     /// Cosmos i18n code: i18n_country_faluo <br />
     /// Cosmos region code: 200112
     /// </summary>
-    public static class Faroe {
+    public static class Faroe
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Faroe() {
-            _country = new CountryInfo {
+        static Faroe()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Faroe,
                 CountryCode = CountryCode.FO,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseName = "法罗群岛",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

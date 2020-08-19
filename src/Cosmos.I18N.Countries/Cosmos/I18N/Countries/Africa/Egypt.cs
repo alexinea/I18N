@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Africa {
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 埃及（The Arab Republic of Egypt，非洲，EG，EGY，818），阿拉伯埃及共和国 <br />
     /// Cosmos i18n code: i18n_country_aiji <br />
     /// Cosmos region code: 300011
     /// </summary>
-    public static class Egypt {
+    public static partial class Egypt
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Egypt() {
-            _country = new CountryInfo {
+        static Egypt()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Egypt,
                 CountryCode = CountryCode.EG,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "埃及",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 
@@ -64,6 +69,5 @@ namespace Cosmos.I18N.Countries.Africa {
         /// Get Alpha3 code / ISO 3166-1 alpha-3
         /// </summary>
         public static string Alpha3Code => _country.Alpha3Code;
-
     }
 }

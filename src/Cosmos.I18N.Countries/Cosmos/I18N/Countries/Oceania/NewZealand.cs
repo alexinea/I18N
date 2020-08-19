@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 新西兰（New Zealand，大洋洲，NZ，NZL，554） <br />
     /// Cosmos i18n code: i18n_country_xinxilan <br />
     /// Cosmos region code: 600012
     /// </summary>
-    public static class NewZealand {
+    public static partial class NewZealand
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static NewZealand() {
-            _country = new CountryInfo {
+        static NewZealand()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.NewZealand,
                 CountryCode = CountryCode.NZ,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 Continent = Continent.Oceania,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

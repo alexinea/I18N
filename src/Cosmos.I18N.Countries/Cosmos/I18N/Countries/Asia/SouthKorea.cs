@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 韩国（Republic Of Korea，亚洲，KR，KOR，410），大韩民国 <br />
     /// Cosmos i18n code: i18n_country_hanguo <br />
     /// Cosmos region code: 100012
     /// </summary>
-    public static class SouthKorea {
+    public static partial class SouthKorea
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SouthKorea() {
-            _country = new CountryInfo {
+        static SouthKorea()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SouthKorea,
                 CountryCode = CountryCode.KR,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "韩国",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

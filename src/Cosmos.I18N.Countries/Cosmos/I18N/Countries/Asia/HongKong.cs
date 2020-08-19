@@ -1,4 +1,7 @@
-namespace Cosmos.I18N.Countries.Asia {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 香港（Hong Kong, SAR China，亚洲，HK，HKG，344），中华人民共和国香港特别行政区 <br />
     /// 香港，中华人民共和国的一部分 <br />
@@ -6,11 +9,14 @@ namespace Cosmos.I18N.Countries.Asia {
     /// Cosmos i18n code: i18n_country_xianggang <br />
     /// Cosmos region code: 1000010033
     /// </summary>
-    public static class HongKong {
+    public static class HongKong
+    {
         private static readonly CountryInfo _country;
 
-        static HongKong() {
-            _country = new CountryInfo {
+        static HongKong()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.HongKong,
                 CountryCode = CountryCode.HK,
                 CountryType = CountryType.Region,
@@ -25,6 +31,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "香港",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

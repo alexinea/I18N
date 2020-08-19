@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Asia {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 英属印度洋领地（British Indian Ocean Territory，亚洲，IO，IOT，086） <br />
     /// Cosmos i18n code: i18n_country_yingshuying <br />
     /// Cosmos region code: 100107
     /// </summary>
-    public static class BritishIndianOceanTerritory {
+    public static class BritishIndianOceanTerritory
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static BritishIndianOceanTerritory() {
-            _country = new CountryInfo {
+        static BritishIndianOceanTerritory()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.BritishIndianOceanTerritory,
                 CountryCode = CountryCode.IO,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseName = "英属印度洋领地",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

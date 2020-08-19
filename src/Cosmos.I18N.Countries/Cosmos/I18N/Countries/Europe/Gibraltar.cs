@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 直布罗陀（Gibraltar，欧洲，GI，GIB，292） <br />
     /// Cosmos i18n code: i18n_country_zhibuluotuo <br />
     /// Cosmos region code: 200114
     /// </summary>
-    public static class Gibraltar {
+    public static class Gibraltar
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Gibraltar() {
-            _country = new CountryInfo {
+        static Gibraltar()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Gibraltar,
                 CountryCode = CountryCode.GI,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseName = "直布罗陀",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

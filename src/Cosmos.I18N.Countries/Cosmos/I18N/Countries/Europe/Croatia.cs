@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 克罗地亚（Republic of Croatia，欧洲，HR，HRV，191），克罗地亚共和国 <br />
     /// Cosmos i18n code: i18n_country_keluodiya <br />
     /// Cosmos region code: 200109
     /// </summary>
-    public static class Croatia {
+    public static partial class Croatia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Croatia() {
-            _country = new CountryInfo {
+        static Croatia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Croatia,
                 CountryCode = CountryCode.HR,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "克罗地亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 列支敦士登（Principality of Liechtenstein，欧洲，LI，LIE，438），列支敦士登公国 <br />
     /// Cosmos i18n code: i18n_country_liezhidunshideng <br />
     /// Cosmos region code: 200122
     /// </summary>
-    public static class Liechtenstein {
+    public static class Liechtenstein
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Liechtenstein() {
-            _country = new CountryInfo {
+        static Liechtenstein()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Liechtenstein,
                 CountryCode = CountryCode.LI,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "列支敦士登",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

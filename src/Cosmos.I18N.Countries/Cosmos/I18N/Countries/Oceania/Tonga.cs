@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 汤加（The Kingdom of Tonga，大洋洲，TO，TN，776），汤加王国 <br />
     /// Cosmos i18n code: i18n_country_tangjia <br />
     /// Cosmos region code: 600121
     /// </summary>
-    public static class Tonga {
+    public static partial class Tonga
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Tonga() {
-            _country = new CountryInfo {
+        static Tonga()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Tonga,
                 CountryCode = CountryCode.TO,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "汤加",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

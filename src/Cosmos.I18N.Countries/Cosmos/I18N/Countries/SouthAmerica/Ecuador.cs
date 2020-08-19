@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 厄瓜多尔（The Republic of Ecuador，南美洲，EC，ECU，218），厄瓜多尔共和国 <br />
     /// Cosmos i18n code: i18n_country_eguaduoer <br />
     /// Cosmos region code: 500103
     /// </summary>
-    public static class Ecuador {
+    public static partial class Ecuador
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Ecuador() {
-            _country = new CountryInfo {
+        static Ecuador()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Ecuador,
                 CountryCode = CountryCode.EC,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "厄瓜多尔",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 瓦利斯和富图纳群岛（Wallis and Futuna Islands，大洋洲，WF，WLF，876） <br />
     /// Cosmos i18n code: i18n_country_walisi <br />
     /// Cosmos region code: 600116
     /// </summary>
-    public static class WallisAndFutuna {
+    public static partial class WallisAndFutuna
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static WallisAndFutuna() {
-            _country = new CountryInfo {
+        static WallisAndFutuna()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.WallisAndFutuna,
                 CountryCode = CountryCode.WF,
                 CountryType = CountryType.Region,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseName = "瓦利斯和富图纳群岛",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

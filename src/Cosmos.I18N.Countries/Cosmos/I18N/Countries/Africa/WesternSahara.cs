@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 西撒哈拉（The Sahrawi Arab Democratic Republic，非洲，EH，ESH，732），阿拉伯撒哈拉民主共和国 <br />
     /// Cosmos i18n code: i18n_country_xisahala <br />
     /// Cosmos region code: 300118
     /// </summary>
-    public static class WesternSahara {
+    public static class WesternSahara
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static WesternSahara() {
-            _country = new CountryInfo {
+        static WesternSahara()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.WesternSahara,
                 CountryCode = CountryCode.EH,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "西撒哈拉",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

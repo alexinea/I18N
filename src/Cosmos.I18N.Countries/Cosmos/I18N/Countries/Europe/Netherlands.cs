@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 荷兰（The Kingdom of the Netherlands，欧洲，NL，NLD，528），荷兰王国 <br />
     /// Cosmos i18n code: i18n_country_helan <br />
     /// Cosmos region code: 200131
     /// </summary>
-    public static class Netherlands {
+    public static partial class Netherlands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Netherlands() {
-            _country = new CountryInfo {
+        static Netherlands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Netherlands,
                 CountryCode = CountryCode.NL,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "荷兰",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

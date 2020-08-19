@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 希腊（The Republic of Greece，欧洲，GR，GRC，300），希腊共和国 <br />
     /// Cosmos i18n code: i18n_country_xila <br />
     /// Cosmos region code: 200115
     /// </summary>
-    public static class Greece {
+    public static class Greece
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Greece() {
-            _country = new CountryInfo {
+        static Greece()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Greece,
                 CountryCode = CountryCode.GR,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "希腊",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

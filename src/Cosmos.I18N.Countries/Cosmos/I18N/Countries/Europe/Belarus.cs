@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 白俄罗斯（Republic of Belarus，欧洲，BY，BLR，112），白俄罗斯共和国 <br />
     /// Cosmos i18n code: i18n_country_baieluosi <br />
     /// Cosmos region code: 200104
     /// </summary>
-    public static class Belarus {
+    public static partial class Belarus
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Belarus() {
-            _country = new CountryInfo {
+        static Belarus()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Belarus,
                 CountryCode = CountryCode.BY,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "白俄罗斯",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

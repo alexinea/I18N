@@ -4,7 +4,7 @@ namespace Cosmos.I18N.Countries.Africa {
     /// Cosmos i18n code: i18n_country_saisheer <br />
     /// Cosmos region code: 300145
     /// </summary>
-    public static class Seychelles {
+    public static partial class Seychelles {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
@@ -25,6 +25,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 Continent = Continent.Africa,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

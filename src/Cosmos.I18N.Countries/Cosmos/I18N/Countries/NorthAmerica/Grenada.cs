@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 格林纳达（Grenada，北美洲，GD，GRD，308） <br />
     /// Cosmos i18n code: i18n_country_gelinnada <br />
     /// Cosmos region code: 400117
     /// </summary>
-    public static class Grenada {
+    public static partial class Grenada
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Grenada() {
-            _country = new CountryInfo {
+        static Grenada()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Grenada,
                 CountryCode = CountryCode.GD,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "格林纳达",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

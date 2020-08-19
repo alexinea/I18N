@@ -5,7 +5,7 @@ namespace Cosmos.I18N.Countries.Oceania
     /// Cosmos i18n code: i18n_country_jilibasi <br />
     /// Cosmos region code: 600105
     /// </summary>
-    public static class Kiribati
+    public static partial class Kiribati
     {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
@@ -28,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 ChineseShorterForm = "基里巴斯",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

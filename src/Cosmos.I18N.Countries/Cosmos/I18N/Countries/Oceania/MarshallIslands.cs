@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 马绍尔群岛（The Republic of Marshall Islands，大洋洲，MH，MHL，584），马绍尔群岛共和国 <br />
     /// Cosmos i18n code: i18n_country_mashaoer <br />
     /// Cosmos region code: 600106
     /// </summary>
-    public static class MarshallIslands {
+    public static partial class MarshallIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static MarshallIslands() {
-            _country = new CountryInfo {
+        static MarshallIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.MarshallIslands,
                 CountryCode = CountryCode.MH,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "马绍尔群岛",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

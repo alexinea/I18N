@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 洪都拉斯（The Republic of Honduras，南美洲，HN，HND，340），洪都拉斯共和国 <br />
     /// Cosmos i18n code: i18n_country_hongdulasi <br />
     /// Cosmos region code: 500107
     /// </summary>
-    public static class Honduras {
+    public static class Honduras
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Honduras() {
-            _country = new CountryInfo {
+        static Honduras()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Honduras,
                 CountryCode = CountryCode.HN,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "洪都拉斯",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 特克斯和凯科斯群岛（The Turks and Caicos Islands，北美洲，TC，TCA，796） <br />
     /// Cosmos i18n code: i18n_country_tekesikks <br />
     /// Cosmos region code: 400135
     /// </summary>
-    public static class TurksAndCaicosIslands {
+    public static class TurksAndCaicosIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static TurksAndCaicosIslands() {
-            _country = new CountryInfo {
+        static TurksAndCaicosIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.TurksAndCaicosIslands,
                 CountryCode = CountryCode.TC,
                 CountryType = CountryType.Country,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "特克斯和凯科斯群岛",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

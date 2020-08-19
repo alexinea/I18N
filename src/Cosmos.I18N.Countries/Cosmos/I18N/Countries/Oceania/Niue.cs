@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 纽埃（Niue，大洋洲，NU，NIU，570） <br />
     /// Cosmos i18n code: i18n_country_niuai <br />
     /// Cosmos region code: 600110
     /// </summary>
-    public static class Niue {
+    public static class Niue
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Niue() {
-            _country = new CountryInfo {
+        static Niue()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Niue,
                 CountryCode = CountryCode.NU,
                 CountryType = CountryType.Country,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseName = "纽埃",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

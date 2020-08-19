@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 关岛（The Territory of Guam，大洋洲，GU，GUM，316） <br />
     /// Cosmos i18n code: i18n_country_guandao <br />
     /// Cosmos region code: 600104
     /// </summary>
-    public static class Guam {
+    public static class Guam
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Guam() {
-            _country = new CountryInfo {
+        static Guam()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Guam,
                 CountryCode = CountryCode.GU,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseAlias = "自由天堂",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

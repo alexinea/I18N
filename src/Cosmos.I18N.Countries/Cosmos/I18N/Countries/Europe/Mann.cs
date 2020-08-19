@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 马恩岛（Isle of Man，欧洲，IM，IMN，833），英属马恩岛 <br />
     /// Cosmos i18n code: i18n_country_maendao <br />
     /// Cosmos region code: 200127
     /// </summary>
-    public static class Mann {
+    public static class Mann
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Mann() {
-            _country = new CountryInfo {
+        static Mann()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Mann,
                 CountryCode = CountryCode.IM,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "马恩岛",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

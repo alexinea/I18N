@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 比利时（The Kingdom of Belgium，欧洲，BE，BEL，056），比利时王国 <br />
     /// Cosmos i18n code: i18n_country_bilishi <br />
     /// Cosmos region code: 200105
     /// </summary>
-    public static class Belgium {
+    public static partial class Belgium
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Belgium() {
-            _country = new CountryInfo {
+        static Belgium()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Belgium,
                 CountryCode = CountryCode.BE,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "比利时",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

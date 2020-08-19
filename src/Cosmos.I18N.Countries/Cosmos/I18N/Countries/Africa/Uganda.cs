@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 乌干达（The Republic of Uganda，非洲，UG，UGA，800），乌干达共和国 <br />
     /// Cosmos i18n code: i18n_country_wuganda <br />
     /// Cosmos region code: 300154
     /// </summary>
-    public static class Uganda {
+    public static class Uganda
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Uganda() {
-            _country = new CountryInfo {
+        static Uganda()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Uganda,
                 CountryCode = CountryCode.UG,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "乌干达",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

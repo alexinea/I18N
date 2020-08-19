@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 德国（The Federal Republic of Germany，欧洲，DE，DEU，276），德意志联邦共和国 <br />
     /// Cosmos i18n code: i18n_country_deguo <br />
     /// Cosmos region code: 200002
     /// </summary>
-    public static class Germany {
+    public static partial class Germany
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Germany() {
-            _country = new CountryInfo {
+        static Germany()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Germany,
                 CountryCode = CountryCode.DE,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "德国",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

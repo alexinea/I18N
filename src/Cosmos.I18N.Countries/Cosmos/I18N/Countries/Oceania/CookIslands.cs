@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Oceania {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 库克群岛（The Cook Islands，非洲，CK，COK，184） <br />
     /// Cosmos i18n code: i18n_country_kukequndao <br />
     /// Cosmos region code: 600102
     /// </summary>
-    public static class CookIslands {
+    public static class CookIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static CookIslands() {
-            _country = new CountryInfo {
+        static CookIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.CookIslands,
                 CountryCode = CountryCode.CK,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "瑞士",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

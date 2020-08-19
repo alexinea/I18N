@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 萨尔瓦多（The Democratic Republic of Sao Tome and Principe，北美洲，SV，SLV，222），萨尔瓦多共和国 <br />
     /// Cosmos i18n code: i18n_country_saerwaduo <br />
     /// Cosmos region code: 400115
     /// </summary>
-    public static class ElSalvador {
+    public static class ElSalvador
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static ElSalvador() {
-            _country = new CountryInfo {
+        static ElSalvador()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.ElSalvador,
                 CountryCode = CountryCode.SV,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseShorterForm = "萨尔瓦多",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

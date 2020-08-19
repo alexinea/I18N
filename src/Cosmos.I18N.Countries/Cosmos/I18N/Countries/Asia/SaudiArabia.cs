@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 沙特（Kingdom of Saudi Arabia，亚洲，SA，SAU，682），沙特阿拉伯王国 <br />
     /// Cosmos i18n code: i18n_country_shate <br />
     /// Cosmos region code: 100133
     /// </summary>
-    public static class SaudiArabia {
+    public static partial class SaudiArabia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SaudiArabia() {
-            _country = new CountryInfo {
+        static SaudiArabia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SaudiArabia,
                 CountryCode = CountryCode.SA,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseAlias = "沙特阿拉伯",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

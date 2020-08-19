@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 土库曼（Turkmenistan，亚洲，TM，TKM，795），土库曼斯坦 <br />
     /// Cosmos i18n code: i18n_country_tukumansitan <br />
     /// Cosmos region code: 100139
     /// </summary>
-    public static class Turkmenistan {
+    public static partial class Turkmenistan
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Turkmenistan() {
-            _country = new CountryInfo {
+        static Turkmenistan()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Turkmenistan,
                 CountryCode = CountryCode.TM,
                 CountryType = CountryType.Country,
@@ -23,6 +27,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "土库曼",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

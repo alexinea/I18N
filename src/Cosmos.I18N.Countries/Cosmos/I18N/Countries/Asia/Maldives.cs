@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 马尔代夫（The Republic of Maldives，亚洲，MV，MDV，462），马尔代夫共和国 <br />
     /// Cosmos i18n code: i18n_country_maerdaifu <br />
     /// Cosmos region code: 100125
     /// </summary>
-    public static class Maldives {
+    public static partial class Maldives
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Maldives() {
-            _country = new CountryInfo {
+        static Maldives()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Maldives,
                 CountryCode = CountryCode.MV,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseAlias = "马尔代夫群岛",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

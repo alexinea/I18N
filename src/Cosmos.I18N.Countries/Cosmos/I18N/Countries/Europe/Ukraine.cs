@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 乌克兰（Ukraine，欧洲，UA，UKR，804） <br />
     /// Cosmos i18n code: i18n_country_wukelan <br />
     /// Cosmos region code: 200140
     /// </summary>
-    public static class Ukraine {
+    public static partial class Ukraine
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Ukraine() {
-            _country = new CountryInfo {
+        static Ukraine()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Ukraine,
                 CountryCode = CountryCode.UA,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseName = "乌克兰",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

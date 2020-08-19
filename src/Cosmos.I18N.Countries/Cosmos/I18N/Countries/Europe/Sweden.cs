@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 瑞典（The Kingdom of Sweden，欧洲，SE，SWE，752），瑞典王国 <br />
     /// Cosmos i18n code: i18n_country_ruidian <br />
     /// Cosmos region code: 200016
     /// </summary>
-    public static class Sweden {
+    public static class Sweden
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Sweden() {
-            _country = new CountryInfo {
+        static Sweden()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Sweden,
                 CountryCode = CountryCode.SE,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "瑞典",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

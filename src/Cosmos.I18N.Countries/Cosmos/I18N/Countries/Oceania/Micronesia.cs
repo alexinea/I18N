@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 密克罗尼西亚（The Federated States of Micronesia，大洋洲，FM，FSM，583） ，密克罗尼西亚联邦<br />
     /// Cosmos i18n code: i18n_country_mikeluonixiya <br />
     /// Cosmos region code: 600107
     /// </summary>
-    public static class Micronesia {
+    public static partial class Micronesia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Micronesia() {
-            _country = new CountryInfo {
+        static Micronesia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Micronesia,
                 CountryCode = CountryCode.FM,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "密联邦",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

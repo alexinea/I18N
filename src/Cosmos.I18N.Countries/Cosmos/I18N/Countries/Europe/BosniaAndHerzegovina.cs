@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 波黑（Bosnia and Herzegovina，欧洲，BA，BIH，070），波斯尼亚和黑塞哥维那 <br />
     /// Cosmos i18n code: i18n_country_bohei <br />
     /// Cosmos region code: 200106
     /// </summary>
-    public static class BosniaAndHerzegovina {
+    public static partial class BosniaAndHerzegovina
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static BosniaAndHerzegovina() {
-            _country = new CountryInfo {
+        static BosniaAndHerzegovina()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.BosniaAndHerzegovina,
                 CountryCode = CountryCode.BA,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "波黑",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

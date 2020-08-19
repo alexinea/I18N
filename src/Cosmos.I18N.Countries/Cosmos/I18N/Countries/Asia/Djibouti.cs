@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 吉布提（The Republic of Djibouti，亚洲，DJ，DJI，262），吉布提共和国 <br />
     /// Cosmos i18n code: i18n_country_jibuti <br />
     /// Cosmos region code: 100113
     /// </summary>
-    public static class Djibouti {
+    public static partial class Djibouti
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Djibouti() {
-            _country = new CountryInfo {
+        static Djibouti()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Djibouti,
                 CountryCode = CountryCode.DJ,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "吉布提",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

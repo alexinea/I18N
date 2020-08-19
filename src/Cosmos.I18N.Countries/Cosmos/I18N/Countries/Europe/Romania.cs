@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 罗马尼亚（Romania，欧洲，RO，ROU，642） <br />
     /// Cosmos i18n code: i18n_country_luomaniya <br />
     /// Cosmos region code: 200134
     /// </summary>
-    public static class Romania {
+    public static class Romania
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Romania() {
-            _country = new CountryInfo {
+        static Romania()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Romania,
                 CountryCode = CountryCode.RO,
                 CountryType = CountryType.Country,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseName = "罗马尼亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

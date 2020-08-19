@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 巴拉圭（Republic Of Paraguay，南美洲，PY，PRY，600），巴拉圭共和国 <br />
     /// Cosmos i18n code: i18n_country_balagui <br />
     /// Cosmos region code: 500109
     /// </summary>
-    public static class Paraguay {
+    public static class Paraguay
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Paraguay() {
-            _country = new CountryInfo {
+        static Paraguay()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Paraguay,
                 CountryCode = CountryCode.PY,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "巴拉圭",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 布韦岛（Bouvet Island，欧洲，BV，BVT，074） <br />
     /// Cosmos i18n code: i18n_country_buweidao <br />
     /// Cosmos region code: 200107
     /// </summary>
-    public static class BouvetIsland {
+    public static class BouvetIsland
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static BouvetIsland() {
-            _country = new CountryInfo {
+        static BouvetIsland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.BouvetIsland,
                 CountryCode = CountryCode.BV,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseName = "布韦岛",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

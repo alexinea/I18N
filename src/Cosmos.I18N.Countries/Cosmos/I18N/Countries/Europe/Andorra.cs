@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 安道尔（Andorra，欧洲，AD，AND，020），安道尔共和国 <br />
     /// Cosmos i18n code: i18n_country_andaoer <br />
     /// Cosmos region code: 200103
     /// </summary>
-    public static class Andorra {
+    public static partial class Andorra
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Andorra() {
-            _country = new CountryInfo {
+        static Andorra()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Andorra,
                 CountryCode = CountryCode.AD,
                 CountryType = CountryType.Country,
@@ -23,6 +27,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "安道尔",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

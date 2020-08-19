@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 帕劳（The Republic of Palau，大洋洲，PW，PLW，585），帕劳共和国 <br />
     /// Cosmos i18n code: i18n_country_palao <br />
     /// Cosmos region code: 600113
     /// </summary>
-    public static class Palau {
+    public static partial class Palau
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Palau() {
-            _country = new CountryInfo {
+        static Palau()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Palau,
                 CountryCode = CountryCode.PW,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "帕劳",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 马尔维纳斯群岛（Falkland Islands，南美洲，FK，FLK，238） <br />
     /// Cosmos i18n code: i18n_country_fukelan <br />
     /// Cosmos region code: 500104
     /// </summary>
-    public static class FalklandIslands {
+    public static class FalklandIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static FalklandIslands() {
-            _country = new CountryInfo {
+        static FalklandIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.FalklandIslands,
                 CountryCode = CountryCode.FK,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseAlias = "福克兰群岛",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

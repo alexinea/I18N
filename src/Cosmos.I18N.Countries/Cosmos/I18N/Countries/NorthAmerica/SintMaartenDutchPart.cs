@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 荷兰属圣马丁（Sint Maarten (Dutch part)，北美洲，SX，SXM，534） <br />
     /// Cosmos i18n code: i18n_country_shengmadingdp <br />
     /// Cosmos region code: 400131
     /// </summary>
-    public static class SintMaartenDutchPart {
+    public static class SintMaartenDutchPart
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SintMaartenDutchPart() {
-            _country = new CountryInfo {
+        static SintMaartenDutchPart()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SintMaartenDutchPart,
                 CountryCode = CountryCode.SX,
                 CountryType = CountryType.Region,
@@ -23,6 +29,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "荷兰属圣马丁",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

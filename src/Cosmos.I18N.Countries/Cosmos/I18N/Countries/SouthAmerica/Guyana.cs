@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 圭亚那（Cooperative Republic of Guyana，南美洲，GY，GUY，328），圭亚那合作共和国 <br />
     /// Cosmos i18n code: i18n_country_guiyana <br />
     /// Cosmos region code: 500106
     /// </summary>
-    public static class Guyana {
+    public static partial class Guyana
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Guyana() {
-            _country = new CountryInfo {
+        static Guyana()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Guyana,
                 CountryCode = CountryCode.GY,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "圭亚那",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

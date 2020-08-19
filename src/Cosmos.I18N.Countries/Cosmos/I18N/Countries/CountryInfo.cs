@@ -1,3 +1,5 @@
+using System;
+
 namespace Cosmos.I18N.Countries
 {
     /// <summary>
@@ -89,5 +91,10 @@ namespace Cosmos.I18N.Countries
 
         /// <inheritdoc />
         public RuntimeCountryInfo ToRuntimeModel() => RuntimeCountryInfo.Of(this);
+
+        /// <summary>
+        /// Gets region enum value factory.
+        /// </summary>
+        public Func<RegionCodeValue, RegionEnumValue> GetRegionEnumValue { get; internal set; }
     }
 }

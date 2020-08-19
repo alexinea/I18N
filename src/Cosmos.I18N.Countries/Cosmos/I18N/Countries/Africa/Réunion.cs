@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 留尼汪（Reunion Island，非洲，RE，REU，638），留尼旺岛 <br />
     /// Cosmos i18n code: i18n_country_liuniwang <br />
     /// Cosmos region code: 300147
     /// </summary>
-    public static class Réunion {
+    public static class Réunion
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Réunion() {
-            _country = new CountryInfo {
+        static Réunion()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Réunion,
                 CountryCode = CountryCode.RE,
                 CountryType = CountryType.Region,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "留尼汪",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

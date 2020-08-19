@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 印度（Republic of India，亚洲，IN，IND，356），印度共和国 <br />
     /// Cosmos i18n code: i18n_country_yindu <br />
     /// Cosmos region code: 100013
     /// </summary>
-    public static class India {
+    public static partial class India
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static India() {
-            _country = new CountryInfo {
+        static India()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.India,
                 CountryCode = CountryCode.IN,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "印度",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

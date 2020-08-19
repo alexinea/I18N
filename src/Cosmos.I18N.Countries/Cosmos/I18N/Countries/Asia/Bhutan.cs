@@ -5,7 +5,7 @@ namespace Cosmos.I18N.Countries.Asia
     /// Cosmos i18n code: i18n_country_budan <br />
     /// Cosmos region code: 100106
     /// </summary>
-    public static class Bhutan
+    public static partial class Bhutan
     {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
@@ -28,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia
                 ChineseShorterForm = "不丹",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

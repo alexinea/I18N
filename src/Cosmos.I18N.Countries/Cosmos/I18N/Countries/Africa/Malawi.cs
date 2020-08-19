@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Africa {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Africa
+{
     /// <summary>
     /// 马拉维（The Republic of Malawi，非洲，MW，MWI，454），马拉维共和国 <br />
     /// Cosmos i18n code: i18n_country_malawei <br />
     /// Cosmos region code: 300137
     /// </summary>
-    public static class Malawi {
+    public static class Malawi
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Malawi() {
-            _country = new CountryInfo {
+        static Malawi()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Malawi,
                 CountryCode = CountryCode.MW,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "马拉维",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

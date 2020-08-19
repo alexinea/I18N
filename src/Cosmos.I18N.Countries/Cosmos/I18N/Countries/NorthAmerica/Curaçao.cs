@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 库拉索（Curaçao，北美洲，CW，CUW，531） <br />
     /// Cosmos i18n code: i18n_country_kusuola <br />
     /// Cosmos region code: 400112
     /// </summary>
-    public static class Curaçao {
+    public static class Curaçao
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Curaçao() {
-            _country = new CountryInfo {
+        static Curaçao()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Curaçao,
                 CountryCode = CountryCode.CW,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "库拉索",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.SouthAmerica {
+namespace Cosmos.I18N.Countries.SouthAmerica
+{
     /// <summary>
     /// 委内瑞拉（Bolivarian Republic of Venezuela，南美洲，VE，VEN，862），委内瑞拉玻利瓦尔共和国 <br />
     /// Cosmos i18n code: i18n_country_weineiruila <br />
     /// Cosmos region code: 500013
     /// </summary>
-    public static class Venezuela {
+    public static partial class Venezuela
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Venezuela() {
-            _country = new CountryInfo {
+        static Venezuela()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Venezuela,
                 CountryCode = CountryCode.VE,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica {
                 ChineseShorterForm = "委内瑞拉",
                 Continent = Continent.SouthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

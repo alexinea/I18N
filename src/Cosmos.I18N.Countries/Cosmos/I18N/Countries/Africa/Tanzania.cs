@@ -1,3 +1,5 @@
+using Cosmos.I18N.Core;
+
 namespace Cosmos.I18N.Countries.Africa {
     /// <summary>
     /// 坦桑尼亚（The United Republic of Tanzania，非洲，TZ，TZA，834），坦桑尼亚联合共和国 <br />
@@ -24,6 +26,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 ChineseShorterForm = "坦桑尼亚",
                 Continent = Continent.Africa,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

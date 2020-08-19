@@ -1,4 +1,7 @@
-namespace Cosmos.I18N.Countries.Asia {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 澳门（Macao, SAR China，亚洲，MO，MAC，446），中华人民共和国澳门特别行政区 <br />
     /// 澳门，中华人民共和国的一部分 <br />
@@ -6,12 +9,15 @@ namespace Cosmos.I18N.Countries.Asia {
     /// Cosmos i18n code: i18n_country_aomen <br />
     /// Cosmos region code: 10000100334
     /// </summary>
-    public static class Macao {
+    public static class Macao
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Macao() {
-            _country = new CountryInfo {
+        static Macao()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Macao,
                 CountryCode = CountryCode.MO,
                 CountryType = CountryType.Region,
@@ -26,6 +32,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "澳门",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 尼泊尔（Federal Democratic Republic of Nepal，亚洲，NP，NPL，524），尼泊尔联邦民主共和国 <br />
     /// Cosmos i18n code: i18n_country_niboer <br />
     /// Cosmos region code: 100128
     /// </summary>
-    public static class Nepal {
+    public static partial class Nepal
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Nepal() {
-            _country = new CountryInfo {
+        static Nepal()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Nepal,
                 CountryCode = CountryCode.NP,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "尼泊尔",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

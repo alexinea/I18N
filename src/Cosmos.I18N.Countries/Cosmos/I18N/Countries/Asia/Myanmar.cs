@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 缅甸（The Republic of the Union of Myanmar，亚洲，MM，MMR，104），缅甸联邦共和国 <br />
     /// Cosmos i18n code: i18n_country_miandian <br />
     /// Cosmos region code: 100127
     /// </summary>
-    public static class Myanmar {
+    public static partial class Myanmar
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Myanmar() {
-            _country = new CountryInfo {
+        static Myanmar()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Myanmar,
                 CountryCode = CountryCode.MM,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "缅甸",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

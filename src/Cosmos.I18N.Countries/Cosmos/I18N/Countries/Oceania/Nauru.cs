@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Oceania {
+namespace Cosmos.I18N.Countries.Oceania
+{
     /// <summary>
     /// 瑙鲁（The Republic of Nauru，大洋洲，NR，NRU，520），瑙鲁共和国 <br />
     /// Cosmos i18n code: i18n_country_manu <br />
     /// Cosmos region code: 600108
     /// </summary>
-    public static class Nauru {
+    public static partial class Nauru
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Nauru() {
-            _country = new CountryInfo {
+        static Nauru()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Nauru,
                 CountryCode = CountryCode.NR,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Oceania {
                 ChineseShorterForm = "瑙鲁",
                 Continent = Continent.Oceania,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

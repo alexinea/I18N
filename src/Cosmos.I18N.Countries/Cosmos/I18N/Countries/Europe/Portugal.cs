@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 葡萄牙（The Portuguese Republic，欧洲，PT，PRT，620），葡萄牙共和国 <br />
     /// Cosmos i18n code: i18n_country_putapya <br />
     /// Cosmos region code: 200133
     /// </summary>
-    public static class Portugal {
+    public static class Portugal
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Portugal() {
-            _country = new CountryInfo {
+        static Portugal()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Portugal,
                 CountryCode = CountryCode.PT,
                 CountryType = CountryType.Country,
@@ -24,6 +30,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "葡萄牙",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

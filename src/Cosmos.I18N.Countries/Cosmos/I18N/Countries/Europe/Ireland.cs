@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.Europe {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 爱尔兰（Republic of Ireland，欧洲，IE，IRL，372），爱尔兰共和国 <br />
     /// Cosmos i18n code: i18n_country_aierlan <br />
     /// Cosmos region code: 200117
     /// </summary>
-    public static class Ireland {
+    public static class Ireland
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Ireland() {
-            _country = new CountryInfo {
+        static Ireland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Ireland,
                 CountryCode = CountryCode.IE,
                 CountryType = CountryType.Country,
@@ -25,6 +31,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 Continent = Continent.Europe,
                 CommonwealthOfNations = true,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

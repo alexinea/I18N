@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 菲律宾（Republic of the Philippines，亚洲，PH，PHL，6080），菲律宾共和国 <br />
     /// Cosmos i18n code: i18n_country_felvbin <br />
     /// Cosmos region code: 100131
     /// </summary>
-    public static class Philippines {
+    public static partial class Philippines
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Philippines() {
-            _country = new CountryInfo {
+        static Philippines()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Philippines,
                 CountryCode = CountryCode.PH,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "菲律宾",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,21 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+using Cosmos.I18N.Core;
+
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 开曼群岛（Cayman Islands，北美洲，KY，CYM，136） <br />
     /// Cosmos i18n code: i18n_country_kaiman <br />
     /// Cosmos region code: 400110
     /// </summary>
-    public static class CaymanIslands {
+    public static class CaymanIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static CaymanIslands() {
-            _country = new CountryInfo {
+        static CaymanIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.CaymanIslands,
                 CountryCode = CountryCode.KY,
                 CountryType = CountryType.Region,
@@ -22,6 +28,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "开曼群岛",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = RegionEnumHelper.Unknown
             };
         }
 

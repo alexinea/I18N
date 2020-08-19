@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 吉尔吉斯斯坦（The Kyrgyz Republic/Kyrgyzstan，亚洲，KG，KGZ，417），吉尔吉斯共和国 <br />
     /// Cosmos i18n code: i18n_country_jierjisi <br />
     /// Cosmos region code: 100121
     /// </summary>
-    public static class Kyrgyzstan {
+    public static partial class Kyrgyzstan
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Kyrgyzstan() {
-            _country = new CountryInfo {
+        static Kyrgyzstan()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Kyrgyzstan,
                 CountryCode = CountryCode.KG,
                 CountryType = CountryType.Country,
@@ -25,6 +29,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseAlias = "吉尔吉斯",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

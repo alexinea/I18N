@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 保加利亚（The Republic of Bulgaria，欧洲，BG，BRN，096），保加利亚共和国 <br />
     /// Cosmos i18n code: i18n_country_baojialiya <br />
     /// Cosmos region code: 200108
     /// </summary>
-    public static class Bulgaria {
+    public static partial class Bulgaria
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Bulgaria() {
-            _country = new CountryInfo {
+        static Bulgaria()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Bulgaria,
                 CountryCode = CountryCode.BG,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "保加利亚",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

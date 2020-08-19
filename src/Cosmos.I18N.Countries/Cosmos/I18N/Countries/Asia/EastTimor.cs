@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Asia {
+namespace Cosmos.I18N.Countries.Asia
+{
     /// <summary>
     /// 东帝汶（Democratic Republic of Timor-Leste，亚洲，TL，TLS，626），东帝汶民主共和国 <br />
     /// Cosmos i18n code: i18n_country_dongdiwen <br />
     /// Cosmos region code: 100114
     /// </summary>
-    public static class EastTimor {
+    public static partial class EastTimor
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static EastTimor() {
-            _country = new CountryInfo {
+        static EastTimor()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.EastTimor,
                 CountryCode = CountryCode.TL,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Asia {
                 ChineseShorterForm = "东帝汶",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 美国本土外小岛屿（United States Minor Outlying Islands，北美洲，UM，UMI，581） <br />
     /// Cosmos i18n code: i18n_country_meiguoum <br />
     /// Cosmos region code: 400136
     /// </summary>
-    public static class UnitedStatesMinorOutlyingIslands {
+    public static partial class UnitedStatesMinorOutlyingIslands
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static UnitedStatesMinorOutlyingIslands() {
-            _country = new CountryInfo {
+        static UnitedStatesMinorOutlyingIslands()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.UnitedStatesMinorOutlyingIslands,
                 CountryCode = CountryCode.UM,
                 CountryType = CountryType.Region,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "美国本土外小岛屿",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

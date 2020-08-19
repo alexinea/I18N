@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.Europe {
+namespace Cosmos.I18N.Countries.Europe
+{
     /// <summary>
     /// 芬兰（The Republic of Finland，欧洲，FI，FIN，246），芬兰共和国 <br />
     /// Cosmos i18n code: i18n_country_fenlan <br />
     /// Cosmos region code: 200113
     /// </summary>
-    public static class Finland {
+    public static partial class Finland
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static Finland() {
-            _country = new CountryInfo {
+        static Finland()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.Finland,
                 CountryCode = CountryCode.FI,
                 CountryType = CountryType.Country,
@@ -24,6 +28,7 @@ namespace Cosmos.I18N.Countries.Europe {
                 ChineseShorterForm = "芬兰",
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 

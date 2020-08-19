@@ -1,15 +1,19 @@
-namespace Cosmos.I18N.Countries.NorthAmerica {
+namespace Cosmos.I18N.Countries.NorthAmerica
+{
     /// <summary>
     /// 圣卢西亚（Republic Of Iraq，北美洲，LC，LCA，662） <br />
     /// Cosmos i18n code: i18n_country_shengluxiya <br />
     /// Cosmos region code: 400129
     /// </summary>
-    public static class SaintLucia {
+    public static partial class SaintLucia
+    {
         // ReSharper disable once InconsistentNaming
         private static readonly CountryInfo _country;
 
-        static SaintLucia() {
-            _country = new CountryInfo {
+        static SaintLucia()
+        {
+            _country = new CountryInfo
+            {
                 Country = Country.SaintLucia,
                 CountryCode = CountryCode.LC,
                 CountryType = CountryType.Country,
@@ -22,6 +26,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica {
                 ChineseName = "圣卢西亚",
                 Continent = Continent.NorthAmerica,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
+                GetRegionEnumValue = GetRegionEnumValue
             };
         }
 
