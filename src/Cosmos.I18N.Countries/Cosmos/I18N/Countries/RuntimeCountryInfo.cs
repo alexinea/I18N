@@ -47,9 +47,9 @@ namespace Cosmos.I18N.Countries
         public string RuntimeBelongsToCountry { get; internal set; }
 
         public bool RuntimeHistoricalCountry { get; internal set; }
-        
+
         public long RuntimeRegionCode { get; internal set; }
-        
+
         #endregion
 
         #region Of
@@ -113,6 +113,12 @@ namespace Cosmos.I18N.Countries
                 return CountryManager.GetCountryCode(country.Value);
             return null;
         }
+
+        #endregion
+
+        #region Get region code
+
+        public RegionCodeValue GetRegionCodeValue() => new RegionCodeValue(RuntimeRegionCode);
 
         #endregion
 

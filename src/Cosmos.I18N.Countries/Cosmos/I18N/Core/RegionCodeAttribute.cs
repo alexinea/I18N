@@ -1,4 +1,5 @@
 ﻿using System;
+using Cosmos.I18N.Countries;
 
 namespace Cosmos.I18N.Core
 {
@@ -13,6 +14,9 @@ namespace Cosmos.I18N.Core
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public long CRCode { get; set; }
+
+        // ReSharper disable once InconsistentNaming
+        public RegionCodeValue CRCodeValue => (RegionCodeValue) CRCode;
 
         /// <summary>
         /// Create a new instance of <see cref="RegionCodeAttribute"/>

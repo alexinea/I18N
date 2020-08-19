@@ -1048,7 +1048,7 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_lusenbao <br />
         /// Cosmos region code: 200124
         /// </summary>
-        [I18NIdentityCode(Europe.Luxembourg.I18N_IDENTITY_CODE)] [RegionCode(200124)]
+        [RegionCode(200124)]  [I18NIdentityCode(Europe.Luxembourg.I18N_IDENTITY_CODE)] 
         Luxembourg,
 
         /// <summary>
@@ -1302,7 +1302,7 @@ namespace Cosmos.I18N.Countries
         Niger,
 
         /// <summary>
-        /// 尼日利亚（The Republic of Madagascar，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
+        /// 尼日利亚（Federal Republic of Nigeria，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
         /// Cosmos i18n code: i18n_country_niriliya <br />
         /// Cosmos region code: 300142
         /// </summary>
@@ -2015,8 +2015,7 @@ namespace Cosmos.I18N.Countries
         /// </summary>
         [RegionCode(100142)] [I18NIdentityCode(Asia.Yemen.I18N_IDENTITY_CODE)]
         Yemen,
-
-
+        
         //TODO 即将执行合并，并从枚举中移除
         /// <summary>
         /// 南斯拉夫（Yugoslavia，欧洲，YU，YUG，38），南斯拉夫联盟共和国 <br />

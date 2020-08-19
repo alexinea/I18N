@@ -1327,7 +1327,7 @@ namespace Cosmos.I18N.Countries
         NF,
 
         /// <summary>
-        /// 尼日利亚（The Republic of Madagascar，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
+        /// 尼日利亚（Federal Republic of Nigeria，非洲，NG，NGA，566，尼日利亚联邦共和国 <br />
         /// Cosmos i18n code: i18n_country_niriliya <br />
         /// Cosmos region code: 300142
         /// </summary>
