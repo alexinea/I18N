@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cosmos.I18N.Core;
 
 namespace Cosmos.I18N.Countries
 {
@@ -74,9 +76,22 @@ namespace Cosmos.I18N.Countries
         /// <returns></returns>
         public static CountryInfo GetCountryInfo(long crcode)
         {
-            //TODO 判断是否为历史代码
+            return GetCountryInfo(new RegionCodeValue(crcode));
+        }
 
-            return WholeWorld.Data.FirstOrDefault(x => x.CRCode == crcode);
+        /// <summary>
+        /// Gets <see cref="CountryInfo"/> via Cosmos Region Code / CEP-1.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static CountryInfo GetCountryInfo(RegionCodeValue value)
+        {
+            if (value.IsHistoricalValue())
+            {
+                //TODO 判断是否为历史代码
+            }
+
+            return WholeWorld.Data.FirstOrDefault(x => x.CRCode == value);
         }
 
         /// <summary>
@@ -97,6 +112,46 @@ namespace Cosmos.I18N.Countries
         public static CountryCode GetCountryCode(Country country)
         {
             return _nameAndCodeMap[country];
+        }
+
+        /// <summary>
+        /// Gets <see cref="RegionCodeValue"/> from <see cref="CountryCode"/>.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public static RegionCodeValue GetRegionCode(CountryCode code)
+        {
+            return (RegionCodeValue) GetCountryInfo(code).CRCode;
+        }
+
+        /// <summary>
+        /// Gets <see cref="RegionCodeValue"/> from <see cref="Country"/>.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <returns></returns>
+        public static RegionCodeValue GetRegionCode(Country country)
+        {
+            return (RegionCodeValue) GetCountryInfo(country).CRCode;
+        }
+
+        /// <summary>
+        /// Gets <see cref="RegionCodeValue"/> via AlphaCode2 or AlphaCode3.
+        /// </summary>
+        /// <param name="alphaCode"></param>
+        /// <returns></returns>
+        public static RegionCodeValue GetRegionCode(string alphaCode)
+        {
+            return (RegionCodeValue) GetCountryInfo(alphaCode).CRCode;
+        }
+
+        /// <summary>
+        /// Gets <see cref="RegionEnumValue"/> via Cosmos Region Code / CEP-1.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static RegionEnumValue GetRegionEnum(RegionCodeValue value)
+        {
+            return GetCountryInfo(value).GetRegionEnumValue(value);
         }
 
         /// <summary>
