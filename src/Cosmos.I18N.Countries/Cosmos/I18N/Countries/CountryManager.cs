@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cosmos.I18N.Core;
+using Cosmos.I18N.Core.Historical;
 
 namespace Cosmos.I18N.Countries
 {
@@ -20,6 +20,8 @@ namespace Cosmos.I18N.Countries
         {
             _nameAndCodeMap = WholeWorld.Data.ToDictionary(k => k.Country, v => v.CountryCode);
             _codeAndNameMap = WholeWorld.Data.ToDictionary(k => k.CountryCode, v => v.Country);
+
+            RuntimeCountryInfoCache.FirstTimeUpdate(WholeWorld.Data);
         }
 
         /// <summary>
@@ -72,11 +74,11 @@ namespace Cosmos.I18N.Countries
         /// <summary>
         /// Gets <see cref="CountryInfo"/> via Cosmos Region Code / CEP-1.
         /// </summary>
-        /// <param name="crcode"></param>
+        /// <param name="cep1CrCode"></param>
         /// <returns></returns>
-        public static CountryInfo GetCountryInfo(long crcode)
+        public static RuntimeCountryInfo GetCountryInfo(long cep1CrCode)
         {
-            return GetCountryInfo(new RegionCodeValue(crcode));
+            return GetCountryInfo(new RegionCodeValue(cep1CrCode));
         }
 
         /// <summary>
@@ -84,14 +86,81 @@ namespace Cosmos.I18N.Countries
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static CountryInfo GetCountryInfo(RegionCodeValue value)
+        public static RuntimeCountryInfo GetCountryInfo(RegionCodeValue value)
         {
             if (value.IsHistoricalValue())
             {
-                //TODO 判断是否为历史代码
+                return RuntimeCountryInfoCache.GetOrDefault(value);
             }
 
-            return WholeWorld.Data.FirstOrDefault(x => x.CRCode == value);
+            var country = WholeWorld.Data.FirstOrDefault(x => x.Cep1CrCode == value);
+
+            return RuntimeCountryInfo.Of(country);
+        }
+
+        /// <summary>
+        /// Gets <see cref="CountryInfo"/> via <see cref="Country"/>.
+        /// </summary>
+        /// <param name="country"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static IEnumerable<RuntimeCountryInfo> GetCountryInfo(Country country, int year, int month, int day)
+        {
+            return HistoricalCountryManager.Get(country, year, month, day);
+        }
+
+        /// <summary>
+        /// Gets <see cref="CountryInfo"/> via <see cref="CountryCode"/>.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static IEnumerable<RuntimeCountryInfo> GetCountryInfo(CountryCode code, int year, int month, int day)
+        {
+            return HistoricalCountryManager.Get(code, year, month, day);
+        }
+
+        /// <summary>
+        /// Gets <see cref="CountryInfo"/> via AlphaCode2 or AlphaCode3
+        /// </summary>
+        /// <param name="alphaCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static IEnumerable<RuntimeCountryInfo> GetCountryInfo(string alphaCode, int year, int month, int day)
+        {
+            return HistoricalCountryManager.Get(alphaCode, year, month, day);
+        }
+
+        /// <summary>
+        /// Gets <see cref="CountryInfo"/> via Cosmos Region Code / CEP-1.
+        /// </summary>
+        /// <param name="cep1CrCode"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static IEnumerable<RuntimeCountryInfo> GetCountryInfo(long cep1CrCode, int year, int month, int day)
+        {
+            return HistoricalCountryManager.Get(new RegionCodeValue(cep1CrCode), year, month, day);
+        }
+
+        /// <summary>
+        /// Gets <see cref="CountryInfo"/> via Cosmos Region Code / CEP-1.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public static IEnumerable<RuntimeCountryInfo> GetCountryInfo(RegionCodeValue value, int year, int month, int day)
+        {
+            return HistoricalCountryManager.Get(value, year, month, day);
         }
 
         /// <summary>
@@ -121,7 +190,7 @@ namespace Cosmos.I18N.Countries
         /// <returns></returns>
         public static RegionCodeValue GetRegionCode(CountryCode code)
         {
-            return (RegionCodeValue) GetCountryInfo(code).CRCode;
+            return (RegionCodeValue) GetCountryInfo(code).Cep1CrCode;
         }
 
         /// <summary>
@@ -131,7 +200,7 @@ namespace Cosmos.I18N.Countries
         /// <returns></returns>
         public static RegionCodeValue GetRegionCode(Country country)
         {
-            return (RegionCodeValue) GetCountryInfo(country).CRCode;
+            return (RegionCodeValue) GetCountryInfo(country).Cep1CrCode;
         }
 
         /// <summary>
@@ -141,7 +210,7 @@ namespace Cosmos.I18N.Countries
         /// <returns></returns>
         public static RegionCodeValue GetRegionCode(string alphaCode)
         {
-            return (RegionCodeValue) GetCountryInfo(alphaCode).CRCode;
+            return (RegionCodeValue) GetCountryInfo(alphaCode).Cep1CrCode;
         }
 
         /// <summary>
@@ -151,7 +220,7 @@ namespace Cosmos.I18N.Countries
         /// <returns></returns>
         public static RegionEnumValue GetRegionEnum(RegionCodeValue value)
         {
-            return GetCountryInfo(value).GetRegionEnumValue(value);
+            return ((CountryInfo) GetCountryInfo(value))?.GetRegionEnumValue(value) ?? RegionEnumValue.Unknown;
         }
 
         /// <summary>

@@ -9,8 +9,8 @@ namespace Cosmos.I18N.Countries
     {
         #region Value
 
-        public static CountryInfo Value(long regionCode) => CountryManager.GetCountryInfo(regionCode);
-        public static CountryInfo Value(RegionCodeValue value) => CountryManager.GetCountryInfo(value);
+        public static RuntimeCountryInfo Value(long regionCode) => CountryManager.GetCountryInfo(regionCode);
+        public static RuntimeCountryInfo Value(RegionCodeValue value) => CountryManager.GetCountryInfo(value);
         public static CountryInfo Value(Country country) => CountryManager.GetCountryInfo(country);
         public static CountryInfo Value(CountryCode code) => CountryManager.GetCountryInfo(code);
         public static CountryInfo Value(string alphaCode) => CountryManager.GetCountryInfo(alphaCode);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Cosmos.I18N.Core;
 using EnumsNET;
 
@@ -10,6 +11,7 @@ namespace Cosmos.I18N.Countries
     public struct RegionEnumValue
     {
         private readonly string _pinnedValue;
+
 
         private RegionEnumValue(dynamic value, long regionCode, Func<dynamic> func, Type type, string pinnedValue)
         {
@@ -62,7 +64,9 @@ namespace Cosmos.I18N.Countries
             /// <summary>
             /// Unknown
             /// </summary>
-            [IgnoreRegion] [AliasInShort("??")] [RegionCode(0)]
+            [IgnoreRegion]
+            [AliasInShort("??")]
+            [RegionCode(0)]
             Unknown
         }
 

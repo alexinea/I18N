@@ -71,7 +71,7 @@ namespace Cosmos.I18N.Countries
         }
 
         #endregion
-        
+
         #region Get CEP-1 / CRCode
 
         /// <summary>
@@ -79,9 +79,9 @@ namespace Cosmos.I18N.Countries
         /// </summary>
         /// <param name="country"></param>
         /// <returns></returns>
-        public static long GetRegionCode(this CountryInfo country)
+        public static long GetRegionCode(this ICountryInfo country)
         {
-            return country?.CRCode ?? throw new ArgumentNullException(nameof(country));
+            return country?.Cep1CrCode ?? throw new ArgumentNullException(nameof(country));
         }
 
         /// <summary>
