@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Colombia,
                 M49Code = "170",
-                CRCode = 5_00_102,
+                Cep1CrCode = 5_00_102,
                 Alpha2Code = "CO",
                 Alpha3Code = "COL",
                 Name = "The Republic of Colombia",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Greenland,
                 M49Code = "304",
-                CRCode = 4_00_116,
+                Cep1CrCode = 4_00_116,
                 Alpha2Code = "GL",
                 Alpha3Code = "GRL",
                 Name = "Greenland",
@@ -46,7 +46,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

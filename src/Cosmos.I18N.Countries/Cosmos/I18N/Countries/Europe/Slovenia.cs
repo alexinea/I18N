@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Slovenia,
                 M49Code = "705",
-                CRCode = 2_00_138,
+                Cep1CrCode = 2_00_138,
                 Alpha2Code = "SI",
                 Alpha3Code = "SVN",
                 Name = "The Republic of Slovenia",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

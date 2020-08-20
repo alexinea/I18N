@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SouthKorea,
                 M49Code = "410",
-                CRCode = 1_00_012,
+                Cep1CrCode = 1_00_012,
                 Alpha2Code = "KR",
                 Alpha3Code = "KOR",
                 Name = "Republic Of Korea",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

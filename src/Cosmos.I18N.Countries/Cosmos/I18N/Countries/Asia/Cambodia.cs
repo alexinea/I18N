@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Cambodia,
                 M49Code = "116",
-                CRCode = 1_00_109,
+                Cep1CrCode = 1_00_109,
                 Alpha2Code = "KH",
                 Alpha3Code = "KHM",
                 Name = "The Kingdom of Cambodia",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

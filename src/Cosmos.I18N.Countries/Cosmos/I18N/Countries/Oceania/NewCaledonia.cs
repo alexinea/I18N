@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.NewCaledonia,
                 M49Code = "540",
-                CRCode = 6_00_109,
+                Cep1CrCode = 6_00_109,
                 Alpha2Code = "NC",
                 Alpha3Code = "NCL",
                 Name = "New Caledonia",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

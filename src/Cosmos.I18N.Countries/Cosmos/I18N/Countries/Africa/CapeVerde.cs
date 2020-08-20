@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CapeVerde,
                 M49Code = "132",
-                CRCode = 3_00_106,
+                Cep1CrCode = 3_00_106,
                 Alpha2Code = "CV",
                 Alpha3Code = "CPV",
                 Name = "Republic of Cape Verde",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

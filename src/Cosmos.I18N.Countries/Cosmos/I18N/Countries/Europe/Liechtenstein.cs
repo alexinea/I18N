@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Liechtenstein,
                 M49Code = "438",
-                CRCode = 2_00_122,
+                Cep1CrCode = 2_00_122,
                 Alpha2Code = "LI",
                 Alpha3Code = "LIE",
                 Name = "Principality of Liechtenstein",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

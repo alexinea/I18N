@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "826",
-                CRCode = 2_00_005,
+                Cep1CrCode = 2_00_005,
                 Alpha2Code = "GB",
                 Alpha3Code = "GBR",
                 Name = "United Kingdom of Great Britain and Northern Ireland",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

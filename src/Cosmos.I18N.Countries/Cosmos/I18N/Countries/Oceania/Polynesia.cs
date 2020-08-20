@@ -20,7 +20,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "258",
-                CRCode = 6_00_119,
+                Cep1CrCode = 6_00_119,
                 Alpha2Code = "PF",
                 Alpha3Code = "PYF",
                 Name = "French Polynesia",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

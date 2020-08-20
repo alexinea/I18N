@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SriLanka,
                 M49Code = "144",
-                CRCode = 1_00_135,
+                Cep1CrCode = 1_00_135,
                 Alpha2Code = "LK",
                 Alpha3Code = "LKA",
                 Name = "The Democratic Socialist Republic of Sri Lanka",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

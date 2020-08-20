@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Ghana,
                 M49Code = "288",
-                CRCode = 3_00_127,
+                Cep1CrCode = 3_00_127,
                 Alpha2Code = "GH",
                 Alpha3Code = "GHA",
                 Name = "The Republic of Ghana",
@@ -44,7 +44,7 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

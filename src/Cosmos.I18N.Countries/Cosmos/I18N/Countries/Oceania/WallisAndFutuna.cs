@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "876",
-                CRCode = 6_00_116,
+                Cep1CrCode = 6_00_116,
                 Alpha2Code = "WF",
                 Alpha3Code = "WLF",
                 Name = "Wallis and Futuna Islands",
@@ -46,7 +46,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

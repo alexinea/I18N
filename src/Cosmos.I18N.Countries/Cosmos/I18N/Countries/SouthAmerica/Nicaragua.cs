@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Nicaragua,
                 M49Code = "558",
-                CRCode = 5_00_108,
+                Cep1CrCode = 5_00_108,
                 Alpha2Code = "NI",
                 Alpha3Code = "NIC",
                 Name = "The Republic of Nicaragua",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

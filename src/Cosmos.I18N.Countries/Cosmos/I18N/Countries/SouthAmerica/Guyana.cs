@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Guyana,
                 M49Code = "328",
-                CRCode = 5_00_106,
+                Cep1CrCode = 5_00_106,
                 Alpha2Code = "GY",
                 Alpha3Code = "GUY",
                 Name = "Cooperative Republic of Guyana",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

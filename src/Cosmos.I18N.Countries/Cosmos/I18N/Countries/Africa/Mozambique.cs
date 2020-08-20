@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Mozambique,
                 M49Code = "508",
-                CRCode = 3_00_140,
+                Cep1CrCode = 3_00_140,
                 Alpha2Code = "MZ",
                 Alpha3Code = "MOZ",
                 Name = "The Republic of Mozambique",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

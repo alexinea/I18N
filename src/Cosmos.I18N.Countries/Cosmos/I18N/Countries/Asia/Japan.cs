@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Japan,
                 M49Code = "302",
-                CRCode = 1_00_002,
+                Cep1CrCode = 1_00_002,
                 Alpha2Code = "JP",
                 Alpha3Code = "JPN",
                 Name = "Japan",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

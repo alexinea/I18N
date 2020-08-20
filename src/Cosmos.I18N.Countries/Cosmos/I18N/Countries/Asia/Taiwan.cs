@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.China,
                 M49Code = "158",
-                CRCode = 1_00_001_0032,
+                Cep1CrCode = 1_00_001_0032,
                 Alpha2Code = "TW",
                 Alpha3Code = "TWN",
                 Name = "Taiwan, China",
@@ -52,7 +52,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

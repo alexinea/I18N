@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Maldives,
                 M49Code = "462",
-                CRCode = 1_00_125,
+                Cep1CrCode = 1_00_125,
                 Alpha2Code = "MV",
                 Alpha3Code = "MDV",
                 Name = "The Republic of Maldives",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

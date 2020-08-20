@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "254",
-                CRCode = 5_00_105,
+                Cep1CrCode = 5_00_105,
                 Alpha2Code = "GF",
                 Alpha3Code = "GUF",
                 Name = "Guyane Francaise",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

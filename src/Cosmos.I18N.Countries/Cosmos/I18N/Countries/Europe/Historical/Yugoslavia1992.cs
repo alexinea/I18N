@@ -23,7 +23,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Yugoslavia1992,
                 M49Code = "038",
-                CRCode = 2_20_106,
+                Cep1CrCode = 2_20_106,
                 Alpha2Code = "YU",
                 Alpha3Code = "YUG",
                 Name = "The Federal Republic of Yugoslavia",
@@ -34,7 +34,7 @@ namespace Cosmos.I18N.Countries.Europe
                 Continent = Continent.Europe,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
                 GetRegionEnumValue = RegionEnumHelper.Unknown,
-                HistoricalCountry = true,
+                IsHistorical = true,
             };
         }
 
@@ -54,7 +54,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

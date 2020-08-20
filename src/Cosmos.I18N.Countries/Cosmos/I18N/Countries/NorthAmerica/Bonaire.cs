@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Netherlands,
                 M49Code = "535",
-                CRCode = 4_00_109,
+                Cep1CrCode = 4_00_109,
                 Alpha2Code = "BQ",
                 Alpha3Code = "BES",
                 Name = "Bonaire, Sint Eustatius and Saba",
@@ -46,7 +46,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

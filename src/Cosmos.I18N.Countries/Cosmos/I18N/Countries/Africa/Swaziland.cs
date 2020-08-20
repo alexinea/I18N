@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Swaziland,
                 M49Code = "748",
-                CRCode = 3_00_155,
+                Cep1CrCode = 3_00_155,
                 Alpha2Code = "SZ",
                 Alpha3Code = "SWZ",
                 Name = "The Kingdom of Swaziland",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

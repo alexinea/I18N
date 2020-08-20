@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Gabon,
                 M49Code = "266",
-                CRCode = 3_00_126,
+                Cep1CrCode = 3_00_126,
                 Alpha2Code = "GA",
                 Alpha3Code = "GAB",
                 Name = "The Gabonese Republic",
@@ -44,7 +44,7 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Iraq,
                 M49Code = "368",
-                CRCode = 1_00_117,
+                Cep1CrCode = 1_00_117,
                 Alpha2Code = "IQ",
                 Alpha3Code = "IRQ",
                 Name = "Republic Of Iraq",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

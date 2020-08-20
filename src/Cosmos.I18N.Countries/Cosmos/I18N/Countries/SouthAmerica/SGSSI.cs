@@ -22,7 +22,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "239",
-                CRCode = 5_00_111,
+                Cep1CrCode = 5_00_111,
                 Alpha2Code = "GS",
                 Alpha3Code = "SGS",
                 Name = "South Georgia and The South Sandwich Islands",
@@ -52,7 +52,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

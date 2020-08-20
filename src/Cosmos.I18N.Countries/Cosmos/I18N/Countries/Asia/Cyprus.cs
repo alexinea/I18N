@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Cyprus,
                 M49Code = "196",
-                CRCode = 1_00_112,
+                Cep1CrCode = 1_00_112,
                 Alpha2Code = "CY",
                 Alpha3Code = "CYP",
                 Name = "The Republic of Cyprus",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -22,7 +22,7 @@ namespace Cosmos.I18N.Countries.Antarctica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Antarctica,
                 M49Code = "010",
-                CRCode = 7_00_010,
+                Cep1CrCode = 7_00_010,
                 Alpha2Code = "AQ",
                 Alpha3Code = "ATA",
                 Name = "Antarctica",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Antarctica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

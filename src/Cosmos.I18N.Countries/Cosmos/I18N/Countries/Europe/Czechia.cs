@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Czechia,
                 M49Code = "203",
-                CRCode = 2_00_012,
+                Cep1CrCode = 2_00_012,
                 Alpha2Code = "CZ",
                 Alpha3Code = "CZE",
                 Name = "The Czech Republic",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

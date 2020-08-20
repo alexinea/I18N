@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Grenada,
                 M49Code = "308",
-                CRCode = 4_00_117,
+                Cep1CrCode = 4_00_117,
                 Alpha2Code = "GD",
                 Alpha3Code = "GRD",
                 Name = "Grenada",
@@ -46,7 +46,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

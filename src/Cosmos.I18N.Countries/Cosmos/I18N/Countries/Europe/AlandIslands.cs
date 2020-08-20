@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Finland,
                 M49Code = "248",
-                CRCode = 2_00_101,
+                Cep1CrCode = 2_00_101,
                 Alpha2Code = "AX",
                 Alpha3Code = "ALA",
                 Name = "Aland Island",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

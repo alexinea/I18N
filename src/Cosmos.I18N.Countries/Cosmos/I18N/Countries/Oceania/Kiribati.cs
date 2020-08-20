@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Kiribati,
                 M49Code = "296",
-                CRCode = 6_00_105,
+                Cep1CrCode = 6_00_105,
                 Alpha2Code = "KI",
                 Alpha3Code = "KIR",
                 Name = "The Republic of Kiribati",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Andorra,
                 M49Code = "020",
-                CRCode = 2_00_103,
+                Cep1CrCode = 2_00_103,
                 Alpha2Code = "AD",
                 Alpha3Code = "AND",
                 Name = "Andorra",
@@ -47,7 +47,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

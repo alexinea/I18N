@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Cuba,
                 M49Code = "192",
-                CRCode = 4_00_101,
+                Cep1CrCode = 4_00_101,
                 Alpha2Code = "CU",
                 Alpha3Code = "CUB",
                 Name = "The Republic of Cuba",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedStates,
                 M49Code = "581",
-                CRCode = 4_00_136,
+                Cep1CrCode = 4_00_136,
                 Alpha2Code = "UM",
                 Alpha3Code = "UMI",
                 Name = "United States Minor Outlying Islands",
@@ -47,7 +47,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

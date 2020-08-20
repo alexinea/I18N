@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Ireland,
                 M49Code = "372",
-                CRCode = 2_00_117,
+                Cep1CrCode = 2_00_117,
                 Alpha2Code = "IE",
                 Alpha3Code = "IRL",
                 Name = "Republic of Ireland",
@@ -51,7 +51,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Samoa,
                 M49Code = "882",
-                CRCode = 6_00_118,
+                Cep1CrCode = 6_00_118,
                 Alpha2Code = "WS",
                 Alpha3Code = "WSM",
                 Name = "The Independent State of Samoa",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

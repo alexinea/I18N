@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.TrinidadAndTobago,
                 M49Code = "780",
-                CRCode = 4_00_134,
+                Cep1CrCode = 4_00_134,
                 Alpha2Code = "TT",
                 Alpha3Code = "TTO",
                 Name = "Republic of Trinidad and Tobago",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

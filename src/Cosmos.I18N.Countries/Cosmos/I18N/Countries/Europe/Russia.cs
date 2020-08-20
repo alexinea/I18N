@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Russia,
                 M49Code = "643",
-                CRCode = 2_00_004,
+                Cep1CrCode = 2_00_004,
                 Alpha2Code = "RU",
                 Alpha3Code = "RUS",
                 Name = "Russian Federation",
@@ -52,7 +52,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

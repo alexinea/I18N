@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Paraguay,
                 M49Code = "600",
-                CRCode = 5_00_109,
+                Cep1CrCode = 5_00_109,
                 Alpha2Code = "PY",
                 Alpha3Code = "PRY",
                 Name = "Republic of Paraguay",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

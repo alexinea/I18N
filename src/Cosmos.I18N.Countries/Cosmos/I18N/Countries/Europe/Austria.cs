@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Austria,
                 M49Code = "040",
-                CRCode = 2_00_011,
+                Cep1CrCode = 2_00_011,
                 Alpha2Code = "AT",
                 Alpha3Code = "AUT",
                 Name = "The Republic of Austria",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

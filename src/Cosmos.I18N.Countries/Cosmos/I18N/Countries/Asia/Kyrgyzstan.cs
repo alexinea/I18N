@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Kyrgyzstan,
                 M49Code = "417",
-                CRCode = 1_00_121,
+                Cep1CrCode = 1_00_121,
                 Alpha2Code = "KG",
                 Alpha3Code = "KGZ",
                 Name = "The Kyrgyz Republic",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Venezuela,
                 M49Code = "862",
-                CRCode = 5_00_013,
+                Cep1CrCode = 5_00_013,
                 Alpha2Code = "VE",
                 Alpha3Code = "VEN",
                 Name = "Bolivarian Republic of Venezuela",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

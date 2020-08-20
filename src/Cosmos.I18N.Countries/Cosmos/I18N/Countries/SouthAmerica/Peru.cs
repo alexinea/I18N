@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Peru,
                 M49Code = "604",
-                CRCode = 5_00_110,
+                Cep1CrCode = 5_00_110,
                 Alpha2Code = "PE",
                 Alpha3Code = "PER",
                 Name = "The Republic of Peru",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

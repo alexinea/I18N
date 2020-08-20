@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Iceland,
                 M49Code = "352",
-                CRCode = 2_00_118,
+                Cep1CrCode = 2_00_118,
                 Alpha2Code = "IS",
                 Alpha3Code = "ISL",
                 Name = "The Republic of Iceland",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

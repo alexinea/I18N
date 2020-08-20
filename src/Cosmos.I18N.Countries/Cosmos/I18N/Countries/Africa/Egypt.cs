@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Egypt,
                 M49Code = "818",
-                CRCode = 3_00_011,
+                Cep1CrCode = 3_00_011,
                 Alpha2Code = "EG",
                 Alpha3Code = "EGY",
                 Name = "The Arab Republic of Egypt",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

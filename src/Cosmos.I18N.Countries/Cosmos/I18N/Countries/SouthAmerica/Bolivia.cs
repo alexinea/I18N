@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Bolivia,
                 M49Code = "068",
-                CRCode = 5_00_101,
+                Cep1CrCode = 5_00_101,
                 Alpha2Code = "BO",
                 Alpha3Code = "BOL",
                 Name = "Plurinational State of Bolivia",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

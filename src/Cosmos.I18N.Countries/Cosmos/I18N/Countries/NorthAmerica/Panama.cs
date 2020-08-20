@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Panama,
                 M49Code = "591",
-                CRCode = 4_00_125,
+                Cep1CrCode = 4_00_125,
                 Alpha2Code = "PA",
                 Alpha3Code = "PAN",
                 Name = "The Republic of Panama",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

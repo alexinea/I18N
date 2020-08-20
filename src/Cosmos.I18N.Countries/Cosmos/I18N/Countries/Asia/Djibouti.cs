@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Djibouti,
                 M49Code = "262",
-                CRCode = 1_00_113,
+                Cep1CrCode = 1_00_113,
                 Alpha2Code = "DJ",
                 Alpha3Code = "DJI",
                 Name = "The Republic of Djibouti",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Norway,
                 M49Code = "578",
-                CRCode = 2_00_132,
+                Cep1CrCode = 2_00_132,
                 Alpha2Code = "NO",
                 Alpha3Code = "NOR",
                 Name = "The Kingdom of Norway",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

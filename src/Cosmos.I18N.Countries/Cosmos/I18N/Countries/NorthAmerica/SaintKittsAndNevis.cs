@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SaintKittsAndNevis,
                 M49Code = "659",
-                CRCode = 4_00_128,
+                Cep1CrCode = 4_00_128,
                 Alpha2Code = "KN",
                 Alpha3Code = "KNA",
                 Name = "The Federation of Saint Kitts and Nevis",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Poland,
                 M49Code = "616",
-                CRCode = 2_00_014,
+                Cep1CrCode = 2_00_014,
                 Alpha2Code = "PL",
                 Alpha3Code = "POL",
                 Name = "The Republic Of Poland",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

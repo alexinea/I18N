@@ -35,7 +35,7 @@ namespace Cosmos.I18N.Countries
 
         /// <inheritdoc />
         // ReSharper disable once InconsistentNaming
-        public long CRCode { get; internal set; }
+        public long Cep1CrCode { get; internal set; }
 
         /// <inheritdoc />
         public string Alpha2Code { get; internal set; }
@@ -84,7 +84,7 @@ namespace Cosmos.I18N.Countries
         public bool CommonwealthOfNations { get; internal set; }
 
         /// <inheritdoc />
-        public bool HistoricalCountry { get; internal set; } = false;
+        public bool IsHistorical { get; internal set; } = false;
 
         // /// <inheritdoc />
         // public HistoricalMetadata HistoricalMetadata { get; internal set; }

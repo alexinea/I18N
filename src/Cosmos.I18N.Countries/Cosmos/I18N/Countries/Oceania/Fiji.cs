@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Fiji,
                 M49Code = "242",
-                CRCode = 6_00_103,
+                Cep1CrCode = 6_00_103,
                 Alpha2Code = "FJ",
                 Alpha3Code = "FJI",
                 Name = "The Republic of Fiji",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.BurkinaFaso,
                 M49Code = "854",
-                CRCode = 3_00_105,
+                Cep1CrCode = 3_00_105,
                 Alpha2Code = "BF",
                 Alpha3Code = "BFA",
                 Name = "Burkina Faso",
@@ -47,7 +47,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

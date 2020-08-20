@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "654",
-                CRCode = 3_00_121,
+                Cep1CrCode = 3_00_121,
                 Alpha2Code = "SH",
                 Alpha3Code = "SHN",
                 Name = "Saint Helena, Ascension and Tristan da Cunha",
@@ -43,7 +43,7 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

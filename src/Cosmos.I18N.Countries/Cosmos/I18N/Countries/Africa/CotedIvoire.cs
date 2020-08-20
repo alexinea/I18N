@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CotedIvoire,
                 M49Code = "384",
-                CRCode = 3_00_114,
+                Cep1CrCode = 3_00_114,
                 Alpha2Code = "CI",
                 Alpha3Code = "CIV",
                 Name = "The Republic of Côte d'Ivoire",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

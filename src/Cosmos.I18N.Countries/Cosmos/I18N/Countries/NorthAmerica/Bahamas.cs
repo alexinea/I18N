@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Bahamas,
                 M49Code = "044",
-                CRCode = 4_00_105,
+                Cep1CrCode = 4_00_105,
                 Alpha2Code = "BS",
                 Alpha3Code = "BHS",
                 Name = "Commonwealth of the Bahamas",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

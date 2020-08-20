@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Macedonia,
                 M49Code = "807",
-                CRCode = 2_00_125,
+                Cep1CrCode = 2_00_125,
                 Alpha2Code = "MK",
                 Alpha3Code = "MKD",
                 Name = "The Republic of North Macedonia",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

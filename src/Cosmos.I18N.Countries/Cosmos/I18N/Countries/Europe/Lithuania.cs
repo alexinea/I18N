@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Lithuania,
                 M49Code = "440",
-                CRCode = 2_00_123,
+                Cep1CrCode = 2_00_123,
                 Alpha2Code = "LT",
                 Alpha3Code = "LTU",
                 Name = "The Republic of Lithuania",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

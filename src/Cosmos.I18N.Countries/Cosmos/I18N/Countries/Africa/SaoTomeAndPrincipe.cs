@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SaoTomeAndPrincipe,
                 M49Code = "678",
-                CRCode = 3_00_148,
+                Cep1CrCode = 3_00_148,
                 Alpha2Code = "ST",
                 Alpha3Code = "STP",
                 Name = "The Democratic Republic of Sao Tome and Principe",
@@ -44,7 +44,7 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

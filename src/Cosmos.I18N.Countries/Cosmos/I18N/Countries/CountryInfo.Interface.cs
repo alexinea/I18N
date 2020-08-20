@@ -1,8 +1,12 @@
-namespace Cosmos.I18N.Countries {
+using System;
+
+namespace Cosmos.I18N.Countries
+{
     /// <summary>
     /// Interface for country info
     /// </summary>
-    public interface ICountryInfo {
+    public interface ICountryInfo
+    {
         /// <summary>
         /// Country type
         /// </summary>
@@ -15,12 +19,12 @@ namespace Cosmos.I18N.Countries {
         // ReSharper disable once InconsistentNaming
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         string M49Code { get; }
-        
+
         /// <summary>
         /// Cosmos Regions Code
         /// </summary>
         // ReSharper disable once InconsistentNaming
-        long CRCode { get; }
+        long Cep1CrCode { get; }
 
         /// <summary>
         /// Alpha2 code / ISO 3166-1 alpha-2
@@ -95,17 +99,17 @@ namespace Cosmos.I18N.Countries {
         /// <summary>
         /// Historical country
         /// </summary>
-        bool HistoricalCountry { get; }
-
-        // /// <summary>
-        // /// Historical metadata
-        // /// </summary>
-        // HistoricalMetadata HistoricalMetadata { get; }
+        bool IsHistorical { get; }
 
         /// <summary>
         /// Convert to runtime country info.
         /// </summary>
         /// <returns></returns>
         RuntimeCountryInfo ToRuntimeModel();
+
+        /// <summary>
+        /// Gets region enum value factory.
+        /// </summary>
+        Func<RegionCodeValue, RegionEnumValue> GetRegionEnumValue { get; }
     }
 }

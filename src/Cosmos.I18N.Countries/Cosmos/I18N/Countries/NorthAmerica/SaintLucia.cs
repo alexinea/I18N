@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SaintLucia,
                 M49Code = "662",
-                CRCode = 4_00_129,
+                Cep1CrCode = 4_00_129,
                 Alpha2Code = "LC",
                 Alpha3Code = "LCA",
                 Name = "Saint Lucia",
@@ -46,7 +46,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

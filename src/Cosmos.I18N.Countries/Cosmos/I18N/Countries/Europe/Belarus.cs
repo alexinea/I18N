@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Belarus,
                 M49Code = "112",
-                CRCode = 2_00_104,
+                Cep1CrCode = 2_00_104,
                 Alpha2Code = "BY",
                 Alpha3Code = "BLR",
                 Name = "Republic of Belarus",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

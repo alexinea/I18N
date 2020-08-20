@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Denmark,
                 M49Code = "234",
-                CRCode = 2_00_112,
+                Cep1CrCode = 2_00_112,
                 Alpha2Code = "FO",
                 Alpha3Code = "FRO",
                 Name = "Faroe Islands",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

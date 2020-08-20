@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Dominican,
                 M49Code = "214",
-                CRCode = 4_00_114,
+                Cep1CrCode = 4_00_114,
                 Alpha2Code = "DO",
                 Alpha3Code = "DOM",
                 Name = "The Dominican Republic",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

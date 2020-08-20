@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "638",
-                CRCode = 3_00_147,
+                Cep1CrCode = 3_00_147,
                 Alpha2Code = "RE",
                 Alpha3Code = "REU",
                 Name = "Reunion Island",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

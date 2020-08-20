@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Argentina,
                 M49Code = "032",
-                CRCode = 5_00_011,
+                Cep1CrCode = 5_00_011,
                 Alpha2Code = "AR",
                 Alpha3Code = "ARG",
                 Name = "The Republic of Argentina",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

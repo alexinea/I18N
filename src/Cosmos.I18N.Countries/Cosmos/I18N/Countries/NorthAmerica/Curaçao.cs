@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Netherlands,
                 M49Code = "531",
-                CRCode = 4_00_112,
+                Cep1CrCode = 4_00_112,
                 Alpha2Code = "CW",
                 Alpha3Code = "CUW",
                 Name = "Curaçao",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

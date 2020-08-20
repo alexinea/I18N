@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.France,
                 M49Code = "250",
-                CRCode = 2_00_001,
+                Cep1CrCode = 2_00_001,
                 Alpha2Code = "FR",
                 Alpha3Code = "FRA",
                 Name = "French Republic",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

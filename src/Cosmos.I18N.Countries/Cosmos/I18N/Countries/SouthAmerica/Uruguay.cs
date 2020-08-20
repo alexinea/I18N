@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Uruguay,
                 M49Code = "858",
-                CRCode = 5_00_112,
+                Cep1CrCode = 5_00_112,
                 Alpha2Code = "UY",
                 Alpha3Code = "URY",
                 Name = "The Oriental Republic of Uruguay",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

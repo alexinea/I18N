@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.France,
                 M49Code = "652",
-                CRCode = 4_00_127,
+                Cep1CrCode = 4_00_127,
                 Alpha2Code = "BL",
                 Alpha3Code = "BLM",
                 Name = "Collectivitéde Saint-Barthélemy",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

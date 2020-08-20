@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Turkey,
                 M49Code = "792",
-                CRCode = 1_00_017,
+                Cep1CrCode = 1_00_017,
                 Alpha2Code = "TR",
                 Alpha3Code = "TUR",
                 Name = "The Republic of Turkey",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

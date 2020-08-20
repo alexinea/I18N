@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "086",
-                CRCode = 1_00_107,
+                Cep1CrCode = 1_00_107,
                 Alpha2Code = "IO",
                 Alpha3Code = "IOT",
                 Name = "British Indian Ocean Territory",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

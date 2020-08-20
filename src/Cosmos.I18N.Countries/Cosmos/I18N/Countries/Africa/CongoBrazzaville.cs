@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CongoBrazzaville,
                 M49Code = "178",
-                CRCode = 3_00_112,
+                Cep1CrCode = 3_00_112,
                 Alpha2Code = "CG",
                 Alpha3Code = "COG",
                 Name = "The Republic of Congo",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

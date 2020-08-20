@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Norway,
                 M49Code = "744",
-                CRCode = 2_00_139,
+                Cep1CrCode = 2_00_139,
                 Alpha2Code = "SJ",
                 Alpha3Code = "SJM",
                 Name = "The Svalbard archipelago",
@@ -51,7 +51,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Europe
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Ukraine,
                 M49Code = "804",
-                CRCode = 2_00_140,
+                Cep1CrCode = 2_00_140,
                 Alpha2Code = "UA",
                 Alpha3Code = "UKR",
                 Name = "Ukraine",
@@ -46,7 +46,7 @@ namespace Cosmos.I18N.Countries.Europe
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

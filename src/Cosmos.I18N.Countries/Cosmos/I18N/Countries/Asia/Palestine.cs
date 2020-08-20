@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryCode = CountryCode.PS,
                 BelongsToCountry = Country.Palestine,
                 M49Code = "275",
-                CRCode = 1_00_130,
+                Cep1CrCode = 1_00_130,
                 Alpha2Code = "PS",
                 Alpha3Code = "PSE",
                 Name = "The State of Palestine",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

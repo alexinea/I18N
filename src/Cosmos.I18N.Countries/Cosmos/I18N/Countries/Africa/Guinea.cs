@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.Africa {
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Guinea,
                 M49Code = "324",
-                CRCode = 3_00_129,
+                Cep1CrCode = 3_00_129,
                 Alpha2Code = "GN",
                 Alpha3Code = "GIN",
                 Name = "The Republic of Guinea",
@@ -44,7 +44,7 @@ namespace Cosmos.I18N.Countries.Africa {
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

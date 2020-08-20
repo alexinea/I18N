@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Rwanda,
                 M49Code = "646",
-                CRCode = 3_00_144,
+                Cep1CrCode = 3_00_144,
                 Alpha2Code = "RW",
                 Alpha3Code = "RWA",
                 Name = "The Republic of Rwanda",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

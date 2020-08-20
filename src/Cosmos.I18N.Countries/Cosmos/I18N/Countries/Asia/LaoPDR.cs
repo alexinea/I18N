@@ -20,7 +20,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.LaoPDR,
                 M49Code = "418",
-                CRCode = 1_00_122,
+                Cep1CrCode = 1_00_122,
                 Alpha2Code = "LA",
                 Alpha3Code = "LAO",
                 Name = "Lao People's Democratic Republic",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

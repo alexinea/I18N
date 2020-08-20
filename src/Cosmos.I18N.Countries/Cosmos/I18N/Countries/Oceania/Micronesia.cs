@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Micronesia,
                 M49Code = "583",
-                CRCode = 6_00_107,
+                Cep1CrCode = 6_00_107,
                 Alpha2Code = "FM",
                 Alpha3Code = "FSM",
                 Name = "The Federated States of Micronesia",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.SaudiArabia,
                 M49Code = "682",
-                CRCode = 1_00_133,
+                Cep1CrCode = 1_00_133,
                 Alpha2Code = "SA",
                 Alpha3Code = "SAU",
                 Name = "Kingdom of Saudi Arabia",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

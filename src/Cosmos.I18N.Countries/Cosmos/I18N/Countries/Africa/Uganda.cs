@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Uganda,
                 M49Code = "800",
-                CRCode = 3_00_154,
+                Cep1CrCode = 3_00_154,
                 Alpha2Code = "UG",
                 Alpha3Code = "UGA",
                 Name = "The Republic of Uganda",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

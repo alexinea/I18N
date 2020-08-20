@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Armenia,
                 M49Code = "051",
-                CRCode = 1_00_102,
+                Cep1CrCode = 1_00_102,
                 Alpha2Code = "AM",
                 Alpha3Code = "ARM",
                 Name = "The Republic of Armenia",
@@ -47,7 +47,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

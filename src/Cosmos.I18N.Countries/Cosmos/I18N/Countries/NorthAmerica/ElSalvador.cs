@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.ElSalvador,
                 M49Code = "222",
-                CRCode = 4_00_115,
+                Cep1CrCode = 4_00_115,
                 Alpha2Code = "SV",
                 Alpha3Code = "SLV",
                 Name = "The Democratic Republic of Sao Tome and Principe",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

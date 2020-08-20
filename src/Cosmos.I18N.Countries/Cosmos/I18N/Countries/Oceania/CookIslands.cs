@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.CookIslands,
                 M49Code = "184",
-                CRCode = 6_00_102,
+                Cep1CrCode = 6_00_102,
                 Alpha2Code = "CK",
                 Alpha3Code = "COK",
                 Name = "The Cook Islands",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

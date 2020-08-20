@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Brazil,
                 M49Code = "076",
-                CRCode = 5_00_001,
+                Cep1CrCode = 5_00_001,
                 Alpha2Code = "BR",
                 Alpha3Code = "BRA",
                 Name = "The Federative Republic of Brazil",
@@ -47,7 +47,7 @@ namespace Cosmos.I18N.Countries.SouthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

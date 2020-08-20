@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Asia
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.Australia,
                 M49Code = "162",
-                CRCode = 1_00_110,
+                Cep1CrCode = 1_00_110,
                 Alpha2Code = "CX",
                 Alpha3Code = "CXR",
                 Name = "Christmas Island",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Asia
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

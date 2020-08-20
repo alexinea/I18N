@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Namibia,
                 M49Code = "516",
-                CRCode = 3_00_141,
+                Cep1CrCode = 3_00_141,
                 Alpha2Code = "NA",
                 Alpha3Code = "NAM",
                 Name = "The Republic of Namibia",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

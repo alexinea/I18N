@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.Oceania
                 CountryType = CountryType.Region,
                 BelongsToCountry = Country.UnitedKingdom,
                 M49Code = "612",
-                CRCode = 6_00_117,
+                Cep1CrCode = 6_00_117,
                 Alpha2Code = "PN",
                 Alpha3Code = "PCN",
                 Name = "Pitcairn Islands",
@@ -51,7 +51,7 @@ namespace Cosmos.I18N.Countries.Oceania
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

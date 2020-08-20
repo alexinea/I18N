@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Algeria,
                 M49Code = "012",
-                CRCode = 3_00_101,
+                Cep1CrCode = 3_00_101,
                 Alpha2Code = "DZ",
                 Alpha3Code = "DZA",
                 Name = "People's Democratic Republic of Algeria",
@@ -49,7 +49,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -21,7 +21,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Haiti,
                 M49Code = "332",
-                CRCode = 4_00_120,
+                Cep1CrCode = 4_00_120,
                 Alpha2Code = "HT",
                 Alpha3Code = "HTI",
                 Name = "The Republic of Haiti",
@@ -50,7 +50,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)

@@ -19,7 +19,7 @@ namespace Cosmos.I18N.Countries.Africa
                 CountryType = CountryType.Country,
                 BelongsToCountry = Country.Cameroun,
                 M49Code = "120",
-                CRCode = 3_00_108,
+                Cep1CrCode = 3_00_108,
                 Alpha2Code = "CM",
                 Alpha3Code = "CMR",
                 Name = "Republic of Cameroon",
@@ -48,7 +48,7 @@ namespace Cosmos.I18N.Countries.Africa
         /// <summary>
         /// Get Cosmos Region Code (CEP-1/CRCode)
         /// </summary>
-        public static long CosmosRegionCode => _country.CRCode;
+        public static long CosmosRegionCode => _country.Cep1CrCode;
 
         /// <summary>
         /// Get Cosmos Region Identity Code (CEP-1/IICode)
