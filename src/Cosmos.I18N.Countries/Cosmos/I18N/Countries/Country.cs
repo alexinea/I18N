@@ -13,7 +13,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_andaoer <br />
         /// Cosmos region code: 200103
         /// </summary>
-        [RegionCode(200103)] [I18NIdentityCode(Europe.Andorra.I18N_IDENTITY_CODE)]
+        [RegionCode(200103)]
+        [I18NIdentityCode(Europe.Andorra.I18N_IDENTITY_CODE)]
         Andorra,
 
         /// <summary>
@@ -22,7 +23,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_alianqiu <br />
         /// Cosmos region code: 100140
         /// </summary>
-        [RegionCode(100140)] [I18NIdentityCode(Asia.UnitedArabEmirates.I18N_IDENTITY_CODE)]
+        [RegionCode(100140)]
+        [I18NIdentityCode(Asia.UnitedArabEmirates.I18N_IDENTITY_CODE)]
         UnitedArabEmirates,
 
         /// <summary>
@@ -30,7 +32,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_afuhan <br />
         /// Cosmos region code: 100101
         /// </summary>
-        [RegionCode(100101)] [I18NIdentityCode(Asia.Afghanistan.I18N_IDENTITY_CODE)]
+        [RegionCode(100101)]
+        [I18NIdentityCode(Asia.Afghanistan.I18N_IDENTITY_CODE)]
         Afghanistan,
 
         /// <summary>
@@ -38,7 +41,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aerjiliya <br />
         /// Cosmos region code: 300101
         /// </summary>
-        [RegionCode(300101)] [I18NIdentityCode(Africa.Algeria.I18N_IDENTITY_CODE)]
+        [RegionCode(300101)]
+        [I18NIdentityCode(Africa.Algeria.I18N_IDENTITY_CODE)]
         Algeria,
 
         /// <summary>
@@ -46,7 +50,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_andaguababuda <br />
         /// Cosmos region code: 400103
         /// </summary>
-        [RegionCode(400103)] [I18NIdentityCode(NorthAmerica.AntiguaAndBarbuda.I18N_IDENTITY_CODE)]
+        [RegionCode(400103)]
+        [I18NIdentityCode(NorthAmerica.AntiguaAndBarbuda.I18N_IDENTITY_CODE)]
         AntiguaAndBarbuda,
 
         /// <summary>
@@ -54,7 +59,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_anguila <br />
         /// Cosmos region code: 400102
         /// </summary>
-        [RegionCode(400102)] [I18NIdentityCode(NorthAmerica.Anguilla.I18N_IDENTITY_CODE)]
+        [RegionCode(400102)]
+        [I18NIdentityCode(NorthAmerica.Anguilla.I18N_IDENTITY_CODE)]
         Anguilla,
 
         /// <summary>
@@ -62,7 +68,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aerbaniya <br />
         /// Cosmos region code: 200102
         /// </summary>
-        [RegionCode(200102)] [I18NIdentityCode(Europe.Albania.I18N_IDENTITY_CODE)]
+        [RegionCode(200102)]
+        [I18NIdentityCode(Europe.Albania.I18N_IDENTITY_CODE)]
         Albania,
 
         /// <summary>
@@ -70,7 +77,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yameiniya <br />
         /// Cosmos region code: 100102
         /// </summary>
-        [RegionCode(100102)] [I18NIdentityCode(Asia.Armenia.I18N_IDENTITY_CODE)]
+        [RegionCode(100102)]
+        [I18NIdentityCode(Asia.Armenia.I18N_IDENTITY_CODE)]
         Armenia,
 
         /// <summary>
@@ -78,7 +86,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_angela <br />
         /// Cosmos region code: 300102
         /// </summary>
-        [RegionCode(300102)] [I18NIdentityCode(Africa.Angola.I18N_IDENTITY_CODE)]
+        [RegionCode(300102)]
+        [I18NIdentityCode(Africa.Angola.I18N_IDENTITY_CODE)]
         Angola,
 
         /// <summary>
@@ -87,7 +96,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nanji <br />
         /// Cosmos region code: 700010
         /// </summary>
-        [RegionCode(700010)] [I18NIdentityCode(global::Cosmos.I18N.Countries.Antarctica.Antarctique.I18N_IDENTITY_CODE)]
+        [RegionCode(700010)]
+        [I18NIdentityCode(global::Cosmos.I18N.Countries.Antarctica.Antarctique.I18N_IDENTITY_CODE)]
         Antarctica,
 
         /// <summary>
@@ -103,7 +113,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_agenting <br />
         /// Cosmos region code: 500011
         /// </summary>
-        [RegionCode(500011)] [I18NIdentityCode(SouthAmerica.Argentina.I18N_IDENTITY_CODE)]
+        [RegionCode(500011)]
+        [I18NIdentityCode(SouthAmerica.Argentina.I18N_IDENTITY_CODE)]
         Argentina,
 
         /// <summary>
@@ -112,7 +123,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_ussamoya <br />
         /// Cosmos region code: 600101
         /// </summary>
-        [RegionCode(600101)] [I18NIdentityCode(Oceania.AmericanSamoa.I18N_IDENTITY_CODE)]
+        [RegionCode(600101)]
+        [I18NIdentityCode(Oceania.AmericanSamoa.I18N_IDENTITY_CODE)]
         AmericanSamoa,
 
         /// <summary>
@@ -120,7 +132,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aodili <br />
         /// Cosmos region code: 200011
         /// </summary>
-        [RegionCode(200011)] [I18NIdentityCode(Europe.Austria.I18N_IDENTITY_CODE)]
+        [RegionCode(200011)]
+        [I18NIdentityCode(Europe.Austria.I18N_IDENTITY_CODE)]
         Austria,
 
         /// <summary>
@@ -128,7 +141,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aodaliya <br />
         /// Cosmos region code: 600011
         /// </summary>
-        [RegionCode(600011)] [I18NIdentityCode(Oceania.Australia.I18N_IDENTITY_CODE)]
+        [RegionCode(600011)]
+        [I18NIdentityCode(Oceania.Australia.I18N_IDENTITY_CODE)]
         Australia,
 
         /// <summary>
@@ -136,7 +150,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aluba <br />
         /// Cosmos region code: 400104
         /// </summary>
-        [RegionCode(400104)] [I18NIdentityCode(NorthAmerica.Aruba.I18N_IDENTITY_CODE)]
+        [RegionCode(400104)]
+        [I18NIdentityCode(NorthAmerica.Aruba.I18N_IDENTITY_CODE)]
         Aruba,
 
         /// <summary>
@@ -144,7 +159,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aolanqundao <br />
         /// Cosmos region code: 200101
         /// </summary>
-        [RegionCode(200101)] [I18NIdentityCode(Europe.AlandIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(200101)]
+        [I18NIdentityCode(Europe.AlandIslands.I18N_IDENTITY_CODE)]
         AlandIslands,
 
         /// <summary>
@@ -152,7 +168,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_asaibaijiang <br />
         /// Cosmos region code: 100103
         /// </summary>
-        [RegionCode(100103)] [I18NIdentityCode(Asia.Azerbaijan.I18N_IDENTITY_CODE)]
+        [RegionCode(100103)]
+        [I18NIdentityCode(Asia.Azerbaijan.I18N_IDENTITY_CODE)]
         Azerbaijan,
 
         /// <summary>
@@ -160,7 +177,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bohei <br />
         /// Cosmos region code: 200106
         /// </summary>
-        [I18NIdentityCode(Europe.BosniaAndHerzegovina.I18N_IDENTITY_CODE)] [RegionCode(200106)]
+        [I18NIdentityCode(Europe.BosniaAndHerzegovina.I18N_IDENTITY_CODE)]
+        [RegionCode(200106)]
         BosniaAndHerzegovina,
 
         /// <summary>
@@ -168,7 +186,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_babaduosi <br />
         /// Cosmos region code: 400106
         /// </summary>
-        [RegionCode(400106)] [I18NIdentityCode(NorthAmerica.Barbados.I18N_IDENTITY_CODE)]
+        [RegionCode(400106)]
+        [I18NIdentityCode(NorthAmerica.Barbados.I18N_IDENTITY_CODE)]
         Barbados,
 
         /// <summary>
@@ -176,7 +195,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_mengjiala <br />
         /// Cosmos region code: 100105
         /// </summary>
-        [RegionCode(100105)] [I18NIdentityCode(Asia.Bangladesh.I18N_IDENTITY_CODE)]
+        [RegionCode(100105)]
+        [I18NIdentityCode(Asia.Bangladesh.I18N_IDENTITY_CODE)]
         Bangladesh,
 
         /// <summary>
@@ -184,7 +204,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bilishi <br />
         /// Cosmos region code: 200105
         /// </summary>
-        [RegionCode(200105)] [I18NIdentityCode(Europe.Belgium.I18N_IDENTITY_CODE)]
+        [RegionCode(200105)]
+        [I18NIdentityCode(Europe.Belgium.I18N_IDENTITY_CODE)]
         Belgium,
 
         /// <summary>
@@ -192,7 +213,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bujinafaso <br />
         /// Cosmos region code: 300105
         /// </summary>
-        [RegionCode(300105)] [I18NIdentityCode(Africa.BurkinaFaso.I18N_IDENTITY_CODE)]
+        [RegionCode(300105)]
+        [I18NIdentityCode(Africa.BurkinaFaso.I18N_IDENTITY_CODE)]
         BurkinaFaso,
 
         /// <summary>
@@ -200,7 +222,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_baojialiya <br />
         /// Cosmos region code: 200108
         /// </summary>
-        [RegionCode(200108)] [I18NIdentityCode(Europe.Bulgaria.I18N_IDENTITY_CODE)]
+        [RegionCode(200108)]
+        [I18NIdentityCode(Europe.Bulgaria.I18N_IDENTITY_CODE)]
         Bulgaria,
 
         /// <summary>
@@ -208,7 +231,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_balin <br />
         /// Cosmos region code: 100104
         /// </summary>
-        [I18NIdentityCode(Asia.Bahrain.I18N_IDENTITY_CODE)] [RegionCode(100104)]
+        [I18NIdentityCode(Asia.Bahrain.I18N_IDENTITY_CODE)]
+        [RegionCode(100104)]
         Bahrain,
 
 
@@ -217,7 +241,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bulongdi <br />
         /// Cosmos region code: 300107
         /// </summary>
-        [RegionCode(300107)] [I18NIdentityCode(Africa.Burundi.I18N_IDENTITY_CODE)]
+        [RegionCode(300107)]
+        [I18NIdentityCode(Africa.Burundi.I18N_IDENTITY_CODE)]
         Burundi,
 
         /// <summary>
@@ -225,7 +250,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_beining <br />
         /// Cosmos region code: 300103
         /// </summary>
-        [RegionCode(300103)] [I18NIdentityCode(Africa.Benin.I18N_IDENTITY_CODE)]
+        [RegionCode(300103)]
+        [I18NIdentityCode(Africa.Benin.I18N_IDENTITY_CODE)]
         Benin,
 
         /// <summary>
@@ -234,7 +260,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_baimuda <br />
         /// Cosmos region code: 400108
         /// </summary>
-        [RegionCode(400108)] [I18NIdentityCode(NorthAmerica.Bermuda.I18N_IDENTITY_CODE)]
+        [RegionCode(400108)]
+        [I18NIdentityCode(NorthAmerica.Bermuda.I18N_IDENTITY_CODE)]
         Bermuda,
 
         /// <summary>
@@ -242,7 +269,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_wenlai <br />
         /// Cosmos region code: 100108
         /// </summary>
-        [RegionCode(100108)] [I18NIdentityCode(Asia.Brunei.I18N_IDENTITY_CODE)]
+        [RegionCode(100108)]
+        [I18NIdentityCode(Asia.Brunei.I18N_IDENTITY_CODE)]
         Brunei,
 
         /// <summary>
@@ -250,7 +278,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_boliweiya <br />
         /// Cosmos region code: 500101
         /// </summary>
-        [RegionCode(500101)] [I18NIdentityCode(SouthAmerica.Bolivia.I18N_IDENTITY_CODE)]
+        [RegionCode(500101)]
+        [I18NIdentityCode(SouthAmerica.Bolivia.I18N_IDENTITY_CODE)]
         Bolivia,
 
         /// <summary>
@@ -258,7 +287,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_boneihe <br />
         /// Cosmos region code: 400109
         /// </summary>
-        [I18NIdentityCode(NorthAmerica.Bonaire.I18N_IDENTITY_CODE)] [RegionCode(400109)]
+        [I18NIdentityCode(NorthAmerica.Bonaire.I18N_IDENTITY_CODE)]
+        [RegionCode(400109)]
         Bonaire,
 
         /// <summary>
@@ -266,7 +296,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_baxi <br />
         /// Cosmos region code: 500001
         /// </summary>
-        [RegionCode(500001)] [I18NIdentityCode(SouthAmerica.Brazil.I18N_IDENTITY_CODE)]
+        [RegionCode(500001)]
+        [I18NIdentityCode(SouthAmerica.Brazil.I18N_IDENTITY_CODE)]
         Brazil,
 
         /// <summary>
@@ -274,7 +305,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bahama <br />
         /// Cosmos region code: 400105
         /// </summary>
-        [RegionCode(400105)] [I18NIdentityCode(NorthAmerica.Bahamas.I18N_IDENTITY_CODE)]
+        [RegionCode(400105)]
+        [I18NIdentityCode(NorthAmerica.Bahamas.I18N_IDENTITY_CODE)]
         Bahamas,
 
         /// <summary>
@@ -282,7 +314,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_budan <br />
         /// Cosmos region code: 100106
         /// </summary>
-        [RegionCode(100106)] [I18NIdentityCode(Asia.Bhutan.I18N_IDENTITY_CODE)]
+        [RegionCode(100106)]
+        [I18NIdentityCode(Asia.Bhutan.I18N_IDENTITY_CODE)]
         Bhutan,
 
         /// <summary>
@@ -290,7 +323,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_buweidao <br />
         /// Cosmos region code: 200107
         /// </summary>
-        [RegionCode(200107)] [I18NIdentityCode(Europe.BouvetIsland.I18N_IDENTITY_CODE)]
+        [RegionCode(200107)]
+        [I18NIdentityCode(Europe.BouvetIsland.I18N_IDENTITY_CODE)]
         BouvetIsland,
 
         /// <summary>
@@ -298,7 +332,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_boziwana <br />
         /// Cosmos region code: 300104
         /// </summary>
-        [RegionCode(300104)] [I18NIdentityCode(Africa.Botswana.I18N_IDENTITY_CODE)]
+        [RegionCode(300104)]
+        [I18NIdentityCode(Africa.Botswana.I18N_IDENTITY_CODE)]
         Botswana,
 
         /// <summary>
@@ -306,7 +341,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_baieluosi <br />
         /// Cosmos region code: 200104
         /// </summary>
-        [RegionCode(200104)] [I18NIdentityCode(Europe.Belarus.I18N_IDENTITY_CODE)]
+        [RegionCode(200104)]
+        [I18NIdentityCode(Europe.Belarus.I18N_IDENTITY_CODE)]
         Belarus,
 
         /// <summary>
@@ -314,7 +350,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bolizi<br />
         /// Cosmos region code: 400107
         /// </summary>
-        [RegionCode(400107)] [I18NIdentityCode(NorthAmerica.Belize.I18N_IDENTITY_CODE)]
+        [RegionCode(400107)]
+        [I18NIdentityCode(NorthAmerica.Belize.I18N_IDENTITY_CODE)]
         Belize,
 
         /// <summary>
@@ -322,7 +359,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kamailong <br />
         /// Cosmos region code: 300108
         /// </summary>
-        [RegionCode(300108)] [I18NIdentityCode(Africa.Cameroun.I18N_IDENTITY_CODE)]
+        [RegionCode(300108)]
+        [I18NIdentityCode(Africa.Cameroun.I18N_IDENTITY_CODE)]
         Cameroun,
 
         /// <summary>
@@ -330,7 +368,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jianada <br />
         /// Cosmos region code: 400011
         /// </summary>
-        [RegionCode(400011)] [I18NIdentityCode(NorthAmerica.Canada.I18N_IDENTITY_CODE)]
+        [RegionCode(400011)]
+        [I18NIdentityCode(NorthAmerica.Canada.I18N_IDENTITY_CODE)]
         Canada,
 
         /// <summary>
@@ -338,7 +377,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_fodejiao <br />
         /// Cosmos region code: 300106
         /// </summary>
-        [RegionCode(300106)] [I18NIdentityCode(Africa.CapeVerde.I18N_IDENTITY_CODE)]
+        [RegionCode(300106)]
+        [I18NIdentityCode(Africa.CapeVerde.I18N_IDENTITY_CODE)]
         CapeVerde,
 
         /// <summary>
@@ -346,7 +386,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_zhongfei <br />
         /// Cosmos region code: 300109
         /// </summary>
-        [RegionCode(300109)] [I18NIdentityCode(Africa.CentralAfrican.I18N_IDENTITY_CODE)]
+        [RegionCode(300109)]
+        [I18NIdentityCode(Africa.CentralAfrican.I18N_IDENTITY_CODE)]
         CentralAfrican,
 
         /// <summary>
@@ -355,7 +396,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_china <br />
         /// Cosmos region code: 100001
         /// </summary>
-        [RegionCode(1_00_001)] [I18NIdentityCode(Asia.China.I18N_IDENTITY_CODE)]
+        [RegionCode(1_00_001)]
+        [I18NIdentityCode(Asia.China.I18N_IDENTITY_CODE)]
         China,
 
         /// <summary>
@@ -363,7 +405,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_zhili <br />
         /// Cosmos region code: 500012
         /// </summary>
-        [RegionCode(500012)] [I18NIdentityCode(SouthAmerica.Chile.I18N_IDENTITY_CODE)]
+        [RegionCode(500012)]
+        [I18NIdentityCode(SouthAmerica.Chile.I18N_IDENTITY_CODE)]
         Chile,
 
         /// <summary>
@@ -371,7 +414,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kekesi <br />
         /// Cosmos region code: 100111
         /// </summary>
-        [RegionCode(100111)] [I18NIdentityCode(Asia.CocosIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(100111)]
+        [I18NIdentityCode(Asia.CocosIslands.I18N_IDENTITY_CODE)]
         CocosIslands,
 
         /// <summary>
@@ -379,7 +423,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gelunbiya <br />
         /// Cosmos region code: 500102
         /// </summary>
-        [RegionCode(500102)] [I18NIdentityCode(SouthAmerica.Colombia.I18N_IDENTITY_CODE)]
+        [RegionCode(500102)]
+        [I18NIdentityCode(SouthAmerica.Colombia.I18N_IDENTITY_CODE)]
         Colombia,
 
         /// <summary>
@@ -387,7 +432,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gangguobu <br />
         /// Cosmos region code: 300112
         /// </summary>
-        [RegionCode(300112)] [I18NIdentityCode(Africa.CongoBrazzaville.I18N_IDENTITY_CODE)]
+        [RegionCode(300112)]
+        [I18NIdentityCode(Africa.CongoBrazzaville.I18N_IDENTITY_CODE)]
         CongoBrazzaville,
 
         /// <summary>
@@ -395,7 +441,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gangguojin <br />
         /// Cosmos region code: 300113
         /// </summary>
-        [RegionCode(300113)] [I18NIdentityCode(Africa.CongoKinshasa.I18N_IDENTITY_CODE)]
+        [RegionCode(300113)]
+        [I18NIdentityCode(Africa.CongoKinshasa.I18N_IDENTITY_CODE)]
         CongoKinshasa,
 
         /// <summary>
@@ -403,7 +450,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gesidalijia <br />
         /// Cosmos region code: 400111
         /// </summary>
-        [RegionCode(400111)] [I18NIdentityCode(NorthAmerica.CostaRica.I18N_IDENTITY_CODE)]
+        [RegionCode(400111)]
+        [I18NIdentityCode(NorthAmerica.CostaRica.I18N_IDENTITY_CODE)]
         CostaRica,
 
         /// <summary>
@@ -411,7 +459,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_ketediwa <br />
         /// Cosmos region code: 300114
         /// </summary>
-        [RegionCode(300114)] [I18NIdentityCode(Africa.CotedIvoire.I18N_IDENTITY_CODE)]
+        [RegionCode(300114)]
+        [I18NIdentityCode(Africa.CotedIvoire.I18N_IDENTITY_CODE)]
         CotedIvoire,
 
         /// <summary>
@@ -419,7 +468,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kukequndao <br />
         /// Cosmos region code: 600102
         /// </summary>
-        [RegionCode(600102)] [I18NIdentityCode(Oceania.CookIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(600102)]
+        [I18NIdentityCode(Oceania.CookIslands.I18N_IDENTITY_CODE)]
         CookIslands,
 
         /// <summary>
@@ -427,7 +477,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_guba <br />
         /// Cosmos region code: 400101
         /// </summary>
-        [RegionCode(400101)] [I18NIdentityCode(NorthAmerica.Cuba.I18N_IDENTITY_CODE)]
+        [RegionCode(400101)]
+        [I18NIdentityCode(NorthAmerica.Cuba.I18N_IDENTITY_CODE)]
         Cuba,
 
         /// <summary>
@@ -435,7 +486,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kusuola <br />
         /// Cosmos region code: 400112
         /// </summary>
-        [RegionCode(400112)] [I18NIdentityCode(NorthAmerica.Curaçao.I18N_IDENTITY_CODE)]
+        [RegionCode(400112)]
+        [I18NIdentityCode(NorthAmerica.Curaçao.I18N_IDENTITY_CODE)]
         Curaçao,
 
         /// <summary>
@@ -443,7 +495,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengdandao <br />
         /// Cosmos region code: 100110
         /// </summary>
-        [RegionCode(100110)] [I18NIdentityCode(Asia.ChristmasIsland.I18N_IDENTITY_CODE)]
+        [RegionCode(100110)]
+        [I18NIdentityCode(Asia.ChristmasIsland.I18N_IDENTITY_CODE)]
         ChristmasIsland,
 
         /// <summary>
@@ -451,7 +504,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_saipulusi <br />
         /// Cosmos region code: 100112
         /// </summary>
-        [RegionCode(100112)] [I18NIdentityCode(Asia.Cyprus.I18N_IDENTITY_CODE)]
+        [RegionCode(100112)]
+        [I18NIdentityCode(Asia.Cyprus.I18N_IDENTITY_CODE)]
         Cyprus,
 
         /// <summary>
@@ -459,7 +513,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jieke <br />
         /// Cosmos region code: 200012
         /// </summary>
-        [RegionCode(200012)] [I18NIdentityCode(Europe.Czechia.I18N_IDENTITY_CODE)]
+        [RegionCode(200012)]
+        [I18NIdentityCode(Europe.Czechia.I18N_IDENTITY_CODE)]
         Czechia,
 
         /// <summary>
@@ -467,7 +522,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jibuti <br />
         /// Cosmos region code: 100113
         /// </summary>
-        [RegionCode(100113)] [I18NIdentityCode(Asia.Djibouti.I18N_IDENTITY_CODE)]
+        [RegionCode(100113)]
+        [I18NIdentityCode(Asia.Djibouti.I18N_IDENTITY_CODE)]
         Djibouti,
 
         /// <summary>
@@ -475,7 +531,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_danmai <br />
         /// Cosmos region code: 200110
         /// </summary>
-        [RegionCode(200110)] [I18NIdentityCode(Europe.Denmark.I18N_IDENTITY_CODE)]
+        [RegionCode(200110)]
+        [I18NIdentityCode(Europe.Denmark.I18N_IDENTITY_CODE)]
         Denmark,
 
         /// <summary>
@@ -483,7 +540,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_duominike <br />
         /// Cosmos region code: 400113
         /// </summary>
-        [RegionCode(400113)] [I18NIdentityCode(NorthAmerica.Dominica.I18N_IDENTITY_CODE)]
+        [RegionCode(400113)]
+        [I18NIdentityCode(NorthAmerica.Dominica.I18N_IDENTITY_CODE)]
         Dominica,
 
         /// <summary>
@@ -491,7 +549,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_duominijia <br />
         /// Cosmos region code: 400114
         /// </summary>
-        [RegionCode(400114)] [I18NIdentityCode(NorthAmerica.Dominican.I18N_IDENTITY_CODE)]
+        [RegionCode(400114)]
+        [I18NIdentityCode(NorthAmerica.Dominican.I18N_IDENTITY_CODE)]
         Dominican,
 
         /// <summary>
@@ -499,7 +558,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_eguaduoer <br />
         /// Cosmos region code: 500103
         /// </summary>
-        [I18NIdentityCode(SouthAmerica.Ecuador.I18N_IDENTITY_CODE)] [RegionCode(500103)]
+        [I18NIdentityCode(SouthAmerica.Ecuador.I18N_IDENTITY_CODE)]
+        [RegionCode(500103)]
         Ecuador,
 
         /// <summary>
@@ -507,7 +567,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aishaniya <br />
         /// Cosmos region code: 200111
         /// </summary>
-        [RegionCode(200111)] [I18NIdentityCode(Europe.Estonia.I18N_IDENTITY_CODE)]
+        [RegionCode(200111)]
+        [I18NIdentityCode(Europe.Estonia.I18N_IDENTITY_CODE)]
         Estonia,
 
         /// <summary>
@@ -515,7 +576,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aiji <br />
         /// Cosmos region code: 300011
         /// </summary>
-        [RegionCode(300011)] [I18NIdentityCode(Africa.Egypt.I18N_IDENTITY_CODE)]
+        [RegionCode(300011)]
+        [I18NIdentityCode(Africa.Egypt.I18N_IDENTITY_CODE)]
         Egypt,
 
         /// <summary>
@@ -523,7 +585,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aliteliya <br />
         /// Cosmos region code: 300116
         /// </summary>
-        [RegionCode(300116)] [I18NIdentityCode(Africa.Eritrea.I18N_IDENTITY_CODE)]
+        [RegionCode(300116)]
+        [I18NIdentityCode(Africa.Eritrea.I18N_IDENTITY_CODE)]
         Eritrea,
 
         /// <summary>
@@ -531,7 +594,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aisaiebiya <br />
         /// Cosmos region code: 300123
         /// </summary>
-        [RegionCode(300123)] [I18NIdentityCode(Africa.Ethiopia.I18N_IDENTITY_CODE)]
+        [RegionCode(300123)]
+        [I18NIdentityCode(Africa.Ethiopia.I18N_IDENTITY_CODE)]
         Ethiopia,
 
         /// <summary>
@@ -539,7 +603,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_fenlan <br />
         /// Cosmos region code: 200113
         /// </summary>
-        [RegionCode(200113)] [I18NIdentityCode(Europe.Finland.I18N_IDENTITY_CODE)]
+        [RegionCode(200113)]
+        [I18NIdentityCode(Europe.Finland.I18N_IDENTITY_CODE)]
         Finland,
 
         /// <summary>
@@ -547,7 +612,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_feiji <br />
         /// Cosmos region code: 600103
         /// </summary>
-        [RegionCode(600103)] [I18NIdentityCode(Oceania.Fiji.I18N_IDENTITY_CODE)]
+        [RegionCode(600103)]
+        [I18NIdentityCode(Oceania.Fiji.I18N_IDENTITY_CODE)]
         Fiji,
 
         /// <summary>
@@ -555,7 +621,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_fukelan <br />
         /// Cosmos region code: 500104
         /// </summary>
-        [RegionCode(500104)] [I18NIdentityCode(SouthAmerica.FalklandIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(500104)]
+        [I18NIdentityCode(SouthAmerica.FalklandIslands.I18N_IDENTITY_CODE)]
         FalklandIslands,
 
         /// <summary>
@@ -563,7 +630,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_faguo <br />
         /// Cosmos region code: 200001
         /// </summary>
-        [RegionCode(200001)] [I18NIdentityCode(Europe.France.I18N_IDENTITY_CODE)]
+        [RegionCode(200001)]
+        [I18NIdentityCode(Europe.France.I18N_IDENTITY_CODE)]
         France,
 
         /// <summary>
@@ -571,7 +639,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_faluo <br />
         /// Cosmos region code: 200112
         /// </summary>
-        [RegionCode(200112)] [I18NIdentityCode(Europe.Faroe.I18N_IDENTITY_CODE)]
+        [RegionCode(200112)]
+        [I18NIdentityCode(Europe.Faroe.I18N_IDENTITY_CODE)]
         Faroe,
 
         /// <summary>
@@ -579,7 +648,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jiapeng <br />
         /// Cosmos region code: 300126
         /// </summary>
-        [RegionCode(300126)] [I18NIdentityCode(Africa.Gabon.I18N_IDENTITY_CODE)]
+        [RegionCode(300126)]
+        [I18NIdentityCode(Africa.Gabon.I18N_IDENTITY_CODE)]
         Gabon,
 
         /// <summary>
@@ -587,7 +657,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gelujiya <br />
         /// Cosmos region code: 100115
         /// </summary>
-        [RegionCode(100115)] [I18NIdentityCode(Asia.Georgia.I18N_IDENTITY_CODE)]
+        [RegionCode(100115)]
+        [I18NIdentityCode(Asia.Georgia.I18N_IDENTITY_CODE)]
         Georgia,
 
         /// <summary>
@@ -595,7 +666,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_deguo <br />
         /// Cosmos region code: 200002
         /// </summary>
-        [RegionCode(200002)] [I18NIdentityCode(Europe.Germany.I18N_IDENTITY_CODE)]
+        [RegionCode(200002)]
+        [I18NIdentityCode(Europe.Germany.I18N_IDENTITY_CODE)]
         Germany,
 
         /// <summary>
@@ -603,7 +675,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jiana <br />
         /// Cosmos region code: 300127
         /// </summary>
-        [RegionCode(300127)] [I18NIdentityCode(Africa.Ghana.I18N_IDENTITY_CODE)]
+        [RegionCode(300127)]
+        [I18NIdentityCode(Africa.Ghana.I18N_IDENTITY_CODE)]
         Ghana,
 
         /// <summary>
@@ -611,7 +684,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_zhibuluotuo <br />
         /// Cosmos region code: 200114
         /// </summary>
-        [RegionCode(200114)] [I18NIdentityCode(Europe.Gibraltar.I18N_IDENTITY_CODE)]
+        [RegionCode(200114)]
+        [I18NIdentityCode(Europe.Gibraltar.I18N_IDENTITY_CODE)]
         Gibraltar,
 
         /// <summary>
@@ -619,7 +693,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gelinlan <br />
         /// Cosmos region code: 400116
         /// </summary>
-        [RegionCode(400116)] [I18NIdentityCode(NorthAmerica.Greenland.I18N_IDENTITY_CODE)]
+        [RegionCode(400116)]
+        [I18NIdentityCode(NorthAmerica.Greenland.I18N_IDENTITY_CODE)]
         Greenland,
 
         /// <summary>
@@ -627,7 +702,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gangbiya <br />
         /// Cosmos region code: 300128
         /// </summary>
-        [RegionCode(300128)] [I18NIdentityCode(Africa.Gambia.I18N_IDENTITY_CODE)]
+        [RegionCode(300128)]
+        [I18NIdentityCode(Africa.Gambia.I18N_IDENTITY_CODE)]
         Gambia,
 
         /// <summary>
@@ -635,7 +711,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_gelinnada <br />
         /// Cosmos region code: 400117
         /// </summary>
-        [RegionCode(400117)] [I18NIdentityCode(NorthAmerica.Grenada.I18N_IDENTITY_CODE)]
+        [RegionCode(400117)]
+        [I18NIdentityCode(NorthAmerica.Grenada.I18N_IDENTITY_CODE)]
         Grenada,
 
         /// <summary>
@@ -643,7 +720,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_guiyana <br />
         /// Cosmos region code: 500105
         /// </summary>
-        [RegionCode(500105)] [I18NIdentityCode(SouthAmerica.Guiana.I18N_IDENTITY_CODE)]
+        [RegionCode(500105)]
+        [I18NIdentityCode(SouthAmerica.Guiana.I18N_IDENTITY_CODE)]
         Guiana,
 
         /// <summary>
@@ -651,7 +729,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jineiya <br />
         /// Cosmos region code: 300129
         /// </summary>
-        [RegionCode(300129)] [I18NIdentityCode(Africa.Guinea.I18N_IDENTITY_CODE)]
+        [RegionCode(300129)]
+        [I18NIdentityCode(Africa.Guinea.I18N_IDENTITY_CODE)]
         Guinea,
 
         /// <summary>
@@ -659,7 +738,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_chidaojineiya<br />
         /// Cosmos region code: 300115
         /// </summary>
-        [RegionCode(300115)] [I18NIdentityCode(Africa.EquatorialGuinea.I18N_IDENTITY_CODE)]
+        [RegionCode(300115)]
+        [I18NIdentityCode(Africa.EquatorialGuinea.I18N_IDENTITY_CODE)]
         EquatorialGuinea,
 
         /// <summary>
@@ -667,7 +747,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xila <br />
         /// Cosmos region code: 200115
         /// </summary>
-        [RegionCode(200115)] [I18NIdentityCode(Europe.Greece.I18N_IDENTITY_CODE)]
+        [RegionCode(200115)]
+        [I18NIdentityCode(Europe.Greece.I18N_IDENTITY_CODE)]
         Greece,
 
         /// <summary>
@@ -675,7 +756,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_genxidao <br />
         /// Cosmos region code: 200116
         /// </summary>
-        [RegionCode(200116)] [I18NIdentityCode(Europe.Guernsey.I18N_IDENTITY_CODE)]
+        [RegionCode(200116)]
+        [I18NIdentityCode(Europe.Guernsey.I18N_IDENTITY_CODE)]
         Guernsey,
 
         /// <summary>
@@ -683,7 +765,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_guadeluopu <br />
         /// Cosmos region code: 400118
         /// </summary>
-        [RegionCode(400118)] [I18NIdentityCode(NorthAmerica.Guadeloupe.I18N_IDENTITY_CODE)]
+        [RegionCode(400118)]
+        [I18NIdentityCode(NorthAmerica.Guadeloupe.I18N_IDENTITY_CODE)]
         Guadeloupe,
 
         /// <summary>
@@ -691,7 +774,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_weidimala <br />
         /// Cosmos region code: 400119
         /// </summary>
-        [RegionCode(400119)] [I18NIdentityCode(NorthAmerica.Guatemala.I18N_IDENTITY_CODE)]
+        [RegionCode(400119)]
+        [I18NIdentityCode(NorthAmerica.Guatemala.I18N_IDENTITY_CODE)]
         Guatemala,
 
         /// <summary>
@@ -699,7 +783,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_guandao <br />
         /// Cosmos region code: 600104
         /// </summary>
-        [RegionCode(600104)] [I18NIdentityCode(Oceania.Guam.I18N_IDENTITY_CODE)]
+        [RegionCode(600104)]
+        [I18NIdentityCode(Oceania.Guam.I18N_IDENTITY_CODE)]
         Guam,
 
         /// <summary>
@@ -707,7 +792,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jineiyabishao <br />
         /// Cosmos region code: 300130
         /// </summary>
-        [RegionCode(300130)] [I18NIdentityCode(Africa.GuineaBissau.I18N_IDENTITY_CODE)]
+        [RegionCode(300130)]
+        [I18NIdentityCode(Africa.GuineaBissau.I18N_IDENTITY_CODE)]
         GuineaBissau,
 
         /// <summary>
@@ -715,7 +801,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_guiyana <br />
         /// Cosmos region code: 500106
         /// </summary>
-        [RegionCode(500106)] [I18NIdentityCode(SouthAmerica.Guyana.I18N_IDENTITY_CODE)]
+        [RegionCode(500106)]
+        [I18NIdentityCode(SouthAmerica.Guyana.I18N_IDENTITY_CODE)]
         Guyana,
 
         /// <summary>
@@ -723,7 +810,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nanqiaozhiya <br />
         /// Cosmos region code: 500111
         /// </summary>
-        [RegionCode(500111)] [I18NIdentityCode(SouthAmerica.SGSSI.I18N_IDENTITY_CODE)]
+        [RegionCode(500111)]
+        [I18NIdentityCode(SouthAmerica.SGSSI.I18N_IDENTITY_CODE)]
         // ReSharper disable once InconsistentNaming
         SGSSI,
 
@@ -732,7 +820,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_hedemaiketang <br />
         /// Cosmos region code: 100116
         /// </summary>
-        [RegionCode(100116)] [I18NIdentityCode(Asia.HIMI.I18N_IDENTITY_CODE)]
+        [RegionCode(100116)]
+        [I18NIdentityCode(Asia.HIMI.I18N_IDENTITY_CODE)]
         // ReSharper disable once InconsistentNaming
         HIMI,
 
@@ -741,7 +830,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_keluodiya <br />
         /// Cosmos region code: 200109
         /// </summary>
-        [RegionCode(200109)] [I18NIdentityCode(Europe.Croatia.I18N_IDENTITY_CODE)]
+        [RegionCode(200109)]
+        [I18NIdentityCode(Europe.Croatia.I18N_IDENTITY_CODE)]
         Croatia,
 
         /// <summary>
@@ -749,7 +839,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_haidi <br />
         /// Cosmos region code: 400120
         /// </summary>
-        [RegionCode(400120)] [I18NIdentityCode(NorthAmerica.Haiti.I18N_IDENTITY_CODE)]
+        [RegionCode(400120)]
+        [I18NIdentityCode(NorthAmerica.Haiti.I18N_IDENTITY_CODE)]
         Haiti,
 
         /// <summary>
@@ -757,7 +848,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_hongdulasi <br />
         /// Cosmos region code: 500107
         /// </summary>
-        [RegionCode(500107)] [I18NIdentityCode(SouthAmerica.Honduras.I18N_IDENTITY_CODE)]
+        [RegionCode(500107)]
+        [I18NIdentityCode(SouthAmerica.Honduras.I18N_IDENTITY_CODE)]
         Honduras,
 
         /// <summary>
@@ -767,7 +859,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_cnhxianggang <br />
         /// Cosmos region code: 1000010033
         /// </summary>
-        [RegionCode(1_00_001_0033)] [I18NIdentityCode(Asia.HongKong.I18N_IDENTITY_CODE)]
+        [RegionCode(1_00_001_0033)]
+        [I18NIdentityCode(Asia.HongKong.I18N_IDENTITY_CODE)]
         HongKong,
 
         /// <summary>
@@ -775,7 +868,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_fandigang <br />
         /// Cosmos region code: 200141
         /// </summary>
-        [RegionCode(200141)] [I18NIdentityCode(Europe.Vatican.I18N_IDENTITY_CODE)]
+        [RegionCode(200141)]
+        [I18NIdentityCode(Europe.Vatican.I18N_IDENTITY_CODE)]
         Vatican,
 
         /// <summary>
@@ -783,7 +877,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xiongyali <br />
         /// Cosmos region code: 200013
         /// </summary>
-        [RegionCode(200013)] [I18NIdentityCode(Europe.Hungary.I18N_IDENTITY_CODE)]
+        [RegionCode(200013)]
+        [I18NIdentityCode(Europe.Hungary.I18N_IDENTITY_CODE)]
         Hungary,
 
         /// <summary>
@@ -791,7 +886,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yindunixiya <br />
         /// Cosmos region code: 100116
         /// </summary>
-        [RegionCode(100116)] [I18NIdentityCode(Asia.Indonesia.I18N_IDENTITY_CODE)]
+        [RegionCode(100116)]
+        [I18NIdentityCode(Asia.Indonesia.I18N_IDENTITY_CODE)]
         Indonesia,
 
         /// <summary>
@@ -799,7 +895,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aierlan <br />
         /// Cosmos region code: 200117
         /// </summary>
-        [RegionCode(200117)] [I18NIdentityCode(Europe.Ireland.I18N_IDENTITY_CODE)]
+        [RegionCode(200117)]
+        [I18NIdentityCode(Europe.Ireland.I18N_IDENTITY_CODE)]
         Ireland,
 
         /// <summary>
@@ -807,7 +904,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yiselie <br />
         /// Cosmos region code: 100015
         /// </summary>
-        [RegionCode(100015)] [I18NIdentityCode(Asia.Israel.I18N_IDENTITY_CODE)]
+        [RegionCode(100015)]
+        [I18NIdentityCode(Asia.Israel.I18N_IDENTITY_CODE)]
         Israel,
 
         /// <summary>
@@ -815,7 +913,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yindu <br />
         /// Cosmos region code: 100013
         /// </summary>
-        [RegionCode(100013)] [I18NIdentityCode(Asia.India.I18N_IDENTITY_CODE)]
+        [RegionCode(100013)]
+        [I18NIdentityCode(Asia.India.I18N_IDENTITY_CODE)]
         India,
 
         /// <summary>
@@ -823,7 +922,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yingshuying <br />
         /// Cosmos region code: 100107
         /// </summary>
-        [RegionCode(100107)] [I18NIdentityCode(Asia.BritishIndianOceanTerritory.I18N_IDENTITY_CODE)]
+        [RegionCode(100107)]
+        [I18NIdentityCode(Asia.BritishIndianOceanTerritory.I18N_IDENTITY_CODE)]
         BritishIndianOceanTerritory,
 
         /// <summary>
@@ -831,7 +931,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yilake <br />
         /// Cosmos region code: 100117
         /// </summary>
-        [RegionCode(100117)] [I18NIdentityCode(Asia.Iraq.I18N_IDENTITY_CODE)]
+        [RegionCode(100117)]
+        [I18NIdentityCode(Asia.Iraq.I18N_IDENTITY_CODE)]
         Iraq,
 
         /// <summary>
@@ -839,7 +940,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yilang<br />
         /// Cosmos region code: 100014
         /// </summary>
-        [RegionCode(100014)] [I18NIdentityCode(Asia.Iran.I18N_IDENTITY_CODE)]
+        [RegionCode(100014)]
+        [I18NIdentityCode(Asia.Iran.I18N_IDENTITY_CODE)]
         Iran,
 
         /// <summary>
@@ -847,7 +949,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bingdao <br />
         /// Cosmos region code: 200118
         /// </summary>
-        [RegionCode(200118)] [I18NIdentityCode(Europe.Iceland.I18N_IDENTITY_CODE)]
+        [RegionCode(200118)]
+        [I18NIdentityCode(Europe.Iceland.I18N_IDENTITY_CODE)]
         Iceland,
 
         /// <summary>
@@ -855,7 +958,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yidali <br />
         /// Cosmos region code: 200003
         /// </summary>
-        [RegionCode(200003)] [I18NIdentityCode(Europe.Italy.I18N_IDENTITY_CODE)]
+        [RegionCode(200003)]
+        [I18NIdentityCode(Europe.Italy.I18N_IDENTITY_CODE)]
         Italy,
 
         /// <summary>
@@ -863,7 +967,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_riben <br />
         /// Cosmos region code: 100002
         /// </summary>
-        [RegionCode(100002)] [I18NIdentityCode(Asia.Japan.I18N_IDENTITY_CODE)]
+        [RegionCode(100002)]
+        [I18NIdentityCode(Asia.Japan.I18N_IDENTITY_CODE)]
         Japan,
 
         /// <summary>
@@ -871,7 +976,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_zexi <br />
         /// Cosmos region code: 200119
         /// </summary>
-        [RegionCode(200119)] [I18NIdentityCode(Europe.Jersey.I18N_IDENTITY_CODE)]
+        [RegionCode(200119)]
+        [I18NIdentityCode(Europe.Jersey.I18N_IDENTITY_CODE)]
         Jersey,
 
         /// <summary>
@@ -879,7 +985,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yamaijia <br />
         /// Cosmos region code: 400121
         /// </summary>
-        [RegionCode(400121)] [I18NIdentityCode(NorthAmerica.Jamaica.I18N_IDENTITY_CODE)]
+        [RegionCode(400121)]
+        [I18NIdentityCode(NorthAmerica.Jamaica.I18N_IDENTITY_CODE)]
         Jamaica,
 
         /// <summary>
@@ -887,7 +994,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yuedan <br />
         /// Cosmos region code: 100118
         /// </summary>
-        [RegionCode(100118)] [I18NIdentityCode(Asia.Jordan.I18N_IDENTITY_CODE)]
+        [RegionCode(100118)]
+        [I18NIdentityCode(Asia.Jordan.I18N_IDENTITY_CODE)]
         Jordan,
 
         /// <summary>
@@ -895,7 +1003,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kenniya <br />
         /// Cosmos region code: 300012
         /// </summary>
-        [RegionCode(300012)] [I18NIdentityCode(Africa.Kenya.I18N_IDENTITY_CODE)]
+        [RegionCode(300012)]
+        [I18NIdentityCode(Africa.Kenya.I18N_IDENTITY_CODE)]
         Kenya,
 
         /// <summary>
@@ -903,7 +1012,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jilibasi <br />
         /// Cosmos region code: 600105
         /// </summary>
-        [RegionCode(600105)] [I18NIdentityCode(Oceania.Kiribati.I18N_IDENTITY_CODE)]
+        [RegionCode(600105)]
+        [I18NIdentityCode(Oceania.Kiribati.I18N_IDENTITY_CODE)]
         Kiribati,
 
         /// <summary>
@@ -911,7 +1021,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kemoluo <br />
         /// Cosmos region code: 300111
         /// </summary>
-        [RegionCode(300111)] [I18NIdentityCode(Africa.Comoros.I18N_IDENTITY_CODE)]
+        [RegionCode(300111)]
+        [I18NIdentityCode(Africa.Comoros.I18N_IDENTITY_CODE)]
         Comoros,
 
         /// <summary>
@@ -919,7 +1030,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengjiciniweisi <br />
         /// Cosmos region code: 400128
         /// </summary>
-        [RegionCode(400128)] [I18NIdentityCode(NorthAmerica.SaintKittsAndNevis.I18N_IDENTITY_CODE)]
+        [RegionCode(400128)]
+        [I18NIdentityCode(NorthAmerica.SaintKittsAndNevis.I18N_IDENTITY_CODE)]
         SaintKittsAndNevis,
 
         /// <summary>
@@ -927,7 +1039,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_hanguo <br />
         /// Cosmos region code: 100012
         /// </summary>
-        [RegionCode(100012)] [I18NIdentityCode(Asia.SouthKorea.I18N_IDENTITY_CODE)]
+        [RegionCode(100012)]
+        [I18NIdentityCode(Asia.SouthKorea.I18N_IDENTITY_CODE)]
         SouthKorea,
 
         /// <summary>
@@ -935,7 +1048,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_chaoxian <br />
         /// Cosmos region code: 100011
         /// </summary>
-        [RegionCode(100011)] [I18NIdentityCode(Asia.NorthKorea.I18N_IDENTITY_CODE)]
+        [RegionCode(100011)]
+        [I18NIdentityCode(Asia.NorthKorea.I18N_IDENTITY_CODE)]
         NorthKorea,
 
         /// <summary>
@@ -943,7 +1057,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_keweite <br />
         /// Cosmos region code: 100120
         /// </summary>
-        [RegionCode(100120)] [I18NIdentityCode(Asia.Kuwait.I18N_IDENTITY_CODE)]
+        [RegionCode(100120)]
+        [I18NIdentityCode(Asia.Kuwait.I18N_IDENTITY_CODE)]
         Kuwait,
 
         /// <summary>
@@ -951,7 +1066,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kaiman <br />
         /// Cosmos region code: 400110
         /// </summary>
-        [RegionCode(400110)] [I18NIdentityCode(NorthAmerica.CaymanIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(400110)]
+        [I18NIdentityCode(NorthAmerica.CaymanIslands.I18N_IDENTITY_CODE)]
         CaymanIslands,
 
         /// <summary>
@@ -959,7 +1075,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_hasakesitan <br />
         /// Cosmos region code: 100119
         /// </summary>
-        [RegionCode(100119)] [I18NIdentityCode(Asia.Kazakhstan.I18N_IDENTITY_CODE)]
+        [RegionCode(100119)]
+        [I18NIdentityCode(Asia.Kazakhstan.I18N_IDENTITY_CODE)]
         Kazakhstan,
 
         /// <summary>
@@ -967,7 +1084,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jierjisi <br />
         /// Cosmos region code: 100121
         /// </summary>
-        [RegionCode(100121)] [I18NIdentityCode(Asia.Kyrgyzstan.I18N_IDENTITY_CODE)]
+        [RegionCode(100121)]
+        [I18NIdentityCode(Asia.Kyrgyzstan.I18N_IDENTITY_CODE)]
         Kyrgyzstan,
 
         /// <summary>
@@ -975,7 +1093,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jipuzhai <br />
         /// Cosmos region code: 100109
         /// </summary>
-        [RegionCode(100109)] [I18NIdentityCode(Asia.Cambodia.I18N_IDENTITY_CODE)]
+        [RegionCode(100109)]
+        [I18NIdentityCode(Asia.Cambodia.I18N_IDENTITY_CODE)]
         Cambodia,
 
         /// <summary>
@@ -983,7 +1102,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_laowo <br />
         /// Cosmos region code: 100122
         /// </summary>
-        [RegionCode(100122)] [I18NIdentityCode(Asia.LaoPDR.I18N_IDENTITY_CODE)]
+        [RegionCode(100122)]
+        [I18NIdentityCode(Asia.LaoPDR.I18N_IDENTITY_CODE)]
         // ReSharper disable once InconsistentNaming
         LaoPDR,
 
@@ -992,7 +1112,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_libanen <br />
         /// Cosmos region code: 100123
         /// </summary>
-        [RegionCode(100123)] [I18NIdentityCode(Asia.Lebanon.I18N_IDENTITY_CODE)]
+        [RegionCode(100123)]
+        [I18NIdentityCode(Asia.Lebanon.I18N_IDENTITY_CODE)]
         Lebanon,
 
         /// <summary>
@@ -1000,7 +1121,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengluxiya <br />
         /// Cosmos region code: 400129
         /// </summary>
-        [RegionCode(400129)] [I18NIdentityCode(NorthAmerica.SaintLucia.I18N_IDENTITY_CODE)]
+        [RegionCode(400129)]
+        [I18NIdentityCode(NorthAmerica.SaintLucia.I18N_IDENTITY_CODE)]
         SaintLucia,
 
         /// <summary>
@@ -1008,7 +1130,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_liezhidunshideng <br />
         /// Cosmos region code: 200122
         /// </summary>
-        [RegionCode(200122)] [I18NIdentityCode(Europe.Liechtenstein.I18N_IDENTITY_CODE)]
+        [RegionCode(200122)]
+        [I18NIdentityCode(Europe.Liechtenstein.I18N_IDENTITY_CODE)]
         Liechtenstein,
 
         /// <summary>
@@ -1016,7 +1139,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_sililanka <br />
         /// Cosmos region code: 100135
         /// </summary>
-        [RegionCode(100135)] [I18NIdentityCode(Asia.SriLanka.I18N_IDENTITY_CODE)]
+        [RegionCode(100135)]
+        [I18NIdentityCode(Asia.SriLanka.I18N_IDENTITY_CODE)]
         SriLanka,
 
         /// <summary>
@@ -1024,7 +1148,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_libiliya <br />
         /// Cosmos region code: 300132
         /// </summary>
-        [RegionCode(300132)] [I18NIdentityCode(Africa.Liberia.I18N_IDENTITY_CODE)]
+        [RegionCode(300132)]
+        [I18NIdentityCode(Africa.Liberia.I18N_IDENTITY_CODE)]
         Liberia,
 
         /// <summary>
@@ -1032,7 +1157,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_laisuotuo <br />
         /// Cosmos region code: 300131
         /// </summary>
-        [RegionCode(300130)] [I18NIdentityCode(Africa.Lesotho.I18N_IDENTITY_CODE)]
+        [RegionCode(300130)]
+        [I18NIdentityCode(Africa.Lesotho.I18N_IDENTITY_CODE)]
         Lesotho,
 
         /// <summary>
@@ -1040,7 +1166,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_litaowan <br />
         /// Cosmos region code: 200123
         /// </summary>
-        [RegionCode(200123)] [I18NIdentityCode(Europe.Lithuania.I18N_IDENTITY_CODE)]
+        [RegionCode(200123)]
+        [I18NIdentityCode(Europe.Lithuania.I18N_IDENTITY_CODE)]
         Lithuania,
 
         /// <summary>
@@ -1048,7 +1175,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_lusenbao <br />
         /// Cosmos region code: 200124
         /// </summary>
-        [RegionCode(200124)]  [I18NIdentityCode(Europe.Luxembourg.I18N_IDENTITY_CODE)] 
+        [RegionCode(200124)]
+        [I18NIdentityCode(Europe.Luxembourg.I18N_IDENTITY_CODE)]
         Luxembourg,
 
         /// <summary>
@@ -1056,7 +1184,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_latuoweiya <br />
         /// Cosmos region code: 200121
         /// </summary>
-        [RegionCode(200121)] [I18NIdentityCode(Europe.Latvia.I18N_IDENTITY_CODE)]
+        [RegionCode(200121)]
+        [I18NIdentityCode(Europe.Latvia.I18N_IDENTITY_CODE)]
         Latvia,
 
         /// <summary>
@@ -1064,7 +1193,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_libiya <br />
         /// Cosmos region code: 300133
         /// </summary>
-        [RegionCode(300133)] [I18NIdentityCode(Africa.Libya.I18N_IDENTITY_CODE)]
+        [RegionCode(300133)]
+        [I18NIdentityCode(Africa.Libya.I18N_IDENTITY_CODE)]
         Libya,
 
         /// <summary>
@@ -1072,7 +1202,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_maendao <br />
         /// Cosmos region code: 200127
         /// </summary>
-        [RegionCode(200127)] [I18NIdentityCode(Europe.Mann.I18N_IDENTITY_CODE)]
+        [RegionCode(200127)]
+        [I18NIdentityCode(Europe.Mann.I18N_IDENTITY_CODE)]
         Mann,
 
         /// <summary>
@@ -1080,7 +1211,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_mikeluonixiya <br />
         /// Cosmos region code: 600107
         /// </summary>
-        [RegionCode(600107)] [I18NIdentityCode(Oceania.Micronesia.I18N_IDENTITY_CODE)]
+        [RegionCode(600107)]
+        [I18NIdentityCode(Oceania.Micronesia.I18N_IDENTITY_CODE)]
         Micronesia,
 
         /// <summary>
@@ -1090,7 +1222,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_cnhaomen <br />
         /// Cosmos region code: 10000100334
         /// </summary>
-        [RegionCode(1_00_001_0034)] [I18NIdentityCode(Asia.Macao.I18N_IDENTITY_CODE)]
+        [RegionCode(1_00_001_0034)]
+        [I18NIdentityCode(Asia.Macao.I18N_IDENTITY_CODE)]
         Macao,
 
         /// <summary>
@@ -1098,7 +1231,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_moluoge <br />
         /// Cosmos region code: 300139
         /// </summary>
-        [RegionCode(300139)] [I18NIdentityCode(Africa.Morocco.I18N_IDENTITY_CODE)]
+        [RegionCode(300139)]
+        [I18NIdentityCode(Africa.Morocco.I18N_IDENTITY_CODE)]
         Morocco,
 
         /// <summary>
@@ -1106,7 +1240,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_monage <br />
         /// Cosmos region code: 200129
         /// </summary>
-        [RegionCode(200129)] [I18NIdentityCode(Europe.Monaco.I18N_IDENTITY_CODE)]
+        [RegionCode(200129)]
+        [I18NIdentityCode(Europe.Monaco.I18N_IDENTITY_CODE)]
         Monaco,
 
         /// <summary>
@@ -1114,7 +1249,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_moerduowa <br />
         /// Cosmos region code: 200128
         /// </summary>
-        [RegionCode(200128)] [I18NIdentityCode(Europe.Moldova.I18N_IDENTITY_CODE)]
+        [RegionCode(200128)]
+        [I18NIdentityCode(Europe.Moldova.I18N_IDENTITY_CODE)]
         Moldova,
 
         /// <summary>
@@ -1122,7 +1258,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_heishan <br />
         /// Cosmos region code: 200130
         /// </summary>
-        [RegionCode(200130)] [I18NIdentityCode(Europe.Montenegro.I18N_IDENTITY_CODE)]
+        [RegionCode(200130)]
+        [I18NIdentityCode(Europe.Montenegro.I18N_IDENTITY_CODE)]
         Montenegro,
 
         /// <summary>
@@ -1130,7 +1267,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_helan<br />
         /// Cosmos region code: 200131
         /// </summary>
-        [RegionCode(200131)] [I18NIdentityCode(Europe.Netherlands.I18N_IDENTITY_CODE)]
+        [RegionCode(200131)]
+        [I18NIdentityCode(Europe.Netherlands.I18N_IDENTITY_CODE)]
         Netherlands,
 
         /// <summary>
@@ -1138,7 +1276,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengmading <br />
         /// Cosmos region code: 400130
         /// </summary>
-        [RegionCode(400130)] [I18NIdentityCode(NorthAmerica.SaintMartinFrenchPart.I18N_IDENTITY_CODE)]
+        [RegionCode(400130)]
+        [I18NIdentityCode(NorthAmerica.SaintMartinFrenchPart.I18N_IDENTITY_CODE)]
         SaintMartinFrenchPart,
 
         /// <summary>
@@ -1146,7 +1285,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_madajiasijia <br />
         /// Cosmos region code: 300134
         /// </summary>
-        [RegionCode(300134)] [I18NIdentityCode(Africa.Madagascar.I18N_IDENTITY_CODE)]
+        [RegionCode(300134)]
+        [I18NIdentityCode(Africa.Madagascar.I18N_IDENTITY_CODE)]
         Madagascar,
 
         /// <summary>
@@ -1154,7 +1294,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_mashaoer <br />
         /// Cosmos region code: 600106
         /// </summary>
-        [RegionCode(600106)] [I18NIdentityCode(Oceania.MarshallIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(600106)]
+        [I18NIdentityCode(Oceania.MarshallIslands.I18N_IDENTITY_CODE)]
         MarshallIslands,
 
         /// <summary>
@@ -1162,7 +1303,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_maqidun <br />
         /// Cosmos region code: 200125
         /// </summary>
-        [RegionCode(200125)] [I18NIdentityCode(Europe.Macedonia.I18N_IDENTITY_CODE)]
+        [RegionCode(200125)]
+        [I18NIdentityCode(Europe.Macedonia.I18N_IDENTITY_CODE)]
         Macedonia,
 
         /// <summary>
@@ -1170,7 +1312,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_mali <br />
         /// Cosmos region code: 300122
         /// </summary>
-        [RegionCode(300122)] [I18NIdentityCode(Africa.Mali.I18N_IDENTITY_CODE)]
+        [RegionCode(300122)]
+        [I18NIdentityCode(Africa.Mali.I18N_IDENTITY_CODE)]
         Mali,
 
         /// <summary>
@@ -1178,7 +1321,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_miandian <br />
         /// Cosmos region code: 100127
         /// </summary>
-        [RegionCode(100127)] [I18NIdentityCode(Asia.Myanmar.I18N_IDENTITY_CODE)]
+        [RegionCode(100127)]
+        [I18NIdentityCode(Asia.Myanmar.I18N_IDENTITY_CODE)]
         Myanmar,
 
         /// <summary>
@@ -1186,7 +1330,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_waimenggu <br />
         /// Cosmos region code: 100126
         /// </summary>
-        [RegionCode(100126)] [I18NIdentityCode(Asia.Mongolia.I18N_IDENTITY_CODE)]
+        [RegionCode(100126)]
+        [I18NIdentityCode(Asia.Mongolia.I18N_IDENTITY_CODE)]
         Mongolia,
 
         /// <summary>
@@ -1194,7 +1339,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_beimaliyana <br />
         /// Cosmos region code: 600112
         /// </summary>
-        [RegionCode(600112)] [I18NIdentityCode(Oceania.NorthernMarianaIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(600112)]
+        [I18NIdentityCode(Oceania.NorthernMarianaIslands.I18N_IDENTITY_CODE)]
         NorthernMarianaIslands,
 
         /// <summary>
@@ -1202,7 +1348,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_matinike <br />
         /// Cosmos region code: 400122
         /// </summary>
-        [RegionCode(400122)] [I18NIdentityCode(NorthAmerica.Martinique.I18N_IDENTITY_CODE)]
+        [RegionCode(400122)]
+        [I18NIdentityCode(NorthAmerica.Martinique.I18N_IDENTITY_CODE)]
         Martinique,
 
         /// <summary>
@@ -1210,7 +1357,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_maolitaniya <br />
         /// Cosmos region code: 300135
         /// </summary>
-        [RegionCode(300135)] [I18NIdentityCode(Africa.Mauritania.I18N_IDENTITY_CODE)]
+        [RegionCode(300135)]
+        [I18NIdentityCode(Africa.Mauritania.I18N_IDENTITY_CODE)]
         Mauritania,
 
         /// <summary>
@@ -1218,7 +1366,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_mengtesailate <br />
         /// Cosmos region code: 400124
         /// </summary>
-        [RegionCode(400124)] [I18NIdentityCode(NorthAmerica.Montserrat.I18N_IDENTITY_CODE)]
+        [RegionCode(400124)]
+        [I18NIdentityCode(NorthAmerica.Montserrat.I18N_IDENTITY_CODE)]
         Montserrat,
 
         /// <summary>
@@ -1226,7 +1375,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_maerta <br />
         /// Cosmos region code: 200126
         /// </summary>
-        [RegionCode(200126)] [I18NIdentityCode(Europe.Malta.I18N_IDENTITY_CODE)]
+        [RegionCode(200126)]
+        [I18NIdentityCode(Europe.Malta.I18N_IDENTITY_CODE)]
         Malta,
 
         /// <summary>
@@ -1234,7 +1384,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_maoliqiusi <br />
         /// Cosmos region code: 300136
         /// </summary>
-        [RegionCode(300136)] [I18NIdentityCode(Africa.Mauritius.I18N_IDENTITY_CODE)]
+        [RegionCode(300136)]
+        [I18NIdentityCode(Africa.Mauritius.I18N_IDENTITY_CODE)]
         Mauritius,
 
         /// <summary>
@@ -1242,7 +1393,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_maerdaifu <br />
         /// Cosmos region code: 100125
         /// </summary>
-        [RegionCode(100125)] [I18NIdentityCode(Asia.Maldives.I18N_IDENTITY_CODE)]
+        [RegionCode(100125)]
+        [I18NIdentityCode(Asia.Maldives.I18N_IDENTITY_CODE)]
         Maldives,
 
         /// <summary>
@@ -1250,7 +1402,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_malawei <br />
         /// Cosmos region code: 300137
         /// </summary>
-        [RegionCode(300137)] [I18NIdentityCode(Africa.Malawi.I18N_IDENTITY_CODE)]
+        [RegionCode(300137)]
+        [I18NIdentityCode(Africa.Malawi.I18N_IDENTITY_CODE)]
         Malawi,
 
         /// <summary>
@@ -1258,7 +1411,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_moxige <br />
         /// Cosmos region code: 400123
         /// </summary>
-        [RegionCode(400123)] [I18NIdentityCode(NorthAmerica.Mexico.I18N_IDENTITY_CODE)]
+        [RegionCode(400123)]
+        [I18NIdentityCode(NorthAmerica.Mexico.I18N_IDENTITY_CODE)]
         Mexico,
 
         /// <summary>
@@ -1266,7 +1420,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_malaixiya <br />
         /// Cosmos region code: 100124
         /// </summary>
-        [RegionCode(100124)] [I18NIdentityCode(Asia.Malaysia.I18N_IDENTITY_CODE)]
+        [RegionCode(100124)]
+        [I18NIdentityCode(Asia.Malaysia.I18N_IDENTITY_CODE)]
         Malaysia,
 
         /// <summary>
@@ -1274,7 +1429,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_mosangbike <br />
         /// Cosmos region code: 300140
         /// </summary>
-        [RegionCode(300140)] [I18NIdentityCode(Africa.Mozambique.I18N_IDENTITY_CODE)]
+        [RegionCode(300140)]
+        [I18NIdentityCode(Africa.Mozambique.I18N_IDENTITY_CODE)]
         Mozambique,
 
         /// <summary>
@@ -1282,7 +1438,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_manibiya <br />
         /// Cosmos region code: 300141
         /// </summary>
-        [RegionCode(300141)] [I18NIdentityCode(Africa.Namibia.I18N_IDENTITY_CODE)]
+        [RegionCode(300141)]
+        [I18NIdentityCode(Africa.Namibia.I18N_IDENTITY_CODE)]
         Namibia,
 
         /// <summary>
@@ -1290,7 +1447,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xinkaliduoniya <br />
         /// Cosmos region code: 600109
         /// </summary>
-        [RegionCode(600109)] [I18NIdentityCode(Oceania.NewCaledonia.I18N_IDENTITY_CODE)]
+        [RegionCode(600109)]
+        [I18NIdentityCode(Oceania.NewCaledonia.I18N_IDENTITY_CODE)]
         NewCaledonia,
 
         /// <summary>
@@ -1298,7 +1456,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nirier <br />
         /// Cosmos region code: 300143
         /// </summary>
-        [RegionCode(300143)] [I18NIdentityCode(Africa.Niger.I18N_IDENTITY_CODE)]
+        [RegionCode(300143)]
+        [I18NIdentityCode(Africa.Niger.I18N_IDENTITY_CODE)]
         Niger,
 
         /// <summary>
@@ -1306,7 +1465,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_niriliya <br />
         /// Cosmos region code: 300142
         /// </summary>
-        [RegionCode(300142)] [I18NIdentityCode(Africa.Nigeria.I18N_IDENTITY_CODE)]
+        [RegionCode(300142)]
+        [I18NIdentityCode(Africa.Nigeria.I18N_IDENTITY_CODE)]
         Nigeria,
 
         /// <summary>
@@ -1314,7 +1474,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nuofuke <br />
         /// Cosmos region code: 600111
         /// </summary>
-        [RegionCode(600111)] [I18NIdentityCode(Oceania.NorfolkIsland.I18N_IDENTITY_CODE)]
+        [RegionCode(600111)]
+        [I18NIdentityCode(Oceania.NorfolkIsland.I18N_IDENTITY_CODE)]
         NorfolkIsland,
 
         /// <summary>
@@ -1322,7 +1483,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_niboer <br />
         /// Cosmos region code: 100128
         /// </summary>
-        [RegionCode(100128)] [I18NIdentityCode(Asia.Nepal.I18N_IDENTITY_CODE)]
+        [RegionCode(100128)]
+        [I18NIdentityCode(Asia.Nepal.I18N_IDENTITY_CODE)]
         Nepal,
 
         /// <summary>
@@ -1330,7 +1492,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_manu <br />
         /// Cosmos region code: 600108
         /// </summary>
-        [RegionCode(600108)] [I18NIdentityCode(Oceania.Nauru.I18N_IDENTITY_CODE)]
+        [RegionCode(600108)]
+        [I18NIdentityCode(Oceania.Nauru.I18N_IDENTITY_CODE)]
         Nauru,
 
         /// <summary>
@@ -1338,7 +1501,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nijialagua <br />
         /// Cosmos region code: 500108
         /// </summary>
-        [RegionCode(500108)] [I18NIdentityCode(SouthAmerica.Nicaragua.I18N_IDENTITY_CODE)]
+        [RegionCode(500108)]
+        [I18NIdentityCode(SouthAmerica.Nicaragua.I18N_IDENTITY_CODE)]
         Nicaragua,
 
         /// <summary>
@@ -1346,7 +1510,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_niuai <br />
         /// Cosmos region code: 600110
         /// </summary>
-        [RegionCode(600110)] [I18NIdentityCode(Oceania.Niue.I18N_IDENTITY_CODE)]
+        [RegionCode(600110)]
+        [I18NIdentityCode(Oceania.Niue.I18N_IDENTITY_CODE)]
         Niue,
 
         /// <summary>
@@ -1354,7 +1519,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xinxilan <br />
         /// Cosmos region code: 600012
         /// </summary>
-        [RegionCode(600012)] [I18NIdentityCode(Oceania.NewZealand.I18N_IDENTITY_CODE)]
+        [RegionCode(600012)]
+        [I18NIdentityCode(Oceania.NewZealand.I18N_IDENTITY_CODE)]
         NewZealand,
 
         /// <summary>
@@ -1362,7 +1528,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nuowei<br />
         /// Cosmos region code: 200132
         /// </summary>
-        [RegionCode(200132)] [I18NIdentityCode(Europe.Norway.I18N_IDENTITY_CODE)]
+        [RegionCode(200132)]
+        [I18NIdentityCode(Europe.Norway.I18N_IDENTITY_CODE)]
         Norway,
 
         /// <summary>
@@ -1370,7 +1537,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_aman <br />
         /// Cosmos region code: 100129
         /// </summary>
-        [RegionCode(100129)] [I18NIdentityCode(Asia.Oman.I18N_IDENTITY_CODE)]
+        [RegionCode(100129)]
+        [I18NIdentityCode(Asia.Oman.I18N_IDENTITY_CODE)]
         Oman,
 
         /// <summary>
@@ -1378,7 +1546,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_banama <br />
         /// Cosmos region code: 400125
         /// </summary>
-        [RegionCode(400125)] [I18NIdentityCode(NorthAmerica.Panama.I18N_IDENTITY_CODE)]
+        [RegionCode(400125)]
+        [I18NIdentityCode(NorthAmerica.Panama.I18N_IDENTITY_CODE)]
         Panama,
 
         /// <summary>
@@ -1386,7 +1555,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_saierweiya <br />
         /// Cosmos region code: 200136
         /// </summary>
-        [RegionCode(200136)] [I18NIdentityCode(Europe.Serbia.I18N_IDENTITY_CODE)]
+        [RegionCode(200136)]
+        [I18NIdentityCode(Europe.Serbia.I18N_IDENTITY_CODE)]
         Serbia,
 
         /// <summary>
@@ -1394,7 +1564,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_balagui <br />
         /// Cosmos region code: 500109
         /// </summary>
-        [RegionCode(500109)] [I18NIdentityCode(SouthAmerica.Paraguay.I18N_IDENTITY_CODE)]
+        [RegionCode(500109)]
+        [I18NIdentityCode(SouthAmerica.Paraguay.I18N_IDENTITY_CODE)]
         Paraguay,
 
         /// <summary>
@@ -1402,7 +1573,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bilu <br />
         /// Cosmos region code: 500110
         /// </summary>
-        [RegionCode(500110)] [I18NIdentityCode(SouthAmerica.Peru.I18N_IDENTITY_CODE)]
+        [RegionCode(500110)]
+        [I18NIdentityCode(SouthAmerica.Peru.I18N_IDENTITY_CODE)]
         Peru,
 
         /// <summary>
@@ -1410,7 +1582,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bolinixiya <br />
         /// Cosmos region code: 600119
         /// </summary>
-        [RegionCode(600119)] [I18NIdentityCode(Oceania.Polynesia.I18N_IDENTITY_CODE)]
+        [RegionCode(600119)]
+        [I18NIdentityCode(Oceania.Polynesia.I18N_IDENTITY_CODE)]
         Polynesia,
 
         /// <summary>
@@ -1418,7 +1591,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_baxin <br />
         /// Cosmos region code: 600114
         /// </summary>
-        [RegionCode(600114)] [I18NIdentityCode(Oceania.PapuaNewGuinea.I18N_IDENTITY_CODE)]
+        [RegionCode(600114)]
+        [I18NIdentityCode(Oceania.PapuaNewGuinea.I18N_IDENTITY_CODE)]
         PapuaNewGuinea,
 
         /// <summary>
@@ -1426,7 +1600,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_felvbin <br />
         /// Cosmos region code: 100131
         /// </summary>
-        [RegionCode(100131)] [I18NIdentityCode(Asia.Philippines.I18N_IDENTITY_CODE)]
+        [RegionCode(100131)]
+        [I18NIdentityCode(Asia.Philippines.I18N_IDENTITY_CODE)]
         Philippines,
 
         /// <summary>
@@ -1434,7 +1609,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bajisitan <br />
         /// Cosmos region code: 100016
         /// </summary>
-        [RegionCode(100016)] [I18NIdentityCode(Asia.Pakistan.I18N_IDENTITY_CODE)]
+        [RegionCode(100016)]
+        [I18NIdentityCode(Asia.Pakistan.I18N_IDENTITY_CODE)]
         Pakistan,
 
         /// <summary>
@@ -1442,7 +1618,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_bolan <br />
         /// Cosmos region code: 200014
         /// </summary>
-        [RegionCode(200014)] [I18NIdentityCode(Europe.Poland.I18N_IDENTITY_CODE)]
+        [RegionCode(200014)]
+        [I18NIdentityCode(Europe.Poland.I18N_IDENTITY_CODE)]
         Poland,
 
         /// <summary>
@@ -1450,7 +1627,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengyiaiermkl <br />
         /// Cosmos region code: 400132
         /// </summary>
-        [RegionCode(400132)] [I18NIdentityCode(NorthAmerica.SaintPierreAndMiquelon.I18N_IDENTITY_CODE)]
+        [RegionCode(400132)]
+        [I18NIdentityCode(NorthAmerica.SaintPierreAndMiquelon.I18N_IDENTITY_CODE)]
         SaintPierreAndMiquelon,
 
         /// <summary>
@@ -1458,7 +1636,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_piteken <br />
         /// Cosmos region code: 600117
         /// </summary>
-        [RegionCode(600117)] [I18NIdentityCode(Oceania.Pitcairn.I18N_IDENTITY_CODE)]
+        [RegionCode(600117)]
+        [I18NIdentityCode(Oceania.Pitcairn.I18N_IDENTITY_CODE)]
         Pitcairn,
 
         /// <summary>
@@ -1466,7 +1645,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_boduolige <br />
         /// Cosmos region code: 400126
         /// </summary>
-        [RegionCode(400126)] [I18NIdentityCode(NorthAmerica.PuertoRico.I18N_IDENTITY_CODE)]
+        [RegionCode(400126)]
+        [I18NIdentityCode(NorthAmerica.PuertoRico.I18N_IDENTITY_CODE)]
         PuertoRico,
 
         /// <summary>
@@ -1474,7 +1654,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_balesitan <br />
         /// Cosmos region code: 100130
         /// </summary>
-        [RegionCode(100130)] [I18NIdentityCode(Asia.Palestine.I18N_IDENTITY_CODE)]
+        [RegionCode(100130)]
+        [I18NIdentityCode(Asia.Palestine.I18N_IDENTITY_CODE)]
         Palestine,
 
         /// <summary>
@@ -1482,7 +1663,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_putapya <br />
         /// Cosmos region code: 200133
         /// </summary>
-        [RegionCode(200133)] [I18NIdentityCode(Europe.Portugal.I18N_IDENTITY_CODE)]
+        [RegionCode(200133)]
+        [I18NIdentityCode(Europe.Portugal.I18N_IDENTITY_CODE)]
         Portugal,
 
         /// <summary>
@@ -1490,7 +1672,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_palao <br />
         /// Cosmos region code: 600113
         /// </summary>
-        [RegionCode(600113)] [I18NIdentityCode(Oceania.Palau.I18N_IDENTITY_CODE)]
+        [RegionCode(600113)]
+        [I18NIdentityCode(Oceania.Palau.I18N_IDENTITY_CODE)]
         Palau,
 
         /// <summary>
@@ -1498,7 +1681,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kataer <br />
         /// Cosmos region code: 100132
         /// </summary>
-        [RegionCode(100132)] [I18NIdentityCode(Asia.Qatar.I18N_IDENTITY_CODE)]
+        [RegionCode(100132)]
+        [I18NIdentityCode(Asia.Qatar.I18N_IDENTITY_CODE)]
         Qatar,
 
         /// <summary>
@@ -1506,7 +1690,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_liuniwang <br />
         /// Cosmos region code: 300147
         /// </summary>
-        [RegionCode(300147)] [I18NIdentityCode(Africa.Réunion.I18N_IDENTITY_CODE)]
+        [RegionCode(300147)]
+        [I18NIdentityCode(Africa.Réunion.I18N_IDENTITY_CODE)]
         Réunion,
 
         /// <summary>
@@ -1514,7 +1699,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_luomaniya <br />
         /// Cosmos region code: 200134
         /// </summary>
-        [RegionCode(200134)] [I18NIdentityCode(Europe.Romania.I18N_IDENTITY_CODE)]
+        [RegionCode(200134)]
+        [I18NIdentityCode(Europe.Romania.I18N_IDENTITY_CODE)]
         Romania,
 
         /// <summary>
@@ -1522,7 +1708,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_luwangda <br />
         /// Cosmos region code: 300144
         /// </summary>
-        [RegionCode(300144)] [I18NIdentityCode(Africa.Rwanda.I18N_IDENTITY_CODE)]
+        [RegionCode(300144)]
+        [I18NIdentityCode(Africa.Rwanda.I18N_IDENTITY_CODE)]
         Rwanda,
 
         /// <summary>
@@ -1530,7 +1717,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shate <br />
         /// Cosmos region code: 100133
         /// </summary>
-        [RegionCode(100133)] [I18NIdentityCode(Asia.SaudiArabia.I18N_IDENTITY_CODE)]
+        [RegionCode(100133)]
+        [I18NIdentityCode(Asia.SaudiArabia.I18N_IDENTITY_CODE)]
         SaudiArabia,
 
         /// <summary>
@@ -1538,7 +1726,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_eluosi <br />
         /// Cosmos region code: 200004
         /// </summary>
-        [RegionCode(200004)] [I18NIdentityCode(Europe.Russia.I18N_IDENTITY_CODE)]
+        [RegionCode(200004)]
+        [I18NIdentityCode(Europe.Russia.I18N_IDENTITY_CODE)]
         Russia,
 
         /// <summary>
@@ -1546,7 +1735,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengbatuo <br />
         /// Cosmos region code: 400127
         /// </summary>
-        [RegionCode(400127)] [I18NIdentityCode(NorthAmerica.SaintBarts.I18N_IDENTITY_CODE)]
+        [RegionCode(400127)]
+        [I18NIdentityCode(NorthAmerica.SaintBarts.I18N_IDENTITY_CODE)]
         SaintBarts,
 
         /// <summary>
@@ -1554,7 +1744,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_samoya <br />
         /// Cosmos region code: 600118
         /// </summary>
-        [RegionCode(600118)] [I18NIdentityCode(Oceania.Samoa.I18N_IDENTITY_CODE)]
+        [RegionCode(600118)]
+        [I18NIdentityCode(Oceania.Samoa.I18N_IDENTITY_CODE)]
         Samoa,
 
         /// <summary>
@@ -1562,7 +1753,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_suoluomen <br />
         /// Cosmos region code: 600115
         /// </summary>
-        [RegionCode(600115)] [I18NIdentityCode(Oceania.SolomonIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(600115)]
+        [I18NIdentityCode(Oceania.SolomonIslands.I18N_IDENTITY_CODE)]
         SolomonIslands,
 
         /// <summary>
@@ -1570,7 +1762,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_saisheer <br />
         /// Cosmos region code: 300145
         /// </summary>
-        [RegionCode(300145)] [I18NIdentityCode(Africa.Seychelles.I18N_IDENTITY_CODE)]
+        [RegionCode(300145)]
+        [I18NIdentityCode(Africa.Seychelles.I18N_IDENTITY_CODE)]
         Seychelles,
 
         /// <summary>
@@ -1578,7 +1771,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_sudan <br />
         /// Cosmos region code: 300146
         /// </summary>
-        [RegionCode(300146)] [I18NIdentityCode(Africa.Sudan.I18N_IDENTITY_CODE)]
+        [RegionCode(300146)]
+        [I18NIdentityCode(Africa.Sudan.I18N_IDENTITY_CODE)]
         Sudan,
 
         /// <summary>
@@ -1586,7 +1780,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_ruidian <br />
         /// Cosmos region code: 200016
         /// </summary>
-        [RegionCode(200016)] [I18NIdentityCode(Europe.Sweden.I18N_IDENTITY_CODE)]
+        [RegionCode(200016)]
+        [I18NIdentityCode(Europe.Sweden.I18N_IDENTITY_CODE)]
         Sweden,
 
         /// <summary>
@@ -1594,7 +1789,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xinjiapo<br />
         /// Cosmos region code: 100134
         /// </summary>
-        [RegionCode(100134)] [I18NIdentityCode(Asia.Singapore.I18N_IDENTITY_CODE)]
+        [RegionCode(100134)]
+        [I18NIdentityCode(Asia.Singapore.I18N_IDENTITY_CODE)]
         Singapore,
 
         /// <summary>
@@ -1602,7 +1798,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shenghelena <br />
         /// Cosmos region code: 300121
         /// </summary>
-        [RegionCode(300121)] [I18NIdentityCode(Africa.SaintHelena.I18N_IDENTITY_CODE)]
+        [RegionCode(300121)]
+        [I18NIdentityCode(Africa.SaintHelena.I18N_IDENTITY_CODE)]
         SaintHelena,
 
         /// <summary>
@@ -1610,7 +1807,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_sinuowenniya <br />
         /// Cosmos region code: 200138
         /// </summary>
-        [RegionCode(200138)] [I18NIdentityCode(Europe.Slovenia.I18N_IDENTITY_CODE)]
+        [RegionCode(200138)]
+        [I18NIdentityCode(Europe.Slovenia.I18N_IDENTITY_CODE)]
         Slovenia,
 
         /// <summary>
@@ -1618,7 +1816,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_siwaerba <br />
         /// Cosmos region code: 200139
         /// </summary>
-        [RegionCode(200139)] [I18NIdentityCode(Europe.SvalbardAndJanMayen.I18N_IDENTITY_CODE)]
+        [RegionCode(200139)]
+        [I18NIdentityCode(Europe.SvalbardAndJanMayen.I18N_IDENTITY_CODE)]
         SvalbardAndJanMayen,
 
         /// <summary>
@@ -1626,7 +1825,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_siluofake <br />
         /// Cosmos region code: 200137
         /// </summary>
-        [RegionCode(200137)] [I18NIdentityCode(Europe.Slovakia.I18N_IDENTITY_CODE)]
+        [RegionCode(200137)]
+        [I18NIdentityCode(Europe.Slovakia.I18N_IDENTITY_CODE)]
         Slovakia,
 
         /// <summary>
@@ -1634,7 +1834,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xibanya <br />
         /// Cosmos region code: 200015
         /// </summary>
-        [RegionCode(200015)] [I18NIdentityCode(Europe.Spain.I18N_IDENTITY_CODE)]
+        [RegionCode(200015)]
+        [I18NIdentityCode(Europe.Spain.I18N_IDENTITY_CODE)]
         Spain,
 
         /// <summary>
@@ -1642,7 +1843,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_sailaliang <br />
         /// Cosmos region code: 300153
         /// </summary>
-        [RegionCode(300153)] [I18NIdentityCode(Africa.SierraLeone.I18N_IDENTITY_CODE)]
+        [RegionCode(300153)]
+        [I18NIdentityCode(Africa.SierraLeone.I18N_IDENTITY_CODE)]
         SierraLeone,
 
         /// <summary>
@@ -1650,7 +1852,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengmalinuo <br />
         /// Cosmos region code: 200135
         /// </summary>
-        [RegionCode(200135)] [I18NIdentityCode(Europe.SanMarino.I18N_IDENTITY_CODE)]
+        [RegionCode(200135)]
+        [I18NIdentityCode(Europe.SanMarino.I18N_IDENTITY_CODE)]
         SanMarino,
 
         /// <summary>
@@ -1658,7 +1861,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_saineijiaer <br />
         /// Cosmos region code: 300151
         /// </summary>
-        [RegionCode(300151)] [I18NIdentityCode(Africa.Senegal.I18N_IDENTITY_CODE)]
+        [RegionCode(300151)]
+        [I18NIdentityCode(Africa.Senegal.I18N_IDENTITY_CODE)]
         Senegal,
 
         /// <summary>
@@ -1666,7 +1870,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_suomali <br />
         /// Cosmos region code: 300152
         /// </summary>
-        [RegionCode(300152)] [I18NIdentityCode(Africa.Somalia.I18N_IDENTITY_CODE)]
+        [RegionCode(300152)]
+        [I18NIdentityCode(Africa.Somalia.I18N_IDENTITY_CODE)]
         Somalia,
 
         /// <summary>
@@ -1674,7 +1879,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_sulinan <br />
         /// Cosmos region code: 300150
         /// </summary>
-        [RegionCode(300150)] [I18NIdentityCode(Africa.Suriname.I18N_IDENTITY_CODE)]
+        [RegionCode(300150)]
+        [I18NIdentityCode(Africa.Suriname.I18N_IDENTITY_CODE)]
         Suriname,
 
         /// <summary>
@@ -1682,7 +1888,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nansudan <br />
         /// Cosmos region code: 300149
         /// </summary>
-        [RegionCode(300149)] [I18NIdentityCode(Africa.SouthSudan.I18N_IDENTITY_CODE)]
+        [RegionCode(300149)]
+        [I18NIdentityCode(Africa.SouthSudan.I18N_IDENTITY_CODE)]
         SouthSudan,
 
         /// <summary>
@@ -1690,7 +1897,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengduomeiplxb <br />
         /// Cosmos region code: 300148
         /// </summary>
-        [RegionCode(300148)] [I18NIdentityCode(Africa.SaoTomeAndPrincipe.I18N_IDENTITY_CODE)]
+        [RegionCode(300148)]
+        [I18NIdentityCode(Africa.SaoTomeAndPrincipe.I18N_IDENTITY_CODE)]
         SaoTomeAndPrincipe,
 
         /// <summary>
@@ -1698,7 +1906,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_ruishi <br />
         /// Cosmos region code: 200017
         /// </summary>
-        [RegionCode(200017)] [I18NIdentityCode(Europe.Switzerland.I18N_IDENTITY_CODE)]
+        [RegionCode(200017)]
+        [I18NIdentityCode(Europe.Switzerland.I18N_IDENTITY_CODE)]
         Switzerland,
 
         /// <summary>
@@ -1706,7 +1915,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_saerwaduo <br />
         /// Cosmos region code: 400115
         /// </summary>
-        [RegionCode(400115)] [I18NIdentityCode(NorthAmerica.ElSalvador.I18N_IDENTITY_CODE)]
+        [RegionCode(400115)]
+        [I18NIdentityCode(NorthAmerica.ElSalvador.I18N_IDENTITY_CODE)]
         ElSalvador,
 
         /// <summary>
@@ -1714,7 +1924,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengmadingdp <br />
         /// Cosmos region code: 400131
         /// </summary>
-        [RegionCode(400131)] [I18NIdentityCode(NorthAmerica.SintMaartenDutchPart.I18N_IDENTITY_CODE)]
+        [RegionCode(400131)]
+        [I18NIdentityCode(NorthAmerica.SintMaartenDutchPart.I18N_IDENTITY_CODE)]
         SintMaartenDutchPart,
 
         /// <summary>
@@ -1722,7 +1933,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xuliya <br />
         /// Cosmos region code: 100136
         /// </summary>
-        [RegionCode(100136)] [I18NIdentityCode(Asia.Syrian.I18N_IDENTITY_CODE)]
+        [RegionCode(100136)]
+        [I18NIdentityCode(Asia.Syrian.I18N_IDENTITY_CODE)]
         Syrian,
 
         /// <summary>
@@ -1730,7 +1942,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_siweishilan <br />
         /// Cosmos region code: 300155
         /// </summary>
-        [RegionCode(300155)] [I18NIdentityCode(Africa.Swaziland.I18N_IDENTITY_CODE)]
+        [RegionCode(300155)]
+        [I18NIdentityCode(Africa.Swaziland.I18N_IDENTITY_CODE)]
         Swaziland,
 
         /// <summary>
@@ -1740,7 +1953,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_cnhtaiwan <br />
         /// Cosmos region code: 10000100332
         /// </summary>
-        [RegionCode(1_00_001_0032)] [I18NIdentityCode(Asia.Taiwan.I18N_IDENTITY_CODE)]
+        [RegionCode(1_00_001_0032)]
+        [I18NIdentityCode(Asia.Taiwan.I18N_IDENTITY_CODE)]
         Taiwan,
 
         /// <summary>
@@ -1748,7 +1962,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tansangniya <br />
         /// Cosmos region code: 300014
         /// </summary>
-        [RegionCode(300014)] [I18NIdentityCode(Africa.Tanzania.I18N_IDENTITY_CODE)]
+        [RegionCode(300014)]
+        [I18NIdentityCode(Africa.Tanzania.I18N_IDENTITY_CODE)]
         Tanzania,
 
         /// <summary>
@@ -1756,7 +1971,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_telinidaduobage <br />
         /// Cosmos region code: 400134
         /// </summary>
-        [RegionCode(400134)] [I18NIdentityCode(NorthAmerica.TrinidadAndTobago.I18N_IDENTITY_CODE)]
+        [RegionCode(400134)]
+        [I18NIdentityCode(NorthAmerica.TrinidadAndTobago.I18N_IDENTITY_CODE)]
         TrinidadAndTobago,
 
         /// <summary>
@@ -1764,7 +1980,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tekesikks <br />
         /// Cosmos region code: 400135
         /// </summary>
-        [RegionCode(400135)] [I18NIdentityCode(NorthAmerica.TurksAndCaicosIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(400135)]
+        [I18NIdentityCode(NorthAmerica.TurksAndCaicosIslands.I18N_IDENTITY_CODE)]
         TurksAndCaicosIslands,
 
         /// <summary>
@@ -1772,7 +1989,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tuerqi <br />
         /// Cosmos region code: 100017
         /// </summary>
-        [RegionCode(100017)] [I18NIdentityCode(Asia.Turkey.I18N_IDENTITY_CODE)]
+        [RegionCode(100017)]
+        [I18NIdentityCode(Asia.Turkey.I18N_IDENTITY_CODE)]
         Turkey,
 
         /// <summary>
@@ -1780,7 +1998,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tuwalu <br />
         /// Cosmos region code: 600122
         /// </summary>
-        [RegionCode(600122)] [I18NIdentityCode(Oceania.Tuvalu.I18N_IDENTITY_CODE)]
+        [RegionCode(600122)]
+        [I18NIdentityCode(Oceania.Tuvalu.I18N_IDENTITY_CODE)]
         Tuvalu,
 
         /// <summary>
@@ -1788,7 +2007,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_zhade <br />
         /// Cosmos region code: 300110
         /// </summary>
-        [RegionCode(300110)] [I18NIdentityCode(Africa.Chad.I18N_IDENTITY_CODE)]
+        [RegionCode(300110)]
+        [I18NIdentityCode(Africa.Chad.I18N_IDENTITY_CODE)]
         Chad,
 
         /// <summary>
@@ -1796,7 +2016,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_faguonanbulingdi <br />
         /// Cosmos region code: 300124
         /// </summary>
-        [RegionCode(300124)] [I18NIdentityCode(Africa.FrenchSouthernTerritories.I18N_IDENTITY_CODE)]
+        [RegionCode(300124)]
+        [I18NIdentityCode(Africa.FrenchSouthernTerritories.I18N_IDENTITY_CODE)]
         FrenchSouthernTerritories,
 
         /// <summary>
@@ -1804,7 +2025,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_duoge <br />
         /// Cosmos region code: 300125
         /// </summary>
-        [RegionCode(300125)] [I18NIdentityCode(Africa.Togo.I18N_IDENTITY_CODE)]
+        [RegionCode(300125)]
+        [I18NIdentityCode(Africa.Togo.I18N_IDENTITY_CODE)]
         Togo,
 
         /// <summary>
@@ -1812,7 +2034,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_taiguo <br />
         /// Cosmos region code: 100138
         /// </summary>
-        [RegionCode(100138)] [I18NIdentityCode(Asia.Thailand.I18N_IDENTITY_CODE)]
+        [RegionCode(100138)]
+        [I18NIdentityCode(Asia.Thailand.I18N_IDENTITY_CODE)]
         Thailand,
 
         /// <summary>
@@ -1820,7 +2043,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tajikesitan <br />
         /// Cosmos region code: 100137
         /// </summary>
-        [RegionCode(100137)] [I18NIdentityCode(Asia.Tajikistan.I18N_IDENTITY_CODE)]
+        [RegionCode(100137)]
+        [I18NIdentityCode(Asia.Tajikistan.I18N_IDENTITY_CODE)]
         Tajikistan,
 
         /// <summary>
@@ -1828,7 +2052,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tuokelao <br />
         /// Cosmos region code: 600120
         /// </summary>
-        [RegionCode(600120)] [I18NIdentityCode(Oceania.Tokelau.I18N_IDENTITY_CODE)]
+        [RegionCode(600120)]
+        [I18NIdentityCode(Oceania.Tokelau.I18N_IDENTITY_CODE)]
         Tokelau,
 
         /// <summary>
@@ -1836,7 +2061,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_dongdiwen <br />
         /// Cosmos region code: 100114
         /// </summary>
-        [RegionCode(100114)] [I18NIdentityCode(Asia.EastTimor.I18N_IDENTITY_CODE)]
+        [RegionCode(100114)]
+        [I18NIdentityCode(Asia.EastTimor.I18N_IDENTITY_CODE)]
         EastTimor,
 
         /// <summary>
@@ -1844,7 +2070,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tukumansitan <br />
         /// Cosmos region code: 100139
         /// </summary>
-        [RegionCode(100139)] [I18NIdentityCode(Asia.Turkmenistan.I18N_IDENTITY_CODE)]
+        [RegionCode(100139)]
+        [I18NIdentityCode(Asia.Turkmenistan.I18N_IDENTITY_CODE)]
         Turkmenistan,
 
         /// <summary>
@@ -1852,7 +2079,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tunisi <br />
         /// Cosmos region code: 300120
         /// </summary>
-        [RegionCode(3_00_120)] [I18NIdentityCode(Africa.Tunisia.I18N_IDENTITY_CODE)]
+        [RegionCode(3_00_120)]
+        [I18NIdentityCode(Africa.Tunisia.I18N_IDENTITY_CODE)]
         Tunisia,
 
         /// <summary>
@@ -1860,7 +2088,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_tangjia <br />
         /// Cosmos region code: 600121
         /// </summary>
-        [RegionCode(600121)] [I18NIdentityCode(Oceania.Tonga.I18N_IDENTITY_CODE)]
+        [RegionCode(600121)]
+        [I18NIdentityCode(Oceania.Tonga.I18N_IDENTITY_CODE)]
         Tonga,
 
         /// <summary>
@@ -1868,7 +2097,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_wukelan <br />
         /// Cosmos region code: 200140
         /// </summary>
-        [RegionCode(200140)] [I18NIdentityCode(Europe.Ukraine.I18N_IDENTITY_CODE)]
+        [RegionCode(200140)]
+        [I18NIdentityCode(Europe.Ukraine.I18N_IDENTITY_CODE)]
         Ukraine,
 
         /// <summary>
@@ -1876,7 +2106,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yingguo <br />
         /// Cosmos region code: 200005
         /// </summary>
-        [RegionCode(200005)] [I18NIdentityCode(Europe.UnitedKingdom.I18N_IDENTITY_CODE)]
+        [RegionCode(200005)]
+        [I18NIdentityCode(Europe.UnitedKingdom.I18N_IDENTITY_CODE)]
         UnitedKingdom,
 
         /// <summary>
@@ -1884,7 +2115,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_wuganda <br />
         /// Cosmos region code: 300154
         /// </summary>
-        [RegionCode(300154)] [I18NIdentityCode(Africa.Uganda.I18N_IDENTITY_CODE)]
+        [RegionCode(300154)]
+        [I18NIdentityCode(Africa.Uganda.I18N_IDENTITY_CODE)]
         Uganda,
 
         /// <summary>
@@ -1892,7 +2124,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_meiguo <br />
         /// Cosmos region code: 400001
         /// </summary>
-        [RegionCode(400001)] [I18NIdentityCode(NorthAmerica.UnitedStates.I18N_IDENTITY_CODE)]
+        [RegionCode(400001)]
+        [I18NIdentityCode(NorthAmerica.UnitedStates.I18N_IDENTITY_CODE)]
         UnitedStates,
 
         /// <summary>
@@ -1900,7 +2133,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_meiguoum <br />
         /// Cosmos region code: 400136
         /// </summary>
-        [RegionCode(400136)] [I18NIdentityCode(NorthAmerica.UnitedStatesMinorOutlyingIslands.I18N_IDENTITY_CODE)]
+        [RegionCode(400136)]
+        [I18NIdentityCode(NorthAmerica.UnitedStatesMinorOutlyingIslands.I18N_IDENTITY_CODE)]
         UnitedStatesMinorOutlyingIslands,
 
         /// <summary>
@@ -1908,7 +2142,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_wulagui <br />
         /// Cosmos region code: 500112
         /// </summary>
-        [RegionCode(500112)] [I18NIdentityCode(SouthAmerica.Uruguay.I18N_IDENTITY_CODE)]
+        [RegionCode(500112)]
+        [I18NIdentityCode(SouthAmerica.Uruguay.I18N_IDENTITY_CODE)]
         Uruguay,
 
         /// <summary>
@@ -1916,7 +2151,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_wuzibiekesitan <br />
         /// Cosmos region code: 100141
         /// </summary>
-        [RegionCode(100141)] [I18NIdentityCode(Asia.Uzbekistan.I18N_IDENTITY_CODE)]
+        [RegionCode(100141)]
+        [I18NIdentityCode(Asia.Uzbekistan.I18N_IDENTITY_CODE)]
         Uzbekistan,
 
         /// <summary>
@@ -1924,7 +2160,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_mayuete <br />
         /// Cosmos region code: 300138
         /// </summary>
-        [RegionCode(300138)] [I18NIdentityCode(Africa.Mayotte.I18N_IDENTITY_CODE)]
+        [RegionCode(300138)]
+        [I18NIdentityCode(Africa.Mayotte.I18N_IDENTITY_CODE)]
         Mayotte,
 
         /// <summary>
@@ -1932,7 +2169,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_nanfei <br />
         /// Cosmos region code: 300013
         /// </summary>
-        [RegionCode(300013)] [I18NIdentityCode(Africa.SouthAfrica.I18N_IDENTITY_CODE)]
+        [RegionCode(300013)]
+        [I18NIdentityCode(Africa.SouthAfrica.I18N_IDENTITY_CODE)]
         SouthAfrica,
 
         /// <summary>
@@ -1940,7 +2178,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_shengwensenteglnds <br />
         /// Cosmos region code: 400133
         /// </summary>
-        [RegionCode(400133)] [I18NIdentityCode(NorthAmerica.StVAndG.I18N_IDENTITY_CODE)]
+        [RegionCode(400133)]
+        [I18NIdentityCode(NorthAmerica.StVAndG.I18N_IDENTITY_CODE)]
         StVAndG,
 
         /// <summary>
@@ -1948,7 +2187,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_weineiruila <br />
         /// Cosmos region code: 500013
         /// </summary>
-        [RegionCode(500013)] [I18NIdentityCode(SouthAmerica.Venezuela.I18N_IDENTITY_CODE)]
+        [RegionCode(500013)]
+        [I18NIdentityCode(SouthAmerica.Venezuela.I18N_IDENTITY_CODE)]
         Venezuela,
 
         /// <summary>
@@ -1956,7 +2196,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yingshuweierjing <br />
         /// Cosmos region code: 400137
         /// </summary>
-        [RegionCode(400137)] [I18NIdentityCode(NorthAmerica.VirginIslandsBritish.I18N_IDENTITY_CODE)]
+        [RegionCode(400137)]
+        [I18NIdentityCode(NorthAmerica.VirginIslandsBritish.I18N_IDENTITY_CODE)]
         VirginIslandsBritish,
 
         /// <summary>
@@ -1964,7 +2205,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_meishuweierjing <br />
         /// Cosmos region code: 400138
         /// </summary>
-        [RegionCode(400138)] [I18NIdentityCode(NorthAmerica.VirginIslandsUS.I18N_IDENTITY_CODE)]
+        [RegionCode(400138)]
+        [I18NIdentityCode(NorthAmerica.VirginIslandsUS.I18N_IDENTITY_CODE)]
         // ReSharper disable once InconsistentNaming
         VirginIslandsUS,
 
@@ -1973,7 +2215,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yuenan <br />
         /// Cosmos region code: 100018
         /// </summary>
-        [RegionCode(100018)] [I18NIdentityCode(Asia.Vietnam.I18N_IDENTITY_CODE)]
+        [RegionCode(100018)]
+        [I18NIdentityCode(Asia.Vietnam.I18N_IDENTITY_CODE)]
         Vietnam,
 
         /// <summary>
@@ -1981,7 +2224,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_wanuatu <br />
         /// Cosmos region code: 600123
         /// </summary>
-        [RegionCode(600123)] [I18NIdentityCode(Oceania.Vanuatu.I18N_IDENTITY_CODE)]
+        [RegionCode(600123)]
+        [I18NIdentityCode(Oceania.Vanuatu.I18N_IDENTITY_CODE)]
         Vanuatu,
 
         /// <summary>
@@ -1989,7 +2233,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_xisahala <br />
         /// Cosmos region code: 300118
         /// </summary>
-        [RegionCode(300118)] [I18NIdentityCode(Africa.WesternSahara.I18N_IDENTITY_CODE)]
+        [RegionCode(300118)]
+        [I18NIdentityCode(Africa.WesternSahara.I18N_IDENTITY_CODE)]
         WesternSahara,
 
         /// <summary>
@@ -1997,7 +2242,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_walisi <br />
         /// Cosmos region code: 600116
         /// </summary>
-        [RegionCode(600116)] [I18NIdentityCode(Oceania.WallisAndFutuna.I18N_IDENTITY_CODE)]
+        [RegionCode(600116)]
+        [I18NIdentityCode(Oceania.WallisAndFutuna.I18N_IDENTITY_CODE)]
         WallisAndFutuna,
 
         /// <summary>
@@ -2005,7 +2251,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_kesuowo <br />
         /// Cosmos region code: 200120
         /// </summary>
-        [RegionCode(200120)] [I18NIdentityCode(Europe.Kosovo.I18N_IDENTITY_CODE)]
+        [RegionCode(200120)]
+        [I18NIdentityCode(Europe.Kosovo.I18N_IDENTITY_CODE)]
         Kosovo,
 
         /// <summary>
@@ -2013,16 +2260,19 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_yemen <br />
         /// Cosmos region code: 100142
         /// </summary>
-        [RegionCode(100142)] [I18NIdentityCode(Asia.Yemen.I18N_IDENTITY_CODE)]
+        [RegionCode(100142)]
+        [I18NIdentityCode(Asia.Yemen.I18N_IDENTITY_CODE)]
         Yemen,
-        
+
         //TODO 即将执行合并，并从枚举中移除
         /// <summary>
         /// 南斯拉夫（Yugoslavia，欧洲，YU，YUG，38），南斯拉夫联盟共和国 <br />
         /// Cosmos i18n code: i18n_country_nlm_1992 <br />
         /// Cosmos region code: 220106
         /// </summary>
-        [RegionCode(220106)] [I18NIdentityCode(Europe.Yugoslavia1992.I18N_IDENTITY_CODE)] [Obsolete]
+        [RegionCode(220106)]
+        [I18NIdentityCode(Europe.Yugoslavia1992.I18N_IDENTITY_CODE)]
+        [Obsolete]
         Yugoslavia1992,
 
         /// <summary>
@@ -2030,7 +2280,8 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_zanbiya <br />
         /// Cosmos region code: 300117
         /// </summary>
-        [RegionCode(300117)] [I18NIdentityCode(Africa.Zambia.I18N_IDENTITY_CODE)]
+        [RegionCode(300117)]
+        [I18NIdentityCode(Africa.Zambia.I18N_IDENTITY_CODE)]
         Zambia,
 
         /// <summary>
@@ -2038,7 +2289,15 @@ namespace Cosmos.I18N.Countries
         /// Cosmos i18n code: i18n_country_jinbabuwei <br />
         /// Cosmos region code: 300119
         /// </summary>
-        [RegionCode(300119)] [I18NIdentityCode(Africa.Zimbabwe.I18N_IDENTITY_CODE)]
+        [RegionCode(300119)]
+        [I18NIdentityCode(Africa.Zimbabwe.I18N_IDENTITY_CODE)]
         Zimbabwe,
+
+        /// <summary>
+        /// Unknown
+        /// </summary>
+        [RegionCode(0)]
+        [I18NIdentityCode("Unknown")]
+        Unknown,
     }
 }
