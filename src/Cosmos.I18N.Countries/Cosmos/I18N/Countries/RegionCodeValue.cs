@@ -28,8 +28,8 @@ namespace Cosmos.I18N.Countries
                 HistoricalValue = o.Substring(1, 2).CastToInt32();
                 RegionValue = o.Substring(3, 3).CastToInt32();
 #else
-                HistoricalValue = o[1..2].CastToInt32();
-                RegionValue = o[3..5].CastToInt32();
+                HistoricalValue = o[1..3].CastToInt32();
+                RegionValue = o[3..6].CastToInt32();
 #endif
 
                 if (o.Length >= 10)
@@ -37,7 +37,7 @@ namespace Cosmos.I18N.Countries
 #if NETSTANDARD2_0
                     SubRegionValue = o.Substring(6, 4).CastToInt32();
 #else
-                    SubRegionValue = o[6..9].CastToInt32();
+                    SubRegionValue = o[6..10].CastToInt32();
 #endif
                 }
                 else

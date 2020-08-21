@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Cosmos.I18N.Countries
 {
@@ -108,8 +109,25 @@ namespace Cosmos.I18N.Countries
         RuntimeCountryInfo ToRuntimeModel();
 
         /// <summary>
+        /// Get country enum value.
+        /// </summary>
+        /// <returns></returns>
+        CountryEnumValue GetCountryEnumValue();
+
+        /// <summary>
+        /// Gets country code value.
+        /// </summary>
+        /// <returns></returns>
+        CountryCodeValue GetCountryCodeValue();
+
+        /// <summary>
         /// Gets region enum value factory.
         /// </summary>
         Func<RegionCodeValue, RegionEnumValue> GetRegionEnumValue { get; }
+
+        /// <summary>
+        /// Gets current country/region existence cycle
+        /// </summary>
+        ExistenceCycle? ExistenceCycle { get; }
     }
 }

@@ -22,6 +22,7 @@ namespace Cosmos.I18N.Countries
             _codeAndNameMap = WholeWorld.Data.ToDictionary(k => k.CountryCode, v => v.Country);
 
             RuntimeCountryInfoCache.FirstTimeUpdate(WholeWorld.Data);
+            HistoricalCountryEngine.FirstTimeUpdate(WholeWorld.Data);
         }
 
         /// <summary>

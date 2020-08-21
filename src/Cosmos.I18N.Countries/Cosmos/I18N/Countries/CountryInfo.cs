@@ -93,8 +93,25 @@ namespace Cosmos.I18N.Countries
         public RuntimeCountryInfo ToRuntimeModel() => RuntimeCountryInfo.Of(this);
 
         /// <summary>
+        /// Get country enum value.
+        /// </summary>
+        /// <returns></returns>
+        public CountryEnumValue GetCountryEnumValue() => Country;
+
+        /// <summary>
+        /// Gets country code value.
+        /// </summary>
+        /// <returns></returns>
+        public CountryCodeValue GetCountryCodeValue() => CountryCode;
+
+        /// <summary>
         /// Gets region enum value factory.
         /// </summary>
         public Func<RegionCodeValue, RegionEnumValue> GetRegionEnumValue { get; internal set; }
+
+        /// <summary>
+        /// Gets current country/region existence cycle
+        /// </summary>
+        public ExistenceCycle? ExistenceCycle { get; internal set; } = default;
     }
 }

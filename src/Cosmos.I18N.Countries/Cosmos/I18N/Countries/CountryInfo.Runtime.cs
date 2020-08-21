@@ -15,6 +15,8 @@ namespace Cosmos.I18N.Countries
         private readonly Continent _continent;
         private readonly CountryType _countryType;
         private readonly long _cep1CrCode;
+        private readonly string _countryCodeString;
+        private readonly string _countryEnumString;
 
         internal RuntimeCountryInfo(CountryInfo country)
         {
@@ -22,6 +24,8 @@ namespace Cosmos.I18N.Countries
             _continent = country.Continent;
             _countryType = country.CountryType;
             _cep1CrCode = country.Cep1CrCode;
+            _countryCodeString = string.Empty;
+            _countryEnumString = string.Empty;
             _runtimeData = null;
             _getRegionEnumValue = _ => RegionEnumValue.Unknown;
         }
@@ -100,7 +104,7 @@ namespace Cosmos.I18N.Countries
         public static RuntimeCountryInfo Of(long cep1CrCode) => CountryManager.GetCountryInfo(cep1CrCode);
 
         public static RuntimeCountryInfo Of(string alphaCode) => Of(CountryManager.GetCountryInfo(alphaCode));
-        
+
         #endregion
 
         #region To country
@@ -178,10 +182,31 @@ namespace Cosmos.I18N.Countries
         }
 
         /// <summary>
+        /// Get country enum value.
+        /// </summary>
+        /// <returns></returns>
+        public CountryEnumValue GetCountryEnumValue() => IsCurrentEva()
+            ? (CountryEnumValue) _currentData.Country
+            : (CountryEnumValue) _countryEnumString;
+
+        /// <summary>
+        /// Gets country code value.
+        /// </summary>
+        /// <returns></returns>
+        public CountryCodeValue GetCountryCodeValue() => IsCurrentEva()
+            ? (CountryCodeValue) _currentData.CountryCode
+            : (CountryCodeValue) _countryCodeString;
+
+        /// <summary>
         /// Gets region enum value factory.
         /// </summary>
         public Func<RegionCodeValue, RegionEnumValue> GetRegionEnumValue => IsCurrentEva()
             ? _currentData.GetRegionEnumValue
             : _getRegionEnumValue;
+
+        /// <summary>
+        /// Gets current country/region existence cycle
+        /// </summary>
+        public ExistenceCycle? ExistenceCycle { get; internal set; } = default;
     }
 }

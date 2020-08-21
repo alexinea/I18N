@@ -2284,5 +2284,12 @@ namespace Cosmos.I18N.Countries
         [RegionCode(300119)]
         [I18NIdentityCode(Africa.Zimbabwe.I18N_IDENTITY_CODE)]
         ZW,
+
+        /// <summary>
+        /// Unknown
+        /// </summary>
+        [RegionCode(0)]
+        [I18NIdentityCode("Unknown")]
+        Unknown,
     }
 }
