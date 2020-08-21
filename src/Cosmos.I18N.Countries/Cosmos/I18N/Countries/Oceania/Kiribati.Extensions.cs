@@ -5,7 +5,7 @@ namespace Cosmos.I18N.Countries.Oceania
     public static partial class Kiribati
     {
         /// <summary>
-        /// Convert <see cref="KiribatiRegions.EnumValues"/> to region code likes 'DE', 'WAL'.
+        /// Convert <see cref="Kiribati.EnumValues"/> to region code likes 'DE', 'WAL'.
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.Oceania
         }
 
         /// <summary>
-        /// Convert <see cref="KiribatiRegions.EnumValues"/> to full region code likes 'BE-DE', 'BE-WAL'.
+        /// Convert <see cref="Kiribati.EnumValues"/> to full region code likes 'BE-DE', 'BE-WAL'.
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>

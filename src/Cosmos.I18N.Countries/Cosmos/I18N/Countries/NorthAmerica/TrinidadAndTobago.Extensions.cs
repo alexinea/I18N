@@ -5,7 +5,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
     public static partial class TrinidadAndTobago
     {
         /// <summary>
-        /// Convert <see cref="TrinidadAndTobagoRegions.EnumValues"/> to region code likes 'DE', 'WAL'.
+        /// Convert <see cref="TrinidadAndTobago.EnumValues"/> to region code likes 'DE', 'WAL'.
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.NorthAmerica
         }
 
         /// <summary>
-        /// Convert <see cref="TrinidadAndTobagoRegions.EnumValues"/> to full region code likes 'BE-DE', 'BE-WAL'.
+        /// Convert <see cref="TrinidadAndTobago.EnumValues"/> to full region code likes 'BE-DE', 'BE-WAL'.
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>

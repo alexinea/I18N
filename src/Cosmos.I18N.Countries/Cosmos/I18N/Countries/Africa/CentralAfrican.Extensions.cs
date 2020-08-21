@@ -5,7 +5,7 @@ namespace Cosmos.I18N.Countries.Africa
     public static partial class CentralAfrican
     {
         /// <summary>
-        /// Convert <see cref="CentralAfricanRegions.EnumValues"/> to region code likes 'DE', 'WAL'.
+        /// Convert <see cref="CentralAfrican.EnumValues"/> to region code likes 'DE', 'WAL'.
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
@@ -15,7 +15,7 @@ namespace Cosmos.I18N.Countries.Africa
         }
 
         /// <summary>
-        /// Convert <see cref="CentralAfricanRegions.EnumValues"/> to full region code likes 'BE-DE', 'BE-WAL'.
+        /// Convert <see cref="CentralAfrican.EnumValues"/> to full region code likes 'BE-DE', 'BE-WAL'.
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
