@@ -32,7 +32,8 @@ namespace Cosmos.I18N.Countries.Asia
                 ChineseShorterForm = "澳门",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
-                GetRegionEnumValue = RegionEnumHelper.Unknown
+                GetRegionEnumValue = _ => RegionEnumHelper.Value(_, China.EnumValues.Macao),
+                ExistenceCycle = new ExistenceCycle(19991220)
             };
         }
 

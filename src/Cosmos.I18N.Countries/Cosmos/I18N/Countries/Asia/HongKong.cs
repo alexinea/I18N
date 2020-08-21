@@ -31,7 +31,8 @@ namespace Cosmos.I18N.Countries.Asia
                 ChineseShorterForm = "香港",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
-                GetRegionEnumValue = RegionEnumHelper.Unknown
+                GetRegionEnumValue = _ => RegionEnumHelper.Value(_, China.EnumValues.HongKong),
+                ExistenceCycle = new ExistenceCycle(19970701)
             };
         }
 

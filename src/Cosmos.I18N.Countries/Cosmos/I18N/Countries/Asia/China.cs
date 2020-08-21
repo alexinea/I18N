@@ -29,7 +29,8 @@ namespace Cosmos.I18N.Countries.Asia
                 ChineseShorterForm = "中国",
                 Continent = Continent.Asia,
                 I18NIdentityCode = I18N_IDENTITY_CODE,
-                GetRegionEnumValue = GetRegionEnumValue
+                GetRegionEnumValue = GetRegionEnumValue,
+                ExistenceCycle = new ExistenceCycle(19491001)
             };
         }
 
