@@ -46,5 +46,12 @@ namespace Cosmos.I18N.Core.Historical
 
             return navs.Select(nav => nav.Code).Select(RuntimeCountryInfoCache.GetOrDefault).Where(item => item != null);
         }
+
+        public static IEnumerable<RuntimeCountryInfo> GetByAlias(string alias, int year, int month, int day)
+        {
+            var navs = HistoricalCountryEngine.GetNav(alias, year, month, day);
+
+            return navs.Select(nav => nav.Code).Select(RuntimeCountryInfoCache.GetOrDefault).Where(item => item != null);
+        }
     }
 }

@@ -37,6 +37,14 @@ namespace Cosmos.I18N.Core
             return RegionEnumValue.Unknown;
         }
 
+        public static RegionEnumValue Value<TEnumValues>(RegionCodeValue value, TEnumValues result)
+            where TEnumValues : struct, Enum
+        {
+            if (value.IsHistoricalValue())
+                return RegionEnumValue.Unknown;
+            return RegionEnumValue.Of(() => result);
+        }
+
         public static RegionEnumValue Unknown(RegionCodeValue value)
         {
             return RegionEnumValue.Unknown;

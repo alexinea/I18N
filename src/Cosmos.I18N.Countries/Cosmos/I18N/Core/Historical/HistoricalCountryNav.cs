@@ -14,7 +14,12 @@ namespace Cosmos.I18N.Core.Historical
         /// </summary>
         public long Code { get; set; }
 
-        public (long, int, int?) Previous { get; set; }
+        /// <summary>
+        /// Name or alias
+        /// </summary>
+        public string Name { get; set; }
+
+        public (long, int, int?) Previous { get; set; } = (0, 0, 0);
 
         public List<(long, int, int?)> Next { get; set; } = new List<(long, int, int?)>();
 
