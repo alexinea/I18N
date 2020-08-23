@@ -48,7 +48,7 @@ dotnet pack src/Cosmos.I18N.Extensions.Console/Cosmos.I18N.Extensions.Console._b
 dotnet pack src/Cosmos.I18N.Extensions.Handlebars/Cosmos.I18N.Extensions.Handlebars._build.csproj                   -c Release -o nuget_packages --no-restore
 
 ::extra-bridges
-dotnet pack src/Cosmos.Bridges.AbpBridge.I18N/Cosmos.Bridges.AbpBridge.I18N._build.csproj                           -c Release -o nuget_packages --no-restore
+REM dotnet pack src/Cosmos.Bridges.AbpBridge.I18N/Cosmos.Bridges.AbpBridge.I18N._build.csproj                           -c Release -o nuget_packages --no-restore
 
 for /R "nuget_packages" %%s in (*symbols.nupkg) do (
     del "%%s"
