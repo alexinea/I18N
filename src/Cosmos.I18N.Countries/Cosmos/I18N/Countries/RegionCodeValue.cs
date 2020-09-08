@@ -1,5 +1,5 @@
 ﻿using System;
-using Cosmos.Conversions;
+using Cosmos.Text;
 
 namespace Cosmos.I18N.Countries
 {

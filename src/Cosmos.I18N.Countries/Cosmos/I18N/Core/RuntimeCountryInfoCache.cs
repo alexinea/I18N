@@ -45,5 +45,18 @@ namespace Cosmos.I18N.Core
                 _hasInit = true;
             }
         }
+
+        public static void RuntimeUpdate(RuntimeCountryInfo info)
+        {
+            CachedData.AddOrUpdate(info.Cep1CrCode,
+                k => info,
+                (k, v) => info);
+        }
+
+        public static void RuntimeUpdateRange(IEnumerable<RuntimeCountryInfo> infos)
+        {
+            foreach (var info in infos)
+                RuntimeUpdate(info);
+        }
     }
 }

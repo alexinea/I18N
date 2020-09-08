@@ -11,8 +11,7 @@ namespace Cosmos.I18N.Countries
     public struct RegionEnumValue
     {
         private readonly string _pinnedValue;
-
-
+        
         private RegionEnumValue(dynamic value, long regionCode, Func<dynamic> func, Type type, string pinnedValue)
         {
             Value = value;

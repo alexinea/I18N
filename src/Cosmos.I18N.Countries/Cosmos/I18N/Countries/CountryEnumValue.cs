@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Cosmos.Conversions;
+using Cosmos.Text;
 using Cosmos.I18N.Core.Historical;
 using EnumsNET;
 

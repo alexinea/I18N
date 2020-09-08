@@ -21,12 +21,27 @@ namespace Cosmos.I18N.Countries
         internal RuntimeCountryInfo(CountryInfo country)
         {
             _currentData = country ?? throw new ArgumentNullException(nameof(country));
+            _runtimeData = null;
             _continent = country.Continent;
             _countryType = country.CountryType;
             _cep1CrCode = country.Cep1CrCode;
             _countryCodeString = string.Empty;
             _countryEnumString = string.Empty;
-            _runtimeData = null;
+            _getRegionEnumValue = country.GetRegionEnumValue;
+        }
+
+        internal RuntimeCountryInfo(
+            Continent continent, CountryType countryType, long cep1CrCode,
+            string countryCodeString, string countryEnumString,
+            Dictionary<string, string> runtimeData)
+        {
+            _currentData = null;
+            _runtimeData = runtimeData ?? throw new ArgumentNullException(nameof(runtimeData));
+            _continent = continent;
+            _countryType = countryType;
+            _cep1CrCode = cep1CrCode;
+            _countryCodeString = countryCodeString;
+            _countryEnumString = countryEnumString;
             _getRegionEnumValue = _ => RegionEnumValue.Unknown;
         }
 

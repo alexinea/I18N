@@ -22,7 +22,6 @@ namespace Cosmos.I18N.Countries
             _codeAndNameMap = WholeWorld.Data.ToDictionary(k => k.CountryCode, v => v.Country);
 
             RuntimeCountryInfoCache.FirstTimeUpdate(WholeWorld.Data);
-            HistoricalCountryEngine.FirstTimeUpdate(WholeWorld.Data);
         }
 
         /// <summary>
@@ -244,7 +243,7 @@ namespace Cosmos.I18N.Countries
             return GetCountryInfo(code).Continent;
         }
 
-        private static class WholeWorld
+        internal static class WholeWorld
         {
             public static readonly List<CountryInfo> Data = new List<CountryInfo>
             {
