@@ -30,6 +30,11 @@
             Cosmos region code / CEP-1
             </summary>
         </member>
+        <member name="P:Cosmos.I18N.Core.Historical.HistoricalCountryNav.Name">
+            <summary>
+            Name or alias
+            </summary>
+        </member>
         <member name="T:Cosmos.I18N.Core.RegionCodeAttribute">
             <summary>
             Cosmos Region Code Attribute
@@ -30133,6 +30138,11 @@
             Cosmos region code: 300119
             </summary>
         </member>
+        <member name="F:Cosmos.I18N.Countries.CountryCode.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
         <member name="T:Cosmos.I18N.Countries.CountryInfo">
             <summary>
             Country info
@@ -30203,6 +30213,18 @@
         </member>
         <member name="M:Cosmos.I18N.Countries.CountryInfo.ToRuntimeModel">
             <inheritdoc />
+        </member>
+        <member name="M:Cosmos.I18N.Countries.CountryInfo.GetCountryEnumValue">
+            <summary>
+            Get country enum value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.I18N.Countries.CountryInfo.GetCountryCodeValue">
+            <summary>
+            Gets country code value.
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:Cosmos.I18N.Countries.CountryInfo.GetRegionEnumValue">
             <summary>
@@ -30328,6 +30350,18 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Cosmos.I18N.Countries.ICountryInfo.GetCountryEnumValue">
+            <summary>
+            Get country enum value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.I18N.Countries.ICountryInfo.GetCountryCodeValue">
+            <summary>
+            Gets country code value.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:Cosmos.I18N.Countries.ICountryInfo.GetRegionEnumValue">
             <summary>
             Gets region enum value factory.
@@ -30352,6 +30386,18 @@
         <member name="M:Cosmos.I18N.Countries.RuntimeCountryInfo.ToCountryCode">
             <summary>
             To country code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.I18N.Countries.RuntimeCountryInfo.GetCountryEnumValue">
+            <summary>
+            Get country enum value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.I18N.Countries.RuntimeCountryInfo.GetCountryCodeValue">
+            <summary>
+            Gets country code value.
             </summary>
             <returns></returns>
         </member>
