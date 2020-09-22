@@ -1,4 +1,4 @@
-#if NETSTANDARD2_0
+#if NETCOREAPP3_1
 
 using System;
 using Cosmos.I18N;
@@ -15,7 +15,7 @@ namespace Microsoft.AspNetCore.Builder {
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseCosmosLocalization(this IApplicationBuilder builder) {
+        public static IApplicationBuilder UseInternationalizationService(this IApplicationBuilder builder) {
 
             if (builder is null)
                 throw new ArgumentNullException(nameof(builder));

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="Cosmos.I18N.RunsOn.Host._shared.props" />
+
+    <Import Project="..\..\common.props" />
+
+    <PropertyGroup>
+        <!--Overwrite the default target frameworks in common.props-->
+        <TargetFrameworks>netcoreapp3.1;netcoreapp3.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cosmos.I18N.Extra.DependencyInjection\Cosmos.I18N.Extra.DependencyInjection.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using Cosmos.I18N.Core.Internals;
 
 namespace Cosmos.I18N {
     /// <summary>

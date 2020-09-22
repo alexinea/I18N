@@ -4,7 +4,6 @@ using System;
 using Cosmos.I18N;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Core;
-using Cosmos.I18N.Core.Internals;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.Extensions.Hosting {
@@ -19,7 +18,7 @@ namespace Microsoft.Extensions.Hosting {
         /// <param name="optionsAct"></param>
         /// <param name="serviceConfigure"></param>
         /// <returns></returns>
-        public static IHostBuilder AddCosmosLocalization(
+        public static IHostBuilder AddInternationalizationService(
             this IHostBuilder builder,
             Action<I18NOptions> optionsAct = null,
             Action<II18NServiceCollection> serviceConfigure = null) {
@@ -30,7 +29,7 @@ namespace Microsoft.Extensions.Hosting {
             builder.ConfigureServices((ctx, services) => {
                 
                 // ReSharper disable once InconsistentNaming
-                var i18nServices = services.AddCosmosLocalizationServices(optionsAct);
+                var i18nServices = services.AddInternationalizationService(optionsAct);
 
                 serviceConfigure?.Invoke(i18nServices);
 

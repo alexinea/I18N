@@ -1,8 +1,8 @@
 ﻿<Project>
 
     <PropertyGroup>
-        <AssemblyName>Cosmos.I18N.Extensions.Host</AssemblyName>
-        <PackageId>Cosmos.I18N.Extensions.Host</PackageId>
+        <AssemblyName>Cosmos.I18N.RunsOn.Host</AssemblyName>
+        <PackageId>Cosmos.I18N.RunsOn.Host</PackageId>
         <Description>Microsoft Host extension for Cosmos i18n.</Description>
     </PropertyGroup>
 

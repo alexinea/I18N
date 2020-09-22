@@ -15,7 +15,7 @@ namespace Microsoft.AspNetCore.Builder {
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseCosmosLocalization(this IApplicationBuilder builder) {
+        public static IApplicationBuilder UseInternationalizationService(this IApplicationBuilder builder) {
 
             if (builder is null)
                 throw new ArgumentNullException(nameof(builder));
