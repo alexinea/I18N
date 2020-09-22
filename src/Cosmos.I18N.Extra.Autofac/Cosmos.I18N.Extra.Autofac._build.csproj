@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="Cosmos.I18N.Extra.Autofac._shared.props" />
+
+    <Import Project="..\..\common.props" />
+  
+    <ItemGroup>
+        <ProjectReference Include="..\Cosmos.I18N\Cosmos.I18N._build.csproj" />
+        <ProjectReference Include="..\..\..\cosmos-dependency\src\Cosmos.Extensions.Autofac\Cosmos.Extensions.Autofac._build.csproj" />
+    </ItemGroup>
+
+</Project>

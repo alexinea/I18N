@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+      <AssemblyName>Cosmos.I18N.Extra.DependencyInjection</AssemblyName>
+    </PropertyGroup>
+
+    <Import Project="Cosmos.I18N.Extensions.DependencyInjection._shared.props" />
+
+    <Import Project="..\..\common.props" />
+  
+    <ItemGroup>
+        <ProjectReference Include="..\Cosmos.I18N\Cosmos.I18N.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Cosmos.Extensions.DependencyInjection" Version="$(TargetPkgVersion)" />
+    </ItemGroup>
+
+</Project>

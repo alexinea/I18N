@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.I18N.Extra.DependencyInjection</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Extensions.DependencyInjection.DependencyExtensions">
+            <summary>
+            Extensions for service collection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.DependencyExtensions.AddInternationalizationService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Cosmos.I18N.Configurations.I18NOptions})">
+            <summary>
+            Add Cosmos.I18N
+            </summary>
+            <param name="services"></param>
+            <param name="optionAct"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.DependencyExtensions.Done(Cosmos.I18N.Core.II18NServiceCollection)">
+            <summary>
+            Done
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>

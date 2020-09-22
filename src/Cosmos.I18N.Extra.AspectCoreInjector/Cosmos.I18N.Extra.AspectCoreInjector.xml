@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.I18N.Extra.AspectCoreInjector</name>
+    </assembly>
+    <members>
+        <member name="T:AspectCore.DependencyInjection.DependencyExtensions">
+            <summary>
+            Extensions for AspectCore register
+            </summary>
+        </member>
+        <member name="M:AspectCore.DependencyInjection.DependencyExtensions.AddInternationalizationService(AspectCore.DependencyInjection.IServiceContext,System.Action{Cosmos.I18N.Configurations.I18NOptions})">
+            <summary>
+            Register Cosmos.I18N for NCC AspectCore
+            </summary>
+            <param name="context"></param>
+            <param name="optionAct"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:AspectCore.DependencyInjection.DependencyExtensions.Done(Cosmos.I18N.Core.II18NServiceCollection)">
+            <summary>
+            Done
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>

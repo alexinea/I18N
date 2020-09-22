@@ -1,0 +1,9 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.I18N.Extra.Autofac</AssemblyName>
+        <PackageId>Cosmos.I18N.Extra.Autofac</PackageId>
+        <Description>Extra package for Autofac and Cosmos Internationalization (i18n) service.</Description>
+    </PropertyGroup>
+    
+</Project>

@@ -1,0 +1,9 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.I18N.Extra.AspectCoreInjector</AssemblyName>
+        <PackageId>Cosmos.I18N.Extra.AspectCoreInjector</PackageId>
+        <Description>AspectCore Injection extension for Cosmos i18n.</Description>
+    </PropertyGroup>
+
+</Project>

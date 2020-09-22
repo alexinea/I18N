@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.I18N.Extra.Autofac</name>
+    </assembly>
+    <members>
+        <member name="T:Autofac.DependencyExtensions">
+            <summary>
+            Extensions for Autofac register
+            </summary>
+        </member>
+        <member name="M:Autofac.DependencyExtensions.RegisterInternationalizationService(Autofac.ContainerBuilder,System.Action{Cosmos.I18N.Configurations.I18NOptions})">
+            <summary>
+            Register Cosmos.I18N for Autofac
+            </summary>
+            <param name="builder"></param>
+            <param name="optionAct"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Autofac.DependencyExtensions.Done(Cosmos.I18N.Core.II18NServiceCollection)">
+            <summary>
+            Done
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>
