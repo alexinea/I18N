@@ -1,4 +1,4 @@
-#if NETCOREAPP3_1
+#if NET461
 
 using System;
 using Cosmos.I18N;
@@ -17,14 +17,14 @@ namespace Microsoft.Extensions.DependencyInjection {
         /// <param name="antConfigure"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        public static IApplicationBuilder UseCosmosLocalization(this IApplicationBuilder builder, Action<AntConfig> antConfigure) {
+        public static IApplicationBuilder UseInternationalizationService(this IApplicationBuilder builder, Action<AntConfig> antConfigure) {
             if (builder is null)
                 throw new ArgumentNullException(nameof(builder));
 
             var antConfig = new AntConfig();
             antConfigure?.Invoke(antConfig);
 
-            builder.UseCosmosLocalization();
+            builder.UseInternationalizationService();
 
             AntHooks.Insert(antConfig.GetAllAnts());
 

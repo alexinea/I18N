@@ -1,8 +1,8 @@
 ﻿<Project>
 
     <PropertyGroup>
-        <AssemblyName>Cosmos.I18N.Extensions.AspNetCore.TagHelpers</AssemblyName>
-        <PackageId>Cosmos.I18N.Extensions.AspNetCore.TagHelpers</PackageId>
+        <AssemblyName>Cosmos.I18N.RunsOn.AspNetCore.TagHelpers</AssemblyName>
+        <PackageId>Cosmos.I18N.RunsOn.AspNetCore.TagHelpers</PackageId>
         <Description>AspNetCore TagHelpers extension for Cosmos i18n.</Description>
     </PropertyGroup>
 

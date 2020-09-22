@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="Cosmos.I18N.Extensions.AspNetCore.TagHelpers._shared.props" />
+    <Import Project="Cosmos.I18N.RunsOn.AspNetCore._shared.props" />
 
     <Import Project="..\..\common.props" />
 
@@ -8,9 +8,9 @@
         <!--Overwrite the default target frameworks in common.props-->
         <TargetFrameworks>netcoreapp3.1;netcoreapp3.0</TargetFrameworks>
     </PropertyGroup>
-
+    
     <ItemGroup>
-      <ProjectReference Include="..\Cosmos.I18N.RunsOn.AspNetCore\Cosmos.I18N.RunsOn.AspNetCore.csproj" />
+        <ProjectReference Include="..\Cosmos.I18N.RunsOn.Host\Cosmos.I18N.RunsOn.Host._build.csproj" />
     </ItemGroup>
 
 </Project>

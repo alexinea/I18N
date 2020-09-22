@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Razor.TagHelpers;
 namespace Cosmos.I18N.Extensions.AspNetCore.TagHelpers {
     /// <summary>
     /// Anonymous translate tag helper<br />
-    /// You should type '@addTagHelper *, Cosmos.I18N.Extensions.AspNetCore.TagHelpers' in 'ViewImports.cshtml' first.
+    /// You should type '@addTagHelper *, Cosmos.I18N.RunsOn.AspNetCore.TagHelpers' in 'ViewImports.cshtml' first.
     /// </summary>
     [HtmlTargetElement("cosmos-i18n-a")]
     public class AnonymousTagHelper : BaseTagHelper {

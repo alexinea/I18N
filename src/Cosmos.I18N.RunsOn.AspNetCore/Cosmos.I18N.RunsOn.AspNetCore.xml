@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Cosmos.I18N.Extensions.AspNetCore</name>
+        <name>Cosmos.I18N.RunsOn.AspNetCore</name>
     </assembly>
     <members>
         <member name="T:Microsoft.Extensions.DependencyInjection.AntConfig">
@@ -28,6 +28,20 @@
             Configure the LanguageTag read from route
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.ApplicationBuilderExtensions">
+            <summary>
+            Application builder extensions
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ApplicationBuilderExtensions.UseInternationalizationService(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Microsoft.Extensions.DependencyInjection.AntConfig})">
+            <summary>
+            Use Cosmos I18N
+            </summary>
+            <param name="builder"></param>
+            <param name="antConfigure"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
     </members>
 </doc>
