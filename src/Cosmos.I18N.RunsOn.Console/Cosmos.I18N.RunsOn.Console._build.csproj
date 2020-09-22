@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="Cosmos.I18N.RunsOn.Console._shared.props" />
+
+    <Import Project="..\..\common.props" />
+  
+    <ItemGroup>
+        <ProjectReference Include="..\Cosmos.I18N.Extra.AspectCoreInjector\Cosmos.I18N.Extra.AspectCoreInjector._build.csproj"/>
+    </ItemGroup>
+
+</Project>

@@ -3,14 +3,15 @@ using AspectCore.DependencyInjection;
 using Cosmos.Dependency;
 using Cosmos.I18N.Configurations;
 using Cosmos.I18N.Core;
-using Cosmos.I18N.Extensions.AspectCoreInjector;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cosmos.I18N.Extensions.Console.Core {
+namespace Cosmos.I18N.RunsOn.ConsoleService
+{
     /// <summary>
     /// I18N service collection
     /// </summary>
-    public class I18NServiceCollection : AspectCoreI18NServiceCollection {
+    public class ConsoleI18NServiceCollection : DefaultI18NServiceCollection<AspectCoreProxyRegister, IServiceContext>
+    {
         private bool _hasBuild;
 
         /// <summary>
@@ -18,14 +19,17 @@ namespace Cosmos.I18N.Extensions.Console.Core {
         /// </summary>
         /// <param name="services"></param>
         /// <param name="options"></param>
-        public I18NServiceCollection(IServiceContext services = null, I18NOptions options = null)
-            : base(services ?? new ServiceContext(), options) {
+        public ConsoleI18NServiceCollection(IServiceContext services = null, I18NOptions options = null)
+            : base(new AspectCoreProxyRegister(services ?? new ServiceContext()), options)
+        {
             AfterBuild(UpdateStaticResolver);
         }
 
         /// <inheritdoc />
-        public override II18NServiceCollection AppendOptionsAction(Action<I18NOptions> optionsAct) {
-            if (_hasBuild) {
+        public override II18NServiceCollection AppendOptionsAction(Action<I18NOptions> optionsAct)
+        {
+            if (_hasBuild)
+            {
                 throw new InvalidOperationException("Cannot update options after building.");
             }
 
@@ -33,8 +37,10 @@ namespace Cosmos.I18N.Extensions.Console.Core {
         }
 
         /// <inheritdoc />
-        public override II18NServiceCollection AddDependency(Action<DependencyProxyRegister> dependencyAction) {
-            if (_hasBuild) {
+        public override II18NServiceCollection AddDependency(Action<DependencyProxyRegister> dependencyAction)
+        {
+            if (_hasBuild)
+            {
                 throw new InvalidOperationException("Cannot add dependency after building.");
             }
 
@@ -46,8 +52,10 @@ namespace Cosmos.I18N.Extensions.Console.Core {
         /// </summary>
         /// <returns></returns>
         /// <exception cref="InvalidOperationException"></exception>
-        public IServiceProvider Build() {
-            if (_hasBuild) {
+        public IServiceProvider Build()
+        {
+            if (_hasBuild)
+            {
                 throw new InvalidOperationException("Only can be built once.");
             }
 
@@ -69,8 +77,10 @@ namespace Cosmos.I18N.Extensions.Console.Core {
         /// Before build
         /// </summary>
         /// <param name="serviceAct"></param>
-        public void BeforeBuild(Action<IServiceContext> serviceAct) {
-            if (serviceAct != null) {
+        public void BeforeBuild(Action<IServiceContext> serviceAct)
+        {
+            if (serviceAct != null)
+            {
                 BeforeBuildAction += serviceAct;
             }
         }
@@ -79,13 +89,16 @@ namespace Cosmos.I18N.Extensions.Console.Core {
         /// After build
         /// </summary>
         /// <param name="providerAct"></param>
-        public void AfterBuild(Action<IServiceProvider> providerAct) {
-            if (providerAct != null) {
+        public void AfterBuild(Action<IServiceProvider> providerAct)
+        {
+            if (providerAct != null)
+            {
                 AfterBuildAction += providerAct;
             }
         }
 
-        private static void UpdateStaticResolver(IServiceProvider resolver) {
+        private static void UpdateStaticResolver(IServiceProvider resolver)
+        {
             StaticInstanceForILanguageServiceProvider.SetInstance(resolver.GetRequiredService<ILanguageServiceProvider>());
             StaticInstanceForTextProvider.SetInstance(resolver.GetRequiredService<ITextProvider>());
         }

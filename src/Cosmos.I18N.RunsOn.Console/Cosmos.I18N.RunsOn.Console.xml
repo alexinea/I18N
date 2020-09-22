@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.I18N.RunsOn.Console</name>
+    </assembly>
+    <members>
+        <member name="T:Cosmos.Consoles.CosmosLocalization">
+            <summary>
+            Cosmos localization helper
+            </summary>
+        </member>
+        <member name="M:Cosmos.Consoles.CosmosLocalization.Initialize">
+            <summary>
+            Initialize
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Dependency.DependencyExtensions">
+            <summary>
+            Extensions for done
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dependency.DependencyExtensions.AllDone(Cosmos.I18N.Core.II18NServiceCollection)">
+            <summary>
+            ALl done
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Cosmos.I18N.RunsOn.ConsoleService.ConsoleI18NServiceCollection">
+            <summary>
+            I18N service collection
+            </summary>
+        </member>
+        <member name="M:Cosmos.I18N.RunsOn.ConsoleService.ConsoleI18NServiceCollection.#ctor(AspectCore.DependencyInjection.IServiceContext,Cosmos.I18N.Configurations.I18NOptions)">
+            <summary>
+            I18N service collection
+            </summary>
+            <param name="services"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Cosmos.I18N.RunsOn.ConsoleService.ConsoleI18NServiceCollection.AppendOptionsAction(System.Action{Cosmos.I18N.Configurations.I18NOptions})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.I18N.RunsOn.ConsoleService.ConsoleI18NServiceCollection.AddDependency(System.Action{Cosmos.Dependency.DependencyProxyRegister})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.I18N.RunsOn.ConsoleService.ConsoleI18NServiceCollection.Build">
+            <summary>
+            Build
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Cosmos.I18N.RunsOn.ConsoleService.ConsoleI18NServiceCollection.BeforeBuild(System.Action{AspectCore.DependencyInjection.IServiceContext})">
+            <summary>
+            Before build
+            </summary>
+            <param name="serviceAct"></param>
+        </member>
+        <member name="M:Cosmos.I18N.RunsOn.ConsoleService.ConsoleI18NServiceCollection.AfterBuild(System.Action{System.IServiceProvider})">
+            <summary>
+            After build
+            </summary>
+            <param name="providerAct"></param>
+        </member>
+    </members>
+</doc>

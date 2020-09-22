@@ -1,7 +1,7 @@
 ﻿using Cosmos.I18N.Core;
-using Cosmos.I18N.Extensions.Console.Core;
+using Cosmos.I18N.RunsOn.ConsoleService;
 
-namespace Cosmos.I18N.Extensions.Console {
+namespace Cosmos.Consoles {
     /// <summary>
     /// Cosmos localization helper
     /// </summary>
@@ -11,7 +11,7 @@ namespace Cosmos.I18N.Extensions.Console {
         /// </summary>
         /// <returns></returns>
         public static II18NServiceCollection Initialize() {
-            return SoloDependencyContainer.Initialize(new I18NServiceCollection());
+            return SoloDependencyContainer.Initialize(new ConsoleI18NServiceCollection());
         }
     }
 }
