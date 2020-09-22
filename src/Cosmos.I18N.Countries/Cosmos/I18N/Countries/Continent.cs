@@ -3,7 +3,7 @@ namespace Cosmos.I18N.Countries
     /// <summary>
     /// Continent
     /// </summary>
-    public enum Continent : int
+    public enum Continent
     {
         /// <summary>
         /// Asia

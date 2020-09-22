@@ -23,11 +23,13 @@ namespace Cosmos.I18N.Core
 
         public static RuntimeCountryInfo GetOrDefault(long cep1Code)
         {
+            // ReSharper disable once RedundantCast
             return ((IDictionary<long, RuntimeCountryInfo>) CachedData).GetValueOrDefault(cep1Code);
         }
 
         public static RuntimeCountryInfo GetOrDefault(RegionCodeValue code)
         {
+            // ReSharper disable once RedundantCast
             return ((IDictionary<long, RuntimeCountryInfo>) CachedData).GetValueOrDefault(code);
         }
 

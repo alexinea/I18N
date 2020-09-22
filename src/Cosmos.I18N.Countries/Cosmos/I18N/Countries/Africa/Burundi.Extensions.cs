@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Cosmos.I18N.Core;
+﻿using Cosmos.I18N.Core;
 
 namespace Cosmos.I18N.Countries.Africa
 {

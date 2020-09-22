@@ -1,7 +1,6 @@
-// ReSharper disable once CheckNamespace
-
 using Cosmos.I18N.Core;
 
+// ReSharper disable once CheckNamespace
 namespace Cosmos.I18N.Countries.Europe
 {
     /// <summary>

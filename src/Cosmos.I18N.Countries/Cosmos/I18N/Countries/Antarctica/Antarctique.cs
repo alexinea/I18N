@@ -1,5 +1,3 @@
-using Cosmos.I18N.Core;
-
 namespace Cosmos.I18N.Countries.Antarctica
 {
     /// <summary>
